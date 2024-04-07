@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        .container{
+            width: 1000px;
+            height: 880px;
+            border: 1px solid red;
+            margin: 0px auto;
+            background-color: rgb(233, 213, 213);
+        }
+ 
+        /* 设置头部样式 */
+        .title{
+            width: 950px;
+            height: 100px;
+            border: 1px solid red;
+            margin: 10px auto;
+            background-color: pink;
+        }
+ 
+        /* 设置导航样式 */
+        .nav{
+            width: 950px;
+            height: 120px;
+            margin: 10px auto;
+            background-color: red;
+        }
+ 
+        /* 设置主体内容样式 */
+        .content{
+            height: 500px;
+            width: 950px;
+            background-color: lightblue;
+            margin: 10px auto;
+        }
+ 
+        /* 设置主体内容左列的样式 */
+        .content .demo1{
+            width: 200px;
+            height: 100%;
+            /*高度设置为100%的时候表示占满容器 那么后期就无法设置该盒子的上外边距和下外边距
+            但是可以设置px为单位作高度 只要不把父容器占满即可
+            */
+            background-color: yellow;
+            margin-right: 20px;
+            float: left;
+        }
+ 
+        /* 设置主体内容的中间的内容的样式 */
+        .content .demo2{
+            width: 400px;
+            height: 100%;
+            background-color: lightcoral;
+            float: left;
+            margin-right: 20px;
+        }     
+        
+        /* 设置主体内容右列的样式 */
+        .content .demo3{
+            width: 310px;
+            height: 100%;
+            background-color: lightgreen;
+            float: right;
+        }
+ 
+       
+ 
+        /* 设置底部 */
+        .bottom{
+            width: 950px;
+            height: 100px;
+            background-color: lightslategray;
+            margin: 0px auto;
+        }
+        </style>
+</head>
+<body>
+    <div class="container">
+        <div class="title">这是头部</div>
+        <div class="nav">这是导航</div>
+        <div class="content">
+            <div class="demo1">主体内容的左列</div>
+            <div class="demo2">主体内容的中间内容
+            <a href="./2024年3月16日.html">2024年3月16日</a>
+
+            <a href="./2024年3月16日.html">2024年3月16日</a>
+
+
+            </div>
+            <div class="demo3">主体内容的右列</div>
+        </div>
+        <div class="bottom">这是底部</div>
+    </div>
+</body>
+</html>
