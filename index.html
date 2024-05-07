@@ -4,32 +4,30 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>这是我的世界</title>
+
+
 <style>
-  body, html {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-  }
-  .fullscreen-text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 100px; /* 调整字体大小 */
-    font-weight: bold;
-    text-align: center;
-    color: white;
-  }
-  .background {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: black; /* 背景颜色 */
-    mix-blend-mode: multiply; /* 背景混合模式 */
-  }
+    body{
+      position: relative; /* 设置定位*/
+      padding-bottom: 360px !important;  /*这个高度等于底部的高度*/
+      box-sizing: border-box;
+      min-height: 100vh;  /*给body设置一个最小高度*/
+    }
+    
+    /* 底部*/
+    .footer {
+      width: 100%;
+      height: 360px; /* 必须要有明确的高度*/
+      overflow: hidden;
+      background: #141419;
+      box-sizing: border-box;
+      position: absolute; /* 设置定位*/
+      bottom: 0px;
+      left: 0px;
+    }
+    /*以上设置在PC端和手机端是没有问题的。*/
 </style>
+
 </head>
 
 
@@ -85,27 +83,6 @@
 
 </body>
 
-  <style>
-    body{
-      position: relative; /* 设置定位*/
-      padding-bottom: 360px !important;  /*这个高度等于底部的高度*/
-      box-sizing: border-box;
-      min-height: 100vh;  /*给body设置一个最小高度*/
-    }
-    
-    /* 底部*/
-    .footer {
-      width: 100%;
-      height: 360px; /* 必须要有明确的高度*/
-      overflow: hidden;
-      background: #141419;
-      box-sizing: border-box;
-      position: absolute; /* 设置定位*/
-      bottom: 0px;
-      left: 0px;
-    }
-    /*以上设置在PC端和手机端是没有问题的。*/
-  </style>
 
 
 </html>
