@@ -100,5 +100,27 @@
 
 </body>
 
+  <style>
+    body{
+      position: relative; /* 设置定位*/
+      padding-bottom: 360px !important;  /*这个高度等于底部的高度*/
+      box-sizing: border-box;
+      min-height: 100vh;  /*给body设置一个最小高度*/
+    }
+    
+    /* 底部*/
+    .footer {
+      width: 100%;
+      height: 360px; /* 必须要有明确的高度*/
+      overflow: hidden;
+      background: #141419;
+      box-sizing: border-box;
+      position: absolute; /* 设置定位*/
+      bottom: 0px;
+      left: 0px;
+    }
+    /*以上设置在PC端和手机端是没有问题的。*/
+  </style>
+
 
 </html>
