@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="第三同读" />
+  <title>宇墨学几何原本</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">宇墨学几何原本</h1>
+<p class="author">第三同读</p>
+</header>
+<h2 id="命题x.54">命题X.54</h2>
+<p>如果一个面由一个有理线段和第一二项线构成，那么，该面的边是无理线，我们称为二项线的无理线段。</p>
+<p>设：面AC是由有理线段AB和第一二项线AD构成。</p>
+<p>那么我说：面AC的边是无理线，我们称为二项线的无理线。</p>
+<p>因为：AD是一个第一二项线，设E为其分点，AE较大。那么很明显，AE、ED是仅正方可公约的有理线，AE上的正方形大于ED上的正方形，其差是一个与AE可公约的线段上的正方形。且AE与有理线段AB是在长度上可公约的（定义X.5）。</p>
+<p>令：在F点上平分ED。</p>
+<p>那么因为：AE上的正方形大于ED上的正方形，其差是一个与AE可公约的线段上的正方形。在大线段AE上作一个等于ED上的正方形的四分之一，即等于EF上的正方形，且缺少一个正方形的矩形，那么，AE被分为长度可公约的两段（命题X.17）。</p>
+<p>在AE上建AG、GE构成的矩形，使之等于EF上的正方形。那么：AG是与EG在长度上可公约的。</p>
+<p>从G、E、F作GH、EK、FL，使之分别平行于直线AB、CD，建正方形SN等于矩形AH，且正方形NQ等于GK。再设MN与NO在一条直线上，那么：RN与NP一也是在一条直线上。完成平行四边形SQ，那么：SQ是正方形（命题II.4、引理）。</p>
+<p>那么因为：AG、GE构成的矩形等于EF上的正方形，所以：AG比EF同于FE比EG（命题VI.17）。</p>
+<p>所以：AH比EL同于EL比KG，所以：EL是AH、GK之间的比例中项（命题VI.1）。</p>
+<p>而AH等于SN，GK等于NQ，所以：EL是SN、NQ之间的比例中项。而MR也同样是SN、NQ的比例中项，所以：EL等于MR，所以：它也等于PO（引理）。</p>
+<p>而AH、GK也等于SN和NQ，所以：总量AC等于总量SQ，即，它等于MO上的正方形，所以：MO是AC的边。</p>
+<p>我进一步说：MO是二项线。</p>
+<p>因为：AG与GE是可公约的，所以：AE与线段AG、GE也是可公约的（命题X.15）。</p>
+<p>而根据假设，AE与AB是可公约的，所以：AG、GE与AB也是可公约的（命题X.12）。</p>
+<p>又，AB是有理的，所以：直线AG、GE也是有理的，所以：AH、GK构成的矩形是有理的，而AH与GK是可公约的（命题X.19）。</p>
+<p>又，AH等于SN，而GK等于NQ，所以：SN和NQ之和，即是MN、NO上的正方形，它们也是有理的，并可公约。</p>
+<p>庞特里亚金</p>
+<p>拓扑学是几何学的一个分支，它与通常的平面几何、立体几何不同，在拓扑学里没有不能弯曲的元素。拓扑学有两个分支偏重于用分析方法来研究，叫做点集拓扑学或分析拓扑学。另一分支偏重于用代数方法来研究，叫做代数拓扑学。俄国数学家庞特里亚金（1908—1988年）在拓扑学方面作出了特殊贡献，著名的“庞特里亚金对偶定理”更新了代数拓扑学的内容，同时也是现代控制论的主要奠基之一。</p>
+<p>因为：AE与ED是长度上不可公约的，同时AE与AG是可公约的，DE与EF是可公约的，所以：AG与EF也是不可公约的，所以：AH与EL也是不可公约的（命题X.13、VI.1、X.11）。</p>
+<p>又，AH等于SN，EL等于MR，所以：SN与MR也是不可公约的，而SN比MR同于PN比NR，所以：PN与NR是不可公约的（命题VI.1、X.11）。</p>
+<p>又，PN等于MN，NR等于NO，所以：MN与NO是不可公约的。</p>
+<p>又，MN上的正方形与NO上的正方形是可以公约的，并皆为有理的。</p>
+<p>所以：MN和NO是仅正方可公约的有理线段。</p>
+<p>大使</p>
+<p>16世纪的欧洲充满了机遇和希望，人们开始着眼于外面的世界。航海和贸易的需求促使数学得以飞速发展，航海需要精确的航海和天文图，贸易则需要有效的会计学、代数学和几何射影学等，对数理论和微积分都有了长足的进步。小霍尔拜因的《大使》中的各种数学仪器既代表了广博的数学知识，也象征着这些知识所赋予的权力。</p>
+<p>所以：MO是AC边的二项线。</p>
+<p>所以：如果一个面由一个有理线段和第一二项线构成，那么，该面的边是无理线，我们称为二项线的无理线段。</p>
+<h6 id="证完">证完</h6>
+<h5 id="注解">注解</h5>
+<p>本命题前的引理已应用在命题X.60和X.11之中，这一命题应用在命题X.71中。</p>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

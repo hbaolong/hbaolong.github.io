@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="第三同读" />
+  <title>宇墨学几何原本</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">宇墨学几何原本</h1>
+<p class="author">第三同读</p>
+</header>
+<h2 id="命题vi.32">命题VI.32</h2>
+<p>如果两个三角形有对应角的对应边成比例并且平行，且两对应边有一个共同的端点，那么两个三角形的第三边在一条线上。</p>
+<p>设：ABC和DCE为两个三角形，有两条边对应成比例，AB、AC与DC、DE成比例，AB比AC等于DC比DE，AB平行于DC、AC平行于DE。</p>
+<p>那么我说：BC与CE在同一直线上。</p>
+<p>因为，AB平行于DC，而AC落在它们上。所以：内错角BAC与角ACD相互相等（命题I.29）。</p>
+<p>同样原因：角CDE也等于角ACD，所以：角BAC等于角CDE。</p>
+<p>宇宙的思考</p>
+<p>柏拉图认为，抽象的几何形式——思想，构成真正的宇宙，其他的物体只不过是现实事物的苍白影子罢了。宇宙应当被思考而不是被观察。他猜想出这样的一个宇宙，而地球就在这个巨大球形结构的中心，它每天随行星和恒星运转。他相信，宇宙是由数学定律和数字所控制的，数目是一切事物的准则与基础，是宇宙完美的写照。</p>
+<p>又因为：ABC和DCE是有一个角相等的三角形，角A等于角D，相等角对应的边成比例。于是：AB比AC等于DC比DE。</p>
+<p>所以：三角形ABC与三角形DCE是相似三角形，所以：角ABC等于角DCE（命题VI.6）。</p>
+<p>又：角ACD也可以证明出等于角BAC，所以：角ACE也等于角ABC与角BAC之和。</p>
+<p>令：两边加上角ACB，于是：角ACE与角ACB之和等于角BAC与角ACB、CBA之和。</p>
+<p>又：角BAC、ABC、ACB之和等于180°。所以：角ACE与角ACB之和也等于180°（命题I.32）。</p>
+<p>所以：在直线AC和点C上，两条线段BC和CE不在同一边，构成邻角ACE和角ACB，等于180°。所以：BC与CE在同一直线上（命题I.14）。</p>
+<p>所以：如果两个三角形有对应角的对应边成比例并且平行，且两对应边有一个共同的端点，那么两个三角形的第三边在一条线上。</p>
+<h6 id="证完">证完</h6>
+<h5 id="注解">注解</h5>
+<p>本命题的对应边，被假设在同一个方向上，但这并未作明确陈述。</p>
+<p>本命题应用在命题XIII.17的证明中，这一命题是在一个球体中作一个正十二面体。</p>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

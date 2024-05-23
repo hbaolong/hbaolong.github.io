@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="第三同读" />
+  <title>宇墨学几何原本</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">宇墨学几何原本</h1>
+<p class="author">第三同读</p>
+</header>
+<h2 id="命题vi.24">命题VI.24</h2>
+<p>在任意平行四边形中，有共线对角线且有平行的对应边的平行四边形相似于整个四边形，并且彼此相似。</p>
+<p>设：ABCD为平行四边形，AC为对角线，EG和HK是AC中的平行四边形。</p>
+<p>那么我说：每个平行四边形EG和HK相似于大平行四边形ABCD，并彼此相似。</p>
+<p>因为：EF平行于三角形ABC的边BC，成比例地，BE比EA等于CF比FA（命题VI.2）。</p>
+<p>又因为：FG平行于三角形ACD的边CD。</p>
+<p>所以：CF比FA等于DG比GA（命题V.2）。</p>
+<p>可以证明：CF比FA等于BE比EA。</p>
+<p>所以：BE比EA等于DG比GA。</p>
+<p>所以：得到合比，BA比AE等于DA比AG。</p>
+<p>又由更比，BA比AD等于EA比AG（命题V.18、V.16）。</p>
+<p>所以：在平行四边形ABCD和EG中，公共角BAD的边成比例。</p>
+<p>又因为：GF平行于DC，角AFG等于角ACD，又角DAC是两个三角形ADC和三角形AGF的公共角。</p>
+<p>所以：三角形ADC与三角形AGF相似（命题I.29）。</p>
+<p>同理：三角形ACB与三角形AFE等角。</p>
+<p>又：大平行四边形ABCD与平行四边形EG是等角的。</p>
+<p>所以：AD比DC等于AG比GF，DC比CA等于GF比FA，AC比CB等于AF比FE，CB比BA等于FE比EA，又因为可以证明DC比GA等于GF比FA，AC比CB等于AF比FE。</p>
+<p>有首末比，DC比CB等于GF比FE（命题V.220）。</p>
+<p>所以：在平行四边形ABCD和EG中，相等角的边成比例。</p>
+<p>托内亚河的地图</p>
+<p>数学是科学的皇后，数学又是科学的女仆。数学以抽象的形式，追求高度精确、可靠的知识，成为人类精密思维的一种典范，并日益渗透到其他知识领域。在对宇宙世界和人类社会的探索中，数学还具有追求最大限度的一般性模式，特别是一般性算法的倾向。这种倾向使数学具有了广泛的适用性。图为1738年的托内亚河的地图，测量者们既以简单的图表来说明测量所依据的原理，也用较复杂而详细的地图来解释他们所使用的三角测量法。</p>
+<p>所以：平行四边形ABCD相似于平行四边形EG（定义VI.1）。</p>
+<p>同理：平行四边形ABCD也相似于平行四边形KH。</p>
+<p>所以：平行四边形EG和HK也相似于平行四边形ABCD。</p>
+<p>又：相似于另一多边形的多边形，相互相似。</p>
+<p>所以：平行四边形EG也相似于平行四边形HK（命题VI.21）。</p>
+<p>所以：在任意平行四边形中，有共线对角线且有平行的对应边的平行四边形相似于整个四边形，并且彼此相似。</p>
+<h6 id="证完">证完</h6>
+<h5 id="注解">注解</h5>
+<p>欧几里得用这一命题的计算，回到了命题I.45的直线图形的面的应用。</p>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

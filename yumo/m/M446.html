@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="第三同读" />
+  <title>宇墨学几何原本</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">宇墨学几何原本</h1>
+<p class="author">第三同读</p>
+</header>
+<h2 id="命题xi.26">命题XI.26</h2>
+<p>给定一条直线和该直线上的一个点之上的立体角，可建另一个相等立体角。</p>
+<p>设：A是给定直线AB上的一个点，且在D点处由角EDC、EDF、FDC构成一个立体角。</p>
+<p>人的踪迹</p>
+<p>这是欧几里得著作全集中的版画。此画描绘罗马建筑师维特鲁夫所述说的一段情节：希腊哲学家亚里斯提卜因船舶失事而发现了画在沙滩上的几何图形。他于是鼓励伙伴们说：“朋友，我们大有希望了，因为我看到了人的踪迹。”</p>
+<p>现在要求的是：在线段AB上的A点，建立体角等于D点上的立体角。</p>
+<p>在DF上任取一点F，过F作FG平垂直于过ED、DC的平面，且与平面相交于G。连接DG（命题XI.11）。</p>
+<p>在直线AB的A点上，建角BAL等于角EDC，建角BAK等于角EDG，且使AK等于DG，从点K作KH，使它和经过BA、AL的平面成直角。且设KH等于GF，连接HA（命题XI.12）。</p>
+<p>那么我说：在A点的立体角是由角BAL、BAH、HAL组成的，并等于D点由角EDC、EDF、FDC组成的立体角。</p>
+<p>施瓦茨</p>
+<p>德国数学家赫尔曼·阿曼杜斯·施瓦茨（1843—1921年）是19世纪在变分法方面最突出的研究者之一，他给出了内接于锐角三角形的周长最小的三角形。他发现周长最小的内接三角形由顶垂线三角形给出，如果把三角形想象成以平面镜为墙壁的三角形房间，这样的内接三角形就代表光线在房间里传播的内接三角形的每个顶点处，邻角均相等。按照初等几何学的推理即可证明：这个顶垂线三角形就是一个光线三角形。</p>
+<p>截分DE等于AB，连接HB、BK、FE、GE。</p>
+<p>那么，因为：FG与已知平面成直角，所以：它也与在该平面内与它相交的所有直线成直角，所以：角FGD、FGE是直角。同理，角HKA、HKB也是直角（定义XI.3）。</p>
+<p>又，因为：KA、AB两边分别等于GD、DE两边，且它们也包含相等角，所以：底KB等于底GE。而KH也等于GF，且它们是直角，所以：HB也等于FE，又，因为：AK、KH两边等于DG、GF两边，它们是直角，所以：底AH等于底FD（命题I.4）。</p>
+<p>又，AB等于DE，所以：HA、AB两边等于DF、DE两边。又，底HB等于底FE。所以：角BAH等于角EDF。同理，角HAL也等于角FDC（命题I.8）。</p>
+<p>又，角BAL也等于角EDC。所以：在线段AB的点A上的立体角等于给定的在D点上的立体角。</p>
+<h6 id="证完">证完</h6>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="第三同读" />
+  <title>宇墨学几何原本</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">宇墨学几何原本</h1>
+<p class="author">第三同读</p>
+</header>
+<h2 id="命题ix.36">命题IX.36</h2>
+<p>如果从单位开始的几个数成续两倍比，且所有数的和形成质数，又，其和与最后一个数相乘得到某个数，那么，该乘积是个完全数。</p>
+<p>设：a、b、c、d是一个比值为2的连比，所有数的和是质数，e为其和，e乘以d得FG。</p>
+<p>那么我说：FG是完全数。</p>
+<p>因为：无论a、b、c、d有多少个，那么：就设同样多个数e、HK、l、m。</p>
+<p>于是：由首末比得，a比d等于e比m。于是：e、d的乘积等于a、m的乘积。而e和d的乘积是FG，于是：a、m的乘积是FG（命题VII.14、VII.19）。</p>
+<p>于是：a乘以m得FG，于是：根据a中的单位数，m测尽FG。而a是2，所以：FG是m的两倍。</p>
+<p>而m、l、HK、e是连续比值为2的数，于是：e、HK、l、m、FG是两倍比例的连比数。</p>
+<p>令：从HK和最后一个数FG中减去等于第一个e的数HN和FO，那么：第二个的差数比第一个数等于最后一个差数比它之前的数之和。所以：NK比e等于OG比m、l、KH、e之和（命题IX.35）。</p>
+<p>又，NK等于e，于是：OG也等于m、l、HK、e之和。而FO也等于e，且e等于a、b、c、d与单位之和，所以，FG等于e、HK、1、m与a、b、c、d以及单位之和。且被它们所测尽。</p>
+<p>我进一步说：FG不被除了a、b、c、d、e、HK、l、m和单位以外的任何数所测尽。</p>
+<p>假定可能，令某个数p测尽FG，且p不等于a、b、c、d、e、HK、l、m中的任何数。</p>
+<p>设p测尽FG的次数等于在q中的单位数，于是：q乘以p得FG。</p>
+<p>而e乘以d得FG，于是：e比q等于p比d（命题VII.19）。</p>
+<p>又因为：a、b、c、d是从单位开始的连续比例数，那么：d不能被除了a、b、c以外的任何数所测尽（命题IX.13）。</p>
+<p>又，假设，p不等于a、b、c，那么p测不尽d。而p比d等于e比q，于是：e也测不尽q（定义VII.20）。</p>
+<p>又，e是质数，而任意质数与它测不尽的数是互质数。所以：e与q是互质数（定义VII.29）。</p>
+<p>又，互质数也是最小数组，而最小数组测尽与它们有相等比值的数组的次数相等，前项测尽前项，后项测尽后项，而e比q等于p比d，所以：e测尽p的次数等于q测尽d的次数（命题VII.21、VII.20）。</p>
+<p>又，d不被除了a、b、c以外的任何数所测尽，所以：q等于a、b、c中的一个，令其与b相同。</p>
+<p>希罗喷泉</p>
+<p>亚历山大的希罗的作品包括几何学、光学和机械学，他还是机械学的创始人。在《机械学》一书中，他描述了好几种简单的机器，还有几种巧妙的装置。比如图中简要表现的喷泉：A缸中的水通过吸管a流入球B，并压缩里面的空气，又通过吸管b进入球C并压缩里面的空气，压缩空气通过管g将水压出A缸，形成喷泉。</p>
+<p>而，无论b、c、d有多少个数，设e、HK、l与它个数相等。</p>
+<p>又，因为：e、HK、l与b、c、d有相等的比值，于是，由首末比得，b比d等于e比l（命题VII.14）。</p>
+<p>所以：b与l的乘积等于d与e的乘积。而d与e的乘积等于q与p的乘积，所以：q与p的乘积也等于b与l的乘积（命题VII.19）。</p>
+<p>所以：q比b等于1比p。而q等于b，所以：l也等于p。这是不可能的。因为p已假设为不等于被设定的任何数（命题VII.19）。</p>
+<p>所以：除了a、b、c、d、e、HK、l、m和单位外，任何数都不可能测尽FG。</p>
+<p>又，FG已经被证明等于a、b、c、d、e、HK、l、m和单位之和，一个完全数是等于它自己的所有部分的和。所以：FG是完全数（定义VII.22）。</p>
+<p>所以：如果从单位开始的几个数成连续两倍比，且所有数的和形成质数，又，其和与最后一个数相乘得到某个数，那么，该乘积是个完全数。</p>
+<h6 id="证完">证完</h6>
+<p>彗星种种</p>
+<p>彗星是绕太阳运行的一种天体，形状特别，远离太阳时，为发光的云雾状小斑点；接近太阳时，由彗核、彗发和彗尾组成。彗核由比较密集的固体块和质点组成，其周围的云雾状光辉叫做“彗发”。彗核和彗发总称“彗头”。彗头外围有氢原子云，范围达一百零七公里。彗星体积非常庞大，彗尾长达数千万甚至上亿公里。彗星的轨道多数是双曲线和抛物线，肉眼能看见的彗星很少。目前最早观测彗星的记录是公元前11世纪的中国。</p>
+<h5 id="注解">注解</h5>
+<p>假定从1开始的2的多次幂之和是一个质数，设p是2的乘积数，s是它们的和，s为质数。</p>
+<p>s＝1＋2＋22＋…＋2p－1。</p>
+<p>2的最后乘积是2p－1，因为其和是从1开始的，它是20。</p>
+<p>在欧几里得的证明中，a代表2，b代表22，c代表23，而d被假定为2的最后乘积，于是，它代表2p－1。又，e代表它们的和s，FG是e和d的乘积。所以它代表s2p－1，我们用n来表示：</p>
+<p>n＝s2p－1。</p>
+<p>目标是证明n是一个完全数。</p>
+<p>在证明的第一步，欧几里得发现每个n的约数可以加到n，这就出现两个序列：</p>
+<p>1，2，22，…，2p－1和s，2s，22s，…，2n－2s。</p>
+<p>在他的证明中，后者表示为e、HK、l和最后的m。</p>
+<p>很明显，它们的每一个皆是n的约数，其后欧几里得证明它们是n的唯一约数。用前面的命题IX.35，欧几里得发现连比之和s＋2s＋22s＋…＋2n－2s，是2n－1s－s。而s是1＋2＋22＋…＋2p－1之和，因此：</p>
+<p>于是，n是约数之和。</p>
+<p>现在，余下的仅是证明它们是n的唯一约数，如果n是它的全部约数之和，那么它是完全数。</p>
+<p>接下来的证明有些困难，依靠命题IX.13，这一命题暗示了2p－1的唯一因子是2的乘积，所以2p－1的所有因子被找到。这里是否为欧几里得的原版本，还存在着疑问。假定n个因子如ab、a不是如上所述的n的约数。在欧几里得的证明中，p代表a，9代表b。</p>
+<p>因为a除尽s
+2p－1，但除不尽2的乘积，s是质数，所以s除尽a。于是b必然是2的乘积。而a必然是2的乘积乘以s。而所有的2的乘积乘以s是上述的约数。所以，上述序列包含所有约数。</p>
+<h1 id="第十卷-无理量">第十卷　无理量</h1>
+<p>公元前500年，古希腊毕达哥拉斯学派的弟子希勃索斯发现一个惊人的事实：一个正方形的对角线与其一边的长度是不可公约的，比如，若正方形边长是1，则对角线的长度不是一个有理数。这一不可公约性与毕达哥拉斯学派“万物皆为数”（指有理数）的哲理大相径庭，以至于引起了该学派领导者的惊恐和恼怒。希勃索斯也因此遭到百般折磨，终被沉舟身亡。不可公约的本质是什么，长期以来众说纷纭。15世纪，意大利达·芬奇称之为“无理的数”。</p>
+<p>本卷讨论无理量，即不可公约的线段。这是很难读懂的一卷。</p>
+<p>几何抽象</p>
+<p>蒙德里安的作品主要是几何符号式的绘画风格，他在平面上把横线和竖线结合起来，形成直角或长方形，并在其中加入红黄蓝三原色。他的艺术被称之为“冷抽象艺术”“几何抽象艺术”。</p>
+<p>本卷提要</p>
+<ul>
+<li><p>定义X.1，可公约量的定义。</p></li>
+<li><p>命题X.1，竭尽性原则。</p></li>
+<li><p>命题X.2，一个不可公约量的描述。</p></li>
+<li><p>命题X.9，正方形可公约与长度可公约的性质与关系问题。</p></li>
+<li><p>命题X.12，公约性的传递。</p></li>
+<li><p>命题X.29引理1，找出两个平方数，它们的和也是个平方数。</p></li>
+</ul>
+<p>勾股圆方图</p>
+<p>勾股各自乘，并而开方除之，这是勾股定理在中国的最早记载。最早提出勾股定理的是公元前六七世纪一个叫陈子的人，他大约和毕达哥拉斯同时代或更早。当时陈子认为地是平的，他从太阳向地平面作垂线，垂足叫做日下点，太阳、日下点、观测点三者构成一个直角三角形。从观测点到日下为勾，日下点至太阳的距离为股，勾、股各自乘，相加后开方，就可得到观测点到太阳的距离。后赵君卿在《周髀》一书中给予了定理的证明。图中就是赵君卿《勾股圆方图》的注。</p>
+<p>定义（一）</p>
+<p>定义X.1　能被同一量测尽的量称可公约量，而不能被同一量测尽的量称为不可公约量。</p>
+<p>定义X.2　当一些以线段为边的正方形能被同一个面测尽时，这些线段被称为正方可公约。当一些线段上的正方形不能被同一面测尽时，这些线段被称为正方不可公约。</p>
+<p>定义X.3　由以上定义可证，给定一条线段，那么该线段的直线分别存在无穷个可公约线与不可公约线，一些是其长不可公约，一些是其正方不可公约。给定的线段被称为有理线段。凡可公约线段，无论是长可公约还是正方可公约都称为有理线段；不可以公约的称为无理线段。</p>
+<p>定义X.4　给定线段上的正方形称为有理的。可公约此面积的称为有理的；不可公约的称为无理的；凡构成无理面的线段称为无理线段，即其面为正方形时指的是它们的边，当面为其他直线图形时，则指其与其面相等的正方形的边。</p>
+<h5 id="注解-1">注解</h5>
+<p>定义X.1</p>
+<p>两个同类量a和b，如果有另一个同类量c同时是二者的倍数，那么两个量是可公约的。这即是说，有数字m和n，该二数呈nc＝a，mc＝b。参考定义V.5关于相等比例的定义（同时也是命题）。如果两个量不可公约，那么它们被称为不可公约数。</p>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

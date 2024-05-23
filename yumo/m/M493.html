@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="第三同读" />
+  <title>宇墨学几何原本</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">宇墨学几何原本</h1>
+<p class="author">第三同读</p>
+</header>
+<h2 id="命题xiii.14">命题XIII.14</h2>
+<p>建一个球的内接正八面体，如同上题的情况一样，球直径上的正方形是正八面体一边上的正方形的两倍。</p>
+<p>设：直径AB是给定的球的直径，C点将其平分，在AB上建半圆ADB，从C点作CD垂直于AB，连接DB（命题I.11）。</p>
+<p>空间弯曲</p>
+<p>由于广义相对论，非欧几何第一次获得了现实原型。在广义相对论中，时空整体是不均匀的，空间的弯曲由物质的几何分布决定。爱因斯坦据此预言了恒星发出的光线在从太阳近旁掠过时会发生弯折。这一预言在1919年的一次日全食观测中首次得到证实。</p>
+<p>再设：建正方形EFGH的边等于DB，连接HF、EG，从K点作直线KL垂直于正方形EFGH所在的平面，并使它穿过平面到另一端，取线段KM（命题I.46、XI.12）。</p>
+<p>在直线KL、KM上取线段KL、KM等于线段EK、FK、GK、HK，连接LE、LF、LG、LH、ME、MF、MG、MH（命题I.3）。</p>
+<p>那么，因为：KE等于KH，且角EKH是直角，所以：HE上的正方形是EK上的正方形的两倍，因为LK等于KE，角LKE是直角，所以：EL上的正方形是EK上的正方形的两倍（命题I.47）。</p>
+<p>又，HE上的正方形也被证明等于EK上的正方形的两倍，所以：LE上的正方形等于EH上的正方形。所以：LE等于EH。同理，LH也等于HE。</p>
+<p>所以：三角形LEH是等边三角形。</p>
+<p>类似地，我们也可证明，以正方形EFGH的边为底，以L、M为顶点的其余三角形也皆是等边三角形，于是：由八个等边三角形构成的正八面体被建成（定义XI.26）。</p>
+<p>现在要求它内接于已知球，且球的直径上的正方形等于正八面体边上的正方形的两倍。</p>
+<p>因为：三条线段LK、KM、KE相等，所以：LM上的半圆也经过E，同理，如果固定LM，旋转半圆到原来位置，它也经过F、G、H，这样，正八面体内接于圆。</p>
+<p>我进一步说，它也内接于已知球。</p>
+<p>因为，LK等于KM，同时KE是公共的，且它们夹直角，所以：底LE等于底EM（命题I.4）。</p>
+<p>又，因为：角LEM是直角，因为它在半圆上，所以：LM上的正方形是LE上的正方形的两倍（命题III.31、I.47）。</p>
+<p>又，因为：AC等于CB，所以：AB是BC的两倍，又，AB比BC同于AB上的正方形比BD上的正方形，所以：AB上的正方形是BD上的正方形的两倍。</p>
+<p>又，LM上的正方形也被证明是LE上的正方形的两倍。又，DB上的正方形等于LE上的正方形，因为，EH也等于DB。所以：AB上的正方形等于LM上的正方形。所以：AB等于LM。</p>
+<p>又，AB是给定球的直径，所以：LM等于给定球的直径。</p>
+<p>所以：可建一个球的内接正八面体，如同上题的情况一样，球直径上的正方形是正八面体一边上的正方形的两倍。</p>
+<h6 id="证完">证完</h6>
+<h5 id="注解">注解</h5>
+<p>本命题应用在命题XIII.18中，比较多个正多面体。</p>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

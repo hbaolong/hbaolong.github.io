@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="第三同读" />
+  <title>宇墨学几何原本</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">宇墨学几何原本</h1>
+<p class="author">第三同读</p>
+</header>
+<h2 id="命题x.44">命题X.44</h2>
+<p>一个第二双中项线只可在一点被分为两段。</p>
+<p>设：AB为一个第二双中项线，被C点切分，使AB、CB成为两条仅正方可公约线，其构成的矩形是中项面。显然，C不是AB的平分点，因为它们长度上是不可公约的（命题X.38）。</p>
+<p>那么我说：没有其他的点可分AB为如此的两段。</p>
+<p>斐波那契</p>
+<p>斐波那契（约1170—1250年）早年曾随其父到北非师从阿拉伯人学习算学，后又游历地中海沿岸，1202年回意大利写成《算经》。《算经》中记载着一种“兔子问题”：某人在一处有围墙的地方养了一对兔子，假定每对兔子每次生一对小兔，而小兔出生后两个月就能生育。问从这对兔子开始，一年内能繁殖成多少对兔子？对这个问题的回答，导致了著名的斐波那契数列：1，1，2，3，5，8，13，21，…。该数列差为1，以后的每个数都是由它前面两个数相加而得。</p>
+<p>假如可能有另外一点，令其为D点，那么：AC、DB是不同的，而AC假设较大，那么：正如我们上面的证明，AD、DB上的正方形之和小于AC、CB上的正方形之和。</p>
+<p>假定AD、DB是仅正方可公约的两条中项线。并构成一个有理矩形（命题X.32、引理）。</p>
+<p>令：作一条有理线段EF，在EF上作矩形EK等于AB上的正方形，从中减去等于AC、CB上的正方形之和的EG，那么：其余值HK等于AC、CB构成的矩形的两倍。</p>
+<p>又，从中减去等于AD、DB上的正方形之和的EL，它已被证明小于AC、CB上的正方形之和，那么：余值MK也等于AD、DB构成的矩形的两倍（命题X.32、引理）。</p>
+<p>那么，现在，AC、CB上的正方形是中项面，所以：EG是中项面。</p>
+<p>又，它们是作在有理线段EF上的，所以EH与EF在长度上是不可公约的（命题X.22）。</p>
+<p>同理，HN与EF在长度上也是不可公约的。</p>
+<p>又因为：AC、CB是两条中项线段，并仅正方可公约，于是：AC、CB是在长度上不可公约的。</p>
+<p>又，AC比BC同于AC上的正方形与AC、CB构成的矩形之比，于是：AC上的正方形与AC、CB构成的矩形不可公约（命题X.11）。</p>
+<p>而AC、CB上的正方形之和与AC上的正方形是可公约的，因为：AC和CB仅正方可公约（命题X.15）。</p>
+<p>又，AC、CB构成的矩形的两倍与AC、CB构成的矩形是可公约的（命题X.6）。</p>
+<p>所以：AC、CB上的正方形与AC、CB构成的矩形的两倍是不可公约的（命题X.13）。</p>
+<p>又，EG等于AC、CB上的正方形之和，而HK等于AC、BC构成的矩形的两倍，所以：EG与HK是不可公约的。所以：EH与HN在长度上也是不可公约的（命题VI.1、X.11）。</p>
+<p>又，它们是有理的，所以：EH和HN是有理线段，并仅正方可公约。</p>
+<p>而，如果两条仅正方可公约的有理线段相加，那么其总量是无理的，它被称为二项线（命题X.36）。</p>
+<p>所以：EN是一个二项线，在H点上被切分，同理，EM、MN也可证明是有理线，仅正方可公约；EN是在不同的点H、M上被切分的二项线。EH不同于MN，因为AC、CB上的正方形之和大于AD、DB上的正方形之和。</p>
+<p>而AD、DB上的正方形之和大于AD、DB构成的矩形的两倍，所以：AC、BC上的正方形之和，即EG，远远大于AD、DB构成的矩形的两倍，即MK，所以：EH也大于MN。所以：EH不同于MN。</p>
+<p>所以：一个第二双中项线只可在一点被分为两段。</p>
+<h6 id="证完">证完</h6>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

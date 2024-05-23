@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="第三同读" />
+  <title>宇墨学几何原本</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">宇墨学几何原本</h1>
+<p class="author">第三同读</p>
+</header>
+<h2 id="命题i.48">命题I.48</h2>
+<p>在一个三角形中，如果一边为边的正方形等于另两边为边的正方形之和，那么，后两边的夹角是直角。</p>
+<p>设：在三角形ABC中，BC为边的正方形等于BA和AC为边的正方形的面积之和。</p>
+<p>那么我说：角BAC是直角。</p>
+<p>过A作AD垂直于AC，使AD等于BA，连接DC（命题I.11、I.3，公设I.1）。</p>
+<p>因为：DA等于AB，所以：DA为边的正方形的面积也等于AB为边的正方形的面积。</p>
+<p>用AC为边的正方形的面积与每个相加，于是：DA和AC为边的正方形的面积之和等于BA和AC为边的正方形的面积之和（公理I.2）。</p>
+<p>又，DC为边的正方形的面积等于DA和AC为边的正方形的面积之和，因为角DAC是直角。且BC为边的正方形的面积等于BA和AC为边的正方形的面积之和，因为，这是假设。</p>
+<p>构成第八号</p>
+<p>《构成第八号》非常准确地反映了康定斯基关于点线面的抽象绘画理论，圆形、不规则方形以及直线的有机组合构成了欢快而浪漫的基调。</p>
+<p>所以：DC为边的正方形的面积等于BC为边的正方形的面积，于是：DC边也等于BC（命题I.47、公理I.1）。</p>
+<p>因为：DA等于AB，AC是公共边，DA和AC两边等于BA和AC两边，且DC边等于BC边，所以：角DAC等于角BAC。</p>
+<p>而角DAC是直角，所以：角BAC也是直角（命题I.8）。</p>
+<p>所以：在一个三角形中，如果一边为边的正方形等于另两边为边的正方形之和，那么，后两边的夹角是直角。</p>
+<h6 id="证完">证完</h6>
+<h5 id="注解">注解</h5>
+<p>这一命题是前一命题的逆命题。</p>
+<p>本命题应用在命题XI.35中。</p>
+<p>霍华德·艾肯</p>
+<p>霍华德·艾肯（1900—1973年），美国数学家，大型自动数字计算机MARK-I的创造者，他因此而成为首批获得计算机先驱奖的数学家之一。</p>
+<h1 id="第二卷-几何与代数">第二卷　几何与代数</h1>
+<p>公元前387年，柏拉图在雅典创立了哲学学园。他非常重视数学，在教学科目中开设了代数与几何课程。但他片面强调数学在训练思维中的作用，忽视其使用价值。他希望通过学习几何来培养逻辑思维能力，利用几何给人的强烈印象来将抽象的逻辑规律体现在具体的图形之中。他在学园门口立了一个牌子，牌子上面有一行字：不懂几何者免进。</p>
+<p>该卷主要讨论的是毕达哥拉斯学派的几何代数学。</p>
+<p>最后的晚餐</p>
+<p>达利发现了特别适合于他超现实主义艺术的新几何。他把第四维空间与非现实或潜意识的更高维结合起来。《最后的晚餐》发生在柏拉图学派用来象征整个宇宙的一个十二面体之中。</p>
+<p>本卷提要</p>
+<ul>
+<li><p>命题II.1，如果y＝yl＋y2＋…yn，那么xy＝xy1＋xy2＋…＋xyn，也可以用单一恒等式表示为：x（y1＋y2＋…＋yn）＝xy1＋xy2＋xyn。</p></li>
+<li><p>命题II.2，如果x＝y＋z，那么x2＝xy＋xz，用等式表示这两个变量有多种方式，比如：（y＋z）2＝（y＋z）y＋（y＋z）z，或者x2＝xy＋x（x－y）。</p></li>
+<li><p>命题II.3，如果x＝y＋z，那么xy＝yz＋y2，也可以表示为：（y＋z）y＝yz＋y2和xy＝y（x－y）＋y2。</p></li>
+<li><p>命题II.4，如果x＝y＋z，那么x2＝y2＋z2＋2yz。等式表示为：（y＋z）2＝y2＋z2＋2yz。</p></li>
+<li><p>命题II.5、II.6，等式可表示为：（y＋z）（y－z）＋z2＝y2。</p></li>
+<li><p>命题II.7，如果x＝y＋z，那么x2＋z2＝2xz＋y2。等式可表示为：x2＋z2＝2xz＋（x－z）2。</p></li>
+<li><p>命题II.8，如果x＝y＋z，那么4xy＋z2＝（x＋y）2。等式表示为：4xy＋（x－y）2＝（x＋y）2。</p></li>
+<li><p>命题II.9、II.10，等式可表示为：（y＋z）2＋（y－z）2＝2（y2＋z2）。</p></li>
+<li><p>命题II.12、II.13，余弦定理的几何模型。</p></li>
+<li><p>命题II.14，建一个正方形等于已知直线图形。完成从卷一开始的关于面的理论的建设。</p></li>
+</ul>
+<p>浮力定律</p>
+<p>浮力定律的发现是阿基米得广为世人熟知的故事之一。有一天他从澡盆里跳出来，跑到大街上大喊：“我找到了！”产生这一怪异举动的原因在于，当他坐进澡盆时，看见水从盆沿溢流出来，于是想出了计算制作国王皇冠用了多少黄金的方法——把皇冠放入注满水的容器中，溢出水的体积相当于皇冠的体积。这就是著名的浮力定律。</p>
+<h2 id="定义">定义</h2>
+<h4
+id="i.1-有一个直角的平行四边形称为矩形">I.1　有一个直角的平行四边形称为矩形。</h4>
+<h4
+id="i.2-在任何平行四边形中以此形的对角线为对角线的小平行四边形与两个相应的补形构成的图形称为折尺形">I.2　在任何平行四边形中，以此形的对角线为对角线的小平行四边形与两个相应的补形构成的图形称为折尺形。</h4>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

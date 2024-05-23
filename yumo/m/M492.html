@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="第三同读" />
+  <title>宇墨学几何原本</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">宇墨学几何原本</h1>
+<p class="author">第三同读</p>
+</header>
+<h2 id="命题xiii.13">命题XIII.13</h2>
+<p>在给定的球内建一内接棱锥；求证球直径上的正方形是棱锥一边上的正方形的一倍半。</p>
+<p>设：已知球的直径是AB，在C点切分为AC和CB，使AC等于两倍CB，在AB上建半圆ADB，从C点作CD与AB成直角，连接DA（命题VI.9、I.11）。</p>
+<p>再设：圆EFG的半径等于DC，建内接于圆EFG的等边三角形EFG、H为圆心，连接EH、HF、HG（命题I.1、IV.2）。</p>
+<p>再设：从点H建HK与圆EFG所在的平面成直角，切分HK等于线段AC，连接KE、KF、KG（命题XI.12、I.3）。</p>
+<p>那么，因为：KH与圆EFG所在的平面成直角，所以：它也与圆EFG所在的平面上的一切与它相交的直线成直角，而线段HE、HF、HG皆与它相交，所以：HK与HE、HF、HG皆成直角（定义XI.3）。</p>
+<p>又，因为：AC等于HK，CD等于HE，而它们包含直角，所以：底DA等于底KE。同理，线段KF、KG也等于DA。</p>
+<p>所以：线段KE、KF、KG彼此相等（命题I.4）。</p>
+<p>又，因为：AC是两倍CB，所以：AB是三倍BC。</p>
+<p>又，后边将要证明，AB比BC同于AD上的正方形比DC上的正方形。</p>
+<p>所以：AD上的正方形是DC上的正方形的三倍。而FE上的正方形也是EH上的正方形的三倍，DC等于EH，所以：DA也等于EF（命题XIII.12）。</p>
+<p>又，已经证明，DA分别等于线段KE、KF、KG，所以：线段EF、FG、GE也分别等于线段KE、KF、KG，所以：四个三角形EFG、KEF、KFG、KEG是等边三角形。</p>
+<p>所以：四个等边三角形构成一个棱锥，三角形EFG为其底，K为其顶点。</p>
+<p>现在，进一步，要求它内接于已知球，且证明球直径上的正方形是该棱锥一边上正方形的一倍半。</p>
+<p>埃及的僧侣文</p>
+<p>约产生于公元前1650年的赖因德纸草书，是现存世界上最古老的数学书，1858年为赖因德所获而得名。上面的文字用埃及的僧侣文书写，这是象形文字的简化，当时只有神职人员才有闲暇和需要来使用这种文字。图中是此书出现的数码，属于十进制的分级符号制。</p>
+<p>观天测地</p>
+<p>就科学史而言，文艺复兴全面地恢复了希腊自然哲学的整体面貌，并使柏拉图主义重新支配了研究自然的学者们的思想。在这一时期，航海罗盘、钟表、枪炮、印刷术等的出现都为科学革命的兴起奠定了坚实的基础。人们即将从古代的知识范围里走出来，运用科学手段与工具去探索无限的宇宙。</p>
+<p>将线段KH延长成HL，且使HL等于CB（命题I.3）。</p>
+<p>那么，因为：AC比CD同于CD比CB，同时AC等于KH，CD等于HE，CB等于HL，所以：KH比HE同于EH比HL。所以：KH、HL构成的矩形等于EH上的正方形（命题VI.8、推论、VI.17）。</p>
+<p>又，角KHE、EHL皆为直角，所以：KL上的半圆也过E（命题VI.8、III.31）。</p>
+<p>那么，如果固定KL，使半圆从原来的位置旋转到开始位置，它也经过点F、G，因为：如果连接FL、LG，那么在F、G的是直角。且棱锥内接于已知球。因为球的直径KL等于已知球的直径AB，KH等于AC，且HL等于CB。</p>
+<p>我进一步说：球直径上的正方形是棱锥一边上正方形的一倍半。</p>
+<p>因为：AC是CB的两倍，所以：AB是BC的三倍，又，由反比可得，BA是AC的一倍半。</p>
+<p>又，BA比AC同于BA上的正方形比AD上的正方形。所以：BA上的正方形也是AD上的正方形的一倍半。又，BA是给定的球的直径，且AD等于棱锥的边。</p>
+<p>所以，这个球的直径上的正方形是棱锥上正方形的一倍半。</p>
+<p>所以：在给定的球内建一内接棱锥；该球直径上的正方形是棱锥一边为边的正方形的一倍半。</p>
+<h6 id="证完">证完</h6>
+<p>引理</p>
+<p>也可以证明AB比BC同于AD上的正方形比DC上的正方形。</p>
+<p>设：已作出半圆图形，连接DB，在AC上建正方形EC。完成平行四边形FB（命题I.46）。</p>
+<p>因为：三角形DAB与三角形DAC是等角三角形，所以：BA比AD同于DA比AC。所以：由AB、AC构成的矩形等于AD上的正方形（命题VI.8、VI.4、VI.17）。</p>
+<p>又，因为：AB比BC同于EB比BF，而EB是BA、AC构成的矩形，因为，EA等于AC；BF是AC、CB构成的矩形。所以：AB比BC同于BA、AC的矩形比AC、CB构成的矩形（命题VI.1）。</p>
+<p>又，BA、AC构成的矩形等于AD上的正方形，且AC、CB构成的矩形等于DC上的正方形，因为，垂线DC是底的线段AC、CB的比例中项，因为，角ADB是直角。所以：AB比BC同于AD上的正方形比DC上的正方形（命题VI.8、推论）。</p>
+<h6 id="证完-1">证完</h6>
+<h5 id="注解">注解</h5>
+<p>在命题XIII.18中，比较了五个正多边形，本命题的正四面体是其中一个。</p>
+<p>规矩图</p>
+<p>古代中国几何学的起源更多与天文观测相联系。成书于公元前2世纪的中国数学经典《周髀算经》就是一部讨论中国西周初年，即公元前1100年的天文测量而所用的数学方法的著作。不过在此之前，即夏禹治水之初，规矩准绳之用在中国已相当普通。图为汉代画像石上的规矩作图：女娲（左）执规，伏羲（右）执矩。</p>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

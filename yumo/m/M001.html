@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="第三同读" />
+  <title>宇墨学几何原本</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">宇墨学几何原本</h1>
+<p class="author">第三同读</p>
+</header>
+<h2 id="命题i.1">命题I.1</h2>
+<p>已知一条线段可作一个等边三角形。</p>
+<p>设：AB为已知的线段。</p>
+<p>要求：以线段AB为边建立一个等边三角形，以A为圆心、AB为半径作圆BCD；再以B为圆心、以BA为半径作圆ACE；两圆相交于C点，连接CA、CB。</p>
+<p>因为：A点是圆CDB的圆心，故AC等于AB（定义I.15）。</p>
+<p>又，点B是圆CAE的圆心，故BC等于BA（定义I.15），CA等于AB；所以：线段CA等于CB等于AB。</p>
+<p>因为：等于同量的量互相相等（公理I.1）；所以：CA等于CB。所以：三条线段CA、AB、BC相等。</p>
+<p>所以：三角形ABC是建立在线段AB上的等边三角形。</p>
+<h6 id="证完">证完</h6>
+<h5 id="注解">注解</h5>
+<p>将这一命题作为《原本》的第一命题是令人愉快的，三角形结构清晰，对等边三角形的证明过程，也条理清晰，当然对C点可以有两个选择，任意一个皆可。或许，欧几里得应将命题I.4作为《原本》的第一命题，因为该命题逻辑上不依赖于前三个命题；但是，欧几里得的第一命题的选择，也自有他的理由，首先，本书接触五个正立体，从一个正三角形开始，有其美学意义。另外，命题I.2、I.3皆需要命题I.1，命题I.2和命题I.3给出了移动线的结构，命题I.4虽然在逻辑上不依赖于命题I.2和命题I.3，但却引用了叠合的概念，某种意义上讲，是移动的点和线。</p>
+<p>欧几里得在某个命题结束时，用了“证完”一词。这是几何学命题证明结束的一个标准。尽管两千多年来这部天才的巨著受到了历代数学批评家们的挑剔，并且他们也指出了不少漏洞，但是它的光辉却丝毫未损。本命题是两千余年来受到批评最多的一个命题，批评者指出，如此简洁明了的命题，却充满了漏洞，这是陈述不够充分的逻辑裂缝。为什么生成C点？证明一开始，点C就被设定为圆的相交点，但它的存在却没有证明。欧几里得虽然在平行公设里说到点的生成，但那一公设却与该命题无关。所以点C的存在不能获得保证。事实上，在几何学模式中，不相交的圆自然是存在的，所以，在这里还要求欧几里得尚未定义的公设出现。在第三卷中，欧几里得小心谨慎地分析国相交的可能情况，但无论他怎么小心，还是得出了错误的定理。</p>
+<p>为什么ABC是一个平面图形？在总结了线段AC、AB和BC相等以后，就确定ABC是平面图形，三条线段并未表明在一个平面内，却构成了平面图形，缺乏逻辑链。命题X.1中声明了“三角形在一个平面内”，从逻辑上讲，这两个命题应该被置于第一卷的第一命题。然而二者却没有被置于第一命题，这显然是因为第十卷中的命题属于立体几何，而《原本》中，立体几何从平面几何发展而来。从历史观点的考察来看，无疑是这样的。</p>
+<p>不能排除这种可能性：边可以构成多次多区域的相交，就像泡沫链一样。这里需要证明（或者设立公设）：两条无限延伸的直线至少能在一点相交。</p>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

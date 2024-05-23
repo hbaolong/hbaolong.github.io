@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="第三同读" />
+  <title>宇墨学几何原本</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">宇墨学几何原本</h1>
+<p class="author">第三同读</p>
+</header>
+<h2 id="命题xi.34">命题XI.34</h2>
+<p>在相等的平行六面体中，底与高成逆比例；相反，底与高成逆比例的平行六面体彼此相等。</p>
+<p>设：AB、CD为两个平行六面体。</p>
+<p>那么我说：平行六面体AB、CD的底和高成逆比例，即底EH比底NQ等于立体CD之高比立体AB之高。</p>
+<p>首先，令侧棱AG、EF、LB、HK、CM、N0、PD、QR与底成直角。</p>
+<p>那么我说：底EH比底NQ等于CM比AG。</p>
+<p>如果底EH等于底NQ，且立体AB等于立体CD，那么，CM等于AG，因为等高的两个平行六面体之比等于两底之比，且底EH比NQ等于CM比AG，这表明，在平行六面体AB、CD中，它们的底与高成逆比（命题XI.32）。</p>
+<p>再，令底EH不等于底NQ，且EH较大。</p>
+<p>现在，立体AB等于立体CD，于是：CM也大于AG。</p>
+<p>作CT等于AG，以NQ为底（命题I.3、I.31）。在其上作补形平行六面体VC，其高为CT。</p>
+<p>现在，因为立体AB等于立体CD，而CV是与它们不同的另一立体，等量与同一量的比也相等，所以：立体AB比立体CV等于立体CD比立体CV（命题V.7）。</p>
+<p>又，立体AB比立体CV等于底EH比底NQ，因为立体AB和CV有等高。且立体CD比立体CV等于底MQ比底TQ，且等于CM比CT，所以：底EH比底NQ等于MC比CT（命题XI.32、XI.25、VI.1）。</p>
+<p>而CT等于AG，所以：底EH比底NQ等于MC比AG。</p>
+<p>所以：在平行六面体AB、CD中，底与高成逆比例。</p>
+<p>又，在平行六面体AB、CD中，设底与高成逆比，即底EH比底NQ等于立体CD的高比立体AB之高。</p>
+<p>那么我说：立体AB等于立体CD。</p>
+<p>再设：侧棱与底面成直角。</p>
+<p>现在，如果底EH等于底NQ，且底EH比底NQ等于立体CD之高比立体AB之高。于是：CD之高也等于AB之高。</p>
+<p>又，等底等高的平行六面体相等，所以：立体AB等于立体CD（命题XI.31）。</p>
+<p>再，令底EH不等于底NQ，EH较大。</p>
+<p>于是：立体CD之高也大于立体AB之高，即CM大于AG。</p>
+<p>《阿卡凯博士的抨击》卷首</p>
+<p>1750年，瑞士数学家约翰·萨穆埃尔·柯尼希与普鲁士科学院院长莫佩蒂之间爆发了关于变分法的最小作用量原理的归属权的激烈争论。虽然1746年莫佩蒂发表了论述最小作用量原理的论文，但柯尼希坚持认为莱布尼茨已于1707年谈及最小作用量原理。接着，伏尔泰介入争论，并于1752年在其著作《阿卡凯博士的抨击》中攻击莫佩蒂，后者就此停止辩论。</p>
+<p>又，作CT等于AG，建补形平行六面体CV（命题I.3、I.31）。</p>
+<p>托里拆利</p>
+<p>埃万杰利斯坦·托里拆利（1608—1647年），意大利物理学家、数学家，在数学和物理学等许多方面都颇有建树。他最有成效的工作是对空气压强的研究，并因此发明了使他著称于世的气压计。1644年，托里拆利发表了有关几何学和物理学方面的著作，论证了空气具有重量，并对重量和压力等物理概念进行过深刻阐述。他从实际上解决了空气是否有重量和真空是否可能存在的两个重大课题。</p>
+<p>因为：底EH比底NQ等于MC比AG，又AG等于CT，所以：底EH比底NQ等于CM比CT。</p>
+<p>又，底EH比底NQ等于立体AB比立体CV，因为，立体AB、CV等高，且CM比CT等于底MQ比底QT，且还等于立体CD比立体CV（命题XI.32、VI.1、XI.25）。</p>
+<p>所以：立体AB比立体CV等于立体CD比立体CV。</p>
+<p>所以：立体AB、CD与CV有相等比值。所以：立体AB等于立体CD（命题V.9）。</p>
+<p>现在，令侧棱FE、BL、GA、HK、ON、DP、MC、RQ与它们的底不成直角。过F、G、B、K、O、M、D、R点作垂线，使与过EH、NQ的平面成直角，并交平面于S、T、U、V、W、X、Y、A1，建补形立体FV和QA1（命题X.11）。</p>
+<p>那么我说：在这种情况下，如果立体AB、CD相等，那么：底与高成逆比，即底EH比底NQ等于立体CD之高比立体AB之高。</p>
+<p>因为：立体AB等于立体CD，AB等于BT，因为它们在同底FK上且有等高，且立体CD等于DX，因为它们也有同底RO且有等高，所以：立体BT也等于立体DX（命题XI.29、XI.30）。</p>
+<p>所以：底FK比底OR等于立体DX之高比立体BT之高。而底FK等于底EH，又底OR等于底NQ，所以：底EH比底NQ等于立体DX比立体BT之高（同上）。</p>
+<p>又，立体DX、BT与立体DC、BA分别等高，所以：底EH比底NQ等于立体DC之高比立体AB之高。</p>
+<p>所以：在平行六面体AB、CD中，底与高成逆比例。</p>
+<p>再，在平行六面体AB、CD中，底与高成逆比，即底EH比底NQ等于立体CD之高比立体AB之高。</p>
+<p>那么我说：立体AB等于立体CD。</p>
+<p>在这同一结构中，因为：底EH比底NQ等于立体CD之高比立体AB之高，又，底EH等于底FK，且NQ等于OR，所以：底FK比底OR等于立体CD之高比立体AB之高。</p>
+<p>而立体AB、CD与立体BT、DX分别有等高，所以：底FK比底OR等于立体DX之高比立体BT之高。</p>
+<p>所以：平行六面体BT和DX中，底与高成逆比，所以：立体BT等于立体DX（同上）。</p>
+<p>又：BT等于BA，因为它们有同底FK且有等高，且立体DX等于立体DC。所以：立体AB也等于立体CD（命题XI.29、XI.30）。</p>
+<p>所以：在相等的平行六面体中，底与高成逆比例；相反，底与高成逆比例的平行六面体彼此相等。</p>
+<h6 id="证完">证完</h6>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

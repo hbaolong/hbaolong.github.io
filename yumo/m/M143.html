@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="第三同读" />
+  <title>宇墨学几何原本</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">宇墨学几何原本</h1>
+<p class="author">第三同读</p>
+</header>
+<h2 id="命题v.3">命题V.3</h2>
+<p>如果第一个量值是第二个的倍量，第三个量是第四个量的相同倍数；如果第一量和第三量也是等倍数，那么这两个量分别是第二量及第四量的倍量，并且这两个倍数相等。</p>
+<p>设：第一量a的数量值是第二量b的相同倍数，第三量c是第四量d的相同倍数，EF是a的等倍数，GH是c的等倍数（定义V.2）；</p>
+<p>那么我说：EF是b的相同倍数，GH是d的相同倍数。</p>
+<p>因为EF是a的相同倍数，GH是c的相同倍数。</p>
+<p>所以：在EF中有多少个a的相同的量值，在GH中有同样多个c的相同量值。</p>
+<p>另：将EF分为EK和KF，使其量值等于a。将GH分为GL和LH，使其量值等于c。</p>
+<p>那么EK与KF的量值数等于GL与LH的量值数。</p>
+<p>又因为，a是b的相同倍数，c是d的相同倍数，这时EK等于a，GL等于c，故EK是b的相同倍数，GL是d的相同倍数。</p>
+<p>同理，KF是b的相同倍数，LH是d的相同倍数。</p>
+<p>那么第一个量EK是第二个量b的相同倍数，第三个量GL是第四个量d的相同倍数，第五个量KF是第二个量b的相同倍数，第六个量LH是第四个量d的相同倍数。</p>
+<p>所以：第一个量与第五个量之和EF是第二个量b的倍数，第三个量与第六个量之和GH是第四个量d的倍数（命题V.2）。</p>
+<p>所以：如果第一个量值是第二个的倍量，第三个量是第四个量的相同倍数；如果第一量和第三量也是等倍数，那么这两个量分别是第二量及第四量的倍量，并且这两个倍数相等。</p>
+<h6 id="证完">证完</h6>
+<p>欧洲的“算术三角”</p>
+<p>在帕斯卡之前，欧洲知道“帕斯卡三角”的大有人在。根据现有资料，最早发表的是德国人阿皮安努斯（1495—1552年），他在1527年出版的算术书中就有n＝9的算术三角形图，后来朔伊贝尔（1494—1570年）在他的《算术》中也记有算术三角形（图上），还有塔尔塔利亚（1499—1557年）在他的《数的度量通论》中也记载了此类算术三角形（图下）。</p>
+<h5 id="注解">注解</h5>
+<p>这一命题说等倍量相等。即如果w和x是y和z的等倍量，u和v是w和x的等倍量，那么，u和v是y和z的等倍量。证明依赖于乘法的欧几里得算法，即：m（ny）＝（mn）y。在欧几里得的证明中，n是3，m是2。</p>
+<p>如同在上一命题中，量并不总需要是同一个类。</p>
+<p>虽然这一命题实际上并不是陈述比例，但仍然可以解释为比例，对a和c是b和d的等倍量的假设，可以解释为比例a：b＝c：d，且ma和mc是b和d的等倍量的这一结论也可以解释为一个比例，即ma：b＝mc：d。在这一解释下，这一比例成为下一命题中证明普遍情形的特殊情况。</p>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

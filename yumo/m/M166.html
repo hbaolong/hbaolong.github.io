@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="第三同读" />
+  <title>宇墨学几何原本</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">宇墨学几何原本</h1>
+<p class="author">第三同读</p>
+</header>
+<h2 id="命题v.25">命题V.25</h2>
+<p>如果四个量成比例，那么最大量和最小量之和大于其余两个量之和。</p>
+<p>设：AB、CD、e和f四个量成比例，AB比CD等于e比f，AB为最大，f为最小。</p>
+<p>那么我说：AB与f之和大于CD与e之和。</p>
+<p>作AG等于e，CH等于f。</p>
+<p>因为AB比CD等于e比f，又：e等于AG，f等于CH。</p>
+<p>所以：AB比CD等于AG比CH（命题V.7、V.11）。</p>
+<p>又因为：总量AB比总量CD，等于部分AG比部分CH。</p>
+<p>所以：余量GB比余量HD也等于总量AB比总量CD（命题V.19）。</p>
+<p>又因为：AG等于e，CH等于f。</p>
+<p>所以：AG与c之和等于CH与e之和。</p>
+<p>所以：如果四个量成比例，那么最大量和最小量之和大于余下的两个量之和。</p>
+<h6 id="证完">证完</h6>
+<h5 id="注解">注解</h5>
+<p>这一命题表述：如果w：x＝y：z，w是四个量中的最大量，z是最小量，那么w＋z&gt;x＋y（该四量必须是同类量）。</p>
+<p>这一命题没有在《几何原本》中再加以利用。</p>
+<p>这一命题依赖于定义V.4作为类似公理，无穷小的一个反例是：当y是与x相关的无穷小的数时，比例是（x＋5y）：（x＋2y）＝（x＋4y）：x。</p>
+<p>尚克斯的圆周率</p>
+<p>1706年，英国人琼斯在《新数学引论》上首次创用π代表圆周率。1736年以后，π由欧拉开始予以提倡。现在π已成为圆周率的专用符号。1873年，英国人尚克斯利用高斯的数论工具，将π算到小数后的707位。到1990年，圆周率已算到小数点后的10亿位。</p>
+<h1 id="第六卷-相似">第六卷　相似</h1>
+<p>世界上是否存在完全相同的两片树叶，先不去管它，但是，在几何概念中，很多图形或事物是可以相等或相似的。你无法否认边长为4的两个正方形的相等性，你也无法拒绝一切正多边形、圆、正多面体、球体等各自的相似性。事物之间的相似性，是人们进行归纳推理的基础，是事物得以存在的重要属性之一。</p>
+<p>本卷主要阐述了比例的属性。</p>
+<p>镜子</p>
+<p>在埃舍尔的赞美者当中不乏众多数学家。他们认为，埃舍尔的作品中极大地运用了数学的原则和思想，并将它们进行了非同寻常的形象化。他的作品中大部分都是围绕空间几何学和空间逻辑学而创作的。</p>
+<p>本卷提要</p>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

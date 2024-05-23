@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="第三同读" />
+  <title>宇墨学几何原本</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">宇墨学几何原本</h1>
+<p class="author">第三同读</p>
+</header>
+<h2 id="命题vii.39">命题VII.39</h2>
+<p>求已知的几个一部分的最小数。</p>
+<p>设：a、b和c是给定的几个一部分。</p>
+<p>现在要求的是：找到a、b和c的最小数。</p>
+<p>令：d、e、f是称为与几个一部分a、b、c同名的数，且一个数，无论有怎样的一部分，它将被与该一部分同名的数所测尽。设取g是被d、e、f测尽的最小数（命题VII.36）。</p>
+<p>于是：g有部分与d、e和f的部分同名（命题VII.37）。</p>
+<p>又：a、b和c是d、e和f的同名的几个一部分，于是：g有几个一部分a、b、c。</p>
+<p>我还要进一步说：g也是最小数。</p>
+<p>对数计算尺</p>
+<p>对数计算尺不但能进行加减乘除以及乘方、开方运算，而且还可以计算指数函数、对数函数以及三角函数。直到袖珍电子计算器面世，对数计算尺才逐渐被淘汰。</p>
+<p>假如不是，存在一个小于g的数h，有几个一部分a、b和c。</p>
+<p>因为：h有a、b和c的部分，所以：h被与a、b和c的部分同名的数测尽。</p>
+<p>又：d、e和f与a、b和c的部分同名，所以：h被d、e和f所测尽（命题VII.38）。</p>
+<p>又：h小于g，这是不可能的。</p>
+<p>所以：没有小于g的数有a、b和c的部分。</p>
+<p>所以：a、b和c的最小数找到。</p>
+<h6 id="证完">证完</h6>
+<h1 id="第八卷-数论二">第八卷　数论（二）</h1>
+<p>公元前3世纪初叶，秦始皇“扫六合，吞八荒”统一了中国。当年，为了便于管理调度人数众多的军队，秦王运用了一种特殊的记数方法，人称“秦王暗点兵”：“秦兵列队，每列百人则余一人，九九人则余二人，百零一人则不足二人。问秦兵几何？”1966年，中国陈景润证明了“歌德巴赫猜想”之一：“一个大偶数可以表示为一个素数和一个不超过两个素数的乘积之和”。这一证明把数论研究推向了一个顶峰，在国际数学界也引起了强烈的反响。</p>
+<p>本卷继续讨论初等数论，给出了求两个或多个整数的最大公因子的“欧几里得算法”。</p>
+<p>蜥蜴</p>
+<p>在埃舍尔的《蜥蜴》图案里，镶嵌而成的蜥蜴逃离了二维平面的束缚，爬向了三维空间，接着又重新陷入到原来的图案中。这群在二维空间和三维空间往复回旋的蜥蜴就像回旋于一种麦比鸟斯怪圈。埃舍尔在这里为我再现了不可能的奇异空间。</p>
+<p>本卷提要</p>
+<ul>
+<li><p>命题VIII.2、VIII.4，找出成连续比的数。</p></li>
+<li><p>命题VIII.22，正方形和立方体的诸比例关系。如三个数成连比，第一个数是个平方数，那么第三个数也一定是平方数。</p></li>
+</ul>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

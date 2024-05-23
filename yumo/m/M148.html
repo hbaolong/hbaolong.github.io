@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="第三同读" />
+  <title>宇墨学几何原本</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">宇墨学几何原本</h1>
+<p class="author">第三同读</p>
+</header>
+<h2 id="命题v.8">命题V.8</h2>
+<p>两个不等量与同一个量的比值中，较大的量比值也较大；一个量与两个不等量的比值中，小的量比值为大。</p>
+<p>设：AB和c是不等量，AB大于c，d是一个任意量。</p>
+<p>那么我说：AB比d大于c比d，d比c大于d比AB。</p>
+<p>因为：AB大于c，作EB等于c。</p>
+<p>那么：对AE和EB中较小的量加倍至一定次数时将大于d（定义V.4）。</p>
+<p>首先：令AE小于EB，AE加倍，FG是AE的倍量，并大于d。作GH，使之为EB的相等倍数量，作k为c的相等倍数量，FG为AE的相等倍数量。</p>
+<p>令l为d的两倍，m为其三倍，如此连续增加倍数，直到d加倍到首次大于k。令其为n，n为d的四倍，它的一倍大于k（定义V.4）。</p>
+<p>因为：k小于n，所以：k不小于m。</p>
+<p>因为：FG是AE的相同倍数，GH是EB的相同倍数。</p>
+<p>所以：FG是AE的相同倍数，FH是AB的相同倍数（命题V.1）。</p>
+<p>又：FG是AE的相同倍数，k是c的相同倍数。</p>
+<p>所以：FH是AB的相同倍数，k是c的相同倍数。</p>
+<p>所以：FH和k是AB和c的同倍量。</p>
+<p>又因为：GH是EB的相同倍数，k是c的相同倍数，EB是c的相同倍数。</p>
+<p>所以：GH等于k。</p>
+<p>而k不小于m，所以：GH也不小于m。</p>
+<p>又：FG大于d，所以：FH大于d与m之和。</p>
+<p>又：d与m之和等于n，由于m是d的三倍，m与d之和是d的四倍，同时n也是d的四倍。</p>
+<p>所以：m与d之和等于n。</p>
+<p>又：FH大于m与d之和，所以：FH大于n，同时k不大于n。</p>
+<p>又：FH与k是AB和c的同倍量，同时n是d的任意倍数。</p>
+<p>所以：AB比d大于c比d（定义V.7）。</p>
+<p>我还要进一步说，d比c大于d比AB。</p>
+<p>在这同一结构中，我们同样可以证明出n大于k，同时n不大于FH。</p>
+<p>又：n是d的倍数，同时FH和k是AB和c的任意同倍量。</p>
+<p>所以：d比c大于d比AB（定义V.7）。</p>
+<p>再：令AE大于EB。那么，加倍EB到一定倍数最终会大于d（定义V.4）。</p>
+<p>令加倍后的GH是EB的倍数，并大于d。</p>
+<p>令：FG是AE的相同倍数量，k是c的相同倍数量，GH是EB的相同倍数量。</p>
+<p>那么我们同样也可以证明出FH和k是AB和c的等倍量。</p>
+<p>又，同样，令n是d的一倍量，并大于FG。</p>
+<p>所以：FG也不小于m（定义V.4）。</p>
+<p>又：GH大于d，所以：FH大于d与m之和，即n。</p>
+<p>那么：k不大于n，FG亦如是，FG大于GH，即大于k，不大于n。</p>
+<p>所以：两个不等量与同一个量的比值中，较大的量比值也较大；一个量与两个不等量的比值中，小的量比值为大。</p>
+<h6 id="证完">证完</h6>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

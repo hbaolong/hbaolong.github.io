@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="第三同读" />
+  <title>宇墨学几何原本</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">宇墨学几何原本</h1>
+<p class="author">第三同读</p>
+</header>
+<h2 id="命题vi.3">命题VI.3</h2>
+<p>如果三角形的一个角的平分线，截对边得到的两条线段的比等于夹这个角的两边的比；如果三角形一边被分成两段的比等于其余两边的比，那么连接分点与顶点的直线平分这一边所对的角。</p>
+<p>设：ABC为三角形，直线AD平分角BAC。</p>
+<p>那么我说：DB比DC等于AB比AC。</p>
+<p>令：过C作CE，使之平行于DA，延长BA，与CE相交于E（命题I.31）。</p>
+<p>那么因为：直线AC落在平行线AD和EC上，那么角ACE等于角CAD（命题I.29）。又：角CAD等于角BAD，那么角BAD也等于角ACE。</p>
+<p>又因为：直线BAE落在平行线AD和EC上，角BAD等于角AEC（命题I.29）。</p>
+<p>又：角ACE也被证明等于角BAD。所以：角ACE也等于三角形AEC。</p>
+<p>所以：边AE也等于边AC（命题I.6）。</p>
+<p>拉格朗日</p>
+<p>拉格朗日（1736—1813年），法国数学家、物理学家。在探讨“等周问题”的过程中，他用纯分析的方法发展了欧拉所开创的变分法，为变分法奠定了理论基础。他的论著使其成为当时欧洲公认的第一流数学家。1766年德国的腓特烈大帝向拉格朗日发出邀请说，在“欧洲最大的王”的宫廷中应有“欧洲最大的数学家”。于是他应邀去柏林，居住达20年之久。在此期间他完成了《分析力学》一书，建立起完整和谐的力学体系。1786年，他接受法国国王路易十六的邀请，定居巴黎，直至去世。百余年来，数学领域的许多新成就都可以直接或间接地溯源于拉格朗日的工作。</p>
+<p>又因为：AD平行于EC，所以：DB比DC与AB比AE相等（命题VI.2）：，</p>
+<p>又：AE等于AC，所以：DB比DC等于AB比AC（命题V.7）。</p>
+<p>再设：AB比AC等于DB比DC，连接AD。那么我说：直线AD平分角BAC。</p>
+<p>在这同一图形中，因为：DB比DC等于AB比AC。</p>
+<p>又：DB比DC等于AB比AE，因为AD平行于EC。所以：AB比AC也等于AB比AE（命题VI.2、V.11）。</p>
+<p>所以：AC等于AE，角AEC也等于角ACE（命题V.9、I.5）。</p>
+<p>又：角AEC等于角BAD，角ACE等于内错角CAD。所以：角BAD也等于角CAD（命题I.29）。所以：直线AD平分角BAC。</p>
+<p>所以：如果三角形的一个角的平分线，截对边得到的两条线段的比等于夹这个角的两边的比；如果三角形一边被分成两段的比等于其余两边的比，那么连接分点与顶点的直线平分这一边所对的角。</p>
+<h6 id="证完">证完</h6>
+<h5 id="注解">注解</h5>
+<p>本命题在《几何原本》中未得以再利用。</p>
+<p>应用广泛的算术三角</p>
+<p>算术三角中的数是二项展开式系数，也是组合数，又是行数。它和开方（开平方、开立方以至高次方）、解方程、组合数学、概率论等都有密切关系，历代学者都很重视，并从不同的角度来造出这个表。但就全世界的范围来行，东方各国比欧洲更早知道这个三角形。图为卡尔达诺（1501—1576年）给出的算术三角图。</p>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

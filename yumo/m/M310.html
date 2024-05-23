@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="第三同读" />
+  <title>宇墨学几何原本</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">宇墨学几何原本</h1>
+<p class="author">第三同读</p>
+</header>
+<h2 id="命题x.6">命题X.6</h2>
+<p>如果两个量的比是两个数的比，那么该量是可公约量。</p>
+<p>设：两个量a和b的比等于数d和e的比。</p>
+<p>那么我说：量a和b是可公约量。</p>
+<p>令：分a成若干相等部分，使其等于d中的单位数；c等于它们中的一个，f为若干个等于c的量，等于e中的单位量。</p>
+<p>因为：在a中有若干个c，等于d中的单位数，所以：无论单位是d的怎样的一部分，那么c也是a的怎样的一部分。所以：c比a同于该单位比d（定义VII.20）。</p>
+<p>而该单位测尽d，于是：c也测尽a。又因为c比a同于该单位比d，所以：由反比，a比c同于数d比该单位（命题V.7及其推论）。</p>
+<p>又因为：在f中有若干量等于c同于e中的单位量，所以：c比f同于该单位比e（定义VII.20）。</p>
+<p>而已经证明，a比c同于d比该单位，所以：由首末比得，a比f同于d比e（命题V.22）。</p>
+<p>而d比e同于a比b，所以：a比b也等于a比f（命题V.11）。</p>
+<p>所以：a比b与a比f的比值相等。所以：b等于f（命题V.9）。</p>
+<p>而c测尽f，所以：c也测尽b。且也测尽a，所以：c测尽a和b。</p>
+<p>甲骨数学</p>
+<p>距今5000年左右，人类历史上开始先后出现一些不同的书写记数方法，随之逐步形成较为成熟的记数系统，如古埃及公元前3400年左右的象形数字，公元前2400年古巴比伦的楔形数字。公元前500年左右，人类关于书写记数的方法已经发展得相当完善。图为中国商代的甲骨文，它使用了十进乘法累数制记数。十进乘法累数制是对人类文明的特殊贡献。</p>
+<p>所以：a与b可以公约。</p>
+<p>所以：如果两个量的比是两个数的比，那么该量是可公约量。</p>
+<h6 id="证完">证完</h6>
+<p>推论</p>
+<p>这一命题表明，如果有两个数如d、e和一条线段a，那么可以作一条线段f，使a比f同于d比e。</p>
+<p>又：如果取a、f的比例中项b，那么a比f等于a上的正方形比b上的正方形，即第一线段比第三线段同于第一线段上的直线图形比第二条线段上与之相似的图形（命题V.19及其推论）。</p>
+<p>又：a比f同于d比e，于是：d比e等于在a上的直线图形比在b上的直线图形。</p>
+<h6 id="证完-1">证完</h6>
+<h5 id="注解">注解</h5>
+<p>如果a：b＝m：n，那么，假定c等于a/m，可以推出a＝mc及b＝nc。</p>
+<p>这一命题假定量是可分的。然而并不是所有的量都是可分的。比如一个60°的角，按照欧几里得的分法，就不能被三等分。</p>
+<p>这一命题从本卷的下一个命题开始频繁使用。也用在命题XIII.6中。推论也频繁使用在本卷从X.10开始的命题中。</p>
+<p>花剌子米《代数学》</p>
+<p>“代数学”一词来自阿拉伯数学家花剌子米著作的书名。《代数学》全名是《还原与对消计算概要》。代数学是算术的发展，它的特点是引进了未知数，并对未知数加以运算，根据问题的条件列出方程，然后解方程求出未知数的值。另外，在代数中既然要对未知数加以运算，就必须用符号把它表示出来，那么未知数、符号、方程就是代数的基本特征。</p>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

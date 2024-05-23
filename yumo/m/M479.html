@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="第三同读" />
+  <title>宇墨学几何原本</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">宇墨学几何原本</h1>
+<p class="author">第三同读</p>
+</header>
+<h2 id="命题xii.18">命题XII.18</h2>
+<p>球之比等于它们直径的三次比。</p>
+<p>设：ABC和DEF为球，它们的直径分别为BC、EF。</p>
+<p>那么我说：球ABC比球DEF等于直径BC与EF的三次比。</p>
+<p>因为：如果球ABC与球DEF之比不等于BC与EF的三次比，那么，球ABC与某个小于或者大于球DEF的球之比，等于BC与EF的三次比。</p>
+<p>首先，令球GHK等于此比。</p>
+<p>令：球DEF与球GHK是同心的，再令在大球DEF内有一个内接多面体，它与小球GHK不相切（命题XII.17）。</p>
+<p>又，在球ABC内作内接多面体相似于球DEF内的内接多面体。所以：在ABC内的内接多面体比在DEF内的内接多面体，等于BC与EF的三次比（命题XII.17、推论）。</p>
+<p>又，球ABC比球GHK等于BC与EF的三次比，所以：球ABC比球GHK等于球ABC内的多面体比球DEF内的多面体，又，由更比可得，球ABC比在它内的多面体等于球GHK比球DEF内的多面体（命题V.16）。</p>
+<p>又，球ABC大于在它内的多面体。所以：球GHK也大于球DEF内的多面体（命题V.14）。</p>
+<p>又，它也小于球DEF中的多面体，因为，它包含它。所以：球ABC比小于球DEF的某个球不等于直径BC与EF的三次比。</p>
+<p>类似地，我们也可证明，球DEF比小于球ABC的某个球也不等于EF与BC的三次比。</p>
+<p>那么我进一步说：球ABC比任意一个大于球DEF的球不等于BC与EF的三次比。</p>
+<p>因为，如果可能，令能有这个比值的是一个较大的球LMN，所以：由反比可得，球LMN比球ABC等于直径EF与BC的三次比。</p>
+<p>又，因为，LMN大于DEF，所以：球LMN比球ABC等于球DEF比某个小于球ABC的球，如同前面的证明（命题XII.2、引理）。</p>
+<p>所以：球DEF比小于球ABC的某个球，等于EF与BC的三次比，这已证明是不可能的。所以：球ABC比某个大于球DEF的球不等于BC与EF的三次比。</p>
+<p>又，也已证明，球ABC比某小于球DEF的球，也不等于BC与EF的三次比。</p>
+<p>所以：球ABC比球DEF等于BC与EF的三次比。</p>
+<p>所以：球之比等于它们直径的三次比。</p>
+<h6 id="证完">证完</h6>
+<h5 id="注解">注解</h5>
+<p>本命题是该卷的结束命题。</p>
+<p>本命题是重要的，它是球体研究的开始。欧几里得在命题XII中已证明了同底同高圆锥是其圆柱的三分之一，但他没有发现球与圆柱的比率。在欧几里得以后一个世纪，阿基米德解决了这一问题，同时他也解决了更困难的球的面的问题。球同圆柱的比率为4∶3，因为圆柱的体积，同其底与高成比例，于是球、圆柱、圆锥的体积皆可根据圆面积求得。使用代数项表示，即是，设pi代表圆与圆半径上的正方形的比率，那么圆柱的体积是圆柱的半径r和高h的πr2h；圆锥是πr2h/3；以r为半径的球的体积是4πr3/3。</p>
+<h1 id="第十三卷-建正多面体">第十三卷　建正多面体</h1>
+<p>1623年，伽利略在《分析家》中说道：“这是一部关于哲学的著作。这里，我指的就是我们眼前的宇宙。但是，如果没有第一个人像本书那样去理解宇宙的内部性质以及去描述宇宙的特征，那么，我们就不能理解宇宙。本书使用数学的语言，用三角、圆和其他几何图形来描述宇宙的几何特征。只有这样，人类才能理解宇宙。否则，人类就只能像是进入了迷宫一般，左右徘徊。”</p>
+<p>本卷仍然论述立体几何，重点是正多面体的作图。</p>
+<p>黑网</p>
+<p>康定斯基摒弃了绘画中一切描绘性元素，纯粹以抽象的线条与色彩来表达内在精神。他认为艺术创作的目的并不在于捕捉对象的外形，而是在于捕捉其内在精神。</p>
+<p>本卷提要</p>
+<ul>
+<li><p>命题XIII.9，建圆内的六面体和十面体。黄金比率。</p></li>
+<li><p>命题XIII.10，建六面体和十面体的内切圆。黄金比率。</p></li>
+<li><p>命题XIII.11，当五面体、六面体、十面体内接于一圆，五面体的一边上的正方形等于六面体的边上的正方形之和，也等于十面体边上的正方形之和。</p></li>
+<li><p>命题XIII.13、XIII.14、XIII.15、XIII.16、XIII.17，建各种正多面体形。</p></li>
+<li><p>命题XIII.18，对前面五个正多面体进行比较。</p></li>
+</ul>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

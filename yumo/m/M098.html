@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="第三同读" />
+  <title>宇墨学几何原本</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">宇墨学几何原本</h1>
+<p class="author">第三同读</p>
+</header>
+<h2 id="命题iii.33">命题III.33</h2>
+<p>给定一条弦，可以作出它所对的圆周角等于已知角。</p>
+<p>设：AB为给定的线段，角C为指定的角。</p>
+<p>现在要求的是：在线段AB上作出弓形使其角等于角C。C可以是锐角、钝角和直角。</p>
+<p>先假设它为锐角。在直线AB上的点A上建角BAD等于角C。于是：角BAD也是锐角（命题I.23）。</p>
+<p>作AE垂直于DA，在F点上平分AB，从F点作FG垂直于AB，连接GB（命题I.10、I.12）。</p>
+<p>因为：AF等于FB，而FG是公共边，AF、FG等于BF、FG，且角AFG等于角BFG。所以：第三边AG等于第三边BG（命题I.4）。</p>
+<p>所以：以G为圆心和GA为半径作圆ABE，连接EB，因为AD是A点延长线，过直径AE的尾点，作AD垂直于AE。所以：AD是圆ABE的切线（命题III.16推论）。</p>
+<p>既然：AD是圆ABE的切线，在切点A上作线段AB经过圆ABE；角DAB等于相对弓形上的角AEB（命题III.32）。</p>
+<p>又：角DAB等于角C，所以：角C也等于角AEB。</p>
+<p>所以：在给定的线段AB上作出包含角AEB的弓形AEB，它等于角C。</p>
+<p>进一步，假定角C为直角，在线段AB上作出弓形使它所含的角等于角C。</p>
+<p>设：建角BAD，使之等于角C，F为AB的平分点，以F为圆心，FA或FB为半径作圆AEB（命题I.23，I.10）。</p>
+<p>于是：直线AD切于圆ABE，因为AD垂直于AB（命题III.16推论）。</p>
+<p>又：角BAD等于弓形AEB上的角，因为后者也是直角，是半圆上的角（命题III.31）。</p>
+<p>又：角BAD也等于角C。所以：角AEB也等于角C。所以：在AB上建起了包含等于角C的弓形AEB。</p>
+<p>进一步，假定角C为钝角。</p>
+<p>在线段AB的A点上建角BAD等于C，作AE垂直于AD，F点平分线段AB，作FG垂直于AB，连接GB（命题I.23、I.11、I.12）。</p>
+<p>那么因为：AF等于FB，FG是公共边，AF、FG等于BF、FG，角AFG等于角BFG。</p>
+<p>所以：第三边AG等于第三边BG（命题I.4）。</p>
+<p>所以：以G为圆心GA为半径的圆作出来了，它也经过B，即AEB。</p>
+<p>因为AD与线段AE在尾点构成直角。所以：AD是圆AEB的切线（命题III.16推论）。</p>
+<p>又：AB过切点A经过圆。所以：角BAD等于作在相对弓形AHB上的角（命题III.32）。</p>
+<p>又：角BAD等于角C。所以：弓形AHB上的角也等于角C。</p>
+<p>所以：在给定线段AB上，弓形AHB建成，其上的角等于角C。</p>
+<p>所以：给定一条弦，可以作出它所对的圆周角等于已知角。</p>
+<h6 id="证完">证完</h6>
+<h5 id="注解">注解</h5>
+<p>这一命题在《原本》的其他地方未再被利用。</p>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

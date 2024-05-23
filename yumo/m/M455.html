@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="第三同读" />
+  <title>宇墨学几何原本</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">宇墨学几何原本</h1>
+<p class="author">第三同读</p>
+</header>
+<h2 id="命题xi.35">命题XI.35</h2>
+<p>如果有两个相等的平面角，过其顶点分别在平面外建直线，与原直线分别成等角，在所建二直线上任取一点，从该点向原来角所在的平面作垂线，其垂线与平面的交点和角顶点的连线与面外直线相交成等角。</p>
+<h6 id="证完">证完</h6>
+<p>设：角BAC、EDF是两个相等的直线角，从点A、D作面外AG、DM，使它们和原直线所成的角分别相等，即角MDE等于角GAB，角MDF等于角GAC。</p>
+<p>在AG、DM上任意取点G、M，从点G、M分别作GL、MN，使之分别垂直于过AB、AC的平面，以及过ED、DF的平面，且和两平面各交于L、N。连接LA、ND（命题XI.11）。</p>
+<p>那么我说：角GAL等于角MDN。</p>
+<p>作AH等于DM，再过点H作直线HK，使之平行于GL（命题I.3、I.31）。</p>
+<p>因为：GL垂直于过BA、AC的平面，所以：HK也垂直于过BA、AC的平面（命题XI.8）。</p>
+<p>过点K、N作KC、NF、KB、NE，使它们垂直于直线AC、DF、AB、DE，连接HC、CB、MF、FE（命题I.12）。</p>
+<p>因为：HA上的正方形等于HK、KA上的正方形之和，而KC、CA上的正方形之和等于KA上的正方形，所以：HA上的正方形等于HK、KC、CA上的正方形之和（命题I.47）。</p>
+<p>又，HC上的正方形等于HK、KC上的正方形之和，所以：HA上的正方形等于HC、CA上的正方形之和，所以：角HCA是直角。</p>
+<p>同理，角DFM也是直角（命题I.47、I.48）。</p>
+<p>所以：角ACH等于角DFM，而角HAC等于角MDF。</p>
+<p>所以：MDF、HAC是有两个角和一条夹边对应相等的两个三角形，即等角所对的边HA等于MD，所以：它们的余边也对应相等，所以：AC也等于DF（命题I.26）。</p>
+<p>同理，我们也可以证明AB等于DE。</p>
+<p>因为：AC等于DF，AB等于DE，两边CA、AB等于两边FD、DE。且角CAB也等于角FDE；所以：底BC等于底EF，两个三角形全等，余角等于余角，所以：角ACB等于角DFE（命题I.4）。</p>
+<p>又，直角ACK等于直角DFN，所以：余角BCK等于余角EFN。同理，角CBK也等于角FEN。</p>
+<p>所以：BCK、EFN是有两角及其夹边对应相等的两个三角形，即BC等于EF，所以：余边也相等，所以：CK等于FN（命题I.26）。</p>
+<p>又AC也等于DF，所以：两边AC、CK等于两边DF、FN，它们的夹角皆是直角，所以：底AK等于底DN（命题I.4）。</p>
+<p>又，因为：AH等于DM，所以：AH上的正方形等于DM上的正方形。</p>
+<p>而AK、KH上的正方形之和等于AH上的正方形，因为：角AKH是直角，又，DN、NM上的正方形之和等于DM上的正方形，因为：角DNM是直角，所以：AK、KH上的正方形之和等于DN、NM上的正方形之和。其中，AK上的正方形等于DN上的正方形，所以：KH上的余量等于NM上的正方形，所以：HK等于MN（命题I.47）。</p>
+<p>又，因为，两个边HA、AK分别等于两边MD、DN，又，底HK等于底MN，所以：角HAK等于角MDN（命题I.8）。</p>
+<p>所以：如果有两个相等的平面角，过其顶点分别在平面外建直线，与原直线分别成等角，在所建二直线上任取一点，从该点向原来角所在的平面作垂线，其垂线与平面的交点和角顶点的连线与面外直线相交成等角。</p>
+<p>把握无穷</p>
+<p>一直以来，数学家和哲学家对无穷这一概念纠缠不清。希腊人一次又一次表现出对无穷及无穷小数的恐惧。19世纪，无穷级数使用的增加及对其正确性的疑虑促使德国数学家奥尔格·康托尔最终建立了集合论基础。康托尔的研究基于任何可以与自然数集合的某一个子集存在着对应关系的集合都是可数的。他认为可数的集合本身是可数无穷的，并且任何与其对应的无穷集合也是可数无穷的。图中的反射球，中心萌发出半径为其一半的小球，小球又生出更小的球，如此持续下去。这一图形的表面积趋向无穷，而体积保持有界且有限。</p>
+<p>推论</p>
+<p>这一命题也同时表明，如果两个相等的平面角，从角顶作与之不在同一平面的相等线段，且此线段与原角两边夹角分别相等，那么，从面外线段端点向角所在的平面所作的垂线相等。</p>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

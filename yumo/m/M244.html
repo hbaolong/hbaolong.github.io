@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="第三同读" />
+  <title>宇墨学几何原本</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">宇墨学几何原本</h1>
+<p class="author">第三同读</p>
+</header>
+<h2 id="命题viii.4">命题VIII.4</h2>
+<p>已知由最小数给出的几个比，求出成连比例的几个数，它们是有已知比中的最小数组。</p>
+<p>设：给出的最小比数是a比b、c比d、e比f。</p>
+<p>现在要求的是：求出成连比例的最小数组，使得它们的比是a比bt、c比d和e比f。</p>
+<p>作g，使它为b、c测尽的最小数（命题VII.34）。</p>
+<p>令：a测尽h的次数等于b测尽g的次数、d测尽k的次数等于c测尽g的次数。</p>
+<p>现在，e要么测尽k，要么测不尽。</p>
+<p>首先，令其测尽，f测尽l的次数等于e测尽k的次数。</p>
+<p>那么因为：a测尽h的次数等于b测尽g的次数，所以：a比b等于h比g（定义VII.20、命题VII.13）。</p>
+<p>同理，c比d等于g比k，e比f等于k比l。</p>
+<p>所以：h、g、k和l是依a比b、c比d和e比f成连续比例的数组。</p>
+<p>我还要进一步说，它们也是有这个性质的最小数组。</p>
+<p>如果：h、g、k和l仅仅是依a比b、c比d和e比f成连比，而不是最小的数组，那么设这个最小数组为n、o、m、p。</p>
+<p>那么因为：a比b等于n比o，同时a和b是最小数组而有相同比的一对最小数分别测尽其他数组，大的测尽大的，小的测尽小的，并有相同次数。即前项测尽前项，后项测尽后项，其次数相同。所以：b测尽o。（命题VII.20）</p>
+<p>同理，c也测尽o。所以：b和c测尽o。</p>
+<p>所以：被b、c测尽的最小数也测尽o。（命题VII.35）</p>
+<p>维纳</p>
+<p>美国数学家、控制论创始人维纳（1894—1968年）是数学史上的一名神童，早期研究控制论和函数论。维纳的独创之处在于发现了预报问题与滤波问题以及其他一些类似问题之间的共性，并借用统计学的时间序列概念对它们做出了统一处理。维纳将它们的求解问题归纳为特定数学运算符号的最优设计，以及实现这些运算符号的物理装置的最优设计。维纳广泛地利用了调和分析与数理统计，逐步形成了系统的控制理论。1948年，维纳的（控制论）问世，宣告了这门学科的诞生。</p>
+<p>但g是被b、c测尽的最小数，所以：g测尽o，大测尽小，这是不可能的。</p>
+<p>所以：没有数小于h、g、k和l的数组能依a比b、c比d和e比f成连续比例。</p>
+<p>下一步，令e测不尽k。</p>
+<p>作m，使其为被e和k所测尽的最小数。</p>
+<p>又，h和g测尽n和。的次数等于k测尽m的次数，f测尽p的次数等于e测尽m的次数。</p>
+<p>因为：h测尽n的次数等于g测尽o的次数，所以：h比g等于n比。</p>
+<p>而h比g等于a比b，所以：a比b等于n比o，同理，c比d等于o比m（命题VII.13）。</p>
+<p>又因为：e测尽m的次数等于f测尽p的次数，于是：e比f等于m比p。</p>
+<p>于是：n、o、m和p是依a比b、c比d、e比f成连续比例的数组（命题VII.13、定义VII.20）。</p>
+<p>我还要进一步说：它们也是依a比b、c比d和e比f成连续比例的最小数组。</p>
+<p>如果不是，那又依照a比b、c比d、e比f成连续比的数组小于n、o、m和p。令其为q、r、s和t。</p>
+<p>那么因为：q比r等于a比b，同时a比b是最小数，最小数测尽与它们有相同比的数有相同的次数，前项测尽前项与后项测尽后项的次数相同。</p>
+<p>于是：b测尽r。同理，c也测尽r。所以：b和c测尽r（命题VII.20）。</p>
+<p>所以：被b和c测尽的最小数也测尽r。而g是被b和c测尽的最小数，所以：g测尽r（命题VII.35）。</p>
+<p>又，g比r等于k比s，所以：k也测尽s（命题VII.13）。</p>
+<p>而e也测尽s，所以：e和k测尽s。</p>
+<p>所以：被e和k测尽的最小数也测尽s。而m是被e和k测尽的最小数，所以m测尽s，大测尽小，这是不可能的（命题VII.35）。</p>
+<p>所以：没有依照a比b、c比d和e比f成连续比的数组小于n、o、m和p。</p>
+<p>所以：n、o、m、p是依照a比b、c比d以及e比f成连续比例的最小数组。</p>
+<p>所以：已知由最小数给出的几个比，求出成连比例的几个数，它们是有已知比中的最小数组。</p>
+<h6 id="证完">证完</h6>
+<h5 id="注解">注解</h5>
+<p>这命题是对命题VIII.2的归纳，对连续比陈述更为普遍的概念。在这一命题中我们认识到连续比不一定有恒比，这或许可以称为连续比。比如连续比5：10：20有一个恒比1：2，但如果是连续比5：10：30就没有恒比了，首先的是一个1：2，然后第二个则是1：3。注意，连比5：10：3不是给定比的最小数，因为1：2：6等比1：2和1：3。</p>
+<p>这里的问题是根据指定的比建最小的连续比。</p>
+<p>本命题应用在下一命题中，也用在命题X.12中。</p>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

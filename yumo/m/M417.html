@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="第三同读" />
+  <title>宇墨学几何原本</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">宇墨学几何原本</h1>
+<p class="author">第三同读</p>
+</header>
+<h2 id="命题x.112">命题X.112</h2>
+<p>在二项线上作矩形等于一个有理线段上的正方形，则矩形的另一边为一余线，该余线的两段与二项线的两项可公约，且有同比，且余线与二项线有相同的级。</p>
+<p>设：a为一条有理线段，BC为二项线，DC较大，BC，EF构成的矩形等于a上的正方形。</p>
+<p>那么我说：EF是一条余线，它的两段与CD、DB是可公约的，并有相同的比，且，EF与BC有相同的级。</p>
+<p>再，令BD、g构成的矩形等于a上的正方形。</p>
+<p>那么，因为：BC、EF构成的矩形等于BD、g构成的矩形，所以：CB比BD同于g比EF，而CB大于BD，所以：g也就大于EF（命题VI.16、V.14）。</p>
+<p>令EH等于g，那么CB比BD同于HE比EF，所以：由分比可得，CD比BD同于HF比FE（命题V.17）。</p>
+<p>作比例，使HF比FE同于FK比KE，那么：总量HK比总量KF同于FK比KE，因为：前项之一比后项之一同于全部前项和比全部后项和（命题V.12）。</p>
+<p>又，FK比KE同于CD比DB，所以：HK比KF同于CD比DB（命题V.11）。</p>
+<p>又，CD上的正方形与DB上的正方形是可公约的，所以：HK上的正方形与KF上的正方形是可公约的（命题X.36、VI.22、X.11）。</p>
+<p>麦克劳林</p>
+<p>在18世纪，微积分得到了进一步深入发展，这种发展与广泛的应用交织在一起，刺激和推动了许多数学新分支的产生。英国数学家麦克劳林（1698—1746年）也许是18世纪为使牛顿微积分严密化而倾注精力最多的人。“麦克劳林级数”是泰勒级数的特殊情形，我们今天常用的解线性方程组的“克拉姆法则”称为“麦克劳林法则”似乎更为恰当。</p>
+<p>布尔</p>
+<p>19世纪中叶，代数学开拓了另一个完全不同的领域：布尔代数。英国数学家布尔（1815—1864年）的学历仅是小学毕业，他是一位自学成才的数学家。布尔的逻辑代数首先是作为一种类演算建立起来的，类也就是集合。布尔建立类的符号表示和运算定律。在他的系统中，大部分运算规律在形式上类似于普通的代数规则。在施罗德的〈逻辑代数讲义〉中，布尔代数更是发展到了顶峰。</p>
+<p>又，HK上的正方形比KF上的正方形同于HK比KE，因为：三条线段HK、KF、KE是成比例的。</p>
+<p>所以：HK与KE是长度可公约的，所以：HE与EK也是长度可公约的（定义V.9、命题X.15）。</p>
+<p>现在，因为：a上的正方形等于EH与BD构成的矩形，同时，a上的正方形是有理的，所以：EH与BD构成的矩形也是有理的。</p>
+<p>又，它也是建在有理线BD上的，所以：EH是有理的，并与BD是长度可公约的，所以：与EH可公约的EK也是有理的，并与BD长度可公约（命题X.20）。</p>
+<p>那么因为：CD比DB同于FK比KE，同时，CD、DB是仅正方可公约的，所以：FK、KE也是仅正方可公约的。</p>
+<p>而KE是有理的，所以：FK也是有理的（命题X.11）。</p>
+<p>所以：FK、KE是仅正方可公约的有理线段。</p>
+<p>所以：EF是一个余线（命题X.73）。</p>
+<p>现在，CD上的正方形大于DB上的正方形，其差是一个与CD可公约或不可公约的线段上的正方形。</p>
+<p>如果CD上的正方形大于DB上的正方形，其差为一个与CD可公约线段上的正方形，那么：FK上的正方形也大于KE上的正方形，其差为一个与FK可公约的线段上的正方形（命题X.14）。</p>
+<p>而如果，CD与给定的有理线段长度可公约，那么：FK与该线段可公约；如果BD与给定的有理线段也可公约，那么KE也与它可公约；反之，CD、DB与给定的有理线段不可公约，那么：FK、KE也与它不可公约（命题X.11、X.12）。</p>
+<p>又，如果CD上的正方形大于DB上的正方形，其差为一个与CD不可公约的线段上的正方形，那么：FK上的正方形也大于KE上的正方形，其差为一个与FK不可公约的线段上的正方形（命题X.14）。</p>
+<p>又，如果CD与给定的线段可公约，那么：FK与它也可公约；如果BD与给定的有理线段可公约，那么：KE与它也可公约；但如果CD、DB与给定的有理线段不可公约，那么FK、KE与它也不可公约。</p>
+<p>于是：FE是一个余线，它们的两段FK、KE与二项线的两段CD、DB是可公约的，又，它们的比相同，且EF与BC有相同的级。</p>
+<p>所以：在二项线上作矩形等于一个有理线段上的正方形，则矩形的另一边为一余线，该余线的两段与二项线的两项可公约，且有同比，且余线与二项线有相同的级。</p>
+<h6 id="证完">证完</h6>
+<h5 id="注解">注解</h5>
+<p>注意，证明的开始部分不是命题V.14的调用，而是它的交替形式。参见V.14的注解。</p>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

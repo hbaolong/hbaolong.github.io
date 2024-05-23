@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="第三同读" />
+  <title>宇墨学几何原本</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">宇墨学几何原本</h1>
+<p class="author">第三同读</p>
+</header>
+<h2 id="命题xiii.10">命题XIII.10</h2>
+<p>一个内接于圆的等边五边形，其一边上的正方形，等于同圆内的内接正六边形一边上的正方形与内接正十边形一边上的正方形之和。</p>
+<p>设：ABCDE为圆，等边五边形ABCDE内接于圆ABCDE。</p>
+<p>那么我说：五边形ABCDE一边上的正方形等于圆ABCDE的内接正六边形一边上的正方形和内接正十边形一边上的正方形之和。</p>
+<p>令：F为圆心，连接AF延长至G点，连接FB，从F作FH垂直于AB且交圆于K，连接AK、KB，从F作FL垂直于AK且交于M，连接KN（命题III.1、I.12）。</p>
+<p>因为：弧ABCG等于弧AEDG，其中，弧ABC等于AED，所以：余量弧CG等于余量弧GD。</p>
+<p>而，CD属于一个正五边形，所以：CG属于一个正十边形。</p>
+<p>又，因为：FA等于FB，FH是垂线，所以：角AFK等于角KFB（命题I.5、I.26）。</p>
+<p>因此：弧AK等于KB，所以：弧AB等于弧BK的两倍。所以：线段AK是正十边形的一边。同理，AK是KM的两倍（命题III.26）。</p>
+<p>现在，因为：弧AB是弧BK的两倍，同时，弧CD等于弧AB，所以：弧CD也是弧BK的两倍。</p>
+<p>又，弧CD也是CG的两倍，所以：弧CG等于弧BK。而BK是KM的两倍，因为KA也是KM的两倍，所以：CG也是KM的两倍。</p>
+<p>再，进一步，弧CB也是弧BK的两倍，因为，弧CB等于BA。所以：总弧GB也是BM的两倍。因此：角GFB是角BFM的两倍（命题VI.33）。</p>
+<p>又，角GFB是角FAB的两倍，因为角FAB等于角ABF。所以：角BFN等于角AB。</p>
+<p>又，角ABF是两个三角形ABF、BFN的公共角，所以：余角AFB等于余角BNF。所以三角形ABF与三角形BFN是等角三角形（命题I.32）。</p>
+<p>所以：成比例地，线段AB比BF同于FB比BN。所以：AB与BN构成的矩形等于BF上的正方形（命题VI.4、VI.17）。</p>
+<p>又，因为：AL等于LK，同时LN是公共的，且是直角，所以：底KN等于底AN。所以：角LKN也等于角LAN（命题I.4）。</p>
+<p>又，角LAN等于角KBN，所以：角LKN也等于角KBN。又，在A点的角是两个三角形AKB、AKN的公共角，所以：余角AKB等于余角KNA（命题1.32）。</p>
+<p>所以：三角形KBA与三角形KNA是等角三角形。所以：成比例地，线段BA比AK同于KA比AN（命题VI.1）。</p>
+<p>所以：BA、AN构成的矩形等于AK上的正方形（命题VI.17）。</p>
+<p>又，AB与BN构成的矩形，也被证明了等于BF上的正方形，所以：AB、BN构成的矩形与BA、AN构成的矩形之和，即BA上的正方形，等于BF上的正方形、AK上的正方形之和（命题II.2）。</p>
+<p>又，BA是正五边形的一边，BF是正六边形的一边，AK是正十边形的一边（命题IV.15、推论）。</p>
+<p>所以：一个内接于圆的等边五边形，其一边上的正方形，等于同圆内的内接正六边形一边上的正方形与正十边形一边上的正方形之和。</p>
+<h6 id="证完">证完</h6>
+<h5 id="注解">注解</h5>
+<p>这一结果应用在命题XIII.16中。</p>
+<p>原始茅屋</p>
+<p>编年史上粗糙的分期无助于解决民族与文化错综复杂的模式，文明原始社会带来的是人类有意识地尝试以全新的尺度把人和环境控制、组织起来。文明以积累起来的精神和技术资源为基石，并以此来驾驭环境，阐释思维模式。图为公元前4000年一个小村庄的主体建筑，高11米、宽10米，属仰韶文化。</p>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

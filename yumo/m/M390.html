@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="第三同读" />
+  <title>宇墨学几何原本</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">宇墨学几何原本</h1>
+<p class="author">第三同读</p>
+</header>
+<h2 id="命题x.85">命题X.85</h2>
+<p>求第一余线。</p>
+<p>设：给定一条有理线段a，使BG与a在长度上可公约，那么BG也是有理线段。</p>
+<p>再设：给定两个平方数DE、EF，它们的差FD不是一个平方数。</p>
+<p>那么：ED、DF的比值是一个平方数比一个平方数。</p>
+<p>莱布尼茨手稿</p>
+<p>就微积分创立而言，莱布尼茨与牛顿的功绩相当。在微积分创立过程中，莱布尼茨首先着眼于求和，从最简单的直线函数开始，并逐渐从一串离散值增量过渡到任意函数的增量。1676年，莱布尼茨已经能够给出幂函数的微分与积分公式。1677年，莱布尼茨在一篇手稿中明确陈述了微积分基本定理。</p>
+<p>作比例，ED比DF同于BG上的正方形比GC上的正方形，那么：BG上的正方形与GC上的正方形是可公约的（命题X.6推论、X.6）。</p>
+<p>又，BG上的正方形是有理的，所以：GC上的正方形也是有理的，所以：GC也是有理的。</p>
+<p>因为：ED比DF不同于一个平方数比一个平方数，所以：BG上的正方形比GC上的正方形的比值也不是一个平方数比一个平方数，所以：BG与GC是长度不可公约的（命题X.9）。</p>
+<p>又，二者皆是有理的，于是：BG、GC是仅正方可公约的，所以：BC是一条余线（命题X.73）。</p>
+<p>那么我说：它也是一个第一余线。</p>
+<p>为此，设h上的正方形是BG上正方形与GC上正方形的差。</p>
+<p>那么因为：ED比FD同于BG上正方形比GC上的正方形，所以：由换比可得，DE比EF同于GB上的正方形比h上的正方形（命题V.19推论）。</p>
+<p>又，ED比EF同于一个平方数比一个平方数，因为每个都是平方数，所以：GB上的正方形与h上的正方形的比值也是一个平方数比一个平方数。所以：BG与h是长度可公约的（命题X.9）。</p>
+<p>又，BG上的正方形大于GC上的正方形，其差为一个h上的正方形。</p>
+<p>所以：BG上的正方形大于GC上的正方形，其差是一个与BG是长度可公约的线段上的正方形。</p>
+<p>又，总线段BG与给定的有理线段a是长度可公约的。</p>
+<p>所以：BC是一个第一余线。所以：第一余线BC被找出来（定义X.12）。</p>
+<h6 id="证完">证完</h6>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

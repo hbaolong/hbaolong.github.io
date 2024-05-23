@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="第三同读" />
+  <title>宇墨学几何原本</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">宇墨学几何原本</h1>
+<p class="author">第三同读</p>
+</header>
+<h2 id="命题xiii.17">命题XIII.17</h2>
+<p>建球的内接十二面体，如前命题，且求证十二面体的边是被称为余线的无理线段。</p>
+<p>设：ABCD和CBEF是前述立方体的互相垂直的两个面，分别过G、H、K、L、M、N、O等分AB、BC、CD、DA、EF、EB、FC，连接GK、HL、MH、NO，再分别过R、S、T分NP、PO、HQ为中外比，且RP、PS、TQ为其大线段，从点R、S、T作RU、SV、TW与正方体的面成直角，且使它们等于RP、PS、TQ，连接UB、BW、WC、CV、VU（命题XIII.15、I.10、II.11、VI.30、XI.11、I.3）。</p>
+<p>那么我说：五边形UBWCV是一个平面内的等边且等角的五边形。</p>
+<p>连接RB、SB、VB。</p>
+<p>那么，因为：线段NP在R点被分成中外比，RP为大线段，所以：切线PN、NR上的正方形之和是RP上的正方形的三倍（命题XIII.4）。</p>
+<p>造物主</p>
+<p>数学研究始于3000年之前，在整个历史上，数学家们总是追寻与社会相关抑或无关的自身观念，总是醉心于自身发现中的美妙和对数学问题的解答。数学是探索空间理性的学科，是想探索上帝存在的学科，是想找到宇宙“本基”的学科，是为了研究上帝的本性和做法以及上帝安排宇宙的方案的学科，是物质世界甚至精神世界的表述方式。在英国浪漫主义先驱威廉·布莱克的作品中，上帝被表现为手拿工程规测量天地的神话巨人。不管如何看待数学的价值，它始终是人类文化的一个必要部分。</p>
+<p>又，PN等于NB，PR等于RU，所以：BN、NR上的正方形之和是RU上的正方形的三倍。</p>
+<p>又，BR上的正方形等于BN、NR上的正方形之和，所以：BR上的正方形之和是RU上的正方形的三倍，因此，BR、RU上的正方形之和是RU上的正方形的四倍（命题I.47）。</p>
+<p>又，BU上的正方形等于BR、RU上的正方形之和，所以：BU上的正方形之和是RU上的正方形的四倍，所以：BU是RU的两倍。</p>
+<p>又，VU也是UR的两倍，因为，SR也是PR的两倍，即RU的两倍，所以BU等于UV。</p>
+<p>类似地，也可以证明出，线段BW、WC、CV也等于线段BU、UV。所以：五边形BUVCW是等边的。</p>
+<p>我进一步说，它也在同一平面内。</p>
+<p>从P点向正方体外作PX平行于线段RU、SV，连接XH、HW（命题I.31）。</p>
+<p>那么我说，XHW是一条直线。</p>
+<p>因为：HQ在T点被分成中外比，且QT为大线段，所以：HQ比QT等于QT比TH。</p>
+<p>而HQ等于HP，QT等于线段TW、PX的每一条，所以：HP比PX等于WT比TH。</p>
+<p>又，PH平行于TW，因为，它们皆垂直于平面BD，且TH平行于PX，因为，它们皆垂直于平面BF（命题XI.6）。</p>
+<p>又，如果两个三角形XPH、HTW，它们的两边对应成比例，将它们的边放在一起，且顶角重合，相应边平行，那么，其余两边在一条直线上，所以：XH与HW在一条直线上（命题VI.32）。</p>
+<p>又，每条线段皆在同一平面内，所以：五边形UBWCV在一个平面内（命题XI.1）。</p>
+<p>我进一步说，它也是等角的。</p>
+<p>因为：线段NP在R点被分成中外比，PR为大线段，同时，PR等于PS，所以：NS也在P点被分为中外比。</p>
+<p>又，NP是大线段，所以：NS、SP上的正方形之和是NP上的正方形的三倍（命题XIII.5、XIII.4）。</p>
+<p>又，NP等于NB，PS等于SV；所以：NS、SV上的正方形之和是NB上的正方形的三倍，因此：VS、SN、NB上的正方形之和是NB上的正方形的四倍。</p>
+<p>又，SB上的正方形等于SN、NB上的正方形之和，所以：BS、SV上的正方形之和，即是BV上的正方形，是NB上的正方形的四倍，因为，角VSB是直角。所以：VB是BN的两倍。</p>
+<p>又，BC也是BN的两倍，所以：BV等于BC。</p>
+<p>又，因为：两边BU、UV等于两边BW、WC，且底BV等于底BC，所以：角BUV等于角BWC（命题I.8）。</p>
+<p>类似地，我们可以证明，角UVC也等于角BWC。所以：三个角BWC、BUV、UVC彼此相等。</p>
+<p>又，如果在一个等边五边形中，有三个角彼此相等，那么，该五边形是等角五边形（命题XIII.7）。</p>
+<p>又，已经证明了它们是等边的，所以：五边形BUVCW是等边等角的，且在立方体的边BC上。</p>
+<p>于是：如果在立方体的十二条边的每一条上都同样作图，那么，十二个等边且等角的五边形构成一个立体图，被称为十二面体（定义XI.28）。</p>
+<p>现在，再求证它内接于已知球，且十二面体的边是被称为余线的无理线段。</p>
+<p>延长XP成直线XZ。</p>
+<p>于是：PZ与立方体的对角线相交，且彼此平分，因为，已经在第十一卷的最后的定理中证明了（命题XI.38）。</p>
+<p>令：它们相交于Z，所以Z是立方体外接球的球心，而ZP是立方体一边的一半。连接UZ。</p>
+<p>现在，因为：线段NS在P点被分成中外比，NP为大线段，所以：NS、SP上的正方形之和是NP上的正方形的三倍（命题XIII.4）。</p>
+<p>达·芬奇的多面体</p>
+<p>为了给数学家帕西里利的《神圣比例论》画插图，列昂纳多·达·芬奇绘制了一些多面体，图中这个多面体是规则立体之一，属内凹多面体。它的基础是一个正十二面体，每一个面都是一个正五边形，这个面向外凸起，就形成一个规则的五面锥体，这就是规则立体的构成。</p>
+<p>又，NS等于XZ，因为，NP也等于PZ，XP等于PS。</p>
+<p>而，PS也等于XU，因为，它也等于RP。所以：ZX、XU上的正方形之和是NP上的正方形的三倍。</p>
+<p>又，UZ上的正方形等于ZX、XU上的正方形之和，所以：UZ上的正方形是NP上的正方形的三倍。</p>
+<p>又，外接于正方体的球的半径上的正方形也是立方体一边的一半上的正方形的三倍，因为，如前所述怎样建球的内接立方体，且证明过，球直径上的正方形等于立方体一边上的正方形的三倍（命题XIII.15）。</p>
+<p>又，如果两总量之比同于两半量之比，NP是立方体一边的一半，所以：UZ等于外接于立方体的球的半径。</p>
+<p>又，Z为外接立方体的球的球心，所以：点U位于球面上。</p>
+<p>类似地，我们可以证明出，十二面体的每个角的顶点也在球的面上，所以：十二面体内接于已知球。</p>
+<p>我进一步说：十二面体的边是被称为余线的无理线段。</p>
+<p>因为，当NP被分成中外比时，RP是较大线段，并，当PO被分成中外比时，PS是较大线段，当整体NO被分成中外比时，RS是较大线段。</p>
+<p>因为：NP比PR同于PR比RN，它们的两倍比也成立，因为，部分之比等于同倍量之比，所以：NO比RS同于RS比NR与SO之和。</p>
+<p>而NO大于RS，所以：RS也大于NR与SO之和，所以：NO被分成中外比，且RS是较大线段（命题V.15）。</p>
+<p>中国古代的算盘</p>
+<p>古代的计算器械有算盘。十进位制的珠算盘最早出现在中国，明代著作《魁本对相四言杂字》中载有十档算盘图。在明代，珠算已相当普及，程大位的《算法综宗》详述了珠算的制度和方法，标志着珠算的成熟。图中张择端的《清明上河图》（局部）就出现了算盘。</p>
+<p>又，RS等于UV，所以：NO被分成中外比，UV是大线段，又，因为，球的直径是有理线段，且它上的正方形是正方体一边上的正方形的三倍，所以：NO是正方体，是有理的。</p>
+<p>又，如果一条有理线段被分成中外比，那么所分的每条线段是被称为余线的无理线段。</p>
+<p>所以：UV是十二面体的边，是条余线，是无理线段（命题XIII.6）。</p>
+<h6 id="证完">证完</h6>
+<p>推论</p>
+<p>当一个正方体的边被分成中外比时，大线是一个十二面体的边。</p>
+<h5 id="注解">注解</h5>
+<p>本命题和推论也应用在命题XIII.18中，以比较多个正多边形。</p>
+<p>最后的审判</p>
+<p>成书于15世纪的《绘画透视学》影响了欧洲文艺复兴时期的许多画家，他们把透视法的规则看成是光学的一部分，而不仅仅是单纯的绘画技术。要使画看上去更自然，关键就在于必须使画符合人类的视觉规律。《绘画透视学》给出了一些实在的规则图形，并研究了各种各样的柱体在投影时棱长的投影效果，还有一系列的各种视点观测到的人体投影图。在《最后的审判》中，米开朗基罗完全运用了透视法原理，他把画的上部画得大了许多，使人们从很远的地方就能看到。在一定程度上，透视法对复杂图形的分析起到了开创性的作用。</p>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

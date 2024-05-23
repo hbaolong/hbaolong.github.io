@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="第三同读" />
+  <title>宇墨学几何原本</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">宇墨学几何原本</h1>
+<p class="author">第三同读</p>
+</header>
+<h2 id="命题x.32">命题X.32</h2>
+<p>两条仅正方可公约的中项线，构成一个中项矩形，大线上的正方形大于小线上的正方形，其差为与大线可公约的线段上的正方形。</p>
+<p>设：a、b、c是仅正方可公约的三条有理线，a上的正方形大于c上的正方形，其差是与a可以公约的线段上的正方形。d上的正方形等于a和b构成的矩形（命题X.29）。</p>
+<p>那么：d上的正方形是中项面，于是：d也是中项线（命题X.21）。</p>
+<p>设：d、e构成的矩形等于b、c构成的矩形。</p>
+<p>那么因为：a、b构成的矩形比b、c构成的矩形同于a比c，同时d上的正方形等于a、b构成的矩形。又，d、e构成的矩形等于b、c构成的矩形，所以：a比c同于d上的正方形比d、e构成的矩形。</p>
+<p>又，d上的正方形比d、e构成的矩形同于d比e、a比c同于d比e。而a与c是仅正方可公约量，所以：d与e也是仅正方可公约量（命题X.11）。</p>
+<p>又，d是中项线，所以：e也是中项线（命题X.23）。</p>
+<p>又因为：a比c同于d比e，同时a上的正方形大于c上的正方形，其差为与a可以公约的线段上的正方形，所以：d上的正方形大于e上的正方形，其差是与d可以公约的线段上的正方形（命题X.14）。</p>
+<p>那么我进一步说：d和e构成的矩形也是中项面。</p>
+<p>因为：b、c构成的矩形等于d、e构成的矩形，同时，b、c构成的矩形是中项面，所以：d、e构成的矩形也是中项面（命题X.21）。</p>
+<p>所以：两个中项线d、e是仅正方可公约的，且构成中项矩形，大线上的正方形大于小线上的正方形，其差为与大线可公约的线段上的正方形。</p>
+<p>类似地又可以证明，当a上的正方形大于c上的正方形，其差为与a可公约的线段上的正方形时，d上的正方形大于e上的正方形，其差是与d可公约的线段上的正方形（命题X.30）。</p>
+<p>所以：两条仅正方可公约的中项线，构成一个中项矩形，大线上的正方形大于小线上的正方形，其差为与大线可公约的线段上的正方形。</p>
+<h6 id="证完">证完</h6>
+<p>引理</p>
+<p>设：ABC为一个直角三角形，角A为直角，AD是垂直线。</p>
+<p>那么我说：CB、BD构成的矩形等于BA上的正方形，BC、CD构成的矩形等于CA上的正方形，BD、DC构成的矩形等于AD上的正方形，BC、AD构成的矩形等于BA、AC构成的矩形。</p>
+<p>首先，CB、BD构成的矩形等于BA上的正方形。</p>
+<p>因为：在直角三角形中，AD垂直于底边，于是：三角形ABD、ADC皆与三角形ABC相似，且它们彼此相似（命题VI.8）。</p>
+<p>因为：三角形ABC相似于三角形ABD，那么：CB比BA同于BA比BD。于是：CB、BD构成的矩形等于AB上的正方形。同理，BC、CD构成的矩形也等于AC上的正方形（命题VI.17）。</p>
+<p>因为，如果在一个直角三角形中，直角向边引的线垂直于底边，那么该垂线也是所分底边两段的比例中项线，所以：BD比DA同于AD比DC。</p>
+<p>所以：BD、DC构成的矩形等于AD上的正方形（命题VI.8、推论、命题VI.17）。</p>
+<p>那么我说：BC、AD构成的矩形也等于BA、AC构成的矩形。因为：如上所述，ABC相似于ABD，那么：BC比CA同于BA比AD（命题VI.4）。</p>
+<p>所以：BC、AD构成的矩形等于BA、AC构成的矩形（命题VI.16）。</p>
+<h6 id="证完-1">证完</h6>
+<p>希尔伯特的《数学基础》</p>
+<p>1929年，希尔伯特的《数学基础》第一版问世。他的著作还包括《希尔伯特全集》《线性积分方程一般理论基础》《几何基础》等，与其他数学家合著的有《直观几何学》《理论逻辑基础》《数学物理方法》等。</p>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

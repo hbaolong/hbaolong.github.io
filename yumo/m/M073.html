@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="第三同读" />
+  <title>宇墨学几何原本</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">宇墨学几何原本</h1>
+<p class="author">第三同读</p>
+</header>
+<h2 id="命题iii.8">命题III.8</h2>
+<p>圆外的一点向圆引线段，其中的一条穿过圆心，其余是任意线。那么在凹圆弧上的连线中，穿过圆心的线段最长，其余的线段中，离这条线段越近则越长；在与圆凸面的连线中，该点与直径之间的线段最短，其余的线段离这条线段越近则越短；且从这一点到圆周上的连线中，只有两条线段相等，它们分别位于最短的线段两侧。</p>
+<p>设：ABC为圆，D为圆外的一点，从D点连接DA、DE、DF、DC，使DA穿过圆心。</p>
+<p>那么我说：在凹圆弧AEFC各点与D构成的线段中，穿过圆心的DA线段最长，DE大于DF，DF大于DC；在凸圆弧HLKG各点与D构成的线段中DG最短，越靠近DG的线段越短。即DK小于DL，DL小于DH。</p>
+<p>令：圆ABC的圆心为M，连接ME、MF、MC、MK、ML和MH（命题III.1）；</p>
+<p>那么因为：AM等于EM，令它们各边加上MD。</p>
+<p>于是：AD等于EM与MD的和；</p>
+<p>又因为：EM与MD的和大于ED。所以：AD也大于ED（命题I.20）；</p>
+<p>又因为：ME等于MF，MD又是公共边。所以：EM与MD的和等于FM与MD的和。</p>
+<p>又因为：角EMD大于角FMD。所以：第三边ED大于第三边FD（命题I.24）；同样，我们可以证明FD大于CD。所以：DA就为最大，DE大于DF，而DF大于DC；</p>
+<p>又因为：MK与KD的和大于MD，而MG等于MK。于是余数KD大于余数GD。所以：GD小于KD（命题I.20）；</p>
+<p>又因为：在MD上的三角形MLD，两条线段MK、KD交于三角形内。</p>
+<p>所以：MK、KD的和小于ML、LD的和。</p>
+<p>又：MK等于ML。</p>
+<p>所以：余数DK小于余数DL（命题I.21）；</p>
+<p>同样，我们可以这么认为，DL也小于DH。所以：DG为最小，DK小于DL，DL小于DH。</p>
+<p>我要进一步说：从D点到圆只有两条相等的线段，它们位于DG线的两侧。</p>
+<p>令：在线段MD上的M点，建角DMB等于角KMD，连接DB（命题I.23）；</p>
+<p>那么因为MK等于MB，MD是公共边。所以：KM、MD两边等于对应的BM、MD两边，且角KMD等于角BMD。所以：第三边DK等于第三边DB（命题I.4）。</p>
+<p>我还进一步说：从D点不可能有另一条到圆的线段等于DK；</p>
+<p>假设：这是可能的，假定这条线段是DN，于是DK等于DN。DK等于DB，DB也等于DN，即是说，离最短线段DG越近的线段等于离它越远的线段，这是不可能的；</p>
+<p>所以：从D点到圆ABC没有第二条线能够位于最短的DG的一侧。</p>
+<p>所以：圆外的一点向圆引线段，其中的一条穿过圆心，其余是任意线。那么在凹圆弧上的连线中，穿过圆心的线段最长，其余的线段中，离这条线段越近则越长；在与圆凸面的连线中，该点与直径之间的线段最短，其余的线段离这条线段越近则越短；且从这一点到圆周上的连线中，只有两条线段相等，它们分别位于最短的线段两侧。</p>
+<h6 id="证完">证完</h6>
+<p>汉帛书《彗星图》</p>
+<p>中国古代天文学的成就，包括阴阳历法的制定、天象观测、天文仪器制造和使用以及构造宇宙理论。至汉代，中国已形成独特的天文和历法体系。《汉书·五行志》中记录了公元前28年3月的太阳黑子现象，《汉书·天文志》中记载了公元前32年10月24日的极光现象。马王堆出土的29幅彗星图对彗星的观测非常细致，不仅注意到彗头、彗尾和彗核，而且还知道彗头和彗尾有不同的类型。</p>
+<h5 id="注解">注解</h5>
+<p>这一命题的陈述比前一命题更加复杂。这一命题处理从圆外的某一点D到圆周上的距离。如果直径AG的延长线过D，那么，它的一个终点G是在圆周上并最接近D，且另一点A是最远的一点。因为一个点从A到D沿圆周旅行，尽量靠近D。欧几里得认为圆周分为两个部分，凸起的部分是靠D点近的，同时凹的部分是圆的边较远的部分。最后的陈述是，如果K是圆周上的一个点，那么圆周上有一个正确的点B到D的距离相等（当然K既不是G也不是A，这只是一种假定）。</p>
+<p>注意：这一命题的证明同前一命题一样，也有一个逻辑漏洞。后来的许多数学家，补充过该漏洞。</p>
+<p>这一命题在《原本》中的其他地方再没有被利用过。</p>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

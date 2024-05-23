@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="第三同读" />
+  <title>宇墨学几何原本</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">宇墨学几何原本</h1>
+<p class="author">第三同读</p>
+</header>
+<h2 id="命题xii.10">命题XII.10</h2>
+<p>任何圆锥是与它同底等高的圆柱的三分之一。</p>
+<p>设：一圆柱与圆锥同底，即圆ABCD；它们有相等的高。</p>
+<p>那么我说：圆锥是圆柱的三分之一，即圆柱为圆锥的三倍。</p>
+<p>因为：如果圆柱不是圆锥的三倍，那么，圆锥要么大于圆柱的三倍，要么小于圆柱的三倍。</p>
+<p>首先，令其大于三倍。</p>
+<p>令：正方形ABCD内接于圆ABCD，那么，正方形ABCD大于圆ABCD的一半，在正方形ABCD上作一与圆柱等高的棱柱（命题IV.6）。</p>
+<p>那么，这样作出的棱柱大于圆柱的一半，因为，如果我们在圆ABCD上也作一个外切正方形，圆ABCD的内接正方形等于圆外切正方形的一半，因为它们上作的平行六面体等高，而等高的平行六面体之比等于它们的底之比；所以：正方形ABCD上的棱柱是圆ABCD外切正方形上的棱柱的一半（命题IV.7、XI.32、XI.28、XII.6、XII.7推论）。</p>
+<p>又，圆柱小于圆ABCD外切正方形上的棱柱，所以，同圆柱等高的正方形ABCD上的棱柱大于圆柱一半。</p>
+<p>在E、F、G、H点平分出AB、BC、CD、DA，连接AE、EB、BF、FC、CG、GD、DH、HA，于是：三角形AEB、BFC、CGD、DHA皆大于圆ABCD的弓形的一半，如同前面的证明（命题XII.2）。</p>
+<p>在三角形AEB、BFC、CGD、DHA上分别作与圆柱等高的棱柱，那么，每个棱柱大于包含它的弓形圆柱的一半，因为，如果我们过E、F、G、H点作平行于AB、BC、CD、DA的平行线，在它们上完成平行四边形，且在其上作高等于圆柱的平行六面体，又：在三角形AEB、BFC、CGD、DHA上的棱柱是各个立体的一半，又，弓形圆柱的和小于平行六面体的和。</p>
+<p>施瓦茨周期曲面</p>
+<p>施瓦茨求解了并非位于同一平面的最简围线C的普拉蒂奥问题。这是带有四条边缘的多边形，其棱边不在同一平面上，人们称之为四边形折线。施瓦茨考察了一条很特殊的四边形折线，一个绕着正面体的六条棱边中的四条回路。他于1865年发表了研究结果，表述了所构成的三种模型。这些模型的构架由细金属丝制成，所包围的极小曲面由胶膜组成。图中所示的即为施瓦茨极小周期曲面的一部分。</p>
+<p>庞加莱猜想</p>
+<p>数学家们早已知道，任意一个十二维单连通闭曲面都与二维封面同胚。1904年，庞加莱猜测对于三维情形应有同样的事实成立，即任意一个三维单连通闭流形必与三维球面同胚。这就是庞加莱猜想。以后，它又被推广到几维情形，被称为“广义庞加莱猜想”。作为拓扑学中的一个基本问题，庞加莱猜想吸引了众多数学家的兴趣。</p>
+<p>于是：在三角形AEB、BFC、CGD、DHA上的棱柱的和大于包含它们的弓形圆柱的和的一半（命题I.31）。</p>
+<p>于是：二等分余下的弧，连接它们的分点，在每个三角形上作与圆柱等高的棱柱，依次继续下去，就能得到一弓形圆柱的和小于圆柱超过三倍圆锥的部分（命题X.1）。</p>
+<p>设：得到一些弓形圆柱，分别是AE、EB、BF、FC、CG、GD、DH、HA。于是：以多边形AEBFCGDH为底并与圆柱等高的棱柱，大于圆锥的三倍。</p>
+<p>又，以AEBFCGDH为底且与圆柱等高的棱柱是以多边形AEBFCGDH为底且与圆锥同顶点的棱锥的三倍。所以：以多边形AEBFCGDH为底并与圆锥同顶点的棱锥大于以ABCD为底的圆锥（命题XII.7推论）。</p>
+<p>又，它也小于圆锥，因为圆锥包含棱锥，这是不可能的。</p>
+<p>所以：圆柱不大于圆锥的三倍。</p>
+<p>我进一步说：它也不小于圆锥的三倍。</p>
+<p>因为，如果可能，令圆柱小于圆锥的三倍，因此，反之，圆锥大于圆柱的三分之一。</p>
+<p>令：正方形ABCD内接于圆ABCD，于是：正方形ABCD大于圆ABCD的一半（命题IV.6）。</p>
+<p>现在，在正方形ABCD上作一个顶点与圆锥顶点相同的棱锥，于是：该棱锥大于圆锥的一半。前面已经证明，如果我们作圆的外切正方形，那么，正方形ABCD是外切正方形的一半。如果我们在两正方形上作与圆锥等高的平行六面体，即棱柱，那么，正方形ABCD上的棱柱是圆外切正方形棱柱的一半，因为它们之比等于底与底之比（命题XI.32）。</p>
+<p>于是：它们的三分之一相比也等于这个比。所以：以正方形ABCD为底的棱锥是圆外切正方形上棱锥的一半。</p>
+<p>又，外切正方形上的棱锥大于圆锥，因为，外切正方形为边的棱锥包含圆锥。</p>
+<p>所以：正方形ABCD上的棱锥大于具有同一顶点的圆锥的一半。</p>
+<p>过点E、F、G、H作等分弧AB、BC、CD、DA，连接AE、EB、BF、FC、CG、GD、DH、HA，那么，每个三角形AEB、BFC、CGD、DHA大于圆ABCD上包含它的弓形的一半。</p>
+<p>现在，在三角形AEB、BFC、CGD、DHA上作与圆锥有同顶点的棱锥。因此：在同种情况下，每个棱锥大于包含它的弓形圆锥的一半。</p>
+<p>因此，再平分圆弧，连接分点，在每一个三角形上作与圆锥有同顶点的棱锥。依次继续，那么将得到一些弓形圆锥之和小于圆锥超过圆柱的三分之一的部分（命题X.1）。</p>
+<p>令：已经给出了这些弓形圆柱，它们为AE、EB、BF、FC、CG、GD、DH、HA上的弓形圆柱。于是，以多边形AEBFCGDH为底且与圆锥有同顶点的棱锥，大于圆柱的三分之一。</p>
+<p>但是，以多边形AEBFCGDH为底且与圆锥同顶点的棱锥是以多边形AEBFCGDH为底且与圆柱等高的棱柱的三分之一。所以：以多边形AEBFCGDH为底且与圆柱等高的棱柱大于以圆ABCD为底的圆柱。</p>
+<p>但棱柱又小于圆柱，因为圆柱包含棱柱，这是不可能的。</p>
+<p>所以：圆柱不小于圆锥的三倍。</p>
+<p>又，已经证明了圆柱不大于圆锥的三倍，所以：圆柱是圆锥的三倍；所以：圆锥是圆柱的三分之一。</p>
+<p>所以：任何圆锥是与它同底等高的圆柱的三分之一。</p>
+<h6 id="证完">证完</h6>
+<h5 id="注解">注解</h5>
+<p>本命题及下面五个命题解决圆锥和圆柱的理论。本命题解决的是圆锥与圆柱的量的相互转化。</p>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

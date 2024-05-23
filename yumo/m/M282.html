@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="第三同读" />
+  <title>宇墨学几何原本</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">宇墨学几何原本</h1>
+<p class="author">第三同读</p>
+</header>
+<h2 id="命题ix.15">命题IX.15</h2>
+<p>如果三个数成连比，且是与它们有同样比值的最小数组，那么其中任意两数的和与其余一数互质。</p>
+<p>设：a、b、c三个数成连比，并是与它们有同样比值的数组中的最小的数组。</p>
+<p>那么我说：a、b、c中任意两数的和与余下的数互质，即a加b之和是c的互质数，b加c是a的互质数，a加c是b的互质数。</p>
+<p>令：作DE和EF两数，使其为与a、b、c有同比值的最小数（命题VIII.2）。</p>
+<p>那么：DE自乘得a，再乘以EF得b，又，EF自乘得c（命题VIII.2）。</p>
+<p>那么因为：DE和EF是最小数，于是：它们是互质数。但是，如果两个数是互质数，那么它们的和也是每个数的互质数，于是：DF是DE、EF的互质数（命题VII.22、VII.28）。</p>
+<p>又，DE也是EF的互质数，所以：DF、DE是EF的互质数。</p>
+<p>而，如果两个数与任意一数互质，那么它们的乘积也是该数的互质数，于是：DF和DE的乘积是EF的互质数。于是：FD和DE的乘积也是EF平方的互质数（命题VII.24、VII.25）。</p>
+<p>但是，FD和DE的乘积是DE的平方加DE与EF的乘积的和，所以：DE的平方与DE、EF的乘积之和是EF平方的互质数（命题II.3）。</p>
+<p>又，DE的平方是a，DE、EF的乘积是b，EF的平方是c。于是：a与b之和是c的互质数。</p>
+<p>类似地，我们也能证明出b、c之和是a的互质数。</p>
+<p>我再说：a与c之和也是b的互质数。</p>
+<p>因为DF分别是DE、EF的互质数，于是：DE的平方也是DE、EF之积的互质数（命题VII.24、VII.25）。</p>
+<p>又，DE、EF的平方之和加DE、EF乘积的两倍等于DF的平方，于是：DE、EF的平方之和加DE、EF乘积的两倍是DE、EF乘积的互质数（命题II.4）。</p>
+<p>于是：DE、EF的平方与DE、EF的乘积的二倍之和是DE、EF的乘积的互质数。</p>
+<p>所以：DE、EF的平方是DE、EF乘积的互质数。</p>
+<p>又，DE的平方是a，DE和EF的乘积是b，EF的平方是c。</p>
+<p>所以：a、c的和是b的互质数。</p>
+<p>所以：如果三个数成连比，且是与它们有同样比值的最小数组，那么其中任意两数的和与其余一数互质。</p>
+<h6 id="证完">证完</h6>
+<p>牛顿的望远镜</p>
+<p>在牛顿时代，以当时的技术水平来说，要制造出折射望远镜所需要的小曲面镜是非常困难的。牛顿的仪器最引人注意的地方是小巧。仪器愈小巧，在操作时就愈不容易震动。物体成像时，镜身震动往往造成物像框边晃动，以致影像不清楚。所以，物像能不能稳定而清晰，比把物体放大还要重要。图中的望远镜有一个球状的基座，然后以金属支架与镜身连接，如此一来，镜筒可以朝任何方向瞄准。</p>
+<h5 id="注解">注解</h5>
+<p>设a、b、c是三个成连比的数，那么根据命题VIII.2，它们的排列是：</p>
+<p>a＝d2，b＝de，c＝e2，</p>
+<p>这里d和e是互质数，于是它们的和d＋e，与d、e互质（命题VII.28）。</p>
+<p>现在，因为d、d＋e与e互质，所以，它们的乘积d2＋de也与e互质（命题VII.24），所以也与e2互质（命题VII.25）。于是，a＋b与c互质。</p>
+<p>同样，b＋c与a互质。</p>
+<p>又，因为d＋e与d、e皆是互质的，所以它的平方数（d＋e）2与乘积de也是互质的（命题VII.24、VII.25）。即是d2＋e2＋2de与de互质。减去2de可以推断d2＋e2与de是互质的。于是b与a＋c是互质的。</p>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

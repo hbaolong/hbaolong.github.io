@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="第三同读" />
+  <title>宇墨学几何原本</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">宇墨学几何原本</h1>
+<p class="author">第三同读</p>
+</header>
+<h2
+id="命题v.25如果wxyzw是四个量中最大的量z是最小的量那么wzxy">命题V.25，如果w：x＝y：z，w是四个量中最大的量，z是最小的量，那么w＋z&gt;x＋y。</h2>
+<p>哥白尼的世界体系</p>
+<p>哥白尼先后在克拉科夫大学和波隆那、帕多瓦研究数学。自1506年起，他就认为太阳是静止不动的，地球和其他行星环绕太阳运行。他在《天体运行论》中提出，恒星的位置仅是表面现象，真正的原因是地球的自转。这些观点与《圣经》的说法相反。哥白尼在序言中说这些观点是数学假设而非事实，所以教会才不予理睬。</p>
+<p>第五卷的逻辑结构：</p>
+<p>第五卷是比和比例的基础，与前面各卷无关。第六卷包含平面几何的比，其证明依赖于第五卷中的结论。同时，在第五卷中的无理线和立体几何、第十一卷至第十三卷关于比的讨论也依赖于第五卷。第七卷至第九卷的数论不直接依赖于本卷，因为，数的比有不同的定义。</p>
+<p>然而，尽管欧几里得小心谨慎地证明他使用的比的结论，但还是有一些疏漏，比如比例的三分法则。在对定义V.4到定义V.7的注解中，对此有所描述。</p>
+<p>在卷V的部分命题要求处理定义V.4。</p>
+<h2 id="定义">定义</h2>
+<p>V.1　当一个较小的量能测尽较大的量时，小量被称为大量的部分。</p>
+<p>V.2　当一个较大量能被较小量测尽时，我们称大量为小量的倍数量。</p>
+<p>V.3　同类的量之间的大小关系叫做比。</p>
+<p>V.4　当一个量数倍以后能大于另一个量，则说两个量有一个比。</p>
+<p>V.5　有四个量，第一个量比第二个量等于第三个量比第四个量，那么，第一、第三量或者第二、第四量同时扩大相同的倍量，两个比依然相等。</p>
+<p>斯宾诺莎</p>
+<p>斯宾诺莎（1632—1611年）是荷兰哲学家，他提出以实体、属性与样式为中心的自因论唯物主义世界观，强调自然界的一切都是必然的，主张“必然性的认识”就是自由。认为感性知识不可靠，只有通过理性的直觉与推理才能得到真正可靠的知识。他的主要著作《伦理学》的体系仿照欧几里得的《几何原本》展开，所有论证都可从前提出发得到证明。</p>
+<p>V.6　有相同比的四个量称为成比例的量。</p>
+<p>V.7　在四个量之间，第一、三个量取相同的倍数，且第二、四个量取另一相同倍数，若第一个的倍量大于第二个的倍量，且第三个的倍量不大于第四个的倍量，那么，第一个量与第二个量的比大于第三个量与第四个量的比。</p>
+<p>V.8　一个比例至少有三个项。</p>
+<p>V.9　当三个量成比例时，那么，第一个量与第三个量的比是第一个量与第二个量的二次比。</p>
+<p>V.10　当四个量成连续比例时，第一量与第四量的比称为第一量与第二量的三次比。无论量的多少，依此类推。</p>
+<p>V.11　在成比例的四个量中，前项与前项、后项与后项称为对应量。</p>
+<p>V.12　前项比前项等于后项比后项称为更比。</p>
+<p>V.13　把更比的后项作前项，前项作后项称为逆比。</p>
+<p>V.14　前项与后项的和比后项称为合比。</p>
+<p>V.15　前项与后项的差比后项称为分比。</p>
+<p>V.16　前项比前项与后项的差称为交换比。</p>
+<p>V.17　有一些量，又有一些与它们个数相等的量，若在各组每取二量作成相同的比例，则第一组量中首量比尾量等于第二组中首量比尾量。这称为首末比。或者说，这是抽取中间项，保留两头的项。</p>
+<p>V.18　调动比例是，有三个量，又有另外与它们个数相等的三个量，在第一组量中，前项比后项等于第二组量中的前项比后项，这时，第一组量中的后项比第三项等于第二组中的第三项比前项。</p>
+<h5 id="注解">注解</h5>
+<p>比及比例论</p>
+<p>本卷是比及比例理论。一个比为两个量的大小关系。本卷叙述比例理论，为第六卷的几何比例的命题打下基础。命题VI.1是一个阐释何为几何比例的很好实例，该命题叙述在等高的三角形中，高与底边成比例，即两个三角形中的高之比等于它们相应的底边之比。举一个简单的例子，当一条底边是另一条底边的两倍时，它对应的三角形也是时应边的两倍，那么这一比是2：1，这是很好理解的。那么，任何一个比皆是两个数的比也是很好理解的。线之比等于数之比，比如A：B＝8：5，有两种解释，一是有一条较短的线A是8cm，那么B＝5cm。这一解释出现在卷VII的定义中。第二种解释是5A＝8B。如果A：B是一个数的比，那么，A和B是可公约的，即两者都可以被一个公约数所测尽。</p>
+<p>但是，许多线段是不可公约的。如果一个正方形的边是A，对角线是B，那么，A和B是不可公约的；A：B就不是一个数之比。这一事实由毕达哥拉斯发现。</p>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

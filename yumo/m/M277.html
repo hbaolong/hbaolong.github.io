@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="第三同读" />
+  <title>宇墨学几何原本</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">宇墨学几何原本</h1>
+<p class="author">第三同读</p>
+</header>
+<h2 id="命题ix.10">命题IX.10</h2>
+<p>从单位开始的数列成连续比例，如果单位后的数不是平方数，那么除了单位后面的第三个数以及每隔一个数以后的数外的其余各数皆不是平方数；又，如果单位后面的数不是立方数，那么除了从单位起第四个数以及每隔两个数以后的数以外，其余各数皆不是立方数。</p>
+<p>设：a、b、c、d、e、f是从一个单位开始的成连比的数列，单位后面的数a不是平方数。</p>
+<p>那么我说：除了第三个数以及每隔一个数以后的数外，皆不是平方数。</p>
+<p>假如可能，令：c是平方数，但b也是平方数，于是：b比c等于一个平方数比一个平方数（命题IX.8）。</p>
+<p>又，b比c等于a比b，于是：a比b是一个平方数比一个平方数，于是：a和b是相似平面数（命题VIII.26）。</p>
+<p>而b是平方数，于是：a也是平方数，这与假设相反。</p>
+<p>于是：c不是平方数。</p>
+<p>同理，我们可以证明除了第三个数以及每隔一个数以后的数外没有平方数。</p>
+<p>再，令：a不是立方数。</p>
+<p>蜘蛛的路径</p>
+<p>正方体上有一只蜘蛛，它要沿着正方体的每一边爬行，并且每一边来回走两趟，但不走两次相同的路线。如将正立方体展示在平面上，聪明的蜘蛛便从正立方体的底边“1”开始出发一直到“24”结束。</p>
+<p>无穷小微积分</p>
+<p>近代微积分的酝酿主要发生于17世纪上半叶。该时期所有的科学大师都在致力于寻求解决微积分学的新的数学工具，特别是描述运动与变化的无穷小算法。1666年10月，牛顿发表了《流数简论》，这是历史上第一篇系统的微积分文献。《流数简论》反映了牛顿微积分的运动背景。他从确定面积的变化率入手，通过反微分计算面积以及面积计算与求切线问题的互逆位，而以往数学家们都以曲线作为微积分的主要对象。图为《流数简论》中的一页。</p>
+<p>那么我说：除了第四个数以及每隔两个数以后的数外皆不是立方数。</p>
+<p>假如可能，令d为立方数。</p>
+<p>那么：c也是立方数，因为它是从单位开始的第四个数。又，c比d等于b比c，于是：b比c是一个立方数比一个立方数的比值。于是：b也是立方数（命题IX.8、VIII.25）。</p>
+<p>又因为：单位比a等于a比b，根据a中的单位数，单位测尽a。同理：a也测尽b。于是：a自乘得立方数b。</p>
+<p>而，如果一个数自乘得一个立方数，那么它自己也是个立方数。</p>
+<p>所以：a也是一个立方数。这与假设相反。所以：d不是立方数。</p>
+<p>类似地，我们可以证明除了第四个数以及每隔两个数以后的数以外的其余数皆不是立方数（命题IX.6）。</p>
+<p>所以：从单位开始的数列成连续比例，如果单位后的数不是平方数，那么除了单位后面的第三个数以及每隔一个数以后的数外的其余各数皆不是平方数。</p>
+<p>又，如果单位后面的数不是立方数，那么除了从单位起第四个数以及每隔两个数以后的数以外，其余各数皆不是立方数。</p>
+<h6 id="证完">证完</h6>
+<h5 id="注解">注解</h5>
+<p>这一定理是前一定理的逆定理。</p>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="第三同读" />
+  <title>宇墨学几何原本</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">宇墨学几何原本</h1>
+<p class="author">第三同读</p>
+</header>
+<h2 id="命题xii.17">命题XII.17</h2>
+<p>已知两个同心球，可在大球内作内接多面体，与小球不相切。</p>
+<p>设：有两个同心球，球心为A。</p>
+<p>现在要求的是：在大球内作一个内接多面体与小球面不相切。</p>
+<p>令：过球心的平面截该球，那么，所截面为一个圆，因为，球是半圆绕直径旋转而成的；因此，在任何位置我们都能得到半圆，由此经过半圆平面在球面上截出一个圆（定义XI.14）。</p>
+<p>又，这也表明，该圆是最大的圆，因为，是球的直径，自然也是半圆和这个圆的直径，它大于所有经过圆内或球内的线段。</p>
+<p>令：BCDE是大球内的一个圆，且FGH是小球内的一个圆。在它们内作两条直径BD、CE，并相互垂直（命题I.11）。</p>
+<p>于是：已知的两个圆BCDE、FGH是同心圆，在较大圆BCDE内作一个内接的偶数边的等边多边形，它与小圆FGH不相切（命题XII.16）。</p>
+<p>令：BK、KL、LM、ME是象限BE内的边，连接KA，并延长至N。再从点A作直线AO垂直于圆BCDE所在的平面，且与球面相互交于O（命题XI.12）。</p>
+<p>又，过AO及线段BD、KN作平面，它们与球面截出最大圆，这是合理的。</p>
+<p>令已经作出了它们，在它们中，BOD、KON是BD、KN上的半圆。</p>
+<p>现在，因为：OA与圆BCDE所在的平面垂直，所以：过OA的所有平面也与BCDE所在的平面垂直，因此：半圆BOD、KON和圆BCDE所在平面也垂直（命题XI.18）。</p>
+<p>又，因为：半圆BED、BOD、KON相等，因为，它们是在相等直径BD、KN上的，所以：象限BE、BO、KO亦彼此相等。</p>
+<p>所以：在象限BO、KO内有多少条弦等于BK、KL、LM、ME，就在象限BE上有多少条多边形的边。</p>
+<p>令：它们是内接的，是BP、PQ、QR、RO，也是KS、ST、TU、UO，连接SP、TQ、UR，从P、S点向BCDE所在的平面作垂线（命题IV.1、XI.11）。</p>
+<p>它们落在平面的公共交线BD、KN上，因为，BOD、KON所在的平面与圆BCDE所在的平面成直角（定义XI.4）。</p>
+<p>令它们是PV、SW，连接WV。</p>
+<p>现在因为，在相等半圆BOD、KON内，相等弦BP、KS已被截出，并已经作出垂线PV、SW；所以：PV等于SW、BV等于KW（命题III.27、I.26）。</p>
+<p>又，整体BA也等于整体KA，所以：余量VA也等于余量WA，所以：BV比VA等于KW比WA。所以：WV平行于KB（命题VI.2）。</p>
+<p>又，因为：每个弦PV、SW皆与圆BCDE所在的平面成直角，所以：PV平行于SW（命题XI.6）。</p>
+<p>又，已经证明，它们也相等，所以：WV、SP相等且平行（命题I.33）。</p>
+<p>又，因为，WV平行于SP，且WV平行于KB，所以：SP也平行于KB（命题XI.9）。</p>
+<p>又，连接BP、KS的端点，所以：四边形KBPS在同一平面，因为，如果两条直线平行，在它们每一条上任取一点，连接这些点的线与此二平行线在同一平面上。同理，四边形SPQT、TQRU也在同一平面上（命题XI.7）。</p>
+<p>第谷的观星台</p>
+<p>哥白尼的日心说一开始不仅受到教会的敌视，而且也遭到许多天文学家的反对。他们之中最著名的便是第谷·布拉赫（1546—1601年），但第谷的天文观测工作却为日心说的发展开辟了道路。第谷是一个天才的观测家，他的天象记录几乎包罗了望远镜发明之前肉眼所能观测到的全部。1572年，他发现的新恒星对亚里士多德的天空完美不变的观点以有力的驳斥。1577年，第谷观测到一颗巨大的彗星，并证明它比月亮更远。这更沉重地打击了亚里士多德的天界完美观。第谷系统、精确的观测材料为历法改革奠定了基础，此外，他长期而系统的观测资料直接导致了当时最先进的星表出现。</p>
+<p>又，三角形URO也在一个平面上。如果我们从P、S、Q、T、R、U点向A作连线，那么，就作出了在弧BO、KO之间的一个多面体，它包含了四边形KBPS、SPQT、TQRU以及三角形URO为底且以A为顶点的棱锥（命题XI.2）。</p>
+<p>又，如果我们在边KL、LM、ME的每一个上像在BK上一样作同样的图，再在其余三个象限内也给出同样的图，于是：得到一个由棱锥构成的内接于球的多面体，它是由前述的四边形和三角形URO以及与它们对应的其他一些四边形和三角形为底且以A为顶点的棱锥构成。</p>
+<p>那么我说：可证前述多面体不切于圆FGH生成的球面。</p>
+<p>从A点作AX垂直于四边形KBPS所在的平面，且相交于平面的X点，连接XB、XK（命题XI.11）。</p>
+<p>那么，因为：AX与KBPS所在的平面成直角，所以：它也和四边形所在平面上所有和它相交的直线成直角。所以：AX与BX、XK皆成直角（定义XI.3）。</p>
+<p>又，因为：AB等于AK，所以：AB上的正方形等于AK上的正方形，AX、XB上的正方形之和等于AB上的正方形，因为，在X点的角是直角，AX、XK上的正方形等于AK上的正方形（命题I.47）。</p>
+<p>所以：AX、XB上的正方形之和等于AX、XK上正方形之和。</p>
+<p>从每个中减去AX上的正方形，于是：余量即BX上的正方形等于余量即XK上的正方形。所以：BX等于XK。</p>
+<p>类似地，我们也能证明，连接X到P的线段分别等于线段BX、XK。</p>
+<p>所以：以X为圆心且以XB或XK为半径的圆过点P、S，且KBPS是圆内接四边形。</p>
+<p>现在，因为：KB大于WV，而WV等于SP，所以：KB大于SP。而KB分别等于线段KS和BP，所以：KS、BP皆大于SP。</p>
+<p>又，因为，KBPS是圆内的四边形，且KB、BP、KS相等，且PS小于它们，且BX是圆的半径。所以：KB上的正方形大于BX上的正方形的两倍。</p>
+<p>从K点作KZ垂直于BV（命题I.12）。</p>
+<p>那么，因为：BD小于两倍DZ、BD比DZ等于DB、BZ构成的矩形比DZ、ZB构成的矩形，如果BZ上的一个正方形，在ZD上的平行四边形，那么，DB、BZ构成的矩形也小于DZ、ZB构成的矩形的两倍。</p>
+<p>又，如果连接KD，那么，DB、BZ构成的矩形等于BK上的正方形，且DZ、ZB构成的矩形等于KZ上的正方形。所以：KB上的正方形小于KZ上的正方形的两倍（命题I.46、III.31、VI.18、推论）。</p>
+<p>又，KB上的正方形大于BX上的正方形的两倍，所以：KZ上的正方形大于BX上的正方形。又，因为，BA等于KA，所以：BA上的正方形等于AK上的正方形。</p>
+<p>又，BX、XA上的正方形之和等于BA上的正方形，且KZ、ZA上的正方形之和等于KA上的正方形，所以：BX、XA上的正方形之和等于KZ、ZA上的正方形之和。在它们中，KZ上的正方形大于BX上的正方形，所以：余量，即ZA上的正方形小于XA上的正方形（命题I.47）。</p>
+<p>所以：AX大于AZ，所以：AX比AG大得多。</p>
+<p>又，AX是多面体底上的一条垂线，且AG在小球的球面上，因此：多面体与小球的球面不相切。</p>
+<p>所以：已知两个同心球，可在大球内作内接多面体，与小球不相切。</p>
+<h6 id="证完">证完</h6>
+<p>推论</p>
+<p>如果一个在另外一个球里的内接多面体相似于球BCDE的内接多面体，那么，在球BCDE的内接多面体比在另一球的内接多面体等于此二球直径的三次比。</p>
+<p>阿基米得的镜子</p>
+<p>阿基米得曾率领叙拉古人民手持凹面镜，利用光的反射和凹面镜的聚光作用将阳光聚焦在罗马军队的木制战舰上，使它们燃烧起来。在一连串的打击下，罗马军队早已人心惶惶，草木皆兵，只要有一点响动，他们就惊呼“阿基米得来了”，随之四处逃窜。</p>
+<p>因为：此二立体可以依顺序分为相似且数量相等的棱锥。</p>
+<p>而，相似棱锥之比等于它们对应边的三次比。所以：以四边形KBPS为底、以A为顶点的棱锥比另一球内按顺序相似棱锥等于对应边与对应边的三次比，即以A为心的球的半径与另一球的半径的三次比（命题XII.18、推论）。</p>
+<p>类似地，在以A为心的球中的每个棱锥比另一球中按顺序相似的棱锥等于AB与另一球的半径的三次比。</p>
+<p>又，前项之一比后项之一等于所有前项之和比所有后项之和，因此：在以A为球心的球内的整体多面体比另一球内的整体多面体等于AB与另一球半径的三次比，即，直径BD与另一球直径的三次比（命题V.12）。</p>
+<h6 id="证完-1">证完</h6>
+<h5 id="注解">注解</h5>
+<p>本命题及其推论的目的是分离同心的球，以便在下一个命题（XII.18）中证明球之比，是其直径的三次比。</p>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

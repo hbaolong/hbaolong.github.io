@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="第三同读" />
+  <title>宇墨学几何原本</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">宇墨学几何原本</h1>
+<p class="author">第三同读</p>
+</header>
+<h2 id="命题v.16">命题V.16</h2>
+<p>如果四个量成比例，那么它们的更比例也成立。</p>
+<p>弗兰西斯•培根</p>
+<p>弗兰西斯•培根（1561—1626年），英国哲学家、科学家、作家和思想家，被马克思称做“英国唯物主义和整个现代实验科学的真正始祖”。他在逻辑学、美学、教育学等方面都颇有建树。在培根的著作中，《新工具》也许是其最重要的著作。该书强调使用归纳法。因为亚里士多德的演绎逻辑法是十分荒诞的，因此就需要有一种新的逻辑方法、归纳法。</p>
+<p>设：a、b、c、d为四个成比例的量，即a比b等于c比d。</p>
+<p>那么我说：它们也相互成更比例，即a比c等于b比d（定义V.12）。</p>
+<p>令：作a和b的等倍量e和f，再作c和d的任意等倍量g和h。</p>
+<p>那么因为：e是a的相等倍数，f是b的相等倍数，部分的比等于整体的等倍量。</p>
+<p>所以：a比b等于e比f（命题V.15）。</p>
+<p>而：a比b等于c比d，所以：c比d也等于e比f（命题V.11）。</p>
+<p>又因为：g和h是c和d的等倍量，所以：c比d等于g比h（命题V.15）。</p>
+<p>而：c比d等于e比f。</p>
+<p>所以：e比f也等于g比h（命题V.11）。</p>
+<p>又：如果四个量成比例，而第一个大于第三个。</p>
+<p>那么第二个也大于第四个；如果相等，那么后者也相等；如果小于，那么后者也小于（命题V.14）。</p>
+<p>所以：如果e大于g，那么f也大于h；如果等于，那么后者也等于；如果小于，那么后者也小于。</p>
+<p>e和f是a和b的等倍量，g和h是c和d的等倍量。</p>
+<p>所以：a比c等于b比d（定义V.5）。</p>
+<p>所以：如果四个量成比例，那么它们的更比例也成立。</p>
+<h6 id="证完">证完</h6>
+<h5 id="注解">注解</h5>
+<p>四个量a、b、c、d必须是同一个类。如果a、b与c、d是不同的类，那么a：c和b：d就不是交替比，而是混合比。古希腊几何学家不接受混合比的概念，但现代物理及机械领域内，混合比却是通常使用的，最典型的例子是速度与时间和距离的公式。</p>
+<p>这一命题要求应用定义V.4作为对照公理。</p>
+<p>这一命题应用在命题V.19中，并频繁使用在卷VI、X、XI、XII中。</p>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

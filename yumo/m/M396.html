@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="第三同读" />
+  <title>宇墨学几何原本</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">宇墨学几何原本</h1>
+<p class="author">第三同读</p>
+</header>
+<h2 id="命题x.91">命题X.91</h2>
+<p>如果一个面是由一条有理线和一个第一余线构成的，那么，与该面相等的正方形的边是一个余线。</p>
+<p>设：面AB是由有理线段AC和第一余线AD构成的。</p>
+<p>那么我说：与该面相等的正方形的边是一个余线。</p>
+<p>因为：AD是一个第一余线，设DG是它的加线段</p>
+<p>那么：AG、GD是仅正方可公约的有理线段，且总线段AG与给定的有理线段AC是可公约的。</p>
+<p>又：AG上的正方形大于GD上的正方形，其差为一个与AG是长度可公约的线段上的正方形（命题X.73、定义X.12）。</p>
+<p>所以：如果在AG上建矩形，使之等于DG上的正方形的四分之一且缺少一个正方形，那么：它被分为可公约的两个部分（命题X.17）。</p>
+<p>在E点平分DG，在AG上建矩形，使之等于EG上的正方形且缺少一个正方形的矩形AF、FG，于是：AF与FG是可公约的。</p>
+<p>过点E、F、G作EH、HI和GK平行于AC。</p>
+<p>那么因为：AF与FG是长度可公约的，所以：AG分别与线段AF、FG也是长度可公约的（命题X.15）。</p>
+<p>又，AG与AC是可公约的，所以：AF与FG皆与AC是长度可公约的（命题X.12）。</p>
+<p>又，AC是有理的，所以：AF、FG也皆是有理的，所以：AI、FK构成的矩形也是有理的（命题X.19）。</p>
+<p>那么因为：DE与EG是长度可公约的，所以：DG分别与DE、EG也是可公约的（命题X.15）。</p>
+<p>又，DG是有理的，并与AC长度不可公约，所以：DE、EG皆与AC是长度不可公约的有理线段，所以：DH、EK构成的矩形是中项面（命题X.13、X.21）。</p>
+<p>现在，作正方形LM等于AI，从中减去与它有共同角LPM的正方形NO等于FK，那么：LM、NO的对角线在一条直线上（命题VI.26）。</p>
+<p>令：PR为它们的对角线，并作图。</p>
+<p>因为：AF、FG构成的矩形等于EG上的正方形，所以：AF比EG同于EG比FG（命题VI.17）。</p>
+<p>而AF比EG同于AI比EK，而EG比FG同于EK比KF，所以：EK是一个AI、KF间的比例中项（命题VI.1、V.11）。</p>
+<p>又，前面已经证明，MN也是LM、NO之间的比例中项，而AI等于LM，KF等于NO。所以：MN也等于EK，而EK等于DA，且MN等于LO；所以，DK等于折尺形UVW和NO的和。</p>
+<p>而AK也等于LM、NO之和，所以：余值AB等于ST。</p>
+<p>又，RT等于LN，所以：LN上的正方形等于AB，所以：LN是与AB相等的正方形的边。</p>
+<p>其次可证明LN是一条余线。</p>
+<p>因为每一个矩形AI、FK是有理的，且它们分别等于IM、NO，所以每个正方形LM、NO，即分别为LP、PN上的正方形，也是有理的，因此，LP、PN也是有理的。又因为，DH是中项面，且等于LO，所以LO也是中项面。</p>
+<p>于是，因为LO是中项面，而NO是有理的，所以LO与NO不可公约。</p>
+<p>又，LO比NO同于LP比PN，所以：LP与PN是长度不可公约的（命题VI.1、X.11）。</p>
+<p>又，它们皆是有理的，所以：LP、PN是仅正方可公约的有理线段，所以：LN是一个余线（X.73）。</p>
+<p>高斯论文</p>
+<p>表面张力理论常常被称做毛细理论。高斯在1830年发表的论文“流体之平衡态理论的普遍原理”中阐发了毛细理论。高斯提出：人们可用虚功原理，亦即用变分原理表征液体表面的平衡态。对于给定在所有虚拟位置中达到了极小面积，就可得出小曲面理论。</p>
+<p>又，它是与面AB相等的正方形的边，所以：与面AB相等的正方形的边是一个余线。</p>
+<p>所以：如果一个面是由一条有理线和一个第一余线构成的，那么，与该面相等的正方形的边是一个余线。</p>
+<h6 id="证完">证完</h6>
+<h5 id="注解">注解</h5>
+<p>这一命题应用在命题X.108中。</p>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

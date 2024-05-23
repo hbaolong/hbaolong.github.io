@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="第三同读" />
+  <title>宇墨学几何原本</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">宇墨学几何原本</h1>
+<p class="author">第三同读</p>
+</header>
+<h2 id="命题ii.8">命题II.8</h2>
+<p>任意两分一个线段，用原线段和一个小线段构成的矩形的四倍与另一小线段上的正方形面积的和，等于原线段与前一个小线段之和上的正方形的面积。</p>
+<p>设：线段AB被任意一点C所切分；</p>
+<p>那么我说：AB与BC构成的矩形的四倍与AC线为边的正方形的和等于AB与BC之和上的正方形。</p>
+<p>令：延长AB线至D，使BD等于CB；建AD为边的正方形AEFD，连接该图形的各点。</p>
+<p>那么：因为CB等于BD，同时CB等于GK，BD等于KN，所以：GK也等于KN。</p>
+<p>同理可证：QR也等于RP。</p>
+<p>又：因为BC等于BD，GK等于KN；所以：CK也等于KD，GR也等于RN（命题I.36）。</p>
+<p>又：CK与RN皆为平行四边形CP的补形；故：CK等于RN（命题I.43）；所以：KD也等于GR；</p>
+<p>所以：四个区DK、CK、GR、RN相互相等，所以其和是CK的四倍。</p>
+<p>又：因为CB等于BD，同时BD等于BK（以及CG），CB等于GK（以及GQ）；所以CG也等于GQ。</p>
+<p>数理逻辑的鼻祖</p>
+<p>莱布尼茨的数理逻辑著作如果发表的话，将具有重大意义，这将使他在数理逻辑真正创立的整整一个半世纪之前，就成为数理逻辑的鼻祖。这位罕见的博学之士，独立发明了微积分，并先于牛顿将其发表。尽管牛顿发明微积分的时间更早，但数学家们如今使用的是莱布尼茨的微积分法，而不是牛顿的微积分法。图为莱布尼茨与普鲁士女王索菲娅·夏洛特在一起，在热衷于学术研究的女王的支持下，1700年7月，德国科学院在柏林建立。</p>
+<p>又：因为CG等于GQ，QR等于RP；故：AG也等于MQ，QL也等于RF（命题I.36）。</p>
+<p>又：因为MQ与QL是平行四边形ML的补形，所以MQ等于QL（命题I.43）；所以AG也等于RF；所以：四个区AG、MQ、QL、RF相互相等。所以：其和是AG的四倍。</p>
+<p>又：四个区CK、KD、GR、RN也可以被证明是CK的四倍；所以：包含折尺形STU的八个区是AK的四倍。</p>
+<p>又：因为BK等于BD，所以AK是AB、BD为边的矩形。所以：以AB、BD为边的矩形的四倍是AK的四倍。</p>
+<p>又：折尺形STU也能被证明为AK的四倍；所以：以AB、BD为边的矩形的四倍等于折尺形STU。</p>
+<p>令：OH（等于AC为边的正方形）与各个相加；于是：AK的四倍与以AC为边的正方形之和等于折尺形STU与OH之和。</p>
+<p>又：折尺形STU与OH之和等于正方形AEFD（AD为边的正方形），所以以AB、BD为边的矩形的四倍与以AC为边的正方形之和等于AD为边的正方形。</p>
+<p>又：BD等于BC；所以：AB、BC围成的矩形的四倍与AC上的正方形之和等于AD上的正方形——也是AB、BC之和上的正方形。</p>
+<p>所以：任意两分一个线段，用原线段和一个小线段构成的矩形的4倍与另一小线段上的正方形面积的和，等于原线段与前一个小线段之和上的正方形的面积。</p>
+<h6 id="证完">证完</h6>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

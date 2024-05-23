@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="第三同读" />
+  <title>宇墨学几何原本</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">宇墨学几何原本</h1>
+<p class="author">第三同读</p>
+</header>
+<h2 id="命题ix.13">命题IX.13</h2>
+<p>如果从单位开始的几个数成连续比例，紧接单位的是质数，那么除了这些成比例的数以外，任何数都不能测尽其中最大的数。</p>
+<p>设：a、b、c、d是从单位开始的成连续比例的数，a是紧接于单位的质数。</p>
+<p>那么我说：它们中最大数d，不可能被除了a、b或c以外的任何数所测尽。</p>
+<p>假定可能，设其被e所测尽，e不等于a、b、c中的任何一个。</p>
+<p>那么，e不是质数，因为如果e是质数并测尽d，那么它也可以测尽a。a为质数，然而它不等于a。这是不可能的。</p>
+<p>所以：e不是质数，所以：它是合数（命题IX.12）。</p>
+<p>又，任何合数皆可以被某个质数测尽，所以：e被某个质数所测尽（命题VII.31）。</p>
+<p>我进一步说：它只能被a所测尽，其他任何数皆不可能。</p>
+<p>如果e被其他数所测尽，而e测尽d，那么其他数测尽d，于是：它也测尽质数a。然而它不等于a。这显然是不可能的，于是：质数a测尽e（命题IX.12）。</p>
+<p>又因为：e测尽d，设其测尽d得f。</p>
+<p>那么我说：f不等于a、b、c中的任何一个数。</p>
+<p>假如f等于a、b、c中的其中一个，并测尽d得e。那么a、b、c中的一个也测尽d得e。</p>
+<p>而a、b、c中的一个测尽d得a、b、c中的一个。于是：e也等于a、b、c中的一个。这与假设矛盾（命题IX.11）。</p>
+<p>所以：f不等于a、b、c中的一个。</p>
+<p>类似地，我们可以证明出，f被a所测尽；f不是质数。</p>
+<p>万尼瓦尔·布什</p>
+<p>万尼瓦尔·布什（1890—1974年），美国科学家，被誉为“大科学的先驱”。他发明了解决差分程序的计数机，解决了数学家和科学家复杂差分程序的难题。</p>
+<p>假如f是质数，并测尽d，那么它也测尽质数a。然而它不等于a。这是不可能的。所以：f不是质数。所以：f是合数（命题IX.12）。</p>
+<p>又，任何合数可以被某一个质数所测尽。所以：f被某个质数所测尽（命题VII.31）。</p>
+<p>我进一步说：它只能被a所测尽，而不是其他质数。</p>
+<p>因为，如果有别的质数测尽f，而f测尽d，那么别的质数也测尽d。于是：它也测尽质数a。然而它不同于a。这是不可能的。所以：只有质数a测尽f（命题IX.12）。</p>
+<p>又因为e测尽d得f，所以e乘以f得d。但，更有a乘以c也得d。于是：a和c的乘积等于e和f的乘积（命题IX.11）。</p>
+<p>所以，a比e等于f比c（命题VII.19）。</p>
+<p>而a测尽e，于是：f也测尽c。</p>
+<p>令f测尽c得g。</p>
+<p>类似地，我们能证明出g不等于a、b中的任何一个，并被a测尽。又，因为f测尽c得g，于是：f乘以g得c。</p>
+<p>又，a乘以b得c，于是：a、b的乘积等于f、g的乘积，所以，a比f等于g比b（命题IX.11、VII.19）。</p>
+<p>又，a测尽f，于是：g也测尽b，令其测尽b得h。</p>
+<p>类似地，那么，我们也能证明出h不等于a。</p>
+<p>那么因为：g测尽b得h，于是：g乘以h得b。而a自乘得到b，于是：h和g的乘积等于a的平方（命题IX.8）。</p>
+<p>所以：h比a等于a比g。而a测尽g，所以：h也测尽质数a，然而h不等于a，这是荒谬的（命题VII.19）。</p>
+<p>古代世界的圆周率</p>
+<p>在古代世界，实际上长期使用π＝3这个数值。最早有文字记载的是基督教《旧约圣经》中《列王纪》第7章，其中说到所罗门王建造宫殿时铸了一个圆柱形容器，这个容器高为2.5米，直径为5米，圆周长为15米，很显然，π在这里被用做3。</p>
+<p>所以：最大数d除了被数a、b或c测尽以外，不可能被其他数所测尽。</p>
+<p>所以：如果从单位开始的几个数成连续比例，紧接单位的是质数，那么除了这些成比例的数以外，任何数都不能测尽其中最大的数。</p>
+<h6 id="证完">证完</h6>
+<h5 id="注解">注解</h5>
+<p>这一命题说，仅能除尽一个质数的乘方的数是该质数的较小幂。</p>
+<p>这一证明过程包含化简步骤，同前一个命题一样。假定一个数e可以除尽一个质数p的乘方pk，但e不等于p的任何较低幂。</p>
+<p>首先要注意的是，e不可能是质数，因为，它除尽p就不可能是质数（命题IX.12）。</p>
+<p>那么e是一个合数，于是，某个质数q能除尽e（命题VII.31）。那么q也能除尽pk，这意味着q能除尽p。所以，能除尽e的仅有质数是p。</p>
+<p>下面的证明是反复化简乘方k。意味着e不是l，它可以被p除尽，设g是e/p。那么，g能除尽pk－l，但并不是p的任何较低的乘方。于是，系统的论据可以应用，继续如此，直到某个数能除尽p，但不是l或者p。这是矛盾的。所以，仅能除尽一个质数的乘方的数是该质数的较小幂。</p>
+<p>这一命题应用在命题IX.32和IX.36中。</p>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

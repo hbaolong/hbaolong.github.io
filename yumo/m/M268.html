@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="第三同读" />
+  <title>宇墨学几何原本</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">宇墨学几何原本</h1>
+<p class="author">第三同读</p>
+</header>
+<h2 id="命题ix.1">命题IX.1</h2>
+<p>如果两个相似的平面数相乘得出某一个数，那么这个乘积是平方数。</p>
+<p>设：a和b是两个相似的平面数，a与b相乘得c。</p>
+<p>那么我说：c是个平方数。</p>
+<p>设a自乘得d，那么d是平方数。</p>
+<p>因为：a自乘得d，且a乘以b得c，所以：a比b等于d比c（命题VII.17）。</p>
+<p>又因为：a和b是相似平面数，所以：一个比例中项落在a、b之间（命题VIII.18）。</p>
+<p>因为：如果在两个数之间有多少个成连续比例的数，那么在有相同比的数之间也有同样多个成连比的数。于是：在d和c之间也有一个比例中项。</p>
+<p>又，d是平方数，所以：c也是平方数（命题VIII.22）。</p>
+<p>所以：如果两个相似的平面数相乘得出某一个数，那么这个乘积是平方数。</p>
+<h6 id="证完">证完</h6>
+<p>阿尔罕布拉宫的大清真寺</p>
+<p>阿尔罕布拉宫是12、13世纪时期西班牙摩尔人统治者在高山顶部建立的一座堡垒及宫殿，它是伊斯兰建筑中的典范。这张内部速写图显示了其典型的马蹄形拱门以及深邃的空间。1924年，匈牙利数学家在著名的关于平面对称群的论文中证明这样的群共有17种，而出现在阿尔罕布拉宫的就有5种。在没有借助任何数学知识的情况下，埃舍尔在以后的研究中发现了所有17种可能性，他以艺术家的感性眼光，发现了数学家打开的理性之门后的美丽花园。</p>
+<h5 id="注解">注解</h5>
+<p>这是第IX卷的第一命题，实际上也是第VIII卷比例的继续。</p>
+<p>假定两个平面数a＝18，b＝8，根据命题VIII.18，它们中就有一个比例中项，即12，这一比例中项的平方数是它们的乘积，ab＝144。</p>
+<p>不清楚为什么不使用更简单的结论来证明，即比例中项的平方数是它们的乘积，而要用更复杂的。</p>
+<p>设：a和b是给定的两个平面数。那么，它们中就有一个比例中项（命题VIII.18）。又，因为a：b＝a2：ab，所以：在a2和ab中也就有一个比例中项（命题VIII.1）。但因为：a2是一个平方数，所以：ab也是一个平方数（命题VIII.22）。于是：原始相似平面是一个平方数。</p>
+<p>下一命题IX.2是本命题的逆命题。这一命题应用在命题X.29中。</p>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

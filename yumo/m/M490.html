@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="第三同读" />
+  <title>宇墨学几何原本</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">宇墨学几何原本</h1>
+<p class="author">第三同读</p>
+</header>
+<h2 id="命题xiii.11">命题XIII.11</h2>
+<p>如果圆的直径为有理线，那么，这个圆的内接等边五边形的边是被称为次线的无理线。</p>
+<p>设：在圆ABCDE中，直径是有理线，内接等边五边形ABCDE被建立。</p>
+<p>以F为圆心，连接AF、FB，延长它们至点G、H，再连接AC，作AF的四分之一FK（命题III.1、VI.9）。</p>
+<p>现在，因为：AF是有理的，所以：FK也是有理的。而BF也是有理的，所以：整体BK是有理的。</p>
+<p>又，因为：弧ACG等于弧ADG，且在它们中，ABC等于AED，所以：余量CG等于余量GD。</p>
+<p>又，如果我们连接AD，那么，在点L处的角是直角，CD是CL的两倍，</p>
+<p>同理，在M点的角也是直角，且AC是CM的两倍。</p>
+<p>那么，因为：角ALC等于角AMF，且角LAC是两个三角形ACL和AMF的公共角，所以：余角ACL等于余角MFA（命题I.32）。</p>
+<p>所以：三角形ACL与三角形AMF是等角三角形。所以：成比例地，LC比CA同于MF比FA。且取两前项的两倍，所以：LC的两倍比CA同于MF的两倍比FA。</p>
+<p>又，MF的两倍比FA同于MF比FA的一半，所以：LC的两倍比CA同于MF比FA的一半。</p>
+<p>取两后项的一半，所以：LC的两倍比CA的一半，同于MF比FA的四分之一。</p>
+<p>曼德尔布罗特集合</p>
+<p>美籍法国数学家曼德尔布罗特（1924—　），研究雪花曲线的工作引出了分形几何学，同时也为准确地描述和艺术地再现世间万物的不规则性提供了理论依据。曼德尔布罗特集合自发现以来已显示出与所有动力学过程行为的密切联系。像圆和正多边形等图形一样，它在现代数学中占有特殊和基础的地位，它是分形世界一切神奇美妙的景观之源。</p>
+<p>又，DC是LC的两倍，CM是CA的一半，FK是FA的四分之一，所以：DC比CM同于MF比FK。</p>
+<p>又，由合比可得，DC、CM之和比CM同于MK比KF。所以：DC、CM之和上的正方形比CM上的正方形，等于MK上的正方形比KF上的正方形（命题V.18）。</p>
+<p>又，因为：当五边形两相对角的连线AC被分为中外比时，大线段等于五边形的边，即DC，同时，大线段与整体之一半之和上的正方形是整体之一半上的正方形的五倍，而CM是整体AC的一半。所以：CM、DC之和上的正方形是CM上的正方形的五倍（命题XIII.8、XIII.1）。</p>
+<p>又，已经证明DC、CM之和上的正方形比CM上的正方形同于MK上的正方形比KF上的正方形，所以：MK上的正方形是KF上的正方形的五倍。</p>
+<p>又，KF上的正方形是有理的，因为它的直径是有理的，所以：MK上的正方形也是有理的。所以：MK是有理的。</p>
+<p>又，因为：BF是FK的四倍，所以：BK是KF的五倍，所以：BK上的正方形是KF上的正方形的二十五倍。</p>
+<p>又，MK上的正方形是KF上的正方形的五倍，所以：BK上的正方形是KM上的正方形的五倍，所以：BK上的正方形比KM上的正方形不同于平方数比平方数。所以：BK与KM是长度不可公约量（命题X.9）。</p>
+<p>又，它们皆是有理的。所以：BK、KM是仅正方可公约的有理线段。</p>
+<p>又，如果从一条有理线段减去一条与它仅正方可公约的有理线段，那么，余量是无理的，即一条余线，所以：MB是一条余线，而MK是它上面的加线段（命题X.73）。</p>
+<p>我进一步说，MB也是一个第四余线。</p>
+<p>设：n上的正方形等于BK上的正方形与KM上的正方形之差。所以：BK上的正方形与KM上的正方形之差等于n上的正方形。</p>
+<p>又，因为：KF与FB是可公约的，由合比可得，KB与FB可公约，而FB与BH可公约，所以：BK与BH也可公约（命题X.15、X.12）。</p>
+<p>又，因为：BK上的正方形是KM上的正方形的五倍，所以：BK上的正方形比KM上的正方形等于5：1。所以：由反比可得，BK上的正方形比n上的正方形等于5∶4，而此比不是平方数比平方数。所以：BK与n是不可公约的。所以：BK上的正方形与KM上的正方形的差的正方形的边与BK不可公约（命题V.19、X.9、推论）。</p>
+<p>因为：整体BK上的正方形与加线段KM上的正方形的差的正方形的边与BK不可公约，且整体BK与给定的有理线段BH是可公约的，所以：MB是一个第四余线（命题III.4）。</p>
+<p>又，由一条有理线和第四余线构成的矩形是无理的，且与此矩形相等的正方形的边是条无理次线（命题X.94）。</p>
+<p>又，AB上的正方形等于HB、BM构成的矩形，因为，当连接AH时，三角形ABH与三角形ABM是等角三角形，且HB比BA等于AB比BM。</p>
+<p>所以：五边形的边AB是一条无理次线。</p>
+<p>数学启蒙</p>
+<p>1847年，英国人伟烈亚力（1815—1887年）来到上海学习中国文化。1854年，他用中文写了一本《数学启蒙》，介绍西方数学。他在序中说：西方就是中国的天元术，天元术“穷极奥妙”，不能使闾阎小民习用易晓。现作《数学启蒙》一书，“以授塾中学徒，由浅及深，使其知之易也”。伟烈亚力决意将借根方改译为代数，主要是考虑到早期传入的借根方只是代数学的片断，现在有必要系统地介绍。</p>
+<p>所以：如果圆的直径为有理线，那么，这个圆的内接等边五边形的边是被称为次线的无理线。</p>
+<h6 id="证完">证完</h6>
+<h5 id="注解">注解</h5>
+<p>本命题应用在命题XIII.16中，以阐释正五边形的边是无理线段，也被称为次线。</p>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

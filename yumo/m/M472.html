@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="第三同读" />
+  <title>宇墨学几何原本</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">宇墨学几何原本</h1>
+<p class="author">第三同读</p>
+</header>
+<h2 id="命题xii.12">命题XII.12</h2>
+<p>相似圆锥或相似圆柱之比等于它们底的直径的三次比。</p>
+<p>设：有相似圆锥和相似圆柱，它们的底分别是圆ABCD、EFGH，直径分别是BD、FH，轴分别是KL、MN。</p>
+<p>那么我说：以圆ABCD为底且以L为顶点的圆锥比以圆EFGH为底且以N为顶点的圆锥等于BD与FH的三次比。</p>
+<p>因为，如果，圆锥ABCDL比圆锥EFGHN不等于BD与FH的三次比，那么，圆锥ABCDL与某一小于或大于圆锥EFGHN的一个立体的比等于BD与FH的三次比。</p>
+<p>首先，有这个比的是较小的立体O。又令：正方形EFGH内接于圆EFGH；于是：正方形EFGH大于圆EFGH的一半（命题IV.6）。</p>
+<p>现在，令正方形EFGH上有一个与圆锥同顶点的棱锥，于是：该棱锥大于圆锥的一半。再令点P、Q、R、S等分圆弧EF、FG、GH、HE；连接EP、PF、FQ、QG、GR、RH、HS、SE。</p>
+<p>于是：每个三角形EPF、FQG、GRH、HSE皆大于圆EFGH中包含它的弓形的一半。</p>
+<p>又，在每个三角形EPF、FQG、GRH、HSE上作与圆锥同顶点的棱锥。</p>
+<p>于是：每个棱锥也大于包含它们的弓形圆锥上的锥体的一半。</p>
+<p>于是：二等分得到的圆弧，作弦，在每个三角形上作与圆锥同顶点的棱锥，这样依次作下去，我们将得到一些弓形圆锥，其和小于圆锥EFGHN超过立体O的部分（命题X.1）。</p>
+<p>令：这样得到EP、PF、FQ、QG、GR、RH、HS、SE为边的弓形圆锥。于是，余量，即以多边形EPFQGRHS为底以N为顶点的棱锥，大于立体O。</p>
+<p>现在，令圆ABCD的内接多边形</p>
+<p>ATBUCVDW与多边形EPFQGRHS相似且有相似位置。再在多边形ATBUCVDW上作与圆锥同顶点的棱锥。</p>
+<p>再以多边形ATBUCVDW为底且以L为顶点，由许多三角形围成一个棱锥，LBT为其中的一个三角形。又以多边形EPFQGRHS为底且以N为顶点，由许多三角形围成一个棱锥，NFP为其中的一个三角形。连接KT和MP。</p>
+<p>那么因为，圆锥ABCDL与圆锥EFGHN相似，所以：BD比FH等于轴KL比轴MN（定义XI.24）。</p>
+<p>又，BD比FH等于BK比FM，所以：BK比FM等于KL比MN。又，由更比可得，BK比KL等于FM比MN（命题V.16）。</p>
+<p>又，夹等角的边成比例，即角BKL等于FMN；所以：三角形BKL相似于三角形FMN（命题VI.6）。</p>
+<p>又，因为：BK比KT等于FM比MP，它们夹等角，即角BKT、FMP，因为，无论角BKT在圆心K的四个直角占多少部分，角FMP也在圆心M的四个直角占同样多的部分；因为夹等角的边成比例，所以：三角形BKT与三角形FMP相似（命题VI.6）。</p>
+<p>《四元玉鉴》书影</p>
+<p>朱世杰（1248—1314年），自号松庭，平民数学家、数学教育家。《四元玉鉴》是朱世杰的代表作，亦是宋元数学的绝唱。全书共三卷，分二十四门，共有数学题二百八十八道，它们是用天元术或四元术来解答的。书中讨论了高次方程组的消元法，还有高阶等差级数有项求和问题以及高次差的招差法等重要成就。</p>
+<p>贝特朗悖论</p>
+<p>1899年，法国学者贝特朗提出：在半径为r的圆内，PL有机选择弦，计算弦长短过圆内接正三角形边长的概率。根据对PL有机选择的不同解，可以得到不同答案：（1）考虑与某确定方向平行的弦，则所求概率为二分之一；（2）考虑从圆上某固定点P引出的弦，所求概率为三分之一；（3）考虑弦的中点落在圆的某个部分的概率与该部分的面积成正比，则所求概率为四分之一。这类悖论的矛头直击概率概念本身，强烈地刺激了概率论基础的严格化。</p>
+<p>海岛算经</p>
+<p>从公元220年东汉分裂到公元581年隋朝建立，这段时期史称魏晋南北朝。这是中国历史上的动荡时期，同时也是思想相对活跃的时期。学术界思辨之风再起，数学上也兴起了论证的趋势。在许多研究以注释《周髀算经》《九章算术》的杰出代表中，首推魏国的刘徽。刘徽的《九章算术注》还有其他许多数学成果，特别是他关于勾股测量的章节，后来更被单独刊行，被称为《海岛算经》。该书是对古代数理天文学中的重差术的进一步发展，成为勾股测量学的典籍。</p>
+<p>又，因为：已经证明了BK比KL等于FM比MN，同时BK等于KT，且FM等于PM，于是：TK比KL等于PM比MN。又，夹等角的边成比例，即角TKL等于PMN，因为：它们是直角，所以：三角形LKT相似于三角形NMP（命题VI.6）。</p>
+<p>又，因为：三角形LKB与NMF相似，所以：LB比BK等于NF比FM。又因为，三角形BKT和FMP是相似的，所以：KB比BT等于MF比FP。所以：由首末比可得，LB比BT等于NF比FP（命题VI.6）。</p>
+<p>又因为，三角形LTK与NPM是相似的，所以：LT比TK等于NP比PM，又因为，三角形TKB与PMF是相似的，所以：KT比TB等于MP比PF。所以：由首末比可得，LT比TB等于NP比PF（命题VI.6）。</p>
+<p>又，已经证明TB比BL等于PF比FN。所以：由首末比可得，TL比LB等于PN比NF（命题V.22）。</p>
+<p>所以：在三角形LTB、NPF中，它们的边成比例，所以：三角形LTB、NPF是等角的，因此：它们也是相似的（命题VI.5、定义VI.1）。</p>
+<p>所以：以三角形BKT为底且以L为顶点的棱锥相似于以三角形FMP为底且以N为顶点的棱锥，因为，它们由相似且数量相等的平面构成（定义XI.9）。</p>
+<p>而，两个以三角形为底的相似棱锥之比等于它们相应边的三次比（命题XII.8）。</p>
+<p>所以：棱锥BKTL比棱锥FMPN等于BK与FM的三次比。</p>
+<p>类似地，过A、W、D、V、C、U向K作直线，过E、S、H、R、G、Q向M作直线，在每个三角形上作与圆锥同顶点的棱锥，我们可以证明，每对相似棱锥的比等于对应边BK与FM的三次比，即BD与FH的三次比。</p>
+<p>又，前项之一比后项之一等于前项之和比后项之和（命题V.12）。</p>
+<p>所以，棱锥BKTL比棱锥FMPN等于以多边形ATBUCVDW为底、以点L为顶点的整体棱锥比多边形EPFQGRHS为底、以点N为顶点的整体棱锥。</p>
+<p>因此也得到以ATBUCVDW为底、以点L为顶点的棱锥比以点EPFQGRHS为底、点N为顶点的棱锥等于BD与FH的三次比。</p>
+<p>又，根据假设，以圆ABCD为底且以L为顶点的圆锥比立体O也等于BD与FH的三次比，所以：以圆ABCD为底且以L为顶点的圆锥比立体O也等于以多边形ATBUCVDW为底且以L为顶点的棱锥比以多边形EPFQGRHS为底、以N为顶点的棱锥。所以：由更比可得，以圆ABCD为底、以L为顶点的圆锥比包含在它内的以多边形ATBUCVDW为底、以L为顶点的棱锥等于立体O比以多边形EPFQGRHS为底、以N为顶点的棱锥（命题V.16）。</p>
+<p>但是此圆锥大于它内的棱锥，因为圆锥包含棱锥。所以：立体O也大于以多边形EPFQGRHS为底、以N为顶点的棱锥。但它又小于，这是不可能的。</p>
+<p>所以：以ABCD为底、以L为顶点的圆锥比任何小于以圆EFGH为底、以N为顶点的圆锥的立体都不等于BD与FH的三次比。</p>
+<p>类似地，我们可以证明，圆锥EFGHN与任何小于圆锥ABCDL的立体的比不等于FH与BD的三次比。</p>
+<p>那么我进一步说，圆锥ABCDL比任何大于圆锥EFGHN的立体不等于BD与FH的三次比。</p>
+<p>因为，如果可能，令有一个较大的立体O满足此比。于是：由反比可得，立体O比圆锥ABCDL等于FH与BD的三次比。而立体O比圆锥ABCDL等于圆锥EFGHN比某个小于圆锥ABCDL的立体。</p>
+<p>所以：圆锥EFGHN比某个小于圆锥ABCDL的立体也等于FH与BD的三次比，这已证明是不可能的。</p>
+<p>所以：圆锥ABCDL比大于圆锥EFGHN的任何立体不可能等于BD与FH的三次比。</p>
+<p>又，已经证明，与一个小于圆锥EFGHN的立体的比不可能是BD与FH的三次比。所以：圆锥ABCDL比圆锥EFGHN等于BD与FH的三次比。</p>
+<p>又，圆锥比圆锥等于圆柱比圆柱，因为同底等高的圆柱是圆锥的三倍，所以：圆柱与圆柱之比是BD与FH的三次比（命题XII.10）。</p>
+<p>所以：相似圆锥或相似圆柱之比等于它们底的直径的三次比。</p>
+<h6 id="证完">证完</h6>
+<p>DNA双螺旋分子</p>
+<p>生物学应用数学研究约始于20世纪。1953年，美国生物化学家沃森和英国物理学家克里克共同发现了脱氧核糖核酸的双螺旋结构。双螺旋模型的发现标志着抽象的拓扑学与生物学相结合。人们采用把DNA的纽结解开，再把它们复制出来的办法去了解DNA的结构，这就使代数拓扑学中的纽结理论有了用武之地。</p>
+<h5 id="注解">注解</h5>
+<p>本命题在其余命题中再未被利用。</p>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

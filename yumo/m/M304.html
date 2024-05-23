@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="第三同读" />
+  <title>宇墨学几何原本</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">宇墨学几何原本</h1>
+<p class="author">第三同读</p>
+</header>
+<h2
+id="命题x.2到x.8以及其后的其他几个命题处理可公约量和不可公约量特别在命题x.5和x.6中陈述了如果两个量的比率是两个数的比率那么这两个量是可公约的举例说如果ncamcb那么量的比率ab同于数之比即mn反之如果abmn那么a的一部分lnth等于b的一部分lmth">命题X.2到X.8以及其后的其他几个命题处理可公约量和不可公约量。特别在命题X.5和X.6中，陈述了如果两个量的比率是两个数的比率，那么这两个量是可公约的。举例说，如果nc＝a，mc＝b，那么量的比率a：b同于数之比即m：n。反之，如果a：b＝m：n，那么a的一部分l/nth等于b的一部分l/mth。</h2>
+<p>数的比率在现代数学中称为有理数，同时另一种比率称为无理数。不幸的是，欧几里得在定义3中定义“有理的”和“无理的”不同于现代数学。</p>
+<p>定义X.2</p>
+<p>注意这一定义仅仅适用于线段，即是说仅线段方可说成是“正方可公约”的，当然，可公约线段也是正方可公约的，但正方可公约的线却不就是可公约的线。换个词语说是“仅正方可公约”。这一现象的著名例子是正方形的边a和对角线b。它们是正方可公约的，因为b上的正方形是a上的正方形的两倍（根据命题I.47），但它们是不可公约的线段。用现代术语表述，我们说2的平方根不是有理数。</p>
+<p>定义X.3</p>
+<p>这一定义的证明在命题X.10中涉及到，这一命题涉及仅正方可公约且正方不可公约的线段。</p>
+<p>欧几里得使用“有理”和“无理”这个词不同于现代数学，也不同于他之前和之后的数学家。其词义分别等于“可公约”和“不可公约”两个词。但是当应用在线段中时欧几里得又使它们等于正方可公约和正方不可公约。首先，一条线段被选择为一个标准，于是，如果它是正方可公约的，另一条线段被称为有理线，相反则是无理的。于是，在一条标准线段上的正方形的对角线是有理的，即使它与标准线不可公约，因为它与它是正方可公约的。</p>
+<p>定义X.4</p>
+<p>虽然欧几里得在线段上使用不寻常的“有理线段”说法，但在处理面时，却使用通常方法。根据欧几里得的说法，如果一个面与一个标准的正方形可公约，那么这个面是有理面，反之则是无理面。</p>
+<p>拉格朗日的《分析力学》</p>
+<p>18世纪的数学家们创立的分析力学的最终成就是拉格朗日方程。拉格朗日的分析力学是由分析的方法推出包括固体力学和流体力学在内的所有力学。他发明的变分法正是分析力学的重要工具。1788年，《分析力学》正式出版，拉格朗日在书中提出了著名的拉格朗日方程。由虚功原理和达朗贝尔原理可以得到所谓的“力学普遍方程”。在此基础上，拉格朗日进一步引进了广义坐标、广义速度和广义力，将力学普遍方程改造成适用于几乎一切力学系统的拉格朗日方程。</p>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="第三同读" />
+  <title>宇墨学几何原本</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">宇墨学几何原本</h1>
+<p class="author">第三同读</p>
+</header>
+<h2 id="命题xiii.16">命题XIII.16</h2>
+<p>与前述命题一样，求作一个内接于球的正二十面体，且证明这个二十面体的边是被称为次线的无理线段。</p>
+<p>设：AB为给定球的直径，C点截分AB，使AC是CB的四倍，在AB上建半圆ADB，过C点作CD与AB成直角，连接DB（命题VI.9、I.11）。</p>
+<p>再设：圆EFGHK的半径等于DB，且正五边形EFGHK内接于圆EFGHK，点L、M、N、O、P二等分弧EF、FG、GH、HK、KE，连接LM、MN、NO、OP、PL、EP（命题IV.11、I.9）。</p>
+<p>于是：五边形LMNOP也是等边的，且线段EP属于十边形的边。</p>
+<p>现在，过点E、F、G、H、K作直线EQ、FR、GS、HT、KU垂直于圆所在的平面，且使它们等于圆EFGHK的半径，连接QR、RS、ST、TU、UQ、QL、LR、RM、MS、SN、NT、TO、OU、UP、PQ（命题XI.12、I.3）。</p>
+<p>现在，因为：线段EQ、KU垂直于同一平面，于是：EQ平行于KU。</p>
+<p>又，它们也相等。又，连接相等且平行线段的端点的线段，在同一方向相等且平行。所以：QU平行且等于EK（命题I.33）。</p>
+<p>又，EK属于等边五边形的边，所以：QU也是内接于圆QRSTU的等边五边形的边。</p>
+<p>同理，线段QR、RS、ST、TU皆属于内接于圆QRSTU的等边五边形的边。所以五边形QRSTU是等边的。</p>
+<p>又，因为：QE属于六边形，EP属于十边形，角QEF是直角，所以：QP属于五边形，因为，内接于同一圆的五边形的边上的正方形等于六边形的边上的正方形与十边形边上的正方形之和（命题XIII.10）。</p>
+<p>同理，PU也是五边形的边，而QU也属于一个五边形，所以：三角形QPU是等边的。同理，三角形QLR、RMS、SNT、TOU皆是等边的。</p>
+<p>又，因为：已经证明了线段QL、QP是五边形的边，LP也是五边形的边，所以：三角形QLP是等边的。</p>
+<p>同理，三角形LRM、MSN、NTO、OUP皆是等边的。</p>
+<p>令：V为圆EFGHK的圆心，过V建VZ垂直于圆所在的平面，在另一个方向上延长为VX，截取VW，使它成为六边形的一边，且线段VX、Wz的每一边是十边形的一边，连接QZ、QW、UZ、EV、LV、LX、XM（命题III.1、XI.12）。</p>
+<p>现在，因为：线段VW、QE垂直于圆所在的平面，所以：VW平行于QE，而它们也相等，所以：EV、QW平行且相等（命题XI.6、I.33）。</p>
+<p>又，EV属于一个六边形，所以：QW也属于一个六边形，又因为：QW属于一个六边形，WZ属于一个十边形，且角QWZ是直角，所以：QZ属于一个五边形（命题XIII.10）。</p>
+<p>同理，UZ也属于一个五边形，这是因为，如果我们连接VK、WU，那么，它们相等且相对，而VK是半径，属于一个六边形，所以：WU也属于一个六边形。但WZ属于一个十边形，且角UWZ是直角，所以：UZ属于一个五边形（命题IV.15、推论、XIII.10）。</p>
+<p>又，QU属于一个五边形，所以：三角形QUZ是等边的。同理，余下的以线段QR、RS、ST、TU为底且以Z为顶点的三角形也是等边的。</p>
+<p>《数书九章》书影</p>
+<p>中国数学在高次方程数值求解领域的集大成者是南宋数学家秦九韶。其代表作《数书九章》将增乘开方法推广到了高次方程的一般情形。《数书九章》成书于1247年。该书共18卷，81题，分九大类，即大衍、天时、田域、测望、赋役、钱谷、营建、军旅、贸易。仅其中两项重要贡献，即“正负开方术”和“天衍总数术”，就足以使宋代数学在中世纪世界数学史上独放异彩。</p>
+<p>又，因为：VL属于一个六边形，VX属于一个十边形，且角LVX是直角，所以：LX属于一个五边形（命题XIII.10）。</p>
+<p>同理，如果我们连接属于六边形的MV，可以推出，MX也属于一个五边形。</p>
+<p>又，LM也属于一个五边形，所以：三角形LMX是等边三角形。</p>
+<p>类似地，也可以证明出，以线段MN、NO、OP、PL为底且以X为顶点的三角形皆是等边三角形。所以：一个二十面体已建成，它由二十个等边三角形构成（定义XI.27）。</p>
+<p>现在进一步要求证明，该二十面体内接于已知球，且证明二十面体的边是称为次线的无理线段。</p>
+<p>因为：VW属于一个六边形，WZ属于十边形，所以：VZ在W点上被切分为中外比，且VW为大，所以：ZV比VW等于VW比WZ（命题XIII.9）。</p>
+<p>又，VW等于VE、WZ等于VX，所以：ZV比VE等于EV比VX。</p>
+<p>又，角ZVE、EVX是直角，所以：如果我们连接直线EZ、XZ，那么：角XEZ将是直角，因为，三角形XEZ和VEZ是相似三角形。同理，ZV比VW等于VW比WZ，而ZV等于XW、VW等于WQ，所以：XW比WQ等于QW比WZ。</p>
+<p>同理，如果连接QX，在Q处的角是直角，所以XZ上的半圆经过Q（命题VII.8、III.31）。</p>
+<p>又如果，固定XZ，旋转此半圆到开始位置，它也经过Q，且过二十面体的其余顶点，因此，二十面体内接于一个球。</p>
+<p>我进一步说，它也内接于已知球。</p>
+<p>在A’点等分VW（命题I.9）。</p>
+<p>那么，因为：线段VZ在W点被分成中外比，ZW为小，所以：ZW加大线段的一半，即WA＇上的正方形等于大线段一半上的正方形的五倍。所以：ZA＇上的正方形是A＇W上的正方形的五倍（命题XIII.3）。</p>
+<p>又，ZX是ZA＇的两倍，VW是A＇W的两倍，所以：ZX上的正方形是WV上的正方形的五倍，又因为，AC是CB的四倍，所以：AB是BC的五倍。</p>
+<p>又，AB比BC同于AB上的正方形比BD上的正方形，所以：AB上的正方形是BD上的正方形的五倍（命题VI.8、定义V.9）。</p>
+<p>又，ZX上的正方形也已经被证明是VW上的正方形的五倍，且DB等于VW，因为，它们皆等于圆EFGHK的半径。所以：AB也等于XZ。又AB是给定的球的直径，所以：XZ也等于给定的球的直径。</p>
+<p>所以：该二十面体内接于已知球。</p>
+<p>我进一步说，该二十面体的边是被称为次线的无理线段。</p>
+<p>因为：球的直径是有理的，且它上的正方形是圆EFGHK的半径上的正方形的五倍，所以：圆EFGHK的半径也是有理的，因此：它的直径也是有理的。但是，如果一个等边五边形内接于一个直径有理的圆，那么，五边形的边是被称为次线的无理线（命题XIII.11）。</p>
+<p>又，这个五边形EFGHK是这个二十面体的边。</p>
+<p>所以：一个内接于球的正二十面体被建成，二十面体的边是被称为次线的无理线段。</p>
+<h6 id="证完">证完</h6>
+<p>推论</p>
+<p>以上命题也表明，此球直径上的正方形等于内接二十面体得出的圆半径上的正方形的五倍，且球的直径等于内接于该圆内的六边形的一边与十边形两边的和。</p>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

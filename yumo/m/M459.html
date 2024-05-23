@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="第三同读" />
+  <title>宇墨学几何原本</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">宇墨学几何原本</h1>
+<p class="author">第三同读</p>
+</header>
+<h2 id="命题xi.39">命题XI.39</h2>
+<p>如果有两个等高的棱柱，分别以平行四边形和三角形为底，且如果平行四边形是三角形的两倍，那么，两棱柱相等。</p>
+<p>设：ABCDEF和GHKLMN是两个等高棱柱，其中一个以平行四边形AF为底，另一个以三角形GHK为底，且平行四边形AF是三角形GHK的两倍。</p>
+<p>那么我说：棱柱ABCDEF等于棱柱GHKLMN。</p>
+<p>建立体AO和GP。</p>
+<p>因为：平行四边形AF是三角形GHK的两倍，平行四边形HK也是三角形GHK的两倍，所以：平行四边形AF等于平行四边形HK（命题I.34）。</p>
+<p>而，等高等底的平行六面体彼此相等，所以：立体AO等于立体GP（命题XI.31）。</p>
+<p>又，棱柱ABCDEF是立体AO的一半，且棱柱GHKLMN是立体GP的一半，所以：棱柱ABCDEF等于棱柱GHKLMN（命题XI.28）。</p>
+<p>所以：如果有两个等高的棱柱，分别以平行四边形和三角形为底，且如果平行四边形是三角形的两倍，那么，两棱柱相等。</p>
+<h6 id="证完">证完</h6>
+<h1 id="第十二卷-立体的测量">第十二卷　立体的测量</h1>
+<p>公元6世纪，印度数学家阿耶波多出版了《阿耶波提亚》一书。这本书由33首诗组成。第一首是祝福词，接着是平方、立方、平方根的计算规则。其中有17首与几何学有关，11首诗与算术和代数有关。他在第10首诗里阐述了圆周率的值：π＝62832/20000＝3.1416。这是他之后1000年内最精确的数字。</p>
+<p>本卷继续论述立体几何。重点在立体的测量。</p>
+<p>不可能的世界</p>
+<p>埃舍尔常常在自己的作品中运用射影几何及平面几何的结构，这是对非欧几里得几何学精髓的集中反映。</p>
+<p>本卷提要</p>
+<ul>
+<li><p>命题XII.2，圆的面与它们直径上的正方形成比例。</p></li>
+<li><p>命题XII.6、XII.7，一个三角形棱柱可以分成三个等量的棱锥，等底等高的棱锥是棱柱的三分之一。</p></li>
+<li><p>命题XII.10，一个圆锥是等底等高圆柱的三分之一。</p></li>
+<li><p>命题XII.11，圆柱与圆锥与它们的高成比例。</p></li>
+<li><p>命题XII.18，球的量。</p></li>
+</ul>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

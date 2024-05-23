@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="第三同读" />
+  <title>宇墨学几何原本</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">宇墨学几何原本</h1>
+<p class="author">第三同读</p>
+</header>
+<h2 id="命题ix.12">命题IX.12</h2>
+<p>如果从单位开始的任意多的数形成连比，那么无论有几个质数测尽最后一个数，该质数也测尽单位之后的那个数。</p>
+<p>设：a、b、c、d从单位开始，形成连比。</p>
+<p>复制的星座图</p>
+<p>数学在天文学中的应用历史最为久远。早在河谷文明时期，早期人类积累的数学知识便为天文计算和历法编制提供了有力的工具。在随后的发展中，数学更是常常与天文学紧密地交织在一起。从观测未知的星星到绘制星空图，数学起着关键作用。图为1774年，天文学家赫歇尔绘制的星座图，图中的星星有五个尖尖的突出点。</p>
+<p>那么我说：测尽d的质数同样也测尽a。</p>
+<p>令：d被任意一个质数e所测尽。</p>
+<p>那么我说：e同样也测尽a。</p>
+<p>假定不是。</p>
+<p>因为：e是质数，而任何质数是与它量不尽的数互质的，所以：e和a是互质数，又，因为e测尽d，令：e用f次测尽d，于是：e乘以f得d（命题VII.29）。</p>
+<p>又因为：a测尽d，根据在c中的单位数，所以：a乘以c得d（命题VII.29）。</p>
+<p>再，e乘以f得d，于是：a与c的乘积等于e与f的乘积（命题IX.11及其推论）。</p>
+<p>于是：a比e等于f比c。而a和e是互质数，互质数是最小的。又有相同比的数中最小的，以同样的次数测尽那些数，即前项测尽前项，后项测尽后项。所以：e测尽c，令其测尽的次数为g（命题VII.19、VII.21、VII.20）。</p>
+<p>所以：e乘以g得c。</p>
+<p>再，由前述的理论，a乘以b得c。所以：a和b的乘积等于e和g的乘积（命题IX.11及其推论）。</p>
+<p>所以：a比e等于g比b。而a和e是互质数，互质数是最小的。又有相同比的数中最小的，以同样的次数测尽那些数，即前项测尽前项，后项测尽后项。所以：e测尽b。令其测尽的数为h，于是：e乘以h得b（命题VII.19、VII.21、VII.20）。</p>
+<p>又，a自乘得b，于是：e和h的乘积等于a的平方。于是：e比a等于a比h（命题IX.8，VII.19）。</p>
+<p>而a和e是互质数，质数是最小的。又有相同比的数中最小的，以同样的次数测尽那些数，即前项测尽前项，后项测尽后项。于是：e测尽a，即前项测尽前项。但是，e又测不尽a。这是不可能的（命题VII.21、VII.20）。</p>
+<p>所以：e和a不是互质数，所以：它们是互为合数。而互为合数可被某数测尽（定义VII.14）。</p>
+<p>又因为：e是被假设成的质数，而一个质数不会被它以外的任何数所测尽，所以：e测尽a、e，所以：e测尽a。</p>
+<p>而，它也测尽d，所以：e测尽a、d。同样，我们也可以证明，无论有几个质数能测尽d，这些质数也就能测尽a。</p>
+<p>所以：如果从单位开始的任意多的数形成连比，那么无论有几个质数测尽最后一个数，该质数也测尽单位之后的那个数。</p>
+<h6 id="证完">证完</h6>
+<h5 id="注解">注解</h5>
+<p>这一命题说，如果质数p除尽a的乘方ak，那么它也除尽a。</p>
+<p>假定一个质数p除尽a的乘积ak。假定p除不尽a。那么p与a是互质数（命题VII.29）。从这一命题（ak/p）：ak－1＝a：p中我们可以看出，比例（ak/p）：ak－1可以化简为最小数组a：p（命题VII.21）。所以：p能除尽ak－1（命题VII.20）。</p>
+<p>重复应用化简步骤直到p能除尽a，便实现了目标。</p>
+<p>这一命题应用于下一命题中。</p>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="第三同读" />
+  <title>宇墨学几何原本</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">宇墨学几何原本</h1>
+<p class="author">第三同读</p>
+</header>
+<h2 id="命题xii.15">命题XII.15</h2>
+<p>在相等的圆柱或圆锥中，底与高成逆比；反之，在圆柱或圆锥中，凡底与高成逆比，那么它们相等。</p>
+<p>设：有相等圆柱，底为ABCD和EFGH，AC、EG是底的直径，KL、MN是它们的轴，即也为圆柱或圆锥的高。</p>
+<p>完成圆柱AO、EP。</p>
+<p>那么我说：圆柱AO、EP的底与高成逆比，即底ABCD比底EFGH等于高MN比高KL。</p>
+<p>因为：高LK要么等于MN，要么不等于。</p>
+<p>首先，令其等于。</p>
+<p>那么，圆柱AO也等于圆柱EP。而等高的圆柱或圆锥之比等于底之比，所以：底ABCD等于底EFGH（命题XII.11）。</p>
+<p>因此：由逆比可得，底ABCD比底EFGH等于高MN比高KL。</p>
+<p>又，令高LK不等于MN，MN较大。</p>
+<p>从MN上截取QN等于KL，于是：过点Q作平面TUS截圆柱EP而平行于圆EFGH、RP所在的平面，且令圆柱ES以圆EFGH为底、以NQ为高。</p>
+<p>现在，因为：圆柱AO等于圆柱EP，所以：圆柱AO比圆柱ES等于圆柱EP比圆柱ES（命题V.7）。</p>
+<p>又，圆柱AO比圆柱ES等于底ABCD比底EFGH，因为，圆柱AO、ES有等高。又，圆柱EP比圆柱ES等于高MN比高QN，因为，圆柱EP被平行于相对二底面的平面所截。所以：底ABCD比底EFGH等于高MN比高QN（命题XII.11、XII.13、V.11）。</p>
+<p>又，高QN等于高KL，所以：底ABCD比底EFGH等于高MN比高KL。</p>
+<p>所以：在圆柱AO、EP中，底与高成逆比。</p>
+<p>又，在圆柱AO、EP中，如果底与高成逆比例，即底ABCD比底EFGH等于高MN比KL。</p>
+<p>那么我说：圆柱AO与圆柱EP相等。</p>
+<p>在这同一个结构的上图中，因为，底ABCD比底EFGH等于高MN比高KL，且高KL等于高QN，所以：底ABCD比底EFGH等于高MN比高QN。</p>
+<p>又，底ABCD比底EFGH等于圆柱AO比圆柱ES，因为，它们有等高。又，高MN比QN等于圆柱EP比圆柱ES；所以：圆柱AO比圆柱ES等于圆柱EP比圆柱ES（命题XII.11、XII.13、V.11）。</p>
+<p>所以：圆柱AO等于圆柱EP（命题V.9）。</p>
+<p>又，圆锥也同理（命题XII.10）。</p>
+<p>所以：在相等的圆柱或圆锥中，底与高成逆比；反之，在圆柱或圆锥中，凡底与高成逆比，那么它们相等。</p>
+<h6 id="证完">证完</h6>
+<h5 id="注解">注解</h5>
+<p>本命题的证明实际上适应于更广泛的情况，不仅仅适应于圆锥与圆柱，当量x与另两个量y和z成比例时，如y不变，那么x与z也成比例，当x不变，那么，y与z相互成比例。</p>
+<p>至本命题，关于圆柱与圆锥的量的理论完成，余下的三道命题解决的是球的量的问题。</p>
+<p>《周髀》中的开方术</p>
+<p>关于二次方程的公式解法，中国最早记载于《周髀算经》中的《勾股圆方图》，后见于《九章算术》中的《少广》章，该章同时附有开平方、开立方的法则。近世学者经过详细的研究，确认这是世界上关于多位数开平方、开立方法则的最早记载。除了符号、格式不同和某些步骤稍有差异之外，它和现在的开方方法一样，并且可以推广用于解二次方程，后来更发展为高次方程的数值解法。</p>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

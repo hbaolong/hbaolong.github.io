@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="第三同读" />
+  <title>宇墨学几何原本</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">宇墨学几何原本</h1>
+<p class="author">第三同读</p>
+</header>
+<h2 id="命题xii.3">命题XII.3</h2>
+<p>任何以三角形为底的棱锥皆可分为两个相等，并与原棱锥相似又以三角形为底的三棱锥；并可分为两个相等的棱柱，两棱柱之和大于原棱锥的一半。</p>
+<p>设：棱锥的底为三角形ABC，D为其顶点。</p>
+<p>那么我说：棱锥ABCD可分为两个相等且相似的棱锥，它以三角形为底，且与原棱锥相似；且可分为两个相等的棱柱，两棱柱之和大于原棱锥的一半。</p>
+<p>闵可夫斯基的论文</p>
+<p>拉格朗日对力学研究的特色在于，他把时间表示成与三个空间维相当的另一个维度，这使得物理学家和数学家变得习惯于四维世界。1909年，赫尔曼·闵可夫斯基认为：动力学就是四维世界的几何学，恰如静力学是人们原有的三维世界里的几何学一般。事实上，这是一条纯几何的变分原理，它确定了闵可夫斯基四维空间的造型。</p>
+<p>在点E、F、G、H、K、L上平分AB、BC、CA、AD、DB、DC，连接HE、EG、GH、HK、KL、LH、KF、FG。</p>
+<p>因为：AE等于EB，而AH等于DH，所以：EH平行于DB。同理，HK也平行于AB。所以：HEBK是一个平行四边形。所以：HK等于EB（命题VI.2、I.34）。</p>
+<p>但是，EB等于EA，所以：AE也等于HK。</p>
+<p>又，AH也等于HD，所以：两边EA、AH分别等于两边KH、HD，角EAH等于角KHD，所以：底EH等于底KD（命题1.4）。</p>
+<p>所以：三角形AEH相似并等于三角形HKD。同理，三角形AHG也相似并等于三角形HLD。</p>
+<p>现在，因为：两线段EH、HG相交，并平行于两相交线段KD、DL。并不在一个平面内，所以：它们所夹的角相等，所以角EHG等于角KDL（命题XI.10）。</p>
+<p>又，因为：两条线EH、HG分别等于KD、DL，且角EHG等于角KDL，所以：底EG等于底KL。所以：三角形EHG相似并等于三角形KDL。同理，三角形AEG也相似并等于三角形HKL（命题I.4）。</p>
+<p>所以：以三角形AEG为底且H为顶点的棱锥相似并等于以三角形HKL为底且以D为顶点的棱锥（定义XI.10）。</p>
+<p>又，因为，HK平行于三角形ADB的一边AB，于是三角形ADB与三角形DHK是等角三角形，所以：它们的边成比例，所以：三角形ADB相似于三角形DHK。同理，三角形DBC也相似于三角形DKL，三角形ADC也相似于三角形DLH（命题I.29、定义VI.1）。</p>
+<p>现在，因为：直线BA、AC彼此相交并分别平行于不在同一平面的相交线段KH和HL，于是：它们所夹的角相等。所以：角BAC等于角KHL（命题XI.10）。</p>
+<p>又，BA比AC等于KH比HL，所以：三角形ABC相似于三角形HKL。</p>
+<p>所以：以三角形ABC为底且以D为顶点的棱锥，相似并等于以三角形HKL为底且以D为顶点的三角形。所以：棱锥AEGH和HKLD相似于原棱锥ABCD。</p>
+<p>四元朱利娅集合</p>
+<p>普通几何学研究的对象一般都是具有整数的准数。比如零维的点、一维的线、二维的面、三维的立体乃至四维的时空，但近十几年来，产生了新兴的分形几何学，空间具有不一定是整数的维，而存在一个分数维数。具体地说，就是客观自然界中许多事物，具有自相似的“层次”结构，具有无穷层次适当的放大或缩小几何尺寸，整个结构并不改变复杂的物理现象。电子计算机图形显示协助人们推开分形几何的大门，这座具有无穷层次结构的宏伟建筑每一角落里都存在无限嵌套的回廊，促使数学家们深入研究。图中的四元朱利娅集合是一个四维分形的三维切片，它具有自相似的层次结构，适当放大或缩小几何尺寸，整个结构不变。</p>
+<p>又，因为，BF等于FC，所以：平行四边形EBFG是三角形GFC的两倍。又因为，如果两个等高的棱柱，它们分别以平行四边形和三角形为底，且平行四边形是三角形的两倍，那么，两棱柱相等。所以：包含两个三角形BKF、EHG及三个平行四边形EBFG、EBKH、HKFG所围成的棱柱，等于包含两个三角形GFC、HKL及三个平行四边形KFCL、LCGH、HKFG的棱柱（命题XI.39）。</p>
+<p>又，很明显，每个棱柱，即以平行四边形EBFG为底且以线段HK作为对棱的棱柱，与以三角形GFC为底且以三角形HKL为对面的棱柱，大于以三角形AEG、HKL为底且以H、D为顶点的棱柱。</p>
+<p>因为，如果我们连接线段EF、EK，以平行四边形EBFG为底、以线段HK作为对棱的棱柱，大于以EBF为底以K为顶点的棱锥。</p>
+<p>又，以三角形EBF为底、以K为顶点的棱锥等于以三角形AEG为底、以H为顶点的棱锥，因为：它们由相似且相等的平面构成。</p>
+<p>于是：以平行四边形EBFG为底、以线段HK作为对棱的棱柱，大于以三角形AEG为底、以H为顶点的棱锥。而以平行四边形EBFG为底，以线段HK为对棱的棱柱等于以三角形GFC为底，且以三角形HKL为对面的棱柱，又，以三角形AEG为底以H为顶点的棱锥等于以三角形HKL为底、以D为顶点的棱锥。</p>
+<p>所以：两个棱柱之和大于分别以三角形AEG、HKL为底，以H和D为顶点的棱锥之和。所以：以三角形ABC为底、以D为顶点的原棱锥被分为了两个彼此相等的棱锥和两个相等的棱柱，且分为了两个棱柱的和大于原棱锥的一半。</p>
+<p>所以：任何以三角形为底的棱锥皆可分为两个相等，并与原棱锥相似又以三角形为底的三棱锥；并可分为两个相等的棱柱，两棱柱之和大于原棱锥的一半。</p>
+<h6 id="证完">证完</h6>
+<h5 id="注解">注解</h5>
+<p>这一命题及接下来的六个命题处理的是棱锥的量。前两个命题依赖于命题XII.5（棱锥之比等于它们的底之比）。在上一卷里，命题XI.32说等高的平行六面体之比等于它们的底之比，命题XI.28说，三棱柱是平行六面体的一半，这两个命题暗示了本命题可以转移到以三角形为底的棱柱上来，在命题XII.3到命题XII.5已经被证明。</p>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

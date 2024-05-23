@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="第三同读" />
+  <title>宇墨学几何原本</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">宇墨学几何原本</h1>
+<p class="author">第三同读</p>
+</header>
+<h2 id="命题xii.4">命题XII.4</h2>
+<p>如果有两个以三角形为底且等高的棱锥，分别被分成两个相似于原棱锥的两个相等棱锥，和两个相等的棱柱，那么，其中一个棱锥的底比另一个棱锥的底，等于一个棱锥中的所有棱柱之和比另一个棱柱内同样个数的棱柱之和。</p>
+<p>设：有以三角形ABC、DEF为底且等高的棱锥，G和H分别为顶点；且它们皆分为两个相等并与原棱锥相似的棱锥和两个相等的棱柱（命题XII.3）。</p>
+<p>那么我说：底ABC比底DEF等于棱锥ABCG中的棱柱之和比在棱锥DEFH中的同等个数的棱柱之和。</p>
+<p>因为：BO等于OC，AL等于LC，所以：LO平行于AB，三角形ABC相似于三角形LOC。同理，三角形DEF也相似于三角形RVF。</p>
+<p>又，因为：BC是CO的两倍，且EF是FV的两倍，所以：BC比CO等于EF比FV。</p>
+<p>又，在BC、CO上作两个相似且位置相似的直线图形ABC、LOC；再在EF、FV上作两个相似且位置相似的直线图形DEF、RVF；于是：三角形ABC比三角形LOC等于三角形DEF比三角形RVF（命题VI.22）。</p>
+<p>于是，由更比可得，三角形ABC比三角形DEF等于三角形LOC比三角形RVF。而三角形LOC比三角形RVF等于以三角形LOC为底且以三角形PMN为对面的棱柱比以三角形RVF为底、以STU为对面的棱柱（命题V.16引理）。</p>
+<p>所以：三角形ABC比三角形DEF等于以LOC为底、以PMN为对面的棱柱比以三角形RVF为底、以STU为对面的棱柱。</p>
+<p>又，两个棱柱之比，等于以平行四边形KBOL为底、以线段PM为对棱的棱柱比以平行四边形QEVR为底、以线段ST为对棱的棱柱（命题XI.39）。</p>
+<p>所以：两个棱柱之比，再以平行四边形KBOL为底、以PM为对面的棱柱，及以三角形LOC为底且以PMN为对面的棱柱之和，与以QEVR为底且以线段ST为对棱的棱柱及以三角形RVF为底、以STU为对面的棱柱之和的比相等（命题V.12）。</p>
+<p>所以：底ABC比底DEF等于两个棱柱之和比两个棱柱之和。</p>
+<p>又，类似地，如果棱锥PMNG和STUH被分为两个棱柱和两个棱锥，那么，底PMN比底STU等于在棱锥PMNG中的两个棱柱之和比在棱锥STUH内的两个棱柱之和。</p>
+<p>又，底PMN比底STU等于底ABC比底DEF，因为：三角形PMN和STU分别等于三角形LOC、RVF。</p>
+<p>所以：底ABC比底DEF等于四个棱柱比四个棱柱。又，同理，如果我们分余下的棱锥成两个棱锥和两个棱柱，那么，底ABC比底DEF等于在棱锥ABCG中的棱柱之和比在棱锥DEFH中的相等个数的棱柱之和。</p>
+<p>所以：如果有两个以三角形为底且等高的棱锥，分别被分成两个相似于原棱锥的两个相等棱锥，和两个相等的棱柱，那么，其中一个棱锥的底比另一个棱锥的底，等于一个棱锥中的所有棱柱之和比另一个棱柱内同样个数的棱柱之和。</p>
+<h6 id="证完">证完</h6>
+<p>克莱因</p>
+<p>1886年，克莱因（1849—1925年）来到哥廷根大学。克莱因巨大的科学威望，加上他非凡的科学组织能力，以及他与希尔伯特的携手合作，使这所曾诞生过高斯、黎曼等伟大数学家的大学终于成为名副其实的国际数学中心。1893年，克莱因在芝加哥国际数学与天文学代表大会的开幕词中号召：“全世界数学家，联合起来！”这成为翌年在瑞士苏黎世召开的第一届国际数学家大会和后来成立的“国际数学联盟”的先声。</p>
+<p>引理</p>
+<p>三角形LOC比三角形RVF等于以三角形LOC为底、以PMN为对面的棱柱比以三角形RVF为底、以STU为对面的棱柱。</p>
+<p>证明如下：</p>
+<p>在上图中，从G、H点分别向平面ABC、DEF作垂线。这即是说，它们是相等的，因为根据假设，两棱锥是等高的（命题XI.11）。</p>
+<p>那么，因为：两条线段GC和从G点所作的线段被平行平面ABC、PMN所截，所以：它们的截线有相等的比（命题XI.17）。</p>
+<p>又，GC被平面PMN在N点所平分，所以：从G点向平面ABC所作的垂线也被平面所平分。同理，从H向平面DEF所作的垂线段也被平面STU所平分。</p>
+<p>又，从G、H点向平面ABC、DEF所作的垂线相等，所以：从三角形PMN、STU向平面ABC、DEF所作的垂线也相等。</p>
+<p>所以：以三角形LOC、RVF为底，以PMN、STU为对面的棱柱是等高的。</p>
+<p>于是：由上述两棱柱构成的等高的两个平行六面体之比等于它们的底边之比。所以：它们的一半，即两棱柱的相互比等于底LOC比底RVF（命题XI.32、XI.28）。</p>
+<h6 id="证完-1">证完</h6>
+<h5 id="注解">注解</h5>
+<p>这一命题从属于下一命题XII.5，在下一个命题中，以三角形为底且等高的棱锥与它们的底成比例。</p>
+<p>康托尔</p>
+<p>康托尔（1845—1918年），德国数学家、集合论的创始者。受魏尔斯特拉斯的影响，他对严格的数学分析理论很有兴趣。他在1872年以柯西序列定义无理数的实数理论，并初步提出以高阶导出集的性质作为对无穷集合的分类准则。1873年，康托尔用一一对应关系作为对无穷集合分类的准则。他巧妙地将一条直线上的点与一个平面甚至几维空间的点一一对应起来。在研究无穷数与超限数理论时，康托尔引进势、基数、序数等概念并定义了基数之间的运算及序的运算法则，从而对有限数集理论作出了重要贡献。</p>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

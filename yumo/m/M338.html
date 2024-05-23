@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="第三同读" />
+  <title>宇墨学几何原本</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">宇墨学几何原本</h1>
+<p class="author">第三同读</p>
+</header>
+<h2 id="命题x.33">命题X.33</h2>
+<p>两条正方不可公约的线段，其上的正方形之和是有理的，它们构成的矩形是中项面。</p>
+<p>设：两条正方可公约的有理线段AB和BC、AB上的正方形大于BC上的正方形，其差是与AB不可公约的线上的正方形（命题X.30）。</p>
+<p>在D点平分BC，在AB上建矩形，使之等于BD或DC上的正方形且缺少一个正方形，设其为AE、EB构成的矩形（命题VI.28）。</p>
+<p>在AB上作半圆AFB，作EF与AB成直角，连接AF和FB。</p>
+<p>因为：AB和BC是不等线段，AB上的正方形大于BC上的正方形，其差是与AB不可公约的线段上的正方形，同时，在AB上建的矩形等于BC上的正方形的四分之一，即是AB的一半的正方形，即为AE和EB构成的矩形。所以：AE与EB是不可公约量（命题X.18）。</p>
+<p>又，AE比EB同于BA、AE构成的矩形比AB、BE构成的矩形，同时，BA和AE构成的矩形等于AF上的正方形，AB和BE构成的矩形等于BF上的正方形。所以：AF上的正方形与FB上的正方形是不可公约量。所以：AF、FB是正方不可公约量。</p>
+<p>因为：AB是有理的，那么：AB上的正方形也是有理的，于是：AF、FB上的正方形之和也是有理的（命题1.47）。</p>
+<p>指算</p>
+<p>手指可能是最方便的计算工具，孩子初学计算，总是先扳手指头，大人们说话时为了强调某一数字也常常伸出手指。1494年，意大利人帕乔托（1445—1571年）著《算术、几何、比与比例集成》，该书总结了自中世纪以来的几乎全部数学知识，对传播数学起了一定的作用。其中特别介绍了指算法，并给出了图中的用手指表示数目的方法。</p>
+<p>又因为：AE和BE构成的矩形等于EF上的正方形，根据假设，AE和EB构成的矩形也等于BD上的正方形，于是：FE等于BD，于是：BC是FE的两倍，于是：AB和BC构成的矩形与AB、EF构成的矩形也是可公约量。</p>
+<p>又，AB和BC构成的矩形是中项面，所以：AB和EF构成的矩形也是中项面（命题X.21、X.23、推论）。</p>
+<p>而，AB和EF构成的矩形等于AF和FB构成的矩形，所以：AF和FB构成的矩形也是中项面（命题X.32、引理）。而，已经证明，这些线段上的正方形之和也是有理的。</p>
+<p>所以：两条正方不可公约的线段AF、FB被找出，其上的正方形之和是有理的，它们构成的矩形是中项面。</p>
+<h6 id="证完">证完</h6>
+<h5 id="注解">注解</h5>
+<p>引理的第一部分完成命题I.47，但是其证明依赖卷VI中的相似三角形。</p>
+<p>这一命题应用在命题X.39和X.76中。</p>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

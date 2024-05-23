@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="第三同读" />
+  <title>宇墨学几何原本</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">宇墨学几何原本</h1>
+<p class="author">第三同读</p>
+</header>
+<h2 id="命题iv.12">命题IV.12</h2>
+<p>给定一个圆，可以建它的外切正五边形。</p>
+<p>设：ABCDE为定圆。</p>
+<p>要求作圆ABCDE的外切正五边形。</p>
+<p>令：A、B、C、D和E为五边形的五个顶点，那么：圆周AB、BC、CD、DE和EA彼此相等。过A、B、C、D和E作GH、HK、KL、LM和MG，使之与圆相切，F为圆ABCDE的圆心。连接FB、FK、FC、FL和FD（命题II.16、II.1）。</p>
+<p>那么因为：线段KL与圆ABCDE相切于C点，FC是圆心F与切点C的连线。</p>
+<p>所以：FC垂直于KL。</p>
+<p>所以：C点上的所有角是直角（命题III.18）。</p>
+<p>同样理由、B点和D点上的角也为直角。</p>
+<p>又因为角FCK是直角；所以：FK上的正方形面积等于FC、CK上的正方形面积之和（命题I.47）。同样、FK上的正方形面积也等于FB、BK上的正方形面积之和。</p>
+<p>所以：FC、CK上的正方形面积之和等于FB、BK上的正方形面积之和。</p>
+<p>其中、FC上的正方形面积等于FB上的正方形面积。所以：余下的CK上的正方形面积等于BK上的正方形面积（命题I.47）。所以：BK等于CK。</p>
+<p>又因为：FB等于FC，FK是公共边，BF、FK等于CF、FK，底BK等于底CK。所以：角BFK等于角KFC，角BKF等于角FKC。所以：角BFC是角KFC的两倍，角BKC是角FKC的两倍（命题I.8）。</p>
+<p>同样理由，角CFD也是角CFL的两倍，角DLC是角FLC的两倍。</p>
+<p>那么因为弧BC等于弧CD，所以：角BFC也等于角CFD（命题III.27）。</p>
+<p>又：角BFC是角KFC的两倍，角DFC是角LFC的两倍。所以：角KFC也等于角LFC。又：角FCK也等于角FCL，所以：三角形FKC、FLC中，有两对角和一条边对应相等，即FC是它们的公共边。所以：它们的余边相等，余角也相等。</p>
+<p>所以：线段KC等于线段CL，角FKC等于角FLC（命题I.26）。</p>
+<p>又因为KC等于CL，所以：KL是KC的两倍。同理可证、HK是BK的两倍。</p>
+<p>而BK等于KC，所以：HK也等于KL。</p>
+<p>同理，线段HG、GM和ML也能被证明等于线段HK、KL。</p>
+<p>所以：五边形GHKLM是等边的。</p>
+<p>我还要进一步说它是等角的。</p>
+<p>因为：角FKC等于角FLC，角HKL被证明是角FKC的两倍，角KLM是角FLC的两倍。所以：角HKL也等于角KLM。</p>
+<p>同理，角KHG、HGM和角GML也能被证明出等于角HKL、KLM。</p>
+<p>所以：五个角GHK、HKL、KLM、LMG和MGH彼此相等。</p>
+<p>所以：五边形GHKLM是等角的。</p>
+<p>同时也证明出它是等边的，并建立在圆ABCDE上。</p>
+<p>所以：给定一个圆，可以建它的外切正五边形。</p>
+<h6 id="证完">证完</h6>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="第三同读" />
+  <title>宇墨学几何原本</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">宇墨学几何原本</h1>
+<p class="author">第三同读</p>
+</header>
+<h2 id="命题vi.20">命题VI.20</h2>
+<p>将两个相似多边形分成同样多相似三角形，其对应三角形面积比值与总体面积的比值相等；两个多边形的面积的比值是对应边比值的平方。</p>
+<p>设：ABCDE和FGHKL为相似五边形，AB对应FG。</p>
+<p>那么我说：五边形ABCDE和FGHKL可分成同样多个相似三角形，并与整体的五边形有相同的比值；五边形ABCDE与FGHKL的面积的比等于AB与FG的比的平方。</p>
+<p>连接BE、CE、GL和HL。</p>
+<p>那么因为：五边形ABCDE相似于五边形FGHKL。</p>
+<p>于是：角BAE等于角GFL，AB比AE等于GF比FL（定义VI.1）。</p>
+<p>那么因为：三角形ABE和三角形FGL是两个有等角且等角对应边成比例的三角形。</p>
+<p>于是：三角形ABE与三角形FGL的各个角对应相等，另外它们也是相似三角形。</p>
+<p>所以：角ABE等于角FGL（命题VI.6、VI.4、定义VI.1）。</p>
+<p>又：大角ABC也等于角FGH，因为它们相似，所以：角EBC等于角LGH。</p>
+<p>阿维尼翁少女</p>
+<p>在西方现代主义运动中，立体主义的影响是难以估量的。作为一个运动，它只是几年的历史，但其影响在几十年内深刻地反映在多流派的绘画和雕塑上。毕加索1907年所作的《阿维尼翁少女》是立体主义的代表作，其充分表现了立体主义的主要美学观念。这种美学观念主要体现在毕加索把画中的少女变成了几块几何形体。这就是来自塞尚的几何形结构，除此之外，该画还包括了许多立体派原则，如变形、抽象和变换透视角度等。</p>
+<p>又因为：三角形ABE和三角形FGL相似，BE比AB等于GL比GF。</p>
+<p>又因为两五边形相似，AB比BC等于FG比GH。</p>
+<p>所以：BE比BC等于GL比GH，即等角EBC和角LGH的对应边成比例。</p>
+<p>所以：三角形EBC与三角形LGH是相似三角形，所以：三角形EBC也相似于三角形LGH（命题V.22、VI.6、VI.4，定义VI.1）。</p>
+<p>同理，三角形ECD也相似于三角形LHK。</p>
+<p>所以：相似多边形ABCDE和FGHKL被分成同样个数的三角形。</p>
+<p>冯·诺依曼</p>
+<p>冯·诺依曼（1903—1957年）在数学的诸多领域都进行了开创性工作，并作出了重大贡献。“二”战前，他主要从事算子理论、集合论等方面的研究。1923年他把集合论加以公理化，其公理化体系奠定了公理集合论的基础。他从公理出发，用代数方法导出了集合论中许多重要概念、基本运算、重要定理等。他对一般拓扑群的结构有深刻的认识，弄清了它的代数结构和拓扑结构与实数是一致的。他还创立了博弈论这一现代数学的又一重要分支。1944年发表了奠基性的重要论文《博弈论与经济行为》。他对人类的最大贡献是对计算机科学、计算机技术和数值分析的开拓性工作。冯·诺依曼还积极参与了推广应用计算机的工作，对如何编制程序及数值计算都有杰出的贡献。</p>
+<p>那么我说：对应三角形的比值等于多边形的比值。即这种情况下三角形成比例，三角形ABC、EBC和三角形ECD的面积为前项，三角形FGL、LGH和三角形LHK的面积为后项，五边形ABCDE与FGHKL的面积比值等于AB与FG的比的平方。</p>
+<p>连接AC和FH。</p>
+<p>因为多边形是相似的，角ABC等于角FGH，又AB比BC等于FG比GH。三角形ABC与三角形FGH的各角相等（命题VI.6）。</p>
+<p>所以：角BAC等于角GFH。且角BCA等于角GHF。</p>
+<p>又因为：角BAM等于角GFN，角ABM也等于角FGN，所以：角ABM也等于角FNG，所以：三角形ABM与三角形FGN是相似三角形（命题I.32）。</p>
+<p>同样，我们可以证明三角形BMC与GNH也是相似三角形。</p>
+<p>所以：AM比MB等于FN比NG，BM比MC等于GN比NH。</p>
+<p>于是又有首末比，AM比MC等于FN比NH（命题V.22）。</p>
+<p>又：AM比MC等于三角形ABM比三角形MBC，又等于三角形AME比三角形EMC，因为它们有共同的第三边（命题VI.1）。</p>
+<p>所以：前项之一比后项之一等于所有前项的和比所有后项的和。</p>
+<p>所以：三角形AMB比三角形BMC等于三角形ABE比三角形CBE（命题V.12）。</p>
+<p>又：三角形AMB比三角形BMC等于AM比MC，所以AM比MC等于三角形ABE比三角形EBC（命题V.11）。</p>
+<p>同理，FN比NH也等于三角形FGL比三角形GLH。</p>
+<p>又：AM比MC等于FN比NH。</p>
+<p>所以：三角形ABE的面积比三角形BEC的面积等于三角形FGL的面积比三角形GLH的面积，又有更比，三角形ABE的面积比三角形FGL的面积等于三角形BEC的面积比三角形GLH的面积（命题V.11、V.16）。</p>
+<p>同样我们可以证明出，如果连接BD和GK，那么三角形BEC的面积比三角形LGH的面积等于三角形ECD的面积比三角形LHK的面积。</p>
+<p>又因为：三角形ABE的面积比三角形FGL的面积等于三角形EBC的面积比三角形LGH的面积，且等于三角形ECD的面积比三角形LHK的面积。</p>
+<p>所以：前项之一与后项之一的比等于所有前项之和比所有后项之和。</p>
+<p>所以：三角形ABE的面积比三角形FGL的面积等于五边形ABCDE的面积比五边形FGHKL的面积（命题V.12）。</p>
+<p>又：三角形ABE的面积与三角形FGL的面积的比等于边AB与FG的比的平方，因为相似三角形面积比等于对应边的比的平方（命题VI.19）。</p>
+<p>所以：五边形ABCDE的面积与五边形FGHKL的面积的比等于其对应边AB与FG的平方比（命题V.11）。</p>
+<p>所以：将两个相似多边形分成同样多相似三角形，其对应三角形面积比值与总体面积的比值相等；两个多边形的面积的比值是对应边比值的平方。</p>
+<h6 id="证完">证完</h6>
+<p>推论</p>
+<p>同样也可以证明，在四边形中，四边形的面积的比值是对应边的平方比，在三角形中，三角形的面积的比是对应边的平方的比。进一步，在多边形中，对应图形的面积的比是对应边的平方的比。</p>
+<p>计算尺</p>
+<p>1614年对数发明以后，乘除运算可化为加减运算，利用这一特点，便可制成对数计算尺。这是计算工具又一巨大发明。300多年来，计算尺一直是科学工作者特别是工程技术人员必不可少的计算工具，直到20世纪70年代才逐渐被电子计算器所取代。计算尺除了常见的直线形尺外，还有各式各样的圆形、柱形、螺旋形尺。图为夏庞蒂埃圆形尺和鲍彻表形尺。</p>
+<h5 id="注解">注解</h5>
+<p>本命题和它的推论不时地应用在卷X、XII、XIII中。</p>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="第三同读" />
+  <title>宇墨学几何原本</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">宇墨学几何原本</h1>
+<p class="author">第三同读</p>
+</header>
+<h2 id="命题viii.19">命题VIII.19</h2>
+<p>在两个相似的立体数之间，有两个比例中项数，且两个立体数之间的比等于它们对应边的三次比。</p>
+<p>设：a和b为两个相似的立体数，c、d、e为a的边，f、g、h为b的边。</p>
+<p>现在，因为相似立体数的对应边成比例，所以：c比d等于f比g，d比e等于g比h（定义VII.21）。</p>
+<p>那么我说：在a、b之间必有两个比例中项，且a比b是c比f、d比g或者e比h的三次比。</p>
+<p>令：c乘以d得k，f乘以g得l。</p>
+<p>那么因为：c、d与f、g有相同比，而k是c和d的乘积，l是f和g的乘积；k和l是相似平面数，所以：在k和l之间有一个比例中项m（定义VII.21、命题VIII.18）。</p>
+<p>所以：m是d和f的乘积，在前述的命题中已被证明（命题VIII.18）。</p>
+<p>现在，因为，d乘以c得k，d乘以f得m，所以：c比f等于k比m。</p>
+<p>而k比m也等于m比l，所以：k、m、l是依照c与f比成连比（命题VII.17）。</p>
+<p>又因为：c比d等于f比g，所以，由更比，c比f等于d比g。同理，d比g等于e比h（命题VII.13）。</p>
+<p>所以：k、m、l是依照c比f构成连续比例，其比等于d比g，也等于e比h。</p>
+<p>再一步，令：e、h乘以m分别得n、o。</p>
+<p>那么因为：a是一个立体数，而c、d、e是它们的边，所以：e乘以c、d之乘积得a。</p>
+<p>而c、d之积是k。</p>
+<p>所以：e乘以k得a。</p>
+<p>同理，h乘以l也得b。</p>
+<p>现在因为：e乘以k得a，e乘以m得n。所以：k比m等于a比n（命题VII.17）。</p>
+<p>而k比m等于c比f，也等于d比g，再等于e比h，所以：c比f等于d比g，等于e比h，再等于a比n。</p>
+<p>又因为：e、h乘以m分别得n、o，所以：e比h等于n比。（命题VII.18）。</p>
+<p>而e比h等于c比f，等于d比g，所以：c比f等于d比g，等于e比h，等于a比n，再等于n比o。</p>
+<p>又因为：h乘以m得o，h乘以l得b，所以：m比l等于o比b。</p>
+<p>而m比l等于c比f，等于d比g，再等于e比h。</p>
+<p>所以：c比f等于d比g，再等于e比h，也等于o比b，等于a比n，再等于n比o（命题VII.17）。</p>
+<p>所以：a、n、o、b成连比，其比是前面所述的边的比。</p>
+<p>我说：a比b也是对应边的三次比，即c比f，或者d比g，或者e比h的三次方。</p>
+<p>蓝递归</p>
+<p>蓝递归基于希尔伯特空间填充曲线而生成。希尔伯特曲线由大卫·希尔伯特（1862—1943年）于1891年提出。它是一种能填充满一个平面正方形的分形曲线，即空间填充曲线。</p>
+<p>因为：a、n、o、b是四个连比数，所以，a比b是a比n的三次方，而已经证明a比n等于c比f，也等于d比g，再等于c比h（定义V.10）。</p>
+<p>所以：a比b是其对应边的比的三次方，即c比f，或d比g，或e比h的三次方。</p>
+<p>所以：在两个相似的立体数之间，有两个比例中项数，且两个立体数之间的比等于它们对应边的三次比。</p>
+<h6 id="证完">证完</h6>
+<h5 id="注解">注解</h5>
+<p>本命题应用在卷VIII和卷IX从第25命题开始的几个命题中。命题VIII.21是本命题的部分逆命题。</p>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

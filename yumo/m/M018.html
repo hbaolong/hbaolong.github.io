@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="第三同读" />
+  <title>宇墨学几何原本</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">宇墨学几何原本</h1>
+<p class="author">第三同读</p>
+</header>
+<h2 id="命题i.15">命题I.15</h2>
+<p>两条直线相交，对顶角相等。</p>
+<p>设：AB、CD两条直线相交于E点。</p>
+<p>那么我说：角AEC等于角DEB，角CEB等于角AED。</p>
+<p>因为：射线AE立在直线CD上，构成角CEA、AED，角CEA、AED的和等于两个直角（命题I.13）。</p>
+<p>又：线段DE立在线段AB上，构成角AED、DEB，角AED、DEB的和等于两个直角（命题I.13）。又：角CEA、AED的和也能证明出等于两个直角。</p>
+<p>所以：角CEA、AED的和等于角AED、DEB的和（公设I.4、公理I.1）。</p>
+<p>阿基米得被害</p>
+<p>公元前212年，罗马人攻入叙拉古城时，阿基米得并不知情，他正在全神贯注地研究一个数学问题，罗马士兵命令他立刻去见首领马塞勒塞，这位75岁的老人令士兵别碰沙盘上的几何图形，恼羞成怒的罗马士兵举刀砍死了一代天才阿基米得。为了纪念他，阿基米得的墓碑上被刻上了一个圆柱内切球的图形，用以肯定他对基础科学作出的重大贡献和他最引以自豪的著作《论球和圆柱》。</p>
+<p>雪花曲线</p>
+<p>从一个等边三角形出发，将每条边三等分，然后在各边三等分后的中段向外作一个新的等边三角形，但要去掉与原三角形重合的部分，接着对这个新图形的每条边重复上述过程，如此不断继续下去，所得到的曲线就是雪花曲线，它实际上是一个无限逼近序列的曲线。雪花曲线具有令人惊异的性质：它的内部面积有限，但曲线本身长度无限。</p>
+<p>罗素</p>
+<p>罗素（1872—1970年），英国哲学家、数学家、逻辑学家。18岁入剑桥大学三一学院学习数学和哲学。1911年写成三卷本的《数学原理》，提出著名的“罗素悖论”，引起“第三次数学危机”。罗素的学术活动涉及范围广泛，他企图建立逻辑主义数学体系，把整个数学归结于逻辑学。他是20世纪最有影响的哲学家、数学家之一。</p>
+<p>令：从各角中减去角AED。</p>
+<p>于是：剩余角CEA等于剩余角BED（公理I.3）。</p>
+<p>同理可证：角CEB、DEA也相等。</p>
+<p>所以：两条直线相交，对顶角相等。</p>
+<h6 id="证完">证完</h6>
+<p>推论</p>
+<p>此命题也表明：两条直线相交，在相交点形成的角等于四个直角的和（360°）。</p>
+<h5 id="注解">注解</h5>
+<p>虽然欧几里得并未定义“直角”，但其意义却明确地应用在本命题中。关于“推论”有这样一种说法：这可能是后人的插入。因为如果它是欧几里得所作，那么它应该被绑定在命题本身里，或者干脆成为另一命题。</p>
+<p>本命题被利用在以后的几个命题中，并在II.10及IV.15中被利用。</p>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

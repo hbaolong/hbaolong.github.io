@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="第三同读" />
+  <title>宇墨学几何原本</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">宇墨学几何原本</h1>
+<p class="author">第三同读</p>
+</header>
+<h2 id="命题i.21">命题I.21</h2>
+<p>以三角形一边的两个端点向三角形以内引两条相交线，那么交点到这两个端点的这两条线段的和小于三角形余下的两条边的和，所形成的角大于三角形同侧的内角。</p>
+<p>设：BC为三角形ABC的一条边，从端点B、C，作线段BD、DC。</p>
+<p>计算器</p>
+<p>这种金属计算器由法国数学家、物理学家、作家以及神学家布莱斯·帕斯卡（1623—1662年）于1642年发明，并于1647年获得专利。他发明这台机器旨在方便其父亲的会计工作。这种早期的计算器通过旋转带有指针的轮子来进行加运算，但是其他操作相当麻烦。</p>
+<p>那么我说：BD、DC的和小于三角形的另两条边BA、AC的和，所夹的角BDC大于角BAC。</p>
+<p>延长BD和AC交于E点。</p>
+<p>因为：在三角形中任意两边的和大于剩余的一条边（命题I.20）；那么：在三角形ABE中，边AB、AE的和大于BE。</p>
+<p>令：分别相加EC；于是BA、AC之和大于BE、EC之和。</p>
+<p>又：在三角形CED中，CE、ED两边的和大于CD，令分别相加DB；于是，CE、EB的和大于CD、DB的和。</p>
+<p>而BA、AC的和已证明大于BE、EC的和；</p>
+<p>所以：BA、AC的和大于BD、DC的和。</p>
+<p>又：因为在三角形中任意外角大于内对角（命题I.16）；</p>
+<p>于是：在三角形CDE中，外角BDC大于角CED。</p>
+<p>同理可证：在三角形ABE中，其外角CEB大于角BAC。角BDC已被证明大于角CEB；</p>
+<p>所以：角BDC大于角BAC。</p>
+<p>所以：以三角形一边的两个端点向三角形以内引两条相交线，那么交点到这两个端点的这两条线段的和小于三角形余下的两条边的和，所形成的角大于三角形同侧的内角。</p>
+<h6 id="证完">证完</h6>
+<h5 id="注解">注解</h5>
+<p>在欧几里得以前，派帕尔斯及其他数学家已经注意到，在一个三角形中，如果直线不是从一条边的末点作出，那么所作直线之和可能大于余下的两边之和。事实上，其和可以大到三角形最长边的两倍。</p>
+<p>本命题应用在III.8中。</p>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

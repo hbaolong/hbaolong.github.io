@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="第三同读" />
+  <title>宇墨学几何原本</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">宇墨学几何原本</h1>
+<p class="author">第三同读</p>
+</header>
+<h2 id="命题vi.33">命题VI.33</h2>
+<p>在等圆中，圆心角或圆周角的比等于它们所对的弧的比。</p>
+<p>设：ABC和DEF是相等圆，角BGC与角EHF是分别建在圆心G和圆心H上的两个角，角BAC与角EDF是分别建立在弧上的角。</p>
+<p>那么我说：弧BC比弧EF等于角BGC比角EHF，且等于角BAC比角EDF。</p>
+<p>作连续弧CK与KL，使之等于BC，作连续弧FM、MN，使之等于EF，连接GK和GL、HM、HN。</p>
+<p>那么因为：弧BC、CK、KL相互相等，那么角BGC、CGK、KGL也相互相等。</p>
+<p>所以：弧BL是弧BC的几倍，角BGL也是角BGC的几倍（命题III.27）。</p>
+<p>同样原因：弧NE是弧EF的几倍，角NHE也是角EHF的几倍。</p>
+<p>如果弧BL等于弧EN，那么角BGL也等于角EHN；如果弧BL大于弧EN，那么角BGL也大于角EHN；如果小于，那么后者也小于（命题III.27）。</p>
+<p>所以：有四个量：两个弧BC与EF和两个角BGC与EHF形成，其中，弧BC与角BGC为等倍量，即弧BL和角BGL是等倍量。弧EF与角EHF为等倍量，即弧EN和角EHN是等倍量。</p>
+<p>也可以证明，如果弧BL大于弧EN，那么角BGL也大于角EHN；如果等于，后者也等于；如果小于，后者也小于。</p>
+<p>所以：弧BC比EF等于角BGC比角EHF（定义V.5）。</p>
+<p>又：角BGC比角BAC等于角EHF比角EDF，因为它们分别为两倍（命题V.15、III.20）。</p>
+<p>越南古代数学</p>
+<p>简单累数也可以叫加法累数制，原理是将各个数码表的数加起来。500要重复写五次100，十分麻烦。乘法累数制是将重复书写改用乘法表示，最具代表性的是中国数字。亚洲一些地方受中国文字的影响，也采用和中国相仿的记数法，如越南在13世纪晚期借用汉字的形式创造了一套文字，其记数法和中国的一样。</p>
+<p>所以：弧BC比弧EF等于角BGC比角EHF，等于角BAC比角EDF。</p>
+<p>所以：在等圆中，圆心角或圆周角的比等于它们所对的弧的比。</p>
+<h6 id="证完">证完</h6>
+<h5 id="注解">注解</h5>
+<p>本命题有很大的独立性，是建角与所切圆周之间的比例。</p>
+<p>本命题应用在卷XIII的命题XIII.8开始的三个命题中。</p>
+<h1 id="第七卷-数论一">第七卷　数论（一）</h1>
+<p>古希腊泰勒斯根据土地测量创立了演绎几何学。毕达哥拉斯及其学派把数的抽象观念提到突出地位，以使算术成为可能，并把数视为世界的基石。他们揭开了古希腊美学思想发展的序幕，首先将数学与美学相结合，开始了美与数理学科联姻的潮流。德谟克里特发展了这一思想。毕达哥拉斯学派认为，世界构成于数量关系，数是整个自然的本原。</p>
+<p>本卷讨论的是初等数论。</p>
+<p>相互和谐</p>
+<p>通过点、线、面的抽象规律，以不规则图形、圆形以及方形，并使用五彩缤纷的色彩构成了这幅（相互和谐）图。左边和右边的图形搭配就像一对孪生兄弟般，混乱中却尤为和谐地达到了相互统一。</p>
+<p>本卷提要</p>
+<ul>
+<li><p>定义VII.11，质数的定义。</p></li>
+<li><p>命题VII.12，找最大公约数的欧几里得算法。</p></li>
+<li><p>命题VII.16，数的几个基本性质。如，数的乘法的交换律，mn＝nm。</p></li>
+<li><p>命题VII.29，如果质数不能除尽一个数，那么它们是互质数。</p></li>
+<li><p>命题VII.34，建最小公倍数。</p></li>
+</ul>
+<h2 id="定义">定义</h2>
+<p>VII.1　一个单位是一切事物凭借它存在的基础，被称为一。</p>
+<p>球面螺旋</p>
+<p>1958年，埃舍尔遇到加拿大数学家考克斯特，两人成为终生的朋友。埃舍尔从考克斯特的一本书中偶然看到后者为解释法国数学家庞加莱的双曲几何空间所绘的一个图示，意识到这可以作为他创作的一个主题。此后，他创作了《球面螺旋》这一作品，表现的是非欧几里得空间。螺旋纹从中心向四周无限缩小，但永远也达不到边界，这也是非欧几里得空间所表现的特性之一。</p>
+<p>VII.2　一个数是由许多单位合成的。</p>
+<p>VII.3　当一个数测尽较大数的时候，这个数是较大的数的较小的部分。</p>
+<p>VII.4　当一个数测不尽较大数的时候，这个较小的数为一个较大的数的几部分。</p>
+<p>VII.5　若一个较大数能被一个较小数测尽（整除），那么它是较小数的倍数。</p>
+<p>VII.6　能分成相等的两部分的数称为偶数。</p>
+<p>VII.7　不能分成相等的两部分的数称为奇数。或者说与一个偶数相差一个单位的数称为奇数。</p>
+<p>VII.8　偶倍偶数是用一个偶数量它得偶数。</p>
+<p>VII.9　偶倍奇数是用一个偶数量它得奇数。</p>
+<p>VII.10　奇倍奇数是一个奇数量它得奇数。</p>
+<p>VII.11　只能为一个单位量测尽的数是质数。</p>
+<p>VII.12　只能被作为公约的一个单位量所测尽（整除）的几个数称为互质数。</p>
+<p>VII.13　能被某数所测尽的数称为合数。</p>
+<p>VII.14　互为合数的数是能被作为公约的某数所测尽的几个数。</p>
+<p>VII.15　一个数乘一个数，即是被乘数自身相加多少次得到的某数，这个次数是另一数中单位的个数。</p>
+<p>VII.16　两个数相乘得出的数称为面，其两边就是相乘的两数。</p>
+<p>VII.17　三数相乘的数为体，其三边就是相乘的三数。</p>
+<p>VII.18　平方数是两相等数相乘所得的数，或者是由两相等数组成的数。</p>
+<p>VII.19　立方数是两相等数相乘再乘此等数所得的数，或者是由三相等数组成的数。</p>
+<p>VII.20　当第一数是第二数的某倍、某一部分或某几部分，与第三数是第四数的某倍、某一部分或某几部分相同，称这四个数是成比例的。</p>
+<p>VII.21　两相似面以及两相似体数是它们的边成比例。</p>
+<p>VII.22　完全数是等于它自身所有部分的和。</p>
+<h5 id="注解-1">注解</h5>
+<p>第七卷是后面三卷数论的开始，它始于22个定义。尤其重要的定义是单位、数、部分、倍数、偶数、奇数、质数、互质数、比例、完全数、最大公约数（公因子）、最小公约数的定义。</p>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

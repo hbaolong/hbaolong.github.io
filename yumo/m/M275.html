@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="第三同读" />
+  <title>宇墨学几何原本</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">宇墨学几何原本</h1>
+<p class="author">第三同读</p>
+</header>
+<h2 id="命题ix.8">命题IX.8</h2>
+<p>如果一个成连续比例的数列开始于一个单位，那么从单位起的第三个是平方数，且以后每隔一个就是平方数；第四个是立方数，以后每隔两个是立方数；第七个是立方数同时也是平方数，以后每隔五个是立方数同时也是平方数。</p>
+<p>设：a、b、c、d、e、f从一个单位开始，并成连续比例。</p>
+<p>那么我说：从单位开始后的第三个数b是个平方数，以后每隔一个为平方数；第四个数c是立方数，以后每隔两个是立方数；第七个数f同时是立方数也是平方数，以后每隔五个是立方数同时是平方数。</p>
+<p>因为：该单位比a等于a比b，于是：该单位测尽数a与a测尽b有相同的次数。依照a中的单位数，单位测尽a。同理：a也测尽b（定义VII.20）。</p>
+<p>所以：a自乘得b。所以：b是平方数。</p>
+<p>又因为b、c、d是连比数，而b是平方数，于是：d也是平方数，同理，f也是平方数（命题VIII.22）。</p>
+<p>类似地，我们也可以证明，每隔一个数为平方数。</p>
+<p>我还要进一步说：从单位开始后的第四个数c，是立方数，并且以后每隔两个都是立方数。</p>
+<p>因为：单位比a等于b比c，于是：单位测尽数a的次数等于b测尽c。</p>
+<p>根据a中的单位数，单位测尽a。同理：b也测尽c。所以：a乘以b得c。那么因为：a自乘得b，a乘以b得c，所以：c是立方数。</p>
+<p>那么因为：c、d、e、f是成连比例，而c是立方数，于是：f也是立方数。</p>
+<p>同时它已经被证明是平方数，于是：从单位开始后的第七个数既是立方数也是平方数。同理，我们也可以证明其后每隔五个数既是立方数也是平方数（命题VIII.23）。</p>
+<p>所以：如果一个成连续比例的数列开始于一个单位，那么从单位起的第三个是平方数，且以后每隔一个就是平方数；第四个是立方数，以后每隔两个是立方数；第七个是立方数同时也是平方数，以后每隔五个是立方数也是平方数。</p>
+<h6 id="证完">证完</h6>
+<p>达·芬奇的自动车</p>
+<p>从平时打发时间的娱乐中，达·芬奇汲取了其中的基础经验并将其化为建筑或科学原理。他画出越来越复杂的机械结构，这都是一些从绞车、滑轮、杠杆、楔子和螺丝这样简单传统的系统出发的真正的机器。研究各种变体，将抽象的几何构图用于实用，再从美学的角度考虑如何将它们组装成不同的样子。</p>
+<h5 id="注解">注解</h5>
+<p>在以下连比中：</p>
+<p>1、a、a2、a3、a4、a5、a6、a7等等，</p>
+<p>每隔二个：a2、a4、a6、a8等等是一个平方数；</p>
+<p>每隔三个：a3、a6、a9、a12等等是一个立方数；</p>
+<p>每隔六个：a6、a12、a18、a24等等是一个平方数兼立方数。</p>
+<p>这一命题应用在下五个命题中。</p>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

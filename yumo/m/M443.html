@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="第三同读" />
+  <title>宇墨学几何原本</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">宇墨学几何原本</h1>
+<p class="author">第三同读</p>
+</header>
+<h2 id="命题xi.23">命题XI.23</h2>
+<p>在三个平面角中，如果任意两个角的和大于余下的一个角，且三个角之和小于四个直角，那么，依据这三个角可建一个立体角（命题XI.20、XI.21）。</p>
+<p>设：角ABC、DEF、GHK为给定的三个平面角，它们的任意两个角的和大于余下的一个角，且三个角的和小于四个直角。</p>
+<p>现在要求，建一个立体角，使其等于角ABC、DEF、GHK。</p>
+<p>截分AB、BC、DE、EF、GH、HK，使它们分别相等，连接AC、DF和GK（命题I.3）。</p>
+<p>那么，可建一个三边分别等于AC、DF、GK的三角形，因此可建三角形LMN，使AC等于LM，DF等于MN，GK等于NL（命题XI.22）。</p>
+<p>以O为圆心，作三角形LMN的外接圆LMN，连接LO、MO、NO（命题IV.5、III.1）。</p>
+<p>那么我说：AB大于LO。</p>
+<p>因为：如果不是，AB要么等于LO，要么小于。</p>
+<p>首先，令其相等，于是，因为：AB等于LO，同时，AB等于BC，LO等于OM，于是：AB、BC两边分别等于LO、OM两边。又，根据假设，底边AC等于底边LM，所以：角ABC等于角LOM（命题I.8）。</p>
+<p>同理，角DEF也等于角MON，且角GHK等于角NOL，所以：ABC、DEF、GHK三个角之和等于LOM、MON、NOL三个角之和。</p>
+<p>又，LOM、MON、NOL三个角之和等于四个直角，所以：ABC、DEF、GHK三个角之和等于四个直角。</p>
+<p>又，根据假设，它们的和也小于四个直角。这是荒谬的。所以：AB不等于LO。</p>
+<p>我进一步说：AB小于LO不成立。</p>
+<p>因为，如果可能成立，作OP等于AB，OQ等于BC，连接PQ（命题I.3）。</p>
+<p>那么因为：AB等于BC，所以：OP也等于OQ，于是：余值LP等于QM。</p>
+<p>所以：LM平行于PQ，且角LMO也等于角PQO（命题VI.2、I.29）。</p>
+<p>所以：OL比LM等于OP比PQ，由更比可得，LO比OP等于LM比PQ（命题VI.4、V.16）。</p>
+<p>而LO大于OP，所以：LM也大于PQ，且LM等于AC，所以：AC大于PQ。</p>
+<p>又，因为：AB、BC两条边等于PO、OQ两条边，且底边AC大于底边PQ，所以：角ABC大于角POQ（命题I.25）。</p>
+<p>同理，我们可以证明，角DEF也大于角MON，且角GHK大于角NOL。</p>
+<p>所以：三个角ABC、DEF、GHK之和大于三个角LOM、MON、NOL之和。又，根据假设，角ABC、DEF、GHK之和小于四个直角，所以：角LOM、MON、NOL之和远远小于四个直角。而它的和又等于四个直角。这是荒谬的。所以：AB不小于LO。</p>
+<p>又已证明是不等的，所以AB大于LO。</p>
+<p>再，从点O作OR与圆平面LMN成直角，于是：OR上的正方形等于AB上的正方形减去LO上的正方形。连接RL、RM、RN（命题XI.12、引理）。</p>
+<p>那么因为：RO与圆平面LMN成直角，所以：RO也与线段LO、MO、NO皆成直角，又因为：LO等于OM，OR是公共边，且和LO、ON都成直角，所以：底边RL等于底边RM（定义XI.3、命题I.4）。</p>
+<p>同理，RN也等于线段RL、RM，所以：二条线段RL、RM、RN相互相等。</p>
+<p>又，根据假设，OR上的正方形等于AB上的正方形减去LO上的正方形，所以：AB上的正方形等于LO、OR上的正方形之和。</p>
+<p>又，LR上的正方形等于LO、OR上的正方形之和，这是因为，角LOR是直角。所以，AB上的正方形等于RL上的正方形，所以，AB等于RL。</p>
+<p>但是，线段BC、DE、EF、GH、HK都等于AB。这时，线段RM、RN等于RL，所以：线段AB、BC、DE、EF、GH、HK中每一条都等于线段RL、RM、RN中任一条（命题I.47）。</p>
+<p>中世纪的巴黎地图</p>
+<p>这幅中世纪的巴黎地图给当时的人们提出了一个数学问题：在给定长度的所有可能的闭合曲线中，能否确定一条所围成的内部区域面积最大的曲线？答案是一个圆，其周长即为预定尺度。我们知道，一块小周长的土地，其面积可能要比另外一块大周长的土地大，因此，在交换土地时，我们只需用围绕土地四周所需的时间来测量土地的大小。公元450年，普洛克勒斯在评注欧几里得的《几何原本》第一卷时说明过这种情况，这就是等周问题。等周问题是数学史上最有影响力的问题之一。</p>
+<p>因为：LR、RM两边等于AB、BC两边，根据假设，底边LM等于底边AC，所以：角LRM等于角ABC。同理，角MRN等于角DEF，且角LRN等于角GHK（命题I.8）。</p>
+<p>所以作出了由角LRM、MRN、LRN在点R构成的立体角，且角LRM、MRN、LRN等于已知角ABC、DEF、GHK。</p>
+<p>所以：在三个平面角中，如果任意两个角的和大于余下的一个角，且三个角之和小于四个直角，那么，依据这三个角可建一个立体角（命题XI.20、XI.21）。</p>
+<h6 id="证完">证完</h6>
+<p>引理</p>
+<p>但是，怎样建OR上的正方形，使之等于AB上的正方形减去LO上的正方形呢？</p>
+<p>作法如下：</p>
+<p>取线段AB、LO，令AB较大，在AB上建半圆ABC，取AC等于线段LO，并不大于直径AB。连接CB（命题IV.1）。</p>
+<p>因为：角ACB是半圆ACB内的弓形角，所以：角ACB是直角（命题III.31）。</p>
+<p>所以：AB上的正方形等于AC、CB上的正方形之和（命题I.47）。</p>
+<p>于是：AB上的正方形减去AC上的正方形等于CB上的正方形。而AC等于LO。所以：AB上的正方形减去LO上的正方形等于CB上的正方形。</p>
+<p>所以：如果我们截分OR等于BC，那么，AB上的正方形大于LO上的正方形，所大的部分是OR上的正方形。</p>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

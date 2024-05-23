@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="第三同读" />
+  <title>宇墨学几何原本</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">宇墨学几何原本</h1>
+<p class="author">第三同读</p>
+</header>
+<h2 id="命题x.17">命题X.17</h2>
+<p>如果两条不等线段，在较大的一个上作一个矩形，使之等于小线段上正方形的四分之一而缺少一个正方形，且大线段被分成长度上可以公约的两部分，那么原来大线段上的正方形较小线段上的正方形大一个与大线段可以公约的线段上的正方形。</p>
+<p>如果大线段上的正方形较小线段上的正方形大一个与大线段可以公约的线段上的正方形，且在大线段上作一个矩形等于小线段上的正方形的四分之一而缺少一个正方形，那么，大线段上被分成长度可公约的两个部分。</p>
+<p>设：a和BC是两条不等线段，其中，BC较大，在BC上建矩形，使之等于较小线段a上的正方形的四分之一，即等于a的一半上的正方形，设其为矩形BD、DC，且BD与DC是可公约的量（引理）。</p>
+<p>那么我说：BC上的正方形较a上的正方形大一个与BC可以公约的线段上的正方形。</p>
+<p>令：在E点平分BC，使EF等于DE（命题I.10、I.3）。</p>
+<p>于是：余量DC等于BF。又，因为：线段BC被E点分为相等的两部分，被D点分为下相等的两部分，于是：BD和DC构成的矩形加上ED上的正方形等于EC上的正方形（命题II.5）。</p>
+<p>又，将它们四倍后同样正确，所以：四倍矩形BD、DC构成的矩形加DE上的正方形的四倍，等于EC上的正方形的四倍。</p>
+<p>算盘</p>
+<p>作为计算工具的算盘是中国的独创，后于16世纪末传入日本和俄国。日本称算盘为“十露盘”，算珠由扁圆形改成菱形，梁上两珠改为一珠，盘窄而长，档数加至27。俄罗斯的算盘则将若干铁条或木条横镶在木框内，每条穿10珠。这是纯粹的十进位制，直观易懂，后来它被用作儿童学算的工具而流行于全世界。</p>
+<p>而a上的正方形等于BD、DC所构成的矩形的四倍，且DF上的正方形等于DE上的正方形的四倍，因为DF是DE的两倍，又，BC上的正方形等于EC上的正方形的四倍，因为BC是CE的两倍。</p>
+<p>所以：a与DF上的正方形之和等于BC上的正方形，所以：BC上的正方形大于a上的正方形，其大于值为一个DF上的正方形。</p>
+<p>也可以证明出，BC与DF也是可公约量。</p>
+<p>文艺复兴时的建筑</p>
+<p>随着文艺复兴新观念的出现，建筑已不再仅仅是一些实践经验的集合，而是形成了一门科学。它的第一个原则，也是最简单的原则，就是必须运用直尺、角尺甚至圆规来绘制建筑的平面图。另外必须掌握多种学科：首先是绘画和透视，同时还有几何、数学基础，专业语言基础，古代柱式及线脚元素等。</p>
+<p>因为：BD与DC是在长度上的可公约量，所以：BC与CD在长度上也是不可公约量（命题X.15）。</p>
+<p>又，CD与CD、BF之和在长度上是可公约量，因为CD等于BF（命题X.6）。</p>
+<p>所以：BC与BF、CD的和在长度上也是可公约量，所以：BC与余量FD在长度上也是可公约量。所以：BC上的正方形大于在a上的正方形，其大于值等于一个与BC可以公约的线段上的正方形（命题X.12、X.15）。</p>
+<p>再设：在BC上的正方形大于a上的正方形，其大于值是与BC可以公约的量的直线上的正方形。在BC上建一个矩形，使之等于在a上的正方形的四分之一且缺少一个正方形，设其是BD和DC构成的矩形。</p>
+<p>也可以证明，BD与DC在长度上是可公约的量。</p>
+<p>在同一结构中，我们也能类似地证明，BC上的正方形大于a上的正方形，其大于值是与BC可公约的量的一条线段上的正方形（命题X.15）。</p>
+<p>所以：BC与FD是在长度上可以公约的量，所以：BC与BF、DC之和也是在长度上可以公约的量。</p>
+<p>而BF和DC之和与DC是可以公约的量，所以：BC与CD在长度上也是可以公约的量。</p>
+<p>所以：由分比可得，BD与DC在长度上也是可以公约的量（命题X.6、X.12、X.15）。</p>
+<p>所以：如果两条不等线段，在较大的一个上作一个矩形，使之等于小线段上正方形的四分之一而缺少一个正方形，且大线段被分成长度上可以公约的两部分，那么原来大线段上的正方形较小线段上的正方形大一个与大线段可以公约的线段上的正方形。如果大线段上的正方形较小线段上的正方形大一个与大线段可以公约的线段上的正方形，且在大线段上作一个矩形等于小线段上的正方形的四分之一而缺少一个正方形，那么，大线段上被分成长度可公约的两个部分。</p>
+<h6 id="证完">证完</h6>
+<h5 id="注解">注解</h5>
+<p>代数可描述为，设b表示BC，DC是［b－（b2－a2）］/2，那么该命题的声明是：比率b：［b－（b2－a2）］/2是一个数与一个数之比。也仅有（b2－a2）：a的比率是一个数与一个数之比。</p>
+<p>引理也应用在下一个命题中。这一命题应用在本卷从命题X.54以后的几个命题中。</p>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="第三同读" />
+  <title>宇墨学几何原本</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">宇墨学几何原本</h1>
+<p class="author">第三同读</p>
+</header>
+<h2 id="命题i.47">命题I.47</h2>
+<p>在直角三角形中，以斜边为边的正方形面积等于以两直角边为边的正方形面积之和（两直角边的平方和等于斜边的平方）。</p>
+<p>设：ABC是直角三角形，其中角BAC是直角。</p>
+<p>那么我说：BC为边的正方形等于以BA和AC为边的正方形之和。</p>
+<p>建BC为边的正方形BDEC，且建BA和AC为边的正方形GB和HC。过A作AL平行于BD，也平行于CE，连接AD和FC（命题I.46、I.31）。</p>
+<p>因为：角BAC和BAG皆是直角，在一条直线BA上的一个点A有两条直线AC、AG不在它的同一侧所成的两邻角的和等于两直角，于是CA与AG在同一直线上（定义I.22、命题I.14）。</p>
+<p>同理，BA也与AH在一条直线上。</p>
+<p>因为：角DBC等于角FBA，因为：它们是直角。每个角加上角ABC，于是：总角DBA等于总角FBC（定义I.22、公设I.4、公理I.2）。</p>
+<p>因为：DB等于BC，FB等于BA，两边AB和BD分别等于两边FB和BC，且角ABD等于角FBC，所以：底边AD等于底边FC，且三角形ABD的面积等于三角形FBC的面积（定义I.22、命题I.4）。</p>
+<p>现在，因为：平行四边形BL的面积是三角形ABD的两倍，因为，它们有同底边BD，且在相同平行线BD和AL之间。</p>
+<p>又，GB上的正方形是二角形FBC的面积的两倍，因为它们有同底FB，且在相同平行线FB和GC之间（命题I.41）。</p>
+<p>所以：平行四边形BL也等于正方形GB的面积。</p>
+<p>类似地，如果连接AE和BK，平行四边形CL也能被证明等于正方形HC的而积。</p>
+<p>所以：总正方形BDEC的而积，等于GB和HC两个正方形的面积之和（公理I.2）。</p>
+<p>又，BDEC正方形是建在BC上的，且正方形GB和HC是建在BA和AC上的</p>
+<p>所以：BC为边的正方一形的而积等于BA和AC为边的正方形的而积之和。</p>
+<p>所以：在直角三角形中，以斜边为边的正方形的面积等于两直角边为边的正方形的而积之和。</p>
+<h6 id="证完">证完</h6>
+<h5 id="注解">注解</h5>
+<p>这就是著名的毕达哥拉斯定理（又名勾股定理）的证明。</p>
+<p>本命题应用在下两个命题中，其逆命题用在第二卷命题II.9到命题II.14中，其余各卷中也有应用。</p>
+<p>彭加勒</p>
+<p>朱尔·昂利·彭加勒（1854—1912年），法国数学家。他的研究涉及了几何学、数论、代数学以及拓扑学等诸多领域，成功解决了地球、太阳及月亮之间相互运动的三体问题。从1899年开始，他潜心研究电子理论，并最先认识到洛伦茨变换构成群。在科学哲学方面，他提出了“约定论”，这是对人类理性认识的基本法则的深入探讨。对于经典物理学，彭加勒投入大量精力对其进行了深入研究。他是量子力学和相对论的思想先驱。另外，在狭义相对论的创立方面，彭加勒也作了极大的贡献。</p>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

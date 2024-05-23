@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="第三同读" />
+  <title>宇墨学几何原本</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">宇墨学几何原本</h1>
+<p class="author">第三同读</p>
+</header>
+<h2 id="命题xi.30">命题XI.30</h2>
+<p>同底同高的平行六面体，如果它们侧棱的端点不在同一直线上，那么它们相互相等。</p>
+<p>竞赛</p>
+<p>欧洲人在数学上的推进是从代数学开始的，它是文艺复兴时期成果最突出、影响最深远的领域，拉开了近代数学的序幕。这主要包括三次、四次方程求解与符号代数的引入两个方面。另外，欧洲数学在代数学上的进步还在于应用了较好的符号体系。这对于代数学本身以及后来分析学的发展，都显得至关重要。正是由于符号体系的建立，才使代数有可能成为一门独立的科学。图为一场计算竞赛，左为用印度-阿拉伯数码的计算者，右为用算盘的计算者，位于他们中间的是仲裁者“算术女神”。</p>
+<p>设：CM、CN是平行六面体，它们有公共的底AB，且同高。它们底上的侧棱AF、AG、LM、LN、CD、CE、BH、BK不在同一线上。</p>
+<p>那么我说：立体CM等于立体CN。</p>
+<p>作NK、DH相交于R，延长FM、GE至P、Q，连接AO、LP、CQ、BR。</p>
+<p>那么，以平行四边形ACBL为底的立体CM，FDHM是其相对面，等于以平行四边形ACBL为底的立体CP，OQRP是其相对面；因为，它们是在共同的底ACBL上，并且高相同，而它们的侧棱即AF、AO、LM、LP、CD、CQ、BH、BR的端点在同一直线EP、DR上（命题XI.29）。</p>
+<p>又，以平行四边形ACBL为底的立体CP，OQRP是其相对面，且等于以平行四边形ACBL为底的立体CN，GEKN是其相对面。同理，它们在相同的底ACBL上，且有等高，它们的侧棱即AG、AO、CE、CQ、LN、LP、BK、BR的端点在同一线段CQ、NR上（命题XI.29）。</p>
+<p>于是：立体CM等于立体CN。</p>
+<p>所以：同底同高的平行六面体，如果它们侧棱的端点不在同一直线上，那么它们相互相等。</p>
+<h6 id="证完">证完</h6>
+<p>麦比乌斯</p>
+<p>里古斯特·费迪南德·麦比乌斯（1790—1868年），英国几何学家、数论学家和统计学家，以其在几何学及拓扑学上的研究而著称。在拓扑学中，他是第一个描述单面曲线的人，后来该曲面被称为麦比乌斯带。在几何研究中，他在线段、面积和体积中引进了带正负号的元素。此外，他还研究了对偶原理。另外，他的麦比乌斯函数和麦比乌斯线性变换等也很著名。</p>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="第三同读" />
+  <title>宇墨学几何原本</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">宇墨学几何原本</h1>
+<p class="author">第三同读</p>
+</header>
+<h2 id="命题x.62">命题X.62</h2>
+<p>如果一条有理线段上的矩形与一个第二双中项线上的正方形相等，那么，该矩形的另一边是第三二项线。</p>
+<p>设：AB是一个第二双中项线，点C分AB为两段，AC较大。设DE为一任意有理线，在DE上建矩形DF等于AB上的正方形，DG为宽。</p>
+<p>那么我说：DG是一个第三二项线。</p>
+<p>肥皂泡</p>
+<p>肥皂泡是轻巧之物，只要维系得法，便是贝努利虚功原理的推理结果。虚功原理要求平衡态的势能为极小。在肥皂泡里，若干数量的空气被包围在极小的曲面里，即被肥皂膜包围起来。这是在所有给定体积的立体中，球面积最小的物理证据。这种结论是圆的极小性，即在所有给定面积的平面图形中，圆的周长是最短的立体类比。图为德布瓦西厄于1799年所画的版画〈肥皂泡〉。</p>
+<p>如前所述作图。</p>
+<p>那么因为：AB是一个第二双中项线，在C点被切分，所以：AC和CB是正方可公约的两中项线，并构成中项面矩形。所以：AC、CB上的正方形之和也是中项面（命题X.38、X.15、X.23、推论）。</p>
+<p>又，它也等于DL，所以：DL也是中项面，又，它是建在有理线DE上的，所以：MD是有理的，且与DE也是长度不可公约的（命题X.22）。</p>
+<p>同理，MG是有理的，且与ML，即与DE也是长度上不可公约的，所以：线段DM、MG是有理的，且与DE是长度上不可公约的。</p>
+<p>巴贝奇</p>
+<p>英国数学家巴贝奇（1792—1817年）是世界上提出通用程序控制数字计算机设计思想的第一人。巴贝奇在1812年创建“剑桥分析学会”，对19世纪英国数学的复兴贡献良多。巴贝奇为研制他所设计的计算机付出了后半生的主要精力和财产，甚至不惜辞去荣誉极高的卢卡斯教授席位。</p>
+<p>因为：AC与CB是长度上不可公约的，而AC比CB同于AC上的正方形比AC、CB构成的矩形，所以：AC上的正方形与AC、CB构成的矩形是不可公约的（命题X.11）。</p>
+<p>因此：AC、CB上的正方形之和与AC、CB构成的矩形的两倍是不可公约的，DL与MF是不可公约的。所以：DM与MG也是不可公约的（命题X.12、X.13、VI.1、X.11）。</p>
+<p>又，它们是有理的，所以：DG是二项线（命题X.36）。</p>
+<p>也可证明，它是一个第三二项线。</p>
+<p>类似地，我们可以推断，DM大于MG，且DK与KM是可公约的。</p>
+<p>又，DK、KM构成的矩形等于MN上的正方形，所以：DM上的正方形大于MG上的正方形，其差为一个与DM可公约的线段上的正方形。</p>
+<p>又线段DM、MG皆与DE在长度上不可公约。</p>
+<p>所以：DG是一个第三二项线（定义X.7）。</p>
+<p>所以：如果一条有理线段上的矩形与一个第二双中项线上的正方形相等，那么，该矩形的另一边是第三二项线。</p>
+<h6 id="证完">证完</h6>
+<h5 id="注解">注解</h5>
+<p>这一命题应用在命题X.72中。</p>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

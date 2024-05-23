@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="第三同读" />
+  <title>宇墨学几何原本</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">宇墨学几何原本</h1>
+<p class="author">第三同读</p>
+</header>
+<h2 id="命题xii.2">命题XII.2</h2>
+<p>圆与圆之比等于直径上的正方形之比。</p>
+<p>设：ABCD、EFGH是圆，BD、FH为它们的直径。</p>
+<p>那么我说：圆ABCD比EFGH等于BD上的正方形比FH上的正方形。</p>
+<p>因为：如果BD上的正方形比FH上的正方形不等于圆ABCD比EFGH，那么，BD上的正方形比FH上的正方形等于圆ABCD比小于圆EFGH的面积或者大于圆EFGH的面积。</p>
+<p>首先，令成比例的面积S小于圆EFGH。</p>
+<p>令：正方形EFGH内接于圆EFGH，那么，内接正方形大于圆EFGH的一半，因为，如果过点E、F、G、H作圆的切线，那么，正方形EFGH等于圆外切正方形的一半，而圆小于外切正方形，于是：正方形EFGH大于圆EFGH的一半（命题IV.6、III.17）。</p>
+<p>过点K、L、M、N二等分圆弧EF、FGGH、HE。连接EK、KF、FL、LG、GM、MH、HN、NE。</p>
+<p>莫佩蒂北极考察成功</p>
+<p>17世纪，特别是1730年前，欧洲大陆的学术界被勒内·笛卡儿的物理学支配。笛卡儿断言：地球在赤道地带平坦。但牛顿的物理学却认为：地球在两极处平坦。1736至1737年，法国科学院派出两支考察队，一支到瑞典境内的北极圈，另一支到赤道地带，通过大地测量以确定孰是孰非。莫佩蒂带领的北极考察队在拉普兰地区的大地测量得以探明地球在两极处平坦，这印证了牛顿观点的正确。图为莫佩蒂穿戴着北方服饰，以祝贺北极考察的成功。</p>
+<p>于是：三角形EKF、FLG、GMH、HNE的每一个也大于三角形所在的弓形的一半，因为：如果过点K、L、M、N向圆作切线，在线段EF、FG、GH、HE上作平行四边形，那么，三角形EKF、FLG、GMH、HNE的每一个皆是所在平行四边形的一半，同时，包含它的弓形小于它所在的平行四边形，于是：三角形EKF、FLG、GMH、HNE皆大于它们所在弓形的一半（命题III.17）。</p>
+<p>于是：平分其余的圆弧，连接弦线，从分点作弦，这样重复作下去，我们将得到一个弓形的和小于圆EFGH超过面积S的部分。</p>
+<p>因为：在第十卷第一定理中已经证明，如果两个不相等量，每次从大量中减去大于一半的量，若干次后，所余的量必小于较小的量（命题X.1）。</p>
+<p>令：圆EFGH的EK、KF、FL、LG、GM、MH、HN、NE上的弓形之和小于圆与面积S的差。</p>
+<p>所以余下的多边形EKFLGMHN大于面积S。</p>
+<p>令：内接于圆ABCD的多边形AOBPCQDR，相似于多边形EKFLGMHN；</p>
+<p>所以BD上的正方形比FH上的正方形，等于多边形AOBPCQDR比多边形EKFLGMHN（命题XII.1）。</p>
+<p>但是，BD上的正方形比FH上的正方形如同圆ABCD比面积S；所以，圆ABCD比面积S如同多边形AOBPCQDR比多边形EKFLGMHN（命题V.11）。</p>
+<p>所以由更比，圆ABCD比内接多边形如同面积S比多边形EKFLGMHN（命题V.16）。</p>
+<p>但是圆ABCD大于内接于它的多边形，所以面积S大于多边形EKFLGMHN。</p>
+<p>但是它也小于多边形EKFLGMHN，这是不可能的。</p>
+<p>所以，BD上的正方形比FH上的正方形不同于圆ABCD比圆EFGH小的面积；类似地，我们也可以证明EFGH比一个小于圆ABCD的面积，不同于FH上的正方形比BD上的正方形。</p>
+<p>其次，可证得圆ABCD比一个大于圆EFGH的面积，也不同于BD上的正方形与FH上的正方形。</p>
+<p>假设可能，令成比例的较大的面积是S。</p>
+<p>所以，由逆比，FH上的正方形比DB上的正方形，等于面积S比圆ABCD。</p>
+<p>但是，面积S比圆ABCD等于圆EFGH比小于圆ABCD的一个面积。</p>
+<p>所以，FH上的正方形比BD上的正方形等于圆EFGH比小于圆ABCD的某个面积。已经证明了这是不可能的。</p>
+<p>所以，BD上的正方形比FH上的正方形不同于圆ABCD比大于圆EFGH的某个面积。又已经证明了：成比例的小于圆EFGH的面积是不存在的，所以，BD上的正方形比FH上的正方形等于圆ABCD比圆EFGH。</p>
+<p>所以，圆与圆之比等于直径为边的正方形之比。</p>
+<h6 id="证完">证完</h6>
+<h5 id="注解">注解</h5>
+<p>在上一命题中，圆的内接相似多边形与圆的直径上的正方形成比例。根据相似原则，其圆也成比例。</p>
+<p>引理</p>
+<p>若面积S大于圆EFGH，那么，可得面积S比圆ABCD同于圆EFGH比小于圆ABCD的某个面积。</p>
+<p>设：面积S比圆ABCD同于圆EFGH比面积T。</p>
+<p>那么我说，面积T小于圆ABCD。</p>
+<p>因为，面积S比圆ABCD同于圆EFGH比面积T，所以由更比，面积S比圆EFGH等于圆ABCD比面积T。</p>
+<p>但是，面积S大于圆EFGH，所以圆ABCD大于面积T。</p>
+<p>因此，面积S比圆ABCD同于圆EFGH比小于圆ABCD的某个面积。</p>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

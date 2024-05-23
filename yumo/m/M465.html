@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="第三同读" />
+  <title>宇墨学几何原本</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">宇墨学几何原本</h1>
+<p class="author">第三同读</p>
+</header>
+<h2 id="命题xii.5">命题XII.5</h2>
+<p>以三角形为底且等高的棱锥之比等于两底之比。</p>
+<p>设：两个以三角形ABC、DEF为底，以点G、H为顶点且等高的棱锥。</p>
+<p>那么我说：底ABC比DEF等于棱锥ABCG比棱锥DEFH。</p>
+<p>因为：如果棱锥ABCG比棱锥DEFH不等于底ABC比底DEF，那么：底ABC比底DEF也不等于棱锥ABCG比小于或者大于棱锥DEFH的某个立体。</p>
+<p>首先，令其属于第一种情况，其中成比例的是一个较小的立体W。</p>
+<p>将棱锥DEFH分为两个相等且相似于原棱锥的棱锥，和两个相等的棱柱。</p>
+<p>而两个棱柱大于原棱锥的一半（命题XII.3）。</p>
+<p>再，类似地两分所得棱锥，依次继续，直到由棱锥DEFH得到某些小于棱锥DEFH与立体W的差的棱锥（命题X.1）。</p>
+<p>令：所得棱锥是DQRS和STUH。那么：其余量，即在棱锥DEFH内剩下的棱柱之和大于立体W。</p>
+<p>类似地，依照分棱锥DEFH的次数，再分棱锥ABCG，于是：底ABC比底DEF等于在棱锥ABCG中的棱柱之和比棱锥DEFH中的棱柱之和（命题XII.4）。</p>
+<p>又，底ABC比底DEF等于棱锥ABCG比立体W；于是：棱锥ABCG比立体W等于在棱锥ABCG中的棱柱之和比在棱锥DEFH中的棱柱之和。所以：由更比可得，棱锥ABCG比在它中的棱柱之和等于立体W比在棱锥DEFH中的棱柱之和（命题V.11、V.16）。</p>
+<p>又，棱锥ABCG大于在它中的所有棱柱之和，所以：立体W也大于在棱锥DEFH中的所有棱柱之和。</p>
+<p>又，它也小于，这是不可能的。</p>
+<p>所以：棱柱ABCG比小于棱锥DEFH的任何立体也不等于底ABC比底DEF。</p>
+<p>类似地，也可以证明，棱锥DEFH比小于棱锥ABCG的任何立体也不等于底DEF比底ABC。</p>
+<p>我进一步说，棱锥ABCG比任何大于棱锥DEFH的立体也不等于底ABC比底DEF。</p>
+<p>因为：如果可能，令其比较大的立体W有此比。</p>
+<p>于是：由反比可得，底DEF比底ABC等于立体W比棱锥ABCG。</p>
+<p>又，以前已经证明，立体W比立体ABCG等于棱锥DEFH比某个小于棱锥ABCG的立体；所以：底DEF比底ABC等于棱锥DEFH比小于棱锥ABCG的某个立体，这已经证明是荒谬的（命题XII.2、引理、V.11）。</p>
+<p>所以：棱锥ABCG比任何大于棱锥DEFH的立体不等于底ABC比底DEF。</p>
+<p>这点已证明是不合理的。</p>
+<p>所以：底ABC比底DEF等于棱锥ABCG比棱锥DEFH。</p>
+<p>所以：以三角形为底且等高的棱锥之比等于两底之比。</p>
+<h6 id="证完">证完</h6>
+<h5 id="注解">注解</h5>
+<p>下一命题归纳这一命题，棱锥之底可能是任意多边形，不仅仅是三角形。在下一命题中，本命题用来表明棱柱可以被切分为三个相等的棱锥。</p>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

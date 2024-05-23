@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="第三同读" />
+  <title>宇墨学几何原本</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">宇墨学几何原本</h1>
+<p class="author">第三同读</p>
+</header>
+<h2 id="命题vii.34">命题VII.34</h2>
+<p>给定两个数，能找出它们能测尽的数中的最小数。</p>
+<p>设：a和b是两个给定的数。</p>
+<p>现在要求的是：找出它们能测尽的数中的最小数。</p>
+<p>a和b要么是互质数，要么不是。</p>
+<p>首先，令其为互质数，a与b相乘得c。</p>
+<p>那么b与a相乘得c，于是：a和b测尽c。</p>
+<p>我要进一步说：该数是能被a、b测尽的最小数。</p>
+<p>如果不是最小，那么：a和b将测尽某个数d小于c。</p>
+<p>伽利略</p>
+<p>伽利略（1564—1642年），意大利物理学家、天文学家，主张研究自然界必须进行系统的观察和实验。他通过实验，推翻了被奉为圭臬的亚里士多德关于”物体下落的速度和重量成比例”的学说，建立了落体定律。他还发现物体的惯性定律、摆振动的等时性、抛物体运动规律，并确定了“伽利略相对性原理”，因而被认为是经典力学和实验物理学的先驱。同时，他也是利用望远镜观测天体取得大量成果的第一人，他在天文学上的重要发现有力地证明了哥白尼的日心学。他主张：自然之书以数学特征写成。</p>
+<p>令：在e中有多个单位，等于a测尽d的次数。在f中有多个单位，其次数等于b测尽d的次数。</p>
+<p>那么：a乘e得d，b乘f得d。</p>
+<p>所以：a与e的乘积等于b与f的乘积，所以：a比b等于f比e（定义VII.15、命题VII.19）。</p>
+<p>又：a和b是互质数，互质数是同比数对中最小的一对，所以：b测尽e等于后项测尽后项（命题VII.21、VII.20）。</p>
+<p>又因为：a乘b、e得c、d，所以：b比e等于c比d。</p>
+<p>而b测尽e，所以：c也测尽d。大者测尽小者，这是不可能的（命题VII.17）。</p>
+<p>所以：a和b测不尽小于c的任何数。所以：c是a、b可测尽的最小数。</p>
+<p>进一步，令：a和b不是互质数，f和e是与a和b有相等比值的最小数。</p>
+<p>于是：a和e相乘等于b和f相乘（命题VII.33、VII.19）。</p>
+<p>a与e相乘构成c，那么：b与f相乘构成c。所以：a和b测尽c。</p>
+<p>我再进一步说：它们也是可测尽的最小数。</p>
+<p>如果不是，那么a和b测尽某个数d小于c。</p>
+<p>令：在g中有多个单位，等于a测尽d的次数，在h中有多个单位，等于b测尽d的次数。那么：a乘以g构成d，b乘以h构成d，于是：a与g的乘积等于b与h的乘积，于是：a比b等于h比g（命题VII.19）。</p>
+<p>又：a比b等于f比e，于是：f比e等于h比g（命题V.11）。</p>
+<p>又：f和e是最小互质数，并且最小数对的大小两数分别测尽具有同比的大小两数，所得次数相同。于是：e测尽g（命题VII.20）。</p>
+<p>又因为：a乘以e、g得到c和d，于是：e比g等于c比d（命题VII.17）。</p>
+<p>又：e测尽g，于是c也测尽d。较大数测尽较小数，这是不可能的。</p>
+<p>所以：a和b测不尽小于c的任何数。</p>
+<p>所以：c是a和b可测尽的最小数。</p>
+<p>所以：给定两个数，能找出它们能测尽的数中的最小数。</p>
+<h6 id="证完">证完</h6>
+<h5 id="注解">注解</h5>
+<p>这一命题应用在命题VII.36和VIII.4中。</p>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="第三同读" />
+  <title>宇墨学几何原本</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">宇墨学几何原本</h1>
+<p class="author">第三同读</p>
+</header>
+<h2 id="命题iii.36">命题III.36</h2>
+<p>如果圆外的一点向圆引两条直线，一条与圆相切，一条穿过圆，那么被圆截得的线段与该点到凸圆之间的线段为边构成的矩形的面积等于该点向圆引的切线所构成的正方形的面积。</p>
+<p>设：D为圆ABC外的一点，从D点向圆ABC引两条线段DCA、DB，使DCA穿过圆，DB与圆相切。</p>
+<p>那么我说：AD、DC构成的矩形的面积等于DB为边的正方形的面积。</p>
+<p>DCA要么穿过圆心，要么不穿过圆心。</p>
+<p>先令其穿过圆心，假定F为圆ABC的圆心，连接FB，于是：角FBD为直角（命题III.18）。</p>
+<p>又因为：AC在F点被平分，CD是其加线。所以：AD、DC构成的矩形的面积加FC为边的正方形的面积等于FD为边的正方形的面积（命题II.6）。</p>
+<p>又因为：FC等于FB。所以：AD、DC构成的矩形的面积加FB为边的正方形的面积等于FD为边的正方形的面积。</p>
+<p>又：FB、BD为边的正方形的面积之和等于FD为边的正方形的面积。</p>
+<p>所以：AD、DC构成的矩形的面积加FB为边的正方形的面积等于FB、BD为边的正方形的面积之和（命题I.47）。</p>
+<p>令：以上每个减去FB为边的正方形的面积；于是：余下的AD、DC构成的矩形的面积等于切线DB为边的正方形的面积。</p>
+<p>再令：DCA不穿过圆ABC的圆心，设圆心为E，从E点作EF垂直于AC，连接EB、EC、ED（命题III.1）。</p>
+<p>于是：角EBD是直角（命题III.18）。</p>
+<p>又因为：线段EF穿过圆心，与另一条不过圆心的线段AC形成直角，那么也平分该线。所以：AF等于FC（命题III.3）。</p>
+<p>因为线段AC在F点被平分，CD是其增加线。所以：AD、DC构成的矩形的面积加FC为边的正方形的面积就等于FD为边的正方形的面积（命题II.6）。</p>
+<p>托勒密的地图</p>
+<p>公元2世纪，克劳狄·托勒密继承了希腊的全部科学与哲学遗产，并把前人的事业发扬光大。他在其著作《天文学大成》中，特别记载了地心宇宙体系，即地球静止不动，处于宇宙的中心，周围是一条接一条的天空轨道，月球、太阳和其他行星沿着这条轨道运动，这一观点直到文艺复兴时期始终占统治地位。《天文学大成》既阐述了当时的天文学知识，更有完善的平面三角学和球面三角学的论述。在《地理学指南》一篇中，托勒密阐述了新的地图绘制方法，并绘制带有8000个地区坐标（经度和纬度）的地图。在地图上标明上北下南、左西右东的做法也来源于此。</p>
+<p>令：以上每个加上FE为边的正方形的面积。</p>
+<p>于是：AD、DC构成的矩形的面积加上CF、FE为边的正方形的面积等于FD与FE为边的正方形的面积之和。</p>
+<p>又：EC为边的正方形的面积等于CF、FE构成的正方形的面积之和，因为角EFC是直角，且ED为边的正方形的面积等于DF、FE构成的正方形的面积之和。</p>
+<p>所以：AD、DC构成的矩形的面积加EC为边的正方形的面积等于ED为边的正方形的面积（命题I.47）。</p>
+<p>又：EC等于EB。所以：AD、DC构成的矩形的面积加EB为边的正方形的面积等于ED为边的正方形的面积。</p>
+<p>又：EB、BD为边的正方形的面积之和等于ED为边的正方形的面积，因为角EBD是直角。所以：AD、DC构成的矩形的面积加EB为边的正方形的面积，等于EB、BD为边的正方形的面积之和（命题I.47）。</p>
+<p>令：以上每个减去EB为边的正方形的面积。</p>
+<p>于是：余下的AD、DC构成的矩形等于DB为边的正方形的面积。</p>
+<p>所以：如果圆外的一点向圆引两条直线，一条与圆相切，一条穿过圆，那么被圆截得的线段与该点到凸圆之间的线段为边构成的矩形的面积等于该点向圆引的切线所构成的正方形的面积。</p>
+<h6 id="证完">证完</h6>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

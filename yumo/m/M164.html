@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="第三同读" />
+  <title>宇墨学几何原本</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">宇墨学几何原本</h1>
+<p class="author">第三同读</p>
+</header>
+<h2 id="命题v.23">命题V.23</h2>
+<p>如果有三个量对应比另三个量，比值相同，则它们组成调动比例，也成首末比。</p>
+<p>设：三个量为a、b、c，另三个量为d、e、f，它们一一对应，成相等比例。设它们组成调动比例，那么a比b等于e比f，b比c等于d比e（定义V.18）。</p>
+<p>那么我说：a比c等于d比f。</p>
+<p>另：作a、b、d的等倍量g、h和k，再作c、e、f的等倍量l、m和n。</p>
+<p>那么因为g、h是a、b的等倍量，部分与整体有相等的比。</p>
+<p>所以：a比b等于g比h（命题V.15）。</p>
+<p>因为同样理由，e比f等于m比n，a比b等于e比f。</p>
+<p>所以：g比h等于m比n（命题V.11）。</p>
+<p>再因为b比c等于d比e，则更比例为：b比d也等于c比e（命题V.16）。</p>
+<p>又因为h、k是b、d的等倍量，由于部分与部分有相等的比，所以：b比d等于h比k（命题V.15）。</p>
+<p>而b比d等于c比e，所以：h比k也等于c比e（命题V.11）。</p>
+<p>又因为：l、m是c、e的相等倍数，所以：c比e等于l比m（命题V.15）。</p>
+<p>又：c比e等于h比k，所以：h比k也等于l比m。</p>
+<p>且更比例为：h比l等于k比m（命题V.11、V.16）。</p>
+<p>又，也可以证明：g比h等于m比n。</p>
+<p>既然因为：三个量g、h、l与另三个量k、m、n对应成比例，并构成调动比。</p>
+<p>所以：是首末比，如果g大于l，那么k也大于n；如果相等，那么后者也相等；如果小于，那么后者也小于（命题V.21）。</p>
+<p>又：g和k是a和d的等倍量，1和n是c和f的等倍量。</p>
+<p>所以：a比c等于d比f（定义V.5）。</p>
+<p>所以：如果有三个量对应比另三个量，比值相同，则它们组成调动比例，也成首末比。</p>
+<h6 id="证完">证完</h6>
+<h5 id="注解">注解</h5>
+<p>这一命题说，当a、b、c与d、e、f是相同或不同类，如果a：b＝e：f，b：c＝d：e，那么a：c＝d：f。</p>
+<p>这里的证明用了命题V.16以及更比例，这意味着，仅仅适应于当所有量是同类量的情况。这一证明是笨拙的。</p>
+<p>以下是证明的总结：</p>
+<p>假定a：b＝e：f，b：c＝d：e。</p>
+<p>证明：a：c＝d：f。</p>
+<p>设：n和m是两个任意数，根据命题V.15，a：b＝na：nb，且e：f＝me：mf。</p>
+<p>所以，根据命题V.11，na：nb＝me：mf。</p>
+<p>因为b：c＝d：e，得b：d＝c：e（但要求所有量是同类量）。同理，nb：nd＝b：d＝c：e＝mc：me。</p>
+<p>所以，由更比例可得，nb：mc＝nd：me。</p>
+<p>再用命题V.21的比例nb：mc＝nd：me以及na：nb＝me：mf，得：</p>
+<p>na &gt;＝&lt; mc 则 nd &gt;＝&lt; mf。</p>
+<p>对称性</p>
+<p>文艺复兴时期的艺术大师及数学家达•芬奇确信：美感完全建立于各部分之间的神圣比例上。在他的倡导与实践下，以比例和谐为指导进行构图设计成为艺术创作中一种流行至今的思想。在达•芬奇参与的布鲁内莱斯弯顶后期工程的设计中，我们可以看出他重申了柏拉图的思想：制约着大自然中的数字规律是自然界中的对称性根源，而创造性艺术家心灵中对数学观念的直观领悟则是艺术中的对称性的根源。</p>
+<p>所以：a：c＝d：f。</p>
+<p>虽然上一命题的比例首末比不依赖于定义V.4为类似公理，但这一命题却是一个使用无穷小的反比例是a＝c＝e，b＝e＝（a＋y），f＝（a＋2y）。这里，y是与a相关的无穷小的数。</p>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

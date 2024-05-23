@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="第三同读" />
+  <title>宇墨学几何原本</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">宇墨学几何原本</h1>
+<p class="author">第三同读</p>
+</header>
+<h2 id="命题xiii.15">命题XIII.15</h2>
+<p>如作棱锥一样，求作一个球的内接正方体；且证明球直径上的正方形是正方体一边上的正方形的三倍。</p>
+<p>设：给定球的直径为AB、C点切分AB、使AC是CB的两倍。在AB上建半圆ADB，过C作CD垂直于AB，连接DB。又设，正方形EFGH的边等于DB，过E、F、G、H作EK、FL、GM、HN与正方形EFGH所在的平面垂直，从EK、FL、GM、HN中截取EK、FL、GM、HN，分别等于EF、FG、GH、HE。连接KL、LM、MN、NK（命题VI.9、I.11、I.46、XI.12、I.3）。</p>
+<p>所以：正方体FN被建成，它由六个相等的正方形构成（定义XI.25）。</p>
+<p>现在要求证明，该正方体内接于已知圆，且球的直径上的正方形是正方体一边上的正方形的三倍。</p>
+<p>连接KG、EG。</p>
+<p>那么，因为：角KEG是直角，因为：KE也与平面EG成直角，当然，它也与直线EG成直角，所以：KG上的半圆过点E（定义XI.3）。</p>
+<p>又，GF也与直线FL、FE皆成直角，所以：GF与平面FK也成直角，因此，如果连接FK，那么，GF也将与FK成直角。同理，GK上的半圆也过F。</p>
+<p>类似地，它也过正方体其余的顶点。</p>
+<p>如果固定KG，使半圆旋转到开始位置，那么，该正方体内接于一个球。</p>
+<p>我进一步证明，它也内接于已知球。</p>
+<p>因为：GF等于FE，在F点上的角是直角，所以：EG上的正方形是EF上的正方形的两倍，而EF等于EK，所以：EG上的正方形是EK上的正方形的两倍，因此：GE、EK上的正方形之和，即GK上的正方形是EK上的正方形的三倍（命题I.47）。</p>
+<p>道尔顿</p>
+<p>约翰·道尔顿（1766—1844年），英国化学家、物理学家。道尔顿最大的贡献是在原子理论方面，在对甲烷和乙烯的化学成分的分析试验中，道尔顿发现了倍比定律。倍比定律既可以看做是原子论的一个推论，又可以看做是对原子论的一个证明。1808年，道尔顿的主要化学著作《化学哲学的新体系》出版，原子论正式问世。道尔顿的原子论是一次重大进步，他揭示出一切化学现象的本质都是原子运动，明确了化学的研究对象，使化学成为一门真正的学科。同时，原子论揭示了化学反应现象与本质的关系，这对科学方法论的发展、辩证自然观的形成以及整个哲学认识论的发展具有重要的意义。</p>
+<p>又，因为：AB是BC的三倍，同时，AB比BC同于AB上的正方形比BD上的正方形，所以：AB上的正方形是BD上的正方形的三倍。</p>
+<p>又，GK上的正方形也已被证明等于KE上的正方形的三倍。且KE等于DB，所以：KG也等于AB，又，AB是已知球的直径，所以：KG也等于已知球的直径。</p>
+<p>所以：内接于已知球的正方体被作出，球直径上的正方形是正方体一边上的正方形的三倍。</p>
+<h6 id="证完">证完</h6>
+<h5 id="注解">注解</h5>
+<p>本命题应用在命题XIII.18中。</p>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

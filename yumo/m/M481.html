@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="第三同读" />
+  <title>宇墨学几何原本</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">宇墨学几何原本</h1>
+<p class="author">第三同读</p>
+</header>
+<h2 id="命题xiii.2">命题XIII.2</h2>
+<p>如果一条线段上的正方形是它的部分线段为边的正方形的五倍，那么，这些线段的两倍被分成中外比时，其中较长的线是原线的所余部分。</p>
+<p>设：线段AB上的正方形是它的部分线段AC上的正方形的五倍，令CD是AC的两倍。</p>
+<p>那么我说：当CD被分成中外比时，较大线段是CB。</p>
+<p>在AB、CD上分别建正方形AF、CG，在AF上作图形，作出BE（命题I.46）。</p>
+<p>现在，因为：BA上的正方形是AC上的正方形的五倍，所以：AF是AH的五倍，所以：折尺形MNO是AH的四倍。</p>
+<p>又，因为：DC是CA的两倍，所以：DC上的正方形是CA上的正方形的四倍，即，CG是AH的四倍。而折尺形MNO也是AH的四倍，所以：折尺形MNO等于CG。</p>
+<p>又，因为：DC是CA的两倍，同时，DC等于CK，而AC等于CH，所以：KB也等于BH的两倍（命题VI.1）。</p>
+<p>又，LH、HB之和也是HB的两倍，所以：KB等于LH、HB之和。</p>
+<p>又，总折尺形MNO也被证明等于总CG，所以：余量HF等于BG。</p>
+<p>又，BG等于CD、DB构成的矩形，因为，CD等于DG，且HF是CB上的正方形，所以：CD、DB构成的矩形等于CB上的正方形。</p>
+<p>所以：DC比CB同于CB比BD。又，DC大于CB，所以：CB也大于BD。</p>
+<p>所以：当线段CD被分成中外比时，CB是较大线段。</p>
+<p>所以：如果一条线段上的正方形是它的部分线段为边的正方形的五倍，那么，这些线段的两倍被分成中外比时，其中较长的线是原线的所余部分。</p>
+<h6 id="证完">证完</h6>
+<p>引理</p>
+<p>也可证明出：两倍AC大于BC。</p>
+<p>如果不是，设BC是CA的两倍。</p>
+<p>于是：BC上的正方形等于CA上的正方形的四倍。</p>
+<p>所以：BC、CA上的正方形之和是CA上的正方形的五倍。而，根据假设，BA上的正方形也是CA上的正方形的五倍。</p>
+<p>所以：BA上的正方形等于BC、CA上的正方形之和，这是不可能的（命题VI.1）。所以：CB不是AC的两倍。</p>
+<p>类似地，我们也可以证明出，线段CA的两倍不小于CB；因为这更不合理了。</p>
+<p>所以：AC的两倍大于CB。</p>
+<h6 id="证完-1">证完</h6>
+<h5 id="注解">注解</h5>
+<p>这一命题没有在《原本》中再得以利用，它是前一命题XIII.1的逆命题。</p>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

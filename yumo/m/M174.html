@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="第三同读" />
+  <title>宇墨学几何原本</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">宇墨学几何原本</h1>
+<p class="author">第三同读</p>
+</header>
+<h2 id="命题vi.7">命题VI.7</h2>
+<p>如果两个三角形有一个角对应相等，其夹另外两个角的对应边成比例，剩余的那两个角皆小于或者皆不小于直角，那么这两个三角形是相似三角形，对应角所对的边成比例。</p>
+<p>设：三角形ABC和三角形DEF有一个角相等，角BAC等于角EDF，夹另外角ABC与角DEF的对应边成比例，即AB比BC等于DE比EF。剩余的角C和F小于一个直角。</p>
+<p>那么我说：三角形ABC与三角形DEF为相似三角形，即角C等于角F。</p>
+<p>如果角ABC不等于角DEF，那么其中一个必大于另一个。</p>
+<p>高斯</p>
+<p>高斯（1777—1855年），德国数学家、天文学家和物理学家，他被誉为历史上伟大的数学家之一，和阿基米得、牛顿并列，同享盛名。1798年高斯因证明代数基本定理获博士学位。他的成就遍及数学的各个领域，在数论、非欧几何、微分几何、超几何级数、复变函数论以及椭圆函数论等方面均有开创性贡献。他十分注重数学的应用，并且在对天文学、大地测量学和磁学的研究中也偏重于用数学方法进行研究。</p>
+<p>如果角ABC为大，建角ABG，使之等于角DEF（命题I.23）。</p>
+<p>那么因为：角A等于角D，角ABG等于角DEF，所以：角AGB等于角DFE（命题I.32）。所以：AB比BG等于DE比EF（命题VI.4）。</p>
+<p>因为：DE比EF等于AB比BC，于是AB比BC同AB比BG有相等比值。</p>
+<p>所以：BC等于BG，所以：在C点的角也等于角BGC（命题V.11、V.9、I.5）。</p>
+<p>又假设C角小于直角，于是：角BGC也小于直角。</p>
+<p>所以：它的邻角AGB大于直角（命题I.13）。</p>
+<p>而它又被证明等于角F，所以：角F也大于一个直角，而它已被假设小于直角，这是荒谬的。所以：角ABC等于角DEF。</p>
+<p>又：角A也等于角D，所以：角C等于角F（命题I.32）。</p>
+<p>所以：三角形ABC与三角形DEF是相似三角形。</p>
+<p>再令：假设角C和F不小于直角。</p>
+<p>那么我说：在这种情况下，三角形ABC也与三角形DEF呈等角关系。</p>
+<p>在这同一结构下，我们同样可以证明BC等于BG，于是：角C也等于角BGC（命题I.5）。</p>
+<p>又：角C不小于直角，那么角BGC也不小于直角。</p>
+<p>于是：在三角形BGC中，有两个三角形之和不小于180°，这是不可能的（命题I.17）。所以：再一次，三角形ABC也不能不等于三角形DEF。所以：它们相等。</p>
+<p>又：A点的角也等于D点的角，所以角C等于角F（命题I.32）。</p>
+<p>所以：角ABC是角DEF的等角。</p>
+<p>所以：如果两个三角形有一个角对应相等，其夹另外两个角的对应边成比例，剩余的那两个角皆小于或者皆不小于直角，那么这两个三角形是相似三角形，对应角所对的边成比例。</p>
+<h6 id="证完">证完</h6>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

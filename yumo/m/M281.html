@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="第三同读" />
+  <title>宇墨学几何原本</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">宇墨学几何原本</h1>
+<p class="author">第三同读</p>
+</header>
+<h2 id="命题ix.14">命题IX.14</h2>
+<p>如果一个数是被质数能测尽的最小数，那么除了原来测尽它的数以外，任何别的质数不可能测尽它。</p>
+<p>设：数a是被质数b、c、d所测尽的最小数。</p>
+<p>那么我说：a只能被b、c或d所测尽，而不可能被别的质数所测尽。</p>
+<p>透视仪</p>
+<p>无论是古代的原始资料、中世纪文化遗产，还是文艺复兴初期工匠们的经验，它们都与数学知识息息相关，也为达·芬奇所用。他所做的都是关于如何把有关绘画、机械方面的应用与几何结合起来的研究。达·芬奇所憎恶的人是没有使用任何技巧而胡乱作画的所谓的艺术家。达·芬奇认为：没有几何知识，任何人都不可能成为真正的艺术家。正是由于掌握了数学技能，达·芬奇成为能安然坐于数学和艺术两个编年史上的仅有的几个人之一。</p>
+<p>丘利克雷</p>
+<p>德国数学家丘利克雷（1805—1859年）对数论、数学分析和数学物理有突出贡献，是解析数论的创始人之一。在分析学方面，丘利克雷是最早倡导严格化方法的数学家之一。他于1837年提出函数是x与y之间的一种对应关系的现代观点。在数论方面，他是高斯思想的传播者。1863年，丘利克雷撰写了《数论讲义》，对高斯划时代的著作《算术研究》作了明晰的解释并有所创见，这使高斯的思想得以广泛传播。1837年，他构造了丘利克雷级数。1838至1839年，他得到确定二次型类数的公式。1846年，他使用抽屉原理阐明代数数域中单位数的阿贝尔群结构。</p>
+<p>假如可能，设其被质数e所测尽，再设e不等于b、c、d中的任何一个。</p>
+<p>那么因为：e测尽a，设e测尽a得f。于是：e乘以f得a。而a被质数b、c、d所测尽。</p>
+<p>但是，如果两个数相乘得另一个数，一个质数可以测尽该乘积，那么该质数也可以测尽原始乘数中的一个。</p>
+<p>于是：b、c、d中的每个数测尽e或f中的一个（命题VII.30）。</p>
+<p>又，它们测不尽e，因为e是质数，且不等于b、c、d中的任何一个。</p>
+<p>于是：它们测尽f。而f小于a。这是不可能的，因为a被假设为被b、c、d所测尽的最小数。</p>
+<p>所以：除了b、c、d以外，没有质数可以测尽a。</p>
+<p>所以：如果一个数是被质数能测尽的最小数，那么除了原来测尽它的数以外，任何别的质数不可能测尽它。</p>
+<h6 id="证完">证完</h6>
+<h5 id="注解">注解</h5>
+<p>这一命题陈述了一组质数的最小公倍数是不能被另外的质数除尽的。最小公倍数事实上是那些质数的乘积，但这一点并没有提及。</p>
+<p>证明是清晰的，依赖于命题VII.30，即如果一个质数除尽一个乘积，那么它也除尽某个乘数。</p>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

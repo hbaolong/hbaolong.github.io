@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="第三同读" />
+  <title>宇墨学几何原本</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">宇墨学几何原本</h1>
+<p class="author">第三同读</p>
+</header>
+<h2 id="命题iv.4">命题IV.4</h2>
+<p>给定一个三角形可以作一个内切圆。</p>
+<p>设：ABC为给定的三角形。</p>
+<p>现在要求的是：作三角形ABC的内切圆。</p>
+<p>令：BD，CD平分角ABC、ACB，并相交于D点，从D点作DE、DF和DG分别垂直于AB、BC和CA（命题I.9、I.12）。</p>
+<p>因为：角ABD等于角CBD，直角BED也等于直角BFD，三角形EBD和FBD有两对角和一条边对应相等，对应边BD为公共边。</p>
+<p>所以：他们的余边彼此相等。所以：DE等于DF（命题I.26）。同理，DG也等于DF。</p>
+<p>所以：三条线段DE、DF和DG也彼此相等。</p>
+<p>所以：以D为圆心，以DE，DF或DG中的任意一条线为半径的圆也经过余下的点，并与线段AB、BC或CA相切，因为在E、F和G点的角是直角。</p>
+<p>假如圆不切于这些直线，而与它们相交，那么从尾点引出的垂直于直径的直线必然有一部分经过圆内，这是荒谬的。</p>
+<p>所以：以D为圆心，分别以线段DE、DF和DG为半径作的圆不能与线段AB、BC和AC相交，只能相切，所以圆内切于三角形ABC（命题III.16、定义V.5）。</p>
+<p>令其为FGE。</p>
+<p>于是：三角形ABC的内切圆EFG作了出来。</p>
+<p>所以：给定一个三角形可以作一个内切圆。</p>
+<h6 id="证完">证完</h6>
+<h5 id="注解">注解</h5>
+<p>补充出证明的漏洞是容易的，角等分线BD和CD不相交。</p>
+<p>赫龙公式</p>
+<p>亚里山大时代的赫龙是希腊非常重要的一名数学家，他在其他著作里评论过《几何原本》，但这些作品后来都失传了。1896年，他的著作《共制》被发现，他在书中陈述到：一个三角形的面积是s（s－a）（s－b）（s－c）的平方根，这里a＝BC，b＝AC，c＝AB，皆为三角形的边，S是周长的一半（a＋b＋c）/2。这一公式被后人称为“赫龙公式”。阿基米得或许知道这一公式，但没有确定的证据。赫龙完成了这个公式的证明。这里，我们来看看内切圆的前面部分。</p>
+<p>设：D是三角形ABC的内切圆的圆心，DE、DF、DG垂直于边（如欧几里得的证明）。这三条线段是圆的半径，长度为r。</p>
+<p>三角形ABD有第三边AB和高r。所以，它的面积是rAB/2。</p>
+<p>同样，三角形BCD的面积是rBC/2，三角形CDA的面积是rCA/2，把它们加在一起，我们可以发现三角形ABC的面积是r（AB＋BC＋CA）/2。</p>
+<p>所以，我们可得：三角形ABC面积＝rs。</p>
+<p>这是个有趣的结论。</p>
+<p>现在我们不管赫龙的证明，来看看外切圆。</p>
+<p>设：A’是A点的内角等分线上的外切圆圆心。从A’引垂线A’E’、A’F’、A’G’，垂直于三角形的边。它们是外切圆的半径rA。</p>
+<p>三角形ABA’有第三边AB和高A’E’，所以，它的面积是rAAB/2。</p>
+<p>同样，三角形BCA’的面积是rABC/2，三角形CAA’的面积是rAAC/2。</p>
+<p>三角形ABC的面积是三角形ABA’与ACA’之和减去三角形BCA’的差。</p>
+<p>所以，它的面积是rA（AB＋AC－BC）/2，即是rA（s－a）。</p>
+<p>所以：三角形（ABC）面积＝rs＝rA（s－a）＝rB（s－b）＝rC（s－c）。</p>
+<p>也可以表示为：。</p>
+<h6 id="证完-1">证完</h6>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

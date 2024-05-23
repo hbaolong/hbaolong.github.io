@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="第三同读" />
+  <title>宇墨学几何原本</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">宇墨学几何原本</h1>
+<p class="author">第三同读</p>
+</header>
+<h2 id="命题iii.7">命题III.7</h2>
+<p>连接直径上的非圆心的一点和圆上任一点所得的线段中，最长的是圆心所在的线段，且在其余线段中，靠近圆心的线段较远离的长；这一点到圆上有两条线段相等，它们各在最短线段的一边，同一直径上余下的一段最短。</p>
+<p>设：圆ABCD，AD为直径，F为直径上的非圆心的一个点，E为圆心，从F点引线段FB、FC、FG；</p>
+<p>那么我说：FA为最长，FD最短，FB大于FC。FC又大于FG。连接BE、CE和GE。</p>
+<p>那么因为：在任意三角形中两条边的和大于第三边。所以：EB与EF的和大于BF（命题I.20）；</p>
+<p>又：AE等于EB，所以：AF大于BF；又因为：BE等于CE，而FE是公共边。所以：BE与EF的和等于CE与EF的和。</p>
+<p>又：角BEF也大于角CEF；所以：边BF也大于边CF（命题I.24）；同理：CF也大于GF。</p>
+<p>又因为：GF与FE的和也大于EG，EG等于ED，GF与FE的和也大于ED（定义I.20）；</p>
+<p>令：从每个中减去EF；于是：其余数GF也大于其余数FD。所以：FA最大，FD最小，FB大于FC，而FC大于FG。</p>
+<p>我要进一步说：从F点到圆周的线段中只有两条相等，它们分别位于FD的两侧。</p>
+<p>令：在直线EF的E点上建角FEH，使之等于角GEF，连接FH（命题I.23）；</p>
+<p>那么因为：GE等于EH，而EF是公共边，GE、EF两边等于HE、EF两边。</p>
+<p>又：角GEF等于角HEF。所以：边FG等于边FH（命题I.4）。</p>
+<p>我再进一步说：另一条等于FG的直线不会从F点落到圆周上。</p>
+<p>假如可能，假如这条线FK成立；那么因为：FK等于FG。</p>
+<p>又：FH等于FG，FK也等于FH。于是：靠近穿过圆心的线段等于离得较远的线段。这是不可能的。</p>
+<p>第二代分析机</p>
+<p>19世纪中叶，尽管那时已发明了对数，但是，现有的算盘等简单计算工具已不能满足人们日益增长的对精确和复杂计算的更高需求，英国数学家巴贝奇为了设计一套依靠机器驱动的计算器，花费了一生中大半的时间来进行研究，但始终未能完成。图为1835年至1848年期间，巴贝奇设计的第二代分析机。</p>
+<p>所以：等于GF的另一条线段不会是从F点到圆周。</p>
+<p>因此：只有一条线段成立。</p>
+<p>所以：连接直径上的非圆心的一点和圆上任一点所得的线段中，最长的是圆心所在的线段，且在其余线段中，靠近圆心的线段较远离的长；这一点到圆上有两条线段相等，它们各在最短线段的一边，同一直径上余下的一段最短。</p>
+<h6 id="证完">证完</h6>
+<p>注解：</p>
+<p>这一命题的陈述有些令人费解，涉及从圆内的一点F到圆周上的一点的距离。点F被假定不是圆心。如果直径AD过F，那么A点上的某一个点是在圆周上离F点最远，且另一点D为最近。由于一个点从A到D在圆周上旅行，它向F点靠近。这一陈述的最后部分是，如果G是圆周上的一点，那么，有另外一个点H是在圆周上，它与F的距离相等（当然G既不是A也不是D，这只是一种假定）。</p>
+<p>注意：这一命题的陈述是含混的。短语“靠近过圆心的线段”到底是什么意思？它是指角吗？于是FB比FC更靠近FA，因为，角BFA小于角CFA。如果是这样，证明的过程就有细节的疏漏，角BEF大于角CEF，然而却没有证明。德·摩根马曾插入多种证明方式来弥补过这一逻辑漏洞。</p>
+<p>这一命题在《原本》中的其他地方再未被利用过。</p>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

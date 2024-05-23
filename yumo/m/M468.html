@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="第三同读" />
+  <title>宇墨学几何原本</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">宇墨学几何原本</h1>
+<p class="author">第三同读</p>
+</header>
+<h2 id="命题xii.8">命题XII.8</h2>
+<p>以三角形为底的相似棱锥之比是它们对应边的三次比。</p>
+<p>设：有以三角形ABC、DEF为底，以G、H为顶点的两个相似且有相似位置的棱锥。</p>
+<p>那么我说：棱锥ABCG比棱锥DEFH等于BC与EF的三次比。</p>
+<p>作平行六面体BGML和EHQP。</p>
+<p>那么，因为：棱锥ABCG与棱锥DEFH相似，所以：角ABC等于角DEF，角GBC等于角HEF，角ABG等于角DEH；且AB比DE等于BC比EF，又等于BG比EH。</p>
+<p>又，因为，AB比DE等于BC比EF，且夹等角的边对应成比例，所以：平行四边形BM相似于平行四边形EQ。同理，BN也相似于ER，BK相似于EO。</p>
+<p>所以：三个平行四边形MB、BK、BN相似于EQ、EO、ER。且三个平行四边形MB、BK、BN相似且相等于它们的对面，EQ、EO、ER也相似且相等于它们的三个对面（命题XI.24）。</p>
+<p>所以：立体BGML和EHQP是由同样多的相似面构成的。所以：立体BGML相似于立体EHQP。</p>
+<p>又，相似平行六面体之比是它们对应边的三次比，所以：立体BGML比立体EHQP等于它们的对应边BC与EF的三次比（命题XI.33）。</p>
+<p>所以：立体BGML比立体EHQP等于棱锥ABCG比棱锥DEFH，棱锥是平行六面体的六分之一，因为，棱柱是平行六面体的一半，且又是棱锥的三倍。所以：棱锥ABCG比棱锥DEFH等于它们的对应边BC与EF的三次比（命题XI.28、XII.7）。</p>
+<p>所以：以三角形为底的相似棱锥之比是它们对应边的三次比。</p>
+<h6 id="证完">证完</h6>
+<p>引理</p>
+<p>这一命题也表明，以多边形为底的相似棱锥的比，等于它们对应边的三次比。</p>
+<p>因为，如果把它们分成以三角形为底的棱锥，把以相似多边形为底的也分为同样个数的彼此相似的三角形，各对应三角形之比等于整体之比。</p>
+<p>于是：两棱锥各对应的以三角形为底的棱锥的比，等于两棱锥内以三角形为底的所有棱锥之和的比，即是等于以原多边形为底的棱锥之比。</p>
+<p>但是，以三角形为底的棱锥比以三角形为底的棱锥等于它们对应边的三次比；所以也有，以多边形为底的棱锥与相似多边形为底的棱锥的比等于它们对应边的三次比。</p>
+<h5 id="注解">注解</h5>
+<p>本命题应用在命题XII.12中，表明相似圆锥之比是它们底的直径的三次比，也用在命题XII.17的推论中。</p>
+<p>哥尼斯堡七桥问题</p>
+<p>哥尼斯堡是东普鲁士的首都，普莱格尔河横贯其中。河中有一小岛，河上有七座桥，将被河流隔开的三片市区A、C、D和小岛B连接起来。一天，有人提出疑问：能不能每座桥只走一遍，最后又回到原来的位置。1736年，欧拉证明了这样的路线是不可能的。欧拉把两座小岛和河的两岸分别看作四个点，而把七座桥看做是这四个点之间的连线，并且给出了所有能够一笔画出来的图形所应具有的条件。哥尼斯堡七桥问题被看做是拓扑学的先声。</p>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

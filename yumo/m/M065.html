@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="第三同读" />
+  <title>宇墨学几何原本</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">宇墨学几何原本</h1>
+<p class="author">第三同读</p>
+</header>
+<h2 id="命题ii.14">命题II.14</h2>
+<p>根据一个多边形，可以建一个与它面积相等的正方形。</p>
+<p>设：A为给定的多边形。</p>
+<p>现在要求的是：建一个正方形，其面积等于给定的多边形A的面积。</p>
+<p>令：建矩形BD，使之等于图形A的面积（命题I.45）；</p>
+<p>那么：如果BE等于ED，那么该正方形BD满足于A；</p>
+<p>如果不是，而是BE和ED中，其中有一条直线比另一条线长，假定BE是较长的线；延长BE至F，使EF等于ED；在BF上取其平分点G，以G为圆心，以GB或GF为半径作半圆BHF；延长DE至H，连接GH。</p>
+<p>那么：既然直线BF在G点上被平分，E点则为非平分点，包含BE、EF的矩形与以EG为边的正方形的面积之和等于以GF为边的正方形的面积（命题I.5）；</p>
+<p>而GF等于GH；</p>
+<p>所以：BE、EF为边构成的矩形与正方形GE的面积之和等于GH为边的正方形面积。</p>
+<p>而，HE、EG为边的正方形的面积的和等于GH为边的正方形面积，所以，BE、EF为边构成的矩形与正方形GE的面积之和等于HE、EG为边构成的正方形的面积之和（命题I.47）。</p>
+<p>令：分别减去正方形GE的面积；</p>
+<p>那么：余下的包含有BE、EF为边的矩形的面积也等于正方形HE的面积。</p>
+<p>又：因为EF等于ED，于是：矩形BE、EF的面积等于BD的面积，平行四边形BD的面积等于正方形HE的面积。而BD的面积等于多边形A的面积；于是：多边形A的面积也就等于EH为边的正方形的面积。</p>
+<p>于是：以EH为边，其大小等于多边形A的面积的正方形被建成。</p>
+<p>所以：根据一个多边形，可以建一个与它面积相等的正方形。</p>
+<h6 id="证完">证完</h6>
+<h1 id="第三卷-圆与角">第三卷　圆与角</h1>
+<p>中国《九章算术》第一章方田31题：“今有方田，周三十步，径十步。问为田几何？”这里需求的是田的面积。在这里，既给出了直径，又给出了圆周长，圆周率π＝3，和《圣经·旧约》里记载的所罗门建造宫殿时“又铸了一个铜海，样式是圆的，高五肘，径十肘，围三十肘”中的一样。中国《周髀算经》里，记述公元前1100年周公与商高的谈话：商高曰：“数之法出于圆方。”对于这句话，中国的赵爽在公元前222年，也就是秦始皇统一中国的前一年，挥笔注曰：“圆径一而周三。”</p>
+<p>本卷阐述圆、弦、割线、切线、圆心角、圆周角的一些定理。</p>
+<p>消失的地平线</p>
+<p>《消失的地平线》反映了康定斯基关于点、线、面的抽象绘画理论，三角形、圆形以及方形与直线的巧妙组合构成了一幅壮丽的图画。</p>
+<p>本卷提要</p>
+<ul>
+<li><p>命题III.1，如何找到一个圆的圆心。</p></li>
+<li><p>命题III.17，如何作出一个圆的切线。</p></li>
+<li><p>命题III.20、III.21、III.22，圆内的角。</p></li>
+<li><p>命题III.31，泰列斯理论，半圆内的直角、锐角与钝角理论。</p></li>
+<li><p>命题III.35，在圆内过一个点作出两弦，那么其中一弦的两个截面之乘积等于另一弦的两个截面之乘积。</p></li>
+<li><p>命题III.3、III.37，从圆外一点向圆分别作切线和交线，那么切线所构成的正方形等于交线与其圆外线的乘积，反之亦然。</p></li>
+</ul>
+<h2 id="定义">定义</h2>
+<h4
+id="定义iii.1-等圆就是直径或半径相等的圆">定义III.1　等圆，就是直径或半径相等的圆。</h4>
+<h4
+id="定义iii.2-直线与圆相切就是直线与圆有且只有一个公共点">定义III.2　直线与圆相切，就是直线与圆有且只有一个公共点。</h4>
+<h4
+id="定义iii.3-两圆相切就是两圆有且只有一个公共点">定义III.3　两圆相切，就是两圆有且只有一个公共点。</h4>
+<h4
+id="定义iii.4-圆心到圆内弦的垂线段相等称这些弦有相等的弦心距">定义III.4　圆心到圆内弦的垂线段相等，称这些弦有相等的弦心距。</h4>
+<h4
+id="定义iii.5-当垂线段较长时称该弦有较大的弦心距">定义III.5　当垂线段较长时，称该弦有较大的弦心距。</h4>
+<h4
+id="定义iii.6-弓形是由一条弦和一段弧构成的图形">定义III.6　弓形是由一条弦和一段弧构成的图形。</h4>
+<h4
+id="定义iii.7-弓形的角是由弧所对的弦和这段圆弧所夹的角">定义III.7　弓形的角是由弧所对的弦和这段圆弧所夹的角。</h4>
+<h4
+id="定义iii.8-在弓形弧上取一点连接该点与弧的两端点的二直线所夹的角称为弓形角">定义III.8　在弓形弧上取一点，连接该点与弧的两端点的二直线所夹的角称为弓形角。</h4>
+<h4
+id="定义iii.9-而且当夹角的二直线截出一段圆弧时该角被称为张于弧上的角">定义III.9　而且当夹角的二直线截出一段圆弧时，该角被称为张于弧上的角。</h4>
+<h4
+id="定义iii.10-由顶点在圆心角的两边和该两边所截一段圆弧所构成的图形称为扇形">定义III.10　由顶点在圆心角的两边和该两边所截一段圆弧所构成的图形，称为扇形。</h4>
+<h4
+id="定义iii.11-包含相等角的弓形称为相似弓形">定义III.11　包含相等角的弓形称为相似弓形。</h4>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

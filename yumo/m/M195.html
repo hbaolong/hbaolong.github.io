@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="第三同读" />
+  <title>宇墨学几何原本</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">宇墨学几何原本</h1>
+<p class="author">第三同读</p>
+</header>
+<h2 id="命题vi.28">命题VI.28</h2>
+<p>在已知线段上作一个面积与已知多边形相等的平行四边形，它是由取掉了相似于某个已知图形的平行四边形：这个已知图形必须不大于在原线段一半上的平行四边形并且这个平行四边形相似于取掉的图形。</p>
+<p>设：C为给定的多边形，AB为给定的线段，D为给定的平行四边形，C不大于线段AB的一半所建的相似于D的平行四边形。这个平行四边形又相似于取掉的图形，这个取掉的图形又相似于D。</p>
+<p>现在要求的是：在AB上建一个平行四边形，使之面积等于给定的多边形C的面积，并且这个平行四边形也是取掉相似于D的平行四边形而成的。</p>
+<p>令：在E点上平分线段AB，在EB边上作EBFG相似于D且有相似位置，完成平行四边形AG（命题I.9、I.18）。</p>
+<p>假如：AG等于C，就完成了作图。设平行四边形AG是补形。因为，在已知线段AB上有平行四边形AG，它等于已知图形C，并且它是取掉相似于D的平行四边形的图形GB而成的。</p>
+<p>又：如果不是，令HE大于C。</p>
+<p>因为HE等于GB，所以：GB也大于C。</p>
+<p>蜂房结构</p>
+<p>上帝将最好和最完美的智慧和数学思维赋予人类，同时也分一部分给某些无理智的动物，使它们有维持生命的本能。这其中最令人惊叹的是蜜蜂。蜂房是蜂蜜的容器，它由许许多多相同的六棱柱形组成，一个紧挨着一个，中间没有一丝空隙。蜜蜂希望有匀称规则的图案，也就是需要等边等角的图形。铺满整个平面区域的正多边形只有三种：正三角形、正方形和正六边形。凭着本能的智慧，蜜蜂选择了正六边形。因为使用同样多的材料，正六边形比正三角形和正方形具有更大的面积。人的智慧知道在周界相等的正多边形中，角越多面积越大。周界相同、面积最大的平面图形是圆。</p>
+<p>建KLMN等于GB减去C，并相似于D（命题VI.25）。</p>
+<p>又：D相似于GB，所以：KM也相似于GB。</p>
+<p>再令：KL对应于GE，LM对应于GF。</p>
+<p>那么，因为GB等于C和KM之和，所以：GB大于KM。</p>
+<p>所以：GE也大于KL，GF大于LM，作GO等于KL，GP等于LM。完成平行四边形OGPQ。</p>
+<p>于是：它相似于KM，所以：GQ也相似于GB，所以：GQ与GB有同一对角线（命题VI.21、I.26）。</p>
+<p>令：GQB为其对角线，完成图形。</p>
+<p>那么因为：BG等于C和KM之和，在它们中，GQ等于KM。</p>
+<p>半坡遗址残片</p>
+<p>与算术的产生相仿，最初的几何知识也从人们对形的直觉中萌发出来。史前人类首先从自然界本身提取几何形式，如注意到圆月与树木在形象上的区别，并在器皿制作、建筑设计和绘画装饰活动中加以再现。图中的西安半坡遗址出土的陶器残片，显示了人类早期的几何兴趣和原始的数形结合观念。</p>
+<p>于是：余值折尺形UWV等于余值C。</p>
+<p>又因为：PR等于OS，令QB与每个相加，于是：PB等于OB。</p>
+<p>又：OB等于TE，因为AE边也等于EB边，所以：TE也等于PB（命题I.36）。</p>
+<p>令：OS与每个相加。于是：TS等于折尺形VWU。</p>
+<p>又：折尺形VWU已证明等于C，于是：TS也等于C。</p>
+<p>所以：在已知线段上作一个面积与已知多边形相等的平行四边形，它是由取掉了相似于某个已知图形的平行四边形：这个已知图形必须不大于在原线段一半上的平行四边形并且这个平行四边形相似于取掉的图形。</p>
+<h6 id="证完">证完</h6>
+<h5 id="注解">注解</h5>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

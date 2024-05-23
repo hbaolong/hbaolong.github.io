@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="第三同读" />
+  <title>宇墨学几何原本</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">宇墨学几何原本</h1>
+<p class="author">第三同读</p>
+</header>
+<h2 id="命题iii.37">命题III.37</h2>
+<p>如果圆外的一点向圆引两条线段，一条与圆周相交，一条落在圆上，如果截圆的线段的全部与该点到凸弧之间圆外的线段构成矩形面积等于落在圆上的线段为边的正方形的面积，那么落在圆上的直线为圆的切线。</p>
+<p>设：D为圆ABC外的一点，从D点向圆引两条线段DCA、DB，使DCA穿过圆，DB与圆周的一点相交，使AD、DC构成的矩形的面积等于DB为边的正方形的面积。</p>
+<p>那么我说：DB是圆ABC的切线。</p>
+<p>令：作DE与圆ABC相切，F为圆心，连接FE、FB和FD（命题III.17、III.1）。</p>
+<p>于是：角FED是直角（命题III.18）。</p>
+<p>因为：DE与圆ABC相切，DCA过圆。那么：AD、DC构成的矩形面积等于DE为边的正方形面积（命题III.36）。</p>
+<p>又：AD、DC构成的矩形的面积也等于DB为边的正方形的面积；所以：DE为边的正方形的面积等于DB为边的正方形的面积。所以：DE等于DB。</p>
+<p>又FE等于FB；所以：DE、EF等于DB、BF，而FD为三角形共用的底。所以：角DEF等于角DBF（命题I.8）。</p>
+<p>又：角DEF是直角；所以：角DBF也为直角。</p>
+<p>又FB为半径，与圆的半径形成直角的线段，在其尾点与圆相切，所以，DB是圆的切线（命题III.16推论）。</p>
+<p>同样，圆心在AC上也可以证明出来。</p>
+<p>所以：如果圆外的一点向圆引两条线段，一条与圆周相交，一条落在圆上，如果截圆的线段的全部与该点到凸弧之间圆外的线段构成矩形面积等于落在圆上的线段为边的正方形的面积，那么落在圆上的直线为圆的切线。</p>
+<h6 id="证完">证完</h6>
+<h5 id="注解">注解</h5>
+<p>这一命题应用在命题IV.10中。</p>
+<h1 id="第四卷-圆与正多边形">第四卷　圆与正多边形</h1>
+<p>对于本书第一卷所述的“三大问题”，历代数学家费尽周折，直到1637年，笛卡儿创建了解析几何以后，尺规作图才有了准则，1882年，林德曼证明了π的超越性，即π不可能为任何整系数多项式的根，三大问题之一的“化圆为方的不可能性”才得到确立。1895年，德国克莱因总结了前人的研究，在《几何三大问题》一书中，给出了三大问题不可能用尺规作图的简明证法，彻底解决了两千多年来的悬案。</p>
+<p>本卷讨论了已知圆的某些内接和外切正多边形的尺规作图问题。</p>
+<p>理性主义者</p>
+<p>理性主义滥觞于笛卡儿，其后还有斯宾诺莎和莱布尼茨。在他们眼里，数学为真正可靠的知识提供了理想范型。倘若把数学家的发现以及获取新知识的方法用来认识世界，那么就能真正彻底地解释世界。</p>
+<p>本卷提要</p>
+<p>本卷的命题主要为建圆的内接和外切图形，建直线图形的内切圆和外接圆。</p>
+<p>仅有两个命题例外：命题IV.1在圆内建一条适宜的线段，命题IV.10在正五边形内建一特殊的三角形。</p>
+<h2 id="定义">定义</h2>
+<h4
+id="定义iv.1-当一个多边形上的顶点分别位于另一多边形的边时该图形被称为内接于另一图形">定义IV.1　当一个多边形上的顶点分别位于另一多边形的边时，该图形被称为内接于另一图形。</h4>
+<h4
+id="定义iv.2-类似地当一个多边形的各边分别经过另一个多边形的各顶点时被称为前图形外接于后图形">定义IV.2　类似地，当一个多边形的各边分别经过另一个多边形的各顶点时，被称为前图形外接于后图形。</h4>
+<h4
+id="定义iv.3-当一个多边形的各角的顶点都在一个圆周上时称该图形内接于圆">定义IV.3　当一个多边形的各角的顶点都在一个圆周上时，称该图形内接于圆。</h4>
+<h4
+id="定义iv.4-当一个多边形的各边都切于一个圆时称该多边形外切于圆">定义IV.4　当一个多边形的各边都切于一个圆时，称该多边形外切于圆。</h4>
+<h4
+id="定义iv.5-类似地当圆与一个多边形各边都相切时称该圆内切于此多边形">定义IV.5　类似地，当圆与一个多边形各边都相切时，称该圆内切于此多边形。</h4>
+<h4
+id="定义iv.6-当一个圆经过一个多边形的每个顶点时称该圆外接于该多边形">定义IV.6　当一个圆经过一个多边形的每个顶点时，称该圆外接于该多边形。</h4>
+<h4 id="定义iv.1iv.6">定义IV.1～IV.6</h4>
+<h4
+id="定义iv.7-当一条线段的两个端点位于圆周上时称该线段为圆的弦">定义IV.7　当一条线段的两个端点位于圆周上时，称该线段为圆的弦。</h4>
+<p>希波克拉底</p>
+<p>大约在公元前460年，希波克拉底出生在科斯岛的一个医生世家，在治病主要为迷信活动支配的时代，希波克拉底提出医学的最终性质是数学和数字，他幻想数学原则是一切事物的原则，数字比物质世界更具吸引力，数字拥有界定完美和体现现实思想的作用。</p>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

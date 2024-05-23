@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="第三同读" />
+  <title>宇墨学几何原本</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">宇墨学几何原本</h1>
+<p class="author">第三同读</p>
+</header>
+<h2 id="命题x.10">命题X.10</h2>
+<p>找出与一条线段不可公约的两条线段，一个是仅长度不可公约，另一个是线段上的正方形不可公约。</p>
+<p>设：a为给定的线段。</p>
+<p>现在要求的是：找出两条与a不可以公约的线段，其一仅为长度的不可公约，另一为线段上的正方形不可公约。</p>
+<p>令：两条直线b和c，b比c的比值不同于两个平方数之比，即它们不是相似平面数，b比c同于在a上的正方形比在d上的正方形，因为：我们已经知道怎么作出（命题X.6及其推论）。</p>
+<p>所以：a上的正方形与d上的正方形是可公约的量（命题X.6）。</p>
+<p>又因为：b比c不同于两个正方形的比值，所以：a上的正方形比d上的正方形皆不是两个平方数之比，所以：a在长度上与d不可以公约（命题X.9）。</p>
+<p>在a与d之间作一个比例中项e，所以a比d等于a上正方形比e上正方形，但a与d是长度不可公约的，于是：a上的正方形与e上的正方形也是不可公约的。所以：a与e是正方不可公约量（命题X.11）。</p>
+<p>所以：a的两条不可公约的线段d和e被发现，d仅仅在长度上不可公约，而e不仅在长度上同时在正方形上也不可公约。</p>
+<h6 id="证完">证完</h6>
+<h5 id="注解">注解</h5>
+<p>这一命题展示了定义XI.3中的线段。取线段d，于是a上的正方形比d上的正方形不是一个平方数比一个平方数。比如，如果a是一个正方形的边，d是该正方形的对角线，那么a上的正方形比d上的正方形的比率是1：2，这不是一个平方数比一个平方数。所以，d与a是正方可公约的（比率d：a是2的平方根）。又，如果e是a和d的比率中项，那么e与a是正方不可公约的（比率e：a是2的四次平方根）。</p>
+<p>很明显，这一命题是不真的。首先，它的证明应用了下一个命题。另外，“我们已经知道怎样做了”是显而易见的学生腔。最后，原始手稿中，这一命题没有标记数，而下一个命题的标记数则是命题10。</p>
+<p>虽然不真，但这一命题还是有保留的价值，因为它在命题X.27和其他命题中也被利用。</p>
+<p>圆锥曲线</p>
+<p>所谓圆锥曲线就是用平面在圆锥体上截出的平面图形，这最早由柏拉图学派发现，不过，他们并不知道双曲线有两支。公元前259年，阿波罗尼在他八卷本的《圆锥曲线》中描述了他研究的圆锥曲线的主要成果。阿波罗尼对圆锥曲线的研究水平极高，他用纯几何的方法处理圆锥曲线问题相当复杂。另外，他的工作表现了高超的几何思维能力，是古希腊数学的登峰造极之作。图中的圆锥曲线：（A）双曲线；（B）抛物线；（C）椭圆：（D）圆。</p>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>
