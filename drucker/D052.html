@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="第三同读" />
+  <title>德鲁克日志</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">德鲁克日志</h1>
+<p class="author">第三同读</p>
+</header>
+<h2 id="透过金庸读懂德鲁克">透过金庸读懂德鲁克</h2>
+<p>从大型机说起</p>
+<p>1946年的情人节，世界上第一台通用电子计算机（俗称电脑）“ENIAC”出生了，这是一个很会选日子</p>
+<p>的大小伙子。这也意味着认为进入了信息时代。</p>
+<p>当时，以及之后的很长时间，具有强大计算能力的计算机都是稀缺资源，以前需要非常多科学加计算</p>
+<p>的公式，这个大家伙很快就可以算出来。</p>
+<p>而且，这些计算机体积巨大，制作成本很高，所以，没法每人一台，知道大家轮流用，这就发明了一</p>
+<p>个叫做“哑终端”的设备。</p>
+<p>哑终端，简单来说，是大型机的一种输入、输出设备，一般由键盘、显示器和以及一些连接线组成，</p>
+<p>给科学家或者其他需要的人使用。哑终端没有计算能力，只是接受用户的输入，然后把大型机的输出</p>
+<p>再显示出来。</p>
+<p>在这种大型机/哑终端的结构下，一切事情都是大型机处理，哑终端只是一个普通的外设。没有处理能</p>
+<p>力。</p>
+<p>后来，PC出现了。PC是个人电脑，在微软和Intel的共同协作下，PC发展起来了，
+286、386、586、</p>
+<p>奔腾、至强等等，PC的处理能力越来越强，已经超过早起的大型机了。</p>
+<p>比尔盖茨有个梦想：让每个办公桌上都有一台PC。这个梦想确实实现了。</p>
+<p>在wintel时代，PC成了绝对的主力，科学家不再去实验室去通过哑终端提交任务了。他们自己的PC就</p>
+<p>可以解决大部分计算了。</p>
+<p>每台PC的处理能力也越来越强大。越来越多的软件也被开发出来应对这种强大的PC，为各种用户提供</p>
+<p>各种强大的能力。这时的普通人拥有了不久前科学家都没法拥有的计算能力。</p>
+<p>这时的人们认为，计算能力已经是富余的了。远远超过生活工作的需要了。一台PC在手，我就不需要</p>
+<p>和别人合作了。</p>
+<p>然而并不是，因为大家对计算的需求也增大了。开始寻找外星人，开始计算复杂的路径。开始计算π。</p>
+<p>这时，又出现了一家公司：Sun，你没听过？那么，Sun公司的产品你肯定听过，就是大名鼎鼎的</p>
+<p>“JAVA”。</p>
+<p>提出了一个口号：网络即计算机。也就是说，单个的PC其实没什么意义，联合起来的计算机才是</p>
+<p>计算机。</p>
+<p>Sun</p>
+<p>因为这时，无数的计算机通过网络在硬件和协议上连接起来了。而Sun提供了软件连接的方法，这就是</p>
+<p>JAVA。</p>
+<p>网络连接起来后，就出现了服务器的概念。刚开始服务器也就是给其他PC提供服务的机器，并没有什</p>
+<p>么特殊的，后来，服务器就不得了了。他们通过硬件、软件的集成，拥有了越来越高的计算、存储能</p>
+<p>力。</p>
+<p>而PC也拥有常人根本用不了的计算能力。这中间的区别在哪里？</p>
+<p>小插曲：</p>
+<p>关于终端（也就是给个人用的设备），有过三次进化，第一代是哑终端，就是只有键盘鼠标等没有计</p>
+<p>算能力的一些外设；第二代是富终端，就是PC；第三代是智能终端，比如现在的手机。</p>
+<p>一个任务，应该在服务的运行？还是应该在客户端运行？这个曾经引起过争议。</p>
+<p>有人认为，所有的计算都应该在服务端，客户端只需要提交、接受、显示就够了，因为服务器的处理</p>
+<p>能力足够。有人认为，所有的计算应该在每个PC上运行，服务器只需要做PC之间的信息交换就行了，</p>
+<p>因为每一太PC的处理能力是足够的。</p>
+<p>这两方都有道理，也都会带来一些问题。</p>
+<p>如果所有的计算都在服务器端运行，网络一点出现故障，客户端就什么也做不了。而如果所有计算都</p>
+<p>在客户端运行，服务器则会没有足够的信息进行更复杂的调度。</p>
+<p>这时，微软提供了一个新名词：Smart
+Client。也就是智能分配任务：一部分在服务端运行，一部分在</p>
+<p>客户端运行。（听起来是不是挺鸡贼？其实就是这么简单）。</p>
+<p>因为，不管服务器端计算能力有多强，随着大家的计算需求的花样百出，那个计算能力还是不够的，</p>
+<p>甚至会非常不够。（想想每天大家的地图计算需求，聊天需求，只做图形的需求，以及现在线上视音</p>
+<p>频教育和交流的需求！），如果所有的计算都在服务器端，都在中心，一方面客户端大量的计算能力</p>
+<p>被浪费，一方面服务器承担了巨大的压力，更主要的是，大量没有必要的交流在客户端和服务器之间</p>
+<p>反复传送，减低了效率。</p>
+<p>这就是我们这个时代的现状。</p>
+<p>现状，你手里的任何一个手机、一部电脑，甚至一块手表，它的处理能力都远远超过1946年情人节诞</p>
+<p>生的那台“巨型机”。你的手机里也有几十个软件，分别处理你的需求，这些软件会在本地处理大部分</p>
+<p>“计算”任务，比如拍照，比如编辑图片，比如计算你的位置，比如编码你的输入。</p>
+<p>然后，把一些需要巨型计算，或者需要交互的信息发送到服务端，由中心处理后再发给你。</p>
+<p>这就是我们这个时代的现状。虽然我们拥有了更加强大到不可思议的中心，我们也拥有了非常强大的</p>
+<p>每一个分支，在这样的时代，最好的确实不是超级中心+哑终端，也不少弱中心+富客户端，而是强大</p>
+<p>中心+智能终端。</p>
+<p>终端处理自己大部分事情，中心处理中心的事情。这样，你的手机也不会过于发热过于费电，而中心</p>
+<p>也不会频繁收到你的各种弱智的请求。一切才是最好的安排。</p>
+<h2 id="大纲">大纲</h2>
+<h2 id="百字摘要">百字摘要</h2>
+<h2 id="金庸案例">金庸案例</h2>
+<h2 id="时间消耗">时间消耗</h2>
+<h2 id="阅读理解">阅读理解：</h2>
+<h2 id="大纲-1">大纲：</h2>
+<h2 id="撰写">撰写：</h2>
+<h2 id="录音">录音</h2>
+<h2 id="一小时运动">一小时运动</h2>
+<h2 id="英文原文">英文原文</h2>
+<p>21 FEBRUARY</p>
+<p>Failure of Central Planning</p>
+<p>Any society in the era of the new technology would perish miserably
+were it to run the economy</p>
+<p>by central planning.</p>
+<p>perish：</p>
+<p>人或动物</p>
+<p>死亡；暴死</p>
+<p>miserably： 贫困地；可悲地；糟糕地；非常不幸地</p>
+<p>[ V ] ( formal , literary ) ( of people or animals</p>
+<ol start="14" type="a">
+<li></li>
+</ol>
+<p>) to die, especially in a sudden violent way</p>
+<p>regrettably</p>
+<p>The new technology will greatly extend the management area; many
+people now considered rankand-file will have to become capable of doing
+management work.</p>
+<p>rank-and-file：</p>
+<p>N-SING The rank and file are the ordinary members of an organization
+or the ordinary workers in a company, as</p>
+<p>opposed to its leaders or managers.</p>
+<p>普通成员</p>
+<p>And on all levels the demands on the manager’s responsibility and
+competence, her vision, her</p>
+<p>capacity to choose between alternate risks, her economic knowledge
+and skill, her ability to</p>
+<p>manage managers and to manage worker and work, her competence in
+making decisions, will be</p>
+<p>greatly increased.</p>
+<p>competence：</p>
+<p>能力；胜任</p>
+<p>[ U C ] ( also less frequent com·pe·ten·cy ) ~ (in sth) | ~ (in doing
+sth) the ability to do sth well</p>
+<p>The new technology will demand the utmost in decentralization.</p>
+<p>utmost：</p>
+<p>最大的；极度的</p>
+<p>( also less frequent ut·ter·most ) [ only before noun ] greatest;
+most extreme</p>
+<p>Any society in the era of the new technology would perish miserably
+were it to attempt to get rid</p>
+<p>of free management of autonomous enterprise so as to run the economy
+by central planning.</p>
+<p>perish：</p>
+<p>人或动物</p>
+<p>死亡；暴死</p>
+<p>miserably： 贫困地；可悲地；糟糕地；非常不幸地</p>
+<p>[ V ] ( formal , literary ) ( of people or animals</p>
+<ol start="14" type="a">
+<li></li>
+</ol>
+<p>) to die, especially in a sudden violent way</p>
+<p>regrettably</p>
+<p>And so would any enterprise that attempted to centralize
+responsibility and decision making at the</p>
+<p>top.</p>
+<p>It would go under like the great reptiles of the saurian age who
+attempted to control a huge body</p>
+<p>by a small, centralized nervous system that could not adapt to rapid
+change in the environment.</p>
+<p>go under：vt. 破产；沉没；屈服；失败</p>
+<p>reptiles：</p>
+<p>N-COUNT Reptiles are a group of cold-blooded animals which lay eggs
+and have skins covered with small, hard plates</p>
+<p>爬行动物</p>
+<p>saurian：n. a large reptile , especially a dinosaur
+大型爬行动物（尤指恐龙）</p>
+<p>called scales. Snakes, lizards, and crocodiles are reptiles.</p>
+<p>nervous：</p>
+<p>connected with the body’s nerves and often affecting you mentally or
+emotionally</p>
+<p>神经系统的</p>
+<h3 id="action-point">ACTION POINT:</h3>
+<p>Do you micromanage your employees?</p>
+<p>Start empowering them by making sure they are trained properly to do
+their jobs, and then give</p>
+<p>them responsibility to do it.</p>
+<p>Provide room for failure.</p>
+<p>The Practice of Management</p>
+<h2 id="february">21 FEBRUARY</h2>
+<h3 id="failure-of-central-planning">Failure of Central Planning</h3>
+<p>Any society in the era of the new technology would perish
+miserably</p>
+<p>were it to run the economy by central planning.</p>
+<p>The new technology will greatly extend the management area; many</p>
+<p>people now considered rank-and-file will have to become capable
+of</p>
+<p>doing management work. And on all levels the demands on the
+manager’s</p>
+<p>responsibility and competence, her vision, her capacity to choose
+between</p>
+<p>alternate risks, her economic knowledge and skill, her ability to
+manage</p>
+<p>managers and to manage worker and work, her competence in making
+de-</p>
+<p>cisions, will be greatly increased.</p>
+<p>The new technology will demand the utmost in decentralization.
+Any</p>
+<p>society in the era of the new technology would perish miserably were
+it to</p>
+<p>attempt to get rid of free management of autonomous enterprise so as
+to</p>
+<p>run the economy by central planning. And so would any enterprise that
+at-</p>
+<p>tempted to centralize responsibility and decision making at the top.
+It</p>
+<p>would go under like the great reptiles of the saurian age who
+attempted to</p>
+<p>control a huge body by a small, centralized nervous system that could
+not</p>
+<p>adapt to rapid change in the environment.</p>
+<h3 id="action-point-1">ACTION POINT:</h3>
+<p>Do you micromanage your employees? Start empower-ing</p>
+<p>them by making sure they are trained properly to do their jobs, and
+then</p>
+<p>give them responsibility to do it. Provide room for failure.</p>
+<h4 id="the-practice-of-management">The Practice of Management</h4>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

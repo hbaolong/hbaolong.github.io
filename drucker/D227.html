@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="第三同读" />
+  <title>德鲁克日志</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">德鲁克日志</h1>
+<p class="author">第三同读</p>
+</header>
+<h2 id="透过金庸读懂德鲁克">透过金庸读懂德鲁克</h2>
+<p>全真教是如何变成全假教的</p>
+<p>全真教是武林第一大派。金庸笔下有这个声誉的只有两个教派：少林和全真。</p>
+<p>少林在江湖上屹立千年不倒，而全真教从第一代武功天下第一的王重阳，到四处挨打的全真七子，到</p>
+<p>动不动就打群架的赵志敬、尹志平。短短的几十年里，江湖见证了一个武林第一派的衰落。</p>
+<p>全真教是王重阳一手创建的一个门派。王重阳在创建全真教之前，是抵抗金兵的义军首领。抵抗失败</p>
+<p>后，王重阳心灰意冷，就在抵抗军的基础上创建了全真教，这里大概也有为之后东山再起做的准备。</p>
+<p>只是，王重阳寿命不长。没多久就死了。</p>
+<p>王重阳临死前的全真教是全真教的顶峰。其时，王重阳武功天下第一，其师弟周伯通也是一个武学天</p>
+<p>才。王重阳还收了七个弟子，这七个弟子借着师父的名声还有自己的一些本事，在江湖上很是吃的</p>
+<p>开。全真教的声势也非常大。</p>
+<p>那么，这是的全真教就没有一点问题么？</p>
+<p>其实并不是。</p>
+<p>首先，王重阳就非常焦虑，因为他自己自己将不久于人世。可是七个弟子和其他四绝的武功差距太</p>
+<p>大。而且看起来他们肯定也跟不上。自己的师弟武功倒是不低，可是这个师弟思维不清晰，很难堪大</p>
+<p>任。</p>
+<p>人次难继呀。</p>
+<p>王重阳死后，全真教的名声肯定不会马上消失，它还是广大武林人士心中的武学圣地，它的那些门人</p>
+<p>弟子还是会说：“大胆，居然敢到重阳宫撒野……”</p>
+<p>但全真七子的武功又不足以保护自己不被撒野。只有一个为打群架做掩护的“天罡北斗阵”。各个弟子</p>
+<p>也只要拼命招收弟子，这样弟子就可以足够多的，可以组建足够多的“天罡北斗阵”。</p>
+<p>当然，如果欧阳锋的徒弟也没出息，黄药师的徒弟也没出息，洪七公的徒弟也没出息，一灯大师的徒</p>
+<p>弟也没出息，那么全真教也就不怕什么了，反正大家都是败家子，都没出息呗，反正我们人还多。</p>
+<p>可是，这个江湖并不由全真七子决定，黄药师的弟子大多没啥出息，而且黄药师倒行逆施自己毁掉了</p>
+<p>自己的弟子。洪七公就不同了，他收了黄药师的女婿郭靖做弟子。这个弟子可救厉害了。一灯大师的</p>
+<p>弟子也都没出息。可是欧阳锋的义子杨过可就厉害了。</p>
+<p>在之后的30多年中，郭靖、杨过先后崛起，让全真教四处挨打。一个个道德清明的子弟，变得犹如丧</p>
+<p>家之犬。也就决定了全真教的衰退。</p>
+<p>到了元朝中期，全真教基本上退出了武林。成为了永远的传说。</p>
+<h2 id="大纲">大纲</h2>
+<h2 id="百字摘要">百字摘要</h2>
+<h2 id="金庸案例">金庸案例</h2>
+<h2 id="时间消耗">时间消耗</h2>
+<h2 id="阅读理解">阅读理解：</h2>
+<h2 id="大纲-1">大纲：</h2>
+<h2 id="撰写">撰写：</h2>
+<h2 id="录音">录音</h2>
+<p>14 AUGUST</p>
+<p>Unrealized Business Potential</p>
+<p>“Opportunity is where you find it,” not where it finds you.</p>
+<p>Luck, chance, and catastrophe affect business as they do all human
+endeavors.</p>
+<p>But luck never built a business.</p>
+<p>Prosperity and growth come only to the business that systematically
+finds and exploits its</p>
+<p>potential.</p>
+<p>No matter how successfully a business organizes itself for the
+challenges and opportunities of the</p>
+<p>present, it will still be far below its optimum performance.</p>
+<p>Its potential is always greater than its realized actuality.</p>
+<p>Dangers and weaknesses indicate where to look for business
+potential.</p>
+<p>To convert them from problems into opportunities brings extraordinary
+returns.</p>
+<p>Opportunities have to be reflected against the experience of a
+company and against its past</p>
+<p>successes and failures.</p>
+<p>Sometimes all that is needed to accomplish this transformation is a
+change in the attitude of the</p>
+<p>executives.</p>
+<p>Three questions will bring out the hidden potential of a
+busi-ness:</p>
+<p>What are the restraints and limitations that make the business
+vulnerable?</p>
+<ol start="2" type="1">
+<li><p>What are the imbalances of the business?</p></li>
+<li><p>What are we afraid of, what do we see as a threat to this
+business— and how can we use it</p></li>
+</ol>
+<p>as an opportunity?</p>
+<ol type="1">
+<li></li>
+</ol>
+<h3 id="action-point">ACTION POINT:</h3>
+<p>Answer these three questions for your enterprise and move closer to
+optimum performance.</p>
+<p>Managing for Results</p>
+<h2 id="august">14 AUGUST</h2>
+<h3 id="unrealized-business-potential">Unrealized Business
+Potential</h3>
+<p>“Opportunity is where you find it,” not where it finds you.</p>
+<p>Luck, chance, and catastrophe affect business as they do all
+human</p>
+<p>en-deavors. But luck never built a business. Prosperity and growth
+come</p>
+<p>only to the business that systematically finds and exploits its
+potential. No</p>
+<p>matter how successfully a business organizes itself for the
+challenges and</p>
+<p>opportunities of the present, it will still be far below its optimum
+perfor-</p>
+<p>mance. Its potential is always greater than its realized
+actuality.</p>
+<p>Dangers and weaknesses indicate where to look for business
+potential.</p>
+<p>To convert them from problems into opportunities brings
+extraordinary</p>
+<p>re-turns. Opportunities have to be reflected against the experience
+of</p>
+<p>Acom-pany and against its past successes and failures. Sometimes all
+that</p>
+<p>is needed to accomplish this transformation is a change in the
+attitude of</p>
+<p>the executives. Three questions will bring out the hidden potential
+of</p>
+<p>Abusi-ness:</p>
+<p>•What are the restraints and limitations that make the business</p>
+<p>vulnerable?</p>
+<p>•What are the imbalances of the business?</p>
+<p>•What are we afraid of, what do we see as a threat to this
+business</p>
+<p>— and how can we use it as an opportunity?</p>
+<h3 id="action-point-1">ACTION POINT:</h3>
+<p>Answer these three questions for your enterprise and move</p>
+<p>closer to optimum performance.</p>
+<h4 id="managing-for-results">Managing for Results</h4>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

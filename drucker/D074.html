@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="第三同读" />
+  <title>德鲁克日志</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">德鲁克日志</h1>
+<p class="author">第三同读</p>
+</header>
+<h2 id="透过金庸读懂德鲁克">透过金庸读懂德鲁克</h2>
+<p>如何知道你该辞职了？</p>
+<p>如何知道你该辞职呢？这个是有技巧和判断标准的。</p>
+<p>首先，你应该是一个对生活追求的人，如果你对生活没什么追求，那么你在哪里都是一样的，那么，</p>
+<p>就是随便找个地方打工吧，只要它不开掉你，你就一直干下去。</p>
+<p>如果你对生活追求，如何判断自己应该辞职了呢？咱们来做个演绎。假如你喜欢吃。</p>
+<p>假如你喜欢吃，那么每天中午你都要面临在哪里吃饭，吃什么的问题。这个问题对于吃货来说，是一</p>
+<p>个很重要的问题。</p>
+<p>每天到了中午，你要想一下昨天吃的哪家的，吃的什么，他家的菜好吃么？你喜欢吃么？他家的菜是</p>
+<p>偶尔好吃？还是经常性的好吃？你还喜欢吃么？他家的菜，你感觉有提高的机会么？如果他家的菜的</p>
+<p>味道提高了，你会继续去吃么？</p>
+<p>好吧，你昨天换了一家，因为你前段时间的体验不好，所以换了一家，这家给的的感觉还可以么？他</p>
+<p>家的“宫保鸡丁”好吃么？如果不错的话，他家还有其他的菜好吃么？他家最经典的才是什么?他家有没</p>
+<p>有什么拿手菜是你没注意的？</p>
+<p>又过了挺久，你发现，这家的菜你都吃腻了。也没有提高的空间了。也没有新菜可以挖掘了，那就换</p>
+<p>一家。附近有新开的饭店么？有没有你没有发现的老店？有没有哪些从来没有人提到的店？可以去试</p>
+<p>试，说不定会有惊喜。</p>
+<p>如果没有，那就要扩大一下你的“觅食”范围了。从200米到500米到1000米。看看有没有新的餐厅，有</p>
+<p>趣的菜？</p>
+<p>有没有可能在某个地方买个烧饼，拿到某家去吃他家的羊汤？</p>
+<p>如果这些方式都试过了，你还是发现没吃的，那么，你可以辞职了，除非你可以说服公司搬家。</p>
+<h2 id="大纲">大纲</h2>
+<h2 id="百字摘要">百字摘要</h2>
+<h2 id="金庸案例">金庸案例</h2>
+<h2 id="时间消耗">时间消耗</h2>
+<h2 id="阅读理解">阅读理解：</h2>
+<h2 id="大纲-1">大纲：</h2>
+<h2 id="撰写">撰写：</h2>
+<h2 id="录音">录音</h2>
+<h2 id="一小时运动">一小时运动</h2>
+<h2 id="英文原文">英文原文</h2>
+<p>14 MARCH</p>
+<p>Universal Entrepreneurial Disciplines</p>
+<p>Entrepreneurial ：</p>
+<p>ADJ Entrepreneurial means having the qualities that are needed to
+succeed as an entrepreneur.</p>
+<p>质的</p>
+<p>具有创业素</p>
+<p>Disciplines：n. [管理] 纪律（discipline的复数）；科目</p>
+<p>The entrepreneurial disciplines are not just desirable; they are
+conditions for survival today.</p>
+<p>desirable：</p>
+<dl>
+<dt>想望的；可取的；值</dt>
+<dd>
+<p>(that)… | ~ (for sb) (to do sth) ( formal ) that you would like to
+have or do; worth having or doing</p>
+</dd>
+</dl>
+<p>得拥有的；值得做的</p>
+<p>Every institution—and not only businesses—must build into its
+day-to-day management four</p>
+<p>entrepreneurial activities that run in parallel.</p>
+<p>parallel:</p>
+<dl>
+<dt>平行的</dt>
+<dd>
+<p>(to/with sth) two or more lines that are parallel to each other are
+the same distance apart at every point</p>
+</dd>
+</dl>
+<p>One is organized abandonment of products, services, processes,
+markets, distribution channels,</p>
+<p>and so on that are no longer an optimal allocation of resources.</p>
+<p>allocation:</p>
+<p>划拨的款项；拨给的场地；分配的东西</p>
+<p>[ C ] an amount of money, space, etc. that is given to sb for a
+particular purpose</p>
+<p>Then any institution must organize for systematic, continuing
+improvement.</p>
+<p>Then it has to organize for systematic and continuous exploitation,
+especially of its successes.</p>
+<p>exploitation:</p>
+<p>work</p>
+<p>剥削；榨取</p>
+<p>( disapproving ) a situation in which sb treats sb else in an unfair
+way, especially in order to make money from their</p>
+<p>And finally, it has to organize systematic innovation, that is,
+create the different tomorrow that</p>
+<p>makes obsolete and, to a large extent, replaces even the most
+successful products of today in an</p>
+<p>organization.</p>
+<p>I emphasize that these disciplines are not just desirable; they are
+conditions for survival today.</p>
+<p>emphasize:</p>
+<p>强调；重视；着重</p>
+<p>to give special importance to sth</p>
+<h3 id="action-point">ACTION POINT:</h3>
+<p>Abandon what is about to be obsolete, develop a system to exploit
+your successes, and develop a</p>
+<p>systematic approach to innovation.</p>
+<p>“Management’s New Paradigms,” Forbes</p>
+<p>Management Challenges for the 21st Century</p>
+<p>The Next Society (Corpedia Online Program)</p>
+<h2 id="march">14 MARCH</h2>
+<h3 id="universal-entrepreneurial-disciplines">Universal Entrepreneurial
+Disciplines</h3>
+<p>The entrepreneurial disciplines are not just desirable;</p>
+<p>they are conditions for survival today.</p>
+<p>Every institution—and not only businesses—must build into its
+day-to-day</p>
+<p>management four entrepreneurial activities that run in parallel.</p>
+<p>One is organized abandonment of products, services, processes,
+markets,</p>
+<p>distribution channels, and so on that are no longer an optimal
+allocation</p>
+<p>of resources. Then any institution must organize for systematic,</p>
+<p>continuing improvement. Then it has to organize for systematic
+and</p>
+<p>continuous ex-ploitation, especially of its successes. And finally,
+it has to</p>
+<p>organize system-atic innovation, that is, create the different
+tomorrow that</p>
+<p>makes obsolete and, to a large extent, replaces even the most
+successful</p>
+<p>products of today in an organization. I emphasize that these
+disciplines</p>
+<p>are not just desirable; they are conditions for survival today.</p>
+<h3 id="action-point-1">ACTION POINT:</h3>
+<p>Abandon what is about to be obsolete, develop a system to</p>
+<p>exploit your successes, and develop a systematic approach to
+innovation.</p>
+<p>“Management’s New Paradigms,” Forbes</p>
+<p>Management Challenges for the 21st Century</p>
+<h4 id="the-next-society-corpedia-online-program">The Next Society
+(Corpedia Online Program)</h4>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

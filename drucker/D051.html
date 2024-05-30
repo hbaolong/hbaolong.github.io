@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="第三同读" />
+  <title>德鲁克日志</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">德鲁克日志</h1>
+<p class="author">第三同读</p>
+</header>
+<h2 id="透过金庸读懂德鲁克">透过金庸读懂德鲁克</h2>
+<p>假如我想做一件事</p>
+<p>假如我想做一件事，我应该如何做呢？</p>
+<p>这几天好多人都被关在屋子里，大家每天就是吃了睡，睡了吃，过着曾经梦想的生活。</p>
+<p>而更多人开始担忧，这种日子能过多久呢？万一某天通知去上班时，发现自己的公司已经不见了。怎</p>
+<p>么办？</p>
+<p>或者，你本来就是自由职业者，比如，你是一个保险业务员，这些天都见不到客户，是不是很担心</p>
+<p>呢。</p>
+<p>而且，这段时间这么长，或许是很多人一生中难得的“gap
+months”，这几个月的“思考”，会不会让你</p>
+<p>有一些什么想法，想做些什么事情呢？</p>
+<p>肯定有。</p>
+<p>那么假如你想做一件事，你应该如何做呢？</p>
+<p>首先，恭喜你，因为你居然知道自己想做的事。</p>
+<p>其次，再次恭喜你，你居然开始想做了。这离做成其实已经很近了。</p>
+<p>为什么这么说呢？</p>
+<p>因为，这个时代给了你，以及任何想做事的人一种能力，就是，只要你想做，就一定能做成！</p>
+<p>你有了想做的事情，也就意味着，你看到了某个需求。比如，你看到某个地方可以开一个饭店，你看</p>
+<p>到很多孩子的家长在为选课苦恼，你看到很多年轻人需要人陪着一些学习。</p>
+<p>你看到这样的一些商业机会。然后你想着做一下这样的事情。</p>
+<p>然后，你思考一下现在手头做的事情。看一下手头做的事情要如何处理。因为你很难同时把两件事情</p>
+<p>做好，所以，你需要做一个取舍，至少在重点上要排一个轻重。好的，你决定的新的事情上做一个努</p>
+<p>力。</p>
+<p>确定事情，确定好优先级后，就要梳理资源了。所谓的资源，也就是人财物，也就是说，你手上有哪</p>
+<p>些人、财、物可以（需要）用在这件事上。</p>
+<p>你自己这个人肯定要投上去，还有哪些人是你可以用的？钱呢？物呢？还缺什么呢？缺的哪些资源如</p>
+<p>何去找呢？几天时间，这些也就搞定了。</p>
+<p>接下来就是一个非常重要的事情了。就是对这些人财物的组织和搭配。</p>
+<p>这是一个非常美好的时代，这个时代之所以美好，就是你（几乎）可以得到你想要得到的任何支持，</p>
+<p>只要你想要，而且你有事情做。</p>
+<p>你需要一个平台来存放和销售你给孩子们选的课？小鹅通、有赞、荔枝等等，一大堆，收费的免费的</p>
+<p>都有。</p>
+<p>你需要找到好的课程？现在搜索那么容易，你很容易就可以找到；</p>
+<p>你需要拿到那些课程的联系方式？现在微信链接了任何人，你几乎可以找到你需要找的任何人。</p>
+<p>所以，对于你来说，你要做的就一件事：把这些资源串起来！</p>
+<p>而所谓的串起来，就是有效的额管理。</p>
+<p>在这个时代，在这个资源无限丰富的时代，只要你有想做的事情，而且真的要去做了。那么你唯一要</p>
+<p>关注的就是你的“资源管理能力”。</p>
+<p>把你为了完成这件事所收集的资源整合起来，让这些资源以你想要的方式和方向汇集。发挥最大的效</p>
+<p>能就好了。</p>
+<p>而这，也就是管理。</p>
+<p>德鲁克认为，没有“发展中”这个概念，对于一个组织，只要是“有效管理”的，就会发挥最大效能，从而</p>
+<p>做出最好的表现。</p>
+<h2 id="大纲">大纲</h2>
+<h2 id="百字摘要">百字摘要</h2>
+<h2 id="金庸案例">金庸案例</h2>
+<h2 id="时间消耗">时间消耗</h2>
+<h2 id="阅读理解">阅读理解：</h2>
+<h2 id="大纲-1">大纲：</h2>
+<h2 id="撰写">撰写：</h2>
+<h2 id="录音">录音</h2>
+<h2 id="一小时运动">一小时运动</h2>
+<h2 id="英文原文">英文原文</h2>
+<p>20 FEBRUARY</p>
+<p>Management and Economic Development</p>
+<p>It can be said that there are no “underdeveloped countries.”</p>
+<p>这句话非常棒，可以用来说韩红基金会</p>
+<p>There are only “undermanaged” ones.</p>
+<p>Management creates economic and social development.</p>
+<p>Economic and social development is the result of management.</p>
+<p>It can be said, without too much oversimplification, that there are
+no “underdeveloped countries.”</p>
+<p>There are only “undermanaged” ones.</p>
+<p>Japan a hundred and forty years ago was an underdeveloped country by
+every material</p>
+<p>measurement.</p>
+<p>But it very quickly produced management of great competence, indeed,
+of excellence.</p>
+<p>competence：</p>
+<p>能力；胜任</p>
+<p>indeed：</p>
+<p>（用于 和形</p>
+<p>[ U C ] ( also less frequent com·pe·ten·cy ) ~ (in sth) | ~ (in doing
+sth) the ability to do sth well</p>
+<p>( especially BrE ) used after very and an adjective or adverb to
+emphasize a statement, description, etc.</p>
+<p>容词或副词之后，强调叙述、描写等）真正地</p>
+<p>very</p>
+<p>This means that management is the prime mover and that development is
+a consequence.</p>
+<p>prime：</p>
+<p>主要的；首要的；基本的</p>
+<p>mover：</p>
+<p>main; most important; basic</p>
+<p>a machine or a person that moves things from one place to another,
+especially sb who moves furniture from one house to</p>
+<p>运送物品的机器（或人）；搬运家具的人</p>
+<p>consequence：[ C ] ~ (for sb/sth) a result of sth that has happened
+结果；后果</p>
+<p>another</p>
+<p>All our experience in economic development proves this.</p>
+<p>Wherever we have only capital, we have not achieved development.</p>
+<p>In the few cases where we have been able to generate management
+energies, we have generated</p>
+<p>rapid development.</p>
+<p>Development, in other words, is a matter of human energies rather
+than of economic wealth.</p>
+<p>And the generation and direction of human energies is the task of
+management.</p>
+<h3 id="action-point">ACTION POINT:</h3>
+<p>What impact does your company have in the developing world?</p>
+<p>impact：</p>
+<dl>
+<dt>巨大影响；强大作用</dt>
+<dd>
+<p>(of sth) (on sb/sth) the powerful effect that sth has on sb/sth</p>
+</dd>
+</dl>
+<p>Are your activities there raising the managerial standards of local
+companies?</p>
+<p>The Ecological Vision</p>
+<h2 id="february">20 FEBRUARY</h2>
+<h3 id="management-and-economic-development">Management and Economic
+Development</h3>
+<p>It can be said that there are no “underdeveloped countries.”</p>
+<p>There are only “undermanaged” ones.</p>
+<p>Management creates economic and social development. Economic and</p>
+<p>social development is the result of management. It can be said,
+without too</p>
+<p>much oversimplification, that there are no “underdeveloped
+countries.” There</p>
+<p>are only “undermanaged” ones. Japan a hundred and forty years ago was
+an</p>
+<p>underdeveloped country by every material measure-ment. But it very
+quickly</p>
+<p>produced management of great competence, in-</p>
+<p>deed, of excellence.</p>
+<p>This means that management is the prime mover and that
+development</p>
+<p>is a consequence. All our experience in economic development
+proves</p>
+<p>this. Wherever we have only capital, we have not achieved
+development.</p>
+<p>In the few cases where we have been able to generate management
+ener-</p>
+<p>gies, we have generated rapid development. Development, in other
+words,</p>
+<p>is a matter of human energies rather than of economic wealth. And
+the</p>
+<p>generation and direction of human energies is the task of
+management.</p>
+<h3 id="action-point-1">ACTION POINT:</h3>
+<p>What impact does your company have in the developing</p>
+<p>world? Are your activities there raising the managerial standards of
+local</p>
+<p>companies?</p>
+<h4 id="the-ecological-vision">The Ecological Vision</h4>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

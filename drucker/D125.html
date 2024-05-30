@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="第三同读" />
+  <title>德鲁克日志</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">德鲁克日志</h1>
+<p class="author">第三同读</p>
+</header>
+<h2 id="透过金庸读懂德鲁克">透过金庸读懂德鲁克</h2>
+<p>张三丰开启了一个新时代</p>
+<p>在张三丰之前，武功是私密的，窃取武功是要死人的。一个男生不小心看了一眼昆仑派的武功，就被追杀了几千公里，最后被有毒的匕首刺伤。</p>
+<p>少林号称藏经阁的武功秘籍不禁门人翻阅，真相呢？儿时的张三丰，也就是张君宝跟着一对铁罗汉学了几招少林的武功，就要被少林追杀。</p>
+<p>萧远山在少林偷学了几十年武功，少林僧知道后的第一反应是：“今日说甚么也不能让此人活着下山。”</p>
+<p>为什么呢？少林的七十二绝技，以及很多门派的核心武功，如七伤拳，乾坤大挪移等，一旦获得了这些武功，就会实现人生逆袭。</p>
+<p>当张三丰带着张无忌上少林时，少林的三大神僧是非常抗拒武功交换的，因为武功的输出会给少林的地位带来巨大的冲击。</p>
+<p>这些是张三丰之前的江湖情况。</p>
+<p>后来张三丰发明了太极剑和太极拳。他的第一个徒弟是张无忌。</p>
+<p>当他要教无忌太极剑以和方东白比武时。按照武林道德，方东白主动要求回避。张三丰表示不用，直接看着就行，现教现学现用。</p>
+<p>这是武林中第一个开源的武功。</p>
+<p>武功的心法，武功的每一个招式都是公开的。</p>
+<p>这对整个武林是好消息！</p>
+<p>这对真个武林是好消息么？</p>
+<p>在张三丰时代，一项伟大的，有完整体系的武功被开源了，彻底公开了。也就意味着，只要你努力，就可以学会这个最厉害的武功。</p>
+<p>这就带来了几个变化，</p>
+<p>首先是无边界，以前的人，跟谁学，就会是谁的派，现在好了，只要你足够的聪明，你自己就可以</p>
+<p>学，或者找几个人一起学。</p>
+<p>其次是整体向上移动，在之前，你学一点，就可以对付几个普通人，可以行走江湖了。现在你不敢</p>
+<p>了，因为任何人都可能拥有最高深的武功。</p>
+<p>以前你的对手很明确地是少林、武当、崆峒等，现在可能是任何一个人。</p>
+<p>最后，就是你失败的概率和成功一样都成为概率了。以前你只要学习、练习，就有可以成功；现在你需要不停的努力，而不管你多努力，也会有其他人比你更努力。你的努力和成功之间的关系越来越远了。</p>
+<p>这是一个新时代，这个时代可以被称为“知识时代”，这个时代，武学知识不再被门派垄断，而是在江湖上自由流通。</p>
+<p>这个时代带来的三个特征：无边界、整体向上移动以及学习后失败概率的提升，让这个时代的竞争变得异常激烈。</p>
+<p>这是是一个全面竞争的时代。</p>
+<h2 id="百字摘要">百字摘要</h2>
+<p>知识时代的三个特征：无边界、整体向上移动以及向上和向下的同等可能。让竞争在这个时代更加激</p>
+<p>烈。</p>
+<p>即使你只是一个本地化的企业，你的客户也对通过信息获得对你的产品的价格的了解。从而让你失去</p>
+<p>价格信息不对称的利润，或者失去整个客户。</p>
+<h2 id="金庸案例">金庸案例</h2>
+<h2 id="may">4 MAY</h2>
+<h3
+id="characteristics-of-the-next-society"><strong>Characteristics</strong>
+of the Next Society</h3>
+<ul>
+<li>Characteristics:特征;特点;品质;</li>
+</ul>
+<p>Every institution in the knowledge society has to be globally
+competitive.</p>
+<p>The next society will be a knowledge society. Its three main
+<strong>characteristics</strong> will be:</p>
+<ul>
+<li><p>Borderlessness, because knowledge travels even more effortlessly
+than money.</p></li>
+<li><p>Upward <strong>mobility</strong>, available to everyone through
+easily acquired formal education.</p></li>
+<li><p>mobility:流动性;移动的能力;(住处、社会阶层、职业方面的)流动能力;易于行走的能力;</p></li>
+<li><p>The <strong>potential</strong> for failure as well as success.
+Anyone can acquire the “<strong>means of production</strong>,” that is,
+the knowledge required for the job, but not everyone can win.</p></li>
+<li><p>potential:潜在的;可能的;</p></li>
+<li><p>means of production: 生产资料；生产手段；生产工具;</p></li>
+</ul>
+<p>Together, those three <strong>characteristics</strong> will make the
+knowledge society a highly competitive one, for organizations and
+individuals alike.</p>
+<p>Information technology, although only one of many new features of the
+next society, is already having one hugely important effect: it is
+allowing knowledge to spread near-instantly, and making it accessible to
+everyone.</p>
+<p>Given the ease and speed at which information travels, every
+institution in the knowledge society—not only businesses, but also
+schools, universities, hospitals, and increasingly, government agencies,
+too has to be globally competitive, even though most organizations will
+continue to be local in their activities and in their markets.</p>
+<p>This is because the Internet will keep customers everywhere informed
+on what is available anywhere in the world, and at what price.</p>
+<h3 id="action-point">ACTION POINT:</h3>
+<p>Find out how many customers you are losing because the Internet is
+making them more <strong>savvy</strong> about price. Decide whether to
+cut your prices to compete.</p>
+<ul>
+<li>savvy:有见识的;通情达理的;懂实际知识的;</li>
+</ul>
+<h4 id="managing-in-the-next-society">Managing in the Next Society</h4>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

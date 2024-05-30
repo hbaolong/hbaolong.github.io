@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="第三同读" />
+  <title>德鲁克日志</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">德鲁克日志</h1>
+<p class="author">第三同读</p>
+</header>
+<h2 id="透过金庸读懂德鲁克">透过金庸读懂德鲁克</h2>
+<p>公司不是家</p>
+<p>很多老板喜欢让员工把公司当家，很多员工也愿意把公司当家。其实这些是完全错误的，因为个人和</p>
+<p>公司在很多事情上是不同的，甚至是完全相反的。</p>
+<p>个人总是喜欢自己的生活多姿多彩，而公司追求的是绝对的稳定。公司的存在的第一目的，是让人生</p>
+<p>活的更好，更加符合个人的生活目标。</p>
+<p>首先，公司要或者，只有活着，公司才是公司。不然公司就不存在了。</p>
+<p>活着的公司，首先是让公司的所有者，也就是公司的股东可以生活的更加惬意，如果公司让公司的股</p>
+<p>东的生活更糟糕，那么股东肯定会想着关掉公司：要你干吗。</p>
+<p>在让股东生活的更好后，公司应该让员工也生活的更好，毕竟，大家加入公司是为了赚钱，为了让自</p>
+<p>己的生活过的更好，而不是因为热爱工作。</p>
+<p>当个人生活的足够好后，他们会有新的选择，他们可以选择工作，也可以选择不工作，去旅游，去恋</p>
+<p>爱，去做公益，去探索他们感兴趣的事情。毕竟，工作是为了更好的生活，而生活并不是为了工作。</p>
+<p>所以，过对于个人来说，如何生活是一个非常个性化的事情，只要你开心，怎么都是正确的。</p>
+<p>但对于公司就不一样了。</p>
+<p>公司的发展需要符合社会效益、股东效益、员工效益。为了符合这些效益，公司需要最高效的方式运</p>
+<p>行。因为只有在正确、高效的前提下，公司才可以创造更多的价值，只有创造更多的价值，社会、股</p>
+<p>东以及相关的个人才可以过上自己喜欢的生活。</p>
+<p>如果让公司做到最高效呢？一个着眼点就是“控制成本”。</p>
+<p>这里可以说一句废话：“该花的钱，一份都不能少，不该花的钱，一分都不能话”。</p>
+<p>这句是毫无疑问的废话，不过德鲁克还是给出了一个类似的观点：对于某个部门，或者某个事情，砍</p>
+<p>掉之后，如果系统运转没有受影响，那么应该坚决把它砍掉。</p>
+<p>这样才可以让公司的运营成本最低。</p>
+<p>运营成本最低，不但可以赚取更多的利润，更主要的是，在公司面临危机时，可以存活下来。</p>
+<p>德鲁克进一步建议公司形成机制，定期检讨自己的成本中心，不断砍掉那些“可以被砍掉”的部门和职</p>
+<p>能。公司并不是家，你不需要在公司生活，你需要的只是让公司给你生活的能力。</p>
+<p>如果你是公司的老板，你认可德鲁克的这个观点么？</p>
+<h2 id="大纲">大纲</h2>
+<h2 id="百字摘要">百字摘要</h2>
+<h2 id="金庸案例">金庸案例</h2>
+<h2 id="时间消耗">时间消耗</h2>
+<h2 id="阅读理解">阅读理解：</h2>
+<h2 id="大纲-1">大纲：</h2>
+<h2 id="撰写">撰写：</h2>
+<p>30 JULY</p>
+<p>消除成本中心</p>
+<ol type="1">
+<li><p>去掉后，大厦会不会塌掉</p></li>
+<li><p>设计机制，不断检测这个</p></li>
+</ol>
+<p>Eliminating Cost Centers</p>
+<p>Eliminate:</p>
+<p>[ VN ] ~ sth/sb (from sth) to remove or get rid of sth/sb</p>
+<p>排除；清除；消除</p>
+<p>Would the roof cave in if we stopped doing this work altogether?</p>
+<p>No matter how well a business prevents cost inflation, it will still
+have to cut costs. This is because</p>
+<p>businesses are like people, and people often get sick no matter how
+carefully they exercise, control</p>
+<p>their diet, and avoid</p>
+<p>substance abuse. There is thus always the need for cost cutting. To
+start cost cutting,</p>
+<p>management usually asks: “How can we make this operation more
+efficient?” It is the wrong</p>
+<p>question. The question should be: “Would the roof cave in if we
+stopped doing this work</p>
+<p>altogether?” And if the answer is “probably not,” one eliminates the
+operation. It is always amazing</p>
+<p>how many of the things we do will never be missed. But businesses
+that actually succeed in cutting</p>
+<p>costs don’t wait until they have to cut costs. They build
+cost-cutting into normal operations. They</p>
+<p>build into their routine opera-tions organized abandonment.
+Otherwise, eliminating activities and</p>
+<p>opera-tions runs into extreme political resistance.</p>
+<h3 id="action-point">ACTION POINT:</h3>
+<p>Set up a systematic process of reviewing all products, processes, and
+services.</p>
+<p>Abandon those that no longer contribute to customer value.</p>
+<p>Permanent Cost Control (Corpedia Online Program)</p>
+<h2 id="july">30 JULY</h2>
+<h3 id="eliminating-cost-centers">Eliminating Cost Centers</h3>
+<p>Would the roof cave in if we stopped doing this work altogether?</p>
+<p>No matter how well a business prevents cost inflation, it will still
+have to</p>
+<p>cut costs. This is because businesses are like people, and people
+often get sick</p>
+<p>no matter how carefully they exercise, control their diet, and
+avoid</p>
+<p>substance abuse. There is thus always the need for cost cutting. To
+start cost</p>
+<p>cutting, management usually asks: “How can we make this operation
+more</p>
+<p>efficient?” It is the wrong question. The question should be: “Would
+the roof</p>
+<p>cave in if we stopped doing this work altogether?” And if the answer
+is</p>
+<p>“probably not,” one eliminates the operation. It is always amazing
+how many</p>
+<p>of the things we do will never be missed. But businesses that
+actually succeed</p>
+<p>in cutting costs don’t wait until they have to cut costs. They build
+cost-cutting</p>
+<p>into normal operations. They build into their routine opera-tions
+organized</p>
+<p>abandonment. Otherwise, eliminating activities and opera-tions runs
+into</p>
+<p>extreme political resistance.</p>
+<h3 id="action-point-1">ACTION POINT:</h3>
+<p>Set up a systematic process of reviewing all products,</p>
+<p>processes, and services. Abandon those that no longer contribute to
+cus-</p>
+<p>tomer value.</p>
+<h4 id="permanent-cost-control-corpedia-online-program">Permanent Cost
+Control (Corpedia Online Program)</h4>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

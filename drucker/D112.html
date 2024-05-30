@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="第三同读" />
+  <title>德鲁克日志</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">德鲁克日志</h1>
+<p class="author">第三同读</p>
+</header>
+<h2 id="透过金庸读懂德鲁克">透过金庸读懂德鲁克</h2>
+<p>鲁有脚死了，在一个不算太破的庙里，和他一起死去的还有两个七代弟子。杀死他的人也是武林中一</p>
+<p>个颇有名气的坏人，叫做霍都。</p>
+<p>霍都是金轮法王的三弟子，武功也算一流。鲁有脚虽然继任了丐帮帮主，却不以武功见著，霍都又采</p>
+<p>取了偷袭，鲁帮主首先遭了暗算。两名七袋弟子和他拼命，也都死在了霍都的掌下。</p>
+<p>虽然做帮主做成了家奴，可毕竟是天下第一大帮的帮主，居然就这么死在了一个日常的巡视过程中。</p>
+<p>令人可惜可叹。</p>
+<p>鲁帮主死后，丐帮的打狗棒自然也被霍都抢走了。</p>
+<p>鲁帮主死后，丐帮自然就要选新帮主，很多人对这个帮主位置感兴趣，比如黄蓉的女婿耶律齐，比如</p>
+<p>一个叫做蓝天和的年轻人，比如一些丐帮的弟子，这其中有一个特别的五袋弟子叫做何师我的。</p>
+<p>何师我长得很丑，身披一件宽大破烂的黑衣，手持一根酒杯口粗细的铁杖，满头乱发，一张脸焦黄臃</p>
+<p>肿，凹凹凸凸满是伤痕。</p>
+<p>当耶律齐赢了蓝天和后，何师我就上台了，来挑战耶律齐。何师我人长得丑，级别也低，是个五袋弟</p>
+<p>子，算是中层干部，上台后却表现出了惊人的本事，粗看起来并不亚于耶律齐。</p>
+<p>你要知道，耶律齐是老顽童的徒弟，武功那是相当地高的。</p>
+<p>很快，何师我就打败了耶律齐，然后就在台上说了几句漂亮话，准备接任丐帮帮主。</p>
+<p>何师我说：“在下虽胜了耶律大爷，却未敢便居帮主之位。须得寻得打狗棒，杀了霍都，那时再听凭各</p>
+<p>位公决”</p>
+<p>黄蓉看到了台上的变化，就开始查何师我的履历，发现何师我在丐帮很低调，最近十一二年来，才偶</p>
+<p>尔在丐帮名册之中见到她因积劳而逐步上升，从没有人称道他的武功。不过看他的身手，绝非最近才</p>
+<p>得以猛进的。所以黄蓉猜测，何师我一直隐忍，也许就是为了这一天。</p>
+<p>这时，台面上又突发了变故，杨过安排的一些人突然围住了比武台，放出了一个大和尚，也就是金轮</p>
+<p>法王的二弟子，霍都的师兄达尔巴。</p>
+<p>达尔巴上去后，就和何师我打斗了起来。在真实打斗中，何师我露出了真实武功，原来何师我就是霍</p>
+<p>都。何师我化装易容，混入丐帮，浑浑噩噩，不露半点锋芒，十余年中按部就班升为五袋弟子，丐帮</p>
+<p>的人居然无人疑心。</p>
+<p>德鲁克认为，如果你没有花一些精力去做好人事安排，那么你就要花百倍的精力去应对所产生的后</p>
+<p>果。</p>
+<p>五袋弟子属于中层干部，已经可以与会很多核心内容了，并且可以轻松获得帮内的一些核心信息，比</p>
+<p>如帮主的路线等。</p>
+<p>而对于五袋弟子的和安置，丐帮却没有固定的流程，只是因为劳苦功高，就逐步升了上来，最终导致</p>
+<p>了帮主的被害，丐帮差点落入歹人之手，付出了惨痛的代价。</p>
+<p>德鲁克建议，在做人事任命时，你的最高优先级的事情就是：选择、任命、验证。而不是简单的“因积</p>
+<p>劳而逐步上升”</p>
+<h2 id="百字摘要">百字摘要</h2>
+<h2 id="金庸案例">金庸案例</h2>
+<p>21 APRIL</p>
+<p>Sloan on People Decisions</p>
+<p>阿尔弗雷德·斯隆（Alfred P.
+Sloan,1875-1966）美国企业家，是一位传奇式领袖。被誉为第一位成功</p>
+<p>的职业经理人，通用汽车公司的第八任总裁，长达25年，斯隆是在管理与商业模式上创新的代表人</p>
+<p>物。美国《商业周刊》75周年时，斯隆获选为过去75年来最伟大的创新者之一。斯隆于1923年升任公</p>
+<p>司总经理和总裁(CEO)。这可是临危受命，当时通用汽车公司岌岌可危，正处于解体之中。斯隆担任通</p>
+<p>用汽车公司总裁长达23年。</p>
+<p>的管理理念：</p>
+<p>●专业人员不会根据自己的偏好或意见作决定，他们会根据事实作决策。</p>
+<p>Sloan</p>
+<p>如同其他行业一样，经理有责任先考虑客户的利益，再顾及自身的利益。正是对顾客的责任，凸显出</p>
+<p>专业人员的本色。</p>
+<p>●专业经理的工作不是要你必须喜欢某人，也不是要你去改变某人，而是要设法让员工在工作上发挥自</p>
+<p>己的长处。</p>
+<p>●不论你是否赞同某人或某人的工作方式，这都不重要，重要的是工作绩效。这也是专业经理人惟一需</p>
+<p>要注意的事。</p>
+<p>●意见相左，甚至冲突，是必然的，也是非常需要的。如果没有意见纷争和冲突，就不能理解企业规</p>
+<p>划；如果没有理解，就只能作出错误的决定。</p>
+<p>●领导力不是魅力，也不是公关或做秀。领导力是绩效、执著与值得信赖。</p>
+<p>●最后，或许也是最重要的教训：专业经理人等于仆人。职权不赋予特权，但赋予责任。</p>
+<p>●</p>
+<p>“If we didn’t spend four hours on placing a man and placing him
+right, we’d spend four hundred</p>
+<p>hours on cleaning up after our mistake.”</p>
+<p>committees：</p>
+<p>postwar：</p>
+<p>capital investments：</p>
+<p>overseas expansion：</p>
+<p>automotive businesses：</p>
+<p>accessory businesses：</p>
+<p>During the years in which I attended the meetings of GM’s top
+committees, the company made</p>
+<p>basic decisions on postwar policies such as capital investments;
+overseas expansion; the balance</p>
+<p>between automotive businesses, accessory businesses, and
+nonautomotive businesses; union</p>
+<p>relations; and financial structure. . . . I soon realized that a
+disproportionate amount of time was</p>
+<p>taken up with decisions on people compared to the time spent on
+decisions on policy.</p>
+<p>nonautomotive businesses:</p>
+<p>union relations：</p>
+<p>disproportionate：</p>
+<p>On one occasion the committee spent hours discussing the work and
+assignment of a position way</p>
+<p>down the line. . . . As we went out, I turned and said, “Mr. Sloan,
+how can you afford to spend four</p>
+<p>hours on a minor job like this?” “This corporation pays me a pretty
+good salary,” he said, “for</p>
+<p>making the important decisions, and for making them right. . . . If
+that master mechanic in Dayton is</p>
+<p>the wrong man, our decisions might as well be written on water. He
+converts them into</p>
+<p>performance. And as for taking a lot of time, that’s horse apples”
+(his strongest and favorite</p>
+<p>epithet). . . .</p>
+<p>“If we didn’t spend four hours on placing a man and placing him
+right, we’d spend four hundred</p>
+<p>hours on cleaning up after our mistake—and that time I wouldn’t have.
+The decision,” he</p>
+<p>concluded, “about people is the only truly crucial one. You think and
+everybody thinks that a</p>
+<p>company can have ‘better’ people. All it can do is place people
+right—and then it’ll have</p>
+<p>performance.”</p>
+<h3
+id="action-point-make-decisions-on-peopleselection-placement-and-evaluationyour-top-priority.">ACTION
+POINT: Make decisions on people—selection, placement, and
+evaluation—your top priority.</h3>
+<p>Adventures of a Bystander</p>
+<h2 id="april">21 APRIL</h2>
+<h3 id="sloan-on-people-decisions">Sloan on People Decisions</h3>
+<p>“If we didn’t spend four hours on placing a man and placing him
+right,</p>
+<p>we’d spend four hundred hours on cleaning up after our mistake.”</p>
+<p>During the years in which I attended the meetings of GM’s top
+com-</p>
+<p>mittees, the company made basic decisions on postwar policies such
+as</p>
+<p>capital investments; overseas expansion; the balance between
+automo-</p>
+<p>tive businesses, accessory businesses, and nonautomotive businesses;
+union</p>
+<p>relations; and financial structure. . . . I soon realized that a
+dispro-portionate</p>
+<p>amount of time was taken up with decisions on people com-pared to the
+time</p>
+<p>spent on decisions on policy. On one occasion the committee spent
+hours</p>
+<p>discussing the work and assignment of a position way down the line. .
+. . As</p>
+<p>we went out, I turned and said, “Mr. Sloan, how can you afford to
+spend four</p>
+<p>hours on a minor job like this?” “This corpo-ration pays me a pretty
+good</p>
+<p>salary,” he said, “for making the important de-cisions, and for
+making them</p>
+<p>right. . . . If that master mechanic in Dayton is the wrong man, our
+decisions</p>
+<p>might as well be written on water. He con-verts them into
+performance. And</p>
+<p>as for taking a lot of time, that’s horse ap-ples” (his strongest and
+favorite</p>
+<p>epithet). . . . “If we didn’t spend four hours on placing a man and
+placing him</p>
+<p>right, we’d spend four hundred hours on cleaning up after our
+mistake—and</p>
+<p>that time I wouldn’t have. The deci-sion,” he concluded, “about
+people is the</p>
+<p>only truly crucial one. You think and everybody thinks that a company
+can</p>
+<p>have ‘better’ people. All it can do is place people right—and then
+it’ll have</p>
+<p>performance.”</p>
+<h3 id="action-point">ACTION POINT:</h3>
+<p>Make decisions on people—selection, placement, and</p>
+<p>evaluation—your top priority.</p>
+<h4 id="adventures-of-a-bystander">Adventures of a Bystander</h4>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="第三同读" />
+  <title>德鲁克日志</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">德鲁克日志</h1>
+<p class="author">第三同读</p>
+</header>
+<h2 id="透过金庸读懂德鲁克">透过金庸读懂德鲁克</h2>
+<p>冯铁匠的梦想</p>
+<p>冯铁匠有个梦想，梦想可以再次回到桃花岛。</p>
+<p>冯铁匠曾经有个师父叫做黄药师。当黄药师从恶霸手里救下他，并且收他为徒后，他就知道自己这辈</p>
+<p>子有了根，自己的师父是黄药师，自己是桃花岛的人。</p>
+<p>在桃花岛的那几年是自己最开心的几年。桃花岛上除了有师父外，还有大师兄陈玄风，二师姐梅超</p>
+<p>风，三师兄曲灵风，四师兄陆乘风，五师兄武眠风。自己是最小的一个。</p>
+<p>岛上还有很多哑仆，师父说那些哑仆都是一些恶霸，师父把那些恶霸抓到桃花岛后，就把他们毒哑，</p>
+<p>让他们在岛上做一些体力活，冯铁匠小时候经常被恶霸欺负，如果不是师父救下来，那次可能已经被</p>
+<p>恶霸打死了。</p>
+<p>岛上数不清的桃花，还有很多大石头，这些都是冯铁匠喜欢玩的，儿时的冯铁匠来到桃花岛后，就在</p>
+<p>岛上疯玩。师父、师兄、师姐们都特别照顾自己，儿时的冯铁匠觉得自己肯定进入了天堂，是世界上</p>
+<p>最幸福的人。</p>
+<p>在冯铁匠眼里，师父就是神一样的存在，冯铁匠最喜欢听师父吹笛子，也喜欢看师父写字，也喜欢帮</p>
+<p>师父种树。师父也经常安排小小的冯铁匠去那里那里种各种花和树，冯铁匠就会更开心了。</p>
+<p>在小小的冯铁匠心里，能为师父做一点事是非常开心的。</p>
+<p>有时岛上会来一些外人，师父会去接待他们。冯默风会和来的人里的小孩子们一起玩，冯默风觉得那</p>
+<p>些小孩子也是很幸福的，就像自己一样：有一个师父，有一个岛。</p>
+<p>有一天，大师兄和二师姐不见了。师父很生气，就把所有的弟子都叫了过来，师父真的非常生气，非</p>
+<p>常非常生气，师父拿棍子打断了三师兄腿，然后又打断了四师兄的腿，然后又打断了五师兄的腿，然</p>
+<p>后，师父叫自己过去。</p>
+<p>冯默风知道，师父肯定也要打断自己的腿。不过，只要师父能开心，打断就打断吧。</p>
+<p>师父一叫，冯默风就乖乖地跑到师父跟前，跪在师父面前说：“师父，您还在生气么？您打我吧”。</p>
+<p>黄药师拿起大棍子也打向冯默风，冯默风的一条腿的筋被打断了。当黄药师要打断冯默风第二条腿</p>
+<p>时，突然把棍子扔了。然后走了。</p>
+<p>没多久，哑仆送了一些药过来，几个师兄弟涂了药后。哑仆就带着他们来到了海边，海边准备了四个</p>
+<p>小船。哑仆比划手势告诉他们，黄药师让他们各自乘船离开，不可再说自己是桃花岛的弟子了。</p>
+<p>冯默风这时才大哭出来。冯默风觉得师父打断自己的腿是应该的，那些都不重要，可是，自己不再是</p>
+<p>桃花岛弟子了。自己就没有根了。再回到过去，又要被恶霸欺负。</p>
+<p>不管冯默风如何哭，不管曲灵风、陆乘风、武眠风如何哭，哑仆们就在边上看着。船已经准备好了。</p>
+<p>船上有足够几天的吃的。</p>
+<p>过了良久。先是曲灵风爬到船上，接着就是陆乘风。武眠风和冯默风的武功比较弱，哑仆们帮他们也</p>
+<p>到了船上。然后大家就离开了桃花岛了。</p>
+<p>到了岸上后，冯默风先是在一个农家院里呆了几个月，他想着某一天师父会过来接自己回去。几个月</p>
+<p>后，冯默风的伤也好的差不多了。自己也可以慢慢地走路了，可是师父还是没有来接自己。</p>
+<p>冯默风伤心了，他知道师父不会再来接自己了。他带着一个小包袱，捡起一个树枝，对着桃花岛磕了</p>
+<p>头后，一路向西，找没人的地方走。走了很久很久，然后在一个小村庄住了下来。</p>
+<p>之后的几十年，冯默风就在这个小村庄住着，冯默风也慢慢大了，也懂了很多事情。不过，冯默风还</p>
+<p>是非常自卑，他知道自己还是无根的野鬼。每每听到某某人来到自己的铁匠铺里高谈阔论说师门，冯</p>
+<p>默风的内心就像火烧一样。</p>
+<p>是的，冯默风在这个小村庄里的铁匠铺里做点事。后来老铁匠死后，他就接着做铁匠了。不过，从来</p>
+<p>没有人知道他是黄药师的徒弟，他也从来没有显示过武功。别人只是觉得他打铁比别人用力而已。</p>
+<p>是呀，自己再也没有师门了。在这个江湖上，自己就是野鬼，再也没有存在的意义了。</p>
+<p>很多次，冯默风都梦到自己在桃花岛上蹦蹦跳跳，从这个大石头蹦到那个大石头。偶尔，冯默风想，</p>
+<p>会不会有那么一天，师父会路过这里，来打铁，看到他后，会对他说：“默风，你还是我的弟子”，那</p>
+<p>样的话，自己有多开心呀。</p>
+<h2 id="大纲">大纲</h2>
+<h2 id="百字摘要">百字摘要</h2>
+<h2 id="金庸案例">金庸案例</h2>
+<h2 id="时间消耗">时间消耗</h2>
+<h2 id="阅读理解">阅读理解：</h2>
+<h2 id="大纲-1">大纲：</h2>
+<h2 id="撰写">撰写：</h2>
+<h2 id="录音">录音</h2>
+<h2 id="一小时运动">一小时运动</h2>
+<h2 id="英文原文">英文原文</h2>
+<p>20 JANUARY</p>
+<p>Nature of Man and Society</p>
+<p>Every organized society is built upon a concept of the nature of man
+and of his function and place</p>
+<p>in society.</p>
+<p>built upon：</p>
+<p>指望；依赖；建立于</p>
+<p>build upon</p>
+<p>Whatever its truth as a picture of human nature, this concept always
+gives a true picture of the</p>
+<p>nature of the society, which recognizes and identifies itself with
+it.</p>
+<p>a picture of：一幅……的画</p>
+<p>It symbolizes the fundamental tenets and beliefs of society by
+showing the sphere of human</p>
+<p>activity, which it regards as socially decisive and supreme.</p>
+<p>symbolizes：</p>
+<p>象征；是 的象征；代表</p>
+<p>fundamental</p>
+<p>十分重大的；根本的</p>
+<p>tenets：</p>
+<p>原则；信条；教义</p>
+<p>[ VN ] to be a symbol of sth</p>
+<p>…</p>
+<p>:serious and very important; affecting the most central and important
+parts of sth</p>
+<p>( formal ) one of the principles or beliefs that a theory or larger
+set of beliefs is based on</p>
+<p>sphere：</p>
+<p>decisive：</p>
+<p>supreme：</p>
+<p>范围；领域；阶层；界</p>
+<p>very important for the final result of a particular situation
+决定性的；关键的</p>
+<p>highest in rank or position （级别或地位）最高的，至高无上的</p>
+<p>an area of activity, influence or interest; a particular section of
+society</p>
+<p>The concept of man as “economic animal” is the true symbol of
+societies of bourgeois capitalism</p>
+<p>and of Marxist socialism, which see in the free exercise of man’s
+economic activity the means</p>
+<p>toward the realization of their aims.</p>
+<p>societies：</p>
+<p>社会 指社会中所有的人</p>
+<p>bourgeois：</p>
+<p>中产阶级的</p>
+<p>capitalism：</p>
+<p>N-UNCOUNT Society is people in general, thought of as a large
+organized group.</p>
+<p>(</p>
+<p>)</p>
+<p>belonging to the middle class</p>
+<p>[ U ] an economic system in which a country’s businesses and industry
+are controlled and run for profit by private</p>
+<p>owners rather than by the government</p>
+<p>Marxist：</p>
+<p>realization：</p>
+<p>资本主义</p>
+<p>马克思主义的</p>
+<p>[ U ] ~ (of sth) the process of achieving a particular aim, etc.
+（目标等的）实现</p>
+<p>ADJ Marxist means based on Marxism or relating to Marxism.</p>
+<p>Economic satisfactions alone appear socially important and
+relevant.</p>
+<p>satisfactions：</p>
+<p>N-UNCOUNT Satisfaction is the pleasure that you feel when you do
+something or get something that you wanted</p>
+<p>or needed to do or get.</p>
+<p>relevant：</p>
+<p>满意</p>
+<p>closely connected with the subject you are discussing or the
+situation you are thinking about</p>
+<p>having ideas that are valuable and useful to people in their lives
+and work</p>
+<p>有价值的；有意义的</p>
+<p>紧密相关的；切题的</p>
+<p>Economic positions, economic privileges, and economic rights are
+those for which man works.</p>
+<h3
+id="action-point-what-is-the-socially-supreme-sphere-in-the-u.s.-how-does-this-affect-you">ACTION
+POINT: What is the socially supreme sphere in the U.S.? How does this
+affect you?</h3>
+<p>The End of the Economic Man</p>
+<h2 id="january">20 JANUARY</h2>
+<h3 id="nature-of-man-and-society">Nature of Man and Society</h3>
+<p>Every organized society is built upon a concept of the nature of
+man</p>
+<p>and of his function and place in society.</p>
+<p>Whatever its truth as a picture of human nature, this concept
+always</p>
+<p>gives a true picture of the nature of the society, which recognizes
+and</p>
+<p>identifies itself with it. It symbolizes the fundamental tenets and
+be-</p>
+<p>liefs of society by showing the sphere of human activity, which it
+regards as</p>
+<p>socially decisive and supreme. The concept of man as “economic
+animal” is</p>
+<p>the true symbol of societies of bourgeois capitalism and of Marxist
+social-</p>
+<p>ism, which see in the free exercise of man’s economic activity the
+means to-</p>
+<p>ward the realization of their aims. Economic satisfactions alone
+appear</p>
+<p>socially important and relevant. Economic positions, economic
+privileges,</p>
+<p>and economic rights are those for which man works.</p>
+<h3 id="action-point">ACTION POINT:</h3>
+<p>What is the socially supreme sphere in the U.S.? How does</p>
+<p>this affect you?</p>
+<h4 id="the-end-of-the-economic-man">The End of the Economic Man</h4>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

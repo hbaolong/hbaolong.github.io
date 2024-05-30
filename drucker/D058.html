@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="第三同读" />
+  <title>德鲁克日志</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">德鲁克日志</h1>
+<p class="author">第三同读</p>
+</header>
+<h2 id="透过金庸读懂德鲁克">透过金庸读懂德鲁克</h2>
+<p>客户想要什么？</p>
+<p>有个朋友想卖课，也就是做知识付费，他是金融领域的，所以开课讲金融报名的，有保险，有信托，</p>
+<p>有基金，有养老，也有宏观经济。</p>
+<p>我问他，你为啥要讲这么多呀。他说，金融人士对这些刚兴趣呀。</p>
+<p>我又问他，你一个人讲的了这么多么？他说，我可以请人呀。</p>
+<p>说的好像很有道理。</p>
+<p>过了几天，我去问他，课卖的怎么样？他说一般，几十个吧。他也做了免费的直播课，免费课也就300</p>
+<p>多人听，大家好像兴趣不是特别大。</p>
+<p>然后我又问题，你觉得你的客户是谁？</p>
+<p>他很兴奋地说：“800万保险从业者，他们是最爱学习的”。</p>
+<p>我就很好奇了，既然有800万个目标客户，为什么才来300多人呢？</p>
+<p>他说：“我也不知道”。</p>
+<p>我又问他：”你觉得你的客户要想要什么呢？“</p>
+<p>他说：”获客吧“。</p>
+<p>然后我又问他：”你的课，能帮助业务员获客么？还有，这是你的想法？还是他们的想法？“</p>
+<p>他说：”不知道“。</p>
+<p>现在讲课的人很多，都快比上课的人呢多了，为什么有的课能卖上千万，有的课就算9.9，甚至免费，</p>
+<p>也没几个人听呢？</p>
+<p>”我的客户群体是800万保险业务员，他们需要金融知识“。</p>
+<p>这是他们的想法么？</p>
+<p>“你有客户么？”</p>
+<p>“你了解你的客户么？”</p>
+<p>“你的客户需要什么？以什么形式需要？”</p>
+<p>“他们为什么要找你来学？”</p>
+<p>不要自己回答这些问题了，找到你的“客户”，问他们吧。</p>
+<h2 id="大纲">大纲</h2>
+<h2 id="百字摘要">百字摘要</h2>
+<h2 id="金庸案例">金庸案例</h2>
+<h2 id="时间消耗">时间消耗</h2>
+<h2 id="阅读理解">阅读理解：</h2>
+<h2 id="大纲-1">大纲：</h2>
+<h2 id="撰写">撰写：</h2>
+<h2 id="录音">录音</h2>
+<h2 id="一小时运动">一小时运动</h2>
+<h2 id="英文原文">英文原文</h2>
+<p>27 FEBRUARY</p>
+<p>Defining Business Purpose and Mission</p>
+<p>What is our business?</p>
+<p>Nothing may seem simpler or more obvious than to know what a
+company’s business is.</p>
+<p>A steel mill makes steel; a railroad runs trains to carry freight and
+passengers; an insurance</p>
+<p>company underwrites fire risks; a bank lends money.</p>
+<p>steel：</p>
+<p>钢</p>
+<p>mill ：</p>
+<p>常构成复合词</p>
+<p>工厂；制造厂</p>
+<p>underwrites：</p>
+<p>a strong hard metal that is made of a mixture of iron and</p>
+<p>( often in compounds</p>
+<p>) a factory that produces a particular type of material</p>
+<p>V-T If an institution or company underwrites an activity or
+underwrites the cost of it, they agree to provide any</p>
+<p>money that is needed to cover losses or buy special equipment, often
+for an agreed-upon fee.</p>
+<p>为…提供经济担保; 同意资助</p>
+<p>Actually, “What is our business?” is almost always a difficult
+question and the right answer is</p>
+<p>usually anything but obvious.</p>
+<p>obvious：</p>
+<dl>
+<dt>明显的；显然的；易理解的</dt>
+<dd>
+<p>(to sb) (that…) easy to see or understand</p>
+</dd>
+</dl>
+<p>A business is not defined by the company’s name, statutes, or
+articles of incorporation.</p>
+<p>It is defined by the want the customer satisfies when she buys a
+product or a service.</p>
+<p>To satisfy the customer is the mission and purpose of every
+business.</p>
+<p>The question “What is our business?” can, therefore, be answered only
+by looking at the business</p>
+<p>from the outside, from the point of view of the customer and the
+market.</p>
+<p>What the customer sees, thinks, believes, and wants, at any given
+time, must be accepted by</p>
+<p>management as an objective fact and must be taken as seriously as the
+reports of the salesperson,</p>
+<p>the tests of the engineer, or the figures of the accountant.</p>
+<p>accountant：</p>
+<p>会计；会计师</p>
+<p>a person whose job is to keep or check financial accounts</p>
+<p>And management must make a conscious effort to get answers from the
+customer herself rather</p>
+<p>than attempt to read her mind.</p>
+<p>conscious ：</p>
+<p>意识到；注意到</p>
+<p>[ not before noun ] ~ of (doing) sth | ~ that aware of sth; noticing
+sth</p>
+<h3 id="action-point">ACTION POINT:</h3>
+<p>Talk to one customer every day this week.</p>
+<p>Ask them how they see your company, what they think of it, what kind
+of company they believe it is</p>
+<p>and what they want from it.</p>
+<p>Use this feedback to better define your company’s mission.</p>
+<p>Management: Tasks, Responsibilities, Practices</p>
+<h2 id="february">27 FEBRUARY</h2>
+<h3 id="defining-business-purpose-and-mission">Defining Business Purpose
+and Mission</h3>
+<p>What is our business?</p>
+<p>Nothing may seem simpler or more obvious than to know what</p>
+<p>Acompany’s business is. A steel mill makes steel; a railroad runs
+trains to carry</p>
+<p>freight and passengers; an insurance company underwrites fire</p>
+<p>risks; a bank lends money. Actually, “What is our business?” is
+almost</p>
+<p>always a difficult question and the right answer is usually anything
+but</p>
+<p>obvious.</p>
+<p>A business is not defined by the company’s name, statutes, or
+articles of</p>
+<p>incorporation. It is defined by the want the customer satisfies when
+she buys</p>
+<p>a product or a service. To satisfy the customer is the mission and
+pur-pose of</p>
+<p>every business. The question “What is our business?” can, there-fore,
+be</p>
+<p>answered only by looking at the business from the outside, from the
+point of</p>
+<p>view of the customer and the market. What the customer sees,
+thinks,</p>
+<p>believes, and wants, at any given time, must be accepted by
+man-agement as</p>
+<p>an objective fact and must be taken as seriously as the reports of
+the</p>
+<p>salesperson, the tests of the engineer, or the figures of the
+accountant. And</p>
+<p>management must make a conscious effort to get answers from the
+customer</p>
+<p>herself rather than attempt to read her mind.</p>
+<h3 id="action-point-1">ACTION POINT:</h3>
+<p>Talk to one customer every day this week. Ask them how</p>
+<p>they see your company, what they think of it, what kind of company
+they</p>
+<p>believe it is and what they want from it. Use this feedback to better
+define</p>
+<p>your company’s mission.</p>
+<h4 id="management-tasks-responsibilities-practices">Management: Tasks,
+Responsibilities, Practices</h4>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

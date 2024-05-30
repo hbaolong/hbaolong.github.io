@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="第三同读" />
+  <title>德鲁克日志</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">德鲁克日志</h1>
+<p class="author">第三同读</p>
+</header>
+<h2 id="透过金庸读懂德鲁克">透过金庸读懂德鲁克</h2>
+<p>萧峰：空，空，空你个大秃头呀</p>
+<p>我是萧峰的粉丝，我认为萧峰是个战神。</p>
+<p>萧峰的会的武功不多，大概就是降龙廿八掌、打狗棒法、擒龙功，还有些少林的基本功。他却战无不</p>
+<p>胜。</p>
+<p>在萧峰做帮主之前，他就经历的大小战役无数，那一招亢龙有悔，估计他用了成千上万次，和高手对</p>
+<p>打过，和低手对打够，和一个人打过，也和一群人打过。</p>
+<p>而且萧峰对于打架非常谨慎，每次打架前，萧峰都先看看逃跑的路线：</p>
+<p>（乔峰）正要暗传号令，命帮众先行向西、向南分别撤走，自己和四长老及蒋舵主断后，忽听得西方</p>
+<p>和南方同时有脚步杂沓之声。却是四面八方都来了敌人。</p>
+<p>乔峰低声道：“蒋舵主，南方敌人力道最弱，待会见我手势，立时便率领众兄弟向南退走。”蒋舵主应</p>
+<p>道：“是！”</p>
+<p>丰富的打架经验，加上谨慎，让萧峰几乎立于不败之地。</p>
+<p>萧峰的分寸感也特别好，随后一扔，就可以把铁杖扔进石头四尺多，高度让敌人恰好够不着，这些分</p>
+<p>寸感都是几百次上千次打架得来的。</p>
+<p>是呀，萧峰每一次推出亢龙有悔，每一次扔出一个兵器，每一次提起一个敌人，每一次点敌人的穴</p>
+<p>位，敌人都会做出相应的反应，或者躲闪，或者抵抗，或者对打。</p>
+<p>常年累月下来，萧峰对所有的敌人都可以做出非常精确的判断，比如，他就判断：</p>
+<p>大理段氏若有像今日段延庆这样的好手，五六个同时攻我，你大哥便应付不了。</p>
+<p>所以，在每一次打架钱，萧峰都可以快速做出判断，根据判断，很快就给出对应方案：打？跑？几分</p>
+<p>力？打死还是留活口？对于这些，萧峰的分寸把握的都很好。</p>
+<p>只是有一次，萧峰差点死掉，那次，萧峰做出了一个错误的判断，把自己放在了死亡的边缘。</p>
+<p>那是在天台山前。</p>
+<p>那时
+，萧峰正要和阿朱去天台山找智光和尚询问“带头大哥”的身份。萧峰正在被智光和尚高尚人格打</p>
+<p>动，想着，不管智光和尚如何回答，都要一笔勾销。</p>
+<p>这时，突然来了5个黑衣人，这五个黑衣人自称姓杜、迟、金、褚、孙。这五个人提议每人和他对一掌</p>
+<p>来表明自己的武功修养。</p>
+<p>接着杜、金、褚、孙一一和萧峰对掌，四位高手用的都是不用的少林掌法，萧峰用的只是一招亢龙有</p>
+<p>悔。萧峰很轻松判断出对方的掌力，自己出的力也是恰到好吃：既不会打伤对方，也不会给对方伤害</p>
+<p>自己的机会。这样四掌下来，大家都是不输不赢。</p>
+<p>最后，迟姓老者出来了，也要和萧峰对掌。只见迟姓老者左右手分别划圈，使出了般若掌。萧峰也双</p>
+<p>手划圈，又使出一招亢龙有悔。</p>
+<p>像平常一样，萧峰也根据自己的判断确定了力量的大小，角度。萧峰并不想伤害对方，也不想对对方</p>
+<p>伤害。力量还是内七外三。洪厚的掌力向迟姓老者推出。</p>
+<p>四掌相交，乔峰突觉对方掌力忽而消失，刹那间不知去向，不禁大吃一惊。他双掌推出之力虽只三</p>
+<p>成，却也是排山倒海，势不可当，对方竟不以掌力相挡，自己掌力雷霆万钧的击去，势不免将对方打</p>
+<p>得肋骨齐断，心肺碎裂。惊惶中忙回收掌力，心知此举危险万分，对手这一下如是诱招，自己回收掌</p>
+<p>力时，若乘机加强掌力击来，两股掌力合并齐发，自己虽留有馀力，势不免重伤。</p>
+<p>想到身边的阿朱，萧峰心中闪过一个念头：“我这一死，阿朱就此无人照顾了！”不禁惨然变色。</p>
+<p>岂知自力甫回，那迟姓老者急速撤掌，退后一步，一躬到地，说道：“多谢乔帮主大仁大义，助我悟成</p>
+<p>这‘般若掌’的‘一空到底’。”</p>
+<p>乔峰额头汗水涔涔而下，适才可说死里逃生，这时与阿朱实是再世相逢，激动之下，忍不住过去握住</p>
+<p>了阿朱的手。</p>
+<p>自己也被高的丈二和尚摸不着头脑。</p>
+<p>只听那个迟姓老者解释道：“阿朱姑娘，刚才我跟乔大爷对掌，使的是‘般若掌’，这路掌法是佛门掌法</p>
+<p>中的最高功夫。般若佛法讲究空无，使到最后一招‘一空到底’之时，既不是空，也不是非空，掌力化于</p>
+<p>无形，没有了色，没有了受想行识，色是空，声香味触法也都是空，掌力是空，空即是掌力。我过去</p>
+<p>总是差了一点，出掌之时心中总是有滞，可以空了自己掌力，却空不了对方的力道。这次跟乔大爷对</p>
+<p>掌，如此高手，世所罕见，我不肯错过这难逢机缘，便又使‘一空到底’。万想不到乔大爷大仁大义，一</p>
+<p>觉到我掌上无力，也于刹那间回收自己掌力，拚着我诱招发力，反击自身。我突然之间明白了，我自</p>
+<p>己空了，连对手也空了，这才是真正的‘一空到底’。如不是有这样一位不顾自己性命、不肯轻易伤人的</p>
+<p>仁义英雄，这一招如何能够悟成？”</p>
+<p>听到这里，阿朱笑容满面：“恭喜老爷爷悟得神功”，心里却为萧大哥担心死了。</p>
+<p>萧峰心想：“你神经病呀，在老子面前装好人，老子当你好人，居然放弃了自己对反馈的要求，让自己</p>
+<p>置于死地，让我的小阿朱没人照顾。这种傻事，老子再也不干了。”</p>
+<p>“空，空，空，空你个秃头呀！”</p>
+<p>萧峰越想越后怕，晚上回到家后，对着阿朱发誓，以后“与人对掌时决不容情”。</p>
+<p>毕竟，大部分人都是正常的反馈。</p>
+<h2 id="大纲">大纲</h2>
+<h2 id="百字摘要">百字摘要</h2>
+<h2 id="金庸案例">金庸案例</h2>
+<h2 id="时间消耗">时间消耗</h2>
+<h2 id="阅读理解">阅读理解：</h2>
+<h2 id="大纲-1">大纲：</h2>
+<h2 id="撰写">撰写：</h2>
+<h2 id="录音">录音</h2>
+<h2 id="一小时运动">一小时运动</h2>
+<h2 id="英文原文">英文原文</h2>
+<p>13 OCTOBER</p>
+<p>Testing the Decision Against Results</p>
+<p>“Poor Ike. . . . Now . . . he’ll give an order and not a damn
+thing</p>
+<p>is going to happen.”</p>
+<p>Feedback has to be built into the decision to provide a continuous
+test-ing, against actual events,</p>
+<p>of the expectations that underlie the deci-sion. Decisions are made
+by people. People are fallible;</p>
+<p>at their best, their works do not last long. Even the best decision
+has a high probability of</p>
+<p>being wrong. Even the most effective one eventually becomes obsolete.
+When General Dwight D.</p>
+<p>Eisenhower was elected president, his predecessor, Harry S. Truman,
+said: “Poor Ike; when he was a general, he gave an order and it was</p>
+<p>carried out. Now he is going to sit in that big office and he’ll give
+an order and not a damn thing is</p>
+<p>going to happen.” The reason why “not a damn thing is going to
+happen” is, however, not that</p>
+<p>generals have more authority than presidents. It is that military
+organizations learned long ago that</p>
+<p>futility is the lot of most orders and organized the feedback to
+check on the execution of the order.</p>
+<p>They learned long ago that to go oneself and look is the only
+reliable feedback. Reports—all a</p>
+<p>president is normally able to mobilize—are not much help.</p>
+<h3
+id="action-point-make-sure-you-go-out-and-kick-the-tires-and-get-on-site-feedback.-find-out-if">ACTION
+POINT: Make sure you go out and “kick the tires” and get on-site
+feedback. Find out if</h3>
+<p>decisions have accomplished their intended results.</p>
+<p>The Effective Executive</p>
+<h2 id="october">13 OCTOBER</h2>
+<h3 id="testing-the-decision-against-results">Testing the Decision
+Against Results</h3>
+<p>“Poor Ike. . . . Now . . . he’ll give an order and not a damn
+thing</p>
+<p>is going to happen.”</p>
+<p>Feedback has to be built into the decision to provide a continuous
+test-ing,</p>
+<p>against actual events, of the expectations that underlie the
+deci-sion.</p>
+<p>Decisions are made by people. People are fallible; at their best,
+their works do</p>
+<p>not last long. Even the best decision has a high probability of</p>
+<p>being wrong. Even the most effective one eventually becomes
+obsolete.</p>
+<p>When General Dwight D. Eisenhower was elected president, his
+prede-</p>
+<p>cessor, Harry S. Truman, said: “Poor Ike; when he was a general, he
+gave</p>
+<p>an order and it was carried out. Now he is going to sit in that big
+office</p>
+<p>and he’ll give an order and not a damn thing is going to happen.”
+The</p>
+<p>reason why “not a damn thing is going to happen” is, however, not
+that</p>
+<p>generals have more authority than presidents. It is that military</p>
+<p>organizations learned long ago that futility is the lot of most
+orders and</p>
+<p>organized the feedback to check on the execution of the order.
+They</p>
+<p>learned long ago that to go oneself and look is the only reliable
+feedback.</p>
+<p>Reports—all a president is normally able to mobilize—are not much
+help.</p>
+<h3 id="action-point">ACTION POINT:</h3>
+<p>Make sure you go out and “kick the tires” and get on-site</p>
+<p>feedback. Find out if decisions have accomplished their intended
+results.</p>
+<h4 id="the-effective-executive">The Effective Executive</h4>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="第三同读" />
+  <title>德鲁克日志</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">德鲁克日志</h1>
+<p class="author">第三同读</p>
+</header>
+<h2 id="透过金庸读懂德鲁克">透过金庸读懂德鲁克</h2>
+<p>金庸的精英主义</p>
+<p>金庸的武侠小说，写的是江湖人的故事。江湖上的人来来往往，看起来五颜六色，其实本质还是有钱</p>
+<p>人家的游戏。</p>
+<p>这应该和金庸的精英主义有关系，毕竟，从任何一个角度来说金庸都是一个精英。咱们先看看金庸的</p>
+<p>家族：</p>
+<p>金庸的先祖有一个查揆，是为大才子，著有《笎谷文集》及《菽原堂集》，《清史列传》等，曾任顺</p>
+<p>天蓟州知州。还有一个叫做查升的，清康熙二十七年进士，选翰林院庶吉士，授编修。时康熙帝选儒</p>
+<p>臣侍值以备顾问，他经荐入直南书房多年，累迁至少詹事。著有《澹远堂集》。时人称查升书法、查</p>
+<p>慎行诗、朱自恒画为“海宁三绝”。</p>
+<p>历史上，海宁査家共出了22位进士，到了康熙年间，查家更是创造出了“一门十进士，叔侄五翰林”的</p>
+<p>科举神话。</p>
+<p>到了近代，査家也是厉害的不得了，徐志摩是金庸的表哥（传说金庸笔下的表哥都比较混蛋就和这位</p>
+<p>仁兄有关），钱学森是金庸的表姑父，琼瑶是金庸的表外甥女，九叶派代表诗人穆旦是金庸的堂哥</p>
+<p>（查良铮），等等等等。</p>
+<p>所以，金庸的精英主义就很容易理解了。那么，金庸是始终认可精英主义么？我们来看看金庸小说里</p>
+<p>的那些主人公。</p>
+<p>一 《书剑恩仇录》 写于1955年</p>
+<p>写于1995年的《书剑恩仇录》是金庸的第一部小说，主人公是陈家洛。陈家洛是谁呢？他是清朝大臣</p>
+<p>陈世倌的儿子，同时还是乾隆爷的同父同母的亲兄弟，这个身份够高吧。</p>
+<p>女主角香香公主呢？她是新疆回部首领木卓伦之次女，也是超级美女。最后成了陈家洛政治野心的牺</p>
+<p>牲品。</p>
+<p>这里我要做个说明，为了梳理金庸的精英主义，我只描述主人公自身不能决定的那些因素，也就是出</p>
+<p>身。包括父母、师父、门派等被动决定的因素。后天主动获得的资源被认为是能力的体现，本次不分</p>
+<p>析。</p>
+<p>二 《碧血剑》 写于1956年</p>
+<p>《碧血剑》的男主角袁承志是明末抵御满洲入侵的大将袁崇焕之子；女主角夏青青是江湖侠客金蛇郎</p>
+<p>君（武功非常高）之女。</p>
+<p>三 《射雕英雄传》 写于1957年</p>
+<p>《射雕英雄传》根据剧情有两位男主角和以为女主角。男主角郭靖是郭啸天之子，出生前即被牵扯进</p>
+<p>全真教丘处机和江南七怪的赌注中，而全真教是当时第一大教，掌教王重阳是武林第一高手。</p>
+<p>男主角杨康是杨铁心之子，出生前和郭靖一样被牵扯进全真教丘处机和江南七怪的赌注中，随后被母</p>
+<p>亲带入大金的赵王府，成为王子。</p>
+<p>女主角黄蓉是东邪黄药师的独生女儿，黄药师是五绝之一，五绝是当时武林中武功最高的五位。</p>
+<p>四《神雕侠侣》写于1959年</p>
+<p>《神雕侠侣》的男主角杨过是郭靖的（结义）侄子，郭靖是黄药师的女婿，后来成为武林第一高手；</p>
+<p>女主角小龙女是林朝阳的传人，古墓派的掌门。林朝阳是有实力进入五绝的人选。</p>
+<p>我在分析其家庭关系时，会着重写出对其成长有影响力的人，对于一些影响不大的事情，会忽略。比</p>
+<p>如，杨过的父亲杨康是大金朝赵王府的王子，这个王子身份对杨过影响不大。</p>
+<p>五 《雪山飞狐》写于1959年</p>
+<p>雪山飞狐的男主角胡一刀是明末农民起义领袖李自成手下四大护卫之首人称“飞天狐狸”的后人。</p>
+<p>六 《飞狐外传》 写于1960年</p>
+<p>主角胡斐是胡一刀的儿子，胡一刀是明末农民起义领袖李自成手下四大护卫之首人称“飞天狐狸”的后</p>
+<p>人。</p>
+<p>七 《鸳鸯刀》 写于1961年</p>
+<p>主角袁冠南和杨中慧分别是拥有鸳鸯刀的袁大侠和杨大侠的遗腹子。</p>
+<p>八 《倚天屠龙记》 写于1961年</p>
+<p>《倚天屠龙记》的男主角是张无忌，张无忌就比较厉害了。张无忌的爹爹是张翠山，张翠山是武当第</p>
+<p>五弟子，是张三丰最心爱的弟子，张三丰曾公开表示希望张翠山继承其衣钵。</p>
+<p>张无忌的妈妈是殷素素，殷素素是殷天正的女儿，殷天正是明教的护教法王，也是天鹰教的创始人。</p>
+<p>张无忌的义父是谢逊，谢逊是明教的护教法王。</p>
+<p>《倚天屠龙记》的女主角可以算赵敏、周芷若、小昭。赵敏是汝阳王察罕特穆尔之女，封号绍敏郡</p>
+<p>主。周芷若本是渔家女子，被张三丰送到峨眉成为峨眉弟子，小昭是紫衫龙王的女儿，紫衫龙王是波</p>
+<p>斯明教的处女教主。</p>
+<p>九 《白马啸西风》 写于1961年</p>
+<p>《白马啸西风》的女主角是李文秀，李文秀的父亲是白马李三。《白马》与其说是武侠小说，不如说</p>
+<p>是情感小说。</p>
+<p>十 《连城诀》 写于1963年</p>
+<p>《连城诀》的主角是狄云，狄云是铁锁横江戚长发的弟子，戚长发是湘中武林名宿铁骨墨萼梅念笙的</p>
+<p>三徒弟。书中主要的武功连城剑法、神照经都是梅念笙收藏的。</p>
+<p>女主角水笙是水岱的女儿，水岱是南四奇之一，南四奇是南方最有名的四位武林人物。</p>
+<p>十一 《天龙八部》 写于1963年</p>
+<p>《天龙八部》有三位男主角，萧峰是萧远山的儿子，萧远山是辽国萧皇后属珊大帐的亲军总教头，是</p>
+<p>绝顶武林高手。萧峰的师父是丐帮帮主汪剑通、少林玄悲大师。</p>
+<p>段誉是大理王子，大理皇帝的侄子，四大恶人之首段延庆的亲生儿子。</p>
+<p>虚竹是少林方丈玄慈的亲生子，四大恶人之孙二娘是他妈妈。</p>
+<p>《天龙八部》里的女主角大多是段正淳的女儿，段正淳是大理镇南王。虚竹的情人是西夏的公主。</p>
+<p>十二 《侠客行》 写于1965年</p>
+<p>《侠客行》的主角狗杂种是黑白双剑石清和闵柔之子。</p>
+<p>十三 《笑傲江湖》 写于1967年</p>
+<p>《笑傲江湖》男主角令狐冲是华山派的顶门大弟子，华山派是五岳派之一。五岳派是当时正派最顶级</p>
+<p>的门派。</p>
+<p>女主角任盈盈是日月神教前教主任我行的女儿。</p>
+<p>从1955年的《书剑恩仇录》到1967年的《笑傲江湖》金庸足足写了12年，这12年间，金庸讲了很多故</p>
+<p>事，创造了很多人物，这些故事里有大人物，有小人物，这些人物有好有坏，不过那些重要的人物都</p>
+<p>是一些有背景的。</p>
+<p>或许这就是金庸认知的那个社会：所有的故事并不是无缘无故：你听到的是比尔盖茨把操作系统卖给</p>
+<p>了IBM，却不知道比尔盖茨的妈妈是IBM的董事。巴菲特的书只会告诉你他8岁就知道去参观纽交所,但</p>
+<p>不会告诉你他国会议员的父亲带他去的,是高盛的董事接待的。而金庸告诉你，那些被喜欢和关注的故</p>
+<p>事，都是因为故事背后都有故事。</p>
+<p>大家之所以关注那些人，是因为他们的父亲，他们的母亲，他们的师父，他们的门派。</p>
+<p>所以，我们关注他们，所以他们被关注，所以他们成功。
+这个在某个角度来说，是这个世界的真相。</p>
+<p>但是这是金庸喜欢的么？</p>
+<p>并不，金庸用最后一部小说给出了他的看法。</p>
+<p>十四 《鹿鼎记》 金庸的最后一部小说写于1969年</p>
+<p>这部小数的主人公的妈妈是扬州一个低级妓院的低级妓女，韦小宝并不知道自己姓什么，只好跟妈妈</p>
+<p>的姓。</p>
+<p>小宝在妓院长大，如果说他长到后去码头干苦力然后慢慢成为一个小混混，这个肯定是大家认为理所</p>
+<p>当然的结局。</p>
+<p>然而，金庸让这个人物走进了主流社会。在所有的权力中心如鱼得水。</p>
+<p>他的女主角呢？多大七位：</p>
+<p>苏荃：魔教教主的女人</p>
+<p>双儿：孤女，女仆</p>
+<p>阿珂：李志成的私生女</p>
+<p>建宁公主：毛东珠的私生女（这个算有点来头）</p>
+<p>沐剑屏：沐王府的公主（这个算有点来头）</p>
+<p>曾柔：无名女</p>
+<p>方怡：无名女</p>
+<p>我想，在十几年的创作生涯中，金庸看到了太多故事背后的故事，在最后一部小说里，金庸在试图告</p>
+<p>诉大家，告诉所有的人：人的出身，其实并没有什么，努力尊重某一个你身边的人。因为他们都是一</p>
+<p>个个小宝。</p>
+<p>即使你贵如郑克爽，也不要惹小宝，因为小宝也是一个人，他既然降临到了这个世界上，就是一个值</p>
+<p>得尊敬的人，给他尊重。</p>
+<p>越女剑 1970</p>
+<h2 id="百字摘要">百字摘要</h2>
+<h2 id="金庸案例">金庸案例</h2>
+<p>25 JUNE</p>
+<p>Human Dignity and Status</p>
+<p>Dignity：</p>
+<p>a calm and serious manner that deserves respect</p>
+<p>庄重；庄严；尊严</p>
+<p>It is perhaps the biggest job of the modern corporation—to find a
+synthesis between justice and</p>
+<p>dignity, between equality of opportunities and social status and
+function.</p>
+<p>synthesis：</p>
+<p>[ U C ] ~ (of sth) the act of combining separate ideas, beliefs,
+styles, etc.; a mixture or combination of ideas, beliefs,</p>
+<p>styles, etc.</p>
+<p>综合；结合；综合体</p>
+<p>The modern corporation as a child of laissez faire economics and of
+the market society is based</p>
+<p>on a creed whose greatest weakness is the inability to see the need
+for status and function of the</p>
+<p>individual in society.</p>
+<p>laissez faire ： 放任；自由主义</p>
+<p>creed ：</p>
+<p>信念；原则；纲领；宗教信仰</p>
+<p>inability：</p>
+<p>无能；无力；不能</p>
+<p>a set of principles or religious beliefs</p>
+<p>[ U sing. ] ~ (to do sth) the fact of not being able to do sth</p>
+<p>In its refusal to concern itself with the unsuccessful majority, the
+market society was a true child of</p>
+<p>Calvinism with its refusal to concern itself with the great majority
+that is not elected to be saved.</p>
+<p>refusal：</p>
+<p>拒绝；回绝</p>
+<p>Calvinism：</p>
+<p>[ U C ] ~ (of sth) | ~ (to do sth) an act of saying or showing that
+you will not do, give or accept sth</p>
+<p>the Christian religious teachings of John Calvin, based on the idea
+that events on Earth are controlled by God and</p>
+<p>〔基督教〕加尔文主义〔约翰•加尔文的宗教学说，认为地球上的一切都由上帝控制，人类无法左右〕</p>
+<p>majority： [ sing.+sing./pl.v. ] ~ (of sb/sth) the largest part of a
+group of people or things 大部分；大多数</p>
+<p>cannot be changed by humans</p>
+<p>Following the English philosopher Herbert Spencer, this belief is now
+expressed usually in the</p>
+<p>language of Darwinian “survival of the fittest” rather than in
+theological terms.</p>
+<p>Herbert Spencer：
+赫伯特·斯宾塞（英国著名的哲学家、社会学家和教育家）</p>
+<p>Darwinian： adj. 达尔文的；达尔文学说的</p>
+<p>survival of the fittest： 适者生存</p>
+<p>theological： adj. 神学的，神学上的</p>
+<p>But this does not alter the fact that the philosophy of the market
+society only makes sense if the</p>
+<p>unsuccessful are seen as “rejected by the Lord” with whom to have
+pity would be as sinful as</p>
+<p>questioning the decision of the Lord.</p>
+<p>sinful ：</p>
+<p>不道德的；邪恶的</p>
+<p>morally wrong or evil</p>
+<p>We can only deny social status and function to the economically
+unsuccessful if we are convinced</p>
+<p>that lack of economic success is (a) always a person’s own fault, and
+(b) a reliable indication of his</p>
+<p>or her worthlessness as a human personality and as a citizen.</p>
+<p>convinced：</p>
+<p>坚信；深信；确信</p>
+<p>indication：</p>
+<p>[ not before noun ] ~ (of sth/that…) completely sure about sth</p>
+<p>[ C U ] ~ (of sth/of doing sth) | ~ (that…) a remark or sign that
+shows that sth is happening or what sb is thinking or</p>
+<p>表明；标示；显示；象征</p>
+<p>worthlessness： 毫无价值</p>
+<p>feeling</p>
+<h3
+id="action-point-provide-dignity-to-everyone-you-work-with-simply-because-they-are-human-beings.">ACTION
+POINT: Provide dignity to everyone you work with simply because they are
+human beings.</h3>
+<p>Concept of the Corporation</p>
+<h2 id="june">25 JUNE</h2>
+<h3 id="human-dignity-and-status">Human Dignity and Status</h3>
+<p>It is perhaps the biggest job of the modern corporation—to find a
+synthesis</p>
+<p>between justice and dignity, between equality of opportunities and
+social status</p>
+<p>and function.</p>
+<p>The modern corporation as a child of laissez-faire economics and of
+the</p>
+<p>market society is based on a creed whose greatest weakness is the
+in-ability to</p>
+<p>see the need for status and function of the individual in society. In
+its refusal</p>
+<p>to concern itself with the unsuccessful majority, the market soci-ety
+was</p>
+<p>Atrue child of Calvinism with its refusal to concern itself with the
+great</p>
+<p>majority that is not elected to be saved. Following the English
+philosopher</p>
+<p>Herbert Spencer, this belief is now expressed usually in the language
+of</p>
+<p>Darwinian “survival of the fittest” rather than in theological terms.
+But this</p>
+<p>does not alter the fact that the philosophy of the market so-ciety
+only makes</p>
+<p>sense if the unsuccessful are seen as “rejected by the Lord” with
+whom to</p>
+<p>have pity would be as sinful as questioning the deci-sion of the
+Lord. We can</p>
+<p>only deny social status and function to the eco-nomically
+unsuccessful if we</p>
+<p>are convinced that lack of economic success is (a) always a person’s
+own</p>
+<p>fault, and (b) a reliable indication of his or her</p>
+<p>worthlessness as a human personality and as a citizen.</p>
+<h3 id="action-point">ACTION POINT:</h3>
+<p>Provide dignity to everyone you work with simply be-</p>
+<p>cause they are human beings.</p>
+<h4 id="concept-of-the-corporation">Concept of the Corporation</h4>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

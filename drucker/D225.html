@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="第三同读" />
+  <title>德鲁克日志</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">德鲁克日志</h1>
+<p class="author">第三同读</p>
+</header>
+<h2 id="透过金庸读懂德鲁克">透过金庸读懂德鲁克</h2>
+<p>【300字】</p>
+<ol type="1">
+<li><p>企业的唯一目的，就是赚钱</p></li>
+<li><p>企业的第二目的，是持续赚钱</p></li>
+<li><p>企业活下去的基本原则是手里有钱</p></li>
+</ol>
+<h2 id="大纲">大纲</h2>
+<p>今天说几个零零碎碎的事情。</p>
+<p>前几天和尹建莉公司的一个朋友喝酒，大家聊起教育孩子的事情，这位朋友说，他对孩子一点都不着</p>
+<p>急，因为尹建莉老师说过一句话：“不要怕孩子小时候没出息，撑的越久的孩子，越有出息，你看到那</p>
+<p>地了么？每年都长粮食的，肯定多不了，荒上几年，你再看看。肯定能长出好庄稼来。”</p>
+<p>吴晓波老师经常讲一些企业和企业家的故事，他经常用养猪和养孩子来打比方：“有的人做企业，就像</p>
+<p>养猪，养废了就卖了换钱；有的人做企业，就像养孩子，希望这个孩子慢慢地、健康地长大，然后按</p>
+<p>自己的想法过完这一生。”</p>
+<p>企业毕竟是一个经济体，对于所有人来说，做企业肯定是要赚钱的，特别是刚开始做企业的人，当企</p>
+<p>业开始赚钱时，他们会把大部分精力放在利润上。</p>
+<p>前几天群里一个朋友说了一句话很有意思：“原来赚钱会上瘾”。</p>
+<p>而企业的发展是有其客观规律的，就像孩子，就像种地。</p>
+<p>他们在发展初期，虽然可以产生一些结果，可是，他们还是要成长，成长还是需要不断增加输入，只</p>
+<p>有足够的养分他们才可以健康成长，长大成人。</p>
+<p>所以，德鲁克建议说：对于新公司来说，不要太在意利润，而应该把利润反哺到企业，让企业健康成</p>
+<p>长。对于进入发展通道的企业来说，现金流比利润重要的多太多了。</p>
+<h2 id="百字摘要">百字摘要</h2>
+<h2 id="金庸案例">金庸案例</h2>
+<h2 id="时间消耗">时间消耗</h2>
+<h2 id="阅读理解">阅读理解：</h2>
+<h2 id="大纲-1">大纲：</h2>
+<h2 id="撰写">撰写：</h2>
+<h2 id="录音">录音</h2>
+<p>12 AUGUST</p>
+<p>Managing Cash in the New Venture</p>
+<p>There is an old banker’s rule of thumb according to which one assumes
+that bills will have to be</p>
+<p>paid sixty days earlier than expected and receivables will come in
+sixty days later.</p>
+<p>thumb：</p>
+<p>拇指</p>
+<p>the short thick finger at the side of the hand, slightly apart from
+the other four</p>
+<p>Entrepreneurs starting new ventures are rarely unmindful of money; on
+the contrary, they tend to</p>
+<p>be greedy. They therefore focus on profits.</p>
+<p>Entrepreneurs： 企业家（entrepreneur的复数）</p>
+<p>unmindful：</p>
+<p>不注意的；不留心的；漫不经心的</p>
+<p>greedy：</p>
+<dl>
+<dt>贪婪的；贪心的；贪吃的；渴望的</dt>
+<dd>
+<p>of sb/sth ( formal ) not giving thought or attention to sb/sth</p>
+</dd>
+<dd>
+<p>(for sth) wanting more money, power, food, etc. than you really
+need</p>
+</dd>
+</dl>
+<p>But this is the wrong focus for a new venture, or rather, it comes
+last rather than first.</p>
+<p>Cash flow, capital, and controls come much earlier.</p>
+<p>Without them, the profit figures are fiction—good for twelve to
+eighteen months, perhaps, after</p>
+<p>which they evaporate.</p>
+<p>fiction：</p>
+<p>小说</p>
+<p>evaporate：</p>
+<p>（使）蒸发，挥发</p>
+<p>[ U ] a type of literature that describes imaginary people and
+events, not real ones</p>
+<p>if a liquid evaporates or if sth evaporates it, it changes into a
+gas, especially steam</p>
+<p>Growth has to be fed. In financial terms this means that growth in a
+new venture demands adding</p>
+<p>financial resources rather than taking them out. The healthier a new
+venture and the faster it grows,</p>
+<p>the more financial feeding it requires.</p>
+<p>fed：想</p>
+<p>The new venture needs cash-flow analysis, cash-flow forecasts, and
+cash management.</p>
+<p>The fact that America’s new ventures of the last few years (with the
+significant exception of hightech companies) have been doing so much
+better than new ventures used to do is largely because</p>
+<p>the new entrepreneurs in the United States have learned that
+entrepreneurship demands financial</p>
+<p>management. Cash management is fairly easy if there are reliable
+cash-flow forecasts, with</p>
+<p>“reliable” meaning “worst case” assumptions rather than hopes. If the
+forecast is overly</p>
+<p>conservative, the worst that can happen is a temporary cash
+surplus.</p>
+<h3 id="action-point">ACTION POINT:</h3>
+<p>Develop “worst case” estimates of cash flow and cash forecasts for
+new ventures. Monitor</p>
+<p>receivables and inventory levels closely.</p>
+<p>Innovation and Entrepreneurship</p>
+<h2 id="august">12 AUGUST</h2>
+<h3 id="managing-cash-in-the-new-venture">Managing Cash in the New
+Venture</h3>
+<p>There is an old banker’s rule of thumb according to which one assumes
+that</p>
+<p>bills will have to be paid sixty days earlier than expected and
+receivables will</p>
+<p>come in sixty days later.</p>
+<p>Entrepreneurs starting new ventures are rarely unmindful of money; on
+the</p>
+<p>contrary, they tend to be greedy. They therefore focus on
+profits.</p>
+<p>But this is the wrong focus for a new venture, or rather, it comes
+last</p>
+<p>rather than first. Cash flow, capital, and controls come much
+earlier.</p>
+<p>Without them, the profit figures are fiction—good for twelve to
+eighteen</p>
+<p>months, perhaps, after which they evaporate. Growth has to be fed.
+In</p>
+<p>financial terms this means that growth in a new venture demands
+adding</p>
+<p>financial resources rather than taking them out. The healthier a
+new</p>
+<p>venture and the faster it grows, the more financial feeding it
+requires.</p>
+<p>The new venture needs cash-flow analysis, cash-flow forecasts, and
+cash</p>
+<p>management. The fact that America’s new ventures of the last few
+years (with</p>
+<p>the significant exception of high-tech companies) have been doing so
+much</p>
+<p>better than new ventures used to do is largely because the new
+entre-preneurs</p>
+<p>in the United States have learned that entrepreneurship demands
+financial</p>
+<p>management. Cash management is fairly easy if there are reliable
+cash-flow</p>
+<p>forecasts, with “reliable” meaning “worst case” assumptions rather
+than</p>
+<p>hopes. If the forecast is overly conservative, the worst that can
+happen is</p>
+<p>Atemporary cash surplus.</p>
+<h3 id="action-point-1">ACTION POINT:</h3>
+<p>Develop “worst case” estimates of cash flow and cash</p>
+<p>forecasts for new ventures. Monitor receivables and inventory
+levels</p>
+<p>closely.</p>
+<h4 id="innovation-and-entrepreneurship">Innovation and
+Entrepreneurship</h4>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="第三同读" />
+  <title>德鲁克日志</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">德鲁克日志</h1>
+<p class="author">第三同读</p>
+</header>
+<h2 id="透过金庸读懂德鲁克">透过金庸读懂德鲁克</h2>
+<p>包不同之死</p>
+<p>包不同是《天龙八部》里的一个配角，戏份不多不少，却很有意思。</p>
+<p>首先，他是金风庄庄主，这是太湖上的一个庄子，金庸没有说这个庄子多大，总不会小过阿朱的听香</p>
+<p>水榭和阿碧的琴韵小筑吧。</p>
+<p>而且，包不同武功相当不错，他拿着慕容家的黑旗也收罗了不少下属，这个人还算有一定的势力。</p>
+<p>同时，他又是慕容家的家臣。慕容家这一代的掌门人，或者说家长是慕容复。慕容家是鲜卑族燕国皇</p>
+<p>室后裔，世代以恢复皇权为己任。而作为家臣的包不同也在为慕容家的这个目标奋斗。</p>
+<p>最后，包不同还是个杠精，一出面就杠段誉，后来又杠萧峰，我每次看他出场都在想，这家伙会死在</p>
+<p>谁手里呢？</p>
+<p>只是没想到他居然死在了自己的主公慕容复手里。</p>
+<p>包不同是老三，慕容家有四个家臣，老大是青云庄庄主邓百川，老二是赤霞庄庄主公冶乾，老三是金</p>
+<p>风庄庄主包不同，老四是玄霜庄庄主风波恶。</p>
+<p>慕容复居中，住在参合庄，形成了守卫和互相呼应的布局。</p>
+<p>很显然，在这个架构中，慕容家是绝对的老大，四大家臣则是慕容家恢复皇权，或者称霸江湖的护佑</p>
+<p>力量：以参合庄为中心，其他四庄全力护佑、协助，为大燕国的复兴竭尽全力。</p>
+<p>这就是慕容家的整体架构。</p>
+<p>虽然包不同是家臣，可也是金风庄庄主，这就意味着，包不同是有很大的处事权的；同理，邓百川、</p>
+<p>公冶乾、风波恶也有很大的处事权，只要不违反大燕复国的目标，四大家臣是可以根据自己的能力、</p>
+<p>理解以及现实情况做自己认为最正确的事情。</p>
+<p>比如，风波恶就可以按照自己的性子去和丐帮打架。而包不同则会收拾闯入阿朱妹子的听香水榭的青</p>
+<p>城派和蓬莱派，然后根据情况，又把他们收入麾下。</p>
+<p>这些事情的处置，金风庄庄主都不需要请示慕容复。</p>
+<p>就像邓百川去找萧峰单挑也不需要慕容复的批准。</p>
+<p>显然，慕容家的这个架构是德鲁克笔下的联邦架构：慕容复只是确定整体的方向，而各个庄主根据自</p>
+<p>己的情况独自完整各自的业务，需要配合时，就完全配合。</p>
+<p>后来，大家都聚集到了慕容复身边，去闯缥缈峰，闯少林寺，最后在曼陀罗庄，慕容复做了一个决</p>
+<p>定。</p>
+<p>这个决定很诡异，慕容复要拜失势的大理前太子段延庆为义父，要协助段延庆恢复大理国皇帝的身</p>
+<p>份，同时自己获得拥立之功。进而成为大理国皇帝。</p>
+<p>这个决定听起来像是脑袋被驴踢了。不过，这是在那个环境下慕容复自认为自己做出的最好的选择。</p>
+<p>而这时，包不同站了出来，当场表示反对，还发表了一篇慷慨激昂的演讲，用常年抬杠的经验来痛斥</p>
+<p>慕容复为不忠不孝不仁不义之人。</p>
+<p>你投靠大理，日后再行反叛，那是不忠；你拜段延庆为父，孝于段氏，于慕容氏为不孝，孝于慕容，</p>
+<p>于段氏为不孝；你日后残杀大理群臣，是为不仁，你……</p>
+<p>在包不同话没说完，即被慕容复一掌打中后背心，当场死亡。</p>
+<p>包不同死后，邓百川、公冶乾，风波恶也兔死狐悲，收拾了包不同的尸体，
+和慕容家永远说了再见。</p>
+<p>今天我在想，包不同该死么？慕容复杀他啥错了么？这件事的本质是什么呢？</p>
+<p>邓公孙包风四大家臣，虽然各自有庄，称为庄主，甚至还有自己的武装力量和江湖地位（邓百川人称</p>
+<p>掌法江南第二），究其本质，还是慕容家的家臣，其开庄固然为自己的能力以及各字的目的，然后，</p>
+<p>他们整体的目的还是慕容家的复国。</p>
+<p>这个人物是包括参合庄在内的五庄共同的目的，甚至是唯一目的。</p>
+<p>而这个团体的最高领导人是慕容复，在那种紧急情况下，当慕容复做出决定后，作为家臣的四个人应</p>
+<p>该全力支持，而不是当众给出反对意见。</p>
+<p>德鲁克认为，联邦的最高管理层，也就是慕容复拥有，也必须拥有最高的决策权。四个庄，不管他们</p>
+<p>武功多高，势力多大，多么有有理有据，他们也必须执行最高管理层的命令。毕竟，他们是自治，但</p>
+<p>不是独立，而且永远不是独立。</p>
+<p>而且，他们之所以自治，之所以有很高的自治权，独立权，是因为这样可以更佳地实现大家的共同目</p>
+<p>标：复国，而不是其他的。</p>
+<p>今天我在群里说，包不同该死，加入我是慕容复，我也想一掌打死包不同。不过，我会考虑邓、公</p>
+<p>冶、风三人的感受，也可能做出不同的选择。</p>
+<p>不过，我坚定地认为，包不同该死。</p>
+<h2 id="大纲">大纲</h2>
+<ol type="1">
+<li><p>交代包不同的身份、经历以及死因。</p></li>
+<li></li>
+</ol>
+<h2 id="百字摘要">百字摘要</h2>
+<h2 id="金庸案例">金庸案例</h2>
+<p>老大，邓百川，青云庄庄主</p>
+<p>老二，公冶乾，赤霞庄庄主</p>
+<p>老三，包不同，金风庄庄主</p>
+<p>老四，风波恶，玄霜庄庄主</p>
+<h2 id="时间消耗">时间消耗</h2>
+<h2 id="阅读理解">阅读理解：</h2>
+<h2 id="大纲-1">大纲：</h2>
+<h2 id="撰写">撰写：</h2>
+<h2 id="录音">录音</h2>
+<h2 id="一小时运动">一小时运动</h2>
+<h2 id="英文原文">英文原文</h2>
+<p>22 NOVEMBER</p>
+<p>Federal Decentralization: Requirements</p>
+<p>Decentralization：n. 分散；非集权化；（人口、工业等的）疏散</p>
+<p>As a minimum the unit must contribute a profit to the company rather
+than merely contribute to the</p>
+<p>profit of the company.</p>
+<p>Federal decentralization has stringent requirements.</p>
+<p>stringent：</p>
+<p>法律、规则、规章等</p>
+<p>( of a law, rule, regulation, etc.</p>
+<p>) very strict and that must be obeyed</p>
+<p>严格的；严厉的</p>
+<p>Federal decentralization is applicable only where a company can truly
+be organized into a number</p>
+<p>of genuine “businesses.”</p>
+<p>This is its basic limitation.</p>
+<p>As a minimum the unit must contribute a profit to the company.</p>
+<p>And it must be a genuine profit determined by the objective judgment
+of the marketplace.</p>
+<p>genuine：</p>
+<p>真的；名副其实的</p>
+<p>judgment：n. 判断；裁判；判决书；辨别力</p>
+<p>marketplace：</p>
+<p>real; exactly what it appears to be; not artificial</p>
+<p>场竞争</p>
+<p>( the marketplace ) [ sing. ] the activity of competing with other
+companies to buy and sell goods, services, etc.</p>
+<p>Federal decentralization will work only if the top-management job is
+clearly defined and thought</p>
+<p>through. Federalization, if properly applied, makes top management
+capable of doing its own job</p>
+<p>precisely because it does not have to worry about operations, but can
+concentrate on direction,</p>
+<p>strategy, objectives, and key decisions for the future.</p>
+<p>The federal principle demands great responsibility from the operating
+units, the autonomous</p>
+<p>businesses.</p>
+<p>联邦体系对自治的组织有很高的责任要求。</p>
+<p>市</p>
+<p>They are given the maximum of autonomy; and this requires that they
+assume the maximum of</p>
+<p>responsibility.</p>
+<p>他给予他们最大的自治，也就要求了他们最大的责任。</p>
+<p>Federal decentralization requires centralized controls and common
+measurements.</p>
+<p>联邦分权要求集中控制也统一的考核。</p>
+<p>Both the managers of the autonomous businesses and top management
+must know what is</p>
+<p>expected of each business, what is meant by “performance,” and what
+developments are</p>
+<p>important.</p>
+<p>自治组织的领导层和最高领导层都应该清楚每个组织的目标，绩效，以及发展目标。</p>
+<p>To be able to give autonomy one must have confidence.</p>
+<p>confidence：</p>
+<p>信心；信任；信赖</p>
+<p>[ U ] ~ (in sb/sth) the feeling that you can trust, believe in and be
+sure about the abilities or good qualities of sb/sth</p>
+<p>自治的人必须证明自己值得信任。</p>
+<p>And this requires controls that make opinions unnecessary.</p>
+<p>这就意味着，对于控制来说，意见不重要。</p>
+<p>A federal unit of a company is autonomous, but it is not independent
+and should not be.</p>
+<p>联邦的单元是自治的，但它不是独立的，而且永远都都不应该是。</p>
+<p>Its autonomy is a means toward better performance for the entire
+company.</p>
+<p>他的自治，是为了人整个企业有更好的业绩。</p>
+<h3 id="action-point">ACTION POINT:</h3>
+<p>Ensure that executives of your autonomous units have maximum autonomy
+and maximum</p>
+<p>responsibility. Implement this by establishing a system of controls
+that makes performance or the</p>
+<p>lack of performance very evident.</p>
+<p>Management: Tasks, Responsibilities, Practices</p>
+<h2 id="november">22 NOVEMBER</h2>
+<h3 id="federal-decentralization-requirements">Federal Decentralization:
+Requirements</h3>
+<p>As a minimum the unit must contribute a profit to the company</p>
+<p>rather than merely contribute to the profit of the company.</p>
+<p>Federal decentralization has stringent requirements. Federal
+decentral-</p>
+<p>ization is applicable only where a company can truly be organized
+into</p>
+<p>Anumber of genuine “businesses.” This is its basic limitation. As a
+mini-</p>
+<p>mum the unit must contribute a profit to the company. And it must
+be</p>
+<p>Agenuine profit determined by the objective judgment of the
+marketplace.</p>
+<p>Federal decentralization will work only if the top-management job
+is</p>
+<p>clearly defined and thought through. Federalization, if properly
+applied,</p>
+<p>makes top management capable of doing its own job precisely because
+it does</p>
+<p>not have to worry about operations, but can concentrate on direction,
+strategy,</p>
+<p>objectives, and key decisions for the future. The federal principle
+demands</p>
+<p>great responsibility from the operating units, the autonomous
+busi-nesses.</p>
+<p>They are given the maximum of autonomy; and this requires that they
+assume</p>
+<p>the maximum of responsibility. Federal decentralization requires
+centralized</p>
+<p>controls and common measurements. Both the managers of the
+autonomous</p>
+<p>businesses and top management must know what is expected of each</p>
+<p>business, what is meant by “performance,” and what developments
+are</p>
+<p>important. To be able to give autonomy one must have confidence. And
+this</p>
+<p>requires controls that make opinions unnecessary. A federal unit of a
+com-</p>
+<p>pany is autonomous, but it is not independent and should not be. Its
+auton-</p>
+<p>omy is a means toward better performance for the entire company.</p>
+<h3 id="action-point-1">ACTION POINT:</h3>
+<p>Ensure that executives of your autonomous units have</p>
+<p>maximum autonomy and maximum responsibility. Implement this by
+es-</p>
+<p>tablishing a system of controls that makes performance or the lack of
+per-</p>
+<p>formance very evident.</p>
+<h4 id="management-tasks-responsibilities-practices">Management: Tasks,
+Responsibilities, Practices</h4>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

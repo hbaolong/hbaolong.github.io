@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="第三同读" />
+  <title>德鲁克日志</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">德鲁克日志</h1>
+<p class="author">第三同读</p>
+</header>
+<h2 id="透过金庸读懂德鲁克">透过金庸读懂德鲁克</h2>
+<p>假如令狐冲当上了五岳派掌门</p>
+<p>左冷禅组织的并派大会，被岳不群截胡了。这是左冷禅没有想到的。</p>
+<p>其实，在大家的共识里，令狐冲的剑法是最高的。公开比剑，左冷禅大概率打不过令狐冲（最后的对打中，令狐冲用剑法秒杀了左冷禅）。</p>
+<p>那么，为什么左冷禅明知打不过令狐冲，还是安排了这个并派大会，不怕为令狐冲做嫁衣么？</p>
+<p>书中，金庸通过左冷禅的心理描写对这个问题做了一个解释。就是左冷禅认为令狐冲只会剑法，拳脚</p>
+<p>不行，必要时可以通过拳脚把他打趴下。</p>
+<p>不过，我觉得还有一个别的原因。</p>
+<p>因为左冷禅根本没有把令狐冲当成敌人。</p>
+<p>在五岳派里，左冷禅把天门、岳不群、定闲师太当成了敌人，把莫大、令狐冲没有当成敌人，为什么</p>
+<p>这么说呢？这要从每个人的性格来说起。</p>
+<p>天门、岳不群、定闲都是称职的掌门人，换句话说，他们都是“政治人物”。对于政治人物，并派后会</p>
+<p>有一个很敏感的问题，就是如何安排。他们是需要座位，需要权力需要空间的。</p>
+<p>而莫大、令狐冲不同，他们是隐士，对于隐士来说，乱世给他们空间，太平时候给他们尊重就好了。</p>
+<p>他们不需要权力。</p>
+<p>这就是为什么左冷禅没有把莫大和令狐冲当成对手。他对莫大就是吓唬一下就好了，而对定闲、岳不</p>
+<p>群则花费了好大的精力。对令狐冲呢？干脆都没有预算。</p>
+<p>那么，如果左冷禅和岳不群比剑，左冷禅赢了。然后左冷禅输给了令狐冲，令狐冲成为了合法的五岳</p>
+<p>派掌门人。左冷禅如何处理这种情况呢？</p>
+<p>这种情况是非常可能出现的。如果不是假的辟邪剑谱，这应该是最可能出现的结果了。当面临这种情</p>
+<p>况时，左冷禅会如何处理呢？</p>
+<p>显然，令狐冲并不会做掌门，即使顶着掌门的头衔，也掌握不来掌门的权力。他当上掌门后，大概率</p>
+<p>还是会被左冷禅、岳不群等人架空。</p>
+<p>所以，即使这种情况出现了，派还是并了。做不了老大，做个权臣还是可以的，而且，左冷禅知道。</p>
+<p>凭借自己的能力，做权臣也会做的有声有色，最多让令狐冲做上几天，自己就跑了。躲到哪里去逍遥</p>
+<p>去了。</p>
+<p>其实，不管是谁掌权，左冷禅或者岳不群，他们都面临一个问题，就是“拉拢”令狐冲和莫大这样的“隐</p>
+<p>士”。所以，岳不群一当上掌门，马上“和颜悦色”地来到令狐冲面前。同样，任我行也是“和颜悦色”来</p>
+<p>到岳不群面前。</p>
+<p>一方面固然有私人关系的原因，一方面也是因为，令狐冲这样的人不会对权力产生威胁，对他们好一</p>
+<p>些，反而会让自己的权力更加具有合法性和稳定性。</p>
+<h2 id="大纲">大纲</h2>
+<h2 id="百字摘要">百字摘要</h2>
+<h2 id="金庸案例">金庸案例</h2>
+<h2 id="时间消耗">时间消耗</h2>
+<h2 id="阅读理解">阅读理解：</h2>
+<h2 id="大纲-1">大纲：</h2>
+<h2 id="撰写">撰写：</h2>
+<h2 id="录音">录音</h2>
+<h2 id="一小时运动">一小时运动</h2>
+<h2 id="英文原文">英文原文</h2>
+<h2 id="march">20 MARCH</h2>
+<h3 id="a-scorecard-for-managers">A Scorecard for Managers</h3>
+<p>The things that the proponents of “management audits” talk about—</p>
+<p>integrity and creativity, for instance—are better left to the
+novelist.</p>
+<p>The “bottom line” measures business performance rather than
+manage-</p>
+<p>ment performance. And the performance of a business today is largely
+a result</p>
+<p>of the performance of management in years past. Performance in</p>
+<p>management, therefore, means in large measure doing a good job of</p>
+<p>preparing today’s business for the future. The future of a business
+is</p>
+<p>largely formed by present-management performance in four areas:</p>
+<p>•Performance in appropriating capital: We need to measure</p>
+<p>the return on investment against the return expected.</p>
+<p>•Performance in people decisions: Neither what is expected of</p>
+<p>Aperson’s performance when he or she is put into the job, nor how</p>
+<p>the appointment works out, is “intangible.” Both can be fairly
+easily</p>
+<p>judged.</p>
+<p>•Performance in innovation: Research results can be appraised,</p>
+<p>and then projected backward on the promises and expectations at</p>
+<p>the time the research effort was started.</p>
+<p>•Strategies versus performance: Did the things that the strategy</p>
+<p>expected to happen take place? And were the goals set the right</p>
+<p>goals in light of actual developments? Have they been attained?</p>
+<h3 id="action-point">ACTION POINT:</h3>
+<p>Perform a management audit of yourself and the people</p>
+<p>who report directly to you. The criteria should include whether
+you/they</p>
+<p>made good people decisions, whether you/they have had any
+innovative</p>
+<p>ideas, and whether your/their strategic expectations came to
+pass.</p>
+<h4 id="managing-in-turbulent-times">Managing in Turbulent Times</h4>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

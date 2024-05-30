@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="第三同读" />
+  <title>德鲁克日志</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">德鲁克日志</h1>
+<p class="author">第三同读</p>
+</header>
+<h2 id="透过金庸读懂德鲁克">透过金庸读懂德鲁克</h2>
+<p>方证的故事</p>
+<p>说起笑傲江湖，里面的人物大家都耳熟能详。里面的很多人物已经印在了大家的心理，比如，提到伪</p>
+<p>君子，自然就是岳不群。</p>
+<p>笑傲江湖讲的是一群颇有野心的人不断谋划一统江湖，最后，反而是一个一点野心都没有的人笑道了</p>
+<p>最后。</p>
+<p>说道有野心的人，笑傲江湖是还是挺多的。在这部小说里，不管是正派，还是邪教，都有大量有野心</p>
+<p>的人，比如魔教的东方不败，任我行，比如正派的左冷禅，岳不群，还有不入流的，如余沧海等。</p>
+<p>里面有正派的人物么？令狐冲当然算，莫大可能也算一个，还有就是方证、方生和武当的冲虚道长</p>
+<p>了。这些人抵御着来自任我行、左冷禅还有岳不群的一统江湖、努力武林人士的梦想。</p>
+<p>问题是，方证真的是正面人物么？</p>
+<p>笑傲江湖里，有一统武林梦想的人，真的只有东方不败，任我行，左冷禅，岳不群这几个人么？今天</p>
+<p>咱们聊聊方证，这个大和尚。</p>
+<p>方证是少林派的掌门人，少林是武林公认的第一大派。少林的方丈也就是很有地位的人了。</p>
+<p>在当时的武林，正派有少林、武当、五岳派等，邪派有魔教，还有很多大大小小的门派亦正亦邪。而</p>
+<p>这些所有的门派公认少林为武林领袖。</p>
+<p>不过，武林么，肯定是以武力为最大考虑，当任我行有了武力有，他就想当武林盟主了。没想几天，</p>
+<p>他就被他的副手，东方不败给关了起来。</p>
+<p>接受任我行地盘和权力的东方不败也想当武林盟主。他努力练武，想当武林第一人，进而武林盟主。</p>
+<p>可是，割了鸡鸡后的东方不败，突然野心也被割掉了。开始关注自我的感受，不大在江湖留意了。反</p>
+<p>而是他的情人热衷于权力。</p>
+<p>不过，热衷于权力的情人能力和想象力都有点欠缺，也就没有做出什么大事来。</p>
+<p>接下来就是左冷禅了，左冷禅成为五岳派盟主后，开始谋划并派，希望自己成为一个前所未有的大</p>
+<p>派：五岳派的创始人。</p>
+<p>这些就是方证面对的江湖，方证知道，这个江湖很险恶。方证想，我才是这个江湖的盟主呀，凭什么</p>
+<p>有加一个盟主？那我去干去？捡垃圾么？</p>
+<p>当岳不群把令狐冲逐出华山派后，当方生告诉他说令狐冲是风清扬的传人后，当他知道令狐冲和魔教</p>
+<p>有千丝万缕的联系后，方证做出了第一个判断：收服令狐冲。</p>
+<p>是呀，令狐冲是一个多么合适而又单纯的年轻人呀。</p>
+<p>方证决定收令狐冲为弟子，这样一来，自己就和这个年轻人绑定在了一起。</p>
+<p>没想到这个年轻人居然拒绝了。好吧。只好继续等机会。</p>
+<p>后来，恒山派的定闲、定逸师太死在少林寺，临死前，定闲师太遗命令狐冲为恒山掌门人。方证一</p>
+<p>看，又来机会了。就借着令狐冲就任时，亲自去恒山观礼，顺便和令狐冲商量破坏五岳派合并的事</p>
+<p>情。</p>
+<p>五岳派合并，必然在正派出现一个不次于少林的武术力量。在武林中，这是对少林的直接挑衅。方证</p>
+<p>肯定不能接受。</p>
+<p>方证拉上冲虚和令狐冲商量半天，终于说服了令狐冲去抢五岳派盟主。方证知道，他并没有明确的道</p>
+<p>理来阻止五岳派的合并，只好让令狐冲来捣乱。</p>
+<p>在五岳派合并大会上，也有人提议方证出任五岳派的掌门人，不过，被左冷禅一带而过。方证也摇摇</p>
+<p>头一带而过。</p>
+<p>令所有人意外的是，岳不群成为了五岳派的掌门人。以方证对岳不群的了解，方证知道岳不群也是有</p>
+<p>野心的。也会对少林的领头羊地位造成威胁。</p>
+<p>方证对岳不群表示愿意派出武力和岳不群共同防护嵩山。机智的岳不群拒绝了。</p>
+<p>再后来，令狐冲和左冷禅、岳不群等火拼，左冷禅和岳不群等都死掉了，而任我行则向恒山挑战。这</p>
+<p>时的恒山已经是五岳派仅存的力量了。方证知道，如果恒山派再完蛋了，少林和武当就要直接面临魔</p>
+<p>教的威胁。</p>
+<p>所以，方证决定用一些阴谋手段帮助令狐冲对抗魔教，在恒山上来一个大决战。</p>
+<p>好在，任我行死了，任盈盈接任魔教教主后，和令狐冲相安无事。</p>
+<p>再后来，令狐冲把掌门之位传给了仪清，任盈盈把教主之位传给了向问天。各大派有野心的人都死掉</p>
+<p>了。方证也就踏实了。</p>
+<p>继续维持着天下第一大派的身份和地位。</p>
+<h2 id="大纲">大纲</h2>
+<h2 id="百字摘要">百字摘要</h2>
+<h2 id="金庸案例">金庸案例</h2>
+<h2 id="时间消耗">时间消耗</h2>
+<h2 id="阅读理解">阅读理解：</h2>
+<h2 id="大纲-1">大纲：</h2>
+<h2 id="撰写">撰写：</h2>
+<h2 id="录音">录音</h2>
+<h2 id="一小时运动">一小时运动</h2>
+<h2 id="英文原文">英文原文</h2>
+<p>25 OCTOBER</p>
+<p>Government in the International Sphere</p>
+<p>Sphere：</p>
+<p>an area of activity, influence or interest; a particular section of
+society</p>
+<p>范围；领域；阶层；界</p>
+<p>Environmental protection might well be the most productive purpose of
+foreign aid.</p>
+<p>We need strong, effective governments in the international sphere so
+that we can make the</p>
+<p>sacrifices of sovereignty needed to give us working supranational
+institutions for the world</p>
+<p>society and world economy.</p>
+<p>sacrifices：</p>
+<p>献祭</p>
+<p>sovereignty：</p>
+<p>主权；最高统治权；最高权威</p>
+<p>supranational：</p>
+<p>超国家的（指涉及不止一个国家）</p>
+<p>institutions：</p>
+<dl>
+<dt>V-T To sacrifice an animal or person means to kill them in a special
+religious ceremony as an offering to a god.</dt>
+<dd>
+<p>(over sth) complete power to govern a country</p>
+</dd>
+</dl>
+<p>( formal ) involving more than one country</p>
+<p>N-COUNT/N-IN-NAMES An institution is a building where certain people
+are cared for, such as people who are</p>
+<p>mentally ill or children who have no parents.</p>
+<p>社会福利机构</p>
+<p>Protection of the environment today requires international ecological
+laws.</p>
+<p>We might “quarantine” polluters and forbid shipment in international
+commerce of goods</p>
+<p>produced under conditions that seriously pollute or damage the human
+habitat—for example, by</p>
+<p>polluting the oceans, by raising the temperature of the atmosphere,
+or by depleting its ozone.</p>
+<p>quarantine：</p>
+<p>[ U ] a period of time when an animal or a person that has or may
+have a disease is kept away from others in order</p>
+<p>to prevent the disease from spreading</p>
+<p>polluter：</p>
+<p>habitat：</p>
+<p>depleting：</p>
+<p>ozone：</p>
+<p>（为防传染的）隔离期；检疫</p>
+<p>a person, company, country, etc. that causes pollution</p>
+<p>污染源；污染者</p>
+<p>[ C U ] the place where a particular type of animal or plant is
+normally found</p>
+<p>（动植物的）生活环境，栖息地</p>
+<p>消耗</p>
+<p>( chemistry 化 ) a poisonous gas with a strong smell that is a form
+of oxygen 臭氧</p>
+<p>V-T To deplete a stock or amount of something means to reduce it.</p>
+<p>This will be decried as “interference with sovereign nations”—and so
+it is.</p>
+<p>interference：</p>
+<p>干涉；干预；介入</p>
+<p>sovereign：</p>
+<dl>
+<dt>国家</dt>
+<dd>
+<p>(in sth) the act of interfering</p>
+</dd>
+</dl>
+<p>[ only before noun ] ( of a country or state</p>
+<p>) free to govern itself; completely independent</p>
+<p>有主权的；完全独立的</p>
+<p>It will probably require that the developed rich countries compensate
+the developing poor ones for</p>
+<p>the high costs of environmental protection, such as sewage treatment
+plants.</p>
+<p>compensate：</p>
+<p>补偿；弥补</p>
+<p>sewage：</p>
+<p>[ V ] ~ (for sth) to provide sth good to balance or reduce the bad
+effects of damage, loss, etc.</p>
+<p>[ U ] used water and waste substances that are produced by human
+bodies, that are carried away from houses and</p>
+<p>factories through special pipes (= sewers )</p>
+<p>（下水道的）污水，污物</p>
+<p>In fact, environmental protection might well be the most productive
+purpose of foreign aid and far</p>
+<p>more successful than development aid.</p>
+<p>productive：</p>
+<p>doing or achieving a lot</p>
+<p>有效益的；富有成效的</p>
+<h3
+id="action-point-support-the-use-of-foreign-aid-to-protect-the-environment.">ACTION
+POINT: Support the use of foreign aid to protect the environment.</h3>
+<p>The Age of Discontinuity</p>
+<p>The New Realities</p>
+<h2 id="october">25 OCTOBER</h2>
+<h3 id="government-in-the-international-sphere">Government in the
+International Sphere</h3>
+<p>Environmental protection might well be the most</p>
+<p>productive purpose of foreign aid.</p>
+<p>We need strong, effective governments in the international sphere so
+that</p>
+<p>we can make the sacrifices of sovereignty needed to give us
+working</p>
+<p>supranational institutions for the world society and world</p>
+<p>economy.</p>
+<p>Protection of the environment today requires international
+ecological</p>
+<p>laws. We might “quarantine” polluters and forbid shipment in
+interna-</p>
+<p>tional commerce of goods produced under conditions that seriously
+pol-</p>
+<p>lute or damage the human habitat—for example, by polluting the
+oceans,</p>
+<p>by raising the temperature of the atmosphere, or by depleting its
+ozone.</p>
+<p>This will be decried as “interference with sovereign nations”—and so
+it</p>
+<p>is. It will probably require that the developed rich countries
+compensate</p>
+<p>the developing poor ones for the high costs of environmental
+protection,</p>
+<p>such as sewage treatment plants. In fact, environmental protection
+might</p>
+<p>well be the most productive purpose of foreign aid and far more</p>
+<p>successful than development aid.</p>
+<h3 id="action-point">ACTION POINT:</h3>
+<p>Support the use of foreign aid to protect the environ-ment.</p>
+<p>The Age of Discontinuity</p>
+<h4 id="the-new-realities">The New Realities</h4>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

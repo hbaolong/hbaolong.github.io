@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="第三同读" />
+  <title>德鲁克日志</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">德鲁克日志</h1>
+<p class="author">第三同读</p>
+</header>
+<h2 id="透过金庸读懂德鲁克">透过金庸读懂德鲁克</h2>
+<p>我讨厌复杂的事情</p>
+<p>我讨厌复杂的事情，讨厌和人打交道，除了喝酒、打牌、聊天、扯淡外，能不见人就不见人。</p>
+<p>我也不喜欢工作，其实，我之所以不喜欢工作，就是不喜欢和各种人打交道，比如，变态的客户，狡</p>
+<p>诈的供应商，还有各种奇怪的同事。所以，我一开始找的就是那种不需要和人打交道的工作：程序</p>
+<p>员。</p>
+<p>程序员是和别人打交道最少的一个工种了。最多就是和产品经理扯扯皮，不过，我们大多是不买产品</p>
+<p>经理的账的，在我们眼里，他们就是沿街乞讨者，给多少要看我们的心情。</p>
+<p>当然，老板也不能拿我们怎么样，我们也不接触客户。我的世界简单的要命。</p>
+<p>这其实是很多人喜欢的工作环境，也是超级宅男的梦想。</p>
+<p>不过，大多数工作还是要接触更复杂的环境的，特别是在创业的圈子，特别是那些想做老板的人。</p>
+<p>最近创业比较多的是电商带货，据说罗永浩也开始带货了。</p>
+<p>我一个朋友有几千的抖音粉丝，也开始给一个保险公司“带货”了。为什么这么多人都跳入这个行业</p>
+<p>呢？因为这个行业简单。</p>
+<p>花几百块钱买个话筒和摄像头就可以开业了。</p>
+<p>“货”？很多平台已经准备好了：诸如“好货联盟”。</p>
+<p>平台呢？抖音、微信、快手已经准备好了，直接注册就好了，免费的。</p>
+<p>客户呢？抖音、微信、快手等已经给你聚集好了，你带出去就好了，成交后，钱就到了腰包，售后是厂家的事情，和你无关。</p>
+<p>这也是最简单的商业模式：有供应商，不过你不需要维护关系；有客户，不过你不需要维护关系；自己是唯一的员工；自己是唯一的股东；网络是唯一的社区，你的这个行为只存在于网络，和你线下的生活无关。摘下耳麦后，你就可以拿着带货赚的钱是享受生活了。多简单。</p>
+<p>不过，这样的生意也不是所有人都能做的，做成的更少，不知道罗永浩能不能成功，关注吧。</p>
+<p>其实，类似的职业还有很多，比如知识付费，比如作家。虽然作家也要联系出版社，不过，更多时候</p>
+<p>是出版社联系作家。</p>
+<p>再多一些，就是那些自由职业者了。比如设计师，比如保险业务员。他们有客户，而且他们所有的工</p>
+<p>作就是要客户满意。</p>
+<p>保险业务员还需要对自己的城市很熟悉，对自己的小区很熟悉，听说，很多卖保险卖的好的，都是小</p>
+<p>区的大妈。因为他们对懂小区。</p>
+<p>现在有很多平台，这些平台提供了很多廉价的产品可以供任何人去卖。既然是平台，就肯定要赚钱。</p>
+<p>如果你从平台上拿产品，虽然省去了你和一个个厂家交流的成本，你的利润也少了很多，而且少了很</p>
+<p>多特色。</p>
+<p>有一些有志气的企业家就决定到产品源头去找供应商（真是闲的），我一个朋友是做家族财富管理</p>
+<p>的，他的客户经常要买酒，他就找了一个酒厂合作，贴了吧牌子，卖给（送给）自己的客户。某一</p>
+<p>天，我去一个大的财富管理公司，我才发现，他们有很大的一块业务叫做“非金”业务，也就是旅游、</p>
+<p>美食、度假、服装等，都是他们自己去找厂家定制的。一方面是为了利润，一方面是为了独特性。</p>
+<p>而且，这时你就要有员工了，你需要员工帮你对接供应商，需要员工帮你服务客户，需要员工帮你服</p>
+<p>务其他员工。</p>
+<p>这样，生意就做大了。做大了，就需要更多的钱，比如，有的供应商需要你压一些货，这些都需要</p>
+<p>钱。如果你没有那么多钱，怎么办？找投资呀，找到有钱且愿意出钱的人来做你的股东。不过，这样</p>
+<p>一来，你又要处理股东的关系了。股东关系可不是那么好处理的。</p>
+<p>这时，你的企业以及非常有规模了，而且有了复杂的关系网，这个网里有供应商，有客户，有股东，</p>
+<p>有员工，还有你所在的城市以及互联网的虚拟身份。你发现，你谁都不能得罪。</p>
+<p>得罪了供应商，你就拿不到好的产品，得罪了员工，员工转身就走了，得罪了客户，你就失去了一</p>
+<p>切，得罪了股东，你就捉襟见肘，伤害了你所在的城市，你所处的互联网，你就会被封杀。</p>
+<p>这些关系都很难处理。不过，德鲁克告诉我们一个模式，就是你不用特别去处理这些关系，只要你做</p>
+<p>到一件事。</p>
+<p>这件事就是，你带领公司创造价值，只要你创造足够的价值，供应商、客户、股东、员工，周边环境</p>
+<p>的问题都会被弱化。不过，这些问题终究还是存在的，一旦你的发展变慢，他们的问题就会再次冒出</p>
+<p>了，中伤你。</p>
+<p>1997年，正值苹果公司的困难时期，有人在公开场合问到戴尔，如果他处在乔布斯的位置上，将会如</p>
+<p>何处理苹果的烂摊子？戴尔回答是：“我会怎么做？我会直接关掉苹果，然后将钱退给股东们。”</p>
+<p>现在应该没有那个股东要求把苹果关掉了吧。</p>
+<p>程序员不需要和别人打交道，每天对这个电脑就行，偶尔去一下机房。记得当时我们部门中午一起出</p>
+<p>去吃饭，我写了一个网页用来点菜，每人提交一个菜，自动汇集到一个同事那里，他负责打电话去提</p>
+<p>前点菜。</p>
+<p>刚开始，我是偶尔去机房，后来我就喜欢经常去机房了。虽然机房声音很吵，而且没有坐的地方，我</p>
+<p>需要把笔记本随便放在某个架子上，然后站着，可是，我还是喜欢，因为，在机房里，没有会打扰</p>
+<p>我：但凡去机房里找我的，都是那些大事。</p>
+<p>再后来，我做了一个小公司，有公司后，就有了客户。我经常去客户那里玩，有时是聊天，有时是干</p>
+<p>活，有时就是去玩。这时，我每天的事情就是在办公室对着电脑，或者到客户那里对着电脑。</p>
+<h2 id="大纲">大纲</h2>
+<h2 id="百字摘要">百字摘要</h2>
+<h2 id="金庸案例">金庸案例</h2>
+<h2 id="时间消耗">时间消耗</h2>
+<h2 id="阅读理解">阅读理解：</h2>
+<h2 id="大纲-1">大纲：</h2>
+<h2 id="撰写">撰写：</h2>
+<h2 id="录音">录音</h2>
+<h2 id="一小时运动">一小时运动</h2>
+<h2 id="英文原文">英文原文</h2>
+<h2 id="march">19 MARCH</h2>
+<h3 id="defining-corporate-performance">Defining Corporate
+Performance</h3>
+<p>Maximize the wealth-producing capacity of the enterprise.</p>
+<p>Ralph Cordiner, CEO of the General Electric Company from 1958 to</p>
+<p>1963, asserted that top management in the large, publicly owned
+cor-poration</p>
+<p>was a “trustee.” Cordiner argued that senior executives were
+re-sponsible for</p>
+<p>managing the enterprise “in the best-balanced interest of
+shareholders,</p>
+<p>customers, employees, suppliers, and plant community cities.” That is
+what</p>
+<p>we now call “stakeholders.” Cordiner’s answer still re-quired a
+clear</p>
+<p>definition of results and of the meaning of “best” with respect to
+“balance.”</p>
+<p>We no longer need to theorize about how to define perfor-</p>
+<p>mance and results in the large enterprise. We have successful
+examples.</p>
+<p>Both the Germans and the Japanese have highly concentrated
+institu-</p>
+<p>tional ownership. How, then, do the institutional owners of German or
+Japa-</p>
+<p>nese industry define performance and results? Though they manage
+quite</p>
+<p>differently, they define them in the same way. Unlike Cordiner, they
+do not</p>
+<p>“balance” anything. They maximize. But they do not attempt to
+maximize</p>
+<p>shareholder value or the short-term interest of any one of the
+enterprise’s</p>
+<p>“stakeholders.” Rather, they maximize the wealth-producing capacity
+of the</p>
+<p>enterprise. It is this objective that integrates short-term and
+long-term results</p>
+<p>and that ties the operational dimensions of business
+performance—market</p>
+<p>standing, innovation, productivity, and people and their development—
+with</p>
+<p>financial needs and financial results. It is also this objective on
+which all the</p>
+<p>constituencies—whether shareholders, customers, or employees— depend
+for</p>
+<p>the satisfaction of their expectations and objectives.</p>
+<h3 id="action-point">ACTION POINT:</h3>
+<p>Check the tradeoff your enterprise is making between</p>
+<p>long-term performance variables—market standing, innovation,
+produc-</p>
+<p>tivity, and people development—and short-term profitability.
+Decide</p>
+<p>whether these tradeoffs are healthy for the enterprise.</p>
+<h4 id="a-functioning-society">A Functioning Society</h4>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

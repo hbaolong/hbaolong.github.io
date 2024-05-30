@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="第三同读" />
+  <title>德鲁克日志</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">德鲁克日志</h1>
+<p class="author">第三同读</p>
+</header>
+<h2 id="透过金庸读懂德鲁克">透过金庸读懂德鲁克</h2>
+<p>王重阳的武功有多高</p>
+<p>众所周知，王重阳武功很厉害，是天下第一，那么，他究竟有多厉害呢？</p>
+<p>首先，王重阳是第一次华山论剑的冠军，也就是第一批五绝之首。当年王重阳五十岁左右，洪七公、</p>
+<p>黄药师等都是30岁左右，欧阳锋、段智兴大概是40岁左右。五位高手在华山之巅“口中谈论，手上比</p>
+<p>武，在大雪之中直比了七天七夜，东邪、西毒、南帝、北丐四个人终于拜服我师哥王重阳的武功是天</p>
+<p>下第一。”</p>
+<p>这就是第一批五绝的出炉。</p>
+<p>经过第一次华山论剑后，《九阴真经》到了王重阳手里。没几年后，王重阳就病（老）死了。享年53</p>
+<p>岁左右。</p>
+<p>也就是说，在第一次华山论剑时，王重阳的武功是高于洪七公、黄药师、欧阳锋、段智兴等四人的。</p>
+<p>那么，高多少呢？如果是高很多的话，如杨过 VS
+西山一窟鬼那样的差距，估计1分钟就分出了高低</p>
+<p>了。然后并没有，五人“口中谈论，手上比武，在大雪之中直比了七天七夜，东邪、西毒、南帝、北丐</p>
+<p>四个人终于拜服我师哥王重阳的武功是天下第一。”</p>
+<p>从这个描述可以看出，王重阳的第一是艰难得来的。虽然大家最后心服口服，却还是花了很大的力</p>
+<p>气。</p>
+<p>这里还有一个旁证，就是洪七公对”降龙十八掌“的看法。”（洪七公）当年在华山绝顶与王重阳、黄药</p>
+<p>师等人论剑之时，这套掌法尚末完全练成，但王重阳等言下对这掌法已极为称道。后来他（洪七公）</p>
+<p>常常叹息，只要早几年致力于此，那么’武功天下第一‘的名号，或许不属于全真教主王重阳而属于他</p>
+<p>了。”</p>
+<p>洪七公不是一个狂妄之人，所以，他的看法应该可以参考。</p>
+<p>接下来，我们再看看全真教的武功。全真教武功最高的肯定是王重阳，其次就是周伯通。周伯通是王</p>
+<p>重阳的师弟，却也是跟着王重阳学的武功。而且，周伯通是个武痴，也是一个武学天才。我们假设周</p>
+<p>伯通在学习武术上没有什么障碍。也就是说，周伯通和王重阳的武功是非常接近的，所差的只是“功</p>
+<p>力”和“实战经验”了。作为武痴，周伯通没有理由学不会什么武功，王重阳也不会藏私。</p>
+<p>王重阳死后，周伯通带着《九阴真经》去找黄药师玩，这时的周伯通又练习了很多年武功，内力应该</p>
+<p>提升了很多。不过，周伯通还是打不过黄药师，被黄药师关在了岛上。</p>
+<p>在之后的十多年，周伯通进入了一个实战+勿打扰练习的阶段。这个阶段长达十多年，而且是和武功高</p>
+<p>绝的黄药师喂招。</p>
+<p>所以，有理由相信，离开桃花岛时的周伯通，单纯从全真武功来说，应该不低于王重阳的全真武功</p>
+<p>了。甚至会高不少，毕竟，王重阳还要考虑打战，并没有多少时间像周伯通那样练习。</p>
+<p>可是，这时的周伯通还是打不过黄药师的，如果不是”左右互搏“加持，周伯通是打不过黄药师的。所</p>
+<p>以，我推测，王重阳的全盛时期，是打不过见到郭靖时的黄药师的。</p>
+<p>那么，洪七公呢？郭靖见洪七公时，洪七公的降龙十八掌已经大成。而且在桃花岛上，洪七公和欧阳</p>
+<p>锋、黄药师争斗时不相上下，所以，我们可以推测，王重阳应该也是弱于出场时的洪七公的。</p>
+<p>再从全真教内部的武功来看一下，全真教二代武功最高的是丘处机，丘处机年龄也不小了，却不是瞎</p>
+<p>眼的梅超风的对手。</p>
+<p>那么，是丘处机笨么？好像也不是，那么是丘处机不勤奋么？好像也不是。</p>
+<p>咱们再找一个佐证。就是王重阳的自述。</p>
+<p>王重阳在他的”暧昧女生“林朝英死后，去了林朝英的棺材，在棺材里写了一首打油诗：”玉女心经，挤</p>
+<p>压全真；重阳一生，不输于人“，然后就刻下了九阴真经的武功。</p>
+<p>从字面解释，就是说”玉女心经确实破了全真教所有的武功，不过，我王重阳会的可不止全真教这点武</p>
+<p>功呀，我还会《九阴真经》呢，我的九阴真经就可以打过你”。</p>
+<p>这王重阳的自述可以看出，“全真教武功，自有其上限。”</p>
+<p>所以，如果王重阳确实如他所说没有练习《九阴真经》的话，他的上限也就是输给林朝英的玉女心</p>
+<p>经。</p>
+<p>在第二次华山论剑时，洪七公学习了九阴真经，黄药师也新发明了不少厉害的武功。他们两个人和郭</p>
+<p>靖对打，限招300招。</p>
+<p>黄药师有个心理描写挺有意思：</p>
+<p>数招一过，黄药师大为惊异：“这傻小子的武功，怎么竟练到了这等地步？我如稍有容让，莫说让他挡</p>
+<p>到三百招之外，说不定还得输在他手里。”</p>
+<p>最后，黄药师和洪七公都在300招没有战胜郭靖。</p>
+<p>这说明，这时的郭靖已经跻身一流的境界了。</p>
+<p>所以，我猜测，王重阳的全盛时期，大概就是第二次华山论剑的郭靖的水平了。</p>
+<p>综合来说，王重阳的武功应该低于洪七公出场时的武功，低于周伯通出场时的武功，低于黄药师出场</p>
+<p>是的武功，接近或者高于第二次华山论剑时郭靖的武功。</p>
+<p>当然，有人说，王重阳也练了《九阴真经》，他的武功应该有更高的表现，不过，不管他有没有练</p>
+<p>《九阴真经》，都没有他使用的记录，就不再参考了。</p>
+<h2 id="大纲">大纲</h2>
+<h2 id="百字摘要">百字摘要</h2>
+<h2 id="金庸案例">金庸案例</h2>
+<h2 id="时间消耗">时间消耗</h2>
+<h2 id="阅读理解">阅读理解：</h2>
+<h2 id="大纲-1">大纲：</h2>
+<h2 id="撰写">撰写：</h2>
+<h2 id="录音">录音</h2>
+<h2 id="一小时运动">一小时运动</h2>
+<h2 id="英文原文">英文原文</h2>
+<p>21 JANUARY</p>
+<p>Profit’s Function</p>
+<p>Today’s profitable business will become tomorrow’s white
+elephant.</p>
+<p>Joseph Schumpeter insisted that innovation is the very essence of
+economics and most certainly</p>
+<p>of a modern economy.</p>
+<p>Joseph Schumpeter：</p>
+<p>essence :</p>
+<p>本质；实质；精髓</p>
+<p>[ U ] ~ (of sth) the most important quality or feature of sth, that
+makes it what it is</p>
+<p>Schumpeter’s Theory of Economic Development makes profit fulfill an
+economic function.</p>
+<p>In the economy of change and innovation, a profit, in contrast to
+Karl Marx’s theory, is not a</p>
+<p>“surplus value” stolen from the workers.</p>
+<p>surplus:</p>
+<p>过剩；剩余；过剩量；剩余额</p>
+<p>an amount that is extra or more than you need</p>
+<p>On the contrary, it is the only source of jobs for workers and of
+labor income.</p>
+<p>The theory of economic development shows that no one except the
+innovator makes a genuine</p>
+<p>“profit”; and the innovator’s profit is always quite short-lived.</p>
+<p>genuine：</p>
+<p>真的；名副其实的</p>
+<p>real; exactly what it appears to be; not artificial</p>
+<p>But innovation, in Schumpeter’s famous phrase, is also “creative
+destruction.”</p>
+<p>It makes obsolete yesterday’s capital equipment and capital
+investment.</p>
+<p>equipment：</p>
+<p>设备；器材</p>
+<p>the things that are needed for a particular purpose or activity</p>
+<p>The more an economy progresses, the more capital formation will it
+therefore need.</p>
+<p>formation：</p>
+<p>组成；形成</p>
+<p>[ U ] the action of forming sth; the process of being formed</p>
+<p>Thus, what the classical economist—or the accountant or the stock
+exchange—considers “profit” is</p>
+<p>a genuine cost, the cost of staying in business, the cost of a future
+in which nothing is predictable</p>
+<p>except that today’s profitable business will become tomorrow’s white
+elephant.</p>
+<p>genuine：</p>
+<p>真的；名副其实的</p>
+<p>real; exactly what it appears to be; not artificial</p>
+<h3 id="action-point">ACTION POINT:</h3>
+<p>Insure that you are investing enough in innovation to prepare for the
+day when your profitable</p>
+<p>business becomes obsolete.</p>
+<p>The Ecological Vision</p>
+<h2 id="january">21 JANUARY</h2>
+<h3 id="profits-function">Profit’s Function</h3>
+<p>Today’s profitable business will become tomorrow’s white
+elephant.</p>
+<p>Joseph Schumpeter insisted that innovation is the very essence of
+eco-</p>
+<p>nomics and most certainly of a modern economy. Schumpeter’s Theory
+of</p>
+<p>Economic Development makes profit fulfill an economic function. In
+the</p>
+<p>economy of change and innovation, a profit, in contrast to Karl
+Marx’s the-</p>
+<p>ory, is not a “surplus value” stolen from the workers. On the
+contrary, it is the</p>
+<p>only source of jobs for workers and of labor income. The theory of
+eco-nomic</p>
+<p>development shows that no one except the innovator makes a gen-</p>
+<p>uine “profit”; and the innovator’s profit is always quite
+short-lived.</p>
+<p>But innovation, in Schumpeter’s famous phrase, is also “creative
+de-</p>
+<p>struction.” It makes obsolete yesterday’s capital equipment and
+capital in-</p>
+<p>vestment. The more an economy progresses, the more capital
+formation</p>
+<p>will it therefore need. Thus, what the classical economist—or the</p>
+<p>account-ant or the stock exchange—considers “profit” is a genuine
+cost,</p>
+<p>the cost of staying in business, the cost of a future in which
+nothing is</p>
+<p>predictable ex-cept that today’s profitable business will become</p>
+<p>tomorrow’s white ele-phant.</p>
+<h3 id="action-point-1">ACTION POINT:</h3>
+<p>Insure that you are investing enough in innovation to</p>
+<p>prepare for the day when your profitable business becomes
+obsolete.</p>
+<h4 id="the-ecological-vision">The Ecological Vision</h4>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

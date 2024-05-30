@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="第三同读" />
+  <title>德鲁克日志</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">德鲁克日志</h1>
+<p class="author">第三同读</p>
+</header>
+<h2 id="透过金庸读懂德鲁克">透过金庸读懂德鲁克</h2>
+<p>金庸创造了一个江湖世界，这个江湖从喜欢范蠡的阿青开始到韦小宝、陈家洛等止的1600多年时间</p>
+<p>里，各种武侠人物你方唱罢我登场，演绎着一个个故事。</p>
+<p>既然是武侠小说，武和侠就是一个很重要的线索，随着时间的推进，金庸江湖的武功方面呈现出了一</p>
+<p>种个体衰落组织崛起的发展脉络。</p>
+<p>金庸的江湖的武功方面的发展，大概分析一下，可以分为四个阶段。</p>
+<p>第一阶段：神级个体</p>
+<p>金庸笔下的最古老的武功高手当然是爱上范蠡的阿青姑娘。阿青姑娘是山里的一个牧羊女，她的武功</p>
+<p>是跟一只猴子学的，是一个绝对高手，这个小小的姑娘凭借一根棍棍可以对抗一支军队。当她攻破了</p>
+<p>那支军队，冲到西施面前时，被西施的绝世容颜震撼，默然而去，而西施也被她的无形剑气所伤，终</p>
+<p>生捧心。</p>
+<p>这阶段的的武功拥有者是一个非常独立的个体，这个个体非常独立，几乎不和外界打交道，武功则是</p>
+<p>神级的。</p>
+<p>第二阶段：主仆时代</p>
+<p>随着时间的推进，武功的拥有者也慢慢开始了享受生活。提到享受生活，就必然需要人来服侍，这些</p>
+<p>武功拥有者又不会赚钱，就通过收徒弟找来免费劳动力来服侍自己。</p>
+<p>比如东邪黄药师、西毒欧阳锋，这时的武功掌握在少数几个人手里，这几个人会收徒弟。这些土地在</p>
+<p>一定程度上算师父的私人财产。师父如果不高兴，可以随意杀死徒弟。</p>
+<p>黄药师打断了所有徒弟的腿；欧阳克四处收女弟子。</p>
+<p>这时的武功开始考虑传承，并且只在很小分范围内传承，弟子是师父的私人财产。师父和弟子形成非</p>
+<p>常小的利益共同体。大一些的可以称为门派，小一些的也就是一些豪门。</p>
+<p>第三阶段：门派时代</p>
+<p>随着时间的推进，江湖开始进入了门派时代。主仆的传承结构不能满足学武人士的需求，毕竟，一个</p>
+<p>师父不可能也不需要有很多仆人式的弟子。而希望学习武功的人也非常多。</p>
+<p>这时，一些有影响力的人，开始组建更大的武术团体，如嵩山派、华山派、青城派等。这些门派有严</p>
+<p>格的门规并且形成的一定的规模。</p>
+<p>这些门派位置相对固定，并且在当地形成了一定的政治势力。</p>
+<p>随着门派的发展，社会对更大的组织提出了要求，一些有能力的人开始通过联盟等方式谋求更大的组</p>
+<p>织模式。比如五岳剑派。</p>
+<p>第四阶段：帮会时代</p>
+<p>五岳剑派在并派过程中的失败直接导致了日月神教的疯狂发展以及五岳派高手流落民间的现实。这些</p>
+<p>流落民间的高手后期慢慢地组织了起来，形成了帮会，长乐帮就是典型的代表，各个门派的高手或者</p>
+<p>低手凑在一起形成一个全国性的门派，这时的江湖人士，武功大多不高，帮主也不是帮里武功最高的</p>
+<p>人了。各位江湖侠客更多在意的是帮派里的身份了</p>
+<p>至于到了韦小宝时代，这位奇人更是同时拥有天地会、神龙教、朝廷、独臂神尼等各种帮派势力的身</p>
+<p>份。这些身份让武功弱爆的韦小宝可以无往不利。</p>
+<p>在四个阶段的发展过程中，不同阶段整个江湖，以及江湖里的组织还有个人的关注点都是不一样的。</p>
+<p>在第一个阶段，武功对整个江湖是震撼级的，因为之前从来没有过。我一度怀疑，阿青是外星人路</p>
+<p>过。走后留下了一些秘籍。</p>
+<p>而到了第二阶段，江湖需要的是稳定，需要那些高手互相之间达成平衡。而那些高手也需要各自保持</p>
+<p>自己的位置，同时努力往上一点点。对于那些徒弟来说，跟谁学就很重要的。能跟黄药师学武功真是</p>
+<p>天大的福气（只要不怕腿打断）。</p>
+<p>在第三个阶段时，门派制度已经完善，加入某一个门派很很多年轻人的生活方式。当时的江湖也需要</p>
+<p>这些门派在各地形成政治势力以求整个社会的稳定。对于那些掌门来说，多收徒弟，发展门派就是他</p>
+<p>们的需求。</p>
+<p>岳不群每次下山都会带几个徒弟回来，如果有资质不错的就更好了。</p>
+<p>到了第四个阶段就完全不一样了，这时在江湖之外出现了一个强有力的政府，这时武功高手已经非常</p>
+<p>稀缺了，为了在政府的对抗中生存，这些江湖人凑在一切，互相帮助。如果在某一个帮派里不能得到</p>
+<p>发展或得到有效的帮助，他们就会离开，加入新的帮会。因为个体的力量太小了。</p>
+<p>四个阶段的发展是连续的，在阶段的变迁过程中。每次大变革来临时，整个江湖、组织以及个体都会</p>
+<p>面临心理上的恐慌，同时，无形的力量有会促使这种架构尽快地形成。</p>
+<h2 id="百字摘要">百字摘要</h2>
+<h2 id="金庸案例">金庸案例</h2>
+<ol type="1">
+<li><p>狄云悲惨故事的根源</p></li>
+<li><p>吴六奇：我为什么离开丐帮</p></li>
+<li></li>
+</ol>
+<p>30 APRIL</p>
+<p>Psychological Insecurity</p>
+<p>心理的不安全感</p>
+<p>Psychological：</p>
+<p>connected with a person’s mind and the way in which it works</p>
+<p>心灵的；心理的；精神上的</p>
+<p>Insecurity permeates the entire industrial situation.</p>
+<p>permeate：</p>
+<p>to spread to every part of an object or a place</p>
+<p>渗透；弥漫；扩散</p>
+<p>Insecurity—not economic but psychological insecurity—permeates the
+entire industrial situation.</p>
+<p>It creates fear; and since it is fear of the unknown and the
+unpredictable, it leads to a search for</p>
+<p>scapegoats and culprits.</p>
+<p>scapegoat：</p>
+<p>替罪羊；代人受过者</p>
+<p>culprit：</p>
+<p>犯错的人；罪犯</p>
+<p>a person who is blamed for sth bad that sb else has done or for some
+failure</p>
+<p>a person who has done sth wrong or against the law</p>
+<p>Only if we restore the worker’s belief in the rationality and
+predictability of the forces that control</p>
+<p>his job, can we expect any policies in the industrial enterprise to
+be effective.</p>
+<p>rationality：合理性；合理的行动</p>
+<p>predictability： 可预测性；可预言</p>
+<p>In no other area can we hope to achieve so much so fast.</p>
+<p>All the basic forces—the objective requirements of society, the
+objective requirements of the</p>
+<p>enterprise, and the objective needs and requirements of the
+individual—work in the direction of</p>
+<p>making the industrial enterprise a functioning institution.</p>
+<h3
+id="action-point-set-up-a-plan-to-stay-on-top-of-your-knowledge-area.-if-your-employer-cannot">ACTION
+POINT: Set up a plan to stay on top of your knowledge area. If your
+employer cannot</h3>
+<p>provide you with the training and experiences to maintain your
+employability, consider changing</p>
+<p>jobs.</p>
+<p>The New Society</p>
+<h2 id="april">30 APRIL</h2>
+<h3 id="psychological-insecurity">Psychological Insecurity</h3>
+<p>Insecurity permeates the entire industrial situation.</p>
+<p>Insecurity—not economic but psychological insecurity—permeates the
+entire</p>
+<p>industrial situation. It creates fear; and since it is fear of the
+un-known and the</p>
+<p>unpredictable, it leads to a search for scapegoats and cul-prits.
+Only if we</p>
+<p>restore the worker’s belief in the rationality and predictability of
+the forces</p>
+<p>that control his job, can we expect any policies in the industrial
+enterprise to be</p>
+<p>effective. In no other area can we hope to achieve so much so fast.
+All the basic</p>
+<p>forces—the objective requirements of society, the objective
+requirements of the</p>
+<p>enterprise, and the objective needs and requirements of the
+individual—work in</p>
+<p>the direction of making</p>
+<p>the industrial enterprise a functioning institution.</p>
+<h3 id="action-point">ACTION POINT:</h3>
+<p>Set up a plan to stay on top of your knowledge area. If</p>
+<p>your employer cannot provide you with the training and experiences
+to</p>
+<p>maintain your employability, consider changing jobs.</p>
+<h4 id="the-new-society">The New Society</h4>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

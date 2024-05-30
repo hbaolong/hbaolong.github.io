@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="第三同读" />
+  <title>德鲁克日志</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">德鲁克日志</h1>
+<p class="author">第三同读</p>
+</header>
+<h2 id="透过金庸读懂德鲁克">透过金庸读懂德鲁克</h2>
+<p>鄱阳湖位处江西，是内陆最大的淡水湖。元末时，有一伙土匪聚集在这里，自称为鄱阳帮，帮主刘文</p>
+<p>其颇有一些武功和智谋。刘帮主据说本是一个秀才，因为天下大乱，感觉学文没有出路，父亲就像送</p>
+<p>他去学武，正好那年有一个崆峒派的高手路过，刘帮主就跟着他学了几个月的武功，也算是崆峒派的</p>
+<p>记名弟子。</p>
+<p>刘帮主颇有学武天赋，短短几个月已经打遍鄱阳无敌手，很快就纠集了一帮人，占据了鄱阳湖，每天</p>
+<p>训练帮众，自称帮主。</p>
+<p>好狗护三家，在刘帮主的经营下，偌大的鄱阳湖倒也风平浪静，凭借刘帮主的文才武功，四周的土匪</p>
+<p>也多不来招惹。</p>
+<p>刘帮主也一直是鄱阳的太平为自己的主要任务。偶尔也感慨一下元朝的腐败，魔教的暴虐，以及各大</p>
+<p>派的不作为。</p>
+<p>后来，听说魔教教主死了，魔教四分五裂，金毛狮王不见踪迹，青翼蝠王也躲到了西域，白眉鹰王自</p>
+<p>立门户，创建了天鹰教。光明顶只剩下了光明左使杨逍独枝支撑。</p>
+<p>华山掌门就向各大门派发出了英雄帖，想乘机攻上光明顶，灭掉象征魔教的圣火，彻底摧毁魔教。各</p>
+<p>大派都觉得是非常好的机会，都派出了自己最强大的力量，计划在最短的时间里摧毁魔教，重整江</p>
+<p>湖。</p>
+<p>刘帮主知道了这些后，顿时感觉热血沸腾。觉得好男儿适逢乱世，就应该有一番作为。这么多年，自</p>
+<p>己苦练武功，用心经营鄱阳帮，吃湖水的饭，保护四周百姓的安稳。</p>
+<p>现在有了更大的机会和战场，可以让自己有更大的成就，让自己保护更多的百姓。</p>
+<p>想到这里，刘帮主意气风发，就派人给崆峒派自己的师父送了一个信，说自己也会排除最强大的队伍</p>
+<p>协助五大派围攻光明顶。</p>
+<p>不等师父回信，刘帮主就率领帮里所有的青壮年出发了，向昆仑山光明顶杀去。</p>
+<p>一路上风餐露宿，出来没多久，就听说老家鄱阳湖被魔教的洪水旗占领。刘帮主想，只要摧毁了光明</p>
+<p>顶，鄱阳湖就又回来了，所以刘帮主并没有担心，还是一直向西奔去，很快就来到了昆仑山附近。</p>
+<p>这一天天刚刚亮，刘帮主起来练了一趟拳。然后回来把所有人叫到了一起，开始做战前动员：“兄弟</p>
+<p>们，咱们已经进入昆仑山了，随时会遇见魔教的狗崽子们，咱们建功立业的机会到了，咱们要…..”</p>
+<p>刘帮主还没说完，突然看到远处出现了很多大树，而那些大树还会动。刘帮主赶快叫帮众们准备战</p>
+<p>斗。</p>
+<p>很快，那些大树都到了眼前，原来是一些二人抱、三人抱的大树被放在独轮车上。这些独轮车飞快地</p>
+<p>靠近，帮众们本大树碰到就死。</p>
+<p>几分钟，上百人的鄱阳帮全部被大木头给怼死了。</p>
+<p>刘帮主还站在那里。看着刚刚升起的太阳，这时，有一个大木头过来了。直接顶向刘帮主……</p>
+<p>德鲁克说，好的意图并不是社会责任，这需要能力的匹配。</p>
+<p>对于一个组织来说，组织的自身目标的实现是最大的社会价值，因为这样你才会是一个好的老板，一</p>
+<p>个好的市民，一个好的帮主。</p>
+<p>而当你在考虑帮助别人时，你一定要看一下，你是不是忘记了自己目标，自己的战场。</p>
+<p>因为，让一个组织接受或者执行阻碍你自身任务的责任是一种非常不负责任的行为。</p>
+<p>在长达几个月的跋涉后，鄱阳帮在几分钟内毁灭了。</p>
+<p>毁灭后，灭绝问了一句：“鄱阳帮来干甚么？”。</p>
+<p>When it comes to corporate philanthropy, make sure your company
+doesn’t take its eye off the ball.</p>
+<h2 id="百字摘要">百字摘要</h2>
+<h2 id="金庸案例">金庸案例</h2>
+<ol type="1">
+<li><p>张三丰的责任</p></li>
+<li><p>少林的责任</p></li>
+<li><p>崆峒派的责任</p></li>
+<li><p>鄱阳帮覆灭记</p></li>
+</ol>
+<p>24 APRIL</p>
+<p>Social Responsibility</p>
+<p>Good intentions are not always socially responsible.</p>
+<p>intentions：</p>
+<p>An intention is an idea or plan of what you are going to do.</p>
+<p>意图</p>
+<p>A business that does not show a profit at least equal to its cost of
+capital is irresponsible; it wastes</p>
+<p>society’s resources.</p>
+<p>profit：</p>
+<p>利润；收益；赢利</p>
+<p>capital：</p>
+<p>资本；资金；启动资金</p>
+<p>the money that you make in business or by selling things, especially
+after paying the costs involved</p>
+<p>a large amount of money that is invested or is used to start a
+business</p>
+<p>Economic profit performance is the base without which business cannot
+discharge any other</p>
+<p>responsibilities, cannot be a good employer, a good citizen, a good
+neighbor.</p>
+<p>discharge：</p>
+<p>准许（某人）离开；解雇</p>
+<p>to give sb official permission to leave a place or job; to make sb
+leave a job</p>
+<p>But economic performance is not the only responsibility of a business
+any more than educational</p>
+<p>performance is the only responsibility of a school or health care the
+only responsibility of a</p>
+<p>hospital.</p>
+<p>Every organization must assume responsibility for its impact on
+employees, the environment,</p>
+<p>customers, and whomever and whatever it touches.</p>
+<p>impact：</p>
+<p>巨大影响；强大作用</p>
+<p>he powerful effect that sth has on sb/sth</p>
+<p>That is social responsibility.</p>
+<p>But we also know that society will increasingly look to major
+organizations, for-profit and nonprofit</p>
+<p>alike, to tackle major social ills.</p>
+<p>increasingly：</p>
+<p>越来越多地；不断增加地</p>
+<p>tackle：</p>
+<p>应付，处理，解决（难题或局面）</p>
+<p>more and more all the time</p>
+<p>to make a determined effort to deal with a difficult problem or
+situation</p>
+<p>And there we had better be watchful, because good intentions are not
+always socially responsible.</p>
+<p>让一个组织接受或者执行阻碍你自身任务的责任是一种非常不负责任的行为。</p>
+<p>It is irresponsible for an organization to accept—let alone to
+pursue—responsibilities that would</p>
+<p>impede its capacity to perform its main task and mission or to act
+where it has no competence.</p>
+<p>pursue：</p>
+<p>追求；致力于；执行；贯彻</p>
+<p>impede：</p>
+<p>阻碍；阻止</p>
+<p>competence：</p>
+<p>能力；胜任</p>
+<p>to do sth or try to achieve sth over a period of time</p>
+<p>to delay or stop the progress of sth</p>
+<p>the ability to do sth well</p>
+<h3
+id="action-point-when-it-comes-to-corporate-philanthropy-make-sure-your-company-doesnt-take-its">ACTION
+POINT: When it comes to corporate philanthropy, make sure your company
+doesn’t take its</h3>
+<p>eye off the ball.</p>
+<p>philanthropy：</p>
+<p>博爱；慈善；乐善好施</p>
+<p>the practice of helping the poor and those in need, especially by
+giving money</p>
+<p>Managing in a Time of Great Change</p>
+<h2 id="april">24 APRIL</h2>
+<h3 id="social-responsibility">Social Responsibility</h3>
+<p>Good intentions are not always socially responsible.</p>
+<p>Abusiness that does not show a profit at least equal to its cost of
+capital is</p>
+<p>irresponsible; it wastes society’s resources. Economic profit
+perfor-mance is</p>
+<p>the base without which business cannot discharge any other
+re-sponsibilities,</p>
+<p>cannot be a good employer, a good citizen, a good neighbor. But
+economic</p>
+<p>performance is not the only responsibility of a business any more
+than</p>
+<p>educational performance is the only responsibility of a school or</p>
+<p>health care the only responsibility of a hospital.</p>
+<p>Every organization must assume responsibility for its impact on</p>
+<p>employ-ees, the environment, customers, and whomever and whatever
+it</p>
+<p>touches. That is social responsibility. But we also know that society
+will</p>
+<p>increasingly look to major organizations, for-profit and nonprofit
+alike, to</p>
+<p>tackle major social ills. And there we had better be watchful,
+because</p>
+<p>good intentions are not always socially responsible. It is
+irresponsible for</p>
+<p>an organization to accept—let alone to pursue—responsibilities
+that</p>
+<p>would impede its capac-ity to perform its main task and mission or to
+act</p>
+<p>where it has no compe-tence.</p>
+<h3 id="action-point">ACTION POINT:</h3>
+<p>When it comes to corporate philanthropy, make sure your</p>
+<p>company doesn’t take its eye off the ball.</p>
+<h4 id="managing-in-a-time-of-great-change">Managing in a Time of Great
+Change</h4>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

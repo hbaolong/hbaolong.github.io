@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="第三同读" />
+  <title>德鲁克日志</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">德鲁克日志</h1>
+<p class="author">第三同读</p>
+</header>
+<h2 id="透过金庸读懂德鲁克">透过金庸读懂德鲁克</h2>
+<p>在一个公司里，对于管理层来说是用人之长？还是补人之短？对于初入职场的新人，究竟是扬长？还</p>
+<p>是补短？</p>
+<p>对于有一些职场经验的人，究竟扩大自己的优势领域？还是补齐自己的短板？</p>
+<p>这些问题，看起来很简单，实际操作时却会做出相反的决策。</p>
+<p>德鲁克举了一个例子，就是美国的马歇尔上将，马歇尔是美国军事家、政治家、外交家，陆军五星上</p>
+<p>将。为美国在二战的胜利作了不可磨灭的贡献，并于1953年获诺贝尔和平奖。</p>
+<p>马歇尔在二战时有创造了一个奇迹，就是在非常短的时间里组建了一只1300万人的队伍。这是目前有</p>
+<p>记录以来最大的一只军队，这样的一只军队，必然需要非常多的管理人员。马歇尔在很短的时间里任</p>
+<p>命了600位司令员，这些司令员都获得出了非凡的成绩。而这些司令员大多数之前都没有指挥过军队。</p>
+<p>德鲁克用这个标记了马歇尔惊人的领导力。而马歇尔认为，他只是很简单地把人在正确的时间放到了</p>
+<p>正确的位置。</p>
+<p>是呀，我本来想概括一个3R的概念，Right man ,Right time, Right
+place，后来我发现德鲁克只是关注</p>
+<p>的正确的时间和正确的位置，对于他来说，人有的是，如何用的问题。</p>
+<p>他说，一个军队的指挥官，需要会训练部队，那就会训练就好了，不需要用会社交的。</p>
+<p>德鲁克认为，马歇尔之所以可以在很短的时间里任命了600位司令员，创建了1300万人的军队。最终</p>
+<p>赢得了二战，和他的一个观点是分不开的，这就是：关注优势。</p>
+<p>马歇尔是一个管理者，管理者应该关注下属、员工的优势，把他们的优势充分发挥出来。</p>
+<p>我曾经经历过一个团队，团队的负责人对员工非常好，经常希望员工可以“全面发展”，所以擅长ToC业</p>
+<p>务的员工经常被要求做ToB的业务，而擅长ToB业务的员工，有要经常面对ToC的业绩压力。整个团队</p>
+<p>在ToB和ToC中纠结了很久。而员工的优势并没有发挥出来，更没有得到加强。</p>
+<p>那么对于员工来说呢？应该扬长还是补短？这个问题有点复杂了。大家的观点呢？</p>
+<p>最后，我推荐大家一个视频，希望大家喜欢。</p>
+<h2 id="百字摘要">百字摘要</h2>
+<p>用人之长。</p>
+<h2 id="金庸案例">金庸案例</h2>
+<p>17 APRIL</p>
+<p>Picking People: An Example</p>
+<p>Don’t hire a person for what they can’t do; hire them for what they
+can do.</p>
+<p>A very great leader of men, General George C. Marshall, chief of
+staff of the U.S. Army during</p>
+<p>World War II, had the most remarkable record of putting people into
+the right place at the right</p>
+<p>time.</p>
+<p>He appointed something like six hundred people to positions as
+general officer, division</p>
+<p>commander, and so on, almost without a dud. And not one of these
+people had ever commanded</p>
+<p>troops before.</p>
+<p>appointed：</p>
+<p>指定的</p>
+<p>general officer：将官</p>
+<p>division commander 司令</p>
+<p>dud：</p>
+<p>不中用的东西；废物</p>
+<p>If something happens at the appointed time, it happens at the time
+that was decided in advance.</p>
+<p>:</p>
+<p>a thing that is useless, especially because it does not work
+correctly</p>
+<p>A discussion would come up, and Marshall’s aides would say, “Colonel
+So-and-So is the best</p>
+<p>trainer of people we have, but he has never gotten along with his
+boss. If he has to testify before</p>
+<p>Congress, he’ll be a disaster. He is so rude.” Marshall would then
+ask, “What is the assignment? To</p>
+<p>train a division? If he is first-rate as a trainer, put him in. The
+rest is my job.”</p>
+<p>Colonel：陆军上校</p>
+<p>So-and-So：</p>
+<p>（指</p>
+<p>used to refer to a person, thing, etc. when you do not know their
+name or when you are talking in a general way</p>
+<p>叫不上名字的人、物，或泛指）某某人（或事物）</p>
+<p>disaster：</p>
+<p>an unexpected event, such as a very bad accident, a flood or a fire,
+that kills a lot of people or causes a lot of damage</p>
+<p>难；灾祸；灾害</p>
+<p>assignment：a task or piece of work that sb is given to do, usually
+as part of their job or studies （分派的）工作，任务</p>
+<p>aides：An aide is an assistant to someone who has an important job,
+especially in government or in the armed forces. 助手</p>
+<p>gotten along：勉强）生活；进展；（使）前进；与…和睦相处</p>
+<p>As a result, he created the largest army the world had ever seen,
+thirteen million people, in the</p>
+<p>shortest possible time, with very few mistakes. The lesson is to
+focus on strengths.</p>
+<p>灾</p>
+<h3 id="action-point-know-the-strengths-of-each-person-you-hire.">ACTION
+POINT: Know the strengths of each person you hire.</h3>
+<p>Managing the Non-Profit Organization</p>
+<h2 id="april">17 APRIL</h2>
+<h3 id="picking-people-an-example">Picking People: An Example</h3>
+<p>Don’t hire a person for what they can’t do; hire them for what they
+can do.</p>
+<p>Avery great leader of men, General George C. Marshall, chief of staff
+of</p>
+<p>the U.S. Army during World War II, had the most remarkable record
+of</p>
+<p>putting people into the right place at the right time. He appointed
+some-</p>
+<p>thing like six hundred people to positions as general officer,
+division com-</p>
+<p>mander, and so on, almost without a dud. And not one of these people
+had</p>
+<p>ever commanded troops before. A discussion would come up, and
+Mar-shall’s</p>
+<p>aides would say, “Colonel So-and-So is the best trainer of people we
+have,</p>
+<p>but he has never gotten along with his boss. If he has to testify
+before</p>
+<p>Congress, he’ll be a disaster. He is so rude.” Marshall would then
+ask, “What</p>
+<p>is the assignment? To train a division? If he is first-rate as a
+trainer, put him</p>
+<p>in. The rest is my job.” As a result, he created the largest army the
+world had</p>
+<p>ever seen, thirteen million people, in the shortest possible time,
+with very few</p>
+<p>mistakes. The lesson is to focus on strengths.</p>
+<h3 id="action-point">ACTION POINT:</h3>
+<p>Know the strengths of each person you hire.</p>
+<h4 id="managing-the-non-profit-organization">Managing the Non-Profit
+Organization</h4>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

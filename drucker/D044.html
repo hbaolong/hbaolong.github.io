@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="第三同读" />
+  <title>德鲁克日志</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">德鲁克日志</h1>
+<p class="author">第三同读</p>
+</header>
+<h2 id="透过金庸读懂德鲁克">透过金庸读懂德鲁克</h2>
+<p>自由不是权利，而是责任</p>
+<p>小时候，我很向往自由，每天被爸爸妈妈管着，我想，等我长大后，我就自由了，想做什么就做什</p>
+<p>么。</p>
+<p>后来，我大了一些，我发现我被束缚的更多了。想做的事情大多还是做不了。比如，我想养狗，小时</p>
+<p>候爸妈不让，长大后媳妇不让。所以，我还是没有自由。</p>
+<p>这时，别人告诉我，自用并不是想做什么就做什么，而是不想做什么就不做什么。我想了想，发现很</p>
+<p>有道理。</p>
+<p>想做什么就做什么，这其实是很难的，而且，在这个社会上，太多的事情你都不能做，比如在大街上</p>
+<p>撒尿。</p>
+<p>可是，作为独立性格和人格的人，我大概是可以“不做”我不喜欢做的事情。</p>
+<p>所以，我对自由的定义变更了。</p>
+<p>可是，我发现，其实我经常要做那些我不喜欢做的事情。比如，我不喜欢在雾霾天出门，可是我还是</p>
+<p>要出门。我不喜欢见一些人，可是有时还是要去见。</p>
+<p>有一个记者问一个年轻人：“你因为穷做过那些违心的事情？”</p>
+<p>年轻人想了想回答说：“上班”。</p>
+<p>记者又问：“还有什么更违心的么?”</p>
+<p>年轻人想了想回答说：”加班“</p>
+<p>记者又追问：”还有什么最违心的么？“</p>
+<p>年轻人伤心地说：”加班不要钱…”</p>
+<p>是呀，我们其实经常做自己不喜欢的事情，那么，我们是不是就没有自由呢？</p>
+<p>或许你可以说：”你可以辞职呀！“</p>
+<p>“呵呵”</p>
+<p>如果我们不自由，我们可以反抗么？我们可以辞职么？法律上你当然后，现实中，就比较复杂了。</p>
+<p>当你手头积压这很多事情时，你很难对领导说出“辞职”这两个字。</p>
+<p>这时，我对“自由”有了第三层理解：自由就是责任。</p>
+<p>人都是在社会中，在群体中，在组织中的。每个人自然承担着一部分的责任，除非你选择离开这个群</p>
+<p>体，只要你留在这个群体里，你首先就要承担你的责任。</p>
+<p>所以，所谓的自由，就是你可以选择如何应对你的责任，你可以选择用什么样的行为来应对这个社</p>
+<p>会。而不是用别人要求的姿势。</p>
+<p>你只有完成了这些职责，这个组织，这个群体，这个社会才可以正常运行。而这时的你才是自由的。</p>
+<p>孔子说过：“从心所欲而不逾矩”，孔子认为这是70岁的人应有的心态。</p>
+<p>我觉得，在这个时代，这是每一个都应有的心态。</p>
+<p>比如，在这个疫情时代，你为这个社会做了什么呢？可以留言说说……</p>
+<h2 id="大纲">大纲</h2>
+<h2 id="百字摘要">百字摘要</h2>
+<h2 id="金庸案例">金庸案例</h2>
+<h2 id="时间消耗">时间消耗</h2>
+<h2 id="阅读理解">阅读理解：</h2>
+<h2 id="大纲-1">大纲：</h2>
+<h2 id="撰写">撰写：</h2>
+<h2 id="录音">录音</h2>
+<h2 id="一小时运动">一小时运动</h2>
+<h2 id="英文原文">英文原文</h2>
+<p>13 FEBRUARY</p>
+<p>The Nature of Freedom</p>
+<p>Freedom is never a release and always a responsibility.</p>
+<p>release:</p>
+<p>开放；放开；解禁</p>
+<p>to make sth available that had previously been restricted</p>
+<p>Freedom is not fun.</p>
+<p>It is not the same as individual happiness, nor is it security or
+peace or progress.</p>
+<p>It is a responsible choice.</p>
+<p>Freedom is not so much a right as a duty.</p>
+<p>Real freedom is not freedom from something; that would be
+license.</p>
+<p>license：</p>
+<p>( BrE also also less frequent li·cence ) to give sb official
+permission to do, own, or use sth</p>
+<p>批准；许可</p>
+<p>It is freedom to choose between doing or not doing something, to act
+one way or another, to hold</p>
+<p>one belief or the opposite.</p>
+<p>It is not “fun” but the heaviest burden laid on man: to decide his
+own individual conduct as well</p>
+<p>as the conduct of society and to be responsible for both
+decisions.</p>
+<p>heaviest:adj. 最重的（heavy的最高级）</p>
+<p>burden:</p>
+<p>（义务、责任等的）重担，</p>
+<p>负担</p>
+<p>the ~ (of sth) | a ~ (on/to sb) a duty, responsibility, etc. that
+causes worry, difficulty or hard work</p>
+<p>conduct</p>
+<p>:a person’s behaviour in a particular place or in a particular
+situation</p>
+<h3 id="action-point">ACTION POINT:</h3>
+<p>List specific goals for your work.</p>
+<p>（人在某地或某种情况下的）行为，举止</p>
+<p>Think of goals that will meet your need for personal fulfillment,
+while also helping your boss meet</p>
+<p>his or her performance objectives.</p>
+<p>Sell these goals to your boss and keep the boss informed on your
+progress.</p>
+<p>“The Freedom of Industrial Man,” The Virginia Quarterly Review</p>
+<h2 id="february">13 FEBRUARY</h2>
+<h3 id="the-nature-of-freedom">The Nature of Freedom</h3>
+<p>Freedom is never a release and always a responsibility.</p>
+<p>Freedom is not fun. It is not the same as individual happiness, nor
+is it se-</p>
+<p>curity or peace or progress. It is a responsible choice. Freedom is
+not so much</p>
+<p>a right as a duty. Real freedom is not freedom from something; that
+would be</p>
+<p>license. It is freedom to choose between doing or not doing
+some-thing, to act</p>
+<p>one way or another, to hold one belief or the opposite. It is not
+“fun” but the</p>
+<p>heaviest burden laid on man: to decide his own individual conduct as
+well as</p>
+<p>the conduct of society and to be responsible for both de-</p>
+<p>cisions.</p>
+<h3 id="action-point-1">ACTION POINT:</h3>
+<p>List specific goals for your work. Think of goals that will</p>
+<p>meet your need for personal fulfillment, while also helping your
+boss</p>
+<p>meet his or her performance objectives. Sell these goals to your boss
+and</p>
+<p>keep the boss informed on your progress.</p>
+<h4
+id="the-freedom-of-industrial-man-the-virginia-quarterly-review">“The
+Freedom of Industrial Man,” The Virginia Quarterly Review</h4>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

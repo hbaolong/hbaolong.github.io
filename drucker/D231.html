@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="第三同读" />
+  <title>德鲁克日志</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">德鲁克日志</h1>
+<p class="author">第三同读</p>
+</header>
+<h2 id="透过金庸读懂德鲁克">透过金庸读懂德鲁克</h2>
+<p>金庸笔下那些狠人 都是怎么死的</p>
+<p>所有人都是要死的，狠人也不例外，只是狠人会不大容易死。</p>
+<p>狠人，我指的是那些智商高、武功高甚至地位也高的人，如号称武功天下第一的东方不败，筹划五岳</p>
+<p>并派的左冷禅，狠起来割自己小鸡鸡的岳不群，号称西毒的欧阳锋，为人不见陈近南的陈近南，还有</p>
+<p>一剑无血冯锡范，神龙岛教主洪安通等等。</p>
+<p>这些人的武功、权势、智谋，都让人觉得他们应该可以颐养天年，可是这些人大多英年早逝，而且大</p>
+<p>多横死，他们究竟是如何死的呢？有什么客观规律么？今天我们聊聊。</p>
+<p>先说东方不败，东方不败是有对抗记录里武功最高的一位。他和当时武林中武功最高的三人（令狐</p>
+<p>冲、任我行、向问天）打斗，居然不落下风，而且可以主动进攻。如果没有他心爱的情郎杨莲亭的受</p>
+<p>伤，东方不败应该不会输，甚至会赢。即使打不过，他全身而退也是没有太大问题的。</p>
+<p>可惜他太心疼自己的情郎，让任盈盈抓住了弱点，在几个人的配合人，东方不败以殉情的方式选择了</p>
+<p>死亡。即使如此，任我行还是献出了一直眼睛的代价。</p>
+<p>左冷禅呢？左冷禅的死亡有两次，一次是政治生命的结束，一次是生命的结束。</p>
+<p>在嵩山的封禅台上，左冷禅筹划了很久的五岳派推选新掌门的活动正在进行。左冷禅认为自己肯定是</p>
+<p>新掌门的人选：五岳派哪有人可以和自己竞争呀。</p>
+<p>可惜，左冷禅太高傲了，他高傲地看不起岳不群，这个高傲让他付出了惨痛的代价：为岳不群做了嫁</p>
+<p>衣。</p>
+<p>后来在思过崖，左冷禅再次展示了自己的骄傲和自信：带着几个瞎子去摧毁五岳派力量，结果死于乱</p>
+<p>剑之下。</p>
+<p>岳不群呢？岳不群人狠，手辣，武功也及其高明。岳不群有什么缺点呢？好像没有。</p>
+<p>再说说欧阳锋，欧阳锋在第一次华山论剑上就是五绝之一。第二次华山论剑时他应该是武功天下第</p>
+<p>一，可惜随后就疯了。之后的几十年，他一直疯疯癫癫，知道和洪七公抱着死的那一瞬间。</p>
+<p>欧阳锋算是老死的，疯之前的欧阳锋几乎没有什么弱点：人狠、无情、武功高。如果非要说弱点的</p>
+<p>话，那就是大宗师的人设：几次因为大宗师的人设留下了黄蓉和郭靖的性命。</p>
+<p>等到欧阳锋疯了后，他又增加了一个弱点：父爱。他对杨过的感情已经是他的弱点了，或者说，如果</p>
+<p>别人对他尊重，对他好的人，都可以伤害他。幸运的是，杨过并没有伤害他，甚至保护他到最后一</p>
+<p>刻。</p>
+<p>陈近南或许不是《鹿鼎记》里武功最好的，确实名气最大的，而且武功也是相当不错。除了不敌归辛</p>
+<p>树外，其他人大概水平都差不多。不过，这个人最大的弱点就是对延平郡王府的决定忠诚，以至于对</p>
+<p>郑克爽的绝对忠诚，正是这份忠诚害死了他。让自己被哪个武功弱的不可思议的郑克爽一剑穿心，窝</p>
+<p>囊死了。</p>
+<p>冯锡范的情况也类似，他也是非常忠于延平郡王府，不同的是，他忠于郑克爽。后来随着郑克爽投降</p>
+<p>了清朝，自己也得了一个伯爵的封号。冯锡范为了不给自己以及郑克爽惹麻烦，硬是忍受韦小宝和侍</p>
+<p>卫的侮辱，最后被“法场换子”掉了脑袋。也窝囊死了。</p>
+<p>还有洪安通，洪安通的武功接近无敌。可是他最大的弱点就是他的夫人：苏荃。在最后时刻，他本来</p>
+<p>应该联合五龙使隐忍，筹备东山再起，结果，因为发现苏荃怀了小宝的孩子，他就觉得这是一件很丢</p>
+<p>脸的事情，要杀了自己的五龙使来保守秘密。即使如此，他一个人杀死五龙使还是没有问题，却因为</p>
+<p>顾忌苏荃的离开，没法一心一意和五龙使打斗，结果受了重伤，最后被小宝杀死。</p>
+<p>其实，不管是多么强大的狠人，都有致命的缺点。如果真要对付他们，找到缺点就好了。</p>
+<h2 id="大纲">大纲</h2>
+<h2 id="百字摘要">百字摘要</h2>
+<h2 id="金庸案例">金庸案例</h2>
+<h2 id="时间消耗">时间消耗</h2>
+<h2 id="阅读理解">阅读理解：</h2>
+<h2 id="大纲-1">大纲：</h2>
+<h2 id="撰写">撰写：</h2>
+<h2 id="录音">录音</h2>
+<p>18 AUGUST</p>
+<p>Hitting Them Where They Aren’t</p>
+<p>“Hitting them where they aren’t” outflanks the leader by creative
+imitation.</p>
+<p>outflank：</p>
+<p>to move around the side of an enemy or opponent, especially in order
+to attack them from behind</p>
+<p>包抄；侧翼包围</p>
+<p>Here, the innovator doesn’t create a major new product or service.
+In-stead, it takes something just</p>
+<p>created by somebody else and improves upon it.</p>
+<p>This is imitation.</p>
+<p>But it is creative imitation because the innovator reworks the new
+product or service to better</p>
+<p>satisfy customers’ wants and needs.</p>
+<p>Once the innovator succeeds in creating what customers want, it can
+achieve leadership and take</p>
+<p>control of the market.</p>
+<p>The perfect example is how IBM became the leading producer of PCs in
+the 1970s.</p>
+<p>Apple invented the PC.</p>
+<p>When the Apple appeared, it was an instant sensation.</p>
+<p>IBM set to work to outflank the Apple.</p>
+<p>It asked, “What are Apple’s shortcomings?” Within eighteen months IBM
+had on the market a PC</p>
+<p>that did everything the PC customers needed and wanted but had what
+the Apple lacked: software.</p>
+<p>And within another year IBM’s PC had become the market leader
+worldwide; it held that position for</p>
+<p>more than ten years.</p>
+<p>And Apple had become marginal.</p>
+<p>It almost went under and only turned itself around into a respectable
+niche player twenty-odd years</p>
+<p>later, in the late 1990s.</p>
+<h3 id="action-point">ACTION POINT:</h3>
+<p>Look for a successful innovation of a competitor’s and improve upon
+it, thus outflanking your</p>
+<p>competitor.</p>
+<p>Innovation and Entrepreneurship</p>
+<p>Entrepreneurial Strategies (Corpedia Online Program)</p>
+<h2 id="august">18 AUGUST</h2>
+<h3 id="hitting-them-where-they-arent">Hitting Them Where They
+Aren’t</h3>
+<p>“Hitting them where they aren’t” outflanks the leader by creative
+imitation.</p>
+<p>Here, the innovator doesn’t create a major new product or service.
+In-</p>
+<p>stead, it takes something just created by somebody else and improves
+upon it.</p>
+<p>This is imitation. But it is creative imitation because the innovator
+reworks</p>
+<p>the new product or service to better satisfy customers’ wants and
+needs. Once</p>
+<p>the innovator succeeds in creating what customers want, it</p>
+<p>can achieve leadership and take control of the market.</p>
+<p>The perfect example is how IBM became the leading producer of PCs</p>
+<p>in the 1970s. Apple invented the PC. When the Apple appeared, it was
+an</p>
+<p>instant sensation. IBM set to work to outflank the Apple. It asked,
+“What</p>
+<p>are Apple’s shortcomings?” Within eighteen months IBM had on the
+mar-</p>
+<p>ket a PC that did everything the PC customers needed and wanted but
+had</p>
+<p>what the Apple lacked: software. And within another year IBM’s PC
+had</p>
+<p>become the market leader worldwide; it held that position for more
+than</p>
+<p>ten years. And Apple had become marginal. It almost went under and
+only</p>
+<p>turned itself around into a respectable niche player twenty-odd years
+later,</p>
+<p>in the late 1990s.</p>
+<h3 id="action-point-1">ACTION POINT:</h3>
+<p>Look for a successful innovation of a competitor’s and</p>
+<p>improve upon it, thus outflanking your competitor.</p>
+<p>Innovation and Entrepreneurship</p>
+<h4
+id="entrepreneurial-strategies-corpedia-online-program">Entrepreneurial
+Strategies (Corpedia Online Program)</h4>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

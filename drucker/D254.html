@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="第三同读" />
+  <title>德鲁克日志</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">德鲁克日志</h1>
+<p class="author">第三同读</p>
+</header>
+<h2 id="透过金庸读懂德鲁克">透过金庸读懂德鲁克</h2>
+<p>程心、罗辑和维德</p>
+<p>罗辑是第一任执剑人。执剑人是一个变态的职位，它的全称是引力波威慑系统控制者。执剑人拥有启</p>
+<p>动引力波广播毁灭两个世界的能力，意义是保持两个世界的战略平衡。</p>
+<p>执剑人是面壁者计划的产物，所以执剑人又被称为“面壁者的幽灵”。</p>
+<p>执剑人并不是地球政权体系的一部分，不过，地球以及三体人的任何决策都绕不开执剑人。所以，在</p>
+<p>有了执剑人体系了，地球以及三体人的任何决策都会交给执剑人审核，执剑人同意后才可以得到有效</p>
+<p>的实施。</p>
+<p>所以，执剑人是一个事实上的独裁者。</p>
+<p>这时的人类社会在经历了危机后，形成了空前民主和尊重人权，而执剑人的存在又让人类处于独裁者</p>
+<p>的阴影之下。人类非常厌恶独裁者，也就厌恶执剑人。</p>
+<p>随着年龄的增长，罗辑的身体也开始变差，人类决定更换执剑人。</p>
+<p>当人类决定更换执剑人后，有很多候选人报名了执剑人的参选，这些人里有毕云峰、曹彬、伊万•安东</p>
+<p>诺夫、A•J•霍普金斯，还有一位韩国的外交部副部长，还有一位律师，还有维德。</p>
+<p>维德曾经是程心的上司，是PIA的负责人，他主导的阶梯计划事实上改变了人类和三体的关系。</p>
+<p>维德是一个只知道目标而不择手段的人。他著名的口头禅就是：“前进！前进！！不择手段地前</p>
+<p>进！！！”</p>
+<p>罗辑本来是一个玩世不恭的花花公子，几十年的面壁者生涯让他成长出了对人类的责任，不过，他本</p>
+<p>身还是一个玩世不恭的人。他当然希望保护人类，也希望保护三体人。不过，在面对决策时，丰富的</p>
+<p>阅历和对黑暗森林法则的理解，让他可以迅速做出正确的决策。</p>
+<p>维德本身就是一个对黑暗森林理解很深刻的人，而且是一个不择手段的人。他对人类的斗争史也非常</p>
+<p>了解。</p>
+<p>至于毕云峰、曹彬、伊万•安东诺夫、A•J•霍普金斯等，都是以前的老男人，他们也都具备一些男人的</p>
+<p>控制欲和破坏性。</p>
+<p>不过，这是一个极度尊重民主和人权的时代，这个时代的人对独裁也暴力非常厌恶和恐惧了。他们期</p>
+<p>待和平的生活。他们认为最理想的执剑人是这样的：让三体世界害怕，同时却要让人类，也就是自己</p>
+<p>不害怕。这样的人当然不存在，所以他们就倾向于让自己不害怕的。这时的人类对罗辑是害怕的，对</p>
+<p>维德、是害怕的，甚至对毕云峰、曹彬等人也是害怕的。</p>
+<p>他们喜欢程心这样的人。他们觉得，执剑人的威慑只是在那个系统。人只是一个符号。</p>
+<p>所以，当罗辑卸任后，人类不再愿意选一个让“人”害怕的执剑人了。这时，程心就成为了最佳人选。</p>
+<p>不过，执剑人毕竟是一个职业，就像总统、清洁工、保险业务员那样。</p>
+<p>只要是职业，就有工作，只有有工作，就有绩效；只要有绩效，就有一个考核标准，也就有一个适应</p>
+<p>的问题。</p>
+<p>那么，程心或者维德，他们在面对执剑人的绩效时，会如何表现呢？</p>
+<p>执剑人这个职位，其实只做一件事：当发生三体人对人类进攻，执剑人按下发射引力波的按钮。启动</p>
+<p>双毁机制。</p>
+<p>这个工作是不是很简单？</p>
+<p>那么问题来了，罗辑、程心、维德，这三个人谁适合这个职位呢？当绩效考核时，谁可以得到一个要</p>
+<p>的业绩呢？</p>
+<p>最后，程心成了了第二任执剑人，也是最后一任执剑人。在程心继任执剑人10分钟后，水滴摧毁了引</p>
+<p>力波系统，黑暗森林威慑终止。</p>
+<p>黑暗森林威慑终止后，三体的代言人智子又找程心对了一下话，这次，智子已经非常强硬了。不过，</p>
+<p>智子还是对程心说出了他对人类的几个候选人的绩效判断：</p>
+<p>“知道吗？在我们的人格分析系统中，你的威慑度在百分之十上下波动，像一条爬行的小蚯蚓；罗辑的</p>
+<p>威慑度曲线像一条凶猛的眼镜蛇，在百分之九十高度波动；而维德……他根本没有曲线，在所有外部环</p>
+<p>境参数下，他的威慑度全顶在百分之一百，那个魔鬼！如果他成为执剑者，这一切都不会发生，和平</p>
+<p>将继续，我们已经等了六十二年，都不得不继续等下去，也许再等半个世纪或更长。那时，三体世界</p>
+<p>只能同在实力上已经势均力敌的地球文明战斗，或妥协……但我们知道，人们肯定会选择你的。”</p>
+<p>是的，人类选择了程心。其实我们工作中也经常会选那些10%左右的人。你在工作中遇到过么？</p>
+<h2 id="大纲">大纲</h2>
+<h2 id="百字摘要">百字摘要</h2>
+<h2 id="金庸案例">金庸案例</h2>
+<h2 id="时间消耗">时间消耗</h2>
+<h2 id="阅读理解">阅读理解：</h2>
+<h2 id="大纲-1">大纲：</h2>
+<h2 id="撰写">撰写：</h2>
+<h2 id="录音">录音</h2>
+<h2 id="一小时运动">一小时运动</h2>
+<h2 id="英文原文">英文原文</h2>
+<p>10 SEPTEMBER</p>
+<p>Defining One’s Performance</p>
+<p>Performance is not hitting the bull’s-eye with every shot— that is a
+circus act.</p>
+<p>circus：</p>
+<p>[ C ] a group of entertainers, sometimes with trained animals, who
+perform skilful or amusing acts in a show that travels</p>
+<p>马戏团；( the circus ) [ sing. ] a show performed by circus
+entertainers, usually in a large tent called a big</p>
+<p>top 马戏表演（常在大帐篷里进行）</p>
+<p>bull’s-eye：靶心</p>
+<p>around to different places</p>
+<p>bull n. 公牛；看好股市者；粗壮如牛的人；胡说八道；印玺</p>
+<p>:</p>
+<p>The first requirement of organizational health is a high demand on
+performance.</p>
+<p>对于一个健康的组织来说，一个高要求的绩效是必须的。</p>
+<p>Indeed, one of the major reasons for demanding that management be by
+objectives and that it</p>
+<p>focus on the objective requirements of the task is the need to have
+managers set high standards of</p>
+<p>performance for themselves.</p>
+<p>This requires that performance be understood properly.</p>
+<p>这需要绩效被正确地理解。</p>
+<p>Performance is not hitting the bull’s-eye with every shot.</p>
+<p>Performance is rather the consistent ability to produce results over
+prolonged periods of time and</p>
+<p>in a variety of assignments.</p>
+<p>prolonged:</p>
+<p>variety</p>
+<p>assignments</p>
+<p>continuing for a long time</p>
+<dl>
+<dt>持久的；长期的</dt>
+<dd>
+<p>[ sing. ] ~ (of sth) several different sorts of the same thing</p>
+</dd>
+<dt>（同一事物的）不同种类，多种式样</dt>
+<dd>
+<p>N-COUNT An assignment is a task or piece of work that you are given
+to do, especially as part of your job or</p>
+</dd>
+</dl>
+<p>studies.</p>
+<p>任务; 作业</p>
+<p>A performance record must include mistakes. It must include failures.
+It must reveal a</p>
+<p>person’s limitations as well as his strengths.</p>
+<p>reveal:</p>
+<dl>
+<dt>揭示；显示；透露</dt>
+<dd>
+<p>sth (to sb) to make sth known to sb</p>
+</dd>
+</dl>
+<p>绩效必须包含错误，必须包含失败，它必须（可以同时）显示一个人的缺陷和优势。</p>
+<p>The one person to distrust is the one who never makes a mistake,
+never commits a blunder, never</p>
+<p>fails in what he tries to do.</p>
+<p>那种从来不犯错的人是不可信任的，因为他们要么在欺骗，要么在保护自己什么都不做。</p>
+<p>Either he is a phony, or he stays with the safe, the tried, and the
+trivial.</p>
+<p>phony: adj. 假的，欺骗的</p>
+<p>trivial:</p>
+<p>不重要的；琐碎的；微不足道的</p>
+<p>tried: adj. 经过检验的，经证明有效或可靠的</p>
+<p>not important or serious; not worth considering</p>
+<p>blunder：n. 愚蠢（或粗心）的错误，大错</p>
+<p>The better a person is, the more mistakes he will make—for the more
+new things he will try.</p>
+<p>越优秀的人，越容易犯错，因为他们做的越多。</p>
+<h3 id="action-point">ACTION POINT:</h3>
+<p>Define performance as a “batting average.”</p>
+<p>Create an atmosphere where people are permitted to make mistakes.</p>
+<p>Evaluate a person’s performance as “the consistent ability to produce
+results over a relatively long</p>
+<p>period of time.”</p>
+<p>batting:n. 打击；打球；棉絮</p>
+<p>atmosphere</p>
+<p>（围绕地球的）大气，大气层，大气圈</p>
+<p>permitted</p>
+<dl>
+<dt>允</dt>
+<dd>
+<p>( the atmosphere ) [ sing. ] the mixture of gases that surrounds the
+earth</p>
+</dd>
+<dt>许</dt>
+<dd>
+<p>V-T If someone permits something, they allow it to happen. If they
+permityou to do something, they allow you to do it.</p>
+</dd>
+<dt>Evaluate</dt>
+<dd>
+<p>to form an opinion of the amount, value or quality of sth after
+thinking about it carefully</p>
+</dd>
+</dl>
+<p>估计；评价；评估</p>
+<p>Management: Tasks, Responsibilities, Practices</p>
+<p>【原书原文】</p>
+<p>The Danger of Safe Mediocrity</p>
+<p>The constant temptation of every organization is safe mediocrity. The
+first requirement of</p>
+<p>organizational health is a high demand on performance. Indeed, one of
+the major reasons</p>
+<p>for demanding that management be by objectives and that it focus on
+the objective requirements</p>
+<p>of the task is the need to have managers set high standards of
+performance for</p>
+<p>themselves.</p>
+<p>This requires that performance be understood properly. Performance is
+not hitting the</p>
+<p>bull’s-eye with every shot—that is a circus act that can be
+maintained only over a few</p>
+<p>minutes. Performance is rather the consistent ability to produce
+results over prolonged</p>
+<p>periods of time and in a variety of assignments. A performance record
+must include mistakes.</p>
+<p>It must include failures. It must reveal a man’s limitations as well
+as his strengths.</p>
+<p>And there are as many different kinds of performance as there are
+different human beings.</p>
+<p>One man will consistently do well, rarely falling far below a
+respectable standard, but also</p>
+<p>rarely excel through brilliance or virtuosity. Another man will
+perform only adequately</p>
+<p>under normal circumstances but will rise to the demands of a crisis
+or a major challenge</p>
+<p>and then perform like a true “star.” Both are “performers.” Both need
+to be recognized.</p>
+<p>But their performances will look quite different.</p>
+<p>The one man to distrust, however, is the man who never makes a
+mistake, never commits</p>
+<p>a blunder never fails in what he tries to do. He is either a phony,
+or he stays with the</p>
+<p>safe, the tried, and the trivial.</p>
+<p>A management which does not define performance as a batting average
+is a management</p>
+<p>that mistakes conformity for achievement, and absence of weaknesses
+for strengths.</p>
+<p>It is a management that discourages and demoralizes its organization.
+The better a man is,</p>
+<p>the more mistakes he will make—for the more new things he will
+try.</p>
+<p>The man who consistently renders poor or mediocre performance should
+be removed</p>
+<p>from his job for his own good. People who find themselves in a job
+that exceeds their</p>
+<p>capacities are frustrated, harassed, anxiety-ridden people. One does
+not do a man a service</p>
+<p>by leaving him in a job he is not equal to. Not to face up to man’s
+failure in a job is</p>
+<p>cowardice rather than compassion.</p>
+<p>One also owes it to the man’s subordinates who have a right to be
+managed with competence,</p>
+<p>dedication, and achievement. Subordinates have a right to a boss who
+performs,</p>
+<p>for otherwise they themselves cannot perform.</p>
+<p>One owes it finally to all the people in the organization not to put
+up with a manager</p>
+<p>who fails to perform. The entire organization is diminished by the
+manager or career professional</p>
+<p>who performs poorly or not at all. It is enriched by the man who
+performs superbly.</p>
+<p>At first sight the Japanese seem to violate this rule. For few, if
+any, people ever get</p>
+<p>fired for nonperformance in the Japanese organization. In actuality
+the Japanese organization</p>
+<p>may be as demanding and even as competitive as any in the West. The
+poor or mediocre</p>
+<p>performer is not fired; but he is quickly sidetracked and assigned
+the activities</p>
+<p>which are in effect “made work.” And both he and the organization
+know it. Moreover,</p>
+<p>while everyone advances in pay and title according to seniority,
+there is a day of reckoning</p>
+<p>at or around age forty-five when the very few who will become company
+directors;</p>
+<p>that is, top management, are chosen from the many others who will,
+ten years later, retire</p>
+<p>as section managers or department directors.</p>
+<p>The only thing that is proven by a man’s not performing in a given
+assignment is that</p>
+<p>management has made a mistake by putting him in. It is a mistake that
+no manager can</p>
+<p>avoid, no matter how carefully he works on the placement of people.
+The fact that a man</p>
+<p>who has performed in earlier assignments does not perform in a new
+one proves nothing</p>
+<p>except that he should not have been put in the job in the first
+place.</p>
+<p>“Failure” in such a case may mean only that a first-rate career
+professional has been</p>
+<p>miscast as a manager. It may mean that a man excellent at running an
+existing operation</p>
+<p>has been miscast as an innovator and entrepreneur. Or it may mean the
+opposite: that a</p>
+<p>man whose strength lies in doing new and different things has been
+miscast to head a continuing,</p>
+<p>well-established, and highly routinized operation.</p>
+<p>Failure to perform on the part of a man who has a record of proven
+performance is a</p>
+<p>signal to think hard about the man and the job. And sometimes, of
+course (see the discussion</p>
+<p>of the “widow-maker” job in Chapter 32) it is the job rather than the
+man that is at</p>
+<p>fault.</p>
+<p>George C. Marshall, Chief of Staff of the U.S. Army in World War II,
+was an uncompromising</p>
+<p>and exacting boss who refused to tolerate mediocrity, let alone
+failure. “I have</p>
+<p>a duty to the soldiers, their parents, and the country, to remove
+immediately any commander</p>
+<p>who does net satisfy the highest performance demands,” Marshall said
+again and</p>
+<p>again. But he always asserted, “It was my mistake to have put this or
+that man in a command</p>
+<p>that was not the right command for him. It is therefore my job to
+think through</p>
+<p>where he belongs.” Many of the men who emerged in World War II as
+highly successful</p>
+<p>commanders in the U.S. Army were once in the course of their careers
+removed by Marshall</p>
+<p>from an early assignment. But then Marshall thought through the
+mistake he had</p>
+<p>made—and tried, to figure out where that man belonged. And this
+explains, an large</p>
+<p>measure, why the American Army, which had gone into World War II
+without a single</p>
+<p>one of its future general officers yet in a command position (these
+were all held by men</p>
+<p>past retirement age who had to be moved out), produced an outstanding
+group of leaders</p>
+<p>in a few short years.</p>
+<h2 id="september">10 SEPTEMBER</h2>
+<h3 id="defining-ones-performance">Defining One’s Performance</h3>
+<p>Performance is not hitting the bull’s-eye with every shot—</p>
+<p>that is a circus act.</p>
+<p>The first requirement of organizational health is a high demand on
+per-</p>
+<p>formance. Indeed, one of the major reasons for demanding that
+man-agement</p>
+<p>be by objectives and that it focus on the objective requirements of
+the task is</p>
+<p>the need to have managers set high standards of performance for
+themselves.</p>
+<p>This requires that performance be understood properly. Per-formance
+is not</p>
+<p>hitting the bull’s-eye with every shot. Performance is rather the
+consistent</p>
+<p>ability to produce results over prolonged periods of time and in a
+variety of</p>
+<p>assignments. A performance record must include mistakes. It must
+include</p>
+<p>failures. It must reveal a person’s limitations as well as his</p>
+<p>strengths.</p>
+<p>The one person to distrust is the one who never makes a mistake,
+never</p>
+<p>commits a blunder, never fails in what he tries to do. Either he is a
+phony,</p>
+<p>or he stays with the safe, the tried, and the trivial. The better a
+person is,</p>
+<p>the more mistakes he will make—for the more new things he will
+try.</p>
+<h3 id="action-point-1">ACTION POINT:</h3>
+<p>Define performance as a “batting average.” Create an</p>
+<p>atmosphere where people are permitted to make mistakes. Evaluate</p>
+<p>Aperson’s performance as “the consistent ability to produce results
+over</p>
+<p>Arel-atively long period of time.”</p>
+<h4 id="management-tasks-responsibilities-practices">Management: Tasks,
+Responsibilities, Practices</h4>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

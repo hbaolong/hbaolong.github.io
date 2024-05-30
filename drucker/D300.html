@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="第三同读" />
+  <title>德鲁克日志</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">德鲁克日志</h1>
+<p class="author">第三同读</p>
+</header>
+<h2 id="透过金庸读懂德鲁克">透过金庸读懂德鲁克</h2>
+<p>油门，刹车和司机</p>
+<p>作为一个老司机，我知道，一辆车必须有个油门，也必须有个刹车，至于司机，则是可有可无。</p>
+<p>油门是用来加油的，也就是提速的，车的目的，总是去向远方，不然要车干嘛。当你想去某个远方</p>
+<p>时，你就需要轻轻踩一下油门，车就动了起来，随着车的速度慢慢加起来，你也会不断加踩油门，然</p>
+<p>后，你和你的车就上路了。</p>
+<p>在路上，你需要经常踩油门，因为，公路是有摩擦的，如果你不踩油门，车慢慢就会慢下来，然后停</p>
+<p>下来，停下来或者慢下来的车，不能把你送到目的地。</p>
+<p>同时，我们还需要刹车，因为路并不是直的，很少有一条路直直的，而且路上也没有车的情况，我们</p>
+<p>需要转弯，需要避让其他的车辆，所以，我们也经常需要减速后调整角度，或者减速后等其他车错</p>
+<p>车。</p>
+<p>当然，我们不减速也可以转弯，只是有可能会翻车，翻车就有可能车毁人亡。虽然弯路超车很刺激。</p>
+<p>遇到其他车当然也可以不减速，因为其他车也会减速，凭什么让我减速。只是这样一来就会增大撞车</p>
+<p>的危险，一样会车毁人亡。</p>
+<p>我们还需要一个方向盘，用来调整方向。有一次在我在内蒙开车，一条直路，没有弯道，连续几十公</p>
+<p>里我都没有动方向盘。不过，我的手还是会放在方向盘上。</p>
+<p>虽然说没动，其实还是动了。因为双手还是会微调，轻微地转过来，转过去，只是为了保持手感和手</p>
+<p>对方向盘力量的感觉。</p>
+<p>油门在提速，刹车在减速，方向盘在调整方向。在这三位一体的作用下，我会安全达到目的地。前提</p>
+<p>是不要出意外，路上不要出现那种没有带刹车的车，
+也没有哪种没有按方向盘的车。</p>
+<p>没踩一脚油门，我们都会消耗一些油，这些油会把我们推的离目的地近一些，每踩一脚刹车，我们也</p>
+<p>会消耗一些油，而这些油会让我们离目的地远一些。这就是油门和刹车的功用。</p>
+<p>我们不能因为只想以最快的目的到达目的地，就只要油门不要刹车。因为这样太危险了，你不能保证</p>
+<p>在路上不会遇到其他的车，而且不能保证你的车头正对着正确的方向，而且一路都是直的，没有任何</p>
+<p>转弯。</p>
+<p>更不能给驾驶员按一条铁腿，让他在需要的时候把腿伸出去用来刹车，这样一来，我们的驾驶员白白</p>
+<p>牺牲一条腿不说，我们的车还是很危险。</p>
+<p>我们的高速上有一些设置是用来让那种失去刹车功能的车减速的。这说明，我们是知道，也认可车是</p>
+<p>需要有减速功能的。而且，失去的减速功能的车是危险的。</p>
+<p>毕竟，我们的目的是平安到达，而不是到达。</p>
+<h2 id="大纲">大纲</h2>
+<h2 id="百字摘要">百字摘要</h2>
+<h2 id="金庸案例">金庸案例</h2>
+<h2 id="时间消耗">时间消耗</h2>
+<h2 id="阅读理解">阅读理解：</h2>
+<h2 id="大纲-1">大纲：</h2>
+<h2 id="撰写">撰写：</h2>
+<h2 id="录音">录音</h2>
+<h2 id="一小时运动">一小时运动</h2>
+<h2 id="英文原文">英文原文</h2>
+<p>26 OCTOBER</p>
+<p>Needed: Strong Labor Unions</p>
+<p>To become again a dynamic, effective, legitimate organ, the labor
+union will have to transform</p>
+<p>itself.</p>
+<p>dynamic：</p>
+<p>人</p>
+<p>充满活力的；精力充沛的；个性强的</p>
+<p>legitimate：</p>
+<p>合法的；法律认可的；法定的</p>
+<p>organ：</p>
+<p>（官方的）机构，机关</p>
+<p>( approving ) ( of a person</p>
+<p>) having a lot of energy and a strong personality</p>
+<p>allowed and acceptable according to the law</p>
+<p>( formal ) an official organization that is part of a larger
+organization and has a special purpose</p>
+<p>The true strength of the labor movement in developed countries has
+been moral: its claim to be</p>
+<p>the political conscience of a modern secular society.</p>
+<p>moral：</p>
+<p>道德的</p>
+<p>conscience：</p>
+<p>凭良心</p>
+<p>secular：</p>
+<p>现世的；世俗的；非宗教的</p>
+<p>[ only before noun ] concerned with principles of right and wrong
+behaviour</p>
+<p>[ U ] the fact of behaving in a way that you feel is right even
+though this may cause problems</p>
+<p>not connected with spiritual or religious matters</p>
+<p>Management—no matter who “owns” and no matter whether the institution
+is a business, a</p>
+<p>government agency, or a hospital—has to have considerable power and
+authority—power and</p>
+<p>authority grounded in the needs of the enterprise and based on
+competence.</p>
+<p>enterprise：</p>
+<p>（尤指艰巨而重大的）规划，事业</p>
+<p>competence：</p>
+<p>律</p>
+<p>（法庭、机构或人的）权</p>
+<p>[ C ] a large project, especially one that is difficult SYN
+venture</p>
+<p>[ U ] ( law</p>
+<p>限，管辖权</p>
+<p>) the power that a court, an organization or a person has to deal
+with sth</p>
+<p>And power, as the drafters of the American Constitution knew, needs
+to be limited by</p>
+<p>countervailing power.</p>
+<p>drafters：</p>
+<p>（计划、文件等的）起草人，拟稿者</p>
+<p>Constitution：</p>
+<p>宪法；章程</p>
+<p>countervailing：</p>
+<p>抗衡的；抵消的</p>
+<p>a person who prepares a rough version of a plan, document, etc.</p>
+<p>[ C ] the system of laws and basic principles that a state, a country
+or an organization is governed by</p>
+<p>[ only before noun ] ( formal ) having an equal but opposite
+effect</p>
+<p>Modern society, a society of organizations each requiring strong
+management, needs an</p>
+<p>organ such as the labor union.</p>
+<p>In the last few years events have amply proved this.</p>
+<p>But to become again a dynamic, effective, legitimate organ, the labor
+union will have to transform</p>
+<p>itself drastically.</p>
+<p>drastically： 彻底地；激烈地</p>
+<ol start="14" type="a">
+<li></li>
+</ol>
+<p>thoroughly, entirely, completely, fully, strongly</p>
+<p>Otherwise the union will become irrelevant.</p>
+<dl>
+<dt>irrelevant：</dt>
+<dd>
+<p>(to sth/sb) not important to or connected with a situation</p>
+</dd>
+</dl>
+<p>无关紧要的；不相关的</p>
+<h3 id="action-point">ACTION POINT:</h3>
+<p>Reflect on constructive ways labor unions can check the power of
+businesses, governments, and</p>
+<p>hospitals.</p>
+<p>Reflect:</p>
+<p>constructive:</p>
+<p>建设性的；有助益的；积极的</p>
+<p>having a useful and helpful effect rather than being negative or with
+no purpose</p>
+<p>The Frontiers of Management</p>
+<h2 id="october">26 OCTOBER</h2>
+<h3 id="needed-strong-labor-unions">Needed: Strong Labor Unions</h3>
+<p>To become again a dynamic, effective, legitimate organ,</p>
+<p>the labor union will have to transform itself.</p>
+<p>The true strength of the labor movement in developed countries has
+been moral:</p>
+<p>its claim to be the political conscience of a modern secu-</p>
+<p>lar society.</p>
+<p>Management—no matter who “owns” and no matter whether the insti-</p>
+<p>tution is a business, a government agency, or a hospital—has to have
+con-</p>
+<p>siderable power and authority—power and authority grounded in the</p>
+<p>needs of the enterprise and based on competence. And power, as
+the</p>
+<p>drafters of the American Constitution knew, needs to be limited by
+coun-</p>
+<p>tervailing power. Modern society, a society of organizations each</p>
+<p>requiring strong management, needs an organ such as the labor union.
+In</p>
+<p>the last few years events have amply proved this. But to become
+again</p>
+<p>Adynamic, ef-fective, legitimate organ, the labor union will have
+to</p>
+<p>transform itself dras-tically. Otherwise the union will become
+irrelevant.</p>
+<h3 id="action-point-1">ACTION POINT:</h3>
+<p>Reflect on constructive ways labor unions can check the</p>
+<p>power of businesses, governments, and hospitals.</p>
+<h4 id="the-frontiers-of-management">The Frontiers of Management</h4>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

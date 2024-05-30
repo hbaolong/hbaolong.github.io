@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="第三同读" />
+  <title>德鲁克日志</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">德鲁克日志</h1>
+<p class="author">第三同读</p>
+</header>
+<h2 id="透过金庸读懂德鲁克">透过金庸读懂德鲁克</h2>
+<p>标题： 从郭靖到郭大侠</p>
+<p>郭靖本来是草原上一个小伙子，学习武功本来是为了复仇（顺便替江南六怪争光）。</p>
+<p>进入江湖后，郭靖先后遇到了全真教掌教马钰、九指神丐洪七公、老顽童周伯通，以及黄蓉的贴心照</p>
+<p>顾。又学习了《九阴真经》里的高深武功，郭靖的武功也就一步步稳扎稳打地高了起来。到了《射雕</p>
+<p>英雄传》结尾时，郭靖的武功以及非常高了。可以和五绝中的黄药师、洪七公真实打斗三百招而不</p>
+<p>败。不过，这时的郭靖进入了一个武学障：武功唯一的用处就是杀人，武功越高，杀人就越厉害，可</p>
+<p>是，人为什么要杀人呢？人难道不应该对别人好么？人为什么要杀人呢？</p>
+<p>郭靖一直走不出这个障碍，不想杀人，想忘记武功，为了这个甚至去求死，去自杀。</p>
+<p>后来丘处机让他去华山找周伯通，向周伯通学习忘记武功的方法。一向很听话的郭靖来到了华山。来</p>
+<p>到华山后，周伯通可没有教他什么，反而被吓得拉了一裤子，一溜烟跑了。</p>
+<p>这时，师父洪七公也来到了华山，师父见到了卖国贼裘千仞后，要杀死裘千仞。裘千仞扔出了一个诛</p>
+<p>心之问：“若论动武，你们恃众欺寡，我独个儿不是对手。可是说到是非善恶，嘿嘿，裘千仞孤身在</p>
+<p>此，那一位生平没杀过人、没犯过恶行错事的，就请上来动手。在下引颈就死，皱一皱眉头的也不算</p>
+<p>好汉。”</p>
+<p>这时，一灯大师、周伯通、郭靖、黄蓉等都无言以对，而洪七公则威风凛凛地站着石头上大喝一声：</p>
+<p>“老叫化一生杀过二百三十一人，这二百三十一人个个都是恶徒，若非贪官污吏、土豪恶霸，就是大奸</p>
+<p>巨恶、负义薄幸之辈。我们丐帮查得清清楚楚，证据确实，一人查过，二人再查，决无冤枉，老叫化</p>
+<p>这才杀他。老叫化贪饮贪食，小事胡涂，可是生平从来没错杀过一个好人。裘千仞，你是第二百三十</p>
+<p>二人！”</p>
+<p>听到师父洪七公的一方言语，郭靖顿时领悟了，是呀：“只要不杀错一个好人，那就问心无愧。只要我</p>
+<p>将一身武功用于仗义为善，又何须将功夫抛弃忘却？”</p>
+<p>“一身好的武功，正好可以行侠仗义，为国为民做出一些贡献，为什么要忘记呢？”</p>
+<p>从华山下来的郭靖突破了武学障，武功也就上了一个新的台阶，只之后的几年里，更加熟练九阴真</p>
+<p>经、降龙十八掌等，成为江湖中一等一的高手。</p>
+<p>下山后，郭靖和黄蓉短暂游历了一段时间，黄蓉就怀孕了。两人知道回到桃花岛过上了居家练武的日</p>
+<p>子。</p>
+<p>没多久，郭芙出生了，桃花岛也就热闹了起来。郭靖也尝到了做爸爸的开心和烦恼。</p>
+<p>郭靖是一个随遇而安的人，不管是在江湖，还是在岛上，郭靖都可以很舒服地适应。</p>
+<p>后来，岛上有来了三个孩子：杨过、武修文、武敦儒。三个孩子和郭芙一起学习武功，也把岛上搞得</p>
+<p>更乱了。</p>
+<p>再后来，杨过闯祸了，郭靖就把他送到了全真教学习武功，这时的郭靖才在时隔几年后再次进入武</p>
+<p>林，终南山大战了全真教的天罡北斗阵，以及霍都王子。</p>
+<p>这一战，郭靖大胜，郭靖也知道了自己的武功有多么的厉害。</p>
+<p>再次回到桃花岛后，郭靖和黄蓉商量着，觉得自己夫妻的这么高的武功，呆在桃花岛有点浪费，应该</p>
+<p>为武林、为民众做点什么。黄蓉这时还是丐帮帮主，每天都会通过丐帮的情报系统收到江湖上的各种</p>
+<p>信息。</p>
+<p>随着蒙古军队打败金军，金国灭完了。蒙古军队并没与收兵，而是陈兵大胜关边界，随时有南侵的迹</p>
+<p>象。</p>
+<p>郭靖这时不再犹豫，和黄蓉商量后，随机发出英雄帖，召集天下英雄聚集大胜关，讨论抵制蒙古军队</p>
+<p>南侵的方法。</p>
+<p>郭靖是一个很敦厚的人，这时的武功已经非常高了。而且，郭靖在蒙古带过军队，自己也通读岳飞的</p>
+<p>《武穆遗书》，有丰富的作战经验。同时，郭靖还有黄蓉这个超级军师的辅助，还有丐帮的全力协</p>
+<p>助。</p>
+<p>在大胜关，英雄大会正在进行中，大家讨论着大宋和蒙古军事、政治以及武林中的各种势力。</p>
+<p>这时，来了三个不请自来的客人，也就是蒙古国的护国法王金轮法王及其弟子。</p>
+<p>金轮法王师徒三人武功非常高，在大胜关的英雄大会上，差点赢得了武林盟主的称号，多亏杨过师徒</p>
+<p>的扰乱，才让金轮法王的阴谋没有得逞。</p>
+<p>经过英雄大会后，郭靖清楚蒙古对大宋的进攻已经开始了，擅长军事的郭靖在对形势做出分析后，果</p>
+<p>断带着英雄大会上的英雄们奔赴襄阳，协助襄阳守卫吕文焕守卫襄阳。众位英雄受郭靖的民族情怀感</p>
+<p>召，大多随他来到了襄阳，一起守卫襄阳。</p>
+<p>这一守，就是三十多年；这一守，就是一辈子；这一守，就献出了郭靖自己的生命，以及自己爱人黄</p>
+<p>蓉的生命，以及自己女儿郭芙的生命，以及自己儿子郭破虏的生命，以及自己女婿耶律齐的生命。</p>
+<p>襄阳城破时，郭靖带着家人死杀殉国（我更愿意说殉城）。</p>
+<p>守襄阳的三十多年里，郭靖除了偶尔去了一趟华山，进过一次忽必烈的军营外，郭靖一直兢兢业业勤</p>
+<p>勤恳恳用心地守护这这座城市。</p>
+<p>当金轮法王绑架郭襄来威胁郭靖时，郭靖在两军之前大声喝道：“鞑子若非惧我，何须跟我小女儿为</p>
+<p>难？鞑子既然惧我，郭靖有为之身，岂肯轻易就死？”</p>
+<p>郭靖一直知道，守卫襄阳是他能做的最恰当的事情。首先，他的武功以及在武林的威望可以吸引很多</p>
+<p>武林人士加入襄阳的守卫，大大增强襄阳守卫的力量；其次，自己精通兵法并且熟悉蒙古军队的打战</p>
+<p>风格，可以相应地做出对抗；而且，最重要的是，守卫襄阳，可以守住大宋的北方大门，让襄阳南方</p>
+<p>的百姓可以有太平可以享受。而这个，是郭靖从华山下来后就认识清楚的一件事：侠之大者，为国为</p>
+<p>民。</p>
+<p>在襄阳守卫的这三十多年里，郭靖从一个武林侠客，终于成长成为了郭大侠：</p>
+<p>“当今天下豪杰，提到郭兄时都称‘郭大侠’而不名。他数十年来助守襄阳，保境安民，如此任侠，决非</p>
+<p>古时朱家、郭解辈逞一时意气所能及。我说称他为‘北侠’，自当人人心服。”</p>
+<p>襄阳城破两年后，元军攻破临安，南宋灭完。</p>
+<h2 id="大纲">大纲</h2>
+<h2 id="百字摘要">百字摘要</h2>
+<p>寻找那些能让你发挥优势、符合你的工作风格和价值观的机会。</p>
+<p>【素材整理】</p>
+<p>神雕里郭靖的轨迹</p>
+<ol type="1">
+<li><p>住在桃花岛</p></li>
+<li><p>寻找黄药师进入江湖</p></li>
+<li><p>回到桃花岛，教授二武武功</p></li>
+<li><p>带杨过去终南山</p></li>
+<li><p>大胜关英雄大会</p></li>
+<li><p>全家守卫襄阳</p></li>
+<li><p>死在襄阳</p></li>
+</ol>
+<h2 id="金庸案例">金庸案例</h2>
+<h2 id="时间消耗">时间消耗</h2>
+<h2 id="阅读理解815">阅读理解：8：15</h2>
+<h2 id="大纲-1">大纲：</h2>
+<h2 id="撰写">撰写：</h2>
+<h2 id="录音">录音</h2>
+<p>9.14Managing O….m4a</p>
+<p>5.33MB</p>
+<h2 id="一小时运动">一小时运动</h2>
+<h2 id="英文原文">英文原文</h2>
+<p>14 SEPTEMBER</p>
+<p>Managing Oneself: What to Contribute?</p>
+<p>Successful careers are not the products of luck or planning; they are
+built by people who are able</p>
+<p>to seize those opportunities that match their own strengths.</p>
+<p>seize：~ sth (from sb) to take sb/sth in your hand suddenly and using
+force 抓住；捉住；夺</p>
+<p>Now that you have identified your strengths and work style you can
+begin to look for the right</p>
+<p>opportunities.</p>
+<p>These are the assignments that will enable you to use your strength,
+match your work style, and</p>
+<p>fit within your personal value system.</p>
+<p>assignments：N-COUNT An assignment is a task or piece of work that
+you are given to do, especially as part of your job</p>
+<p>or studies. 任务; 作业</p>
+<p>They are also the assignments that help you to make the right
+contribution.</p>
+<p>But you first have to decide what your contribution should be.</p>
+<p>Figuring out the right contribution helps you move from knowledge to
+action.</p>
+<p>What do you think you should contribute? In other words, how can you
+make a difference within</p>
+<p>your organization?</p>
+<p>make a difference：n. 有影响，有关系 be influential in, militate</p>
+<p>Answering these questions helps you to analyze opportunities in
+search for the right few.</p>
+<p>analyze：vt. 对…进行分析，分解（等于analyse）</p>
+<p>When such opportunities do come along, it’s best to accept them if
+they suit you and how you</p>
+<p>work.</p>
+<p>It requires you to think through the requirements of a specific
+situation, your greatest potential</p>
+<p>contribution, and the results that must be achieved.</p>
+<p>It is through such processes that successful careers are built.</p>
+<p>They are not the products of luck or planning; they are built by
+people who are able to seize those</p>
+<p>opportunities that match their own strengths, work styles, and
+values.</p>
+<h3 id="action-point">ACTION POINT:</h3>
+<p>Seek the opportunities that allow you to apply your strengths and
+match your work style and</p>
+<p>values.</p>
+<p>Management Challenges for the 21st Century</p>
+<p>Managing Oneself (Corpedia Online Program)</p>
+<p>【原书原文】</p>
+<p>III</p>
+<p>What Is My Contribution?</p>
+<p>To ask “What is my contribution?” means moving from knowl- edge to
+action. The question is not:</p>
+<p>“What do I want to contribute?” It is not: “What am I told to
+contribute?” It is: “What should I</p>
+<p>contribute?”</p>
+<p>This is a new question in human history. Traditionally, the task was
+given. It was given either by the</p>
+<p>work itself—as was the task of the peasant or the artisan. Or it was
+given by a master or a mistress,</p>
+<p>as was the task of the domestic ser- vant. And, until very recently,
+it was taken for granted that</p>
+<p>most people were subordinates who did as they were told.</p>
+<p>The advent of the knowledge worker is changing this, and fast. The
+first reaction to this change</p>
+<p>was to look at the employ- ing organization to give the answer.</p>
+<p>“Career Planning” is what the Personnel Department—espe- cially of
+the large organization—</p>
+<p>was supposed to do in the 1950s and 1960s, for the “Organization
+Man,” the new knowledge</p>
+<p>worker employee. In Japan it is still the way knowledge workers are
+being managed. But even in</p>
+<p>Japan the knowledge worker can increasingly expect to outlive the
+employing organization.</p>
+<p>Except in Japan, however, the “Organization Man” and the career-
+planning Personnel Department</p>
+<p>have long become history. And with them disappeared the notion that
+anyone but oneself can—or</p>
+<p>should—be the “career planner.” The reaction in the sixties was for
+knowledge people to ask: “What</p>
+<p>do I want to do?” People were told</p>
+<p>that “to do one’s own thing” was the way to contribute. This was, for
+instance, what the “student</p>
+<p>rebellion” of 1968 believed.</p>
+<p>We soon found out, however, that it was as wrong an answer as was the
+Organization Man. Very</p>
+<p>few of the people who believed that “doing one’s own thing” leads to
+contribution, to selffulfillment or to success achieved any of the
+three.</p>
+<p>But still, there is no return to the old answer, that is, to do
+what</p>
+<p>you are being told, or what you are being assigned to. Knowledge</p>
+<p>workers, in particular, will have to learn to ask: “What should MY
+contribution be?” Only then</p>
+<p>should they ask: “Does this fit my strengths? Is this what I want to
+do?” And “Do I find this rewarding and stimulating?”</p>
+<p>The best example I know of is the way Harry Truman repositioned
+himself when he became</p>
+<p>President of the United States, upon the sudden death of Franklin D.
+Roosevelt at the end of World</p>
+<p>War II. Truman had been picked for the Vice Presidency because he was
+totally concerned with</p>
+<p>domestic issues. For it was then generally believed that with the end
+of the war—and the end was</p>
+<p>clearly in sight—the U.S. would return to almost exclusive concern
+with domestic affairs.</p>
+<p>Truman had never shown the slightest interest in foreign affairs,
+knew nothing about them, and was</p>
+<p>kept in total ignorance of them.</p>
+<p>He was still totally focused on domestic affairs when, within a few
+weeks after his ascendancy, he</p>
+<p>went to the Potsdam Conference after Germany surrendered. There he
+sat for a week, with</p>
+<p>Churchill on one side and Stalin on the other, and realized, to his
+horror, that foreign affairs would</p>
+<p>dominate, but also that he knew absolutely nothing about them. He
+came back from Potsdam</p>
+<p>convinced that he had to give up what he wanted to do and instead had
+to concentrate on what he</p>
+<p>had to do, that is, on foreign affairs. He immediately—as already
+mentioned—put himself into</p>
+<p>school with General Marshall and Dean Acheson as his tutors. Within
+in a few months he was a</p>
+<p>master of foreign affairs and he, rather than Churchill or Stalin,
+created the postwar world—with his</p>
+<p>policy of containing Communism and pushing it back from Iran and
+Greece; with the Marshall Plan</p>
+<p>that rescued Western Europe; with the decision to rebuild Japan; and
+finally, with the call for</p>
+<p>worldwide economic development.</p>
+<p>By contrast, Lyndon Johnson lost both the Vietnam War and his
+domestic policies because he</p>
+<p>clung to “What do I want to do?” instead of asking himself “What
+should my contribution be?”</p>
+<p>Johnson, like Truman, had been entirely focused on domestic
+affairs.</p>
+<p>He too came into the Presidency wanting to complete what the New Deal
+had left unfinished.</p>
+<p>He very soon realized that the Vietnam War was what he had to
+concentrate on.</p>
+<p>But he could not give up what he wanted his contribution to be.</p>
+<p>He splintered himself between the Vietnam War and domestic
+reforms—and he lost both.</p>
+<p>One more question has to be asked to decide “What should I
+contribute?”: “Where and how can I</p>
+<p>have results that make a difference?”</p>
+<p>The answer to this question has to balance a number of things.</p>
+<p>Results should be hard to achieve.</p>
+<p>They should require “stretching,” to use the present buzzword.</p>
+<p>But they should be within reach.</p>
+<p>To aim at results that cannot be achieved—or can be achieved only
+under the most unlikely</p>
+<p>circumstances—is not being “ambitious.”</p>
+<p>It is being foolish.</p>
+<p>At the same time, results should be meaningful.</p>
+<p>They should make a difference.</p>
+<p>And they should be visible and, if at all possible, measurable.</p>
+<p>Here is one example from a nonprofit institution.</p>
+<p>A newly appointed hospital administrator asked himself the question
+“What should be my</p>
+<p>contribution?” The hos- pital was big and highly prestigious. But it
+had been coast- ing on its</p>
+<p>reputation for thirty years and had become mediocre.</p>
+<p>The new hospital administrator decided that his contribution should
+be to establish a standard of</p>
+<p>excellence in one important area within two years.</p>
+<p>And so he decided to concentrate on turning around the Emergency Room
+and the Trauma Center</p>
+<p>—both big, visible and sloppy.</p>
+<p>The new hospital administrator thought through what to demand of an
+Emergency Room, and how</p>
+<p>to measure its performance.</p>
+<p>He decided that every patient who came into the Emergency Room had to
+be seen by a qualified</p>
+<p>nurse within sixty seconds.</p>
+<p>Within twelve months that hospital’s Emergency Room had become a
+model for the entire United</p>
+<p>States.</p>
+<p>And its turnaround also showed that there can be standards,
+discipline, measurements in a hospital</p>
+<p>—and within another two years the whole hospital had been
+transformed.</p>
+<p>The decision “What should my contribution be?” thus balances three
+elements.</p>
+<p>First comes the question: “What does the situation require?”</p>
+<p>Then comes the question: “How could I make the greatest contribution
+with my strengths, my way</p>
+<p>of performing, my values, to what needs to be done?”</p>
+<p>Finally, there is the question: “What results have to be achieved to
+make a difference?”</p>
+<p>This then leads to the action conclusions: what to do, where to
+start, how to start, what goals and</p>
+<p>deadlines to set.</p>
+<p>Throughout history, few people had any choices. The task was imposed
+on them either by nature or</p>
+<p>by a master.</p>
+<p>And so, in large measure, was the way in which they were supposed to
+perform the task.</p>
+<p>But so also were the expected results—they were given.</p>
+<p>To “do one’s own thing” is, however, not freedom. It is license. It
+does not have results. It does not</p>
+<p>contribute. But to start out with the question “What should I
+contribute?” gives freedom. It gives</p>
+<p>freedom because it gives responsibility.</p>
+<h2 id="september">14 SEPTEMBER</h2>
+<h3 id="managing-oneself-what-to-contribute">Managing Oneself: What to
+Contribute?</h3>
+<p>Successful careers are not the products of luck or planning; they are
+built</p>
+<p>by people who are able to seize those opportunities that match their
+own</p>
+<p>strengths.</p>
+<p>Now that you have identified your strengths and work style you can
+begin</p>
+<p>to look for the right opportunities. These are the assignments that
+will enable</p>
+<p>you to use your strength, match your work style, and fit</p>
+<p>within your personal value system. They are also the assignments
+that</p>
+<p>help you to make the right contribution. But you first have to decide
+what</p>
+<p>your contribution should be.</p>
+<p>Figuring out the right contribution helps you move from knowledge
+to</p>
+<p>action. What do you think you should contribute? In other words,
+how</p>
+<p>can you make a difference within your organization? Answering
+these</p>
+<p>ques-tions helps you to analyze opportunities in search for the right
+few.</p>
+<p>When such opportunities do come along, it’s best to accept them if
+they</p>
+<p>suit you and how you work. It requires you to think through the</p>
+<p>requirements of a specific situation, your greatest potential
+contribution,</p>
+<p>and the results that must be achieved. It is through such processes
+that</p>
+<p>successful careers are built. They are not the products of luck or
+planning;</p>
+<p>they are built by peo-ple who are able to seize those opportunities
+that</p>
+<p>match their own strengths, work styles, and values.</p>
+<h3 id="action-point-1">ACTION POINT:</h3>
+<p>Seek the opportunities that allow you to apply your</p>
+<p>strengths and match your work style and values.</p>
+<p>Management Challenges for the 21st Century</p>
+<h4 id="managing-oneself-corpedia-online-program">Managing Oneself
+(Corpedia Online Program)</h4>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

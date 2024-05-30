@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="第三同读" />
+  <title>德鲁克日志</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">德鲁克日志</h1>
+<p class="author">第三同读</p>
+</header>
+<h2 id="透过金庸读懂德鲁克">透过金庸读懂德鲁克</h2>
+<p>苏星河的悲剧</p>
+<p>苏星河是逍遥派的弟子，是逍遥派掌门无崖子的首徒。他还有一个师弟，就是赫赫有名的山东人丁春</p>
+<p>秋，也就是星宿老仙。</p>
+<p>无崖子是一个神人，武功极高，而且风流倜傥，琴棋书画无所不通，无所不晓。苏星河作为无崖子的</p>
+<p>首徒，对师父很是敬佩，总觉得自己应该成为师父那样的人。虽然自己不够帅，师父的那些学识都是</p>
+<p>珍宝，哪怕耗尽自己的精力也一定要学会。</p>
+<p>所以，苏星河就开始学师父的琴棋书画、医学占卜，当然，还有武功。苏星河的资质也无崖子比就差</p>
+<p>远了，无崖子的琴棋书画、医学占卜固然都有独得之妙，武功也算高的一塌糊涂。很有点类似后来的</p>
+<p>黄药师。想起来也算黄药师一流的人物。</p>
+<p>而苏星河则有点郭靖的样子，只是他缺少了郭靖的智慧。他在把自己分成十几瓣，每天学了这个学那</p>
+<p>个，好像每一样都学的不错，如果不是师弟加入的话。</p>
+<p>师弟丁春秋比自己晚入门几年，不过，丁师弟对琴棋书画、医学占卜这些杂务都没有兴趣，只是一个</p>
+<p>劲地学习武功，每天除了练武，就是翻箱倒柜地寻找各种武功。丁春秋的资质也不大好，不过，他很</p>
+<p>用心，十几年的时间，丁师弟学会了逍遥派的大部分武功。</p>
+<p>十几年来，好学的苏星河不断学习着师父的琴棋书画、医学占卜，还有武功；同样好学的丁春秋只是</p>
+<p>练习着武功。很显然，丁春秋的武功比苏星河高的太多了。</p>
+<p>客观来讲，丁春秋的武功甚至接近无崖子了，因为无崖子这些年来天天就是泡妞，以及被妞泡，除了</p>
+<p>偶尔吐纳一下，修行一些内功外。，几乎不碰武功。毕竟，已经掌门这么多年了，有事弟子也就效劳</p>
+<p>了。</p>
+<p>无崖子喜欢苏星河，不大喜欢丁春秋，无崖子觉得苏星河“甚肖”自己，而丁春秋只是学习武功，甚是无</p>
+<p>趣。有好多高深武功，也就不愿意传丁春秋，无崖子想着要把掌门之位传给苏星河，不过，苏星河武</p>
+<p>功太差了，怕hold不住。</p>
+<p>某一天，丁春秋突然发难，一掌打伤了无崖子，然后准备折磨师父来逼他交出那些高阶武功，以及掌</p>
+<p>门指环。</p>
+<p>无崖子虽然有点废柴，毕竟有几十年的功力，还是逃了。苏星河也被丁春秋追杀，在追杀路上，苏星</p>
+<p>河找到了受伤的师父。把师父藏到一个石洞里，然后自己守着石洞和丁春秋博弈。</p>
+<p>丁春秋想要武功，而苏星河想要师父活命。他们形成了恐怖的平衡。丁春秋也不想老东西（无崖子）</p>
+<p>死的那么快，毕竟，自己还有好多武功没有学会。丁春秋就和苏星河来了个对赌：苏星河不能开口说</p>
+<p>话。苏星河答应了。</p>
+<p>苏星河怕自己的弟子，也就是函谷八友被丁春秋杀死，就把自己的这8个弟子逐出了师门。然后自己创</p>
+<p>建了“聋哑门”，成为一个新的门派。</p>
+<p>苏星河的八个弟子：函谷八友，就聪明了一下，每一个只学了苏星河的一件爱好，还有武功，所以，</p>
+<p>他们的武功也还可以。不过，苏星河已经是打折的逍遥武功了，函谷八友也高不到哪里去。</p>
+<p>处理完弟子后，苏星河又开始帮师父找一个弟子，来学习武功，并且接任掌门，收拾丁春秋。</p>
+<p>无崖子还是比较愚蠢，他还是想找一个和自己一样有才华的人。最好还帅，还风流。苏星河就照着这</p>
+<p>个标准给师父找，这一找就是三十年，也没找到。</p>
+<p>后来，稀里糊涂，来了个一个叫做虚竹的和尚，大字不认识几个，脑袋也没怎么开窍。可是，这时的</p>
+<p>无崖子已经灯枯油尽了。只好将就着用了。就把自己的内功，还有掌门之位传给了虚竹。</p>
+<p>丁春秋看到虚竹手上的指环后，知道师父把内功和掌门之位传给了虚竹，就像杀死虚竹一了百了。丁</p>
+<p>春秋冲上去就是一击，虚竹居然没感觉，丁春秋感觉不对，就跑了，跑前顺便给自己的是师兄苏星河</p>
+<p>下了个毒。把苏星河毒死了。</p>
+<p>然后，苏星河就死了。永远死了。</p>
+<p>回顾苏星河的一生，拜了个好师父，师父是个天才。自己明明可以学习自己师父的琴棋书画、医学占</p>
+<p>卜，或者武功，结果却选了学师父做天才。搞的自己不伦不类，最后死在师弟手里。</p>
+<p>那么如何评价无崖子呢？这是个糊涂老师，好的老师应该因材施教，他既看不出大徒弟的资质平平，</p>
+<p>也看不出二徒弟的人品邪恶，在看人这件事上，品质和正直是排他项。活该自己在破洞里枯守三十</p>
+<p>年。</p>
+<h2 id="大纲">大纲</h2>
+<h2 id="百字摘要">百字摘要</h2>
+<h2 id="金庸案例">金庸案例</h2>
+<h2 id="时间消耗">时间消耗</h2>
+<h2 id="阅读理解">阅读理解：</h2>
+<h2 id="大纲-1">大纲：</h2>
+<h2 id="撰写">撰写：</h2>
+<h2 id="录音">录音</h2>
+<h2 id="一小时运动">一小时运动</h2>
+<p>midis</p>
+<h2 id="英文原文">英文原文</h2>
+<p>20 SEPTEMBER</p>
+<p>Staffing Decisions</p>
+<p>Where there are peaks, there are valleys.</p>
+<p>The people decision is a big gamble—by basing it on what a person can
+do, it at least becomes a</p>
+<p>rational gamble.</p>
+<p>gamble：</p>
+<p>rational：</p>
+<p>（牌戏、赛马等中）赌博，打赌</p>
+<dl>
+<dt>( of behaviour, ideas, etc. 行为、思想等 ) based on reason rather
+than emotions 合理的；理性的；明智的</dt>
+<dd>
+<p>(sth) (on sth) to risk money on a card game, horse race, etc.</p>
+</dd>
+</dl>
+<p>Effective executives make strength productive.</p>
+<p>They fill positions and promote based upon what a person can do—not
+to minimize weakness but</p>
+<p>to maximize strength.</p>
+<p>Strong people always have strong weaknesses.</p>
+<p>Where there are peaks there are valleys.</p>
+<p>There is no such thing as a “good person”; “good for what?” is the
+question.</p>
+<p>Look for excellence in one major area, and not for performance that
+gets by all around.</p>
+<p>Human excellence can only be achieved in one area, or at the most, in
+very few.</p>
+<p>Always start out with what a person should be able to do well and
+then demand that he or she</p>
+<p>really do it.</p>
+<p>There is one area where weakness in itself is of importance and
+relevance.</p>
+<p>By themselves character and integrity do not accomplish anything.</p>
+<p>But their absence faults everything else. Here is the one area where
+weak-ness is an absolute</p>
+<p>disqualification.</p>
+<h3 id="action-point">ACTION POINT:</h3>
+<p>When making people decisions, make sure you know the assignment.</p>
+<p>Then choose a candidate who has proven strengths in skill-areas
+required by the new assignment.</p>
+<p>The Effective Executive</p>
+<h2 id="september">20 SEPTEMBER</h2>
+<h3 id="staffing-decisions">Staffing Decisions</h3>
+<p>Where there are peaks, there are valleys.</p>
+<p>The people decision is a big gamble—by basing it on what a person
+can</p>
+<p>do, it at least becomes a rational gamble. Effective executives make
+strength</p>
+<p>productive. They fill positions and promote based upon what a person
+can do</p>
+<p>—not to minimize weakness but to maximize strength. Strong people
+always</p>
+<p>have strong weaknesses. Where there are peaks there are valleys.
+There is no</p>
+<p>such thing as a “good person”; “good for what?” is the question. Look
+for</p>
+<p>excellence in one major area, and not for perfor-mance that gets by
+all</p>
+<p>around. Human excellence can only be achieved in one area, or at the
+most, in</p>
+<p>very few. Always start out with what a person</p>
+<p>should be able to do well and then demand that he or she really do
+it.</p>
+<p>There is one area where weakness in itself is of importance and
+rele-</p>
+<p>vance. By themselves character and integrity do not accomplish</p>
+<p>anything. But their absence faults everything else. Here is the one
+are</p>
+<p>Awhere weak-ness is an absolute disqualification.</p>
+<h3 id="action-point-1">ACTION POINT:</h3>
+<p>When making people decisions, make sure you know the</p>
+<p>assignment. Then choose a candidate who has proven strengths in
+skill-</p>
+<p>areas required by the new assignment.</p>
+<h4 id="the-effective-executive">The Effective Executive</h4>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

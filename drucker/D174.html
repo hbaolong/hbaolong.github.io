@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="第三同读" />
+  <title>德鲁克日志</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">德鲁克日志</h1>
+<p class="author">第三同读</p>
+</header>
+<h2 id="透过金庸读懂德鲁克">透过金庸读懂德鲁克</h2>
+<p>王阳明： 我要成为圣人</p>
+<p>十二岁的王阳明说：“我认为人生第一等事情是读书做圣贤。”这一年他刚刚就读私塾。</p>
+<p>十五岁那年，学习了兵法的王阳明上书皇帝献策平定农民起义，当然，皇帝没有理这个小屁孩。</p>
+<p>十七岁那年，王阳明结婚，结婚当晚，他跑到一个道士那里讨论人生哲理，请教养生术，在彻夜长谈</p>
+<p>中，居然忘记了自己的婚姻大事。直到第二天岳父才在道馆里把他找回去。</p>
+<p>十八岁后，他遍读朱熹的书，思考宋儒所谓“物有表里精粗，一草一木皆具至理”的学说。为了实践朱熹</p>
+<p>的“格物致知”，有一次他下决心穷竹之理，“格”了七天七夜的竹子，什么都没有发现，人却因此病倒。</p>
+<p>从此，王守仁对“格物”学说产生了极大的怀疑，这就是中国哲学史上著名的“守仁格竹”。</p>
+<p>随后，王阳明学业大进，同时，他对兵法的兴趣也非常大，学会了射箭，据说箭法还不错。</p>
+<p>第一次进士不中，第二次进士不中。当别人安慰他时，他说：“你们以不登第为耻，我以不登第却为之</p>
+<p>懊恼为耻”。也就是说，每一件事对于王阳明来说，都是一个修心的过程，不管进士中或者不中。</p>
+<p>当然，最后还是中了进士：二甲进士第七人。
+当了个官，授兵部武选司主事。</p>
+<p>三十四岁那年，被太监刘瑾陷害，杖四十，谪贬至贵州龙场（贵阳西北七十里，修文县治）当龙场驿</p>
+<p>栈驿丞。</p>
+<p>路上，刘瑾派人杀他，他伪造跳水躲开了，安全到达龙场。</p>
+<p>当时龙场附近还是未开化的地方，他就在那里讲课，讲他的哲学理念，这就是阳明哲学史上很重要的</p>
+<p>“龙场悟道”。</p>
+<p>后来刘瑾死了，王阳明也就复官了。慢慢地提升着。</p>
+<p>在四十四岁那年，他受到当时的兵部尚书王琼的赏识，做了御史，巡抚江西一带。这些地方都有盗</p>
+<p>匪，王阳明就初试军事才能，平定了为患十多年的江西。被当地称为神人。</p>
+<p>在四十七岁那年，宁王朱宸濠发动叛乱。宁王朱宸濠就是周星驰演的《唐伯虎点秋香》里的那个宁</p>
+<p>王。王阳明在没有收到旨意时，即就地筹兵，三十五天平定宁王叛乱，活捉宁王。</p>
+<p>在四十九岁那年，王阳明被封为伯爵，这时他的身体也越来越差，同时他也开始了之后主要的工作：</p>
+<p>讲学。</p>
+<p>五十五岁那年，他讲出了：无善无恶心之体，有善有恶意之动。知善知恶是良知，为善去恶是格物。</p>
+<p>心学的体系基本上完成。</p>
+<p>次年，王阳明再次踏上平叛之路，这次平叛的思恩、田州的民族首领卢苏、王受听说王阳明来了，直</p>
+<p>接投降了。</p>
+<p>平叛后，王阳明病情加重，与嘉靖七年，也就是1529年，也就是王阳明五十七岁那年，病逝。</p>
+<p>临死前，王阳明留下遗言：“此心光明，亦复何言！”</p>
+<p>王阳明的一生并不长，却很厚。道教、佛教、做官、做学者、做军人、见讲学、教化、平叛。这些形</p>
+<p>形色色的觉得看起来眼花缭乱，对阳明先生来说，只是他成为“圣人”的一个工具或者过程而已。</p>
+<p>即使被刘瑾派人追杀，他依然坦然处之，在逃脱追杀后居然仍然去报道。</p>
+<p>即使到了龙场那样的荒莽之地，他却可以选择教化当地民众，推进自己学问的演化。</p>
+<p>即使平叛宁王那么大的功劳不被认可，他仍然坦然处之，以求平稳。</p>
+<p>因为对于阳明先生来说，他的目标就是做圣人，除此之外，一切都是手段。</p>
+<p>德鲁克认为，一个人的工作应该有个目标，当确定了这个目标后，就去努力向这个目标的完美努力。</p>
+<p>这个完美的目标肯定会躲着你，你有责任持续努力，知道达成，或者尽量达成。</p>
+<p>德鲁克自己在三十多岁时找到了自己的目标，就是研究人、企业、社会的关系。</p>
+<p>就像王阳明在12岁时找到了自己的目标：我要做圣人。</p>
+<h2 id="大纲">大纲</h2>
+<ol type="1">
+<li><p>用王阳明故事讲述一生为目标奋斗</p></li>
+<li><p>讲德鲁克30多岁时修正自己的方向，然后终身朝这个方向努力</p></li>
+<li><p>讲金庸笔下的某个专业人物</p></li>
+<li><p>引出结论：你目标之外的工作，都是手段</p></li>
+<li><p>投票：你有工作目标么？</p></li>
+</ol>
+<h2 id="百字摘要">百字摘要</h2>
+<h2 id="金庸案例">金庸案例</h2>
+<p>22 JUNE</p>
+<p>Goal and Vision for Work</p>
+<p>“All my life as a musician, I have striven for perfection.</p>
+<p>It has always eluded me. I surely had an obligation to make one more
+try.”</p>
+<p>striven：v. 努力（strive的过去分词）</p>
+<p>perfection：</p>
+<p>完善；完美</p>
+<p>eluded ：</p>
+<p>躲避</p>
+<p>obligation：</p>
+<p>the state of being perfect</p>
+<p>V-T If you elude someone or something, you avoid them or escape from
+them.</p>
+<p>[ U ] the state of being forced to do sth because it is your duty, or
+because of a law, etc.</p>
+<p>义务；职责；责任</p>
+<p>I have never forgotten these words—they made an indelible impression
+on me.</p>
+<p>indelible：</p>
+<p>无法忘记的；不可磨灭的</p>
+<p>impression：IDEA/OPINION 想法；看法</p>
+<p>impossible to forget or remove</p>
+<p>sb/sth, or that sb/sth gives you</p>
+<dl>
+<dt>印象；感想</dt>
+<dd>
+<p>(of sb/sth) | ~ (that…) an idea, a feeling or an opinion that you get
+about</p>
+</dd>
+</dl>
+<p>Verdi, when he was my age, that was eighteen, was of course already a
+seasoned musician.</p>
+<p>seasoned：</p>
+<p>人</p>
+<p>富有经验的；老于此道的</p>
+<p>[ usually before noun ] ( of a person</p>
+<p>) having a lot of experience of a particular activity</p>
+<p>I had no idea what I would become, except that I knew by that time
+that I was unlikely to be a</p>
+<p>success exporting cotton textiles.</p>
+<p>textiles：</p>
+<p>纺织品</p>
+<p>N-COUNT Textiles are types of cloth or fabric, especially ones that
+have been woven.</p>
+<p>At eighteen, I was as immature, as callow, as naive as an
+eighteen-year-old can be.</p>
+<p>immature：</p>
+<p>（行为）不成熟的，不够老练</p>
+<p>behaving in a way that is not sensible and is typical of people who
+are much younger</p>
+<p>的，幼稚的</p>
+<p>callow： ( formal , disapproving ) young and without experience
+幼稚无经验的；未谙世事的</p>
+<p>naive： ( disapproving ) lacking experience of life, knowledge or
+good judgement and willing to believe that people always tell you</p>
+<p>the truth 缺乏经验的；幼稚的；无知的；轻信的</p>
+<p>It was not until fifteen years later, when I was in my early
+thirties, that I really knew what I am good</p>
+<p>at and where I belong.</p>
+<p>But I then resolved that, whatever my life’s work would be, Verdi’s
+words would be my lodestar.</p>
+<p>lodestar：</p>
+<p>北极星（海员借以导航）</p>
+<p>the Pole Star (= a star that is used by sailors to guide a ship)</p>
+<p>sb’s behaviour or actions</p>
+<p>（某人行为或行动的）指导原则</p>
+<p>( formal ) a principle that guides</p>
+<p>I then resolved that if I ever reached an advanced age, I would not
+give up, but would keep on.</p>
+<p>In the meantime, I would strive for perfection even though, as I well
+knew, it would surely always</p>
+<p>elude me.</p>
+<p>meantime：</p>
+<p>其间；同时</p>
+<p>even though： 虽然，即使</p>
+<p>in the period of time between two times or two events SYN
+meanwhile</p>
+<h3
+id="action-point-strive-for-perfection-in-your-work-knowing-that-it-will-always-elude-you.">ACTION
+POINT: Strive for perfection in your work knowing that it will always
+elude you.</h3>
+<p>Drucker on Asia</p>
+<h2 id="june">22 JUNE</h2>
+<h3 id="goal-and-vision-for-work">Goal and Vision for Work</h3>
+<p>“All my life as a musician, I have striven for perfection.</p>
+<p>It has always eluded me. I surely had an obligation to make one more
+try.”</p>
+<p>Ihave never forgotten these words—they made an indelible impression
+on me.</p>
+<p>Verdi, when he was my age, that was eighteen, was of course al-ready
+a seasoned</p>
+<p>musician. I had no idea what I would become, except that I knew by
+that time</p>
+<p>that I was unlikely to be a success exporting cotton tex-tiles. At
+eighteen, I was</p>
+<p>as immature, as callow, as naive as an eighteen-year-old can be. It
+was not until</p>
+<p>fifteen years later, when I was in my early thirties, that I really
+knew what I am</p>
+<p>good at and where I belong. But I then resolved that, whatever my
+life’s work</p>
+<p>would be, Verdi’s words would be my lodestar. I then resolved that if
+I ever</p>
+<p>reached an advanced age, I would not give up, but would keep on. In
+the</p>
+<p>meantime, I would strive for perfection</p>
+<p>even though, as I well knew, it would surely always elude me.</p>
+<h3 id="action-point">ACTION POINT:</h3>
+<p>Strive for perfection in your work knowing that it will al-</p>
+<p>ways elude you.</p>
+<h4 id="drucker-on-asi">Drucker on Asi</h4>
+AAA
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

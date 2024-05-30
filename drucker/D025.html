@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="第三同读" />
+  <title>德鲁克日志</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">德鲁克日志</h1>
+<p class="author">第三同读</p>
+</header>
+<h2 id="透过金庸读懂德鲁克">透过金庸读懂德鲁克</h2>
+<p>金庸笔下的上乘武功和普通武功</p>
+<p>金庸笔下的武功，有上乘武功，有普通武功。主角大多学的是上乘武功，主要配角也大多学的是上乘</p>
+<p>武功，很多龙套学的则是普通武功。</p>
+<p>那么，什么是上乘武功，什么是普通武功呢？</p>
+<p>《神雕侠侣》里有一个藏边五丑，武功不算高，人品却很快，被洪七公追杀了一路。到了华山之巅，</p>
+<p>这藏边五丑洪七公一掌打了过去，五丑伸臂相连和洪七公对抗，对抗了一会，洪七公觉得好奇了，突</p>
+<p>然“咦”的一声，显得颇为诧异，将掌力收回了八成，问道：“你们的内功很有些儿门道，你们的师父是</p>
+<p>谁？”</p>
+<p>这五丑说自己师父是金轮法王，洪七公又摇摇头，说道：“密教圣僧丶金轮国师？没听见过。青海有个</p>
+<p>和尚，叫什么灵智上人，倒见过的，他武功强过你们，但所学的不是上乘功夫。你们学的功夫很好，</p>
+<p>嗯，大有道理。你去叫你们祖师爷来，跟我比划比划。”</p>
+<p>这时，杨过有个心理活动：杨过心想：“能得洪老前辈说一句‘很了不起’，那是当真了不起了。可是我</p>
+<p>看这五个家伙也平平无奇，没一个打得过我。”</p>
+<p>从这段描述我们可以得到几个信息。首先，藏边五丑的武功普通；其次，藏边五丑学的是上乘武功；</p>
+<p>灵智上人的武功比他们要高，不过，他们学的不是上乘武功。</p>
+<p>从故事的描述来说，金庸是要通过藏边五丑来引出金轮法王。这个神雕全书最大的反派，却也第一次</p>
+<p>描述了上乘武功和普通武功的区别。</p>
+<p>也就是说，即使你武功练得很高，也是普通武功，而不是上乘武功。</p>
+<p>那么，什么是普通武功，什么是上乘武功呢？我大概整理了一下。</p>
+<p>所谓普通武功，就是考力量和技巧组合而成的武功，这种武功，单纯就是力量和招式、技巧的组合，</p>
+<p>你比别人多练一天，你就比别人厉害一天。如太祖长拳，如青子十八破，如伏虎圈，如柯镇恶等江南</p>
+<p>七怪教授给郭靖的那些武功。</p>
+<p>作为普通武功，它的效用是直接的，你练习胳膊，你的胳膊就更加有力，你练习腿，你的腿就更加有</p>
+<p>力。你练习协调性，你的协调性就更好。你练习爪力，你的爪子就更加有力，如九阴白骨爪。</p>
+<p>对，我认为九阴白骨爪也是普通武功，当然，我指的是梅超风练习的那个。因为她不懂《九阴真经》</p>
+<p>上卷里到家理论。</p>
+<p>如果你懂了到家理论呢？你就会对九阴白骨爪有了重新的认识，你会练气，练内力，练习呼吸，练习</p>
+<p>对经脉运行的控制。你通过对呼吸、经脉、血液等流向的控制进而增加你爪力、胳膊力量、腿力等。</p>
+<p>这些就属于上乘武功了。</p>
+<p>也就是说，如果你只是强调技艺，强调力量，那么，就是普通武功，如灵智上人，他就是把毒放在手</p>
+<p>掌上，用毒掌打别人。</p>
+<p>而藏边五丑呢？则是通过调整经脉，让五人的力量可以聚集在一起，共同对抗，这就是上乘武功了。</p>
+<p>那么是不是上乘武功就一定好呢？那么，是不是普通武功就一定不好呢？其实不然。</p>
+<p>按这个定义，独孤九剑其实是普通武功，就是一些招式而已，令狐冲在毫无内力的情况下却用这个武</p>
+<p>功刺瞎了十五个人的眼睛。保全了一个华山派。</p>
+<p>而辟邪剑法呢？明显是上乘武功。他的威力完全来自于对经脉和血液的控制，而不是招数。这个武功</p>
+<p>当然也非常厉害，却还是输给了独孤九剑。</p>
+<p>九阳真经应该是上乘武功中最强的了。学习了九阳真经后，像龙抓手那样的需要联系非常事件的普通</p>
+<p>武功，拿到手里就像玩似的。</p>
+<p>那么上乘武功和普通武功比，各有哪些缺点呢？</p>
+<p>普通武功的缺点很直接，就是需要漫长的时间，比如龙爪手功，就需要消耗空性几乎一生的时间。而</p>
+<p>其他人因为消耗的时间比他少，就肯定比不过他。</p>
+<p>普通武功对天赋依赖稍微少一些，20岁的郭靖，也就是20多岁柯镇恶的水平。往上也上不到哪去。</p>
+<p>而上乘武功则不一样，比如辟邪剑法，一割鸡鸡，武功瞬时提高10倍。</p>
+<p>那么上乘武功的缺点在哪里？其实就是上无止境。上乘武功对勤奋的需求少了，对天赋的诉求多了一</p>
+<p>些。可是你要知道，你有天赋，比你天赋多的人也多的是。</p>
+<p>你联系10年，遇到一个有天赋的人，可能几天就超过你。</p>
+<p>就像你学了一辈子”七伤拳“，得意的不得了。还搭上了心肝脾肺肾，结果张无忌几分钟就学会了，还</p>
+<p>完好无损。</p>
+<p>这就是上乘武功的缺点：很容易被弯道超车。</p>
+<p>那么如何做呢？</p>
+<p>不断优化你的上乘武功，比如把九阴真经进化成九阳真经。</p>
+<p>其实，到了最佳转态，普通武功和上乘武功是不相上下的。就像独孤九剑遇到辟邪剑法，就像华山的</p>
+<p>剑宗遇到气宗一样。</p>
+<p>只是独孤九剑的变化会很慢，而辟邪剑法如果不进化，就会被干掉。</p>
+<h2 id="大纲">大纲</h2>
+<h2 id="百字摘要">百字摘要</h2>
+<h2 id="金庸案例">金庸案例</h2>
+<h2 id="时间消耗">时间消耗</h2>
+<h2 id="阅读理解">阅读理解：</h2>
+<h2 id="大纲-1">大纲：</h2>
+<h2 id="撰写">撰写：</h2>
+<h2 id="录音">录音</h2>
+<h2 id="一小时运动">一小时运动</h2>
+<h2 id="英文原文">英文原文</h2>
+<p>25 JANUARY</p>
+<p>Reinvent Yourself</p>
+<p>Reinvent ：</p>
+<p>[ VN ] ~ sth/yourself (as sth) to present yourself/sth in a new form
+or with a new image</p>
+<p>以新形象示人；以新形式出现</p>
+<p>Knowledge people must take responsibility for their own development
+and placement.</p>
+<p>In today’s society and organizations, people work increasingly with
+knowledge, rather than</p>
+<p>with skill.</p>
+<p>Knowledge and skill differ in a fundamental characteristic—skills
+change very, very slowly.</p>
+<p>Knowledge, however, changes itself. It makes itself obsolete, and
+very rapidly.</p>
+<p>A knowledge worker becomes obsolescent if he or she does not go back
+to school every three or</p>
+<p>four years.</p>
+<p>obsolescent： 荒废的；即将过时的；逐渐被废弃的</p>
+<ol start="14" type="a">
+<li></li>
+</ol>
+<p>dilapidated, ruined</p>
+<p>This not only means that the equipment of learning, of knowledge, of
+skill, of experience that one</p>
+<p>acquires early is not sufficient for our present life time and
+working time.</p>
+<p>People change over such a long time span.</p>
+<p>They become different persons with different needs, different
+abilities, different perspectives, and,</p>
+<p>therefore, with a need to “reinvent themselves.”</p>
+<p>I quite intentionally use a stronger word than “revitalize.”</p>
+<p>If you talk of fifty years of working life—and this, I think, is
+going to be increasingly the norm—you</p>
+<p>have to reinvent yourself.</p>
+<p>norm：</p>
+<p>常态；正常行为</p>
+<p>( often the norm ) [ sing. ] a situation or a pattern of behaviour
+that is usual or expected</p>
+<p>You have to make something different out of yourself, rather than
+just find a new supply of energy.</p>
+<h3 id="action-point">ACTION POINT:</h3>
+<p>Ask those ahead of you in age how they went about “repotting
+themselves.”</p>
+<p>What steps should you take now?</p>
+<p>Drucker on Asia</p>
+<h2 id="january">25 JANUARY</h2>
+<h3 id="reinvent-yourself">Reinvent Yourself</h3>
+<p>Knowledge people must take responsibility</p>
+<p>for their own development and placement.</p>
+<p>In today’s society and organizations, people work increasingly with
+knowl-</p>
+<p>edge, rather than with skill. Knowledge and skill differ in a
+fundamental</p>
+<p>characteristic—skills change very, very slowly. Knowledge,
+however,</p>
+<p>changes itself. It makes itself obsolete, and very rapidly. A
+knowledge worker</p>
+<p>becomes obsolescent if he or she does not go back to school every</p>
+<p>three or four years.</p>
+<p>This not only means that the equipment of learning, of knowledge, of
+skill,</p>
+<p>of experience that one acquires early is not sufficient for our
+present life time</p>
+<p>and working time. People change over such a long time span. They
+become</p>
+<p>different persons with different needs, different abilities,
+dif-ferent</p>
+<p>perspectives, and, therefore, with a need to “reinvent themselves.” I
+quite</p>
+<p>intentionally use a stronger word than “revitalize.” If you talk of
+fifty years of</p>
+<p>working life—and this, I think, is going to be increasingly the
+norm—you</p>
+<p>have to reinvent yourself. You have to make something differ-ent out
+of</p>
+<p>yourself, rather than just find a new supply of energy.</p>
+<h3 id="action-point-1">ACTION POINT:</h3>
+<p>Ask those ahead of you in age how they went about “re-</p>
+<p>potting themselves.” What steps should you take now?</p>
+<h4 id="drucker-on-asi">Drucker on Asi</h4>
+AAA
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

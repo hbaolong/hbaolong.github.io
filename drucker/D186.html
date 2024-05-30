@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="第三同读" />
+  <title>德鲁克日志</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">德鲁克日志</h1>
+<p class="author">第三同读</p>
+</header>
+<h2 id="透过金庸读懂德鲁克">透过金庸读懂德鲁克</h2>
+<p>标题：全真教为什么很快就垮了</p>
+<p>全真教的第一代教主是王重阳。王重阳是一位文武双全的文武双举人。在北宋末年，金兵入侵的时，</p>
+<p>他带领义兵反抗金兵。失败后自己躲到活死人墓，自称活死人。在活死人墓带了七年后，王重阳参化</p>
+<p>绝深武功，走出活死人墓，创办全真教。在之后的十几年里，他先后寻找、点化了七位大弟子。后世</p>
+<p>称之为全真七子。在全真七子之前。他还有一位弟子叫做周伯通。不过他并没有把周伯通当成弟子，</p>
+<p>而是当成师弟。</p>
+<p>找到师弟和全真七子后，王重阳又回到终南山，在终南山活死人墓边上修建了全真教道观。全真教就</p>
+<p>这样发展起来了。</p>
+<p>王重阳精通道教典籍，并且在道教典籍中悟出了全真教的武功。在七位弟子的帮助下，凭借自己的武</p>
+<p>功以及影响力，很快，全真教就发展成了一个门人非常多的教派。</p>
+<p>后来，江湖上出现了一部九阴真经，为了控制九阴真经，王重阳邀请天下武功最好的那些人一起来华</p>
+<p>山开会，在七天七夜的会议里，王重阳凭借深厚的武功得到了会议的一致同意，承认他为当今世界武</p>
+<p>功第一高手，进而全真教成为武林第一大教派。按会议的决议，《九阴真经》也就成为全真教的镇教</p>
+<p>之宝。</p>
+<p>当时的武林并不大，这个会议的影响也不到。武林中的高手也不多，而且很多高手只是在局部活动，</p>
+<p>这就为全真教的崛起提供了机会。</p>
+<p>王重阳是一个喜好四处跑的人，终南山在陕西，他发展的弟子却大多来自山东。而他的七个弟子也都</p>
+<p>是喜欢四处跑的人。</p>
+<p>跟随王重阳几年后，这七个大弟子武功都学的不错。特别是丘处机，王处一等。而这几个又喜欢四处</p>
+<p>跑，行侠仗义。在江湖上搞出了好大的声音。江湖热闹了起来。全真教也就成为了名副其实的江湖第</p>
+<p>一大派。</p>
+<p>后来，王重阳死了，马钰成为了新的教主。丘处机成为了教主师弟，感觉自己的身份更加尊贵了。为</p>
+<p>了让全真教保持持续的影响力，马钰、丘处机他们决定继续走王重阳的路。让全真教发展的更好。</p>
+<p>丘处机他们四处收徒弟，教授武功，然后带回终南山。不过，丘处机他们并没有多少精力带（管教）</p>
+<p>弟子，所以他们的弟子的武功就不高。不过，当时的江湖还是不大，他们那不高的武功在普通老百姓</p>
+<p>眼里还是非常厉害的。</p>
+<p>所以，全真教的名气也就越来越大了。</p>
+<p>这时，郭靖黄蓉家族也在崛起，丐帮在黄蓉的带领下也在崛起，蒙古的崛起也牵引武林人士的涌动。</p>
+<p>整个武林热闹了起来。黄药师的弟子虽然大多被打断了腿，可是武力还是不可小觑。</p>
+<p>丘处机们并没有多想，师父王重阳死了，他们觉得自己就是“王重阳”了，踩着师父的路子走下去。仍</p>
+<p>然是四处点化弟子，随便教授弟子一些武功，然后就让弟子信心十足地走向江湖。</p>
+<p>这样，江湖上就出现了很多没有见过王重阳的重阳门人。</p>
+<p>说一个有趣的八卦，就是王重阳和林朝英的故事。林朝英是王重阳的女朋友，当王重阳躲在活死人墓</p>
+<p>不想出来时，就是林朝英在墓口堵了几天几夜，逼着王重阳出来。王重阳出来后，才走向山东游荡，</p>
+<p>才创建了全真教。</p>
+<p>当时，林朝英和王重阳打了一个赌。王重阳输了，就把活死人墓输给了林朝英。王重阳经常回去墓里</p>
+<p>和林朝英见面，为了不被弟子看见，带七大弟子回来的王重阳和弟子们说：“这个洞本来是我的，输给</p>
+<p>了一个女人，这个女人很厉害，你们不要招惹她，最好不要到她门口去。”</p>
+<p>弟子一听，这洞里住着大敌啊。那就定一个规则：凡我全真弟子，不可走进墓门口。</p>
+<p>等到了第三代弟子，这个规则及变成了禁令，而这个禁令居然救了未来的一代大侠杨过。</p>
+<p>第二代弟子也慢慢的老去了，第三代弟子在江湖上横冲直撞，发现一家不靠谱了。不过他们还是坚信</p>
+<p>自己是天下武学正宗，坚信终南山中那个活死人墓是禁地。至于为什么，大家并不知道。</p>
+<p>当那些新鲜的第三代小道士在江湖上兴冲冲时，发现江湖已经不认识他们了。</p>
+<p>尹志平见了黄药师这般威势，心知此人非同小可，躬身说道：“全真教长春门下弟子尹志平拜见前</p>
+<p>辈。”黄药师道：“人人都滚了出去，我又没教你留着。还在这儿，是活得不耐烦了？”尹志平一怔，</p>
+<p>道：“弟子是全真教长春门下，并非奸人。”</p>
+<p>黄药师道：“全真教便怎地？”顺手在桌上抓落，抓下了板桌上一块木块，臂不动，手不扬，那木块已</p>
+<p>轻飘飘的向尹志平迎面飞去。尹志平忙举拂尘挡格，那知这小小木块竟如是根金刚巨杵，只觉一股大</p>
+<p>力撞来，势不可当，连带拂尘一齐打在他口旁，一阵疼痛，嘴中忽觉多了许多物事，急忙吐在掌中，</p>
+<p>却是几颗牙齿，满手鲜血，不禁又惊又怕，作声不得。</p>
+<p>他们发现，他们的做派已经支撑不起来了。</p>
+<p>与过了几十年，江湖上已经没有了全真教的故事，偶尔提起时，偶尔会有人说，那里有一群不问世事</p>
+<p>的道人。</p>
+<p>王重阳</p>
+<h2 id="大纲">大纲</h2>
+<ol type="1">
+<li><p>全真教第一代的崛起</p></li>
+<li><p>全真教第二代</p></li>
+<li><p>全真教第三代</p></li>
+</ol>
+<h2 id="百字摘要">百字摘要</h2>
+<p>德鲁克认为商业理论就是一个企业的行为准则。</p>
+<p>这个行为准则需要被整个企业了解并执行，这在企业之初很容易，随着企业的发展，这些就会变成企</p>
+<p>业文化了。</p>
+<p>变成企业文化的商业理论，会让大家停止了思考、质疑。</p>
+<p>只记得答案，却忘记了问题。</p>
+<p>真正的商业理论应该是根据外部环境不断变化的，它应该把自我改变内置进去。</p>
+<p>不然时间一久，它就会变得过时、无效。</p>
+<p>德鲁克认为，对于企业来说，应该在企业内建立一个交流机制用于系统性监控、测试自己的商业理</p>
+<p>论。</p>
+<h2 id="金庸案例">金庸案例</h2>
+<ol type="1">
+<li><p>少林千年门派之谜
+（这个需要比较深厚的功力，以后有资料了再写）</p></li>
+<li><p>全真教快速衰败之谜</p></li>
+<li></li>
+</ol>
+<h2 id="时间消耗">时间消耗</h2>
+<h2 id="阅读理解20152030">阅读理解：20：15~20：30</h2>
+<h2 id="大纲-1">大纲：</h2>
+<h2 id="撰写">撰写：</h2>
+<p>4 JULY</p>
+<p>Communicate and Test Assumptions</p>
+<p>The theory of the business is a discipline.</p>
+<p>discipline：</p>
+<p>[ U ] the practice of training people to obey rules and orders and
+punishing them if they do not; the controlled</p>
+<p>behaviour or situation that results from this training</p>
+<p>训练；训导；纪律；风纪</p>
+<p>[ C ] a method of training your mind or body or of controlling your
+behaviour; an area of activity where this is necessary</p>
+<p>准则；符合准则的行为</p>
+<p>训练方法；行为</p>
+<p>The theory of the business must be known and understood throughout
+the organization.</p>
+<p>This is easy in an organization’s early days.</p>
+<p>But as it becomes successful, an organization tends increasingly to
+take its theory for granted,</p>
+<p>becoming less and less conscious of it.</p>
+<p>tends：</p>
+<p>倾向于 往往会</p>
+<p>conscious：</p>
+<p>意识到；注意到</p>
+<p>V-T If something tends to happen, it usually happens or it often
+happens.</p>
+<p>;</p>
+<p>[ not before noun ] ~ of (doing) sth | ~ that aware of sth; noticing
+sth</p>
+<p>Then the organization becomes sloppy.</p>
+<p>sloppy：</p>
+<p>马虎的；凌乱的；草率的</p>
+<p>that shows a lack of care, thought or effort</p>
+<p>It begins to cut corners.</p>
+<p>cut corners： 抄近路；以简便方法做事</p>
+<ol start="14" type="a">
+<li></li>
+</ol>
+<p>take a short cut</p>
+<p>It begins to pursue what is expedient rather than what is right.</p>
+<p>pursue：</p>
+<p>追求；致力于；执行；贯彻</p>
+<p>expedient：</p>
+<p>[ VN ] to do sth or try to achieve sth over a period of time</p>
+<p>an action that is useful or necessary for a particular purpose, but
+not always fair or right</p>
+<p>权宜之计；应急办法</p>
+<p>It stops thinking.</p>
+<p>It stops questioning.</p>
+<p>It remembers the answers but has forgotten the questions.</p>
+<p>The theory of the business becomes “culture.”</p>
+<p>But culture is no substitute for discipline, and the theory of the
+business is a discipline.</p>
+<p>substitute：</p>
+<p>代替者；代替物；</p>
+<dl>
+<dt>代用品</dt>
+<dd>
+<p>(for sb/sth) a person or thing that you use or have instead of the
+one you normally use or have</p>
+</dd>
+</dl>
+<p>The theory of the business has to be tested constantly.</p>
+<p>It is not graven on tablets of stone.</p>
+<p>graven：v. 雕刻；铭刻；清理（船底）（grave 的过去分词）</p>
+<p>tablets of stone：石碑</p>
+<p>It is a hypothesis.</p>
+<p>hypothesis：</p>
+<p>[ C ] an idea or explanation of sth that is based on a few known
+facts but that has not yet been proved to be true or</p>
+<p>correct</p>
+<p>（有少量事实依据但未被证实的）假说，假设</p>
+<p>And it is a hypothesis about things that are in constant
+flux—society, markets, customers,</p>
+<p>technology.</p>
+<p>flux：</p>
+<p>不断的变动；不停的变化</p>
+<p>constant flux： 永恒的变化</p>
+<p>[ U ] continuous movement and change</p>
+<p>And so, built into the theory of the business must be the ability to
+change itself.</p>
+<p>Some theories are so powerful that they last for a long time.</p>
+<p>Eventually every theory becomes obsolete and then invalid.</p>
+<p>obsolete：</p>
+<p>淘汰的；废弃的；过时的</p>
+<p>invalid：adj. 无效的；有病的；残疾的</p>
+<p>no longer used because sth new has been invented SYN out of date</p>
+<p>It happened to the GMs and the AT&amp;Ts.</p>
+<p>It happened to IBM.</p>
+<p>It is also happening to the rapidly unraveling Japanese keiretsu.</p>
+<p>unravel：</p>
+<p>if you unravel threads that are twisted, woven or knitted, or if they
+unravel , they become separated</p>
+<p>线）解开，拆散，松开</p>
+<p>（把缠或织在一起的</p>
+<h3 id="action-point">ACTION POINT:</h3>
+<p>Establish a forum in your organization for communicating,
+systematically monitoring, and testing</p>
+<p>your theory of your business.</p>
+<p>Managing in a Time of Great Change</p>
+<h2 id="july">4 JULY</h2>
+<h3 id="communicate-and-test-assumptions">Communicate and Test
+Assumptions</h3>
+<p>The theory of the business is a discipline.</p>
+<p>The theory of the business must be known and understood throughout
+the</p>
+<p>organization. This is easy in an organization’s early days. But as it
+becomes</p>
+<p>successful, an organization tends increasingly to take its theory for
+granted,</p>
+<p>becoming less and less conscious of it. Then the organization
+becomes</p>
+<p>sloppy. It begins to cut corners. It begins to pursue what is
+expedi-ent rather</p>
+<p>than what is right. It stops thinking. It stops questioning. It
+re-members the</p>
+<p>answers but has forgotten the questions. The theory of the business
+becomes</p>
+<p>“culture.” But culture is no substitute for discipline, and</p>
+<p>the theory of the business is a discipline.</p>
+<p>The theory of the business has to be tested constantly. It is not
+graven</p>
+<p>on tablets of stone. It is a hypothesis. And it is a hypothesis about
+things</p>
+<p>that are in constant flux—society, markets, customers, technology.
+And</p>
+<p>so, built into the theory of the business must be the ability to
+change</p>
+<p>itself. Some theories are so powerful that they last for a long
+time.</p>
+<p>Eventually every the-ory becomes obsolete and then invalid. It
+happened</p>
+<p>to the GMs and the AT&amp;Ts. It happened to IBM. It is also
+happening to</p>
+<p>the rapidly unraveling Japanese keiretsu.</p>
+<h3 id="action-point-1">ACTION POINT:</h3>
+<p>Establish a forum in your organization for communicat-</p>
+<p>ing, systematically monitoring, and testing your theory of your
+business.</p>
+<h4 id="managing-in-a-time-of-great-change">Managing in a Time of Great
+Change</h4>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

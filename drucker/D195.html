@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="第三同读" />
+  <title>德鲁克日志</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">德鲁克日志</h1>
+<p class="author">第三同读</p>
+</header>
+<h2 id="透过金庸读懂德鲁克">透过金庸读懂德鲁克</h2>
+<p>标题：师父的成功</p>
+<p>唐朝灭亡后，朱温在开封建都，这就是后梁。在之后的五十多年里，北方先后建立了后梁、后唐、后</p>
+<p>晋、后汉和后周。各个军阀通过大多通过篡权、兵变的方式获得政权。这种故事每隔十几年就演绎一</p>
+<p>次。</p>
+<p>段思平则开创出一条新路。</p>
+<p>段氏家族是中原的武术世家，经过几百年的演化，到了段思平这一代，段氏家族的武功已经到了不可</p>
+<p>思议的地步。段氏家族家人、门人众多，很多家人或者在某个军阀出任职，或者在江湖</p>
+<p>由于中原混战，段氏家族决定找一个世外桃源，经过对时局的仔细分析后，偏好佛教的段式家族选择</p>
+<p>远赴西南，占据南诏过的地盘作为安家之处。</p>
+<p>段氏家族并不是军阀组织。在这个军阀混战的时代，凭借一个武林世家而去占据一个地盘，这还是一</p>
+<p>个天方夜谭般的想象。当段思平做出这个决定时，这个家族都觉得他疯了。</p>
+<p>不过，按照段氏家族的决策体系，他们还是举家迁往西南。</p>
+<p>在之后的十多年里，段思平凭借高超的武功，精准掠杀西南一带的军阀、高官。并且通过多收弟子来</p>
+<p>扩展自己的势力。很多门人也都成为了段思平的弟子，学成武功后为段家服务。</p>
+<p>在几次关键的刺杀以及武术对抗后，段思平以及他的门人完全控制了南诏地区的军事、政治。在合适</p>
+<p>的时候，段思平在大理称帝，定国号为大理。</p>
+<p>从计划寻找乱世中的世外桃源，到在大理称帝，段思平用了15年。成为大理皇帝后，段思平用武林规</p>
+<p>矩设定了政府规矩，用弟子门人来执政。用师徒关系代替官员的任命关系。</p>
+<p>段思平成功地把段氏家族变成了大理皇族。这个过程中，武功起了决定性的作用。</p>
+<p>成为皇帝的段思平为了确保武功的高可用性，他以皇帝的身份在皇宫附近修建了一座寺庙，把家族中</p>
+<p>最会研究武功的人都放置在寺庙里，这就是天龙寺。段思平也成为第一个在这个寺庙里出家的皇帝，</p>
+<p>名为出家，其实是为了继续研究武功。</p>
+<p>段思平的成功一直激励着慕容龙城。慕容龙城一直期待这类似的成功：创建参合庄，把目前的家族改</p>
+<p>成门派，通过招收弟子扩大门派的实力和影响力，进而组建武功团体。选择合适的政权结构，通过武</p>
+<p>功完成对政权的占有。</p>
+<p>最后对政权进行改造，把家族变成皇族。</p>
+<p>这也是师父临终前给慕容龙城的建议，段思平知道慕容家的目的，他也看出了龙城的潜力。他认为龙</p>
+<p>城可以做到和他一样的事情。他也希望龙城可以在中原一带建立政权，和大理呼应。</p>
+<p>这也是龙城自己的想法，所以他组建了参合庄，招募了很多弟子。没几年，参合庄就热闹了起来。</p>
+<h2 id="大纲">大纲</h2>
+<h2 id="百字摘要">百字摘要</h2>
+<h2 id="金庸案例">金庸案例</h2>
+<h2 id="时间消耗">时间消耗</h2>
+<h2 id="阅读理解">阅读理解：</h2>
+<h2 id="大纲-1">大纲：</h2>
+<h2 id="撰写">撰写：</h2>
+<p>13 JULY</p>
+<p>Unexpected Success</p>
+<p>It takes an effort to perceive unexpected success as one’s own best
+opportunity.</p>
+<p>perceive:</p>
+<p>注意到；意识到；察觉到</p>
+<p>to notice or become aware of sth</p>
+<p>It is precisely because the unexpected jolts us out of our
+preconceived notions, our assumptions,</p>
+<p>our certainties, that it is such a fertile source of innovation.</p>
+<p>In no other area are innovative opportunities less risky and their
+pursuit less arduous.</p>
+<p>Yet the unexpected success is almost totally ne-glected; worse,
+managements tend actively to</p>
+<p>reject it.</p>
+<p>One reason why it is difficult for management to accept unexpected
+success is that all of us tend</p>
+<p>to believe that anything that has lasted a fair amount of time must
+be “normal” and go on “forever.”</p>
+<p>This explains why one of the major U.S. steel companies, around 1970,
+rejected the “mini-mill.”</p>
+<p>Management knew that its steelworks were rapidly becoming obsolete
+and would need billions of</p>
+<p>dollars of investment to be modernized.</p>
+<p>A new, smaller “mini-mill” was the solution. Almost by accident, such
+a “mini-mill” was acquired.</p>
+<p>It soon began to grow rapidly and to generate cash and profits.</p>
+<p>Some of the younger people within the steel company proposed that
+available investment funds be</p>
+<p>used to acquire ad-ditional “mini-mills” and to build new ones.</p>
+<p>Top management indignantly vetoed the proposal.</p>
+<p>“The integrated steelmaking process is the only right one,” top
+management argued. “Everything</p>
+<p>else is cheating—a fad, unhealthy, and unlikely to endure.”</p>
+<p>Needless to say, thirty years later the only parts of the steel
+industry in America that were still</p>
+<p>healthy, growing, and reasonably prosperous were “mini-mills.”</p>
+<h3
+id="action-point-dont-neglect-or-reject-unexpected-success.-identify-it-absorb-it-and-learn-from">ACTION
+POINT: Don’t neglect or reject unexpected success. Identify it, absorb
+it, and learn from</h3>
+<p>it.</p>
+<p>absorb:</p>
+<p>吸收（液体、气体等）</p>
+<p>neglect:</p>
+<p>疏于照顾；未予看管</p>
+<p>to take in a liquid, gas or other substance from the surface or space
+around</p>
+<p>[ VN ] to fail to take care of sb/sth</p>
+<p>Innovation and Entrepreneurship</p>
+<h2 id="july">13 JULY</h2>
+<h3 id="unexpected-success">Unexpected Success</h3>
+<p>It takes an effort to perceive unexpected success as one’s own</p>
+<p>best opportunity.</p>
+<p>It is precisely because the unexpected jolts us out of our
+preconceived no-tions,</p>
+<p>our assumptions, our certainties, that it is such a fertile source of
+innovation. In</p>
+<p>no other area are innovative opportunities less risky and their
+pursuit less</p>
+<p>arduous. Yet the unexpected success is almost totally ne-glected;
+worse,</p>
+<p>managements tend actively to reject it. One reason why it is
+difficult for</p>
+<p>management to accept unexpected success is that all of us tend to
+believe that</p>
+<p>anything that has lasted a fair amount of time must be “nor-</p>
+<p>mal” and go on “forever.”</p>
+<p>This explains why one of the major U.S. steel companies, around
+1970,</p>
+<p>rejected the “mini-mill.” Management knew that its steelworks were
+rap-idly</p>
+<p>becoming obsolete and would need billions of dollars of investment to
+be</p>
+<p>modernized. A new, smaller “mini-mill” was the solution. Almost by
+ac-</p>
+<p>cident, such a “mini-mill” was acquired. It soon began to grow
+rapidly and to</p>
+<p>generate cash and profits. Some of the younger people within the
+steel</p>
+<p>company proposed that available investment funds be used to acquire
+ad-</p>
+<p>ditional “mini-mills” and to build new ones. Top management
+indignantly</p>
+<p>vetoed the proposal. “The integrated steelmaking process is the only
+right</p>
+<p>one,” top management argued. “Everything else is cheating—a fad,
+un-</p>
+<p>healthy, and unlikely to endure.” Needless to say, thirty years later
+the only</p>
+<p>parts of the steel industry in America that were still healthy,
+growing, and</p>
+<p>reasonably prosperous were “mini-mills.”</p>
+<h3 id="action-point">ACTION POINT:</h3>
+<p>Don’t neglect or reject unexpected success. Identify it,</p>
+<p>absorb it, and learn from it.</p>
+<h4 id="innovation-and-entrepreneurship">Innovation and
+Entrepreneurship</h4>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

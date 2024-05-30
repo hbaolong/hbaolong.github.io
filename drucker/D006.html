@@ -1,0 +1,759 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="第三同读" />
+  <title>德鲁克日志</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">德鲁克日志</h1>
+<p class="author">第三同读</p>
+</header>
+<h2 id="透过金庸读懂德鲁克">透过金庸读懂德鲁克</h2>
+<p>我觉得我还可以再救一下</p>
+<p>我们经常有一种错觉，就是觉得我还可以再抢救一下。</p>
+<p>记得是2002年前后，当时北京兴起了ISDN，这是一种比modem快一倍，而且还可以在上网时打电话</p>
+<p>的技术。</p>
+<p>当然，这个ISDN费用不菲。所以，虽然它比modem快一本（从56K的网速到64K *
+2的网速），还是只</p>
+<p>有很少人安装。</p>
+<p>这时 ，有一个新的技术在悄悄诞生，并且在部署，这就是ADSL。</p>
+<p>ADSL天然和电话的通话无关，所以，上网一点都不影响打电话。而且，ADSL入门级的贷款是512K，</p>
+<p>是ISDN单速的8倍。</p>
+<p>所以，当越来越多的人知道有ADSL这个技术后，大家就更不装ISDN了。</p>
+<p>电信不能不干了，ISDN是他们花了很多钱部署好的基础设施，用户不安装不就白花钱了么？</p>
+<p>所以，当时的大运营商都强推ISDN，这就给很多小区宽带提供了机会，这些小的带宽提供商，如宽带</p>
+<p>通等就以提供ADSL接入为服务，开始进入各个小区。</p>
+<p>到了2003年，电信的业务以及被蚕食了不少，我记得当时我们开发了一套ADSL的计费软件，卖的还</p>
+<p>不错，都是卖给那些小的社区宽带运营商的。</p>
+<p>到了2004年，联通痛定思痛，终于提供了ADSL接入服务，ISDN也就逐渐退出了市场。我在想，如果</p>
+<p>这几大运营线坚持推广ISDN，估计现在会有更多的宽带通这样的公司了。</p>
+<p>我在想，当时是谁做出的抢救ISDN技术呢？又是谁最后做出了放弃ISDN的决定呢？</p>
+<p>2004年初，我当时服务的公司，想要开启新业务：电子商务。也就是为中小企业提供电子商务的服务</p>
+<p>能力。让天下没有难做的生意（遗憾的时，我服务的不是阿里）。</p>
+<p>当时公司最赚钱的业务是域名服务，其次是空间租用。因为这两个业务都非常简单，而且交付周期也</p>
+<p>很短。</p>
+<p>所以，业务员都喜欢卖这两个业务，有个同事居然卖个一个客户100个域名，每个域名买了100年，一</p>
+<p>下子大赚了一笔，在公司传为美谈。</p>
+<p>后来，
+老板想推电子商务系统，员工却不愿意。虽然电子商务提成高，利润高，却有说服难的问题，</p>
+<p>很难给用户讲清楚。</p>
+<p>怎么办呢？</p>
+<p>老板很快就做了决定：域名和空间的销售，算提成不算业绩。也就是说，你卖再多域名和空间，也不</p>
+<p>算完成销售任务，也就没有绩效工资。</p>
+<p>这个调整，让很多优秀的销售人员把自己的精力从域名销售赚到了电子商务的销售上来了。</p>
+<p>遗憾的是，系统不稳定，最后也没卖出去几套。</p>
+<p>所以，每次有人和我说：“技术不是问题”时，我都会在心里说：“是问题的那些公司，都死了，都没机</p>
+<p>会思考这个问题”。</p>
+<p>不管怎么说，老板还是很厉害的。</p>
+<p>我原来做过一个项目，这个项目做了挺久，却一直不稳定。我们的研发团队有十多人，大家也都非常</p>
+<p>辛苦，软件的bug也在每天减少。只是，系统还是不稳定。</p>
+<p>后来，老板决定把更多的用户迁移上去，这是一个冒险，不过，对于我们的项目来说也是一个机会。</p>
+<p>很显然，项目刚上线时，大家都很辛苦。整个项目部，整个公司，就像在打仗。</p>
+<p>几个月后，项目逐渐稳定了。却也到了瓶颈期了：我们有30万的用户，而平台只能稳定在5000人左</p>
+<p>右，也就是说，我们需要60台服务器。也就是说，我们需要更多的运维人员、机柜和带宽。</p>
+<p>陆陆续续，我们迁移了3万人到了这个平台上，运维人员到有了10个人。系统虽然没有那么不稳定，却</p>
+<p>也没有那么稳定，一切就是那样。</p>
+<p>某一天，老板说，要不，终止这个项目吧。一台服务器，只能支撑5000个用户，成本上是不经济的。</p>
+<p>想到已经付出的2年时间，以及各种成本，大家都不愿意接话。</p>
+<p>后来，公司换了一个技术总监。这个技术总监来了后一个月，果断终止了项目。</p>
+<p>毕竟，他从来没有参与过这个项目。</p>
+<p>其实，放弃总是很难的，即使我们非常清晰地知道它是正确的。</p>
+<p>因为，我们总会有那么一个幻觉：我觉得我还可以再抢救一下。</p>
+<p>从来没有想过，一个已经注定死去的东西，救过来干嘛？</p>
+<h2 id="大纲">大纲</h2>
+<h2 id="百字摘要">百字摘要</h2>
+<p>三种情况下，你应该放弃：</p>
+<ol type="1">
+<li><p>正在（已经）死亡的</p></li>
+<li><p>已经付出巨大成本，但是无效的</p></li>
+<li><p>侵占新生事物资源的</p></li>
+</ol>
+<h2 id="金庸案例">金庸案例</h2>
+<h2 id="时间消耗">时间消耗</h2>
+<h2 id="阅读理解">阅读理解：</h2>
+<h2 id="大纲-1">大纲：</h2>
+<h2 id="撰写">撰写：</h2>
+<h2 id="录音">录音</h2>
+<h2 id="一小时运动">一小时运动</h2>
+<h2 id="英文原文">英文原文</h2>
+<p>6 JANUARY</p>
+<p>Practice of Abandonment</p>
+<p>If we did not do this already, would we go into it now?</p>
+<p>The question has to be asked—and asked seriously—“If we did not do
+this already, would we,</p>
+<p>knowing what we know, go into it now?” If the answer is no, the
+reaction must be “What do we do</p>
+<p>now?”</p>
+<p>In three cases the right action is always outright abandonment.</p>
+<p>outright：</p>
+<p>完全的；彻底的；绝对的</p>
+<p>complete and total</p>
+<p>Abandonment is the right action if a product, service, market, or
+process “still has a few years of</p>
+<p>life.”</p>
+<p>It is these dying products, services, or processes that always demand
+the greatest care and the</p>
+<p>greatest efforts.</p>
+<p>They tie down the most productive and ablest people.</p>
+<p>ablest:有才干的（able的最高级</p>
+<p>But equally, a product, service, market, or process should be
+abandoned if the only argument for</p>
+<p>keeping it is “It is fully written off.”</p>
+<p>For management purposes there are no “cost-less assets.” There are
+only “sunk costs.”</p>
+<p>sunk:</p>
+<p>沉没成本，已支付成本</p>
+<p>sunk cost</p>
+<p>The third case where abandonment is the right policy—and the most
+important one—is the one</p>
+<p>where, for the sake of maintaining the old or declining product,
+service, market, or process the</p>
+<p>new and growing product, service, or process is being stunted or
+neglected.</p>
+<p>for the sake ：为了…；为了…的利益</p>
+<p>declining：adj. 下滑的；衰退的；倾斜的</p>
+<p>stunted：</p>
+<p>发育不足的；生长不良的；未能充分发展的</p>
+<p>neglected：</p>
+<p>被忽略的；被忽视的；未被重视的</p>
+<p>that has not been able to grow or develop as much as it should</p>
+<p>not receiving enough care or attention</p>
+<h3 id="action-point">ACTION POINT:</h3>
+<p>Ask the questions posed above and if the answer is no, make the tough
+choice to abandon a</p>
+<p>cherished business.</p>
+<p>tough：</p>
+<p>艰苦的；艰难的；棘手的</p>
+<p>cherished：</p>
+<p>having or causing problems or difficulties</p>
+<p>V-T If you cherish something such as a hope or a pleasant memory, you
+keep it in your mind for a long period of time.</p>
+<p>珍藏 (希望、记忆等)</p>
+<p>Management Challenges for the 21st Century</p>
+<p>【原书原文】</p>
+<p>Change Policies</p>
+<p>There is a great deal of talk today about “the innovative
+organization.” But making an organization</p>
+<p>more receptive to innovation—even organizing it for innovation—is not
+nearly enough to be a</p>
+<p>change leader. It might even be a distraction. For to be a</p>
+<p>change leader requires the willingness and ability to change what is
+already being done just as</p>
+<p>much as to do new and different things. It requires policies to make
+the present create the future.</p>
+<p>The first policy—and the foundation for all the others—is to abandon
+yesterday. The first need is to</p>
+<p>free resources from being committed to maintaining what no longer
+contributes to performance,</p>
+<p>and no longer produces results. In fact, it is not possible to create
+tomorrow unless one first</p>
+<p>sloughs off yesterday. To maintain yesterday is always difficult and
+extremely time-consuming. To</p>
+<p>maintain yesterday therefore always commits the</p>
+<p>institution’s scarcest and most valuable resources—and above all, its
+ablest people—</p>
+<p>to nonresults. Yet to do anything different—let alone to
+innovate—always runs into unexpected</p>
+<p>difficulties. It therefore always demands leadership by people of
+high and proven ability. And if</p>
+<p>these people are committed to maintaining yesterday, they are simply
+not available to</p>
+<p>create tomorrow.</p>
+<p>The first change policy, therefore, throughout the entire
+institution, has to be Organized</p>
+<p>Abandonment.</p>
+<p>The change leader puts every product, every service, every</p>
+<p>process, every market, every distribution channel, every customer and
+enduse, on trial for its life. And it does so on a regular schedule. The
+question has to be asked—and</p>
+<p>asked seriously—”If we did not do this already, would we, knowing
+what we now know, go into it?” If</p>
+<p>the answer is “no,” the reaction must not be “Let’s make another
+study.” The reaction must be</p>
+<p>“What do we do now?” The enterprise is committed to change. It is
+committed to action.</p>
+<p>In three cases the right action is always outright abandonment.</p>
+<p>Abandonment is the right action if a product, service, market or
+process “still has a few good years</p>
+<p>of life.” It is these dying products, services or processes that
+always demand the greatest care and</p>
+<p>the greatest efforts. They tie down the most productive and ablest
+people. But also we almost</p>
+<p>always overestimate how much “life” there is still in the old
+product, service, market or process.</p>
+<p>overestimate：</p>
+<p>美 ‑</p>
+<p>高估</p>
+<p>/ˌəʊvərˈestɪmeɪt/</p>
+<p>/ˌoʊ / [ VN ] to estimate sth to be larger, better, more important,
+etc. than it really is</p>
+<p>Usually they are not “dying”; they are dead. And as an old medical
+proverb has it, “There is nothing</p>
+<p>as difficult and as expensive, but also nothing as futile, as to try
+to keep a corpse from stinking.”</p>
+<p>futile：</p>
+<p>徒然的；徒劳的；无效的</p>
+<p>But equally a product, service, market or process</p>
+<p>should be abandoned if the only argument for keeping it is: “It’s
+fully written off.” To treat assets as</p>
+<p>being fully written off has its place in tax accounting, but nowhere
+else. For management purposes</p>
+<p>there are no “cost-less assets.” There are only “sunk costs,” the
+economist’s term for buildings and</p>
+<p>other fixed investments. The question is never: “What have they
+cost?” The question is: “What</p>
+<p>will they produce?” And assets that no longer produce except in
+accounting terms, that is, assets</p>
+<p>which produce only because they appear not to “cost” anything, are
+not assets. There are only</p>
+<p>sunk costs.</p>
+<p>having no purpose because there is no chance of success</p>
+<p>The third case where abandonment is the right policy—and the most
+important one—is the old and</p>
+<p>declining product, service, market or process for the sake of
+maintaining which, the new and</p>
+<p>growing product, service or process is being stunted or
+neglected.</p>
+<p>One recent example of what not to do is how the future was sacrificed
+in the nineties, on the altar</p>
+<p>of yesterday, by America’s largest automobile manufacturer, General
+Motors, and America’s largest</p>
+<p>union of factory workers, the United Automobile Workers Union
+(UAW).</p>
+<p>Everybody in the United States knows that the</p>
+<p>Japanese automobile makers acquired 30 percent of the</p>
+<p>U.S. passenger-car market in ten short years from the mid- seventies
+to the mid-eighties. But few</p>
+<p>realize that none of this gain was at the expense of America’s two
+smaller man- ufacturers, Ford</p>
+<p>and Chrysler—on the contrary, both actu- ally gained market share.
+One-third of the Japanese gain</p>
+<p>was at the expense of Germany’s Volkswagen, which had a market share
+of 10 percent in the</p>
+<p>seventies but had lost practically all of it ten years later to the
+Japanese. Two- thirds of the</p>
+<p>Japanese gain—a hefty 20 percent of the American market—was, however,
+General Motors’ loss;</p>
+<p>its market share slumped from 50 percent to 30 percent.</p>
+<p>For fifteen years General Motors did nothing except fiddle with
+prices and discounts—</p>
+<p>none to any effect. Then, finally, in the late 1980s it decided to
+counterattack—with a new car</p>
+<p>called the “Saturn.” The Saturn is little but a slightly more costly
+imitation of the Japanese—in its</p>
+<p>styling, its manufacturing and marketing, its service and its labor
+relations. And GM badly bungled</p>
+<p>its market intro- duction. Still it was a smash hit since a great
+many people in the United States</p>
+<p>were hungry for an American-made car of the new kind.</p>
+<p>But, as almost everyone outside GM immediately real- ized, the Saturn
+did not compete with the</p>
+<p>Japanese makes. All its sales came at the expense of declining—if not
+dying—GM brands such as</p>
+<p>Oldsmobile and Buick. And then GM—and even more so GM’s labor union,
+the United Automobile</p>
+<p>Workers—began to throttle the Saturn. It was denied money for
+expansion—that money went</p>
+<p>instead into futile attempts to “modernize” Oldsmobile and Buick
+plants. It was denied money to</p>
+<p>develop new models— again that money went into Oldsmobile and Buick
+redesigns. And the UAW</p>
+<p>began to whittle away at the Saturn’s new and successful labor
+relations for fear that Saturn’s</p>
+<p>example in building management-labor partner- ships might spread to
+GM’s other plants.</p>
+<p>Neither Oldsmobile nor Buick has benefited. Both are still going
+downhill. But the Saturn has been</p>
+<p>all but destroyed. And both GM and the UAW have continued their
+decline.</p>
+<p>Abandonment may take different forms.</p>
+<p>In the GM cases, for instance, one possible solution might have been
+to do simultaneously two</p>
+<p>things: (1) kill the dying Oldsmobile and (2) run with Saturn’s
+success as hard as possible, give it all</p>
+<p>the money and people it need- ed but set it up as a separate company
+free to compete</p>
+<p>aggressively with all of GM’s old products and for all of GM’s old
+customers.</p>
+<p>The right answer may even be to do more of the same but to do it
+differently.</p>
+<p>One example: Every book publisher knows that the bulk of its sales
+(some 60 percent)—and</p>
+<p>practically all of its prof- its—come from the “backlist,” that is,
+from titles that have been out more</p>
+<p>than a year or two. But no book publisher puts resources into selling
+the backlist. All the efforts are</p>
+<p>put into selling the new titles. A major publishing firm had tried
+for years to get its salespeople to</p>
+<p>sell the backlist without any success; and it also did not itself
+spend a penny on promoting it. Then</p>
+<p>one outside director asked: “Would we handle the backlist the way we
+do if we went</p>
+<p>into it now?” And when the answer was a unanimous “no,”</p>
+<p>she asked: “What do we do now?” As a result the firm reor- ganized
+itself into two separate units:</p>
+<p>one buying, editing, promoting and selling the new titles published
+in the cur- rent year; one</p>
+<p>promoting and selling the backlist. Within two years backlist sales
+had almost tripled—and the</p>
+<p>firm’s profits doubled.</p>
+<p>How to act on abandonment is thus the second question. It is as
+important as the first one. It is</p>
+<p>actually more controversial and more difficult. The answer should
+therefore always be tested on a</p>
+<p>small scale or piloted (see a later section of this chapter).</p>
+<p>In a period of rapid change the “How?” is likely to become</p>
+<p>obsolete faster than the “What?” The change leader must there- fore
+also ask of every product,</p>
+<p>service, market or process: “If we were to go into this now, knowing
+what we now know, would we</p>
+<p>go into it the way we are doing it now?” And this question needs</p>
+<p>to be asked of the successful product, service, market and process as
+regularly—and as seriously—</p>
+<p>as of the unsuccessful product, service, market or process.</p>
+<p>This applies to all areas of the enterprise. But it applies with
+particular force to an area that many</p>
+<p>enterprises tend to neglect, if not to ignore: distributors and
+distribution channels. In a time of rapid</p>
+<p>change distributors and distribution channels tend to</p>
+<p>change faster than anything else. And it is also on distributors and
+distribution channels that the</p>
+<p>“Information Revolution” is likely to have the greatest impact.</p>
+<p>The terms “distributors” and “distribution channels” are of course
+business terms. But every</p>
+<p>institution has “distributors.” And they are every institution’s
+first “customers.”</p>
+<p>Here is a nonbusiness example:</p>
+<p>The high school placement counselor has been the “distri- bution
+channel” through whom</p>
+<p>American universities and colleges have traditionally reached
+prospective applicants</p>
+<p>for admission. But increasingly potential students and their</p>
+<p>parents look for information to ratings of colleges and uni-
+versities published in a number of</p>
+<p>magazines, to books describing and rating different colleges and so
+on. Several major American</p>
+<p>universities have substantially increased the quantity and the
+quality of their applicants by focusing</p>
+<p>their promotional efforts on these new distribution chan-
+nels—without necessarily cutting back on</p>
+<p>“selling” to the high school placement counselor.</p>
+<p>Similarly, the health maintenance organization (HMO) has increasingly
+become the “distribution</p>
+<p>channel” for hospitals, where, only ten years ago, the hospital
+distribution channel was the</p>
+<p>physician. Increasingly, hospitals are therefore working with HMOs to
+reach both physician and</p>
+<p>patient.</p>
+<p>So far, we can only speculate on the impact the Internet will</p>
+<p>have on distribution. But it will have impact. One example of what is
+already happening, and</p>
+<p>happening fast, is the American automobile market.</p>
+<p>It has been known for a long time that the wife makes the decision
+about what cars not to buy. She,</p>
+<p>in effect, there- fore makes the buying decisions. But the wife, as
+has also been known for a long</p>
+<p>time, does not like to shop at the automobile dealer. Hence, it is
+the husband who appears as the</p>
+<p>buyer when the couple visits the dealer—even though the actual
+decision has already been made,</p>
+<p>and made by the wife. The Internet enables the woman to do the actual
+buying—the dealer is</p>
+<p>rapidly becoming no more than an “outlet.”</p>
+<p>Hence the automobile industry faces the task of making the Internet
+its distribution channel—</p>
+<p>General Motors is known already to work on this. But does that mean
+abandoning the tra- ditional</p>
+<p>automobile dealer?</p>
+<p>“To Abandon What” and “To Abandon How” have to be prac- ticed
+systematically. Otherwise they</p>
+<p>will always be “postponed,” for they are never “popular”
+policies.</p>
+<p>Here is an example of how successful abandonment policies can be
+organized.</p>
+<p>In one fairly big company offering outsourcing services in most
+developed countries, the first</p>
+<p>Monday morning of every month is set aside for an abandonment meeting
+at every management</p>
+<p>level from top management to the supervisors in each area. Each of
+these sessions examines one</p>
+<p>part of the business—one of the services one Monday, one of the
+regions in which the company</p>
+<p>does business a month later, the way this or that service is
+organized the Monday morning of the</p>
+<p>third month and so on. Within the year, the company this way examines
+itself completely, including</p>
+<p>its personnel policies, for instance. In the course</p>
+<p>of a year three to four major decisions are likely to be made</p>
+<p>on the “what” of the company’s services and perhaps twice</p>
+<p>as many decisions to change the “how.” But also each year three to
+five ideas for new things to do</p>
+<p>come out of these sessions. These decisions to change
+anything—whether to abandon something,</p>
+<p>whether to abandon the way some- thing is being done or whether to do
+something new—are</p>
+<p>reported each month to all members of management. And twice a year
+all management levels</p>
+<p>report on what has actually happened as a result of their session,
+what action has been taken and</p>
+<p>with what results.</p>
+<p>Since this company first began organized abandonment eight or nine
+years ago, it has grown more</p>
+<p>than four-fold (adjusted for inflation). It attributes at least half
+of this growth to its systemat- ic</p>
+<p>abandonment policies.</p>
+<p>Organized Improvement</p>
+<p>The next policy for the change leader is organized improvement</p>
+<p>(what the Japanese call “Kaizen”)</p>
+<p>Whatever an enterprise does internally and externally needs to be
+improved systematically and</p>
+<p>continuously: product and ser- vice, production processes, marketing,
+service, technology, training and development of people, using
+information. And it needs to be improved at a preset annual</p>
+<p>rate: In most areas, as the Japanese have shown, an annual
+improvement rate of 3 percent is</p>
+<p>realistic and achievable.</p>
+<p>However, continuing improvement requires a major decision. What
+constitutes “performance” in a</p>
+<p>given area? If performance is to be improved—and that is, of course,
+what continuous improvement</p>
+<p>aims at—we need to define clearly what “perfor- mance” means.</p>
+<p>One example: complex and difficult products in which the</p>
+<p>rejection rate is high. To improve a rejection rate of 40 per- cent
+of a finished product to one of 35</p>
+<p>percent is quite obviously a substantial improvement. But in most
+other</p>
+<p>areas the decision is by no means that simple. What is “quality” in a
+product? To what extent is it</p>
+<p>defined by the producer? To what extent can it only be defined by the
+cus- tomer? Even more</p>
+<p>difficult very often is the definition of performance in
+services.</p>
+<p>Another example:</p>
+<p>A major commercial bank decided that the way to improve performance
+in its branches was to offer</p>
+<p>new and more advanced financial “products,” for example, selling
+Treasury bonds or giving advice</p>
+<p>on handling debt. It spent a great deal of time and money researching
+what kinds of</p>
+<p>financial products customers might want, developing these products
+and training its branch</p>
+<p>personnel to deliver them. But when the bank introduced the new
+products in its branches, it</p>
+<p>rapidly lost customers. Only then did the bank find out that to
+customers, performance of a bank</p>
+<p>branch means not having to wait in line for routine transactions. The
+additional “products” were</p>
+<p>valuable, the customers thought, but they only needed them once in a
+while.</p>
+<p>The bank’s solution was to concentrate the tellers at the</p>
+<p>branches on the simple, repetitive, routine services, which require
+neither skill nor time. The new</p>
+<p>financial products were assigned to different groups of people who
+were moved to separate tables,</p>
+<p>with big signs advertising the products in which each table
+specialized. As soon as this was done, business went up sharply, both
+for the traditional and the new</p>
+<p>services. But because there had been no “pilot”—trying out the
+improvements in one or two</p>
+<p>branches would have sufficed—the bank lost almost two years and a
+great deal of money.</p>
+<p>Continuous improvements in any area eventually transform the
+operation. They lead to product</p>
+<p>innovation. They lead to ser- vice innovation. They lead to new
+processes. They lead to new</p>
+<p>businesses. Eventually continuous improvements lead to funda- mental
+change.</p>
+<p>Exploiting Success</p>
+<p>The next policy that the change leader needs to develop is the</p>
+<p>exploitation of success.</p>
+<p>It is only seventy or eighty years since the “monthly</p>
+<p>report” was invented and introduced in most business orga- nizations.
+By now it is routine and</p>
+<p>standard practically everywhere. Almost without exception this
+report, on its first page, presents</p>
+<p>the areas in which results fall below expectations, or in which
+expenditures exceed budget. It</p>
+<p>focuses on problems. In the monthly operating committee meeting,
+which also has become routine</p>
+<p>and standard in practically all enterprises—and by no means only in
+busi- nesses—it is this report</p>
+<p>on the problems that is being dis- cussed, and nothing else.</p>
+<p>Problems cannot be ignored. And serious problems have to be taken
+care of. But to be change</p>
+<p>leaders, enterprises have to focus on opportunities. They have to
+starve problems and feed</p>
+<p>opportunities.</p>
+<p>This requires a small but fundamental procedural change: an
+additional “first page” to the monthly</p>
+<p>report, and one that should precede the page that shows the problems.
+It requires a page that</p>
+<p>focuses on where results are better than expect- ed, whether in terms
+of sales, revenues, profits or</p>
+<p>volume. As much time then should be spent on this new first page as
+has traditionally been spent</p>
+<p>on the problem page. In some organizations that have successfully
+organized themselves to be</p>
+<p>change leaders, the opportunity page is given its own full morning or
+its own full day, with a second</p>
+<p>full morning or full day then devoted to the problems.</p>
+<p>Enterprises that succeed in being change leaders make sure that they
+staff the opportunities.</p>
+<p>The way to do this is to list the opportunities on one page, and then
+to list the organization’s</p>
+<p>performing and capable people on another page. Then one allocates the
+ablest and most performing people to the top</p>
+<p>opportunities.</p>
+<p>This implies that the first—and usually the best—opportunity for
+successful change is to exploit</p>
+<p>one’s own successes and to build on them.</p>
+<p>The best example, perhaps, is the Japanese company Sony. It has built
+itself into one of the world’s</p>
+<p>leaders in a number of major businesses by systematically exploiting
+one success after the other—</p>
+<p>big or small.</p>
+<p>All of Sony’s consumer electronics—the business in which it is the
+world leader and best known—</p>
+<p>are based on a product that was not even invented by Sony: the tape
+recorder. One success of a</p>
+<p>Sony product based on the tape recorder is used to design the next
+product and then anoth- er</p>
+<p>product based on the success of that product and so on. No step was a
+big one. And not all of</p>
+<p>them were success- ful. But by exploiting success, each of these
+additional new products carried</p>
+<p>very little risk—so that even when it did not succeed there was not
+too much damage. And enough</p>
+<p>of them were successful to make Sony into one of the world’s largest,
+but also one of the world’s</p>
+<p>most consis- tently successful, enterprises.</p>
+<p>Another example is the medical electronics group of the American
+General Electric Company. In a</p>
+<p>highly competitive field it has emerged as the largest and most
+successful manufac- turer, but also</p>
+<p>as a change leader. It has done so apparently by exploiting its
+successes, and by building on each</p>
+<p>success another product—often with only a fairly minor change, but
+one that pre- sents a</p>
+<p>significant improvement for physician or hospital.</p>
+<p>As in a continuous improvement, exploitation will, sooner or later,
+lead to genuine innovation. There</p>
+<p>comes a point when the small steps of exploitation result in a major,
+fundamental change, that is, in</p>
+<p>something that is genuinely new and different.</p>
+<h2 id="january">6 JANUARY</h2>
+<h3 id="practice-of-abandonment">Practice of Abandonment</h3>
+<p>If we did not do this already, would we go into it now?</p>
+<p>The question has to be asked—and asked seriously—“If we did not do
+this</p>
+<p>already, would we, knowing what we know, go into it now?” If the</p>
+<p>answer is no, the reaction must be “What do we do now?”</p>
+<p>In three cases the right action is always outright abandonment.
+Aban-</p>
+<p>donment is the right action if a product, service, market, or process
+“still has</p>
+<p>Afew years of life.” It is these dying products, services, or
+processes that</p>
+<p>always demand the greatest care and the greatest efforts. They tie
+down the</p>
+<p>most productive and ablest people. But equally, a product, service,
+market, or</p>
+<p>process should be abandoned if the only argument for keeping it is
+“It is fully</p>
+<p>written off.” For management purposes there are no “cost-less
+assets.” There</p>
+<p>are only “sunk costs.” The third case where abandonment is the right
+policy</p>
+<p>—and the most important one—is the one where, for the sake of
+maintaining</p>
+<p>the old or declining product, service, market, or process the new and
+growing</p>
+<p>product, service, or process is being stunted or neglected.</p>
+<h3 id="action-point-1">ACTION POINT:</h3>
+<p>Ask the questions posed above and if the answer is no,</p>
+<p>make the tough choice to abandon a cherished business.</p>
+<h4 id="management-challenges-for-the-21st-century">Management
+Challenges for the 21st Century</h4>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

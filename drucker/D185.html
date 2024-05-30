@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="第三同读" />
+  <title>德鲁克日志</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">德鲁克日志</h1>
+<p class="author">第三同读</p>
+</header>
+<h2 id="透过金庸读懂德鲁克">透过金庸读懂德鲁克</h2>
+<p>想洗白的李彦宏</p>
+<p>李彦宏今天洗了个澡，当这几千人洗了个澡，用了一瓶矿泉水，农夫山泉的，2块钱。</p>
+<p>作为中国最脏的人，作为中国曾经最有钱的人，李彦宏居然想用2块钱洗个澡就洗干净。这个想法也是</p>
+<p>很幼稚的。</p>
+<p>百度是一家曾经优秀的公司，也曾经试图做一家伟大的公司。作为一家一家存活了将近20年的公司，</p>
+<p>百度终于成为了一件最恶的公司，我在想用不用之一时，略微犹豫了一下。</p>
+<p>德鲁克认为，一个成功的企业家，需要有一个简单、清晰、而深刻的商业理论，这个商业理论由三部</p>
+<p>分组成：对环境的假设，对自己任务的假设，以及对自己核心竞争力的假设。</p>
+<p>从这个角度来看，百度是一家非常成功的企业，李彦宏也是一位非常成功的企业家。这是一个显而易</p>
+<p>见的事情。</p>
+<p>在对环境的假设中，注册并启动与2000年的李彦宏很清楚，在互联网的初期，搜索引擎是一个刚需。</p>
+<p>因为互联网会带来信息的爆炸，信息不再稀缺，而是过剩和冗余。对于每一个个体来说，他们不再缺</p>
+<p>少信息，而是缺少特定的信息。</p>
+<p>这个，只有搜索引擎可以解决。这是百度对当时世界的分析和假设。这个假设做出后，百度就明确了</p>
+<p>自己的任务：我要赚钱。</p>
+<p>当然，任何人赚钱都没错，包括百度。所以，百度这么想没有任何问题。</p>
+<p>那么，百度的核心竞争力是什么呢？当然是技术了。李彦宏是一位科学家，是超链分析技术专利的拥有</p>
+<p>者。以中文搜索引擎的功臣。</p>
+<p>在这种情况下，百度很快就成为一家优秀的搜索引擎公司。那些年，我们安装好一台服务器，配置好</p>
+<p>DNS后做的第一件事，都是ping一下baidu.com。</p>
+<p>更多时候，当我们需要搜索一个信息是，我们也会打开浏览器，打开百度，然后搜索谷歌，然后才开</p>
+<p>始进一步搜索。</p>
+<p>不记得是哪一年了，某几天，在谷歌搜索框里输入一些词，如“少女”什么的，会出现一些非常色情的</p>
+<p>联想。后来据技术人员分析，在之前的几天里，来自北方的一些地址超大频率地把少女和那些色情词</p>
+<p>语在谷歌上通过关联搜索关联起来。这是一个很简单的技术问题。这个问题间接导致了谷歌退出中</p>
+<p>国。</p>
+<p>然后百度就成为了中国最大的搜索引擎。</p>
+<p>这时百度再次对它的商业理论做了分析：</p>
+<ol type="1">
+<li><p>环境：百度是中国最大的搜索引擎。已经没有其他对手可以抗衡，百度可以制定规则。</p></li>
+<li><p>能力：百度有把任何信息推送到几亿网民面前的能力</p></li>
+<li><p>任务：我要赚钱</p></li>
+</ol>
+<p>根据百度的商业理论，百度做出了一个重要的盈利模式：谁给我钱，我就把谁的信息推送给网民。都</p>
+<p>给钱的话，谁给的钱多我就推谁的。</p>
+<p>在这模式下，几亿的中国网民出现了很多悲欢离合。百度也按照它的商业模式，再次赚的盆满钵满。</p>
+<p>百度的钱多的不可思议了，他们也对自己的商业模式有了新的理解：我们只需要卡在一个门口，就可</p>
+<p>以随意要价，只要这个价格让你活着，你就必须给。</p>
+<p>一个比较有趣的是百度的网盘，三四年前，各大网盘都因为各种理由关闭了。而百度活下来了。活下</p>
+<p>来的百度开心对下载限速，要想提速就办会员吧。没有会员？你的几个T的资料就用几十K的速度慢慢</p>
+<p>下吧。管你3G、4G、5G呢，架不住我是百度。（小窍门，用百度客户端下载是及其慢的，你可以复</p>
+<p>制链接在浏览器下载，速度会提高10倍以上。）</p>
+<p>百度还有一个有趣的观点，百度认为，他找打的东西都是他的。比如，他收集了韩寒的文章，就认为</p>
+<p>他可以拿来赚钱了：这和韩寒有个毛线关系呀。</p>
+<p>在十九年后的今天，百度的商业理论是什么呢？咱们再分析一下：</p>
+<ol type="1">
+<li>环境：百度还是中国最大的搜索引擎，只是没那么大了，百度买过很多公司，买的那些公司在买之</li>
+</ol>
+<p>前不是老大就是老二，买了后都废了。</p>
+<ol start="2" type="1">
+<li>能力：百度有把任何信息推送到几亿网民面前的能力，而且百度有钱，可以买公司，可以告别人，</li>
+</ol>
+<p>可以做用钱可以做的任何事情。</p>
+<ol start="3" type="1">
+<li>任务：我要赚钱，你们还要夸我，还要夸我老板。</li>
+</ol>
+<p>我看了今天的那个李彦宏洗头的视频。李彦宏的表演略显夸张，当他碰到水时，完后没有正常人的应</p>
+<p>急反应。那个低个子演员那么慢的给他浇水洗头，他也那么认真地低头配合表演。就像那个向他献歌</p>
+<p>的复旦女生。</p>
+<p>据说那个也是他自己安排的。</p>
+<h2 id="大纲">大纲</h2>
+<h2 id="百字摘要">百字摘要</h2>
+<ol type="1">
+<li><p>企业家需要对环境、任务和核心竞争力做出假设，并根据假设来开展业务</p></li>
+<li><p>对环境、任务和核心竞争力的假设必须符合现实情况</p></li>
+<li><p>对环境、任务和核心竞争力的假设必须相互之间吻合</p></li>
+<li><p>我来来对樊登读书做一个分析，樊登对环境的假设是，目前中国人读书很少，这一方面是因为大家</p></li>
+</ol>
+<p>没有读书的习惯，一方面是因为没有读书的时间，还有就是没有读书的能力。</p>
+<p>所以，樊登就给自己定了一个目标：帮助3亿国人养成阅读习惯。那么樊登的核心优势是什么呢？</p>
+<p>樊登自己的优势是读过很多书，可以很快读完一本书，抓住这本书的核心，同时把这本书演绎出来。</p>
+<p>让没有时间、没有精力、没有能力阅读的人通过听、看的方式了解这本书。</p>
+<h2 id="金庸案例">金庸案例</h2>
+<p>环境：</p>
+<p>任务：</p>
+<p>核心竞争力：</p>
+<h2 id="时间消耗">时间消耗</h2>
+<h2 id="阅读理解850903">阅读理解：8：50~9：03</h2>
+<h2 id="大纲-1">大纲：</h2>
+<h2 id="撰写">撰写：</h2>
+<p>3 JULY</p>
+<p>Synergy of Business Assumptions</p>
+<p>Synergy：</p>
+<p>术语</p>
+<p>( technical</p>
+<p>) the extra energy, power, success, etc. that is achieved by two or
+more people or companies working</p>
+<p>together, instead of on their own</p>
+<p>协同作用，协同增效作用（人或公司共同协作所产生的效果优于各自单独行动的效果）</p>
+<p>Assumptions in all three areas have to fit one another.</p>
+<p>The assumptions about environment, mission, and core competencies
+must fit one another.</p>
+<p>Marks and Spencer recognized that World War I had led to a new
+environment—masses of new</p>
+<p>buyers for good-quality, stylish, and inexpensive merchandise such as
+lingerie, blouses, and</p>
+<p>stockings.</p>
+<p>By the mid-twenties the four brothers-in-law who had built the penny
+bazaars into a major chain</p>
+<p>of variety stores might have been satisfied to enjoy their
+considerable wealth.</p>
+<p>Instead they decided to rethink the mission of their business.</p>
+<p>The business of Marks and Spencer, they decided, was not
+retailing.</p>
+<p>retailing：</p>
+<p>零售业</p>
+<p>[ U ] the business of selling goods to the public, usually through
+shops/stores</p>
+<p>It was social revolution.</p>
+<dl>
+<dt>revolution：</dt>
+<dd>
+<p>(in sth) a great change in conditions, ways of working, beliefs, etc.
+that affects large numbers of people</p>
+</dd>
+</dl>
+<p>巨变；大变革</p>
+<p>From having been a successful variety chain, Marks and Spencer
+purposefully changed its</p>
+<p>mission into being a highly distinct “specialty” marketer.</p>
+<p>variety：</p>
+<p>（同一事物的）不同种类，多种式样</p>
+<p>chain：</p>
+<p>[ sing. ] ~ (of sth) several different sorts of the same thing</p>
+<p>[ C U ] a series of connected metal rings, used for pulling or
+fastening things; a length of chain used for a particular purpose</p>
+<p>链子；链条；锁链</p>
+<p>purposefully：adv. 有目的地；自觉地</p>
+<p>distinct：</p>
+<p>清晰的；清楚的；明白的；明显的</p>
+<p>marketer：</p>
+<p>商人</p>
+<p>specialty：adj. 特色的；专门的；独立的</p>
+<p>easily or clearly heard, seen, felt, etc.</p>
+<p>N-COUNT A marketer is someone whose job involves marketing.</p>
+<p>Finally, it went out and looked for the right manufacturers, whom it
+often had to help get started</p>
+<p>—for the existing old-line manufacturers were, for obvious reasons,
+none too eager to throw in</p>
+<p>their lot with the brash upstart who tried to tell them how to run
+their business—thus developing</p>
+<p>the core competency required by the new environment and mission.</p>
+<p>old-line manufacturer：历史悠久的制造商</p>
+<p>throw in：</p>
+<p>额外奉送 免费外加</p>
+<p>throw in their lot：投入他们的命运</p>
+<p>lot：n. 份额；许多；命运；阄</p>
+<p>brash：adj. 无礼的，傲慢的；仓促的，性急的</p>
+<p>upstart：n. 暴发户；自命不凡的人；傲慢自负的人</p>
+<p>V to add (something extra) at no additional cost</p>
+<p>;</p>
+<h3
+id="action-point-does-the-mission-of-your-enterprise-fit-the-environment">ACTION
+POINT: Does the mission of your enterprise fit the environment?</h3>
+<p>Do your core competencies fit the mission?</p>
+<p>Management: Tasks, Responsibilities, Practices</p>
+<p>Managing in a Time of Great Change</p>
+<h2 id="july">3 JULY</h2>
+<h3 id="synergy-of-business-assumptions">Synergy of Business
+Assumptions</h3>
+<p>Assumptions in all three areas have to fit one another.</p>
+<p>The assumptions about environment, mission, and core competencies</p>
+<p>must fit one another. Marks and Spencer recognized that World War I
+had led</p>
+<p>to a new environment—masses of new buyers for good-quality, styl-ish,
+and</p>
+<p>inexpensive merchandise such as lingerie, blouses, and stockings. By
+the</p>
+<p>mid-twenties the four brothers-in-law who had built the penny bazaars
+into</p>
+<p>Amajor chain of variety stores might have been satisfied to enjoy
+their</p>
+<p>considerable wealth. Instead they decided to rethink the mis-sion of
+their</p>
+<p>business. The business of Marks and Spencer, they decided, was not
+retailing.</p>
+<p>It was social revolution. From having been a successful variety
+chain, Marks</p>
+<p>and Spencer purposefully changed its mission into being a highly
+distinct</p>
+<p>“specialty” marketer. Finally, it went out and looked for the
+right</p>
+<p>manufacturers, whom it often had to help get started—for the existing
+old-</p>
+<p>line manufacturers were, for obvious reasons, none too eager to throw
+in their</p>
+<p>lot with the brash upstart who tried to tell them how to run their
+business—</p>
+<p>thus developing the core competency required by the new</p>
+<p>environment and mission.</p>
+<h3 id="action-point">ACTION POINT:</h3>
+<p>Does the mission of your enterprise fit the environment?</p>
+<p>Do your core competencies fit the mission?</p>
+<p>Management: Tasks, Responsibilities, Practices</p>
+<h4 id="managing-in-a-time-of-great-change">Managing in a Time of Great
+Change</h4>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

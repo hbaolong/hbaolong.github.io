@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="第三同读" />
+  <title>德鲁克日志</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">德鲁克日志</h1>
+<p class="author">第三同读</p>
+</header>
+<h2 id="透过金庸读懂德鲁克">透过金庸读懂德鲁克</h2>
+<p>全真教衰败的根本原因</p>
+<p>这几天大家都在聊全真教，聊全真教辣么快就从江湖第一大派变成了一个不入流的小门派。有人说是</p>
+<p>因为王重阳不会教徒弟，有人说是全真教发展太快，有了官僚主义，有人说是郭靖、杨过的崛起让全</p>
+<p>真教黯然失色。还有人说全真教只是去掉了武功，变成了纯宗教，也算是转型成功。</p>
+<p>我今天说一下我的看法，也就是我认为全真教辣么快衰落的原因，短短的几十年，甚至是十几年，就</p>
+<p>从江湖第一大派，变成了一个二流门派的原因。</p>
+<p>全真教被认为是江湖第一大派有两个原因，首先就是有王重阳，王重阳武功天下第一，而且创造了完</p>
+<p>整的全真教武功和道义。这个是前无古人的。</p>
+<p>还有一个原因，就是王重阳不但自己武功非常高，教的几个弟子武功也不错，更重要的是，他发明了</p>
+<p>一个天罡北斗阵，可以让武功不是那么厉害的弟子可以打过武功厉害的多的一些高手。</p>
+<p>也就是说，即使全真教的弟子武功不高，他们也可以打过大部分高手，因为他们有天罡北斗阵。在天</p>
+<p>罡北斗阵里，普通人可以发挥巨大的威力，从而赢得打斗。</p>
+<p>这两个原因加起来就是全真教被视为江湖第一大门派的原因。你想呀，你比他弱，打不过他很正常；</p>
+<p>你比他强还是打不过他，这样的bug级的存在，还不厉害么？</p>
+<p>全真教在这两大优势下，迅速成为了第一大门派，直到这两大优势都消失了。</p>
+<p>首先消失的是王重阳，王重阳只活到58岁就死了。死后留下了一个道馆，还有一些弟子。还有一个可</p>
+<p>以对抗高手的天罡北斗阵。</p>
+<p>第二个消失的就是这个天罡北斗阵。是的天罡北斗阵的优势很快也消失了。</p>
+<p>王重阳死后，刚开始丘处机、马钰、王处一等人还偶尔出去单打独斗。后来遇到了黄药师后，他们就</p>
+<p>开始启用天罡北斗阵。</p>
+<p>他们发现，这个阵还是有点厉害的，他们七个“草包”居然围住了黄药师，要不是欧阳锋捣乱，黄药师</p>
+<p>就被他们干掉了。</p>
+<p>吃到甜头的全真七子（应该是六子了，因为死掉一个）开始大面积普及这个阵法。而且开始组合使</p>
+<p>用。</p>
+<p>后来，有人围攻终南山，马钰、丘处机等人安排赵志敬带领最大阵容的98人组成了两个天罡北斗大阵</p>
+<p>去拦截坏人，结果98人硬是没拦住郭靖。</p>
+<p>后来到了山顶，有100多个四处跑来的江湖无耻之徒围攻重阳宫，又一个七七四十九人的天罡北斗阵还</p>
+<p>是拦不住。也就是说，经过仿佛训练的49人拦不住100个乌合之众。</p>
+<p>又过了几年，一年多，孙婆婆带着杨过来送药，一个六、七十岁的老婆婆带着一个孩子，居然劳驾四</p>
+<p>个全真弟子摆了一个天罡北斗阵来迎接。而且居然还是败了。</p>
+<p>这时的全真教动不动就摆一个天罡北斗阵，不管是对付郭靖还是对付孙婆婆。单打独斗？这时不可能</p>
+<p>的，</p>
+<p>全真教已经放弃了单打独斗了。而且从高层到底层都知道这个事实：打是打不过的。</p>
+<p>以至于后来面对陆无双，一个李莫愁并没有用心去教，只是偶尔偷学了一点古墓派武功的陆无双，两</p>
+<p>个道士居然打不过，而且他们也知道其他道士也打不过，居然还要去丐帮找帮手。</p>
+<p>这时的全真教，已经是一个除了偶尔敢假借天罡北斗阵打群架外，什么架都不敢打的一个帮派了。</p>
+<p>丘处机应该是全真教二代武功最高的一位了，他是如何看自己的武功呢？</p>
+<p>丘处机高声叫道：“这是全真教祖师重阳真人旧居之地，快退出来。”众人听得他叫声，微微一怔，</p>
+<p>但脚下毫不停步。丘处机怒道：“靖儿，动手罢！”</p>
+<p>就这样，本来应该给全真教加分的天罡北斗阵，硬生生的会了这么一个江湖第一大派。</p>
+<h2 id="大纲">大纲</h2>
+<h2 id="百字摘要">百字摘要</h2>
+<h2 id="金庸案例">金庸案例</h2>
+<h2 id="时间消耗">时间消耗</h2>
+<h2 id="阅读理解">阅读理解：</h2>
+<h2 id="大纲-1">大纲：</h2>
+<h2 id="撰写">撰写：</h2>
+<h2 id="录音">录音</h2>
+<p>19 AUGUST</p>
+<p>Entrepreneurial Judo</p>
+<p>Judo：</p>
+<p>[ U ] ( from Japanese ) a sport in which two people fight and try to
+throw each other to the ground</p>
+<p>柔道</p>
+<p>Entrepreneurial Judo turns what the market leaders consider their
+strengths into the very</p>
+<p>weaknesses that defeat them.</p>
+<p>The Japanese judo master looks for the strength that is his
+opponent’s pride and joy.</p>
+<p>He assumes, and does so with high probability, that the opponent
+bases his strategy on this</p>
+<p>strength in every fight.</p>
+<p>And then the judo master figures out where this continuing reliance
+on a particular strength leaves</p>
+<p>the opponent vulnerable and undefended.</p>
+<p>Then he turns his opponent’s strength into the opponent’s fatal
+weakness that defeats the</p>
+<p>opponent.</p>
+<p>Businesses, like judo fighters, tend to become set in their
+behaviors.</p>
+<p>And then Entrepreneurial Judo turns what the market leaders consider
+their strengths into the very</p>
+<p>weaknesses that defeat them.</p>
+<p>For example, the Japanese became the leaders in one American market
+after the other: first in</p>
+<p>copiers, then in machine tools, then in consumer electronics, then in
+automobiles, and then in fax</p>
+<p>machines.</p>
+<p>The strategy was always the same.</p>
+<p>They turned what the Americans considered their strength into a
+weakness that defeated the</p>
+<p>American companies.</p>
+<p>The Americans saw high profitability as their greatest strength.</p>
+<p>And thus they focused on the high end of the market and left the mass
+market undersupplied and</p>
+<p>underserviced.</p>
+<p>The Japanese moved in with low-cost products with minimum
+features.</p>
+<p>The Americans didn’t even try to fight them.</p>
+<p>But when the Japanese had taken over the mass market they had the
+cash flow to move in on the</p>
+<p>high-end market, too.</p>
+<p>And they soon came to dominate both the mass market and the high-end
+market.</p>
+<p>dominate：</p>
+<p>支配；控制；左右；影响</p>
+<p>to control or have a lot of influence over sb/sth, especially in an
+unpleasant way</p>
+<h3 id="action-point">ACTION POINT:</h3>
+<p>Be agile, recognize the strengths of your competitors, and look for
+opportunities in parts of the</p>
+<p>market that they have ignored.</p>
+<p>保持敏捷，认识到竞争对手的优势，在他们忽略的市场中寻找机会。</p>
+<p>Innovation and Entrepreneurship</p>
+<p>Entrepreneurial Strategies (Corpedia Online Program)</p>
+<h2 id="august">19 AUGUST</h2>
+<h3 id="entrepreneurial-judo">Entrepreneurial Judo</h3>
+<p>Entrepreneurial Judo turns what the market leaders consider their</p>
+<p>strengths into the very weaknesses that defeat them.</p>
+<p>The Japanese judo master looks for the strength that is his
+opponent’s</p>
+<p>pride and joy. He assumes, and does so with high probability, that
+the</p>
+<p>opponent bases his strategy on this strength in every fight. And then
+the judo</p>
+<p>master figures out where this continuing reliance on a particular
+strength</p>
+<p>leaves the opponent vulnerable and undefended. Then he turns his
+oppo-</p>
+<p>nent’s strength into the opponent’s fatal weakness that defeats the
+opponent.</p>
+<p>Businesses, like judo fighters, tend to become set in their
+behaviors. And then</p>
+<p>Entrepreneurial Judo turns what the market leaders consider their
+strengths</p>
+<p>into the very weaknesses that defeat them. For example, the
+Japa-nese</p>
+<p>became the leaders in one American market after the other: first in
+copiers,</p>
+<p>then in machine tools, then in consumer electronics, then in
+au-tomobiles, and</p>
+<p>then in fax machines. The strategy was always the same. They turned
+what</p>
+<p>the Americans considered their strength into a weakness that defeated
+the</p>
+<p>American companies. The Americans saw high prof-itability as their
+greatest</p>
+<p>strength. And thus they focused on the high end of the market and
+left the</p>
+<p>mass market undersupplied and underserviced. The Japanese moved in
+with</p>
+<p>low-cost products with minimum features. The Americans didn’t even
+try to</p>
+<p>fight them. But when the Japanese had taken over the mass market they
+had</p>
+<p>the cash flow to move in on the high-end market, too. And they soon
+came to</p>
+<p>dominate both the mass market</p>
+<p>and the high-end market.</p>
+<h3 id="action-point-1">ACTION POINT:</h3>
+<p>Be agile, recognize the strengths of your competitors, and</p>
+<p>look for opportunities in parts of the market that they have
+ignored.</p>
+<p>Innovation and Entrepreneurship</p>
+<h4
+id="entrepreneurial-strategies-corpedia-online-program">Entrepreneurial
+Strategies (Corpedia Online Program)</h4>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

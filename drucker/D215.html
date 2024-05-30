@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="第三同读" />
+  <title>德鲁克日志</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">德鲁克日志</h1>
+<p class="author">第三同读</p>
+</header>
+<h2 id="透过金庸读懂德鲁克">透过金庸读懂德鲁克</h2>
+<p>【300字抖音】</p>
+<p>我要找几个人和我一起做这件事</p>
+<p>不要让架构影响你的目的，</p>
+<p>我从昨天开始录制366段视频，每一段视频对应《德鲁克日志》中的一篇日志。那么，做这件事需要几</p>
+<p>个人呢？</p>
+<p>首先要有人写稿，我的计划是每段视频1分钟，大概400字的稿子，400字的稿子并不容易，所以需要</p>
+<p>有人来写。</p>
+<p>然后就是拍摄，这次是我自己出镜，总要有人用手机给我拍，这又需要一个人。</p>
+<p>拍好后，需要做一些简单的编辑：加字幕，剪掉不好的镜头，加一些后期处理。这也需要一个人。</p>
+<p>然后就是传播，我录制这个视频，肯定希望和更多的人交流。我的抖音只有几十个粉丝，要想办法和</p>
+<p>让更多的人看到，这也需要有人来操作。</p>
+<p>那么，就是说，至少需要5个人。</p>
+<p>其实，稿子肯定是我自己写，因为我去年写了一年德鲁克日志，对这个最了解。只是400字的角度，需</p>
+<p>要时间来打磨；拍摄也可以我自己拍摄，我有一个遥控器，可以控制拍摄；简单的剪辑我也可以做：</p>
+<p>剪映功能很强大，十几分钟我就可以搞得像个东西，当然，一点都不精美。</p>
+<p>至于传播，我做不到，那就随缘吧，说不定某天起来，我的抖音突然冲进了上百万的用户，这个问题</p>
+<p>也就解决了。</p>
+<p>我现在心态很“小”，也就是说，这件事我计划一个人做，而一个人做这件事，最大的可能性就是我自</p>
+<p>己乐呵一年，更加熟悉《德鲁克日志》，也练习了自己的演讲能力，然而，对别人却什么作用都没</p>
+<p>有。</p>
+<p>那么，我的目的呢？我的目的只是练习自己的能力么？并不是，我是希望有更多的人和我一起交流</p>
+<p>的。而如果只有我自己的话，会限制这件事的作用，而我也会被限制在每天的写稿子、调设备、录视</p>
+<p>频、剪辑、传播等等的事物中，疲惫不堪。</p>
+<p>所以，我应该找几个人和我一起来做这件事，至少2-3个人吧。欢迎加入？</p>
+<p>明教和天鹰教</p>
+<p>众所周知，天鹰教是明教的护教法王殷天正所创立的一个教派。</p>
+<p>明教教主阳顶天失踪后，明教内部就开始各种动乱，先是光明右使范瑶不告而别，然后是四大护教法</p>
+<p>王陆续离开，然后是五散人和杨逍内斗失败后，愤而离开光明顶。变化最大的就是白眉鹰王殷天正自</p>
+<p>己从光明顶跑到江南，成立了一个叫做天鹰教的教派。</p>
+<p>阳顶天失踪后，有资格当教主的人很多。因为阳顶天没有遗嘱，光明左右使，四大法王理论上都可以</p>
+<p>当教主。大家在争夺教主中，殷天正干脆自己成立一个天鹰教，过一把当教主的瘾。殷天正宣布明教</p>
+<p>已经被黑暗腐蚀，不能再代表明尊，而他的天鹰教则是明教的延续。</p>
+<p>殷天正设计的很好，天鹰教分为内三坛和外五堂。内三坛是自己的儿子天微坛主殷野王，自己的女儿</p>
+<p>紫微坛主殷素素，自己的师弟天市坛主李天垣。都是自己人。</p>
+<p>不管明教如何演化，明教的愿景都是反抗异族入侵。在这个愿景下，明教一直是有以五行旗为主的军</p>
+<p>队的。这一点，天鹰教也想学习。不过，由于建教时间不久，而且人才不够，天鹰教还只是走的黑社</p>
+<p>会路线。</p>
+<p>同时，由于殷天正事实上对明教的背叛（毕竟，成立新的教派，同时宣布原来的教派被黑化是一个反</p>
+<p>叛的行为），五行旗一直对天鹰教有攻击和清除行为。</p>
+<p>这些也让殷天正疲于应对，在这种情况下，天鹰教只能维持一个黑社会的架构：虽然普通江湖人士不</p>
+<p>敢惹，但对于反抗元朝压迫却没什么实际的意义。</p>
+<p>后来，殷天正又因为屠龙刀的事情，被黑白两道围攻，在十几年中，天鹰教虽然保持存在，却也很难</p>
+<p>发展。对于这时的天鹰教来说，反抗异族入侵也就是个遥远的目标，自己活下去才是第一位的。</p>
+<p>所以，殷天正的天鹰教一直没有发展起来，这个规模的天鹰教，根本没有满足明教的诉求。所以，殷</p>
+<p>天正想用天鹰教来代替明教的想法也就不了了之了</p>
+<p>这事的明教，虽然四分五裂，架子还是在的。光明之货还没有灭，大家虽然斗来斗去，一旦有人围攻</p>
+<p>光明顶，这些明尊坐下的弟子还是从全国各地赶到了昆仑山，救助明尊，为明尊献出最后一滴血。</p>
+<p>在六大派围攻明教的最后，张无忌的横空出世，让明教有了新的主心骨，光明使者、四大法王、五散</p>
+<p>人、五行旗、四门，又重新集中到了张无忌教主的麾下，这一方面是张无忌的个人魅力，一方面也是</p>
+<p>明教的众人知道，要想实现明教的目标和愿景，必须要有明教这样的体量：天鹰教那么小是不行的。</p>
+<p>在张无忌的带领下，由光明使者、四大法王、五散人、五行旗、四门、六大派等集合到了一起，凭借</p>
+<p>这个体量，终于完成了明教的愿景：驱逐鞑虏。</p>
+<p>天鹰教完全是模仿明教的。</p>
+<h2 id="大纲">大纲</h2>
+<h2 id="百字摘要">百字摘要</h2>
+<h2 id="金庸案例">金庸案例</h2>
+<h2 id="时间消耗">时间消耗</h2>
+<h2 id="阅读理解">阅读理解：</h2>
+<h2 id="大纲-1">大纲：</h2>
+<h2 id="撰写">撰写：</h2>
+<h2 id="录音">录音</h2>
+<p>2 AUGUST</p>
+<p>Being the Wrong Size</p>
+<p>A business that is the wrong size is a business that does not have
+the right niche to survive and</p>
+<p>prosper.</p>
+<p>niche：a comfortable or suitable role, job, way of life, etc.
+舒适或称心的工作（或生活等）</p>
+<p>prosper：</p>
+<p>[ V ] to develop in a successful way; to be successful, especially in
+making money</p>
+<p>繁荣；兴旺；成功；发达</p>
+<p>Being the wrong size is a chronic, debilitating, wasting—and a very
+common—disease.</p>
+<p>chronic：</p>
+<p>尤指疾病</p>
+<p>长期的；慢性的；难以治愈（或根</p>
+<p>除）的</p>
+<p>( especially of a disease</p>
+<p>) lasting for a long time; difficult to cure or get rid of</p>
+<p>debilitating：adj. 使衰弱的</p>
+<p>Being the wrong size is curable in the majority of cases.</p>
+<p>majority：</p>
+<p>[ sing.+sing./pl.v. ] ~ (of sb/sth) the largest part of a group of
+people or things</p>
+<p>大部分；大多数</p>
+<p>But the cure is neither easy nor pleasant.</p>
+<p>The symptoms are clear and are always the same.</p>
+<p>symptoms ：</p>
+<p>N-COUNT A symptom of an illness is something wrong with your body or
+mind that is a sign of the illness.</p>
+<p>症状</p>
+<p>In a business that is the wrong size, there is always one area,
+activity, function, or effort—or at most</p>
+<p>a very few—that is out of all proportion and hypertrophied.</p>
+<p>proportion：</p>
+<p>hypertrophied：adj. 过度增大的</p>
+<p>[ C+sing./pl.v. ] a part or share of a whole</p>
+<p>部分；份额</p>
+<p>This area has to be so big, requires so much effort, and imposes so
+much cost on the business as</p>
+<p>to make economic performance and results impossible.</p>
+<p>The old American Motors furnishes the example.</p>
+<p>furnishes：</p>
+<p>V-T If you furnish someone with something, you provide or supply
+it.</p>
+<p>提供</p>
+<p>American Motors announced successive plans to aggressively recruit
+new and strong dealers and</p>
+<p>push up its sales.</p>
+<p>In order to obtain the sales volume that would have given the
+business a viable size, the expenses</p>
+<p>that made the business nonviable had to be increased.</p>
+<p>And this is precisely what the business could not afford.</p>
+<p>The most rewarding strategy to come to grips with the problem is to
+at-tempt to change the</p>
+<p>character of the business. A business that is the wrong size is a
+business that does not have the</p>
+<p>right niche to survive and prosper. A comparison between American
+Motors and Volkswagen shows</p>
+<p>the differ-ence between being the wrong size as a result of lack of
+distinction, and being the right</p>
+<p>size by occupying a distinct niche.</p>
+<h3 id="action-point">ACTION POINT:</h3>
+<p>Analyze your business.</p>
+<p>Are you too small to compete in the business?</p>
+<p>If so, develop a profitable niche within which you can compete
+effectively.</p>
+<p>niche：a comfortable or suitable role, job, way of life, etc.
+舒适或称心的工作（或生活等）</p>
+<p>Management: Tasks, Responsibilities, Practices</p>
+<h2 id="august">2 AUGUST</h2>
+<h3 id="being-the-wrong-size">Being the Wrong Size</h3>
+<p>A business that is the wrong size is a business that does not</p>
+<p>have the right niche to survive and prosper.</p>
+<p>Being the wrong size is a chronic, debilitating, wasting—and a
+very</p>
+<p>common—disease. Being the wrong size is curable in the majority of
+cases.</p>
+<p>But the cure is neither easy nor pleasant. The symptoms are clear and
+are</p>
+<p>always the same. In a business that is the wrong size, there is
+always one</p>
+<p>area, activity, function, or effort—or at most a very few—that is out
+of all</p>
+<p>proportion and hypertrophied. This area has to be so big, requires so
+much</p>
+<p>effort, and imposes so much cost on the business as to make
+eco-nomic</p>
+<p>performance and results impossible. The old American Motors
+fur-nishes the</p>
+<p>example. American Motors announced successive plans to
+aggressively</p>
+<p>recruit new and strong dealers and push up its sales. In order to
+obtain the</p>
+<p>sales volume that would have given the business a viable size, the
+expenses</p>
+<p>that made the business nonviable had to be increased. And</p>
+<p>this is precisely what the business could not afford.</p>
+<p>The most rewarding strategy to come to grips with the problem is
+to</p>
+<p>at-tempt to change the character of the business. A business that is
+the</p>
+<p>wrong size is a business that does not have the right niche to
+survive and</p>
+<p>prosper. A comparison between American Motors and Volkswagen
+shows</p>
+<p>the differ-ence between being the wrong size as a result of lack
+of</p>
+<p>distinction, and being the right size by occupying a distinct
+niche.</p>
+<h3 id="action-point-1">ACTION POINT:</h3>
+<p>Analyze your business. Are you too small to compete in</p>
+<p>the business? If so, develop a profitable niche within which you can
+com-</p>
+<p>pete effectively.</p>
+<h4 id="management-tasks-responsibilities-practices">Management: Tasks,
+Responsibilities, Practices</h4>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

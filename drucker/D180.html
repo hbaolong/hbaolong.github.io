@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="第三同读" />
+  <title>德鲁克日志</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">德鲁克日志</h1>
+<p class="author">第三同读</p>
+</header>
+<h2 id="透过金庸读懂德鲁克">透过金庸读懂德鲁克</h2>
+<p>金庸笔下的高手都是有些追求的，而且追求各式各样。有的追求权力，比如任我行、没练葵花宝典的</p>
+<p>东方不败、慕容博父子、鸠摩智、左冷禅、岳不群、洪教主等等等等。这些人拼命练习武功的目的就</p>
+<p>是为了获得最高的权力。</p>
+<p>有些绝顶高手追求自我，比如令狐冲是为了自己的自由，黄药师是为了自己的反叛，周伯通是为了自</p>
+<p>己的顽皮；有的决定高手只是为了自己的一些利益，比如张无忌是为了给自己治病。狄云只是为了活</p>
+<p>下去。</p>
+<p>有的绝顶高手是为了更加美好的目的，比如郭靖是为了侠之大者，洪七公是为了惩强扶弱，黄蓉是为</p>
+<p>了自己的男人。</p>
+<p>很少有人练习武功是没有目的的，毕竟嘛，武功只是一个手段。练习武功大体是为了某一个目的，不</p>
+<p>然练习那个干吗呀。</p>
+<p>可是，在金庸笔下就有那么一个人呢，他孜孜不倦地追求武功，练习武功，却看不出任何理由。</p>
+<p>这个人就是欧阳锋。</p>
+<p>欧阳锋是绝顶高手中的一位。在第一次华山论剑时，他位列五绝之一。在第二次华山论剑时，他被其</p>
+<p>他人一起欺负失去了参赛权。不过单从武功来看，他应该是五绝之首。</p>
+<p>在第三次华山论剑中，他躺在那里听着那些后辈真的只是“论”剑，不知道是什么滋味。</p>
+<p>欧阳锋的一生都在做一件事，就是抢夺武功秘籍，特别是《九阴真经》。</p>
+<p>第一次华山论剑后，《九阴真经》落到了王重阳的手里，欧阳锋就去偷。结果没偷到，还被王重阳打</p>
+<p>伤了。后来发现郭靖会《九阴真经》，就逼迫郭靖写出来，结果郭靖写了一个假的给他。</p>
+<p>然后他又逼着黄蓉给他讲，为了让黄蓉讲，他也是极尽卑微之色。却还是学的假的。</p>
+<p>在第二次华山论剑中，他用假的《九阴真经》打败了其他人，获得了武功天下第一的称呼，结果也疯</p>
+<p>了。</p>
+<p>疯了十几年后，他遇见了十几岁的杨过，成为了杨过的义父。后来杨过学会了九阴真经，和他说了一</p>
+<p>些，他才发现自己学的是错的。</p>
+<p>最后一次和洪七公的比对中，他在脱力后清醒了，抱着洪七公两人一起进入极乐世界。</p>
+<p>欧阳锋的第一次出场就是顶级高手，到他死前最后一刻还是顶级高手。这位顶级高手却和其他顶级高</p>
+<p>手有一个很大的不同，这个顶级高手没有什么追求。</p>
+<p>欧阳锋既不追求权势，像王重阳那样建立一个道教，或者起兵推翻朝廷。也不追求自我，想黄药师或</p>
+<p>者周伯通那样。他好像就是为了追求而追求（武功）。</p>
+<p>当他一次次失去后，他就一次次追求，以至于他已经忘记了（或者金庸也没有交代）自己追求那个</p>
+<p>《九阴真经》的目的。</p>
+<p>那么，欧阳锋是武痴么？好像也不是，他为了武功做的那些事情，已经超过正常人的范围了。</p>
+<p>甚至有一次，他以五绝的身份加入完颜洪烈的盗墓队伍，只是想看看岳飞遗留的武功。</p>
+<p>或许对于欧阳锋来说，他已经忘记了学习武功的目的，而把学习武功当成了目的。</p>
+<p>讽刺的是，五绝中，除了他外都看过正版的九阳真经，这些人有：王重阳、黄药师、洪七公、段兴</p>
+<p>智、郭靖、杨过、老顽童。</p>
+<h2 id="百字摘要">百字摘要</h2>
+<h2 id="金庸案例">金庸案例</h2>
+<p>28 JUNE</p>
+<p>Economic Progress and Social Ends</p>
+<p>Economic expansion and increase are not aims in themselves. They make
+sense only as means to</p>
+<p>a social end.</p>
+<p>expansion:</p>
+<p>扩张；扩展；扩大；膨胀</p>
+<p>[ U C ] an act of increasing or making sth increase in size, amount
+or importance</p>
+<p>As far as the potential economic future of the capitalist is
+concerned, Henry Ford—that grand old</p>
+<p>man of modern capitalism—was undoubtedly right, and the professional
+gravediggers of</p>
+<p>capitalism wrong.</p>
+<p>potential:</p>
+<p>潜在的；可能的</p>
+<p>gravediggers</p>
+<p>掘墓人</p>
+<dl>
+<dt>[ only before noun ] that can develop into sth or be developed in
+the future</dt>
+<dd>
+<p>N-COUNT A gravedigger is a person whose job is to dig the graves in
+which dead people can be buried.</p>
+</dd>
+</dl>
+<p>But Ford, no less than his critics, forgot that economic expansion
+and increase are not aims in</p>
+<p>themselves. They make sense only as means to a social end.</p>
+<p>They are highly desirable as long as they promise to attain this
+end.</p>
+<p>But if this promise is proved illusory, the means become of very
+doubtful value. Capitalism as a</p>
+<p>social order and as a creed is the expression of the belief in
+economic progress as leading toward</p>
+<p>the freedom and equality of the in-dividual in the free and equal
+society.</p>
+<p>All previous creeds had regarded the private profit motive as
+socially destructive, or at least</p>
+<p>neutral.</p>
+<p>Their social orders had intentionally subjected the economic activity
+of the individual to narrow</p>
+<p>limitations so as to minimize its harmful effects upon spheres and
+activities considered socially</p>
+<p>constructive.</p>
+<h3
+id="action-point-make-sure-that-in-the-pursuit-of-economic-performance-you-develop-people.">ACTION
+POINT: Make sure that in the pursuit of economic performance you develop
+people.</h3>
+<p>The End of Economic Man</p>
+<h2 id="june">28 JUNE</h2>
+<h3 id="economic-progress-and-social-ends">Economic Progress and Social
+Ends</h3>
+<p>Economic expansion and increase are not aims in themselves. They
+make</p>
+<p>sense only as means to a social end.</p>
+<p>As far as the potential economic future of the capitalist is
+concerned,</p>
+<p>Henry Ford—that grand old man of modern capitalism—was
+un-doubtedly</p>
+<p>right, and the professional gravediggers of capitalism wrong. But
+Ford, no</p>
+<p>less than his critics, forgot that economic expansion and increase
+are not aims</p>
+<p>in themselves. They make sense only as means to a social end. They
+are</p>
+<p>highly desirable as long as they promise to attain this end. But
+if</p>
+<p>this promise is proved illusory, the means become of very doubtful
+value.</p>
+<p>Capitalism as a social order and as a creed is the expression of the
+belief</p>
+<p>in economic progress as leading toward the freedom and equality of
+the</p>
+<p>in-dividual in the free and equal society. All previous creeds had
+regarded</p>
+<p>the private profit motive as socially destructive, or at least
+neutral. Their</p>
+<p>social orders had intentionally subjected the economic activity of
+the</p>
+<p>individual to narrow limitations so as to minimize its harmful
+effects</p>
+<p>upon spheres and activities considered socially constructive.</p>
+<h3 id="action-point">ACTION POINT:</h3>
+<p>Make sure that in the pursuit of economic performance</p>
+<p>you develop people.</p>
+<h4 id="the-end-of-economic-man">The End of Economic Man</h4>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="第三同读" />
+  <title>德鲁克日志</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">德鲁克日志</h1>
+<p class="author">第三同读</p>
+</header>
+<h2 id="透过金庸读懂德鲁克">透过金庸读懂德鲁克</h2>
+<p>包不同之死</p>
+<p>包不同是一个无足轻重的人物：武功不高，身份不高，职责也不重要。</p>
+<p>包不同是慕容复的家将，慕容复是慕容家的独子。慕容复武功很高，江湖上人称北乔峰南慕容。</p>
+<p>慕容复有四个家将。这四个家将按武功和地位排了个序，包不同排老三。这一切都说明包三爷是个无</p>
+<p>足轻重的人。</p>
+<p>而且包三爷话还多，特别惹人讨厌。别人说啥，他都要所反对意见。你让他来，他肯定去，你让有抓</p>
+<p>狗，他肯定撵鸡。</p>
+<p>你看，王语嫣和阿朱阿碧他们面临着那么多坏人，让他来，他就是不来。躲起来在一旁偷看。</p>
+<p>接下来，包三爷就开始了保证不同的人生，自号包不同。</p>
+<p>包不同第一个怼的人是段誉，怼的段誉直接哭鼻子了；然后又怼乔峰，怼丁春秋，对鸠摩智，这个人</p>
+<p>虽然不厉害，可是怼人却很厉害，所有厉害的人都被他怼过。</p>
+<p>还好，他怼的那些人都是一些很厉害人，而厉害的人大多修养不错，也没有和这个二流人物的家将中</p>
+<p>的老三去纠结。</p>
+<p>包不同就这么一直怼着各种人，偶尔还赚点便宜。</p>
+<p>记得有一次，他怼丐帮的长老，丐帮长老的修养可不大好，直接就要杀他。包不同多鸡贼呀，拿出了</p>
+<p>别人委托他给丐帮传递的重要信息，着实要挟了丐帮一把，还把丐帮和慕容家略微绑了一下，让丐帮</p>
+<p>哭笑不得。</p>
+<p>就这样一个人，一个怼天怼地本事普通的人，谁都不知道哪天他出去被人打死。</p>
+<p>后来，他果然被打死了，也是因为怼人被打死了，而且怼的是一个他怼过很多次，他以为绝对不会伤</p>
+<p>害他的人。</p>
+<p>就是慕容复，也就是他的主公。</p>
+<p>慕容复比他小很多，
+包不同看着他长大的；慕容复也是看着包不同怼各种人长大的，这其间肯定怼过</p>
+<p>自己的父亲慕容博。</p>
+<p>不过，这次包不同怼他了。这肯定不是第一次，甚至不是第100次，不过这次很严重。</p>
+<p>这时，慕容复正要拜四大恶人之首的段延庆为义父，帮助段延庆获取大理皇位。这时慕容复的一个小</p>
+<p>算盘：通过段延庆让自己获得大理皇位，进一步光复大燕。对于慕容复来说，这时一个战略决策。</p>
+<p>这个决策对么？不好说。不过，这个决策慕容复肯定没和自己的四个家将商量。因为四大家将都不知</p>
+<p>道。</p>
+<p>当慕容复公开对段延庆说出这个方案后，包不同马上“非也非也”地冲了过来，说慕容复的方案有大大</p>
+<p>的问题，是一个“不忠不孝不仁不义”的方案，这个方案必须终止。</p>
+<p>慕容复恼羞成怒，一掌拍死了他。临死前，包不同流下了两行清泪，他肯定没想到自己会死在自己嘴</p>
+<p>下，死在少爷手里。</p>
+<p>慕容复其实并不算生气被他怼，慕容复生气的是，包不同居然反对他的决定，这个决定是自己多么精</p>
+<p>明的决策呀，包不同这个二货居然反对，而且居然公开反对。让自己下不了台。</p>
+<p>包不同死后，其他的三个家将兔死狐悲，潸然离去。慕容复成了光棍司令。</p>
+<p>随后，慕容复被段延庆用计构陷，还好跑的快，不然命都没了。</p>
+<p>最后，慕容复疯了，彻底疯了。不知道他这个疯和杀害看着自己长大的包不同有没有关系，不过，他</p>
+<p>真的疯了。</p>
+<h2 id="大纲">大纲</h2>
+<h2 id="百字摘要">百字摘要</h2>
+<h2 id="金庸案例">金庸案例</h2>
+<h2 id="时间消耗">时间消耗</h2>
+<h2 id="阅读理解">阅读理解：</h2>
+<h2 id="大纲-1">大纲：</h2>
+<h2 id="撰写">撰写：</h2>
+<h2 id="录音">录音</h2>
+<h2 id="一小时运动">一小时运动</h2>
+<h2 id="英文原文">英文原文</h2>
+<p>6 OCTOBER</p>
+<p>Organize Dissent</p>
+<p>Dissent：</p>
+<p>意见，异议</p>
+<p>[ U ] the fact of having or expressing opinions that are different
+from those that are officially accepted</p>
+<p>（与官方的）不同</p>
+<p>The effective decision-maker organizes dissent.</p>
+<p>Decisions of the kind the executive has to make are not made well by
+acclamation.</p>
+<p>acclamation：</p>
+<p>喝彩；欢呼；欢迎</p>
+<p>( formal ) loud and enthusiastic approval or welcome</p>
+<p>They are made well only if based on the clash of conflicting views,
+the dialogue between different</p>
+<p>points of view, the choice between different judgments.</p>
+<p>The first rule in decision making is that one does not make a
+decision unless there is</p>
+<p>disagreement.</p>
+<p>Alfred P. Sloan, Jr., is reported to have said at a meeting of one of
+the GM top committees,</p>
+<p>“Gentlemen, I take it we are all in complete agreement on the
+decision here.”</p>
+<p>Everyone around the table nodded assent.</p>
+<p>assent：</p>
+<p>[ U ] ~ (to sth) ( formal ) official agreement to or approval of
+sth</p>
+<p>同意；赞成</p>
+<p>“Then,” continued Mr. Sloan, “I propose we postpone further
+discussion of this matter until our</p>
+<p>next meeting to give ourselves time to develop disagreement and
+perhaps gain some</p>
+<p>understanding of what the decision is all about.”</p>
+<p>postpone：</p>
+<dl>
+<dt>延迟；延期；展缓</dt>
+<dd>
+<p>sth (to/until sth) to arrange for an event, etc. to take place at a
+later time or date</p>
+</dd>
+</dl>
+<p>There are three reasons why dissent is needed.</p>
+<p>It first safeguards the decision maker against becoming the prisoner
+of the organization.</p>
+<p>Everybody is a special pleader, trying—often in perfectly good
+faith—to obtain the decision he</p>
+<p>favors.</p>
+<p>pleader：n. 答辩人；辩论者</p>
+<p>Second, disagreement alone can provide alternatives to a
+decision.</p>
+<p>And a decision without an alternative is a desperate gambler’s throw,
+no matter how carefully</p>
+<p>thought through it might be.</p>
+<p>desperate:</p>
+<p>feeling or showing that you have little hope and are ready to do
+anything without worrying about danger to yourself or</p>
+<p>others</p>
+<p>（因绝望而）不惜冒险的，不顾一切的，拼命的</p>
+<p>gambler</p>
+<p>:N-COUNT A gambler is someone who gambles regularly, for example in
+card games or on horse racing.</p>
+<p>赌徒</p>
+<p>Above all, disagreement is needed to stimulate the imagination.</p>
+<p>stimulate：</p>
+<p>促进；激发；激励</p>
+<p>[ VN ] to make sth develop or become more active; to encourage
+sth</p>
+<h3 id="action-point">ACTION POINT:</h3>
+<p>Organize dissent for a particular decision by bringing people with
+diverse points of view into the</p>
+<p>decision process. Choose on the basis of “what is right,” not “who is
+right.”</p>
+<p>Management: Tasks, Responsibilities, Practices</p>
+<h2 id="october">6 OCTOBER</h2>
+<h3 id="organize-dissent">Organize Dissent</h3>
+<p>The effective decision-maker organizes dissent.</p>
+<p>Decisions of the kind the executive has to make are not made well
+by</p>
+<p>acclamation. They are made well only if based on the clash of
+con-flicting</p>
+<p>views, the dialogue between different points of view, the choice
+be-tween</p>
+<p>different judgments. The first rule in decision making is that
+one</p>
+<p>does not make a decision unless there is disagreement.</p>
+<p>Alfred P. Sloan, Jr., is reported to have said at a meeting of one of
+the GM</p>
+<p>top committees, “Gentlemen, I take it we are all in complete
+agree-ment on</p>
+<p>the decision here.” Everyone around the table nodded assent.
+“Then,”</p>
+<p>continued Mr. Sloan, “I propose we postpone further discussion of
+this matter</p>
+<p>until our next meeting to give ourselves time to develop
+dis-agreement and</p>
+<p>perhaps gain some understanding of what the decision is all about.”
+There are</p>
+<p>three reasons why dissent is needed. It first safeguards the decision
+maker</p>
+<p>against becoming the prisoner of the organization. Every-body is a
+special</p>
+<p>pleader, trying—often in perfectly good faith—to obtain the decision
+he</p>
+<p>favors. Second, disagreement alone can provide alterna-tives to a
+decision.</p>
+<p>And a decision without an alternative is a desperate gambler’s throw,
+no</p>
+<p>matter how carefully thought through it might be. Above all,
+disagreement is</p>
+<p>needed to stimulate the imagination.</p>
+<h3 id="action-point-1">ACTION POINT:</h3>
+<p>Organize dissent for a particular decision by bringing</p>
+<p>people with diverse points of view into the decision process. Choose
+on</p>
+<p>the basis of “what is right,” not “who is right.”</p>
+<h4 id="management-tasks-responsibilities-practices">Management: Tasks,
+Responsibilities, Practices</h4>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

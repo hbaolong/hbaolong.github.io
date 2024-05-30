@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="第三同读" />
+  <title>德鲁克日志</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">德鲁克日志</h1>
+<p class="author">第三同读</p>
+</header>
+<h2 id="透过金庸读懂德鲁克">透过金庸读懂德鲁克</h2>
+<p>《天罡北斗阵》的衰落之谜</p>
+<p>天罡北斗阵是王重阳设计的，用来对付比较厉害的敌人的。王重阳自己是用不上这个武功的，因为他</p>
+<p>以及是武功天下第一了，没有什么人需要他联合别人一起来打。</p>
+<p>这个阵法主要是留给自己的徒弟们的，他知道，自己的徒弟们资质不佳，而且全真教武功讲究后来居</p>
+<p>上，在一开始时武功还是比较弱的，在他们武功弱的时候，可以用这个阵法来弥补一些不足。</p>
+<p>第一个学会这个天罡北斗阵的是王重阳的七个弟子，这个阵的使用也正好需要7个人。所以，这7个弟</p>
+<p>子就欢天喜地地练了起来。</p>
+<p>练好后就要用。全真七子第一次使用天罡北斗阵是对付黄药师的徒弟，号称黑风双煞之一的梅超风。</p>
+<p>单打独斗，全真七子都不是梅超风的徒弟，所以，七子摆下了天罡北斗阵来围攻梅超风。</p>
+<p>阵法果然威力非凡，当时全真七子马钰位当天枢，谭处端位当天璇，刘处玄位当天玑，丘处机位当天</p>
+<p>权，四人组成斗魁；王处一位当玉衡，郝大通位当开阳，孙不二位当摇光，三人组成斗柄。</p>
+<p>这七人之间已经反复练习这个阵法很多次，而且七子之间已经师兄弟很多年，互相之间非常了解。所</p>
+<p>以，顷刻间，梅超风就败了，要不是黄药师及时赶到救了梅超风，估计梅超风就死了。</p>
+<p>随后，全真七子又用这个阵对付黄药师。没多久，黄药师就被围住了，捉襟见肘。这时，在一旁围观</p>
+<p>的欧阳锋看出了便宜，乘机一掌打死了位于天璇的谭处端，阵法大乱全真七子输了。害死了个兄弟。</p>
+<p>第三次战斗还是围攻黄药师，因为谭处端死了，天璇位换了柯镇恶。柯镇恶不懂阵法，而且对其他人</p>
+<p>也不熟悉，只好由尹志平在他身边指导兼指路。</p>
+<p>这时熟稔天文术数、阴阳五行之学的黄药师已经勘破天罡北斗阵的奥秘。何况有一个不懂阵法的柯镇</p>
+<p>恶在阵中。很快阵法大乱，黄药师脱离了阵中，如果不是不愿结敌，这些全真七子都不够杀的。</p>
+<p>在之后，全真七子就在整个全真教普及天罡北斗阵，全真七子也经常用。</p>
+<p>他们还设计了可以十四个北斗阵组成的一个北斗大阵，据说可以抵御巴拉巴拉。结果在第一次使用</p>
+<p>时，就遇到了郭靖，由于郭靖对天罡北斗阵的熟悉，很轻松就攻破了。</p>
+<p>以前我觉得天罡北斗战无不败的原因是全真教他们过度依赖阵法，以至于不愿意学习武功；因为不愿</p>
+<p>意学习武功，导致个体能力过低；个体能力过低才导致的天罡北斗阵战无不败。</p>
+<p>后来，我看到在终南山上，有100多个四处跑来的江湖无耻之徒围攻重阳宫，又一个七七四十九人的天</p>
+<p>罡北斗阵还是拦不住。也就是说，经过反复训练的49人拦不住100个乌合之众，这时我质疑了。</p>
+<p>即使是49个普通人，如果经过良好训练也可以很好地控制100个乌合之众，何况是每天都要练习武功</p>
+<p>的全真教教众？</p>
+<p>再回过头来看，我发现，自从谭处端死后，天罡北斗阵就没有赢过了。</p>
+<p>而谭处端的死，意味着最熟悉全真七子这个团体的人少了一个。新来的，不管是柯镇恶，还是尹志</p>
+<p>平，即使熟悉阵法，也不熟悉其他的人。</p>
+<p>至于之后的那些大阵，阵里不管是七个人还是四十九个人还是一百多个人，大多是互相不了解的。而</p>
+<p>且，阵越大，互相之间就约不了解：不了解他的武功高低，不了解他的特长，不了解他的偏好。而这</p>
+<p>些不了解，就会产生一个副作用：阵越大，沟通成本就越高，直接的后果就是49人的阵法，反而不如</p>
+<p>49人打群架。</p>
+<p>我想，这是王重阳没有告诉自己徒弟的一个秘密吧：阵法固然重要，用阵的人更重要；用阵的人的武</p>
+<p>功高低固然重要，他们之间的熟悉程度更重要。陌生人摆阵？搞笑吧。还北斗阵呢，
+串好的糖葫芦罢</p>
+<p>了。</p>
+<h2 id="大纲">大纲</h2>
+<h2 id="百字摘要">百字摘要</h2>
+<h2 id="金庸案例">金庸案例</h2>
+<h2 id="时间消耗">时间消耗</h2>
+<h2 id="阅读理解">阅读理解：</h2>
+<h2 id="大纲-1">大纲：</h2>
+<h2 id="撰写">撰写：</h2>
+<h2 id="录音">录音</h2>
+<h2 id="一小时运动">一小时运动</h2>
+<h2 id="英文原文">英文原文</h2>
+<p>15 SEPTEMBER</p>
+<p>Managing Oneself: Work Relationships</p>
+<p>Organizations are built on trust, and trust is built on communication
+and mutual understanding.</p>
+<p>mutual： used to describe feelings that two or more people have for
+each other equally, or actions that affect two or more</p>
+<p>people equally 相互的；彼此的</p>
+<p>Just as it is important for you to know your own strengths, work
+styles, and values, it is also</p>
+<p>important that you learn the strengths, work styles, and values of
+the people around you.</p>
+<p>Each person is an individual, and there are likely to be great
+differences between yourself and</p>
+<p>others.</p>
+<p>But such differences do not matter.</p>
+<p>What does matter is whether everyone performs.</p>
+<p>Consistent group performance can be achieved only if each person
+within the group is able to</p>
+<p>perform as an individual.</p>
+<p>And to help make this happen, you must build on other people’s
+strengths, other people’s work</p>
+<p>styles, and other people’s values.</p>
+<p>Once you have identified your strengths, work style, and values, as
+well as what your contribution</p>
+<p>should be, you must then consider who else needs to know about
+it.</p>
+<p>Everyone who depends on you and on whom you depend needs to know this
+information about</p>
+<p>how you work.</p>
+<p>Since communication is a two-way process, you should feel comfortable
+asking your coworkers to</p>
+<p>think through and define their own strengths, work styles, and
+values.</p>
+<h3 id="action-point">ACTION POINT:</h3>
+<p>List the people who depend upon your contributions and the specific
+contribution each person</p>
+<p>requires.</p>
+<p>List those people on whom you depend and the contributions you
+require from each person.</p>
+<p>Inform both groups and be sure each person is served properly,
+including you.</p>
+<p>Management Challenges for the 21st Century</p>
+<p>Managing Oneself (Corpedia Online Program)</p>
+<p>【原书原文】</p>
+<p>IV</p>
+<p>Relationship Responsibility</p>
+<p>Very few people work by themselves and achieve results by
+themselves—a few great artists, a few</p>
+<p>great scientists, a few great athletes. Most people work with other
+people and are effective through</p>
+<p>other people. That is true whether they are members of</p>
+<p>an organization or legally independent. To manage oneself, therefore,
+requires taking</p>
+<p>relationship responsibility.</p>
+<p>There are two parts to it.</p>
+<p>The first one is to accept the fact that other people are as much</p>
+<p>individuals as one is oneself. They insist on behaving like human
+beings. This means that they too</p>
+<p>have their strengths. It means that they too have their ways of
+getting things done. It means that</p>
+<p>they too have their values. To be effective, one therefore has to
+know the strengths, the</p>
+<p>performance modes and the values of the people one works with.</p>
+<p>This sounds obvious. But few people pay attention to it.</p>
+<p>Typical are people who, in their first assignment, worked for a man
+who is a reader. They therefore</p>
+<p>were trained in writing reports. Their next boss is a listener. But
+these people keep on writing</p>
+<p>reports to the new boss—the way President Johnson’s assistants kept
+on writing reports to him</p>
+<p>because Jack Kennedy, who had hired them, had been a reader.
+Invariably, these people have no</p>
+<p>results. Invariably, their new boss thinks they are stupid,
+incompetent, lazy. They become failures.</p>
+<p>All that would have been needed to avoid this would have been one
+look at the boss and ask the</p>
+<p>question: “How does he or she perform?”</p>
+<p>Bosses are not a title on the organization chart or a “function.”
+They are individuals and entitled to</p>
+<p>do the work the way they do it. And it is incumbent on the people who
+work with them to observe</p>
+<p>them, to find out how they work and to adapt themselves to the way
+the bosses are effective.</p>
+<p>There are bosses, for instance, who have to see the figures first—
+Alfred Sloan at General Motors</p>
+<p>was one of them. He himself was not a financial person but an
+engineer with strong marketing</p>
+<p>instincts. But as an engineer he had been trained to look first at
+figures.</p>
+<p>Three of the ablest younger executives in General Motors did not make
+it into the top ranks</p>
+<p>because they did not look at Sloan—they did not realize that there
+was no point writing to him or</p>
+<p>talking to him until he first had spent time with the figures. They
+went in and presented their</p>
+<p>reports. Then they left the figures. But by that time they had lost
+Sloan.</p>
+<p>As said before, readers are unlikely ever to become listeners, and
+listeners are unlikely ever to</p>
+<p>become readers. But everyone can learn to make a decent oral
+presentation or to write a decent</p>
+<p>report. It is simply the duty of the subordinate to enable the boss
+to do his or her work. And that</p>
+<p>requires looking at the boss and asking “What are his or her
+strengths? How does he or she do the</p>
+<p>work and perform? What are his or her values?” In fact, this is the
+secret of “managing” the boss.</p>
+<p>One does the same with all the people one works with. Each of them
+works his or her way and not</p>
+<p>my way. And each of them is entitled to work in his or her way. What
+matters is whether they</p>
+<p>perform, and what their values are. How they perform—each is likely
+to do it differently. The first</p>
+<p>secret of effectiveness is to understand the people with whom one
+works and on whom one</p>
+<p>depends, and to make use of their strengths, their ways of working,
+their values. For working</p>
+<p>relations are as much based on the person as they are based on the
+work.</p>
+<p>The second thing to do to manage oneself and to become effective is
+to take responsibility for</p>
+<p>communications. After people have thought through what their
+strengths are, how they perform,</p>
+<p>what their values are and especially what their contribution should
+be, they then have to ask: “Who</p>
+<p>needs to know this? On whom do I depend? And who depends on me?” And
+then one goes and</p>
+<p>tells all these people—and tells them in the way in which they
+receive a message, that is, in a memo</p>
+<p>if they are readers, or by talking to them if they are listeners and
+so on.</p>
+<p>Whenever I—or any other consultant—have started to work with an
+organization, I am first told of all</p>
+<p>the “personality conflicts” within it. Most of them arise from the
+fact that one person does not know</p>
+<p>what the other person does, or does not know how the other person
+does his or her work, or does</p>
+<p>not know what contribution the other person concentrates on, and what
+results he or she expects.</p>
+<p>And the reason that they do not know is that they do not ask and
+therefore are not being told.</p>
+<p>This reflects human stupidity less than it reflects human history. It
+was unnecessary until very</p>
+<p>recently to tell any of these things to anybody. Everybody in a
+district of the medieval city plied the</p>
+<p>same trade—there was a street of goldsmiths, and a street of
+shoemakers, and a street of</p>
+<p>armorers. (In Japan’s Kyoto there are still the streets of the
+potters, the streets of the silk weavers,</p>
+<p>the streets of the lacquer makers.) One goldsmith knew exact- ly what
+every other goldsmith was</p>
+<p>doing; one shoemaker knew exactly what every other shoemaker was
+doing; one armorer knew</p>
+<p>exactly what every other armorer was doing. There was no need to
+explain anything. The same was</p>
+<p>true on the land where everybody in a valley planted the same crop as
+soon as the frost was out of</p>
+<p>the ground. There was no need to tell one’s neighbor that one was
+going to plant potatoes—that,</p>
+<p>after all, was exactly what the neighbor did too, and at the same
+time.</p>
+<p>And those few people who did things that were not “common,” the few
+professionals, for instance,</p>
+<p>worked alone, and also did not have to tell anybody what they were
+doing. Today the great majority</p>
+<p>of people work with others who do different things.</p>
+<p>As said before, the marketing vice-president may have come out of
+sales and knows everything</p>
+<p>about sales. But she knows nothing about promotion and pricing and
+advertising and packaging</p>
+<p>and sales planning, and so on—she has never done any of these things.
+Then it is incumbent on the</p>
+<p>people who do these things to make sure that the marketing
+vice-president understands what they</p>
+<p>are trying to do, why they are trying to do it, how they are going to
+do it and what results to expect.</p>
+<p>If the marketing vice-president does not understand what these
+high-grade knowledge specialists</p>
+<p>are doing, it is primarily their fault, and not that of the marketing
+vice-president. They have not told</p>
+<p>her. They have not educated her. Conversely, it is the marketing
+vice-president’s responsibility to</p>
+<p>make sure that every one of the people she works with understands how
+she looks on marketing,</p>
+<p>what her goals are, how she works and what she expects of herself and
+of every one of them.</p>
+<p>Even people who understand the importance of relationship
+responsibility often do not tell their</p>
+<p>associates and do not ask them. They are afraid of being thought
+presumptuous, inquisitive or</p>
+<p>stupid. They are wrong. Whenever anyone goes to his or her associates
+and says: “This is what I</p>
+<p>am good at. This is how I work. These are my values. This is the
+contribution I plan to concentrate</p>
+<p>on and the results I should be expected to deliver,” the response is
+always: “This is most helpful.</p>
+<p>But why haven’t you told me earlier?”</p>
+<p>And one gets the same reaction—without a single exception in my
+experience—if one then asks:</p>
+<p>“And what do I need to know about your strengths, how you perform,
+your values and your proposed contribution?”</p>
+<p>In fact, a knowledge worker should request of people with whom he or
+she works—whether as</p>
+<p>subordinates, superiors, colleagues, team members—that they adjust
+their behavior to the</p>
+<p>knowledge worker’s strengths, and to the way the knowledge worker
+works. Readers should</p>
+<p>request that their associates write to them, listeners should request
+that their associates first talk</p>
+<p>to them and so on. And again, whenever that is being done, the
+reaction of the other person will be:</p>
+<p>“Thanks for telling me. It’s enormously helpful. But why didn’t you
+ask me earlier?”</p>
+<p>Organizations are no longer built on force. They are increasingly
+built on trust. Trust does not mean</p>
+<p>that people like one another. It means that people can trust one
+another. And this pre- supposes</p>
+<p>that people understand one another. Taking relationship
+responsibility is therefore an absolute</p>
+<p>necessity. It is a duty. Whether one is a member of the organization,
+a consultant to it, a supplier to</p>
+<p>it, a distributor, one owes relationship responsibility to every one
+with whom one works, on whose</p>
+<p>work one depends; and who in turn depends on one’s own work.</p>
+<h2 id="september">15 SEPTEMBER</h2>
+<h3 id="managing-oneself-work-relationships">Managing Oneself: Work
+Relationships</h3>
+<p>Organizations are built on trust, and trust is built on
+communication</p>
+<p>and mutual understanding.</p>
+<p>Just as it is important for you to know your own strengths, work
+styles, and</p>
+<p>values, it is also important that you learn the strengths, work
+styles, and values of</p>
+<p>the people around you. Each person is an individual, and there are
+likely to be</p>
+<p>great differences between yourself and others. But such dif-ferences
+do not</p>
+<p>matter. What does matter is whether everyone performs. Consistent
+group</p>
+<p>performance can be achieved only if each person within the group is
+able to</p>
+<p>perform as an individual. And to help make this hap-pen, you must
+build on other</p>
+<p>people’s strengths, other people’s work styles,</p>
+<p>and other people’s values.</p>
+<p>Once you have identified your strengths, work style, and values,
+as</p>
+<p>well as what your contribution should be, you must then consider
+who</p>
+<p>else needs to know about it. Everyone who depends on you and on
+whom</p>
+<p>you depend needs to know this information about how you work.
+Since</p>
+<p>com-munication is a two-way process, you should feel comfortable</p>
+<p>asking your coworkers to think through and define their own
+strengths,</p>
+<p>work styles, and values.</p>
+<h3 id="action-point-1">ACTION POINT:</h3>
+<p>List the people who depend upon your contributions and</p>
+<p>the specific contribution each person requires. List those people on
+whom</p>
+<p>you depend and the contributions you require from each person.
+Inform</p>
+<p>both groups and be sure each person is served properly, including
+you.</p>
+<p>Management Challenges for the 21st Century</p>
+<h4 id="managing-oneself-corpedia-online-program">Managing Oneself
+(Corpedia Online Program)</h4>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

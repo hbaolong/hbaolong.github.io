@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="第三同读" />
+  <title>德鲁克日志</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">德鲁克日志</h1>
+<p class="author">第三同读</p>
+</header>
+<h2 id="透过金庸读懂德鲁克">透过金庸读懂德鲁克</h2>
+<p>为什么国家不干掉湖北红会呢？</p>
+<p>疫情出现后，第一个被攻击的就是红会了。这几天红会的各种瓜大家也吃的不亦乐乎。有只管收钱不</p>
+<p>管分配的，有给“莆田系医院口罩不给协和医院口罩”的，有物品堆积如山就是不分发的，也有红会的</p>
+<p>人私下给政府官员口罩的，还有红会强要屋子管理费的。总之一个武汉红会拿钱不干事，吃拿卡要，</p>
+<p>仿佛一场瘟疫就被这个红会给耽误了。</p>
+<p>可是，大家骂归骂，不管是上级红会，还是政府，还是其他权力机构，都没有对红会采取措施，红会</p>
+<p>和慈善总会还是唯一的捐赠渠道。</p>
+<p>有热心网友想要绕过红会捐赠的话，那就要直接给钱到库房，然后直接发货到指定的医院。而且医院</p>
+<p>能开的证明有限。不一定可以作为捐赠。</p>
+<p>如果企业要捐赠证明以减免一些税收的换，那就还是要通过红会。</p>
+<p>为什么红会已经这么明显地影响了瘟疫的救助，政府却毫无动作？</p>
+<p>瘟疫开始后，网上的发言大概可以分为两类。一类是偏左的，他们会关注10天建成火神雷神，会关注</p>
+<p>政府强大的组织和管控能力，会关注河南的硬核，会关注政府的当机立断；</p>
+<p>另一类就是偏右的了，他们会关注红会的仓库，会关注市长的口罩，会关注街上倒下去的某个路人，</p>
+<p>会关注某个无家可归的游子。</p>
+<p>这两类人也有共同点，都会歌颂那些一线的医务工作者，特别是钟南山钟院士；也都会对红会表达出</p>
+<p>强烈的不满，强烈的愤怒。</p>
+<p>可是，不管大家如何怒骂，如何“出离地愤怒”，红会依然是红会，并没有什么变化。</p>
+<p>我刚才看到一个新闻，说是根据武汉市疫情防控指挥部的安排，集团协助武汉红十字会进行物流管理</p>
+<p>工作，派出30人轮班作业，晚班人员将在每日24时扎账。</p>
+<p>这个算是一个对红会工作流程的一个干涉。而这个干涉，也是武汉市疫情防控指挥部做出的决策，而</p>
+<p>不是越级的第三方做的。也就是说，这个安排大概率和偏左或者偏右的人的“言语”都是无关的。</p>
+<p>这就是决策者和言语中的不同。言语中可以根据一些信息去合理演绎，而决策者则只能根据尽可能的</p>
+<p>真实信息给出一个决策。</p>
+<p>我是做信息安全的，在我们行业里有一个比如，这就是做安全的和做黑客的比喻。大家可能都觉得做</p>
+<p>黑客的很牛逼，比做安全的牛逼的了。实际上呢？</p>
+<p>做安全就像去保护一个气球，他需要360度全方面保护才可以让这个气球维持气球的样子，而做黑客则</p>
+<p>不用，他就像一根针，他只要戳破一次就够了。气球就破了。他的目的也就达到了。</p>
+<p>这就是安全和黑客之间的区别。</p>
+<p>“言语者”和“决策者”和类似这样的观点。</p>
+<p>当你关注陈市长的手表时，你就把这个事情搞得很透。但你关注哪个卖口罩的“周周”时，你可以持续</p>
+<p>关注。当你关注“美国基因战威胁论”时，你会找出很多证据；当你关注中科院上海药物所时，你也会</p>
+<p>找到很多很多信息，你会发现，这个江湖太黑了，黑的让人看不到头绪。</p>
+<p>甚至你就发现，这场瘟疫有可能是病毒泄露，你也会发现，红会的主要目的居然不是救灾，而是接着</p>
+<p>这千载难逢的机会打捞一笔。</p>
+<p>或许有人说，他们并不坏，只是不会。你想要，那些孩子，一下子看到面前堆积了那么多货物，如何</p>
+<p>分配？他们是真不会呀。</p>
+<p>是的，每个人，不关你事左的，还是右的，还是中的，你都可以找到你关注的点。然后去挖掘
+，而</p>
+<p>且，这个挖掘也特别有意义，因为他会推动也影响决策者的想法。</p>
+<p>可是，作为决策者，他们考虑的肯定不是这些信息，而是穿过各种迷雾背后的“真相”，或者说更加接</p>
+<p>近的真相吧。</p>
+<p>这就是“决策者”和“言语者”最大的区别。“言语者“出错的话，道歉就好了。”决策者“出错的话，气球就</p>
+<p>破了，需要所有人，包括”言语者“共同付出代价。</p>
+<p>所以，”决策者“总是很慢，他们小心翼翼地分析各种信息，在把问题搞清楚之前，不敢轻易做出决</p>
+<p>策。</p>
+<p>当他们认为红会的问题的本质是红会的能力问题时，他们就选择了用九州通来协助红会进行物流管</p>
+<p>理，毕竟，在捐赠的管理方面，红会还是有经验的。</p>
+<p>”决策者“就是这样的，包括企业的决策者，某个组织的决策者，哪怕是一个部门经理，他们的思考问</p>
+<p>题进行决策是，都需要从自己的角度深入思考，分析，因为他们不能出错。</p>
+<p>至于网上说的，把红会的人全剁了。那肯定不行，因为杀人犯法。</p>
+<h2 id="大纲">大纲</h2>
+<h2 id="百字摘要">百字摘要</h2>
+<h2 id="金庸案例">金庸案例</h2>
+<h2 id="时间消耗">时间消耗</h2>
+<h2 id="阅读理解">阅读理解：</h2>
+<h2 id="大纲-1">大纲：</h2>
+<h2 id="撰写">撰写：</h2>
+<h2 id="录音">录音</h2>
+<h2 id="一小时运动">一小时运动</h2>
+<h2 id="英文原文">英文原文</h2>
+<p>2 FEBRUARY</p>
+<p>Face Reality</p>
+<p>Exploit the new realities.</p>
+<p>Exploit：</p>
+<p>( disapproving ) to treat a person or situation as an opportunity to
+gain an advantage for yourself</p>
+<p>利用（…为自己谋利）</p>
+<p>Today’s new realities fit neither the assumptions of the Left nor
+those of the Right.</p>
+<p>They don’t mesh at all with “what everybody knows.”</p>
+<dl>
+<dt>mesh：</dt>
+<dd>
+<p>(sth) (with sth) | ~ (sth) (together) to fit together or match
+closely, especially in a way that works well; to make things fit</p>
+</dd>
+</dl>
+<p>together successfully</p>
+<p>（使）吻合，相配，匹配，适合</p>
+<p>They differ even more from what everybody, regardless of political
+persuasion, still believes reality</p>
+<p>to be.</p>
+<p>persuasion：</p>
+<p>（宗教或政治）信仰</p>
+<p>[ C U ] a particular set of beliefs, especially about religion or
+politics</p>
+<p>“What is” differs totally from what both the Right and the Left
+believe “ought to be.”</p>
+<p>The greatest and most dangerous turbulence today results from the
+collision between the</p>
+<p>delusions of the decision makers—whether in governments, in the top
+managements of</p>
+<p>businesses, or in union leadership—and the realities.</p>
+<p>turbulence：</p>
+<p>骚乱；动乱；</p>
+<p>a situation in which there is a lot of sudden change, confusion,
+disagreement and sometimes violence</p>
+<p>动荡；混乱</p>
+<p>collision：</p>
+<p>( formal ) a strong disagreement between two people or between
+opposing ideas, opinions, etc.; the meeting of two</p>
+<p>（两人之间或对立意见、看法等之间的）冲突，抵触</p>
+<p>delusions ：N-COUNT A delusion is a false idea. 错觉</p>
+<p>things that are very different</p>
+<p>But a time of turbulence is also one of great opportunity for those
+who can understand, accept,</p>
+<p>and exploit the new realities.</p>
+<p>turbulence：</p>
+<p>骚乱；动乱；</p>
+<p>动荡；混乱</p>
+<p>a situation in which there is a lot of sudden change, confusion,
+disagreement and sometimes violence</p>
+<p>exploit：</p>
+<p>( disapproving ) to treat a person or situation as an opportunity to
+gain an advantage for yourself</p>
+<p>利用（…为自己谋利）</p>
+<p>One constant theme is, therefore, the need for the decision maker in
+the individual enterprise to</p>
+<p>face up to reality and resist the temptation of what “everybody
+knows,” the temptations of the</p>
+<p>certainties of yesterday, which are about to become the deleterious
+superstitions of tomorrow.</p>
+<p>constant：</p>
+<p>连续发生的；不断的；重复的</p>
+<p>temptation：</p>
+<p>煽诱人的事物</p>
+<p>deleterious：</p>
+<p>有害的；造成伤害的；损害的</p>
+<p>superstitions：</p>
+<p>迷信</p>
+<p>[ usually before noun ] happening all the time or repeatedly</p>
+<p>[ C ] a thing that makes sb want to do or have sth that they know is
+bad or wrong</p>
+<p>( formal ) harmful and damaging</p>
+<p>N-VAR Superstition is belief in things that are not real or possible,
+for example magic.</p>
+<p>To manage in turbulent times, therefore, means to face up to the new
+realities.</p>
+<p>It means starting with the question: “What is the world really like?”
+rather than with the assertions</p>
+<p>and assumptions that made sense only a few years ago.</p>
+<p>assertions：</p>
+<p>明确肯定；断言</p>
+<p>[ C ] a statement saying that you strongly believe sth to be true</p>
+<h3 id="action-point">ACTION POINT:</h3>
+<p>List three new opportunities created by demographic shifts—changes in
+the composition of the</p>
+<p>population and workforce—and the shift from national to regional to
+transnational economies.</p>
+<p>composition：</p>
+<p>成分；构成；组合</p>
+<p>方式</p>
+<p>[ U ] the different parts which sth is made of; the way in which the
+different parts are organized</p>
+<p>Pursue them.</p>
+<p>Pursue：</p>
+<p>[ VN ] to do sth or try to achieve sth over a period of time</p>
+<p>Managing in Turbulent Times</p>
+<p>追求；致力于；执行；贯彻</p>
+<h2 id="february">2 FEBRUARY</h2>
+<h3 id="face-reality">Face Reality</h3>
+<p>Exploit the new realities.</p>
+<p>Today’s new realities fit neither the assumptions of the Left nor
+those of</p>
+<p>the Right. They don’t mesh at all with “what everybody knows.” They
+differ</p>
+<p>even more from what everybody, regardless of political persuasion,
+still</p>
+<p>believes reality to be. “What is” differs totally from what both the
+Right and</p>
+<p>the Left believe “ought to be.” The greatest and most dangerous
+turbu-lence</p>
+<p>today results from the collision between the delusions of the
+decision makers</p>
+<p>—whether in governments, in the top managements of businesses,</p>
+<p>or in union leadership—and the realities.</p>
+<p>But a time of turbulence is also one of great opportunity for those
+who</p>
+<p>can understand, accept, and exploit the new realities. One constant
+theme</p>
+<p>is, therefore, the need for the decision maker in the individual
+enterprise</p>
+<p>to face up to reality and resist the temptation of what “everybody
+knows,”</p>
+<p>the temptations of the certainties of yesterday, which are about to
+become</p>
+<p>the deleterious superstitions of tomorrow. To manage in turbulent
+times,</p>
+<p>there-fore, means to face up to the new realities. It means starting
+with the</p>
+<p>ques-tion: “What is the world really like?” rather than with the
+assertions</p>
+<p>and assumptions that made sense only a few years ago.</p>
+<h3 id="action-point-1">ACTION POINT:</h3>
+<p>List three new opportunities created by demographic shifts</p>
+<p>—changes in the composition of the population and workforce—and
+the</p>
+<p>shift from national to regional to transnational economies. Pursue
+them.</p>
+<h4 id="managing-in-turbulent-times">Managing in Turbulent Times</h4>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

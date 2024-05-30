@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="第三同读" />
+  <title>德鲁克日志</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">德鲁克日志</h1>
+<p class="author">第三同读</p>
+</header>
+<h2 id="透过金庸读懂德鲁克">透过金庸读懂德鲁克</h2>
+<p>黄蓉：我决定陪靖哥哥去死</p>
+<p>蒙古军队已经围了襄阳一年多了，眼看着襄阳要守不住了。这天，黄蓉把耶律齐，大小武，郭芙，郭</p>
+<p>襄，郭破虏还有郭芙的孩子们都叫到屋里，大家商量逃离的事情。</p>
+<p>几十年来，郭靖、黄蓉很少离开襄阳，对江湖也不大了解了，不过，以他们的武功还有声望，可以去</p>
+<p>的地方还是挺多的。</p>
+<p>“桃花岛吧，桃花岛易守难攻，蒙古军队也不一定会去攻打”</p>
+<p>“过儿的古墓也可以去，那里很大，而且本来就是军事要塞，可以做后续力量的储备”</p>
+<p>“去西边吧，西边地势险要，有很多山，也便于积蓄力量，至少可以躲开蒙古兵的追击”</p>
+<p>“是呀，江湖很大，随便去哪里都好，只要爸爸妈妈喜欢，去哪里都可以。”</p>
+<p>大家七嘴八舌地说着各个地方，只有郭靖和耶律齐没有说话。</p>
+<p>说了一会，大家停下来看黄蓉的意见，毕竟，这么多年来，大家已经习惯了黄蓉拿主意。</p>
+<p>黄蓉等大家安静下来后，说：“我是这么想的，咱们去西域，在西域找一个山，以后就在西域安家。”</p>
+<p>“也不用带太多人去，就咱们一家人，还有大武小武他们；带一些细软，黄金，就好了。”</p>
+<p>“齐儿，你带上过儿留下的玄铁剑。那个到了西域后有用，万一咱们走散了，就在成都汇合，如果成都</p>
+<p>也汇合不上，就到昆仑山汇合。”</p>
+<p>“我们以后就住在昆仑山附近……”</p>
+<p>这时，郭靖突然说话了：“我不去西域…..”</p>
+<p>黄蓉一愣：“你想去什么地方？”</p>
+<p>郭靖说：“我哪里也不去，就守在襄阳”</p>
+<p>黄蓉叹了口气：“按现在这个形势，襄阳最多也就守一个月了。”</p>
+<p>郭靖道：“我知道，可我走不了，襄阳破了，我也没地方去了”</p>
+<p>黄蓉一愣，沉默了。</p>
+<p>短暂的安静后，黄蓉笑了起来。</p>
+<p>“这样就简单了，齐儿，你帮我找一些好的铁匠。”</p>
+<p>“襄儿，你武功比较好，你带着大武小武他们先去昆仑山，在哪里安顿下来后再回来。”</p>
+<p>“靖哥哥，这几天要辛苦你一下，这几年忙，齐儿的降龙十八掌一直没有学完，你多带带他，我也跟着</p>
+<p>一起把这些掌法记下来。”</p>
+<p>“还有这么多年咱们自己领悟出来的武功，我都整理一下，把它们都记下来。不然以后就没人会了”</p>
+<p>“还有你这些年和蒙古军队打仗的经验，我也帮你记录下来。总要给后人留点什么。”</p>
+<p>“齐儿，你找人把过儿的玄铁剑改铸成一把刀和一把剑吧，应该会非常锋利。我把这些武功，还有靖哥</p>
+<p>哥带兵的经验放在刀剑里，留给后人吧。”</p>
+<p>“襄儿，你带着剑走吧，剑里放上你爸爸的降龙十八掌，还有九阴真经，打狗棍法这些武功。”</p>
+<p>“刀里放上带兵的谋略吧。刀就让破虏带着。”</p>
+<p>“襄儿，你多照看着点你弟弟；破虏，你也多疼着点你姐姐。”</p>
+<p>“齐儿，锻好了刀剑后，你也带着芙儿还有孩子们去西域吧，你们住的分开一些。”</p>
+<p>耶鲁齐看了看郭靖，看了看黄蓉，又看了看郭芙。</p>
+<p>“好，我先去锻造刀剑。芙妹留下来照顾大家。”</p>
+<p>两周周后，刀剑锻造好了。黄蓉看着这一对刀剑，把剑交给郭襄，把刀交给郭破虏。</p>
+<p>“你们带着大武小武家人去昆仑吧。”</p>
+<p>破虏看着黄蓉，说：“我要和爸爸妈妈在一起。”</p>
+<p>武敦儒看了看自己的妻子耶律燕，也说：“我们也要和郭伯伯在一起。”</p>
+<p>看到郭襄欲言的样子，黄蓉道：“都听我的，襄儿带着剑和大武一家人去昆仑。”</p>
+<p>“破虏和小武，你们过几天也出发，分开走。大家昆仑汇合”</p>
+<p>“齐儿和芙儿最后走”</p>
+<p>“那你和郭伯伯呢？”武敦儒问道。</p>
+<p>“我陪着你郭伯伯，守到最后。”</p>
+<p>“如果我们都走了，那么，侠义的精神就丢了，反抗的精神就丢了；如果我们都留下，那么，不但大家</p>
+<p>都死了，我和你郭伯伯的武功也都失传了，还有你郭伯伯这么多年带兵的经验。”</p>
+<p>“所以，你郭伯伯说他不走时，我就想明白了这个。我们传下去精神，你们传下去武功，还有血脉，还</p>
+<p>用反抗的力量”</p>
+<p>“你们，不管是谁，遇到过儿，和他说，就说我说的，要他尽一切力量反抗蒙古的入侵。”</p>
+<p>一个月后，襄阳城破，郭靖、黄蓉被乱箭射死；耶律齐、郭芙死战到最后一刻，死在城下；武敦儒耶</p>
+<p>律燕死战扫最后一刻，死在城下；郭破虏带着玄铁刀在逃离途中受伤，不知所踪。</p>
+<p>然后城破，吕文焕投降。</p>
+<p>郭襄在昆仑山听到消息后，疯一样地赶回襄阳，却连自己父母姐弟的尸体都没有看到。在之后十几年</p>
+<p>里，郭襄走遍了山山水水，寻找自己的弟弟郭破虏，寻找弟弟带着的那把屠龙刀。</p>
+<p>在四十岁那年，寻找无果后，郭襄在峨眉出家，创立了峨眉派。临死前，郭襄编了十六个字给自己的</p>
+<p>弟子：“武林至尊，宝刀屠龙，号令天下，莫敢不从！倚天不出，谁与争锋？”</p>
+<p>这时的郭襄多希望自己那个弟弟带着那把刀来到自己面前呀。</p>
+<p>五十年后，杨过支持的明教已经是反抗元军暴虐的主力，倚天剑、屠龙刀的出现也加快了元朝的灭</p>
+<p>亡。</p>
+<h2 id="大纲">大纲</h2>
+<h2 id="百字摘要">百字摘要</h2>
+<h2 id="金庸案例">金庸案例</h2>
+<h2 id="时间消耗">时间消耗</h2>
+<h2 id="阅读理解">阅读理解：</h2>
+<h2 id="大纲-1">大纲：</h2>
+<h2 id="撰写">撰写：</h2>
+<h2 id="录音">录音</h2>
+<h2 id="一小时运动">一小时运动</h2>
+<h2 id="英文原文">英文原文</h2>
+<p>28 SEPTEMBER</p>
+<p>Harmonize the Immediate and</p>
+<p>Long-range Future</p>
+<p>A manager must, so to speak, keep his nose to the grindstone</p>
+<p>while lifting his eyes to the hills—quite an acrobatic feat.</p>
+<p>Amanager has two specific tasks. The first is creation of a true
+whole that is larger than the sum of</p>
+<p>its parts, a productive entity that turns out more than the sum of
+the resources put into it. The</p>
+<p>second specific task of the manager is to harmonize in every decision
+and action the requirements</p>
+<p>of the immediate and of the long-range future. A manager cannot
+sacrifice</p>
+<p>either without endangering the enterprise.</p>
+<p>If a manager does not take care of the next hundred days, there will
+be no next hundred years.</p>
+<p>Whatever the manager does should be sound in ex-pediency as well as
+in basic long-range</p>
+<p>objective and principle. And where he cannot harmonize the two time
+dimensions, he must at least</p>
+<p>balance them. He must calculate the sacrifice he imposes on the
+long-range future of the</p>
+<p>enterprise to protect its immediate interests, or the sacrifice he
+makes today for the sake of</p>
+<p>tomorrow. He must limit either sacrifice as much as possible. And he
+must repair as soon as</p>
+<p>possible the damage it inflicts. He lives and acts in two time
+dimensions, and is responsible for the</p>
+<p>perfor-mance of the whole enterprise and of his own component in
+it.</p>
+<h3
+id="action-point-develop-a-system-of-performance-measures-that-will-lead-to-maximizing-the-total">ACTION
+POINT: Develop a system of performance measures that will lead to
+maximizing the total</h3>
+<p>wealth-producing capacity of your organization. Include both
+short-term measures and long-term</p>
+<p>measures, as well as quantitative and qualitative measures.</p>
+<p>Management: Tasks, Responsibilities, Practices</p>
+<h2 id="september">28 SEPTEMBER</h2>
+<h3 id="harmonize-the-immediate-and">Harmonize the Immediate and</h3>
+<p>Long-range Future</p>
+<p>A manager must, so to speak, keep his nose to the grindstone</p>
+<p>while lifting his eyes to the hills—quite an acrobatic feat.</p>
+<p>Amanager has two specific tasks. The first is creation of a true
+whole that</p>
+<p>is larger than the sum of its parts, a productive entity that turns
+out more than</p>
+<p>the sum of the resources put into it. The second specific task of the
+manager</p>
+<p>is to harmonize in every decision and action the requirements of
+the</p>
+<p>immediate and of the long-range future. A manager cannot
+sacrifice</p>
+<p>either without endangering the enterprise.</p>
+<p>If a manager does not take care of the next hundred days, there will
+be no</p>
+<p>next hundred years. Whatever the manager does should be sound in
+ex-</p>
+<p>pediency as well as in basic long-range objective and principle. And
+where he</p>
+<p>cannot harmonize the two time dimensions, he must at least balance
+them. He</p>
+<p>must calculate the sacrifice he imposes on the long-range future of
+the</p>
+<p>enterprise to protect its immediate interests, or the sacrifice he
+makes today</p>
+<p>for the sake of tomorrow. He must limit either sacrifice as much as
+possible.</p>
+<p>And he must repair as soon as possible the damage it inflicts. He
+lives and</p>
+<p>acts in two time dimensions, and is responsible for the perfor-mance
+of the</p>
+<p>whole enterprise and of his own component in it.</p>
+<h3 id="action-point">ACTION POINT:</h3>
+<p>Develop a system of performance measures that will lead</p>
+<p>to maximizing the total wealth-producing capacity of your
+organization.</p>
+<p>Include both short-term measures and long-term measures, as well
+as</p>
+<p>quantitative and qualitative measures.</p>
+<h4 id="management-tasks-responsibilities-practices">Management: Tasks,
+Responsibilities, Practices</h4>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

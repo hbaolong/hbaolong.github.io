@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="第三同读" />
+  <title>德鲁克日志</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">德鲁克日志</h1>
+<p class="author">第三同读</p>
+</header>
+<h2 id="透过金庸读懂德鲁克">透过金庸读懂德鲁克</h2>
+<p>非暴力立FLAG</p>
+<p>又到了一年一度立FLAG的时候了，大家梳理了一下年初里的FLAG，检讨了一下，有的完成了，有的</p>
+<p>没完成。不过，不管有没有完成，大家有要开始重新立FLAG了，并且每个人都觉得自己这次的FLAG</p>
+<p>是一定可以完成的，这样就可以有效完成2019年决定要完成的2018年计划完成的那些2017年制定的本</p>
+<p>来应该在2016年完成的事情了。</p>
+<p>今天，我在群里问几个朋友，你们2020年的FLAG是什么呢？有一个群友说：“我要找到爱情”。然后，</p>
+<p>她得到了所有人的祝福；又有一个人说：“我要减到100斤内”，她也得到了大家的赞许。</p>
+<p>然后，我又在另一个群里问大家明年的FLAG。有人说要学好英语，有人说要找到一份好工作，有人说</p>
+<p>要出一本书，有人说要改掉拖延的习惯，有人说他要早起。</p>
+<p>冬至马上就要到了，冬至是万物复苏的时刻，一切仿佛都可以重新开始。那么，你要立FLAG么？</p>
+<p>你去年的FLAG完成了么？</p>
+<p>应该如何立FLAG呢？</p>
+<p>我自己也立了一个FLAG，就是要用读一年《易经》，读的目的呢？是用《易经》把自己这么多年的知</p>
+<p>识串起来。</p>
+<p>那么，具体如何做呢？我会从冬至那天开始，每天读64卦中的某一卦的某一爻，然后用一天的时间去</p>
+<p>思考它。</p>
+<p>如此而已。</p>
+<p>这样的计划，我很喜欢。因为每一爻的爻辞都很短。少的几个字，多的十几个字，大概率没有上百个</p>
+<p>字的。所以，每天的阅读量很少，也就不存在我看不完的问题。</p>
+<p>那么，看不懂的问题呢？其实，这个问题更好解决，看不懂就硬看呗。再看看其他人写的内容，牵强</p>
+<p>附会地去理解就好了。毕竟，《易经》的那几万字，也只是《易》本身的一个象而已。</p>
+<p>如果，某天我不想看怎么办？那就不看了呗。</p>
+<p>如果我看到一半，不想看了，怎么办？那就不看了呗。</p>
+<p>因为，我的目的是用《易经》来串起我的知识，如果这个过程难受，说明错了，那就可以终止，也可</p>
+<p>以休息。</p>
+<p>其实，定所有的FLAG都是这样的，你不应该定一个硬核的FLAG：我要每天五点起床；我要每天跑步</p>
+<p>10公里。</p>
+<p>这样的FLAG太硬核，太暴力，因为它很难完成。</p>
+<p>你可能5：10分起床，甚至6点起床，这些都没有问题，如果你非要强迫自己5点起床，那么，你的身</p>
+<p>体、精神就会面临巨大的压力，反而让自己更加不健康。如果你不考虑任何因素，每天都要跑10公</p>
+<p>里，那么你也会给自己巨大的精神压力，让自己失去信心，从而完成不了这个FLAG。</p>
+<p>所以，我们在定FLAG时，需要柔和一些，温柔一些，要容易实现一些，描述要给自己留一些空间。</p>
+<p>比如，”明年我要找到爱情“，可以改成”我会接受突如其来的爱情“；”我要减到100斤以内“可以改成”我</p>
+<p>要经常性运动，让自己保持良好的心态和身体“。</p>
+<p>毕竟，人生苦短，没必要那么为难自己。既然立FLAG，那就立一个好实现的，到了年底时可以收获一</p>
+<p>些成功感。</p>
+<p>那么，我的FLAG呢？</p>
+<p>就是明年每天读一爻《易经》，每一卦写一篇解读的小文。</p>
+<p>期待明年这会，我可以给出我的FLAG的完成情况。</p>
+<h2 id="大纲">大纲</h2>
+<h2 id="百字摘要">百字摘要</h2>
+<h2 id="金庸案例">金庸案例</h2>
+<h2 id="时间消耗">时间消耗</h2>
+<h2 id="阅读理解">阅读理解：</h2>
+<h2 id="大纲-1">大纲：</h2>
+<h2 id="撰写">撰写：</h2>
+<h2 id="录音">录音</h2>
+<h2 id="一小时运动">一小时运动</h2>
+<h2 id="英文原文">英文原文</h2>
+<p>20 DECEMBER</p>
+<p>The Temptation to Do Good</p>
+<p>Temptation：</p>
+<p>Do Good：做好事</p>
+<p>[ C U ] the desire to do or have sth that you know is bad or
+wrong</p>
+<p>引诱；诱惑</p>
+<p>Public-service institutions are out to maximize rather than to
+optimize.</p>
+<p>out to：试图</p>
+<p>The most important obstacle to innovation is that public-service
+institutions exist, after all, to “do</p>
+<p>good.”</p>
+<p>obstacle：</p>
+<p>障碍；阻碍；绊脚石</p>
+<p>innovation：</p>
+<p>（新事物、思想或方法的）创造；创新；改革</p>
+<dl>
+<dt>exist to：存在于，致力于</dt>
+<dd>
+<p>(to sth/to doing sth) a situation, an event, etc. that makes it
+difficult for you to do or achieve sth</p>
+</dd>
+</dl>
+<p>[ U ] the introduction of new things, ideas or ways of doing sth</p>
+<p>This means that they tend to see their mission as a moral absolute
+rather than as economic and</p>
+<p>subject to a cost/benefit calculus.</p>
+<p>moral：</p>
+<p>道德的</p>
+<p>calculus：</p>
+<p>[ only before noun ] concerned with principles of right and wrong
+behaviour</p>
+<p>object</p>
+<p>微积分</p>
+<p>[ U ] the type of mathematics that deals with rates of change, for
+example in the slope of a curve or the speed of a falling</p>
+<p>Economics always seeks a different allocation of the same resources
+to obtain a higher yield.</p>
+<p>allocation：n. 分配，配置；安置</p>
+<p>yield：</p>
+<p>产量；产出；利润</p>
+<p>[ C U ] the total amount of crops, profits, etc. that are
+produced</p>
+<p>In the public-service institution, there is no such thing as a higher
+yield. If one is “doing good,” then</p>
+<p>there is no “better.” Indeed, failure to attain objectives in the
+quest for a “good” only means that</p>
+<p>efforts need to be redoubled.</p>
+<p>quest：</p>
+<p>探索，寻找，追求（幸福</p>
+<dl>
+<dt>等）</dt>
+<dd>
+<p>(for sth) ( formal ) ( literary ) a long search for sth, especially
+for some quality such as happiness</p>
+</dd>
+</dl>
+<p>redoubled：</p>
+<p>[ VN ] to increase sth or make it stronger</p>
+<p>加倍；增加；加强</p>
+<p>“Our mission will not be completed,” asserts the head of the Crusade
+Against Hunger, “as long as</p>
+<p>there is one child on the earth going to bed hungry.”</p>
+<p>asserts：</p>
+<p>坚定地陈述</p>
+<p>Crusade：</p>
+<dl>
+<dt>V-T If someone asserts a fact or belief, they state it firmly.</dt>
+<dd>
+<p>(for/against sth) | ~ (to do sth) a long and determined effort to
+achieve sth that you believe to be right or to stop sth that</p>
+</dd>
+</dl>
+<p>you believe to be wrong</p>
+<p>（长期坚定不移的）斗争，运动</p>
+<p>If he were to say, “Our mission will be completed if the largest
+possible number of children that can</p>
+<p>be reached through existing distribution channels get enough to eat
+not to be stunted,” he would</p>
+<p>be booted out of office.</p>
+<p>stunted：</p>
+<p>发育不足的；生长不良的；未能充分发展的</p>
+<p>stunt：</p>
+<p>阻碍生长；妨碍发展；遏制</p>
+<p>boot out ：</p>
+<p>that has not been able to grow or develop as much as it should</p>
+<p>[ VN ] to prevent sb/sth from growing or developing as much as
+they/it should</p>
+<p>fire</p>
+<p>But if the goal is maximization, it can never be attained.</p>
+<p>Indeed, the closer one comes toward attaining one’s objective, the
+more efforts are called for.</p>
+<p>For, once optimization has been reached, additional costs go up
+exponentially while additional</p>
+<p>results fall off exponentially.</p>
+<p>optimization:n. 最佳化，最优化</p>
+<p>exponentially:adv. 以指数方式</p>
+<p>fall off: 减少；跌落；下降；离开；衰退</p>
+<ol start="14" type="a">
+<li></li>
+</ol>
+<p>leave, fail, split, flag</p>
+<p>The closer a public-service institution comes to attaining its
+objectives, therefore, the more</p>
+<p>frustrated it will be and the harder it will work on what it is
+already doing.</p>
+<p>frustrated:</p>
+<dl>
+<dt>懊丧；懊恼；沮丧</dt>
+<dd>
+<p>(at/with sth) feeling annoyed and impatient because you cannot do or
+achieve what you want</p>
+</dd>
+</dl>
+<h3 id="action-point">ACTION POINT:</h3>
+<p>Prison Fellowship seeks to reduce the rate at which released
+prisoners are incarcerated again</p>
+<p>because of new crimes.</p>
+<p>incarcerated:</p>
+<p>监禁</p>
+<p>V-T If people are incarcerated, they are kept in a prison or other
+place.</p>
+<p>Why would it be unwise for Prison Fellowship to try to eliminate
+so-called “recidivism?”</p>
+<p>eliminate:</p>
+<p>排除；清除；消除</p>
+<p>recidivism 再犯，累犯</p>
+<p>[ VN ] ~ sth/sb (from sth) to remove or get rid of sth/sb</p>
+<p>:n.</p>
+<p>recommitment, jailbird</p>
+<p>Innovation and Entrepreneurship</p>
+<h2 id="december">20 DECEMBER</h2>
+<h3 id="the-temptation-to-do-good">The Temptation to Do Good</h3>
+<p>Public-service institutions are out to maximize rather than to
+optimize.</p>
+<p>The most important obstacle to innovation is that public-service
+institu-</p>
+<p>tions exist, after all, to “do good.” This means that they tend to
+see their</p>
+<p>mission as a moral absolute rather than as economic and subject to a
+cost/</p>
+<p>benefit calculus. Economics always seeks a different allocation of
+the same</p>
+<p>resources to obtain a higher yield. In the public-service
+institution, there is no</p>
+<p>such thing as a higher yield. If one is “doing good,” then there is
+no “better.”</p>
+<p>Indeed, failure to attain objectives in the quest for a “good”</p>
+<p>only means that efforts need to be redoubled.</p>
+<p>“Our mission will not be completed,” asserts the head of the
+Crusade</p>
+<p>Against Hunger, “as long as there is one child on the earth going to
+bed</p>
+<p>hungry.” If he were to say, “Our mission will be completed if the
+largest</p>
+<p>pos-sible number of children that can be reached through existing</p>
+<p>distribution channels get enough to eat not to be stunted,” he would
+be</p>
+<p>booted out of of-fice. But if the goal is maximization, it can never
+be</p>
+<p>attained. Indeed, the closer one comes toward attaining one’s
+objective,</p>
+<p>the more efforts are called for. For, once optimization has been
+reached,</p>
+<p>additional costs go up exponentially while additional results fall
+off</p>
+<p>exponentially. The closer a public-service institution comes to
+attaining</p>
+<p>its objectives, therefore, the more frustrated it will be and the
+harder it</p>
+<p>will work on what it is already doing.</p>
+<h3 id="action-point-1">ACTION POINT:</h3>
+<p>Prison Fellowship seeks to reduce the rate at which re-</p>
+<p>leased prisoners are incarcerated again because of new crimes.
+Why</p>
+<p>would it be unwise for Prison Fellowship to try to eliminate
+so-called</p>
+<p>“recidi-vism?”</p>
+<h4 id="innovation-and-entrepreneurship">Innovation and
+Entrepreneurship</h4>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

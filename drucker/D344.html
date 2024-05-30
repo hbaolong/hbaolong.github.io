@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="第三同读" />
+  <title>德鲁克日志</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">德鲁克日志</h1>
+<p class="author">第三同读</p>
+</header>
+<h2 id="透过金庸读懂德鲁克">透过金庸读懂德鲁克</h2>
+<p>我写过几篇人物小传</p>
+<p>我写过几篇人物小传，有范蠡，有李白，有杜甫，还有王振，刘备、萧绎、德鲁克、陈子昂等等等</p>
+<p>等。</p>
+<p>比如，我写范蠡，我发现，范蠡在42岁前就是个屌丝，42岁后的人生才开始开挂，走出了一个又一个</p>
+<p>的高峰。</p>
+<p>李白也差不多，42岁前虽然很有才华，却四处碰壁，42岁时才得到达官贵人的赏识，被唐玄宗任命为</p>
+<p>翰林。不到44岁又被贬了，一生颠破流离。</p>
+<p>这两个人是我随即选的，我写他们时，我也是42岁，当我发现他们42岁前都在迷茫时，我有些放心</p>
+<p>了。</p>
+<p>看来，不只是我一个人迷茫。这些伟人也在迷茫。</p>
+<p>我很少读人物传记，碳9的人喜欢读人物传记，碳9的发起人冯新老师总结了读人物传记的一些方法</p>
+<p>论，称为创始人对标。</p>
+<p>冯新老师认为：拿自己的情况与对标的创始人逐项对比，寻找差距和启示。每一个成功的创业者都是</p>
+<p>不可复制的，研究他不是为了成为他，研究他人的目的在于发现自己；研究他人走过的道路，目的为</p>
+<p>了找到自己前行的道路。</p>
+<p>当然，这和碳9是一个创业型社区有关系，碳9从初始的碳9学社，成长为碳9加速器，然后是现在的碳</p>
+<p>9资本，一步步的成长，都是在关注创业者的成长。</p>
+<p>冯新老师认为，创业者的成长必须要学习，而且最佳的是阅读传记。</p>
+<p>查理芒格也非常喜欢读人物传记，不要问我查理芒格是谁，如果你不知道他，就自己去百度吧。在某</p>
+<p>一次采访中，查理芒格说自己每年要阅读100本人物传记。这个数量是非常惊人的，至少惊了我。</p>
+<p>那么，阅读人物传记是怎么样的一回事呢？我去话一天或者半天时间去写人物小传是为了什么呢？</p>
+<p>其实，都是为了给我们的自己人生找个标杆，告诉自己，原来人生是可以“那么过的”。</p>
+<p>比如，我读过范蠡后，就发现，原来42岁是可以开始做很多事的，我读过礼拜后就知道，原来有才华</p>
+<p>和生活舒适是两回事。我读过《乔布斯传》后才知道，原来不懂技术的乔布斯也可以成为伟大的发明</p>
+<p>家。</p>
+<p>早上在群里聊天，有同学说，找个人对标是有问题的，这样会“削足适履”。看到“削足适履”这个词，我</p>
+<p>有点懵，为什么你看到一双好的鞋，就要去砍自己的脚呢？</p>
+<p>我觉得，人物传记的阅读，只是给我们打开一个窗口，让我们知道人生可以如此地精彩，人生遇到问</p>
+<p>题时可以如此地解决。</p>
+<p>比如，前段时间，我非常郁闷，甚至怀疑自己得了抑郁症，我不断寻求生命的意义。然后我遇到了两</p>
+<p>本书，都是传记性质的书。</p>
+<p>一本是托尔斯泰的《忏悔录》
+，记录的是托尔斯泰通过理性思考来寻找生命的意义，无比富足的托尔</p>
+<p>斯泰为了避免自杀，绞尽脑汁寻找生命的意义。而另一个书是《活出生命的意义》，作者维克多·弗兰</p>
+<p>克尔记录了自己的纳粹集中营里，每天被各种虐待，随时面临死亡，在这种人间地狱中，作者在也在</p>
+<p>寻求活下去的意义。</p>
+<p>当我看到这两个人，一个在九天之上思考人生的意义，一个在十八层地狱思考人生的意义。而且他们</p>
+<p>都找到了时，我就知道自己一定也可以找到，即使找不到也没关系。我也就坦然了。</p>
+<p>所以，我们读人物传记，并不是要去学习某个人的成功或者躲避某个人的失败。而是当我们面临具体</p>
+<p>问题是，我们可以知道，某某人曾经如何做过。</p>
+<p>到目前为止，我读过的人物传记还是很少，我曾经发愿，要写出1000个人的人物小传。现在也就写了</p>
+<p>不到10个。我想我以后不一定会完成这个愿望了，不过，我会读更多的人物传记，比如韩愈的，比如</p>
+<p>苏轼的，比如鲁迅的，比如矛盾的。</p>
+<p>读这些人，可以让我在后续的人生中更加坦然，而不是为了成为某个人。</p>
+<p>如此而已。</p>
+<h2 id="大纲">大纲</h2>
+<h2 id="百字摘要">百字摘要</h2>
+<h2 id="金庸案例">金庸案例</h2>
+<h2 id="时间消耗">时间消耗</h2>
+<h2 id="阅读理解">阅读理解：</h2>
+<h2 id="大纲-1">大纲：</h2>
+<h2 id="撰写">撰写：</h2>
+<h2 id="录音">录音</h2>
+<h2 id="一小时运动">一小时运动</h2>
+<h2 id="英文原文">英文原文</h2>
+<p>9 DECEMBER</p>
+<p>Benchmarking for Competitiveness</p>
+<p>Competitiveness：n. 竞争力，好竞争</p>
+<p>Benchmarking assumes that being at least as good as the leader is a
+prerequisite to being</p>
+<p>competitive.</p>
+<p>Benchmarking: 标杆分析法，
+就是将本企业各项活动与从事该项活动最佳者进行比较，从而提出行动</p>
+<p>方法，以弥补自身的不足。Benchmarking是将本企业经营的各方面状况和环节与竞争对手或行业内外</p>
+<p>一流的企业进行对照分析的过程，是一种评价自身企业和研究其他组织的手段，是将外部企业的持久</p>
+<p>业绩作为自身企业的内部发展目标并将外界的最佳做法移植到本企业的经营环节中去的一种方法。实</p>
+<p>施benchmarking的公司必须不断对竞争对手或一流企业的产品、服务、经营业绩等进行评价来发现优</p>
+<p>势和不足。</p>
+<p>prerequisite：</p>
+<p>[ usually sing. ] ~ (for/of/to sth) ( formal ) something that must
+exist or happen before sth else can happen or be</p>
+<p>先决条件；前提；必备条件</p>
+<p>competitive： ~ (with sb/sth) as good as or better than others
+（与…）一样好的；（比…）更好的；有竞争力的</p>
+<p>done</p>
+<p>EVA (economic value added analysis) is a good start to assess the
+competitiveness of an</p>
+<p>enterprise in the global marketplace, but to it we must add
+benchmarking.</p>
+<p>assess：</p>
+<p>估算，估定，核定（数量、价值）</p>
+<p>competitiveness：n. 竞争力</p>
+<p>[ VN ] ~ sth (at sth) to calculate the amount or value of sth</p>
+<p>Benchmarking is a tool that helps a firm tell whether or not it is
+globally competitive.</p>
+<p>Benchmarking assumes, correctly, that what one company does another
+company can always do</p>
+<p>as well.</p>
+<p>assumes：</p>
+<p>假设</p>
+<p>V-T If you assume that something is true, you imagine that it is
+true, sometimes wrongly.</p>
+<p>“Best performers” are often found in identical services or functions
+inside an organization, in</p>
+<p>competitor organizations, but also in organizations outside the
+industry.</p>
+<p>performers: n. 表演者；执行者</p>
+<p>identical:</p>
+<dl>
+<dt>完全同样的；相同的</dt>
+<dd>
+<p>(to/with sb/sth) similar in every detail</p>
+</dd>
+</dl>
+<p>Together, EVA and benchmarking provide the diagnostic tools needed to
+measure totalfactor productivity and to manage it.</p>
+<p>diagnostic:</p>
+<p>术语</p>
+<p>诊断的；判断的</p>
+<p>[ usually before noun ] ( technical</p>
+<p>) connected with identifying sth, especially an illness</p>
+<p>They are examples of the new tools executives should understand to
+measure and manage what</p>
+<p>goes on inside the enterprise.</p>
+<p>Combined, they are the best measures we have so far available.</p>
+<p>Combined：adj. 结合的；[数] 组合的</p>
+<h3 id="action-point">ACTION POINT:</h3>
+<p>Instigate a benchmarking study by gathering data on a product,
+service, or process from a</p>
+<p>comparable organization, even from one outside your industry.</p>
+<p>Instigate：</p>
+<p>comparable：</p>
+<p>industry：</p>
+<dl>
+<dt>使（正式）开始；使发生</dt>
+<dd>
+<p>(to/with sb/sth) similar to sb/sth else and able to be compared
+类似的；可比较的</p>
+</dd>
+</dl>
+<p>[ U ] the production of goods from raw materials, especially in
+factories 工业；生产制造</p>
+<p>( especially BrE ) to make sth start or happen, usually sth
+official</p>
+<p>Set performance measures to ensure that you are competitive with the
+best performers.</p>
+<p>Management Challenges for the 21st Century</p>
+<p>From Data to Information Literacy (Corpedia Online Program)</p>
+<h2 id="december">9 DECEMBER</h2>
+<h3 id="benchmarking-for-competitiveness">Benchmarking for
+Competitiveness</h3>
+<p>Benchmarking assumes that being at least as good as the leader</p>
+<p>is a prerequisite to being competitive.</p>
+<p>EVA (economic value added analysis) is a good start to assess the
+com-</p>
+<p>petitiveness of an enterprise in the global marketplace, but to it we
+must add</p>
+<p>benchmarking. Benchmarking is a tool that helps a firm tell whether
+or not it</p>
+<p>is globally competitive. Benchmarking assumes, cor-rectly, that what
+one</p>
+<p>company does another company can always do as well. “Best performers”
+are</p>
+<p>often found in identical services or functions in-side an
+organization, in</p>
+<p>competitor organizations, but also in organizations outside the
+industry.</p>
+<p>Together, EVA and benchmarking provide the diag-nostic tools needed
+to</p>
+<p>measure total-factor productivity and to manage it. They are examples
+of the</p>
+<p>new tools executives should understand to mea-sure and manage what
+goes</p>
+<p>on inside the enterprise. Combined, they are</p>
+<p>the best measures we have so far available.</p>
+<h3 id="action-point-1">ACTION POINT:</h3>
+<p>Instigate a benchmarking study by gathering data on</p>
+<p>Aproduct, service, or process from a comparable organization, even
+from</p>
+<p>one outside your industry. Set performance measures to ensure that
+you</p>
+<p>are competitive with the best performers.</p>
+<p>Management Challenges for the 21st Century</p>
+<h4 id="from-data-to-information-literacy-corpedia-online-program">From
+Data to Information Literacy (Corpedia Online Program)</h4>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

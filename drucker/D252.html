@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="第三同读" />
+  <title>德鲁克日志</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">德鲁克日志</h1>
+<p class="author">第三同读</p>
+</header>
+<h2 id="透过金庸读懂德鲁克">透过金庸读懂德鲁克</h2>
+<p>令狐冲和恒山的尼姑们</p>
+<p>不管责任在谁，令狐冲被岳不群开除了。不过，令狐冲可是个香饽饽，他有师叔祖传给他的独孤九</p>
+<p>剑，还有在西湖底下学会的吸星大法，更主要的是，他有聪明的大脑，良好的社交关系。这些都是他</p>
+<p>的优势。</p>
+<p>所以，他还是很抢手的。</p>
+<p>首先是少林的方证和尚抛出了橄榄枝，方证愿意收他为徒，让他改名为令狐国冲，成为方证的弟子，</p>
+<p>进而可以学习易筋经。</p>
+<p>然后，魔教的任我行也跑出了橄榄枝，邀请他做日月神教的副教主。这也是权势很高的职位。</p>
+<p>不过，这些都不是他想要的。因为，方证的徒弟也只是少林的普通弟子，少林并没有那么需要令狐</p>
+<p>冲，令狐冲的加入也不会让少林发生什么根本的改变。</p>
+<p>日月神教更是，任我行在令狐冲帮助下获得教主身份后，令狐冲又会成为一个普通的教众，没什么特</p>
+<p>别的。</p>
+<p>第三个向令狐冲抛出橄榄枝的是定闲师太。定闲师太是恒山派的掌门。她在临死前传位令狐冲做恒山</p>
+<p>掌门。</p>
+<p>这个令狐冲没法拒绝了。</p>
+<p>一方面，定闲师太对他有恩。令狐冲的性格，有仇不一定报，有恩就肯定报的。</p>
+<p>另一方面，恒山是一个独立的门派，而且是五大派之一，恒山掌门当然是一个很重要的角色。</p>
+<p>事实上，令狐冲一直需要一个位置。这个恒山掌门的位置是他能获得的最佳位置了。</p>
+<p>还有就是，恒山派也需要他。在短时间里，恒山派失去了定闲、定静、定逸三个定字辈师太。武功、</p>
+<p>影响力都大大受挫。恒山派需要一个有一定硬实力的掌门人。这个掌门人，恒山内部没有，而令狐冲</p>
+<p>是最佳人选。</p>
+<p>然后，令狐冲就成了恒山派的掌门，被称为掌门师兄。</p>
+<p>在之后的日子里，令狐冲带着恒山派的尼姑们很左冷禅斗争，和岳不群斗争，让恒山这个纯女子的门</p>
+<p>派居然在五岳派中一枝独秀，称为了五岳派最后的门派。</p>
+<p>后来，任我行死了，岳不群也死了，恒山派的仇也报了，风险也消除了。而令狐冲也就功成名就了。</p>
+<p>令狐冲把掌门之位传给了恒山派的仪清。因为这是的恒山派也没有那么需要他了。而他，也没有那么</p>
+<p>需要恒山派了。在几年间，令狐冲和恒山派之间完成了完美的互相成就。</p>
+<p>最后，恒山派回归了女子为主的门派，令狐冲回归江湖，继续做一个成家的浪子。</p>
+<p>双方都用最好的形式让对方成长了。</p>
+<h2 id="大纲">大纲</h2>
+<h2 id="百字摘要">百字摘要</h2>
+<h2 id="金庸案例">金庸案例</h2>
+<h2 id="时间消耗">时间消耗</h2>
+<h2 id="阅读理解">阅读理解：</h2>
+<h2 id="大纲-1">大纲：</h2>
+<h2 id="撰写">撰写：</h2>
+<h2 id="录音">录音</h2>
+<h2 id="一小时运动">一小时运动</h2>
+<h2 id="英文原文">英文原文</h2>
+<p>8 SEPTEMBER</p>
+<p>Knowledge Worker as Effective Executive</p>
+<p>The executive who works at making strengths productive—his own as
+well as those of others—</p>
+<p>works at making organizational performance compatible with personal
+achievement.</p>
+<p>Self-development of the executive toward effectiveness is the only
+available answer to satisfy both</p>
+<p>the objective needs of society for performance by the organization,
+and the needs of the person</p>
+<p>for achievement and fulfillment.</p>
+<p>It is the only way in which organization goals and individ-ual needs
+can come together.</p>
+<p>Executives who work at making strengths productive—his own as well as
+those of others—work at</p>
+<p>making organizational performance compatible with personal
+achievement.</p>
+<p>They work at making their knowledge area become organizational
+opportunity.</p>
+<p>And by focusing on contribution, they make their own values become
+organization results.</p>
+<p>Knowledge workers demand economic rewards too.</p>
+<p>Their absence is a deterrent.</p>
+<p>But their presence is not enough.</p>
+<p>They need opportunity; they need achievement; they need fulfillment;
+they need values. Only by</p>
+<p>making themselves into effective executives can knowledge workers
+obtain these satisfactions.</p>
+<p>Only executive effectiveness can enable society to harmonize its two
+needs: the needs of the</p>
+<p>organization to obtain from the individual the contribution it needs,
+and the need of the individuals</p>
+<p>to have the organization serve as their tool for the accomplishment
+of their purposes.</p>
+<h3 id="action-point">ACTION POINT:</h3>
+<p>Know your strengths. Apply them to areas in your organization where
+you can make a contribution.</p>
+<p>Make sure your values and the values of the organization are
+compatible.</p>
+<p>The Effective Executive</p>
+<h2 id="september">8 SEPTEMBER</h2>
+<h3 id="knowledge-worker-as-effective-executive">Knowledge Worker as
+Effective Executive</h3>
+<p>The executive who works at making strengths productive—his own as
+well</p>
+<p>as those of others—works at making organizational performance
+compatible</p>
+<p>with personal achievement.</p>
+<p>Self-development of the executive toward effectiveness is the only
+avail-</p>
+<p>able answer to satisfy both the objective needs of society for
+perfor-mance by</p>
+<p>the organization, and the needs of the person for achievement and
+fulfillment.</p>
+<p>It is the only way in which organization goals and individ-ual needs
+can come</p>
+<p>together. Executives who work at making strengths productive—his own
+as</p>
+<p>well as those of others—work at making organiza-tional
+performance</p>
+<p>compatible with personal achievement. They work at making their
+knowledge</p>
+<p>area become organizational opportunity. And by focusing on
+contribution,</p>
+<p>they make their own values become organization</p>
+<p>results.</p>
+<p>Knowledge workers demand economic rewards too. Their absence is</p>
+<p>Adeterrent. But their presence is not enough. They need opportunity;
+they</p>
+<p>need achievement; they need fulfillment; they need values. Only by
+mak-</p>
+<p>ing themselves into effective executives can knowledge workers
+obtain</p>
+<p>these satisfactions. Only executive effectiveness can enable society
+to</p>
+<p>har-monize its two needs: the needs of the organization to obtain
+from the</p>
+<p>in-dividual the contribution it needs, and the need of the
+individuals to</p>
+<p>have the organization serve as their tool for the accomplishment of
+their</p>
+<p>pur-poses.</p>
+<h3 id="action-point-1">ACTION POINT:</h3>
+<p>Know your strengths. Apply them to areas in your organi-</p>
+<p>zation where you can make a contribution. Make sure your values and
+the</p>
+<p>values of the organization are compatible.</p>
+<h4 id="the-effective-executive">The Effective Executive</h4>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

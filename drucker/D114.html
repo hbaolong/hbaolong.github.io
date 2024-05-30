@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="第三同读" />
+  <title>德鲁克日志</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">德鲁克日志</h1>
+<p class="author">第三同读</p>
+</header>
+<h2 id="透过金庸读懂德鲁克">透过金庸读懂德鲁克</h2>
+<p>杨过是一个遗腹子，没多大时妈妈又走了，自己一个人流落江湖。后来来了一个人，自称是他伯伯，</p>
+<p>把他带到了一个叫做桃花岛的地方。</p>
+<p>郭靖伯伯对他很好，在江湖上流浪了很久的小杨过很期待家庭和大人的温暖。却对所有的好都不敢有</p>
+<p>过多的期待。所以，当黄蓉伯母逼他离开时，他并不意外，只是有些伤心。因为在他心里，郭伯伯是</p>
+<p>一个那么好的人，可惜小杨过只是一个小孩子，自己做不了主。</p>
+<p>郭伯伯把他带到了一个叫做重阳宫的地方，让他跟着一群道士学武功，学成后再回到桃花岛和郭伯伯</p>
+<p>一起做事，小杨过看到郭伯伯把道士们打的七零八落，就很看不起那些道士，也就越发地敬畏郭伯伯</p>
+<p>了。在小杨过眼里，郭伯伯就是父亲的替身，是小杨过情感的归宿。</p>
+<p>后来重阳宫也待不下去了，小杨过也不想待。小杨过跑到了一个叫做活死人墓的地方，遇见了一个叫</p>
+<p>做小龙女的女生。这个女生比他大一些，武功也很高。虽然一定不如郭伯伯高，虽然不一定比重阳宫</p>
+<p>那些道士高，小龙女却真的会教他，真的把他当成亲人。</p>
+<p>小杨过第一次感受到了温暖。</p>
+<p>后来小杨过长大了，再次闯进了他曾经流浪过的江湖，这时的小杨过已经跟着小龙女学了很多武功，</p>
+<p>小杨过觉得自己可以去找郭伯伯了。杨过多想和郭伯伯在一起呀。</p>
+<p>可是，当郭伯伯知道他喜欢自己的师父，想娶自己的师父为妻时，郭伯伯对杨过充满了失望。看到郭</p>
+<p>伯伯严重的失望，杨过的心都要碎了。是呀，自己又让郭伯伯失望了。</p>
+<p>伤心的杨过带着小龙女离开了郭伯伯处，不知道该去哪里，体贴的小龙女怕他为难，就独自悄悄离开</p>
+<p>了。</p>
+<p>杨过疯了一样去找小龙女，杨过是非常爱小龙女的，这个第一个给了我自己温暖的女生。杨过又是非</p>
+<p>常期待郭伯伯对自己的认可的，那个像父亲一样沉默、稳重而有担当的男人。然而，郭伯伯却不想让</p>
+<p>自己去爱那个自己最爱的女人。</p>
+<p>杨过真的好为难。</p>
+<p>后来，杨过又找到了小龙女，杨过知道自己离不开小龙女。想着和小龙女一起，然后面对郭伯伯。</p>
+<p>郭伯伯也是非常器重杨过的，杨过是他结义兄弟杨康的遗腹子，郭伯伯是一个很重感情的人，对于郭</p>
+<p>靖来说，杨过和自己的儿子没有什么区别，郭靖希望杨康成了一个顶天立地的男子汉，而不要重蹈他</p>
+<p>爸爸杨康的覆辙。</p>
+<p>杨过这个从小流浪的孩子，也在想着如何才可以被郭伯伯接受。他想，自己武功高一些，或许郭伯伯</p>
+<p>就会器重自己了。</p>
+<p>所以，杨过拼命学武功，古墓派，蛤蟆功，打狗棒法，弹指神通，九阴真经，这些神级武功，杨过都</p>
+<p>学了，而且都学的不错。杨过也非常聪明，小小年龄武功已经是年轻一代里的最佳了。</p>
+<p>杨过却感觉，郭伯伯还是看不起他，看不起那个和自己姑姑相爱的自己。杨过很伤心。</p>
+<p>就像一个委屈的儿子，总是得不到父亲的认可。却不知道什么原因。</p>
+<p>后来小龙女离开了杨过，据说要16年后才能相见。</p>
+<p>伤心而无奈的杨过也离开了郭伯伯，重新在江湖上“混”。</p>
+<p>郭伯伯这时已经是襄阳的民族英雄，带着军民抵抗蒙古军的进攻。</p>
+<p>十多年的江湖闯荡，让杨过懂了很多很多，也懂了郭伯伯对自己的感情。这时的杨过已经成了神雕侠</p>
+<p>了，他知道自己长大了。也懂得了郭伯伯的“为国为民，侠之大者”了。也对郭伯伯更加敬重了。</p>
+<p>杨过想去找郭伯伯。</p>
+<p>正好这时，杨过遇见了小郭襄，这个聪明而可爱的小姑娘。</p>
+<p>杨过知道，自己的混迹江湖，自己的义父，自己和师父的情感，对于稳重的郭伯伯来说都是一些不好</p>
+<p>的东西，都是郭伯伯不喜欢的。不过，对于郭伯伯来说，为国为民才是最大的是非，这一点也是杨过</p>
+<p>最为敬重的。</p>
+<p>当杨过遇见小郭襄时，杨过知道自己的机会来了。知道自己重新出现在郭伯伯面前，被郭伯伯接受的</p>
+<p>机会来了。</p>
+<p>当小郭襄拿出第二根金针，让他去过一个生日时，杨过已经想好了对郭伯伯的表白，他要告诉郭伯</p>
+<p>伯，自己虽然有很多瑕疵，可是在信念和价值观上都是和郭伯伯一致的，他希望得到郭伯伯的认可。</p>
+<p>然后，杨过送给了小郭襄三个礼物：一件是蒙古先锋战队2000只耳朵；一件是火烧蒙古20万大军的粮</p>
+<p>草；还一件就是揭穿霍都的真面目，挽回丐帮的颓势和面子。</p>
+<p>这三件礼物也是送给郭伯伯的，是告诉郭伯伯，自己虽然有各种不是行事始终是不拘常理，亦正亦邪</p>
+<p>亦狂，所结交的人物也是三教九流、鱼龙混杂。但自己的价值观是没问题的，自己于国于民也是有价</p>
+<p>值的，而这个是郭伯伯最看重的。</p>
+<p>果然，郭伯伯再次接受了杨过。郭伯伯也是用人之际，马上把杨过拉入了核心团队。</p>
+<p>在被郭伯伯接受前，杨过只是一个江湖豪客；在被郭伯伯接受后，杨过迅速成为了民族英雄，神雕侠</p>
+<p>侣，也成了新五绝之一。</p>
+<p>对于杨过来说，给小郭襄的三个礼物是一个关键事件，在那个事件中，杨过在郭靖面前表现了自己的</p>
+<p>价值观和信念，也得到了关键晋升。而这个晋升，对郭靖也是很重要的，因为在即将进行的新五绝人</p>
+<p>选中，需要杨过这样的人。杨过通过这个事件成功进入了郭靖的核心圈子。成为了新五绝的候选人。</p>
+<p>而郭靖也通过对杨过的选择，表明了自己的信念和价值观。这一点，也是德鲁克对一个组织的建议。</p>
+<p>德鲁克认为</p>
+<h2 id="百字摘要">百字摘要</h2>
+<p>进入决策层的晋升是组织以及个人的关键晋升，进入之前，你为某个岗位工作，进入后，你为整个公</p>
+<p>司工作。</p>
+<h2 id="金庸案例">金庸案例</h2>
+<ol type="1">
+<li><p>三次华山论剑</p></li>
+<li><p>杨过成长记</p></li>
+</ol>
+<p>23 APRIL</p>
+<p>The Crucial Promotions</p>
+<p>The crucial promotion is into the group from which tomorrow’s top
+people will have to be selected.</p>
+<p>crucial:</p>
+<p>至关重要的；关键性的</p>
+<p>extremely important, because it will affect other things</p>
+<p>If a company is to obtain the needed contributions, it must reward
+those who make them.</p>
+<p>contributions：</p>
+<p>贡献</p>
+<p>If you make a contribution to something, you do something to help
+make it successful or to produce it.</p>
+<p>Decisions on people and especially its promotions affirm what an
+organization really believes in,</p>
+<p>really wants, really stands for.</p>
+<p>affirm：</p>
+<p>肯定属实；申明；断言</p>
+<p>( formal ) to state firmly or publicly that sth is true or that you
+support sth strongly</p>
+<p>They speak louder than words and tell a clearer story than any
+figures.</p>
+<p>figures：</p>
+<p>数字</p>
+<p>A figure is a particular amount expressed as a number, especially a
+statistic.</p>
+<p>The crucial promotion is not a person’s first—though it may be the
+most important one to her and</p>
+<p>to her career.</p>
+<p>Nor is it the final one into the top position; there a management
+must choose from a small, already</p>
+<p>prese-lected group.</p>
+<p>The crucial promotion is into the group from which tomorrow’s top
+people will have to be selected.</p>
+<p>It is the decision at the point where the pyramid in an organization
+narrows abruptly.</p>
+<p>pyramid：</p>
+<p>金字塔式的组织（或系</p>
+<p>统）</p>
+<p>an organization or a system in which there are fewer people at each
+level as you get near the top</p>
+<p>abruptly： 突然地；唐突地</p>
+<ol start="14" type="a">
+<li></li>
+</ol>
+<p>suddenly, shortly, sharp</p>
+<p>Up to this point, there are in a large organization usually forty to
+fifty people to choose from for</p>
+<p>every vacant spot.</p>
+<p>vacant：</p>
+<p>座位、旅馆房间、房屋等</p>
+<p>空着的；未被占用的</p>
+<p>spot:</p>
+<p>斑点</p>
+<p>( of a seat, hotel room, house, etc.</p>
+<p>) empty; not being used</p>
+<p>a small round area that has a different colour or feels different
+from the surface it is on</p>
+<p>Above it, the choice narrows to one out of three or four.</p>
+<p>Up to this point also, a person usually works in one area or
+function. Above it, she works in the</p>
+<p>business.</p>
+<h3
+id="action-point-use-your-influence-to-ensure-that-promotions-to-positions-of-senior-leadership">ACTION
+POINT: Use your influence to ensure that promotions to positions of
+senior leadership</h3>
+<p>affirm what your organization really stands for.</p>
+<p>affirm :</p>
+<p>肯定属实；申明；断言</p>
+<p>( formal ) to state firmly or publicly that sth is true or that you
+support sth strongly</p>
+<p>Managing for Results</p>
+<h2 id="april">23 APRIL</h2>
+<h3 id="the-crucial-promotions">The Crucial Promotions</h3>
+<p>The crucial promotion is into the group from which</p>
+<p>tomorrow’s top people will have to be selected.</p>
+<p>If a company is to obtain the needed contributions, it must reward
+those who</p>
+<p>make them. Decisions on people and especially its promotions af-firm
+what an</p>
+<p>organization really believes in, really wants, really stands for.</p>
+<p>They speak louder than words and tell a clearer story than any
+figures. The</p>
+<p>crucial promotion is not a person’s first—though it may be the
+most</p>
+<p>important one to her and to her career. Nor is it the final one into
+the top</p>
+<p>position; there a management must choose from a small, already
+prese-</p>
+<p>lected group. The crucial promotion is into the group from which
+tomor-</p>
+<p>row’s top people will have to be selected. It is the decision at the
+point</p>
+<p>where the pyramid in an organization narrows abruptly. Up to this
+point,</p>
+<p>there are in a large organization usually forty to fifty people to
+choose</p>
+<p>from for every vacant spot. Above it, the choice narrows to one out
+of</p>
+<p>three or four. Up to this point also, a person usually works in one
+area or</p>
+<p>function. Above it, she works in the business.</p>
+<h3 id="action-point">ACTION POINT:</h3>
+<p>Use your influence to ensure that promotions to posi-tions</p>
+<p>of senior leadership affirm what your organization really stands
+for.</p>
+<h4 id="managing-for-results">Managing for Results</h4>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

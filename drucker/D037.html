@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="第三同读" />
+  <title>德鲁克日志</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">德鲁克日志</h1>
+<p class="author">第三同读</p>
+</header>
+<h2 id="透过金庸读懂德鲁克">透过金庸读懂德鲁克</h2>
+<p>大理！我们是一个统一的国家</p>
+<p>2月2日，云南大理市卫生健康局给一位市民发了一份《应急处置征用通知书》，将这位市民通过顺丰</p>
+<p>物流从云南瑞丽市发往四川成都的15件口罩征用了。请注意，这是从瑞丽发往成都的，大理只是途</p>
+<p>经。</p>
+<p>看到这个征用，重庆市就着急了，第二天，2月3日，疫情防控工作领导小组给大理市卫生健康局就发</p>
+<p>了一个《关于商请放行暂扣物资的函》说：这批口罩，是我们的紧急物资。</p>
+<p>然后湖北黄石也着急了，2月4日发了一个《工作联系函》：黄石疫情防控指挥部委托黄石本地企业和</p>
+<p>重庆黄石商会企业，协助采购了一批口罩，也在这一批查扣征用范围内，黄石是重灾区，我们也急需</p>
+<p>啊。</p>
+<p>然后大理市卫生健康局怎么回答呢？2月5日，他们说：这是政府决定，不是我们一个部门的事，被征</p>
+<p>用的口罩“已经送到一线了”。</p>
+<p>在金庸笔下，南北宋时大理曾经是一个独立的国家：大理国。段思平开国后，后来的皇帝有段正明、</p>
+<p>段誉、段智兴等，这些皇帝也都是金庸笔下的高手。大理国最后一为皇帝段兴智灭国后，大理就被并</p>
+<p>入了元朝。之后就再也没有独立过了。</p>
+<p>五千年来，中国分分合合，甚至还出现过南北朝以及五胡十国的极度混乱。庆幸的是，中国的文化之</p>
+<p>是趋同的。不管是分裂还是大一统时，大家的共同认知都是一个国家。</p>
+<p>当然，大理这么做是有她的道理的。《突发事件应对法》第12条：“有关人民政府及其部门为应对突发</p>
+<p>事件，可以征用单位和个人的财产。”第52条：“履行统一领导职责或者组织处置突发事件的人民政</p>
+<p>府，必要时可以向单位和个人征用应急救援所需设备、设施、场地、交通工具和其他物资。”《传染病</p>
+<p>防治法》第45条：“传染病暴发、流行时，根据传染病疫情控制的需要，县级以上地方人民政府有权在</p>
+<p>本行政区域内紧急调集人员或者调用储备物资，临时征用房屋、交通工具以及相关设施、设备。”</p>
+<p>大理是一个县级市，有权“在本行政区域内紧急调集人员或者调用储备物资”。这就是大理做这件事合</p>
+<p>法的地方。</p>
+<p>那么，这件事真的合法么？《突发事件应对法》等，都是全国的法律。这些法律赋予了政府在紧急情</p>
+<p>况下处理事情的权力。</p>
+<p>目前全国所有的省市都启动了【重大突发公共卫生事件一级响应状态】，在这种情况下，如果各地都</p>
+<p>引用这个法律截获口罩、消毒水等物质，重点城市的物质怎么保证？</p>
+<p>我们有的省、市恰好是边境，比如青岛、大理等，或者是国家的国际港，或者是重要通道。我们整个</p>
+<p>国家的各地政府都在努力为疫情做贡献的同时，也在保证每个城市以及这个国家的正常运转：蔬菜可</p>
+<p>以到老百姓附近的超市里，汽油可以到各地的加油站里，水和燃气可以通到每家每户，老百姓买的东</p>
+<p>西可以通过物流到每个人的手里，老百姓买的口罩、消毒液等，也可以到每个人的手里。</p>
+<p>各地政府都在努力想办法，想办法让自己辖区的老百姓可以吃到蔬菜、肉蛋，用到汽油，戴上口罩。</p>
+<p>而这个努力，是在可以理解的正常范围内，是在考虑自己城市的基本职责后。而不是利用自己的基本</p>
+<p>职责来“拦路抢劫”。</p>
+<p>这就是一个简单的“全国视野”了。</p>
+<p>从国家的角度，西气东输是为了东部的经济发展，三峡工程是为了我们前年的水利。隋朝的一条大运</p>
+<p>河也是为了贯穿南北，把江浙的粮食运送到北方来。</p>
+<p>如果每个地方都以邻为壑，这个国家还能做什么么？那不就成了一个个的小王国么？所以，当大理引</p>
+<p>用《突发事件应对法》等法律来劫取物资时，他们的视野除了问题，他们只看到了自己的城市，而忽</p>
+<p>略了云南省，忽略了全国。这也开了一个坏头：一旦各地都利用自己的地理位置优势来“劫取”，那么</p>
+<p>大理会何去何从？</p>
+<p>金庸笔下倒是也有一个只顾自己不顾别人的劫取。咱们看一下金庸是如何评价的：</p>
+<p>张无忌道：“咱们虽迫于无奈，但焉知人家不是身有急事，此举究属于心不安。”韦一笑笑道：“教主，</p>
+<p>这些小事，何足道哉？昔年明教行事，那才称得上‘肆无忌惮、横行不法’呢！”说着哈哈大笑。张无忌</p>
+<p>心想：“明教给人目为邪魔异端，其来有由。可是到底何者为正，何者为邪，却也难下确论。阳教主传</p>
+<p>下圣火大令三条、小令五条，将来务须遵从。”</p>
+<h2 id="大纲">大纲</h2>
+<h2 id="百字摘要">百字摘要</h2>
+<h2 id="金庸案例">金庸案例</h2>
+<h2 id="时间消耗">时间消耗</h2>
+<h2 id="阅读理解">阅读理解：</h2>
+<h2 id="大纲-1">大纲：</h2>
+<h2 id="撰写">撰写：</h2>
+<h2 id="录音">录音</h2>
+<h2 id="一小时运动">一小时运动</h2>
+<h2 id="英文原文">英文原文</h2>
+<p>6 FEBRUARY</p>
+<p>The Transnational Company</p>
+<p>Successful transnational companies see themselves as separate,
+nonnational entities.</p>
+<p>Most companies doing international business today are still organized
+as traditional multinationals.</p>
+<p>But the transformation into transnational companies has begun, and it
+is moving fast.</p>
+<p>The products or services may be the same, but the structure is
+fundamentally different.</p>
+<p>In a transnational company there is only one economic unit, the
+world.</p>
+<p>Selling, servicing, public relations, and legal affairs are
+local.</p>
+<p>But parts, machines, planning, research, finance, marketing, pricing,
+and management are</p>
+<p>conducted in contemplation of the world market.</p>
+<p>One of America’s leading engineering companies, for instance, makes
+one critical part for all its</p>
+<p>forty-three plants worldwide in one location outside of Antwerp,
+Belgium—and nothing else.</p>
+<p>It has organized product development for the entire world in three
+places and quality control in</p>
+<p>four.</p>
+<p>For this company, national boundaries have largely become
+irrelevant.</p>
+<p>irrelevant：</p>
+<dl>
+<dt>无关紧要的；不相关的</dt>
+<dd>
+<p>(to sth/sb) not important to or connected with a situation</p>
+</dd>
+</dl>
+<p>The transnational company is not totally beyond the control of
+national governments.</p>
+<p>It must adapt to them.</p>
+<p>But these adaptations are exceptions to policies and practices
+decided on for worldwide markets</p>
+<p>and technologies.</p>
+<p>Successful transnational companies see themselves as separate,
+nonnational entities.</p>
+<p>This selfperception is evidenced by something un-thinkable a few
+decades ago: a transnational top</p>
+<p>management.</p>
+<h3 id="action-point">ACTION POINT:</h3>
+<p>Ask the foreign technical-support center for your U.S.-purchased
+computer or printer a question</p>
+<p>about the operation of your equipment.</p>
+<p>How does the quality of this support compare with that of your local
+cable company?</p>
+<p>“The Global Economy and the Nation-State,” Foreign Affairs, 75th
+Anniversary Edition</p>
+<h2 id="february">6 FEBRUARY</h2>
+<h3 id="the-transnational-company">The Transnational Company</h3>
+<p>Successful transnational companies see themselves as separate,</p>
+<p>nonnational entities.</p>
+<p>Most companies doing international business today are still organized
+as</p>
+<p>traditional multinationals. But the transformation into
+transna-tional</p>
+<p>companies has begun, and it is moving fast. The products or services
+may be</p>
+<p>the same, but the structure is fundamentally different. In a
+transna-tional</p>
+<p>company there is only one economic unit, the world. Selling,
+servic-ing,</p>
+<p>public relations, and legal affairs are local. But parts, machines,
+planning,</p>
+<p>research, finance, marketing, pricing, and management are con-ducted
+in</p>
+<p>contemplation of the world market. One of America’s leading
+engineering</p>
+<p>companies, for instance, makes one critical part for all its
+forty-three plants</p>
+<p>worldwide in one location outside of Antwerp, Belgium—and nothing
+else. It</p>
+<p>has organized product development for the entire world in three
+places and</p>
+<p>quality control in four. For this company, national bound-</p>
+<p>aries have largely become irrelevant.</p>
+<p>The transnational company is not totally beyond the control of
+national</p>
+<p>governments. It must adapt to them. But these adaptations are
+exceptions</p>
+<p>to policies and practices decided on for worldwide markets and
+tech-</p>
+<p>nologies. Successful transnational companies see themselves as
+separate,</p>
+<p>nonnational entities. This self-perception is evidenced by something
+un-</p>
+<p>thinkable a few decades ago: a transnational top management.</p>
+<h3 id="action-point-1">ACTION POINT:</h3>
+<p>Ask the foreign technical-support center for your U.S.-</p>
+<p>purchased computer or printer a question about the operation of
+your</p>
+<p>equipment. How does the quality of this support compare with that
+of</p>
+<p>your local cable company?</p>
+<h4
+id="the-global-economy-and-the-nation-state-foreign-affairs-75th-anniversary-edition">“The
+Global Economy and the Nation-State,” Foreign Affairs, 75th Anniversary
+Edition</h4>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

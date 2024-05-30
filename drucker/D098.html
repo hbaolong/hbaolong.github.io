@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="第三同读" />
+  <title>德鲁克日志</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">德鲁克日志</h1>
+<p class="author">第三同读</p>
+</header>
+<h2 id="透过金庸读懂德鲁克">透过金庸读懂德鲁克</h2>
+<p>% % <span class="citation" data-cites="hbaolong">@hbaolong</span></p>
+<p>恒山派面临着巨大的危机。</p>
+<p>恒山派有三个老师太，也就是恒山三定，大师姐定静不爱理世事，只是努力帮师妹。师妹定闲是恒山</p>
+<p>的掌门，作为恒山的掌门，定闲师太一点都不敢懈怠，每天都要研究江湖上的风云变幻，已经出现的</p>
+<p>各种大侠，小虾或者一些可能有比较大影响的事件。</p>
+<p>不过，影响江湖最大的时间还是发生了。</p>
+<p>先是大师姐定静师太被杀，庆幸的是在令狐冲的救援下，大部分弟子活了下来，并且救援了定闲和定</p>
+<p>逸以及其他的一些弟子。</p>
+<p>定逸对令狐冲瞬间黑转粉。定闲也敏锐地发现了令狐冲的意义和价值。</p>
+<p>随后定闲带着定逸去少林为令狐冲做说客，而把整个恒山派交给了令狐冲。</p>
+<p>很快，定闲和定逸被杀，在临死前，定闲给摇摇欲坠的恒山派选了最终的领导人：令狐冲。</p>
+<p>德鲁克给定闲师太点了个赞。</p>
+<p>德鲁克认为，如果一个组织需要业绩提升，那就给他找一个强势的领导。定闲做到了。</p>
+<p>定闲</p>
+<p>德鲁克认为强将手下无弱兵，领导者的能力和团队之间的业绩是成正比的。</p>
+<p>所以，我们古人才会说“千军易得一将难求”，用尽各种方式求得一良将。一旦找到这个良将，刘邦就</p>
+<p>会给他大将军衔。而德鲁克认为，应该把这样的人放在领导岗位上，放在标准制定岗位上，放在业绩</p>
+<p>突破岗位上。让这些人做出卓越的成绩，让这些人带节奏。</p>
+<p>这就要求我们要关注领导者的优点，而不是缺点，除非那些缺陷已经影响全局了。历史上很多名将都</p>
+<p>是这样的，如好色的<strong><em>，贪财的</em></strong>，
+嗜杀的***等等。</p>
+<p>需要注意的是，并不是要这些带节奏的领导者来改变团队中的个体。只是要充分利用他的优势，他的</p>
+<p>体魄，他的抱负推动团队的能力的上限。</p>
+<p>最后，德鲁克给出了行动建议：给需要提升业绩的团队，找一个强势的领导。</p>
+<p>7 APRIL</p>
+<p>Base Leadership on Strength</p>
+<p>The distance between the leaders and the average is a constant.</p>
+<p>standard-setting:标准设定</p>
+<p>performance-making:业绩评定</p>
+<p>outstanding：杰出的</p>
+<p>pacesetting:定速度的，带头的。马拉松里的兔子？</p>
+<p>irrelevant:不相干的</p>
+<p>In human affairs, the distance between the leaders and the average is
+a constant. If leadership</p>
+<p>performance is high, the average will go up. The effective executive
+knows that it is easier to raise</p>
+<p>the performance of one leader than it is to raise the performance of
+a whole mass. She therefore</p>
+<p>makes sure that she puts into the leadership position, into the
+standard-setting, the performancemaking position, the person who has the
+strength to do the outstanding, the pacesetting job. This</p>
+<p>always requires focus on the one strength of a person and dismissal
+of weaknesses as irrelevant</p>
+<p>unless they hamper the full deployment of the available strength.</p>
+<p>hamper：妨碍、束缚</p>
+<p>The task of an executive is not to change human beings. Rather, as
+the Bible tells us in the parable</p>
+<p>of the talents, the task is to multiply the performance capacity of
+the whole by putting to use</p>
+<p>whatever strength, whatever health, whatever aspiration there is in
+individuals.</p>
+<p>parable：寓言、比喻</p>
+<p>multiply：乘（法），使增加</p>
+<p>aspiration:渴望、抱负</p>
+<h3
+id="action-point-to-raise-the-performance-of-a-business-unit-put-a-strong-leader-at-the-helm.">ACTION
+POINT: To raise the performance of a business unit, put a strong leader
+at the helm.</h3>
+<p>The Effective Executive</p>
+<h2 id="april">7 APRIL</h2>
+<h3 id="base-leadership-on-strength">Base Leadership on Strength</h3>
+<p>The distance between the leaders and the average is a constant.</p>
+<p>In human affairs, the distance between the leaders and the average
+is</p>
+<p>Aconstant. If leadership performance is high, the average will go up.
+The effective</p>
+<p>executive knows that it is easier to raise the performance of one
+leader than it is</p>
+<p>to raise the performance of a whole mass. She therefore makes sure
+that she puts</p>
+<p>into the leadership position, into the standard-setting, the
+performance-making</p>
+<p>position, the person who has the strength to do the outstanding, the
+pacesetting</p>
+<p>job. This always requires focus on the one strength of a person and
+dismissal of</p>
+<p>weaknesses as irrelevant unless</p>
+<p>they hamper the full deployment of the available strength.</p>
+<p>The task of an executive is not to change human beings. Rather, as
+the</p>
+<p>Bible tells us in the parable of the talents, the task is to multiply
+the</p>
+<p>perfor-mance capacity of the whole by putting to use whatever
+strength,</p>
+<p>whatever health, whatever aspiration there is in individuals.</p>
+<h3 id="action-point">ACTION POINT:</h3>
+<p>To raise the performance of a business unit, put a strong</p>
+<p>leader at the helm.</p>
+<h4 id="the-effective-executive">The Effective Executive</h4>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

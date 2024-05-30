@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="第三同读" />
+  <title>德鲁克日志</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">德鲁克日志</h1>
+<p class="author">第三同读</p>
+</header>
+<h2 id="透过金庸读懂德鲁克">透过金庸读懂德鲁克</h2>
+<p>家族企业中的家族和企业</p>
+<p>当我们说家族企业时，我们的关注点是企业，而不是家族。这个和我们古人的看法恰恰相反。</p>
+<p>因为我们国家还是一个新的国家，目前最有钱的那些人，那些家族，还都是一代，他们的财富来源大</p>
+<p>多是创业所得，也就是说，他们的创始的企业是他们主要的财富来源。</p>
+<p>比如，今年的胡润百富版这几位。</p>
+<p>对他们来说，他们的家族就是企业，没有了企业，他们所谓的家族也就不存在了。</p>
+<p>那么，阿里是家族企业么？当然不是，腾讯是家族企业么？当然不是，当当是家族企业么？当然是。</p>
+<p>换一个视角，马云通过阿里的发展，形成了自己的家族，而阿里却不是家族企业；马化腾通过腾讯，</p>
+<p>形成了自己的家族，而腾讯却不是家族企业；比尔盖茨通过微软形成了自己的家族，而微软却不是家</p>
+<p>族企业。</p>
+<p>这些家族有企业么？或者说，对于马云、马化腾、比尔盖茨来说，他们的家族有家族企业么？</p>
+<p>好像没有。</p>
+<p>不过，马云家族确实是需要考虑传承的，他的传承，除了他超出想象力的财富外，还有一些复杂的架</p>
+<p>构，一些一些持续增值的股票（显然包括阿里的股票）。</p>
+<p>这就是马云、马化腾、比尔盖茨这些现代人聪明的地方，他们成功地解决了家族企业传承中很重要的</p>
+<p>一个问题，而他们的解决方法无一例外是把公司变成公众公司。</p>
+<p>他们甚至没有家庭成员加入公司去工作，没有记录显示比尔盖茨的女儿在微软工作，也没有记录显示</p>
+<p>马化腾的孩子们在腾讯工作，也没有记录显示马云的孩子们在阿里工作。</p>
+<p>当然，这些并不是忌讳。即使他们加入微软、阿里、腾讯，也是因为自己的能力和努力加入的。</p>
+<p>在现在的微软、阿里、腾讯高层，已经没有了这三个人的痕迹，至少表面是没有的。整个公司已经变</p>
+<p>成了公众公司。这个公司的成功，成了很多人，非常多的人的目标和愿景。</p>
+<p>在这些公司的每一个岗位，都有非常专业的人各就其位。</p>
+<p>而为了让这个公司可以正常地、高效地运转，它也需要非常专业人员。</p>
+<p>其实，对于马云、马化腾、比尔盖茨这些人来说，他们已经完成了家族企业的传承。而这个传承，不</p>
+<p>再对他们的后人有过多的要求和期待。</p>
+<p>更准确地说，他们把家族企业的传承，成功地转换成了财富传承，而且是一个持续的财富的传承。</p>
+<p>至于如何做（持续）财富的传承？那是另一个问题。</p>
+<h2 id="大纲">大纲</h2>
+<h2 id="百字摘要">百字摘要</h2>
+<h2 id="金庸案例">金庸案例</h2>
+<h2 id="时间消耗">时间消耗</h2>
+<h2 id="阅读理解">阅读理解：</h2>
+<h2 id="大纲-1">大纲：</h2>
+<h2 id="撰写">撰写：</h2>
+<h2 id="录音">录音</h2>
+<h2 id="一小时运动">一小时运动</h2>
+<h2 id="英文原文">英文原文</h2>
+<p>29 DECEMBER</p>
+<p>Rules for the Family-Managed Business</p>
+<p>The controlling word in “family-managed business” is not “family.” It
+has to be “business.”</p>
+<p>controlling word：一个很有意思的字。</p>
+<p>The first rule is that family members do not work in the business
+unless they are at least as able as</p>
+<p>any nonfamily employee, and work at least as hard.</p>
+<p>The second rule is equally simple: No matter how many family members
+are in the company’s</p>
+<p>management, and how effective they are, one top job is always filled
+by an outsider who is not a</p>
+<p>member of the family.</p>
+<p>Typically, this is either the financial executive or the head of
+research—the two positions in</p>
+<p>which technical qualifications are most important.</p>
+<p>technical qualification：技术资格</p>
+<p>Rule three is that family-managed businesses, except perhaps for the
+very smallest ones,</p>
+<p>increasingly need to staff key positions with nonfamily
+professionals.</p>
+<p>increasingly：</p>
+<p>越来越多地；不断增加地</p>
+<p>more and more all the time</p>
+<p>The knowledge and expertise needed, whether in manufacturing or in
+marketing, in finance, in</p>
+<p>research, in human resource management, have become far too great to
+be satisfied by any but the</p>
+<p>most competent family member.</p>
+<p>expertise:</p>
+<p>专门知识；专门技能；专长</p>
+<p>competent</p>
+<p>足以胜任的；有能力的；称职的</p>
+<p>[ U ] ~ (in sth/in doing sth) expert knowledge or skill in a
+particular subject, activity or job</p>
+<p>:having enough skill or knowledge to do sth well or to the necessary
+standard</p>
+<p>Even the family-managed business that faithfully observes the
+preceding three rules tends to</p>
+<p>get into trouble—and often breaks up—over management succession.</p>
+<p>faithfully:</p>
+<p>准确地；如实地；仔细地</p>
+<p>observes</p>
+<p>遵从</p>
+<p>preceding 在前的；前述的</p>
+<p>breaks up 打碎，破碎；结束；解散；衰落</p>
+<p>accurately; carefully</p>
+<p>:V-T If you observe something such as a law or custom, you obey it or
+follow it.</p>
+<p>:n.</p>
+<p>:n.</p>
+<p>prior, prius</p>
+<p>conclude, knapp</p>
+<p>Then what the business needs and what the family wants tend to
+collide.</p>
+<dl>
+<dt>collide：</dt>
+<dd>
+<p>(with sb) (over sth) ( formal ) ( of people, their opinions, etc.</p>
+</dd>
+</dl>
+<p>人、意见等 ) to disagree strongly 严重不一致；冲突；抵触</p>
+<p>There is only one solution: Entrust the succession decision to an
+outsider who is neither part of</p>
+<p>the family nor part of the business.</p>
+<p>Entrust：</p>
+<p>委托；交托；托付</p>
+<p>succession：</p>
+<p>[ VN ] ~ A (to B) | ~ B with A to make sb responsible for doing sth
+or taking care of sb</p>
+<p>[ U ] the act of taking over an official position or title; the right
+to take over an official position or title, especially to</p>
+<p>become the king or queen of a country</p>
+<p>outsider：</p>
+<p>继承；继任；（尤指王位的）继承权</p>
+<p>a person who is not part of a particular organization or
+profession</p>
+<p>（组织、行业）外部的人；外来者</p>
+<h3 id="action-point">ACTION POINT:</h3>
+<p>Get to know the top management of a family-owned business.</p>
+<p>top management：</p>
+<p>N the most senior staff of an organization or business, including the
+heads of various divisions or</p>
+<p>departments led by the chief executive</p>
+<p>高层管理人员(包括由行政长官领导的各部门领导)</p>
+<p>Ask members how they plan to handle the problem of management
+succession “into the next</p>
+<p>generation.”</p>
+<p>succession：</p>
+<p>[ U ] the act of taking over an official position or title; the right
+to take over an official position or title, especially to</p>
+<p>become the king or queen of a country</p>
+<p>继承；继任；（尤指王位的）继承权</p>
+<p>Determine whether the plans are being driven by business issues or
+family issues, or by a</p>
+<p>combination of the two.</p>
+<p>issues：</p>
+<p>议题</p>
+<p>combination：</p>
+<p>结合体；联合体；混合体</p>
+<p>N-COUNT An issue is an important subject that people are arguing
+about or discussing.</p>
+<p>[ C ] two or more things joined or mixed together to form a single
+unit</p>
+<p>Managing in a Time of Great Change</p>
+<h2 id="december">29 DECEMBER</h2>
+<h3 id="rules-for-the-family-managed-business">Rules for the
+Family-Managed Business</h3>
+<p>The controlling word in “family-managed business” is not
+“family.”</p>
+<p>It has to be “business.”</p>
+<p>The first rule is that family members do not work in the business
+unless</p>
+<p>they are at least as able as any nonfamily employee, and work at
+least as hard.</p>
+<p>The second rule is equally simple: No matter how many family mem-bers
+are</p>
+<p>in the company’s management, and how effective they are, one top job
+is</p>
+<p>always filled by an outsider who is not a member of the family.
+Typi-cally,</p>
+<p>this is either the financial executive or the head of research—the
+two</p>
+<p>positions in which technical qualifications are most important. Rule
+three is</p>
+<p>that family-managed businesses, except perhaps for the very smallest
+ones,</p>
+<p>increasingly need to staff key positions with nonfamily
+professionals. The</p>
+<p>knowledge and expertise needed, whether in manufacturing or in
+marketing,</p>
+<p>in finance, in research, in human resource management, have become
+far too</p>
+<p>great to be satisfied by any but the most competent family</p>
+<p>member.</p>
+<p>Even the family-managed business that faithfully observes the
+preceding</p>
+<p>three rules tends to get into trouble—and often breaks up—over
+manage-</p>
+<p>ment succession. Then what the business needs and what the family
+wants</p>
+<p>tend to collide. There is only one solution: Entrust the succession
+decision to</p>
+<p>an outsider who is neither part of the family nor part of the
+business.</p>
+<h3 id="action-point-1">ACTION POINT:</h3>
+<p>Get to know the top management of a family-owned busi-</p>
+<p>ness. Ask members how they plan to handle the problem of
+management</p>
+<p>succession “into the next generation.” Determine whether the plans
+are</p>
+<p>being driven by business issues or family issues, or by a combination
+of</p>
+<p>the two.</p>
+<h4 id="managing-in-a-time-of-great-change">Managing in a Time of Great
+Change</h4>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

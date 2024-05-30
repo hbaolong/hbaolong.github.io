@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="第三同读" />
+  <title>德鲁克日志</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">德鲁克日志</h1>
+<p class="author">第三同读</p>
+</header>
+<h2 id="透过金庸读懂德鲁克">透过金庸读懂德鲁克</h2>
+<p>神龙教是教主洪安通创办的一个军事化类宗教组织。</p>
+<p>洪安通是毛文龙麾下一个武官，武功高强。毛文龙被袁崇焕杀死后，洪安通和一些毛文龙下的军官驾</p>
+<p>船逃到了神龙岛，在岛上，洪安通宣布成立神龙教，反清、反明，寻求海上霸权。随后的几天，陆陆</p>
+<p>续续一些毛文龙手下的武官还有周边的一个海盗汇集过来，加入神龙教。没几天，神龙教即初具规</p>
+<p>模。拥有了1023位兄弟。</p>
+<p>神龙教不再按军队里的上下级称呼，而是互相称为兄弟。整个神龙教的1023人互相之家都以名字相称</p>
+<p>呼，大家对明朝政权和清朝政权都不信任，只是想在还想寻求一个霸权的存在，或者在海中有一个相</p>
+<p>对独立的地方生存。由于洪安通的聪明才智和武功，大家一致推举洪安通和教主，带领大家一起努</p>
+<p>力，实现教义。</p>
+<p>在当时的神龙教里，每个人都很清楚自己的目的，也很清楚自己做什么：打劫不管是明朝还是清朝的</p>
+<p>船只，偶尔打劫一些渔船。在特定海域形成震慑。在这个体系里，大家相互理解、共同价值观，尤其</p>
+<p>是相互尊重的，所以神龙教进入了快速发展期，短短的几年里，在1023位老兄弟的努力下，神龙教发</p>
+<p>展到了数万人，也形成了以教主为最高管理者以及五龙使为高层管理者的一个庞大的军事化高效政权</p>
+<p>体系。</p>
+<p>这时，洪安通发生了一些变化。</p>
+<p>随着神龙教的扩大，很多高层管理者的影响力越来越大，为了稳定自己的教主威信，洪安通开始用药</p>
+<p>物控制高层甚至中层。同时为了让自己的威信得到绝对的权威，洪安通开始了一言堂，也就是不准别</p>
+<p>人提意见。</p>
+<p>这在初期问题不大，毕竟洪安通足够聪明，随着时间的推进，特别是他娶了他的夫人后，事情出现了</p>
+<p>快速的重大变化。</p>
+<p>他的夫人是个年轻的女子，对权力充满了崇拜。她就设计了一些展示权力的东西，如口号：仙福永</p>
+<p>享，寿与天齐等。并且规定教众，包括五龙使见到教主后都要行一定的礼节。</p>
+<p>洪安通为了达到对老兄弟们的控制，采取了三步的走的方法：</p>
+<ol type="1">
+<li><p>杀一部分，对于那些影响很大，武力比较厉害而且不听话的，直接杀死。</p></li>
+<li><p>关一部分，对于那些影响不大，武功也不大厉害的，就关起来。</p></li>
+<li><p>驯化一部分，对于那些头脑不大清楚，武功又高的，就驯化了，告诉他们神龙教是他洪安通一人的</p></li>
+</ol>
+<p>功劳，等等等等。</p>
+<p>通过三步走后，洪安通拥有了对神龙教的绝对控制权。神龙教也只有了一个声音，一个命令。所有人</p>
+<p>都在听从和执行那一个人命令，没有任何质疑。</p>
+<p>神龙教变得开始神秘莫测了，因为洪安通不想让别人知道他就是一个普通人，很多决定都是神鬼莫测</p>
+<p>的。好在他足够的聪明，而且御下有术，整个神龙教在错误的高速路上疯狂地奔跑。</p>
+<p>后来的故事大家都知道了，在韦小宝这个多面间谍的影响下，神龙教被摧毁。再最后的机会面前，洪</p>
+<p>安通为了掩盖自己头顶的绿帽子，杀死了最后的几个兄弟，自己在混战中力竭而死。</p>
+<p>你觉得你所在的组织，是一个依赖权威命令推进的组织？还是一个大家相互理解、共同价值观，尤其</p>
+<p>是相互尊重的前提下，每个人熟悉自己的职责，互相配合以完成一个特定任务的组织？</p>
+<h2 id="百字摘要">百字摘要</h2>
+<h2 id="金庸案例">金庸案例</h2>
+<p>6 JUNE</p>
+<p>Hierarchy Versus Responsibility</p>
+<p>Hierarchy：</p>
+<p>[ C U ] a system, especially in a society or an organization, in
+which people are organized into different levels of</p>
+<p>importance from highest to lowest</p>
+<p>等级制度（尤指社会或组织）</p>
+<p>Traditional organizations rest on command authority.</p>
+<p>rest on： 停留在；依靠；被搁在；信赖</p>
+<ol start="14" type="a">
+<li></li>
+</ol>
+<p>lean upon, ride on</p>
+<p>传统的组织，依赖命令的权威；信息驱动的组织依赖责任感。</p>
+<p>Information-based organizations rest on responsibility.</p>
+<p>When a company builds its organization around modern information
+technology, it must ask the</p>
+<p>questions: “Who requires what information, when and where?” And then
+those management</p>
+<p>positions and management layers whose duty it has been to report
+rather than to do can be</p>
+<p>scrapped.</p>
+<p>But, the information-based organization demands self-discipline and
+upward responsibility from</p>
+<p>the first-level supervisor all the way to top management.</p>
+<p>self-discipline：</p>
+<p>自律能力；自我约束能力</p>
+<p>supervisor：</p>
+<p>监督人；指导者；主管人</p>
+<p>[ U ] the ability to make yourself do sth, especially sth difficult
+or unpleasant</p>
+<p>a person who supervises sb/sth</p>
+<p>Traditional organizations rest on command authority.
+Information-based organizations rest on</p>
+<p>responsibility.</p>
+<p>The flow is circular from the bottom up and then down again.</p>
+<p>circular：</p>
+<p>圆形的；环形的；圆的</p>
+<p>shaped like a circle; round</p>
+<p>The information-based system can, therefore, function only if each
+individual and each unit</p>
+<p>accepts responsibility: for their goals and their priorities, for
+their relationships, and for their</p>
+<p>communications.</p>
+<p>priorities：</p>
+<p>N-COUNT If something is a priority, it is the most important thing
+you have to do or deal with, or must be done or dealt</p>
+<p>with before everything else you have to do.</p>
+<p>优先处理的事</p>
+<p>This in turn makes possible fast decisions and quick responses.</p>
+<p>in turn: 反过来；转而；轮流，依次</p>
+<p>These advantages will be obtained only if there are understanding,
+shared values, and, above all,</p>
+<p>mutual respect.</p>
+<p>mutual respect: 相互尊重（</p>
+<p>）是互惠性和商议的核心价值。它要求人们对与其有分歧的人采取一种赞许的态度，</p>
+<p>并与之进行建设性的互动。</p>
+<p>mutual respect</p>
+<p>If every player needs to know the score, there has to be a common
+language, a common core of</p>
+<p>unity.</p>
+<p>If the organization is information-based, diversification in which
+financial control is the only</p>
+<p>language is bound to collapse into the confusion of the Tower of
+Babel.</p>
+<p>diversification : n. 多样化；变化</p>
+<h3 id="action-point">ACTION POINT:</h3>
+<p>Is your organization held together by financial controls or by
+understanding, shared values, and</p>
+<p>mutual respect?</p>
+<p>Accept responsibility for yourself and your unit, including your
+goals, your relationships, and</p>
+<p>your communications.</p>
+<p>The Frontiers of Management</p>
+<h2 id="june">6 JUNE</h2>
+<h3 id="hierarchy-versus-responsibility">Hierarchy Versus
+Responsibility</h3>
+<p>Traditional organizations rest on command authority.</p>
+<p>Information-based organizations rest on responsibility.</p>
+<p>When a company builds its organization around modern information</p>
+<p>technology, it must ask the questions: “Who requires what
+informa-tion, when</p>
+<p>and where?” And then those management positions and man-</p>
+<p>agement layers whose duty it has been to report rather than to do can
+be</p>
+<p>scrapped.</p>
+<p>But, the information-based organization demands self-discipline
+and</p>
+<p>upward responsibility from the first-level supervisor all the way to
+top</p>
+<p>management. Traditional organizations rest on command authority.</p>
+<p>Information-based organizations rest on responsibility. The flow
+is</p>
+<p>circular from the bottom up and then down again. The
+information-based</p>
+<p>system can, therefore, function only if each individual and each
+unit</p>
+<p>accepts responsibility: for their goals and their priorities, for
+their</p>
+<p>relationships, and for their communications. This in turn makes
+possible</p>
+<p>fast decisions and quick responses. These advantages will be
+obtained</p>
+<p>only if there are under-standing, shared values, and, above all,
+mutual</p>
+<p>respect. If every player needs to know the score, there has to be</p>
+<p>Acommon language, a common core of unity. If the organization is</p>
+<p>information-based, diversification in which financial control is the
+only</p>
+<p>language is bound to collapse into the confusion of the Tower of
+Babel.</p>
+<h3 id="action-point-1">ACTION POINT:</h3>
+<p>Is your organization held together by financial controls or</p>
+<p>by understanding, shared values, and mutual respect? Accept
+responsi-</p>
+<p>bility for yourself and your unit, including your goals, your
+relationships,</p>
+<p>and your communications.</p>
+<h4 id="the-frontiers-of-management">The Frontiers of Management</h4>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

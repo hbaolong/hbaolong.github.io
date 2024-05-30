@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="第三同读" />
+  <title>德鲁克日志</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">德鲁克日志</h1>
+<p class="author">第三同读</p>
+</header>
+<h2 id="透过金庸读懂德鲁克">透过金庸读懂德鲁克</h2>
+<p>长寿之殇</p>
+<p>电视剧《康熙王朝》的主题曲很好听，有一句歌词也很有意思，这句歌词用康熙的口吻说出了康熙的</p>
+<p>一个愿望：真的还想再活五百年！</p>
+<p>康熙生于1654年5月4日，死于1722年12月20日，享寿68年。如果康熙再活五百年，那么他应该死于</p>
+<p>2222年，也就是203年以后。也就是说，我们现在还是处在康熙爷的统治下，我们的高级公务员还要</p>
+<p>每天去乾清宫打卡磕头。我们还要梳辫子。</p>
+<p>当然，有钱人就可以娶一妻多妾了，穷人也可以去烟花柳巷，这或许是很多人梦寐以求的生活。</p>
+<p>还好，康熙及时死了。</p>
+<p>康熙活了68岁，现在看起来不算大。现在随便什么都，如果不出意外，大概率会活得超过康熙。考虑</p>
+<p>到清朝男性的平均寿命是45岁，女性的平均寿命是50岁。康熙还是很幸福的。算是长寿了。</p>
+<p>其实，在我国，人的平均寿命一直不高。民国时由于战争原因，当时的平均寿命只有35岁。解放后，</p>
+<p>中国人的平均寿命才开始恢复，并且稳步上升。</p>
+<p>1957年，中国人的平均寿命57岁；1981年，中国人的平均寿命到了68岁，到了2015年，男性的平均</p>
+<p>寿命为74岁，而女性的平均寿命达到了77岁。</p>
+<p>大家都喜欢长寿。从秦始皇寻找长生药开始，人类一直期待着延长生命的长度。工业革命后，随着粮</p>
+<p>食问题的解决，以及医疗手段的进步，人类的寿命也越来越长了。在一次活动中，当吴晓波老师说出</p>
+<p>2050年，人类的寿命有望突破120岁时，台下一个40多岁、本来计划退休的成功女企业家，果断计划</p>
+<p>重新创业：是呀，为了还有近80年呢。</p>
+<p>长寿来了，从唐朝时的不到30岁，到现在的70多岁，到未来的100岁，人类生命的时间延长了。人类</p>
+<p>更幸福了么？好像并不是。因为因为还远没有学会面对长寿带来的一系列问题。</p>
+<p>首先的问题就是生活的问题。以前的人13、4岁开始工作，做上5年学徒，然后开始出徒做事，大概40</p>
+<p>岁就不工作了。一辈子学习一项技能就可以了。而现在不行了：等你把一件事做腻了时，你发现你的</p>
+<p>人生才走了不到三分之一。这时你去做什么呢？</p>
+<p>以前的人感情很简单，遇到一个人，吵吵闹闹，二三十年过去了，其中一个人就走了。再过几年，另</p>
+<p>一个人也走了。人生就这样了。现在的人呢？20岁恋爱，30岁结婚，到70岁时已经在一起50年了。漫</p>
+<p>长的50年呀！一年的一个婚姻承诺也就是20年，而现在的一个承诺则价值50年了。</p>
+<p>还有就是工资，以前工作到40岁，就可以不工作了，孩子工作可以养活自己了。反正也养不了几年，</p>
+<p>自己就走了。孩子们也乐得尽个孝心。现在呢？60岁退休的后，还要活20年！家庭养老已经不现实</p>
+<p>了。如果社会养老机制不成熟，就只要考自己年轻时的积蓄了，毕竟，这个时代还没来得及接受60多</p>
+<p>岁的人出来打工。</p>
+<p>这些看起来都是小事，其实，这是一场革命。一场“猝不及防的长寿带来的革命。”</p>
+<p>我们需要重新考虑学习、工作、婚姻、家庭，以及一切的一切。</p>
+<p>生命长了，我们的学习需要重新考虑了。以前我们认为，我们年轻时学的东西足够应付到我们死亡的</p>
+<p>那天了。现在，我们没那么快死了，所以我们必须更新我们的知识，甚至需要随时更新了。</p>
+<p>生命长了，我们的工作需要重新考虑了。我们的生命超过你所服务的大部分公司，这意味着你肯定会</p>
+<p>离开你的公司。那么，离开公司后，你的下一份工作做什么呢？还是上一份工作的内容么？</p>
+<p>生命长了，我们需要重新考虑我们的家庭、我们的感情、我们和父母、孩子之间的关系了。</p>
+<p>生命长了，我们的风险也就更多了，我们需要面对我们可能的这些风险。</p>
+<p>幸运的是，生命长了，我们也就有足够的时间来迎合我们的爱好，打球？写书？卖东西？恋爱？读物</p>
+<p>理？列出你想做的事情，现在，生命长了，你可以规划更多的事情了。</p>
+<p>是呀，这是一个好时代，虽然也带来了很多的问题。</p>
+<h2 id="大纲">大纲</h2>
+<h2 id="百字摘要">百字摘要</h2>
+<h2 id="金庸案例">金庸案例</h2>
+<h2 id="时间消耗">时间消耗</h2>
+<h2 id="阅读理解">阅读理解：</h2>
+<h2 id="大纲-1">大纲：</h2>
+<h2 id="撰写">撰写：</h2>
+<h2 id="录音">录音</h2>
+<h2 id="一小时运动">一小时运动</h2>
+<h2 id="英文原文">英文原文</h2>
+<p>18 SEPTEMBER</p>
+<p>Managing Oneself: Revolution in Society</p>
+<p>Managing oneself is based on these realities: Workers are likely to
+outlive organizations, and the</p>
+<p>knowledge worker has mobility.</p>
+<p>Managing oneself is a REVOLUTION in human affairs. It requires new
+and unprecedented things</p>
+<p>from the individual, and especially from the knowledge worker.</p>
+<p>unprecedented：</p>
+<p>前所未有的；空前的；没有先例的</p>
+<p>that has never happened, been done or been known before</p>
+<p>For, in effect, it demands that each knowledge worker think and
+behave as a chief executive officer.</p>
+<p>It also requires an almost 180-degree change in the knowledge
+workers’ thoughts and actions from</p>
+<p>what most of us still take for granted as the way to think and the
+way to act.</p>
+<p>The shift from manual workers who do as they are being told—either by
+the task or by the boss—to</p>
+<p>knowledge workers who have to manage themselves profoundly challenges
+social structure.</p>
+<p>For every existing society, even the most “individualist” one, takes
+two things for granted, if only</p>
+<p>subconsciously: Organizations outlive workers, and most people stay
+put.</p>
+<p>subconsciously：adv. 潜意识地</p>
+<p>stay put： 留在原处不动</p>
+<p>Managing oneself is based on the very opposite realities. In the
+United States MOBILITY is</p>
+<p>accepted. But even in the United States, workers outliving
+organizations—and with it the need to be</p>
+<p>prepared for a second and different half of one’s life—is a
+revolution for which practically no one is</p>
+<p>prepared.</p>
+<p>Nor is any existing institution, for example, the present retirement
+system.</p>
+<h3 id="action-point">ACTION POINT:</h3>
+<p>Begin thinking of a second career you find fulfilling.</p>
+<p>List areas of work that interest you, including that of a volunteer
+in a nonprofit organization.</p>
+<p>Management Challenges for the 21st Century</p>
+<h2 id="september">18 SEPTEMBER</h2>
+<h3 id="managing-oneself-revolution-in-society">Managing Oneself:
+Revolution in Society</h3>
+<p>Managing oneself is based on these realities: Workers are likely
+to</p>
+<p>outlive organizations, and the knowledge worker has mobility.</p>
+<p>Managing oneself is a REVOLUTION in human affairs. It requires
+new</p>
+<p>and unprecedented things from the individual, and especially from
+the</p>
+<p>knowledge worker. For, in effect, it demands that each knowledge</p>
+<p>worker think and behave as a chief executive officer. It also
+requires an</p>
+<p>al-most 180-degree change in the knowledge workers’ thoughts and</p>
+<p>actions from what most of us still take for granted as the way to
+think and</p>
+<p>the way to act.</p>
+<p>The shift from manual workers who do as they are being
+told—either</p>
+<p>by the task or by the boss—to knowledge workers who have to
+manage</p>
+<p>them-selves profoundly challenges social structure. For every
+existing</p>
+<p>society, even the most “individualist” one, takes two things for
+granted, if</p>
+<p>only sub-consciously: Organizations outlive workers, and most
+people</p>
+<p>stay put. Managing oneself is based on the very opposite realities.
+In the</p>
+<p>United States MOBILITY is accepted. But even in the United
+States,</p>
+<p>workers out-living organizations—and with it the need to be prepared
+for</p>
+<p>a second and different half of one’s life—is a revolution for
+which</p>
+<p>practically no one is prepared. Nor is any existing institution,
+for</p>
+<p>example, the present retire-ment system.</p>
+<h3 id="action-point-1">ACTION POINT:</h3>
+<p>Begin thinking of a second career you find fulfilling. List</p>
+<p>areas of work that interest you, including that of a volunteer in a
+nonprofit</p>
+<p>organization.</p>
+<h4 id="management-challenges-for-the-21st-century">Management
+Challenges for the 21st Century</h4>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

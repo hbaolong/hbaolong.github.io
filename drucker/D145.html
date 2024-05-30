@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="第三同读" />
+  <title>德鲁克日志</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">德鲁克日志</h1>
+<p class="author">第三同读</p>
+</header>
+<h2 id="透过金庸读懂德鲁克">透过金庸读懂德鲁克</h2>
+<p>归辛树在金庸的两部小说里出现过。</p>
+<p>在《碧血剑》里，他是袁承志的师兄，武功和袁承志不相上下，也算顶级高手了。第一次出场就四六</p>
+<p>不分的样子，被徒弟的几句话牵引了情绪，不问是非对错，
+当场给师弟下不来台。后来在华山之巅，</p>
+<p>和师弟比武，被师父重重批评。最后确定了大师兄黄真掌门人的身份，当时他虽然武功第一，却是一</p>
+<p>个没脑子的主。</p>
+<p>后来在《鹿鼎记》中又出现了，几十年后，不但没有长进，还变本加厉地蠢了。
+先是受吴三桂误导，</p>
+<p>带着老婆和儿子杀死了红旗香主吴六奇，然后又被吴三桂以语言驱使，去北京刺杀康熙。</p>
+<p>在鹿鼎记后期，归辛树应该是武功最高之人，江湖却没人会称他一个大侠。因为它就是一个武术机</p>
+<p>器，或者说一个不知道会对准谁的火枪。</p>
+<p>金庸笔下有一个很奇怪的现象，就是很多大脑明显不够用的人练成了非常高深的武功，比如桃谷六</p>
+<p>仙，比如南海鳄神，比如澄覌，比如老顽童，不过这些人都是内心淳朴之人，心中绝少杂念。黄药师</p>
+<p>说老顽童：“老顽童啊老顽童，你当真了不起。我黄老邪对‘名’淡泊，一灯大师视‘名’为虚幻，只有你，</p>
+<p>却心中空空荡荡，本来便不存‘名’之一念，可又比我们高出一筹了。”</p>
+<p>而归辛树则不同，他是一个内心龌龊的人，居然也练到了顶级，而这个顶级高手，却绝少高手应有的</p>
+<p>判断或者淳朴。</p>
+<p>金庸其他书中的顶级高手，不管是正面还是反面都是有雄伟宏大之气，如东方不败、金轮法王、扫地</p>
+<p>僧、萧峰、扫地僧等等等等，而归辛树这样内心狭隘，大脑僵化的人，居然也成了武林第一高手，令</p>
+<p>人叹息。</p>
+<p>如果说任我行、左冷禅是一代枭雄，岳不群是一代奸雄的话，那么归辛树最多被称为一代武棍。</p>
+<p>对于一个高阶武林人物来说，不管是做好事，还是做坏事，最重要的是知道为什么做事，这些高阶武</p>
+<p>林高手，都拥有令人畏惧的武功、势力和财富，他们几乎无所不能，对他们来说，如何做不是什么问</p>
+<p>题，为什么作才是最主要的。</p>
+<p>东方不败为了妙悟天地造化，任我行、左冷禅为了称霸天下，张无忌就想闺房画眉，洪教主想偏安一</p>
+<p>域，陈近南想反清复明，这些人都是有目标，有想法，只恨武功、势力、财富不够，做不到，做不</p>
+<p>好。</p>
+<p>而一代武棍归辛树呢？除了被人挑拨和师弟比武，被人挑拨欺负一些镖师，被人挑拨杀了吴六奇，最</p>
+<p>后被人挑拨去刺杀康熙，在康熙和小宝面前被杀。估计他到死都不知道他为什么要啥康熙，杀死康熙</p>
+<p>会后有什么后果，这个后果是不是他想要的。</p>
+<p>实际上，他根本不知道自己想要什么，却拥有了骇人的武功，是那些遇见他的人的不幸，也是他的不</p>
+<p>幸。</p>
+<p>作为一个江湖中武功或高或低的人，不管是有绝世的武功还是只在店里打打下手，在做一件事时，先</p>
+<p>问一下为什么，然后再问如何做。</p>
+<p>如果想不通为什么，那就不要做。</p>
+<p>不要做那一代武棍。</p>
+<h2 id="百字摘要">百字摘要</h2>
+<h2 id="金庸案例">金庸案例</h2>
+<p>24 MAY</p>
+<p>Defining the Task in Knowledge Work</p>
+<p>In knowledge work, the how only comes after the what has been
+answered.</p>
+<p>In manual work the task is always given.</p>
+<p>Wherever there still are domestic servants, the owner of the house
+tells them what to do.</p>
+<p>domestic：</p>
+<p>家用的；家庭的；家务的</p>
+<p>[only before noun ] used in the home; connected with the home or
+family</p>
+<p>The machine or the assembly line programs the factory worker.</p>
+<p>But, in knowledge work, what to do becomes the first and decisive
+question.</p>
+<p>For knowledge workers are not programmed by the machine.</p>
+<p>They largely are in control of their own tasks and must be in control
+of their own tasks.</p>
+<p>For they, and only they, own and control the most expensive of the
+means of production—their education—and their most important tool—their
+knowledge.</p>
+<p>They do use other tools, of course, whether the nurse’s IV or the
+engineer’s computer.</p>
+<p>But their knowledge decides how these tools are being used and for
+what.</p>
+<p>They know what steps are most important and what methods need to be
+used to complete the</p>
+<p>tasks; and it is their knowledge that tells them what chores are
+unnecessary and should be</p>
+<p>eliminated.</p>
+<p>Work on knowledge-worker productivity therefore begins with asking
+the knowledge workers</p>
+<p>themselves: What is your task? What should it be? What should you be
+expected to contribute?</p>
+<p>and What hampers you in doing your task and should be eliminated? The
+how only comes after the</p>
+<p>what has been answered.</p>
+<h3 id="action-point">ACTION POINT:</h3>
+<p>Define your task as a knowledge worker by asking yourself: “What do I
+get paid for?” and “What</p>
+<p>should I get paid for?”</p>
+<p>Management Challenges for the 21st Century</p>
+<p>Knowledge Worker Productivity (Corpedia Online Program)</p>
+<h2 id="may">24 MAY</h2>
+<h3 id="defining-the-task-in-knowledge-work">Defining the Task in
+Knowledge Work</h3>
+<p>In knowledge work, the how only comes after the what has been
+answered.</p>
+<p>In manual work the task is always given. Wherever there still are
+domestic</p>
+<p>servants, the owner of the house tells them what to do. The machine
+or the</p>
+<p>assembly line programs the factory worker. But, in knowledge work,
+what to do</p>
+<p>becomes the first and decisive question. For knowledge workers are
+not</p>
+<p>programmed by the machine. They largely are in control of their own
+tasks and</p>
+<p>must be in control of their own tasks. For they, and only they, own
+and control</p>
+<p>the most expensive of the means of production—their ed-ucation—and
+their</p>
+<p>most important tool—their knowledge. They do use other tools, of
+course,</p>
+<p>whether the nurse’s IV or the engineer’s computer. But their
+knowledge decides</p>
+<p>how these tools are being used and for what. They know what steps are
+most</p>
+<p>important and what methods need to be used to complete the tasks; and
+it is their</p>
+<p>knowledge that tells them what</p>
+<p>chores are unnecessary and should be eliminated.</p>
+<p>Work on knowledge-worker productivity therefore begins with
+asking</p>
+<p>the knowledge workers themselves: What is your task? What should
+it</p>
+<p>be? What should you be expected to contribute? and What hampers
+you</p>
+<p>in doing your task and should be eliminated? The how only comes
+after</p>
+<p>the what has been answered.</p>
+<h3 id="action-point-1">ACTION POINT:</h3>
+<p>Define your task as a knowledge worker by asking your-</p>
+<p>self: “What do I get paid for?” and “What should I get paid for?”</p>
+<p>Management Challenges for the 21st Century</p>
+<h4 id="knowledge-worker-productivity-corpedia-online-program">Knowledge
+Worker Productivity (Corpedia Online Program)</h4>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

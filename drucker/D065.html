@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="第三同读" />
+  <title>德鲁克日志</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">德鲁克日志</h1>
+<p class="author">第三同读</p>
+</header>
+<h2 id="透过金庸读懂德鲁克">透过金庸读懂德鲁克</h2>
+<p>如何预见未来？说说必然和巧合</p>
+<p>如何预见未来呢？有很多方法。</p>
+<p>比如，你要预测世界杯的冠军，你只需要选择足够多的人群，然后把人群一分为二。</p>
+<p>把每场比赛的两种输赢可能性分别发给其中的一半人。然后继续在下一场继续。</p>
+<p>在下一场继续两种输赢的可能性发给上次发对的那一半人。然后继续到下一场。</p>
+<p>直到决赛 ，仍然是把两种输赢的可能性分别发给上一次发对的那些人。</p>
+<p>最后那些受到正确“预测”的人一定认为你是神，居然预测中了所有的淘汰赛。</p>
+<p>其实，你只是说了一种必然。</p>
+<p>因为在淘汰制里，每一场比赛都会有一个输赢。所以，你”预见“了未来。</p>
+<p>还有一种是巧合，比如，在一些论坛，每天都有人说某个地方会地震。当然，大多时候并不好发生。</p>
+<p>而一旦发生后，我们在回过头来找那个预测某个特定地方有地震的信息，然后，我们有发现了神。</p>
+<p>马云在1999年成立了阿里巴巴，投身到了电子商务，成就了现在的阿里帝国。很多人肯定觉得马云是</p>
+<p>神一样的人物，居然在那种纷繁复杂的市场中敏锐地看清楚了未来的发展规划，从而做出了这么大的</p>
+<p>成就。</p>
+<p>其实，当时做电子商务的公司很多，做的比阿里早的也有，做的比阿里好的也有，实力比阿里强的也</p>
+<p>有，只是阿里成功了。现在回过头来看阿里，除了发现马云的睿智外，我们并不能看到太多：时代选</p>
+<p>择了马云而已。</p>
+<p>如果我们回想我们的祖先，会发现我们的某个祖先在战争的刀枪中艰难地爬行，我们非常为他担心，</p>
+<p>因为他一旦死了，就没有我们什么事了。</p>
+<p>其实，不用担心，现在活得的某一个，他的祖先一定会历经各种磨难也会活下来的。你想想是不是这</p>
+<p>个道理？</p>
+<p>从我们祖先的角度来看我们，我们就是一个巧合：那么巧，我的后人居然可以延续到几百年，几千年</p>
+<p>后！而换个视角，我会发现，我们必然能在历史中找到我们的祖先：你看，他正在要饭，今天要不到</p>
+<p>就会饿死，不过，他一定会要到的，因为他是我们的祖先。</p>
+<p>春节前爆发的新冠疫情，它会带来什么样的改变？市场的改变，经济的改变，社会的改变，政府的改</p>
+<p>变？我们应该如何应对这种改变？</p>
+<p>2年后，甚至10年后，当时的人会非常清晰，而且非常自然地说：因为疫情，所以人们之间的情感变得</p>
+<p>淡了，因为疫情，所以人们不再上街吃饭了。</p>
+<p>而处在这个时代的我们，并不知道，我们对每一个明天都惴惴不安，我们对哪怕一秒后都没有十足的</p>
+<p>把握。</p>
+<p>不过，我们能做的是，我们充分了解我们所能了解的事情。然后按照我们的理解，选择出我们认为最</p>
+<p>大的可能性，选择出我们推断出的必然。然后用这个推断来规划我们的生活。如果我们要规划的话。</p>
+<p>当我们爬到山顶时，我们非常明确的是，我们会下山，这是必然，至于从哪里下去，在路上会遇到什</p>
+<p>么人，那就是偶然了。</p>
+<p>或许，我会恰好遇到”她“，也或许，我只是会遇到一只狼。这些都是巧合。</p>
+<h2 id="大纲">大纲</h2>
+<h2 id="百字摘要">百字摘要</h2>
+<h2 id="金庸案例">金庸案例</h2>
+<h2 id="时间消耗">时间消耗</h2>
+<h2 id="阅读理解">阅读理解：</h2>
+<h2 id="大纲-1">大纲：</h2>
+<h2 id="撰写">撰写：</h2>
+<h2 id="录音">录音</h2>
+<h2 id="一小时运动">一小时运动</h2>
+<h2 id="英文原文">英文原文</h2>
+<p>5 MARCH</p>
+<p>Managing for the Future</p>
+<p>Prediction of future events is futile.</p>
+<p>futile：</p>
+<p>having no purpose because there is no chance of success</p>
+<p>徒然的；徒劳的；无效的</p>
+<p>The starting point to know the future is the realization that there
+are two different, though</p>
+<p>complementary, approaches:</p>
+<p>realization:</p>
+<p>认识；领会；领悟</p>
+<p>complementary：</p>
+<dl>
+<dt>[ U sing. ] ~ (that…) | ~ (of sth) the process of becoming aware of
+sth</dt>
+<dd>
+<p>(to sth) two people or things that are complementary are different
+but together form a useful or attractive</p>
+</dd>
+</dl>
+<p>combination of skills, qualities or physical features</p>
+<p>互补的；补充的；相互补足的</p>
+<p>Finding and exploiting the time lag between the appearance of a
+discontinuity in the economy and</p>
+<p>society and its full impact—one might call this anticipation of a
+future that has already happened.</p>
+<p>lag:</p>
+<p>缓慢移动；发展</p>
+<p>[ V ] ~ (behind sb/sth) | ~ (behind) to move or develop slowly or
+more slowly than other people, organizations, etc.</p>
+<p>缓慢；滞后；落后于</p>
+<p>discontinuity</p>
+<p>:[ U ] the state of not being continuous</p>
+<p>不连贯；不连续</p>
+<p>Imposing on the yet unborn future a new idea that tries to give
+direction and shape to what is to</p>
+<p>come.</p>
+<p>Imposing:</p>
+<p>[ V ] ~ (on/upon sb/sth) to expect sb to do sth for you or to spend
+time with you, when it may not be convenient for them</p>
+<p>勉强（某人做某事）；硬要…和…在一起</p>
+<p>This one might call making the future happen.</p>
+<p>The future that has already happened is not within the present
+business; it is outside: a change in</p>
+<p>society, knowledge, culture, industry, or economic structure.</p>
+<p>It is, moreover, a major trend, a break in the pattern rather than a
+variation within it.</p>
+<p>trend:</p>
+<p>variation</p>
+<p>趋势；趋向；倾向；动态；动向</p>
+<dl>
+<dt>:[ C U ] ~ (in/of sth) a change, especially in the amount or level
+of sth （数量、水平等的）变化，变更，变异</dt>
+<dd>
+<p>(towards/in sth) a general direction in which a situation is changing
+or developing</p>
+</dd>
+</dl>
+<p>Looking for the future that has already happened and anticipating its
+impacts introduces new</p>
+<p>perception in the beholder.</p>
+<p>perception ：</p>
+<p>术语</p>
+<p>知觉；感知</p>
+<p>[ U ] ( technical</p>
+<p>) ( formal ) the way you notice things, especially with the
+senses</p>
+<p>The need is to make oneself see it.</p>
+<p>What then could or should be done is usually not too difficult to
+discover.</p>
+<p>The opportunities are neither remote nor obscure.</p>
+<p>obscure：</p>
+<p>费解的；难以理解的</p>
+<p>difficult to understand</p>
+<p>The pattern has to be recognized first.</p>
+<p>Predicting the future can only get you in trouble.</p>
+<p>Predicting：</p>
+<p>预言；预告；预报</p>
+<p>to say that sth will happen in the future</p>
+<p>The task is to manage what is there and to work to create what could
+and should be.</p>
+<h3 id="action-point">ACTION POINT:</h3>
+<p>Spot a discontinuity in the economy or society that has appeared and
+presents an opportunity for</p>
+<p>your enterprise.</p>
+<p>Spot：</p>
+<p>不用于进行时</p>
+<p>( not used in the progressive tenses</p>
+<p>easy to do so</p>
+<p>看见；看出；注意到；发现</p>
+<p>) to see or notice a person or thing, especially suddenly or when it
+is not</p>
+<p>Determine how long it will take for this change to impact the
+business.</p>
+<p>Develop a business plan to cash in on this insight.</p>
+<p>Managing for Results</p>
+<h2 id="march">5 MARCH</h2>
+<h3 id="managing-for-the-future">Managing for the Future</h3>
+<p>Prediction of future events is futile.</p>
+<p>The starting point to know the future is the realization that there
+are two</p>
+<p>different, though complementary, approaches:</p>
+<p>•Finding and exploiting the time lag between the appearance of</p>
+<p>Adiscontinuity in the economy and society and its full impact—one</p>
+<p>might call this anticipation of a future that has already
+happened.</p>
+<p>•Imposing on the yet unborn future a new idea that tries to give</p>
+<p>direction and shape to what is to come. This one might call
+making</p>
+<p>the future happen.</p>
+<p>The future that has already happened is not within the present</p>
+<p>business; it is outside: a change in society, knowledge, culture,
+industry,</p>
+<p>or economic structure. It is, moreover, a major trend, a break in
+the</p>
+<p>pattern rather than a variation within it. Looking for the future
+that has</p>
+<p>already happened and anticipating its impacts introduces new
+perception</p>
+<p>in the beholder. The need is to make oneself see it. What then could
+or</p>
+<p>should be done is usually not too difficult to discover. The
+opportunities</p>
+<p>are neither remote nor ob-scure. The pattern has to be recognized
+first.</p>
+<p>Predicting the future can only get you in trouble. The task is to
+manage</p>
+<p>what is there and to work to create what could and should be.</p>
+<h3 id="action-point-1">ACTION POINT:</h3>
+<p>Spot a discontinuity in the economy or society that has</p>
+<p>appeared and presents an opportunity for your enterprise. Determine
+how</p>
+<p>long it will take for this change to impact the business. Develop</p>
+<p>Abusiness plan to cash in on this insight.</p>
+<h4 id="managing-for-results">Managing for Results</h4>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

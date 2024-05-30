@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="第三同读" />
+  <title>德鲁克日志</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">德鲁克日志</h1>
+<p class="author">第三同读</p>
+</header>
+<h2 id="透过金庸读懂德鲁克">透过金庸读懂德鲁克</h2>
+<p>高性能计算</p>
+<p>IPT</p>
+<p>无纸化办公 为赵锐要（）</p>
+<p>前言</p>
+<p>后端的高性能图站</p>
+<p>前端的IPT处理</p>
+<p>无纸化办公</p>
+<p>安全要单独写一个篇章</p>
+<p>最后给一部的的方案上改</p>
+<p>赵锐也写。</p>
+<p>我们需要怎样的江湖</p>
+<p>你我皆凡人，我们需要怎么的江湖呢？</p>
+<p>假如你在一个小饭店做服务员，你生性滑稽，经常喜欢说一些段子。</p>
+<p>某一天，店里来了一个大汉，后面有来了一个小姑娘。大汉点什么，小姑娘就点什么，你逗趣地说了</p>
+<p>句话，然后就被小姑娘把舌头割了一节。终生口齿不清了。</p>
+<p>不过，你还是幸运的，因为你的另一个同事，正在战战兢兢地端菜，
+结果被后面进来的一个年轻人打</p>
+<p>了一巴掌，整个人都变成了黑的，死透了。</p>
+<p>我想，你应该不想在这样的江湖。</p>
+<p>所以，你出身不错，家庭条件也不错，家里很有钱，也会武功，你跟着父亲也学了一些武功，家里事</p>
+<p>业也遍布全国。你倍成为少爷。</p>
+<p>某天，你带着几个家丁出去玩，在一个酒馆里看到一个外地人调戏老乡，你去打抱不平。结果不小心</p>
+<p>杀了了一个人。</p>
+<p>你非常害怕，就跑回家。没几天，家门口来了很多人，然后，你看着自己身边的人一个一个地死掉</p>
+<p>了，而你，只能逃跑，逃跑。</p>
+<p>我想，你应该也不想要这样的生活。</p>
+<p>你努力学武功，四处拜名师，居然还拜了一个号称龙王的人为师，你师父的武功确实厉害，你学成了</p>
+<p>文武艺，投靠了当时最有权势的金国。</p>
+<p>结果，没几年，你就在太湖上被人一刀砍了。</p>
+<p>我想，你的努力学习，肯定也不想要这样的江湖。</p>
+<p>然后，你天赋异禀，轻功绝世无双，而且，你加入了一个非常厉害的教派，教里的兄弟都非常和谐，</p>
+<p>和称你为“青翼蝠王”，你四处杀人，为所欲为，因着你的武功高，别人不敢惹你。</p>
+<p>你身体有些残疾，每次练功都要喝人血，所以，你经常要用牙齿咬死人。</p>
+<p>每天晚上，在梦中，当那些被你咬死的人临死前恐怖的面容出现在你梦里时，你会惊醒。</p>
+<p>在这半梦半醒之间，你会说，这不是我要的江湖 。</p>
+<p>所以，江湖开始变化，那些武术大侠的影响力越来越低。世俗的法律和政府的权力越来越大，普通人</p>
+<p>的生存权力也越来越大。</p>
+<p>当东方不败怀着绝世神功，在闺房绣花时，他肯定想，这才是我要的生活。多希望这种生活和我的武</p>
+<p>功无关。</p>
+<p>令狐冲是笑道最后的人，不过，这时的他已经是独孤九剑+吸星大法+易经筋+无数人的内功。这时的令</p>
+<p>狐冲会不会在想：多希望我的笑傲和我的武功无关，而是做了一个普通的华山大师哥。</p>
+<p>是呀，在江湖上，不管你多努力，不过你武功多高，你都没有安全，你每天都在防备被杀死。这不是</p>
+<p>你想要的生活，这也不是你想要的江湖。</p>
+<p>如果武功的学习，只会带来恐怖。那么这个江湖不要武功也罢。</p>
+<p>在金庸的最后一本书里，在《鹿鼎记》里，最后胜出的是不大会武功的韦小宝。而小宝身边那些武功</p>
+<p>高手，都被他玩的团团转。</p>
+<p>我想，金庸在告诉大家：这才是他要的江湖，在这个江湖中，你有一个安全的归宿。</p>
+<p>在《鹿鼎记》之前的江湖中，主角的安全感都来自无与伦比的武功，而《鹿鼎记》做了修正。</p>
+<p>这才是我们想要的江湖。</p>
+<h2 id="大纲">大纲</h2>
+<h2 id="百字摘要">百字摘要</h2>
+<h2 id="金庸案例">金庸案例</h2>
+<h2 id="时间消耗">时间消耗</h2>
+<h2 id="阅读理解">阅读理解：</h2>
+<h2 id="大纲-1">大纲：</h2>
+<h2 id="撰写">撰写：</h2>
+<h2 id="录音">录音</h2>
+<h2 id="一小时运动">一小时运动</h2>
+<h2 id="英文原文">英文原文</h2>
+<p>27 DECEMBER</p>
+<p>Integrating the Economic and Social</p>
+<p>It is this absence of a functioning industrial society, able to
+integrate our industrial reality, that</p>
+<p>underlies the crises of our times.</p>
+<p>crises:</p>
+<p>危机</p>
+<p>underlie</p>
+<p>构成 的基础；作为 的原因</p>
+<p>N-VAR A crisis is a situation in which something or someone is
+affected by one or more very serious problems.</p>
+<p>:[ VN ] [ no passive ] ( formal ) to be the basis or cause of sth</p>
+<p>…</p>
+<p>…</p>
+<p>Man in his social and political existence must have a functioning
+society just as he must have</p>
+<p>air to breathe in his biological existence.</p>
+<p>However, the fact that man has to have a society does not necessarily
+mean that he has it.</p>
+<p>Nobody calls the mass of unorganized, panicky, stampeding humanity in
+a shipwreck a</p>
+<p>“society.”</p>
+<p>panicky：</p>
+<p>焦虑不安的；惊慌的</p>
+<p>stampeding：</p>
+<p>兽群或人群</p>
+<p>（使）狂奔，涌向</p>
+<p>humanity：</p>
+<p>（统称）人；人类</p>
+<p>shipwreck：</p>
+<p>船舶失事；海难</p>
+<p>( informal ) anxious about sth; feeling or showing panic</p>
+<p>( of large animals or people</p>
+<p>) to run in a stampede ; to make animals do this</p>
+<p>[ U ] people in general</p>
+<p>[ U C ] the loss or destruction of a ship at sea because of a storm
+or because it hits rocks, etc.</p>
+<p>There is no society, though there are human beings in a group.</p>
+<p>Actually, the panic is directly due to the break-down of a society;
+and the only way to overcome it is</p>
+<p>by restoring a society with social values, social discipline, social
+power, and social</p>
+<p>relationships.</p>
+<p>Social life cannot function without a society; but it is conceivable
+that it does not function at all.</p>
+<p>conceivable：</p>
+<p>可想象的；可信的</p>
+<p>that you can imagine or believe</p>
+<p>The evidence of the last twenty-five years of Western civilization
+hardly entitles us to say that our</p>
+<p>social life functioned so well as to make out a prima-facie case for
+the existence of a functioning</p>
+<p>society.</p>
+<p>entitle：</p>
+<p>prima-facie：</p>
+<p>V-T If you are entitled to something, you have the right to have it
+or do it.</p>
+<p>[ only before noun ] ( law</p>
+<p>later</p>
+<p>基于初步印象的；初步认定的</p>
+<p>使有权</p>
+<p>律 ) ( from Latin ) based on what at first seems to be true, although
+it may be proved false</p>
+<h3 id="action-point">ACTION POINT:</h3>
+<p>The passage above was written during World War II.</p>
+<p>It recognized that after centuries of industrial advance there had
+not been a similar advance in</p>
+<p>other institutions of society.</p>
+<p>Should the economic dimension of society ever take supremacy over the
+human, social, and</p>
+<p>political dimensions?</p>
+<p>supremacy：</p>
+<p>至高无上；最大</p>
+<p>[ U ] ~ (over sb/sth) a position in which you have more power,
+authority or status than anyone else</p>
+<p>权力；最高权威；最高地位</p>
+<p>The Future of Industrial Man</p>
+<h2 id="december">27 DECEMBER</h2>
+<h3 id="integrating-the-economic-and-social">Integrating the Economic
+and Social</h3>
+<p>It is this absence of a functioning industrial society, able to
+integrate</p>
+<p>our industrial reality, that underlies the crises of our times.</p>
+<p>Man in his social and political existence must have a functioning
+soci-ety just</p>
+<p>as he must have air to breathe in his biological existence.</p>
+<p>However, the fact that man has to have a society does not necessarily
+mean</p>
+<p>that he has it. Nobody calls the mass of unorganized, panicky,
+stampeding</p>
+<p>humanity in a shipwreck a “society.” There is no society, though
+there are</p>
+<p>human beings in a group. Actually, the panic is directly due to the
+break-</p>
+<p>down of a society; and the only way to overcome it is by restoring a
+society</p>
+<p>with social values, social discipline, social power, and social
+relationships.</p>
+<p>Social life cannot function without a society; but it is conceivable
+that</p>
+<p>it does not function at all. The evidence of the last twenty-five
+years of</p>
+<p>West-ern civilization hardly entitles us to say that our social
+life</p>
+<p>functioned so well as to make out a prima-facie case for the
+existence of</p>
+<p>Afunctioning society.</p>
+<h3 id="action-point-1">ACTION POINT:</h3>
+<p>The passage above was written during World War II. It</p>
+<p>recognized that after centuries of industrial advance there had not
+been</p>
+<p>Asimilar advance in other institutions of society. Should the
+economic di-</p>
+<p>mension of society ever take supremacy over the human, social,
+and</p>
+<p>politi-cal dimensions?</p>
+<h4 id="the-future-of-industrial-man">The Future of Industrial Man</h4>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

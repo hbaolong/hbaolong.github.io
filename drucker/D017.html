@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="第三同读" />
+  <title>德鲁克日志</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">德鲁克日志</h1>
+<p class="author">第三同读</p>
+</header>
+<h2 id="透过金庸读懂德鲁克">透过金庸读懂德鲁克</h2>
+<p>我们有NPO么？</p>
+<p>我们书友会是一个公益组织么？我感觉不是，因为它是私益的。首先，他是为了发起人个人的利益</p>
+<p>的，因为我们喜欢阅读，喜欢交流，喜欢交朋友，喜欢通过阅读、交流来交道好朋友。</p>
+<p>一度，我把书友会的本质理解为”找朋友“的游戏，也就是说，在这里，你可以找到和你三观一直的好</p>
+<p>朋友。</p>
+<p>其次，我们的大部分活动都是收费的，
+虽然很便宜，也是收费的。而且，我们的活动组织者也是希望</p>
+<p>通过组织活动赚到一些钱的：周末，约上十几个朋友一起读书，见一见老朋友，认识一些新朋友，还</p>
+<p>能赚个几百块钱，也是非常惬意的事情。</p>
+<p>最后，我们并不欢迎所有的人。我们只喜欢和我们同频的人。所以，我认为我们不是公益。</p>
+<p>那么，我们是商业么？毕竟吴晓波老师告诉我们要”崇尚商业之美“。所以，我们是做商业么？</p>
+<p>应该也不是，毕竟，这个也赚不了几个钱，一次活动，多的话一两千，少的话就就十块钱。不管是一</p>
+<p>两千还是几十块钱，组织者都会非常开心地参加活动，和大家交流，按照没有流程的流程把活动做</p>
+<p>完。</p>
+<p>所以，书友会应该也不是商业组织。</p>
+<p>那么，书友会是什么组织呢？看了德鲁克的书后，我才知道，书友会应该是”非商业组织“。我们或许</p>
+<p>有商业手段（收费），却并不以商业为目的，所以，我们定义自己为”非商业组织“。</p>
+<p>那么，我们有什么目的么？</p>
+<p>我记得我原来组织大家怕香山，报名费是每人一块钱。有人提议每个佩戴一个胸贴，我就去找了一</p>
+<p>个。发现要1块2一个，然后我还亏了几块钱。</p>
+<p>那次参加活动的有40人左右，大家到了山顶后，手拉手围成一个圈，挨个走到圈子里做了自我介绍，</p>
+<p>然后，所有人大声朗诵一首现代诗。40人的整齐声音，每个人抑扬顿挫的古怪音调。让每个人都觉得</p>
+<p>很惬意。</p>
+<p>所以我觉得，这一定不是商业活动。</p>
+<p>在书友会活跃的那几年里，几乎每周都有人组织各种有趣的活动，大多都是免费的（我们对免费的定</p>
+<p>义就是收取一块钱）。</p>
+<p>是什么动力让这样一个”非商业化的组织“，那么多人为了几块钱来组织那么多丰富多彩的活动呢？</p>
+<p>有一次，有一个女生和我聊天，我问女生在做什么，女生说自己在做”公益“。在做号召大家不要黑眼</p>
+<p>圈，早睡早起的公益。</p>
+<p>她说，她认识好多明星，这些明星会无偿支持她做这个公益。她还得到了XX协会的支持。巴拉巴拉。</p>
+<p>说了良久后，小姑娘突然问我：”你觉得我如何可以变现么？“</p>
+<p>我愣了一下，问她：”你为什么要变现呀。“</p>
+<p>她像看傻子一样看着我说：”我有这么多流量为啥不能变现呢？不变现，我吃啥呀？！“</p>
+<p>看着她无可辩驳的理由，我就找了个借口出去了。</p>
+<p>是呀，在大家的理解里，我做的每一件事都需要回报。这是商业社会的逻辑。这个逻辑没错。</p>
+<p>那么，为什么不直接去做商业呢？是因为流量贵么？</p>
+<p>自从”做“了书友会后，有很多人和我聊公益组织，聊慈善基金会，聊非盈利机构，如此这般。</p>
+<p>只是，所有的聊天最后都会归结到一点：”你们如何盈利。“</p>
+<p>然后我也会像看傻子一样看着对方说：”你没觉得我们是非盈利机构么？“</p>
+<p>是呀，很多人觉得公益机构、非盈利机构、慈善机构，只是商业机构华丽的外衣，他们应该和商业机</p>
+<p>构一样给组织者，参与者丰厚的现金回报。同时却可以通过华丽的外衣获得顺风的动力。</p>
+<p>其实，当你和四十个小伙伴在香山顶上大声朗诵一首现代诗时，你或许就会理解”非商业组织“的意义</p>
+<p>了。</p>
+<p>”非商业组织“并不是无私的奉献，而是用非商业化或者商业化的手段，获得利益之外的收益。而愿意</p>
+<p>为”非商业组织“做出贡献的人，也就是那些期待和渴望”利益“之外的收益的人。</p>
+<p>你身边有真正的非商业组织么？</p>
+<h2 id="大纲">大纲</h2>
+<h2 id="百字摘要">百字摘要</h2>
+<h2 id="金庸案例">金庸案例</h2>
+<h2 id="时间消耗">时间消耗</h2>
+<h2 id="阅读理解">阅读理解：</h2>
+<h2 id="大纲-1">大纲：</h2>
+<h2 id="撰写">撰写：</h2>
+<h2 id="录音">录音</h2>
+<h2 id="一小时运动">一小时运动</h2>
+<h2 id="英文原文">英文原文</h2>
+<p>17 JANUARY</p>
+<p>Management: The Central Social Function</p>
+<p>Noneconomic institutions need a yardstick that does for them what
+profitability does for</p>
+<p>business.</p>
+<p>yardstick：</p>
+<p>（好坏或成败的）衡量标准；准绳</p>
+<p>profitability：n. 盈利能力；收益性；利益率</p>
+<p>a standard used for judging how good or successful sth is</p>
+<p>Nonbusiness institutions flock in increasing numbers to business
+management to learn from it how</p>
+<p>to manage themselves.</p>
+<p>flock in：成群地走进</p>
+<p>The hospital, the armed service, the Catholic diocese, the civil
+service—all want to go to school</p>
+<p>for business management.</p>
+<p>Catholic：adj. 罗马天主教的</p>
+<p>diocese：</p>
+<p>基督教会</p>
+<p>( in the Christian Church</p>
+<p>) a district for which a bishop is responsible</p>
+<p>教区；主教辖区</p>
+<p>：</p>
+<p>主教</p>
+<p>civil：[ only before noun ] connected with the state rather than with
+religion or with the armed forces 国家的，政府的（非宗教或军事</p>
+<p>的）</p>
+<p>bishop a senior priest in charge of the work of the Church in a city
+or district</p>
+<p>This does not mean that business management can be transferred to
+other, nonbusiness</p>
+<p>institutions.</p>
+<p>On the contrary, the first thing these institutions have to learn
+from business management is that</p>
+<p>management begins with the setting of objectives and that, therefore,
+noneconomic institutions,</p>
+<p>such as a university or a hospital, will also need very different
+management from that of a business.</p>
+<p>But these institutions are right in seeing business management as the
+prototype.</p>
+<p>prototype：</p>
+<dl>
+<dt>原型；雏形；最初形态</dt>
+<dd>
+<p>(for/of sth) the first design of sth from which other forms are
+copied or developed</p>
+</dd>
+</dl>
+<p>Business, far from being exceptional, is simply the first of the
+species and the one we have</p>
+<p>studied the most intensively.</p>
+<p>exceptional：</p>
+<p>杰出的；优秀的；卓越的</p>
+<p>intensively：adv. 强烈地；集中地</p>
+<p>unusually good</p>
+<p>Noneconomic institutions need a yardstick that does for them what
+profitability does for the</p>
+<p>business.</p>
+<p>“Profitability,” in other words, rather than being the “exception”
+and distinct from “human” or</p>
+<p>“social” needs, emerges, in the pluralist society of organizations,
+as the prototype of the</p>
+<p>measurement needed by every institution in order to be managed and
+manageable.</p>
+<p>pluralist：</p>
+<p>社会</p>
+<p>多元性的；多元化的</p>
+<p>( of a society</p>
+<p>) having many different groups of people and different political
+parties in it</p>
+<h3 id="action-point">ACTION POINT:</h3>
+<p>What is the most important nonbusiness institution with which you are
+associated?</p>
+<p>Does it use a specific yardstick to assess performance?</p>
+<dl>
+<dt>assess：</dt>
+<dd>
+<p>sb/sth (as sth) to make a judgement about the nature or quality of
+sb/sth</p>
+</dd>
+</dl>
+<p>评估，评定（性质、质量）</p>
+<p>How successful is the organization?</p>
+<p>The Ecological Vision</p>
+<h2 id="january">17 JANUARY</h2>
+<h3 id="management-the-central-social-function">Management: The Central
+Social Function</h3>
+<p>Noneconomic institutions need a yardstick that does for them what</p>
+<p>profitability does for business.</p>
+<p>Nonbusiness institutions flock in increasing numbers to business
+man-</p>
+<p>agement to learn from it how to manage themselves. The hospital, the
+armed</p>
+<p>service, the Catholic diocese, the civil service—all want to go
+to</p>
+<p>school for business management.</p>
+<p>This does not mean that business management can be transferred to</p>
+<p>other, nonbusiness institutions. On the contrary, the first thing
+these insti-</p>
+<p>tutions have to learn from business management is that management
+be-</p>
+<p>gins with the setting of objectives and that, therefore,
+noneconomic</p>
+<p>institutions, such as a university or a hospital, will also need
+very</p>
+<p>different management from that of a business. But these institutions
+are</p>
+<p>right in see-ing business management as the prototype. Business, far
+from</p>
+<p>being excep-tional, is simply the first of the species and the one we
+have</p>
+<p>studied the most intensively. Noneconomic institutions need a
+yardstick</p>
+<p>that does for them what profitability does for the business.
+“Profitability,”</p>
+<p>in other words, rather than being the “exception” and distinct
+from</p>
+<p>“human” or “social” needs, emerges, in the pluralist society of</p>
+<p>organizations, as the prototype of the measurement needed by
+every</p>
+<p>institution in order to be managed and manageable.</p>
+<h3 id="action-point-1">ACTION POINT:</h3>
+<p>What is the most important nonbusiness institution with</p>
+<p>which you are associated? Does it use a specific yardstick to
+assess</p>
+<p>perfor-mance? How successful is the organization?</p>
+<h4 id="the-ecological-vision">The Ecological Vision</h4>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

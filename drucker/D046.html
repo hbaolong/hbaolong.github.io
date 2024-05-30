@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="第三同读" />
+  <title>德鲁克日志</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">德鲁克日志</h1>
+<p class="author">第三同读</p>
+</header>
+<h2 id="透过金庸读懂德鲁克">透过金庸读懂德鲁克</h2>
+<p>盖亚文明：你能感受到我的高潮么？</p>
+<p>盖亚是一个女神，不过，她不是现在大家嘴里的那个”女神“。</p>
+<p>比如这样的：</p>
+<p>她是古希腊的一个女神，是大地之神，是众神之母，是所有神灵中最德高望重的显赫之神。而且，她</p>
+<p>神力力很高。就像这样的：</p>
+<p>这位大母神生出了所有光明宇宙的天神，所以，所有天神都是她的子孙后代。这也就诞生了一种盖亚</p>
+<p>假说：我们地球的生命体和非生命体形成了一个可互相作用的复杂系统，地球上所有的生物共同组成</p>
+<p>的一个意识。</p>
+<p>这个假说很有趣，如果你不好理解的话，那么，你看过《阿凡达》么？阿凡达里的潘多拉就是一个盖</p>
+<p>亚体。在潘多拉星球上，所有的生物（动物、植物）共用一个意识。当外星人（地球人）去攻击潘多</p>
+<p>拉时，那些本来认为无意识的动物全部出现了，共同保护潘多拉星球。</p>
+<p>在阿西莫夫的《银河帝国》中有一个非常巧妙的桥段。在人类的社会架构面临奔溃时，人类决定离开</p>
+<p>地球，到宇宙中去寻找机会，不同的人类去往不同的地方，形成了第一基地，第二基地，第三基地。</p>
+<p>各个基地都在实验不同的社会模式。</p>
+<p>其中就有”盖亚文明”，在全书的最后，主人公崔维兹在几个文明之间选择，优势最大的就是盖亚文明。</p>
+<p>崔维兹说，“正是如此！我选择了盖娅，一个超级生命体，整个行星共享同一个心灵以及共同的个性，</p>
+<p>所以必须发明‘我／们／盖娅’这种代名词，来表达一种根本无法表达的概念。”</p>
+<p>那么，盖亚文明是怎么样的一种文明呢？</p>
+<p>就像“盖亚假说”描述的那样，在盖亚文明中，所有的动物（包括人），所有的植物，包括岩石等无机物</p>
+<p>组成的盖亚星系已经彻底消灭了个体。每一个个体都属于整体的一部分，大家拥有共同的意识。</p>
+<p>在盖亚文明中，任何一个人都可以代表整个盖亚文明。因为他们共同做出决定，并且任何个体说出、</p>
+<p>表达出的，做的，都是整体的一个决定，而不是他自己的。</p>
+<p>因为，盖亚体可以感受到每一个个体的每一个细微的思想和情感，然后综合所有人的思想对某一件事</p>
+<p>做出一个决定：决定去迎接崔维兹。</p>
+<p>甚至，当崔维兹和那个盖亚文明的美女“不可描述”时，他们的高潮会被整个盖亚体感受到，只是会被大</p>
+<p>部分人忽略而已。</p>
+<p>这是一个多么高效的文明体呀，不再需要开会，不再需要协商，不再需要异议，也不会再有分歧和战</p>
+<p>争，所有的生命体链接到了一起，大家通过一个算法做出大大小小的事情的决定，然后所有人都自然</p>
+<p>地、毫无异议地执行这些决策。</p>
+<p>人类的文明如果真的可以做到这样，那该多好！</p>
+<p>那么崔维兹最后选择了盖亚文明么？也没有，因为崔维兹发现了一些问题，一些小的问题。</p>
+<p>崔维兹深深吸了一口气，以低沉有力的声音缓缓说道：“因为这个超级生命体为了整体的利益，随时可</p>
+<p>能将我抛弃，我不想变成这样可有可无的一分子。”</p>
+<p>所以，崔维兹离开了盖亚星球，继续去寻找答案。</p>
+<p>其实，在这本书的最后，崔维兹也没有得出我们最佳社会模型的结论。或许，这个问题本来就无解。</p>
+<h2 id="大纲">大纲</h2>
+<h2 id="百字摘要">百字摘要</h2>
+<h2 id="金庸案例">金庸案例</h2>
+<h2 id="时间消耗">时间消耗</h2>
+<h2 id="阅读理解">阅读理解：</h2>
+<h2 id="大纲-1">大纲：</h2>
+<h2 id="撰写">撰写：</h2>
+<h2 id="录音">录音</h2>
+<h2 id="一小时运动">一小时运动</h2>
+<h2 id="英文原文">英文原文</h2>
+<p>15 FEBRUARY</p>
+<p>Salvation by Society</p>
+<p>Salvation：</p>
+<p>基督教</p>
+<p>( in Christianity</p>
+<p>) the state of being saved from the power of evil</p>
+<p>得救；救恩；救世</p>
+<p>The end of the belief in salvation by society may even lead to a
+return to individual responsibility.</p>
+<p>Surely the collapse of Marxism as a creed signifies the end of the
+belief in salvation by society.</p>
+<p>collapse：</p>
+<p>（突然）倒塌，坍塌</p>
+<p>Marxism：</p>
+<p>[ V ] to fall down or fall in suddenly, often after breaking
+apart</p>
+<p>[ U ] the political and economic theories of Karl Marx (1818-83)
+which explain the changes and developments in society</p>
+<p>马克思主义</p>
+<p>creed：a set of principles or religious beliefs
+信念；原则；纲领；宗教信仰</p>
+<p>signifies：V-T If an event, a sign, or a symbol signifies something,
+it is a sign of that thing or represents that thing. 表示; 意味着</p>
+<p>as the result of opposition between the social classes</p>
+<p>What will emerge next, we cannot know; we can only hope and pray.</p>
+<p>emerge：</p>
+<p>（从隐蔽处或暗处）出现，浮现，露出</p>
+<p>[ V ] ~ (from sth) to come out of a dark, confined or hidden
+place</p>
+<p>Perhaps nothing beyond stoic resignation?</p>
+<p>stoic：</p>
+<p>( formal ) a person who is able to suffer pain or trouble without
+complaining or showing what they are feeling</p>
+<p>斯多葛派人（对</p>
+<p>痛苦或困难能默默承受或泰然处之）</p>
+<p>resignation：[ U ] patient willingness to accept a difficult or
+unpleasant situation that you cannot change 顺从；听任</p>
+<p>Perhaps a rebirth of traditional religion, addressing itself to the
+needs and challenges of the person</p>
+<p>in the knowledge society?</p>
+<p>The explosive growth of what I call “pastoral” Christian churches in
+America—Protestant,</p>
+<p>Catholic, nondenominational—might be a portent.</p>
+<p>explosive：</p>
+<p>突增的；猛增的；激增的</p>
+<p>pastoral：</p>
+<p>increasing suddenly and rapidly</p>
+<p>relating to the work of a priest or teacher in giving help and advice
+on personal matters, not just those connected with</p>
+<p>牧灵的，牧师的，教牧的（有关圣职人员及教师对个人幸福的关顾）</p>
+<p>Christian：based on or believing the teachings of Jesus Christ
+基督教的；信奉基督教的</p>
+<p>Protestant：a member of a part of the Western Christian Church that
+separated from the Roman Catholic Church in the 16th</p>
+<p>century 新教教徒（16世纪脱离罗马天主教）</p>
+<p>Catholic：adj. 罗马天主教的</p>
+<p>nondenominational：ADJ not of or related to any religious
+denomination 与宗教派别无关的</p>
+<p>portent：( literary ) a sign or warning of sth that is going to
+happen in the future, especially when it is sth unpleasant
+预兆；征兆；</p>
+<p>先兆；（尤指）恶兆，凶兆</p>
+<p>religion or education</p>
+<p>But so might the resurgence of fundamentalist Islam.</p>
+<p>resurgence：</p>
+<p>复苏；复兴</p>
+<p>fundamentalist：n. 原教旨主义者；基要主义者；信奉正统派基督教的人</p>
+<p>Islam：</p>
+<p>[ sing. U ] the return and growth of an activity that had stopped</p>
+<p>the Muslim religion, based on belief in one God and revealed through
+Muhammad as the Prophet of Allah</p>
+<p>伊斯兰教</p>
+<p>For the young people in the Muslim world who now so fervently embrace
+Islamic fundamentalism</p>
+<p>would, forty years ago, have been equally fervent Marxists.</p>
+<p>fervently：adv. 热心地；热诚地</p>
+<p>embrace：</p>
+<p>欣然接</p>
+<p>[ VN ] ( formal ) to accept an idea, a proposal, a set of beliefs,
+etc., especially when it is done with enthusiasm</p>
+<p>受，乐意采纳（思想、建议等）；信奉（宗教、信仰等）</p>
+<p>fervent：[ usually before noun ] having or showing very strong and
+sincere feelings about sth 热情的；热诚的；热烈的</p>
+<p>Marxists：马克思</p>
+<p>Or will there be new religions?</p>
+<p>religions：</p>
+<p>N-UNCOUNT Religion is belief in a god or gods and the activities that
+are connected with this belief, such as praying or</p>
+<p>worshipping in a building such as a church or temple.</p>
+<p>宗教</p>
+<p>Still, redemption, self-renewal, spiritual growth, goodness, and
+virtue—the “New Man,” to use</p>
+<p>the traditional term—are likely to be seen again as existential
+rather than social goals or political</p>
+<p>prescriptions.</p>
+<p>redemption：</p>
+<p>拯救；救赎</p>
+<p>( formal ) the act of saving or state of being saved from the power
+of evil; the act of redeeming</p>
+<p>self-renewal：n. 自我恢复；自动更新</p>
+<p>spiritual：</p>
+<p>精神的；心灵的</p>
+<p>goodness：</p>
+<p>善良；优良；美德</p>
+<p>virtue：</p>
+<p>高尚的道德；正直的品性；德行</p>
+<p>existential：</p>
+<p>关于人类存在的；与人类存在有关的</p>
+<p>prescriptions：</p>
+<p>connected with the human spirit, rather than the body or physical
+things</p>
+<p>the quality of being good</p>
+<p>[ U ] ( formal ) behaviour or attitudes that show high moral
+standards</p>
+<p>( formal ) connected with human existence</p>
+<p>situation.</p>
+<p>N-COUNT A prescription is a proposal or a plan that gives ideas about
+how to solve a problem or improve a</p>
+<p>方案</p>
+<p>The end of the belief in salvation by society surely marks an inward
+turning.</p>
+<p>inward：</p>
+<p>内心的；精神的</p>
+<p>[ only before noun ] inside your mind and not shown to other
+people</p>
+<p>It makes possible renewed emphasis on the individual, the person.</p>
+<p>emphasis：</p>
+<dl>
+<dt>强调；重视；重要性</dt>
+<dd>
+<p>(on/upon sth) special importance that is given to sth</p>
+</dd>
+</dl>
+<p>It may even lead—at least we can so hope—to a return to individual
+responsibility.</p>
+<h3 id="action-point">ACTION POINT:</h3>
+<p>The human resources department is not responsible for taking care of
+you; you are.</p>
+<p>Know what you are good at, make sure your results are equal to your
+expectations, and manage</p>
+<p>yourself.</p>
+<p>Continually ask yourself, “What should MY contribution be?”</p>
+<p>Post-Capitalist Society</p>
+<h2 id="february">15 FEBRUARY</h2>
+<h3 id="salvation-by-society">Salvation by Society</h3>
+<p>The end of the belief in salvation by society may even</p>
+<p>lead to a return to individual responsibility.</p>
+<p>Surely the collapse of Marxism as a creed signifies the end of the
+belief in</p>
+<p>salvation by society. What will emerge next, we cannot know; we can
+only</p>
+<p>hope and pray. Perhaps nothing beyond stoic resignation? Perhaps a
+rebirth of</p>
+<p>traditional religion, addressing itself to the needs and challenges
+of the person</p>
+<p>in the knowledge society? The explosive growth of what I call
+“pastoral”</p>
+<p>Christian churches in America—Protestant, Catholic,
+nonde-nominational—</p>
+<p>might be a portent. But so might the resurgence of funda-mentalist
+Islam. For</p>
+<p>the young people in the Muslim world who now so fervently embrace
+Islamic</p>
+<p>fundamentalism would, forty years ago, have been equally fervent
+Marxists.</p>
+<p>Or will there be new religions? Still, re-demption, self-renewal,
+spiritual</p>
+<p>growth, goodness, and virtue—the “New Man,” to use the traditional
+term—</p>
+<p>are likely to be seen again as existential rather than social goals
+or political</p>
+<p>prescriptions. The end of the belief in salvation by society surely
+marks an</p>
+<p>inward turning. It makes possible re-newed emphasis on the
+individual, the</p>
+<p>person. It may even lead—at least</p>
+<p>we can so hope—to a return to individual responsibility.</p>
+<h3 id="action-point-1">ACTION POINT:</h3>
+<p>The human resources department is not responsible for</p>
+<p>taking care of you; you are. Know what you are good at, make sure
+your</p>
+<p>re-sults are equal to your expectations, and manage yourself.
+Continually</p>
+<p>ask yourself, “What should MY contribution be?”</p>
+<h4 id="post-capitalist-society">Post-Capitalist Society</h4>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

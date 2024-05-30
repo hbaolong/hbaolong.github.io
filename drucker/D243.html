@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="第三同读" />
+  <title>德鲁克日志</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">德鲁克日志</h1>
+<p class="author">第三同读</p>
+</header>
+<h2 id="透过金庸读懂德鲁克">透过金庸读懂德鲁克</h2>
+<p>孙子曰：以正和，以齐胜</p>
+<p>孙子曰：以正和，以齐胜，这估计是误会最多的一句话。因为这是被传播最广的一句话。</p>
+<p>首先的一个误会是“奇”字应该读“ji”。也就是数学及的奇数的奇。在这句话里，孙子主要想描述的是一</p>
+<p>个分兵的概念：打战时，不管你有多少人，一定要分兵，把军队分成两部分以上。每次只投入一部分</p>
+<p>兵力，其他兵力则是预备队，或者做其他准备工作。</p>
+<p>不过，正、奇之间并不是明确的。一支军队是正还是奇，并不是指挥官定义的，而是根据战场情况随</p>
+<p>时变换的。</p>
+<p>正面面对敌人的就是正，还没有投入战斗，并且随时可以投入战斗的就被称为奇。而一旦投入战斗，</p>
+<p>奇也就没有了。</p>
+<p>不过，孙子认为，应该永远有“正”，有“奇”，也就是说，你永远不应该投入所有的兵力，也就意味着你</p>
+<p>永远都不应该孤注一掷。</p>
+<p>这一点德鲁克也有类似观点，德鲁克比较喜欢的一个模式是，一个有正常业务的公司，每周五大家坐</p>
+<p>下了讨论这一周的“意外”情况，然后分析这些意外情况。比如：“某某某居然本周连续请假三天”，
+“某</p>
+<p>个产品本周销量居然冲了新高”， “某个产品突然没有了销量”。
+这些意外不管是好还是坏，都可以讨论</p>
+<p>一下。“我们研究了一种治疗心脏的药，可是对治疗心脏没个毛用，不过，吃了后，那个居然厉害多</p>
+<p>了”。办公室引起了一阵哄堂大笑，在笑声中董事长悄悄对总经理交代，让他带几盒给他。</p>
+<p>每周五的这个讨论，会在“正”之外的市场进行中，不断发现新的市场机会，当某个“奇”带来奇迹时，新</p>
+<p>的市场就出现了。后来伟哥给“辉瑞”带来了巨大的收益。</p>
+<p>我曾经和保险的朋友聊天说，“孙子到了现代，一定会开保险公司”。因为每一个新入职的保险业务员</p>
+<p>都会和你说，你需要三个钱包：，不管你有多少钱，都需要把钱分到这三个钱包里。</p>
+<p>这三个钱包哪个最重要？哪个是正？哪个是奇？当然是不确定的，你想呀，在人生的不同阶段正和奇</p>
+<p>之间是不断切换的。而你要做的是，保证这三个钱包里都有钱，而不是孤注一掷。</p>
+<h2 id="大纲">大纲</h2>
+<h2 id="百字摘要">百字摘要</h2>
+<h2 id="金庸案例">金庸案例</h2>
+<h2 id="时间消耗">时间消耗</h2>
+<h2 id="阅读理解">阅读理解：</h2>
+<h2 id="大纲-1">大纲：</h2>
+<h2 id="撰写">撰写：</h2>
+<h2 id="录音">录音</h2>
+<p>30 AUGUST</p>
+<p>Finding Opportunity in Surprises</p>
+<p>One survives problems by making them irrelevant because of
+success.</p>
+<p>irrelevant：</p>
+<dl>
+<dt>无关紧要的；不相关的</dt>
+<dd>
+<p>(to sth/sb) not important to or connected with a situation</p>
+</dd>
+</dl>
+<p>Every surprise is something to be taken seriously.</p>
+<p>The entire reporting system kind of encourages the neglect of
+opportunities and surprises, but also</p>
+<p>it’s fairly easy to change.</p>
+<p>Fifty years ago, a friend and mentor of mine invented a system used
+in a big company that’s</p>
+<p>become very successful as a result.</p>
+<p>Every manager, down to the first-line supervisor, sits down every
+month and writes a letter with one</p>
+<p>subject: the unexpected.</p>
+<p>Not what went right or what went wrong, but the unexpected.</p>
+<p>And then they have a meeting and look at these things with the
+question: Does this tell us something?</p>
+<p>Now, the great majority don’t, the great majority are just anecdotes,
+but there are usually three or</p>
+<p>four that are relevant.</p>
+<p>And out of this, the company—a pharmaceutical company—has grown from
+a fairly unimpor-tant</p>
+<p>commodity producer to one of the world’s leaders.</p>
+<p>And it’s come out of surprises, clinical surprises, like when a
+physician uses a medication for what</p>
+<p>it was not developed for and has amazing results.</p>
+<p>You have to focus on success, especially unexpected success, and run
+with it.</p>
+<h3 id="action-point">ACTION POINT:</h3>
+<p>Write a letter to your boss each month identifying unex-pected
+events.</p>
+<p>Pick out unexpected successes and pursue them.</p>
+<p>“Meeting of the Minds,” Across the Board: The Conference Board
+Magazine</p>
+<h2 id="august">30 AUGUST</h2>
+<h3 id="finding-opportunity-in-surprises">Finding Opportunity in
+Surprises</h3>
+<p>One survives problems by making them irrelevant because of
+success.</p>
+<p>Every surprise is something to be taken seriously. The entire
+reporting</p>
+<p>system kind of encourages the neglect of opportunities and surprises,
+but also</p>
+<p>it’s fairly easy to change. Fifty years ago, a friend and mentor
+of</p>
+<p>mine invented a system used in a big company that’s become very
+success-ful</p>
+<p>as a result. Every manager, down to the first-line supervisor, sits
+down every</p>
+<p>month and writes a letter with one subject: the unexpected. Not what
+went</p>
+<p>right or what went wrong, but the unexpected. And then they have a
+meeting</p>
+<p>and look at these things with the question: Does this tell us
+some-thing? Now,</p>
+<p>the great majority don’t, the great majority are just anecdotes, but
+there are</p>
+<p>usually three or four that are relevant. And out of this, the
+company—</p>
+<p>Apharmaceutical company—has grown from a fairly unimpor-tant
+commodity</p>
+<p>producer to one of the world’s leaders. And it’s come out of
+surprises, clinical</p>
+<p>surprises, like when a physician uses a medication for what it was
+not</p>
+<p>developed for and has amazing results. You have to focus on
+success,</p>
+<p>especially unexpected success, and run with it.</p>
+<h3 id="action-point-1">ACTION POINT:</h3>
+<p>Write a letter to your boss each month identifying unex-</p>
+<p>pected events. Pick out unexpected successes and pursue them.</p>
+<h4
+id="meeting-of-the-minds-across-the-board-the-conference-board-magazine">“Meeting
+of the Minds,” Across the Board: The Conference Board Magazine</h4>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

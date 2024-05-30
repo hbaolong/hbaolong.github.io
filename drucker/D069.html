@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="第三同读" />
+  <title>德鲁克日志</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">德鲁克日志</h1>
+<p class="author">第三同读</p>
+</header>
+<h2 id="透过金庸读懂德鲁克">透过金庸读懂德鲁克</h2>
+<p>东西方文化的一个区别</p>
+<p>我发现了东西方文化的一个区别。今天就说说这个发现。</p>
+<p>东方文化总是在“法祖”，而西方文化总是在“期来”。</p>
+<p>也就是说，我们中华的文化总是认为古代是最好的，而西方人总是认为“希望在未来”。</p>
+<p>在我们的文化里，过去总是比现在好，现在的一切努力，只是为了达到我们古人的那个高度。几千年</p>
+<p>来，我们反复注解《论语》，然后大家争论，“你的解读不是圣人之意，而我的更接近”。也就是说，</p>
+<p>大家的努力只是为了更加接近祖先。</p>
+<p>一部《黄帝内经》几千年来，中医的还是在那个框框下解读，唯恐出框。同样的还有《易经》，</p>
+<p>在我们的文化中，我们的文明出生是最完美的，之后就“漏”了，我们要做的就是不停修复，让自己更</p>
+<p>像古人。</p>
+<p>而西方人，他们每天都在发现未来，他们觉得过去是确定的，他们要做的是成就未来。所以，他们每</p>
+<p>天都在创造和发明。对于不能理解，不能解释的，他们就做假设，然后空着，留给未来的人去处理。</p>
+<p>而我们东方人，遇到不能理解的，不能解释的，则会去翻故纸堆，找找《易经》《论语》《黄帝内</p>
+<p>经》《道德经》等等等等。</p>
+<p>对于西方人来说，今天，以及未来的每一天，都是全新的未知的，每天都在变化，所以，他们每天要</p>
+<p>做的就是迎接各种新的事情，然后把新的事情柔和到自己的生活里。</p>
+<p>而对于我们东方人来说，今天至少昨天的延续，我们昨天已经做的足够好的，今天要做的是小心翼翼</p>
+<p>地像昨天学习就好了。</p>
+<p>其实，我们也有一些祖先意识到这个问题了，他们也会发出一些振聋发聩的声音：上胡不法先王之</p>
+<p>法？！而《易经》里也说了“不可为典要，唯变所适”。</p>
+<p>可是，没用，几千年后，我们还是在法先王之法，还是逐字逐句地理解圣贤的经典。在我们内心，我</p>
+<p>们还是觉得，我们是没法超越先人的，所以，我们害怕哪怕一点点的变化。</p>
+<p>而这个时代，一切都在变化，唯一不变的就是变化。</p>
+<p>你在留恋昨天么？还是在期待自然而来的明天？</p>
+<p>听说人的全身细胞，每7年就会换一次，七年后你和七年前完全不是一个人了。</p>
+<p>民国是好于现在的，大清是好于民国的，明朝是好于大清的，唐宋是优于大明的，而最优的则是三皇</p>
+<p>五帝的时候。</p>
+<h2 id="大纲">大纲</h2>
+<h2 id="百字摘要">百字摘要</h2>
+<h2 id="金庸案例">金庸案例</h2>
+<h2 id="时间消耗">时间消耗</h2>
+<h2 id="阅读理解">阅读理解：</h2>
+<h2 id="大纲-1">大纲：</h2>
+<h2 id="撰写">撰写：</h2>
+<h2 id="录音">录音</h2>
+<h2 id="一小时运动">一小时运动</h2>
+<h2 id="英文原文">英文原文</h2>
+<p>9 MARCH</p>
+<p>Organize for Constant Change</p>
+<p>Constant：</p>
+<p>[ usually before noun ] happening all the time or repeatedly</p>
+<p>连续发生的；不断的；重复的</p>
+<p>Today’s certainties always become tomorrow’s absurdities.</p>
+<p>certainties：</p>
+<p>absurdities：n. 荒谬；谬论；荒谬的言行</p>
+<p>N-UNCOUNT Certainty is the state of being definite or of having no
+doubts at all about something.</p>
+<p>确定</p>
+<p>One thing is certain for developed countries—and probably for the
+entire world—we face long years</p>
+<p>of profound changes.</p>
+<p>profound ：</p>
+<p>巨大的；深切的；深远的</p>
+<p>very great; felt or experienced very strongly</p>
+<p>An organization must be organized for constant change.</p>
+<p>It will no longer be possible to consider entrepreneurial innovation
+as lying outside of management</p>
+<p>or even as peripheral to management.</p>
+<p>peripheral：</p>
+<dl>
+<dt>次要的；附带的</dt>
+<dd>
+<p>(to sth) ( formal ) not as important as the main aim, part, etc. of
+sth</p>
+</dd>
+</dl>
+<p>Entrepreneurial innovation will have to become the very heart and
+core of management.</p>
+<p>The organization’s function is entrepreneurial, to put knowledge to
+work—on tools, products, and</p>
+<p>processes; on the design of work; on knowledge itself.</p>
+<p>entrepreneurial：</p>
+<p>具有创业素</p>
+<p>质的</p>
+<p>ADJ Entrepreneurial means having the qualities that are needed to
+succeed as an entrepreneur.</p>
+<p>Deliberate emphasis on innovation may be needed most where
+technological changes are least</p>
+<p>spectacular.</p>
+<p>Deliberate：</p>
+<p>动作或行为</p>
+<p>不慌不忙的；小心翼翼的；从容不迫的</p>
+<p>emphasis：</p>
+<p>强调；重视；重要性</p>
+<p>spectacular：</p>
+<p>壮观的；壮丽的；令人惊叹的</p>
+<p>( of a movement or an action</p>
+<dl>
+<dt>) done slowly and carefully</dt>
+<dd>
+<p>(on/upon sth) special importance that is given to sth</p>
+</dd>
+</dl>
+<p>very impressive</p>
+<p>Everyone in a pharmaceutical company knows that the company’s
+survival depends on its ability</p>
+<p>to replace three quarters of its products by entirely new ones every
+ten years.</p>
+<p>pharmaceutical：</p>
+<p>制药的；配药的；卖药的</p>
+<p>adj.[ only before noun ] connected with making and selling drugs and
+medicines</p>
+<p>But how many people in an insurance company realize that the
+company’s growth—perhaps even</p>
+<p>its survival—depends on the development of new forms of
+insurance?</p>
+<p>The less spectacular or prominent technological change is in a
+business, the greater the danger</p>
+<p>that the whole organization will ossify, and the more important,
+therefore, is the emphasis on</p>
+<p>innovation.</p>
+<p>spectacular： 壮观的，惊人的；公开展示的</p>
+<p>prominent：</p>
+<p>重要的；著名的；杰出的</p>
+<p>ossify：</p>
+<p>僵化；使固定不变</p>
+<p>adj.</p>
+<p>important or well known</p>
+<p>to become or make sth fixed and unable to change</p>
+<h3 id="action-point">ACTION POINT:</h3>
+<p>Are you and your organization in danger of ossification?</p>
+<p>ossification：n. 骨化；成骨；（思想的）僵化</p>
+<p>Decide how you and your organization can systematically innovate, and
+build this into your</p>
+<p>management process.</p>
+<p>Managing in a Time of Great Change</p>
+<p>The Practice of Management</p>
+<p>The Ecological Vision</p>
+<p>Management Challenges for the 21st Century</p>
+<h2 id="march">9 MARCH</h2>
+<h3 id="organize-for-constant-change">Organize for Constant Change</h3>
+<p>Today’s certainties always become tomorrow’s absurdities.</p>
+<p>One thing is certain for developed countries—and probably for the
+en-</p>
+<p>tire world—we face long years of profound changes. An organization
+must be</p>
+<p>organized for constant change. It will no longer be possible to
+con-sider</p>
+<p>entrepreneurial innovation as lying outside of management or even
+as</p>
+<p>peripheral to management. Entrepreneurial innovation will have to
+be-come</p>
+<p>the very heart and core of management. The organization’s function
+is</p>
+<p>entrepreneurial, to put knowledge to work—on tools, products, and</p>
+<p>processes; on the design of work; on knowledge itself.</p>
+<p>Deliberate emphasis on innovation may be needed most where
+techno-</p>
+<p>logical changes are least spectacular. Everyone in a pharmaceutical
+com-</p>
+<p>pany knows that the company’s survival depends on its ability to
+replace</p>
+<p>three quarters of its products by entirely new ones every ten years.
+But</p>
+<p>how many people in an insurance company realize that the
+company’s</p>
+<p>growth—perhaps even its survival—depends on the development of
+new</p>
+<p>forms of insurance? The less spectacular or prominent
+technological</p>
+<p>change is in a business, the greater the danger that the whole
+organization</p>
+<p>will ossify, and the more important, therefore, is the emphasis on
+innova-</p>
+<p>tion.</p>
+<h3 id="action-point-1">ACTION POINT:</h3>
+<p>Are you and your organization in danger of ossification?</p>
+<p>Decide how you and your organization can systematically innovate,
+and</p>
+<p>build this into your management process.</p>
+<p>Managing in a Time of Great Change</p>
+<p>The Practice of Management</p>
+<p>The Ecological Vision</p>
+<h4 id="management-challenges-for-the-21st-century">Management
+Challenges for the 21st Century</h4>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

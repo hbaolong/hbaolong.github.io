@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="第三同读" />
+  <title>德鲁克日志</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">德鲁克日志</h1>
+<p class="author">第三同读</p>
+</header>
+<h2 id="透过金庸读懂德鲁克">透过金庸读懂德鲁克</h2>
+<p>很多人不喜欢张无忌，觉得张无忌太肉。</p>
+<p>说好的喜欢阿离，又去和周芷若勾勾搭搭，遇见赵敏后，又和赵敏不清不楚，还摸人家的脚。身边还</p>
+<p>有一个小昭整天“宝贝”来，“亲爱的”去的。</p>
+<p>果然，报应来了，最后在和赵敏玩闺房画眉时，周芷若出现了。顿时现场不可描述。</p>
+<p>其实张无忌也是很委屈的，妈妈临死前告诉他说“不要相信漂亮女人，女人约漂亮就越会骗人。”特别</p>
+<p>是吃了朱九真的亏后，张无忌基本上放弃了漂亮女人。</p>
+<p>后来遇见阿离后，发现阿离不漂亮，甚至可以说很丑，想起了妈妈的话，就鼓起勇气表白了。结果丑</p>
+<p>女生不喜欢他，而且一样骗他。</p>
+<p>原来妈妈的话也做不得准，既然女生都会骗人，那还是娶个漂亮的吧，比如周芷若，比如赵敏啥的。</p>
+<p>要不干脆都娶了吧。</p>
+<p>令狐冲本来也想做个好孩子的。被师父收养后，就在华山跟着师父学习武功。令狐冲是一个非常中感</p>
+<p>情的人，在华山门下，他每天勤练武功，由于入门早，而且刻苦，一直是华山这一代的佼佼者，令狐</p>
+<p>冲也认为自己会是华山下一代的掌门，会娶了师妹岳灵珊，在几十年后会对孩子们以及弟子们说：“我</p>
+<p>们华山分为气宗和剑宗，我们必须以练气为主，你想呀，不管多高的剑术，碰见气功高手都讨不了好</p>
+<p>去。”</p>
+<p>当有一些外部的吸引时，令狐冲总是会自己说服自己让自己在气宗的路上坚定地前行。</p>
+<p>只是后来上天作弄，让他学了风太师叔的独孤九剑，然后又内功全失。在面对无数敌人时，只好用没</p>
+<p>有一点内力的剑术去周旋，不论是雨夜破庙之战，还是五霸岗保护盈盈之战，还是梅庄之战都在证明</p>
+<p>着高明剑术的无比威力。在（不得不面对的）事实面前，令狐冲选择了接受，接受剑宗的思路，接受</p>
+<p>岳灵珊的离情别恋。</p>
+<p>狄云本来也是想做个好孩子。师父不是什么善茬，可是师妹很不错。在乡下，狄云觉得师父和师妹对</p>
+<p>自己都非常好。他想着，等打了就娶师妹过门，然后给师父养老送终，再生几个孩子，一辈子也就这</p>
+<p>么过去了。</p>
+<p>师妹会给自己缝衣服，看到师妹给自己缝衣服，狄云总是很开心，想和师妹聊天，师妹说：“缝扣子时</p>
+<p>别说话，不然别人冤枉你做贼。”</p>
+<p>狄云就听话，以后也不说话了。</p>
+<p>可是，到了城里后，他们还是冤枉他做贼，把他的琵琶骨也给穿透了，好容易逃出来，又被误认为是</p>
+<p>淫僧。在经历了很多很多惨绝人寰的故事后，他选择了回到雪山，在雪山，他看见一个一抹青色。</p>
+<p>阿秀是一个女生，一个汉人女生。跟着爸爸妈妈来到了草原上，爸爸妈妈很快就死了，留下自己一个</p>
+<p>人。一个小女生也没有别的办法，就在草原上住下了，慢慢长大了。</p>
+<p>长大后的小女生也开始情窦初开了。喜欢上了一个草原上的男孩子。那个男孩子也似乎喜欢她，把他</p>
+<p>第一次打的猎物送给了她，她非常开心，因为她听说，这是爱情的表达。</p>
+<p>那个男孩的爸爸打那个男孩，因为她是汉人，而在草原上，汉人是坏人，那个男孩的爸爸不喜欢自己</p>
+<p>的儿子去爱一个汉人的女孩。</p>
+<p>阿秀心疼男孩，想着，你们不喜欢我，就听你们的吧。夜里，她偷偷地把猎物放到了另一个女生家门</p>
+<p>口。</p>
+<p>后来，那个男孩和那个女孩成了一对，伤心的阿秀决定离开草原，去自己的故乡，那个江南水乡。</p>
+<p>族里的人都知道她是好人，希望她留下。说会帮她选最好的男人。</p>
+<p>她说她不要。她骑着白马往南走了，越走越南，她知道，那些都很好，只是她不喜欢。</p>
+<h2 id="百字摘要">百字摘要</h2>
+<h2 id="金庸案例">金庸案例</h2>
+<h2 id="may">27 MAY</h2>
+<h3 id="management-a-practice">Management: A Practice</h3>
+<p>The test of any policy in management . . . is not whether the answer
+is right or wrong, but whether it works.</p>
+<p>The GM executives believed that they had discovered principles and
+that those principles were absolutes, like laws of nature.</p>
+<p>I, by contrast, have always held that principles of this kind, being
+man-made, are at best heuristic.</p>
+<p>This has been the one point on which my approach to manage-ment has
+always differed from that of the writers or theoreticians on the
+subject—and the reason, perhaps, that I have never been quite
+respectable in the eyes of academia.</p>
+<p>I do believe that there are basic values, especially human ones.</p>
+<p>But I do not believe that there is “one correct answer.” There are
+answers that have a high probability of being the wrong ones—at least to
+the point where one does not even try them unless all else has
+failed.</p>
+<p>But the test of any policy in management or in any other social
+discipline is not whether the answer is right or wrong, but whether it
+works.</p>
+<p>Management, I have always believed, is not a branch of theology but,
+at bottom, a clinical discipline.</p>
+<p>The test, as in the practice of medicine, is not whether the treat-
+ment is “scientific” but whether the patient recovers.</p>
+<h3 id="action-point">ACTION POINT:</h3>
+<p>List three “rules of thumb” you have found helpful for improving
+performance. Cite a “textbook principle” that has not worked for
+you.</p>
+<h4 id="concept-of-the-corporation">Concept of the Corporation</h4>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

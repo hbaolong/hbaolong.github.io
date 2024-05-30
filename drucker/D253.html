@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="第三同读" />
+  <title>德鲁克日志</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">德鲁克日志</h1>
+<p class="author">第三同读</p>
+</header>
+<h2 id="透过金庸读懂德鲁克">透过金庸读懂德鲁克</h2>
+<p>韦小宝的职场历程</p>
+<p>韦小宝，扬州生人。出生于扬州丽春院。母亲韦春花是一个普通的妓女，而且不大聪明。某次接客过</p>
+<p>程中，被客人陷害，就怀孕了。</p>
+<p>十月怀胎，生下了韦小宝。</p>
+<p>出生在妓院的小宝基本上没什么地位，除了自己的妈妈，还有和妈妈关系较好的几个阿姨，其他人大</p>
+<p>多对他呼来喝去。好在他的性格也比较大条。谁欺负他，他就偷偷欺负谁，也不大吃亏。</p>
+<p>后来大一些了，小宝就偷了妈妈的银子跑出去在茶馆听书，在赌场赌博。有时输了混赖，也会被打一</p>
+<p>顿。后来有一次输了，又混赖，那些大人也没打他，就把他裤子扒光扔到了街上。他光着屁股回到丽</p>
+<p>春院，以后他赌博就不赖了。</p>
+<p>日子就这么一天天过下去了，如果没有什么特殊的事件，他应该会在扬州的乡井长大，成了街上的一</p>
+<p>个混混，或者成为丽春院的一个跑堂。最后娶个从良的妓女，一辈子也就这么过下去了。</p>
+<p>可是，小宝的生命不是这么安排的，因为小宝足够的聪明，足够的自信。当命运之神向他伸出手指头</p>
+<p>时，小宝不经意间被拉进了更大的江湖。</p>
+<p>进入皇宫</p>
+<p>先是遇见了一个叫做茅十八的人，他救了茅十八，茅十八也就带着他去了北京。一路上，小宝和茅十</p>
+<p>八吵吵嚷嚷也学习了很多江湖故事。在这个阶段，小宝表现出了无所畏惧的一些品质，还有就是不怕</p>
+<p>事，爱折腾的“优良品质”，创赢的陈开元老师就一直说：“男人折腾比成绩重要”。</p>
+<p>在小宝的折腾下，他被海大富抓进了皇宫。海大富是一个生病的太监，而且是一个武功高强的生病太</p>
+<p>监。海大富在审问茅十八时，小宝的能力就表现出来了，他看准机会毒瞎了海大富，杀死了小桂子。</p>
+<p>还放走了茅十八。</p>
+<p>韦小宝就留在了皇宫里假冒小桂子做了假太监。这是小宝的第一份职业。</p>
+<p>在这份职业上，小宝做的还可以。先是被海大富安排去赌博下套坑别的太监，然后又在一次玩耍过程</p>
+<p>中偶遇了康熙，和康熙打成一片。</p>
+<p>为了和康熙玩的有趣，小宝央求海大富教他武功。海大富为了让他更好地帮自己办事，也多少教他一</p>
+<p>些武功。</p>
+<p>后来康熙想抓住鳌拜，就找小宝帮他一起抓鳌拜，两个年轻人，加上几十个小太监，终于在一次打斗</p>
+<p>中抓住了鳌拜。康熙把鳌拜关了起来。康熙觉得小宝很懂事，也挺有本事，就任命他为副首领太监，</p>
+<p>成了海大富的副手。</p>
+<p>没多久，海大富死了。小宝就成为正职。这时小宝应该只有十一、二岁。</p>
+<p>加入天地会</p>
+<p>康熙让小宝去杀死被关在牢里的鳌拜，小宝带着一堆毒药和一把利刃就去杀鳌拜。没想到，正好遇到</p>
+<p>天地会青木堂也要去杀鳌拜，小宝杀死鳌拜后，随机被青木堂的人抓走了。</p>
+<p>天地会的总舵主陈近南知道了小宝身份后，发现小宝很有价值，而且还是汉人。善于冒险的陈近南果</p>
+<p>断收小宝为弟子，并且任命他为天地会青木堂香主，。</p>
+<p>十三岁的韦小宝于一日之间竟成了天地会总舵主陈近南的关门弟子和地位甚高的天地会青木堂香主。</p>
+<p>这是小宝的第二个职位。</p>
+<p>小宝的这个职位做的也不错，在做香主的时候，处理了青木堂和沐王府的争端，还救了几位沐王府的</p>
+<p>英雄，让陈近南对这个自己小弟子刮目相看。总体来说，小宝这个香主当的还是有模有样的。</p>
+<p>变身白龙使</p>
+<p>小宝受康熙委托，去清凉寺寻找顺治皇帝，在回京的路上，被方怡（后来也嫁给了小宝）骗到了蛇</p>
+<p>岛，进入了神龙教。</p>
+<p>这时，神龙教正在发生一起内乱，神龙教里所有的人都中毒了，只有小宝因为不是岛上岛民，没有中</p>
+<p>毒，反而救了教主洪安通。</p>
+<p>洪安通为了表彰小宝的功绩，任命他为白龙使，成为神龙教的高管。</p>
+<p>随后，洪教主安排白龙使小宝去皇宫偷四十二章经。不管是突然被捉（骗）到了神龙教，还是被按上</p>
+<p>了一个白龙使的高管身份，小宝都不惊不恐。最后还带着双儿风风光光回到了北京。又见到了康熙。</p>
+<p>成为高僧</p>
+<p>康熙知道自己的父皇顺治还在人世，他就安排小宝以和尚的身份去清凉寺保护顺治皇帝。康熙先让小</p>
+<p>宝去少林出家，在少林出家后
+，小宝成为了晦明禅师。在少林呆了一段时间后，小宝收到康熙的圣</p>
+<p>旨，让他去清凉寺去做住持。</p>
+<p>小宝只好带着双儿，还有十八罗汉去了清凉，在清凉做住持，一边保护顺治。在不长的时间里，小宝</p>
+<p>做的住持还是没什么风浪。</p>
+<p>后来喇嘛知道了顺治的信息，就派了几千个喇嘛来围攻清凉寺，意图捉住顺治要挟康熙。还要小宝聪</p>
+<p>明，保护了顺治没有被捉。</p>
+<p>这时，康熙也赶到了。小宝开心地和康熙聊了一会，却被一个尼姑刺杀了，尼姑一剑刺向康熙，小宝</p>
+<p>全力一扑，保护了康熙，自己因为有宝衣，没有重伤，却被尼姑捉走了。</p>
+<p>拜师长平公主</p>
+<p>这个师太原来是明朝长平公主，出家后法号为九难。九难了解了小宝的身份后，就把小宝带到了身</p>
+<p>边，后来，小宝把九难服侍的服服帖帖，也多次救助九难，九难感觉这是一个心地不错的孩子，而且</p>
+<p>智商也不错，就收他做了徒弟 。</p>
+<p>做了九难徒弟后，小宝就有了一个师姐，也就是阿珂，这个阿珂是闯王李自成和陈圆圆的女儿。端的</p>
+<p>是貌美如花。</p>
+<p>后来，这个阿珂也嫁给了小宝 ，生了一个儿子。</p>
+<p>赐婚使</p>
+<p>小宝又一次回到北京，康熙觉得他很能干，就排他去云南赐婚给吴三桂的儿子吴应熊。同时让他看一</p>
+<p>下吴三桂的情况。</p>
+<p>小宝就带着建宁公主向云南走去，这时小宝的身份是钦差大臣，赐婚使。不过，小宝也不是什么正人</p>
+<p>君子。他和建宁公主搞到了一起，白天赐婚使，晚上就是驸马爷。胡天黑地，和建宁公主玩起了SM，</p>
+<p>玩的不亦乐乎。</p>
+<p>作为赐婚使，小宝是失职的，不过，小宝确实完成了康熙交代的任务，获取了吴三桂的很多信息；也</p>
+<p>完成了陈近南的任务，逼反了吴三桂。</p>
+<p>弄权俄罗斯</p>
+<p>小宝立功后，康熙派他去东北炮轰神龙岛，活捉洪教主。没想到小宝反而被洪教主捉了。小宝和双儿</p>
+<p>趁洪教主不注意就跑了。他们一路往东往北，居然跑到了俄罗斯边界。</p>
+<p>在边界，他们碰到了索菲亚公主。索菲亚公主没怎么玩过中国男人，就和小宝胡乱搞了起来。</p>
+<p>还在兴奋期的小宝，很快发现索菲亚被孤立了，小宝就帮主索菲亚夺回了权力。索菲亚作为回报，给</p>
+<p>了他一个爵位。拍了一队人马送他回到了北京。</p>
+<p>钦差大臣</p>
+<p>康熙觉得小宝虽然很聪明，功劳也很大，想着犒劳他一下，就排他去扬州宣旨，免除扬州的赋役。也</p>
+<p>让小宝耀武扬威，或者衣锦还乡一下。</p>
+<p>小宝带着钦差大臣的身份回到扬州，在扬州，他和7个女人在床上胡搞了一夜，搞大了两个肚子。可是</p>
+<p>自己也被桑杰和葛尔丹抓住了。</p>
+<p>小宝凭借三寸不烂之舌，成功和桑杰、葛尔丹结拜为兄弟。为康熙再次立下了汗马功劳。</p>
+<p>这次钦差大臣的身份，小宝也是立了不少功劳。还算成功。</p>
+<p>弄权台湾</p>
+<p>小宝再次回到北京后，他在天地会的身份被康熙知道了，康熙要他杀死陈近南。他不愿意，就和康熙</p>
+<p>闹翻了。</p>
+<p>小宝一看不妙，就跑了，跑到了现在钓鱼岛的地方。康熙找到他就，就让他老老实实在钓鱼岛钓鱼。</p>
+<p>不给他安排事情做。</p>
+<p>小宝本来想带兵打吴三桂，可是吴三桂死了，康熙也没放他。</p>
+<p>小宝又想去打台湾，后来，台湾被施琅打下了了，康熙还是不放他。</p>
+<p>因为小宝对施琅有恩。施琅在打败台湾后，就顺道来看小宝。</p>
+<p>小宝威逼利诱施琅带他去台湾看看。施琅顶不住，就带小宝去了台湾。后来施琅要去北京述职，台湾</p>
+<p>就暂时由小宝署理。小宝在台湾署理期间也做了不少事，主要是搜刮了不少钱。一看就是深谙为官之</p>
+<p>道。</p>
+<p>抚远大将军</p>
+<p>罗刹国向东方的侵略渗透早已引起康熙的注意，平定西南、收复台湾的胜利使他坚定了向罗刹用兵、</p>
+<p>收复失地的决心，韦小宝去过莫斯科，粗通罗刹语言，又与罗刹摄政女王有一腿，康熙便将他召回京</p>
+<p>城，册封他为鹿鼎公，抚远大将军，命他率兵向罗刹人作战。韦小宝见“小玄子”不再拿天地会一事与自</p>
+<p>己为难，欣然领命，携双儿前往鹿鼎山，按照康熙的既定战略一路杀去，连连得手，最后“尿射鹿鼎</p>
+<p>山”，一举将罗刹军队击败，迫使罗刹使臣坐在谈判桌前签定了和约。</p>
+<p>这时小宝的权势已经到了人臣极致，在这个大将军的位置上，小宝也做的可圈可点。</p>
+<p>天地会总舵主、皇帝</p>
+<p>后来，有人找他做天地会总舵主，有人找他做皇帝，他都不想干。他觉得自己的俗世的功名利禄也够</p>
+<p>了，就带着七个老婆还有老妈找了个地方隐居了，可能还开了一家妓院。</p>
+<p>小宝所在的那个社会，其实现在社会也一样，你一辈子很难只做一件事，你会主动选择或者被动扔进</p>
+<p>很多职位，在这些职位中，你能做的只有把这个职位做好，这样的你才有机会走进下一个机会。毕</p>
+<p>竟，我们现在已经不是那个简单的农业社会，凭着一个铁匠、木匠、瓦匠的手艺就可以过一辈子。</p>
+<p>小宝在自己的一生中，经历了那么多职位，他的大部分职位都来的猝不及防，不过，他都应对的还可</p>
+<p>以。</p>
+<p>你呢？你准备好随时应对你生命中可能的职位了么？</p>
+<p>毕竟，陈开元老师说过：“折腾，比成绩更重要”。</p>
+<h2 id="大纲">大纲</h2>
+<h2 id="百字摘要">百字摘要</h2>
+<h2 id="金庸案例">金庸案例</h2>
+<h2 id="时间消耗">时间消耗</h2>
+<h2 id="阅读理解">阅读理解：</h2>
+<h2 id="大纲-1">大纲：</h2>
+<h2 id="撰写">撰写：</h2>
+<h2 id="录音">录音</h2>
+<h2 id="一小时运动">一小时运动</h2>
+<h2 id="英文原文">英文原文</h2>
+<p>9 SEPTEMBER</p>
+<p>Take Responsibility for Your Career</p>
+<p>The stepladder is gone, and there’s not even the implied structure of
+an industry’s rope ladder. It’s</p>
+<p>more like vines, and you bring your own machete.</p>
+<p>If a young man in a gray flannel suit represented the lifelong
+corporate type, what’s today’s image?</p>
+<p>Taking individual responsibility and not de-pending on any particular
+company. Equally important is</p>
+<p>managing your own career. You don’t know what you’ll be doing next,
+or whether you’ll work in a</p>
+<p>private office or one big amphitheater or even out of your home. You
+have to take responsibility for</p>
+<p>knowing yourself, so you can find the right jobs as you develop and
+as your family becomes a</p>
+<p>factor in your values</p>
+<p>and choices.</p>
+<p>Remarkably few Americans are prepared to select jobs for themselves.
+When you ask, “Do you</p>
+<p>know what you are good at? Do you know your lim-itations?” they look
+you in the eye with a blank</p>
+<p>stare. Or they often respond in terms of subject knowledge, which is
+the wrong answer. When they</p>
+<p>pre-pare their résumés, they try to list positions like steps up a
+ladder. It is time to give up thinking</p>
+<p>of jobs or career paths as we once did and think in terms of taking
+on one assignment after</p>
+<p>another. We have to leap right over the search for objective criteria
+and get into the subjective—</p>
+<p>what I call compe-tencies.</p>
+<h3
+id="action-point-take-responsibility-for-your-own-career.-list-your-strengths-and-limitations.-what">ACTION
+POINT: Take responsibility for your own career. List your strengths and
+limitations. What</h3>
+<p>assignments are you prepared to take on next? Prepare to take on
+these assignments either inside</p>
+<p>of or outside of your current organization.</p>
+<p>Managing in a Time of Great Change</p>
+<h2 id="september">9 SEPTEMBER</h2>
+<h3 id="take-responsibility-for-your-career">Take Responsibility for
+Your Career</h3>
+<p>The stepladder is gone, and there’s not even the implied structure of
+an</p>
+<p>industry’s rope ladder. It’s more like vines, and you bring your
+own</p>
+<p>machete.</p>
+<p>If a young man in a gray flannel suit represented the lifelong
+corporate type,</p>
+<p>what’s today’s image? Taking individual responsibility and not
+de-pending on</p>
+<p>any particular company. Equally important is managing your own
+career. You</p>
+<p>don’t know what you’ll be doing next, or whether you’ll work in a
+private office</p>
+<p>or one big amphitheater or even out of your home. You have to
+take</p>
+<p>responsibility for knowing yourself, so you can find the right jobs
+as you develop</p>
+<p>and as your family becomes a factor in your values</p>
+<p>and choices.</p>
+<p>Remarkably few Americans are prepared to select jobs for
+themselves.</p>
+<p>When you ask, “Do you know what you are good at? Do you know your</p>
+<p>lim-itations?” they look you in the eye with a blank stare. Or they
+often</p>
+<p>respond in terms of subject knowledge, which is the wrong answer.
+When</p>
+<p>they pre-pare their résumés, they try to list positions like steps
+up</p>
+<p>Aladder. It is time to give up thinking of jobs or career paths as we
+once did</p>
+<p>and think in terms of taking on one assignment after another. We have
+to</p>
+<p>leap right over the search for objective criteria and get into the
+subjective</p>
+<p>—what I call compe-tencies.</p>
+<h3 id="action-point">ACTION POINT:</h3>
+<p>Take responsibility for your own career. List your</p>
+<p>strengths and limitations. What assignments are you prepared to take
+on</p>
+<p>next? Prepare to take on these assignments either inside of or
+outside of</p>
+<p>your current organization.</p>
+<h4 id="managing-in-a-time-of-great-change">Managing in a Time of Great
+Change</h4>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="第三同读" />
+  <title>德鲁克日志</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">德鲁克日志</h1>
+<p class="author">第三同读</p>
+</header>
+<h2 id="透过金庸读懂德鲁克">透过金庸读懂德鲁克</h2>
+<p>金庸笔下最奇葩的帮派</p>
+<p>金庸笔下有个神奇的组织，叫做丐帮。</p>
+<p>为什么说丐帮神奇呢？因为他们做的行为非常诡异，完全不符合常理。</p>
+<p>丐帮最早出现是在《天龙八部》中，这时的丐帮是汪剑通、萧峰、游坦之。当时是在北宋末年，丐帮</p>
+<p>的势力是非常强大的，强大到可以与一些政府抗衡的地步。</p>
+<p>他（萧峰）正自琢磨这人是谁，只听阿朱道：“武林之中，单是一句话便能调动数万人众的，以前有丐</p>
+<p>帮帮主。嗯，少林弟子遍天下，少林派掌门方丈一句话，那也能调动数万人众……”</p>
+<p>从阿朱的这个分析看，丐帮是可以和少林以及大理相抗衡的。这是一只非常厉害的武装力量。</p>
+<p>那么，这个武装力量有什么目的呢？咱们看一下获得鼓掌的游坦之的发言：</p>
+<p>（游坦之）当即说道：“我大宋南有辽国，西有西夏、吐蕃，北有大理，四夷虎视眈眈，这个……这</p>
+<p>个……”</p>
+<p>（游坦之）“嗯”了几声，继续说道：“我大宋兵微将寡，国势脆弱，全赖我武林义士，江湖同道，大夥</p>
+<p>儿一同匡扶，这才能外抗强敌，内除奸人。”</p>
+<p>群雄听他这几句话什是有理，都道：“不错，不错！”</p>
+<p>从这个发言可以看出，在江湖中，大家公认的丐帮的使命是“匡扶朝廷，抵抗外敌，内除奸臣”。</p>
+<p>而且，从汪剑通到萧峰也都是这么做的。游坦之跑了后，没有帮主的丐帮也是这么做的。他们大老远</p>
+<p>跑到辽国去救萧峰，回到长城后，居然认为大宋的将领应该放他们过去。因为他们在帮助大宋抗击辽</p>
+<p>国。</p>
+<p>其实呢？大宋的将领当然拒不开门了。直到确认没威胁了，才让“大宋的子民”通过。</p>
+<p>也就是说，那些以“大宋安危“为己任的丐帮帮众，也只是大宋官家严重的子民而已。所以，很搞不懂</p>
+<p>为什么丐帮会把政府的职责那么爱好地抗在肩上。</p>
+<p>到了《射雕英雄传》里，丐帮的职责成了”惩强扶弱“。他们的帮主洪七公四处追杀坏人，听说有一个”</p>
+<p>藏边五丑“经常欺负人，就跑了几千公里来追杀。</p>
+<p>在书的最后，洪七公慷慨激昂地说了一段话：”不错。老叫化一生杀过二百三十一人，这二百三十一人</p>
+<p>个个都是恶徒，若非贪官污吏、土豪恶霸，就是大奸巨恶、负义薄幸之辈。我们丐帮查得清清楚楚，</p>
+<p>证据确实，一人查过，二人再查，决无冤枉，老叫化这才杀他。老叫化贪饮贪食，小事胡涂，可是生</p>
+<p>平从来没错杀过一个好人。裘千仞，你是第二百三十二人！”</p>
+<p>从这段话可以看出，丐帮的职责成了杀贪官污吏、土豪恶霸、大奸巨恶、负义薄幸之徒。那么，丐帮</p>
+<p>是什么组织呢？是整个社会最底层的人组成的组织，这些社会最底层的人组成了一个十几万人，几十</p>
+<p>万人的组织后，关心的不是自己吃饱穿暖，而是杀死贪官污吏、土豪恶霸、大奸巨恶、负义薄幸之</p>
+<p>徒。</p>
+<p>那么，他们为什么不干脆造反，建设一个新世界呢？</p>
+<p>到了黄蓉做帮主的时候，丐帮干脆参军，成了郭黄家族的卫队，吃上了官粮。当的确实郭黄家族的</p>
+<p>“官”。</p>
+<p>有句话说，三年穷要饭,给个皇帝都不换，这些人因为穷要了饭，却为保护“襄阳“，给了个兵就换了。</p>
+<p>他们是爱国？还是饿怕了？</p>
+<p>再往后，到了元末，明朝中叶，丐帮已经成为了帮主的私人势力。高层都是帮主的家属或者私生子。</p>
+<p>那么，那些乞丐加入丐帮后，让这些高层剥削，究竟是为了什么呢？</p>
+<p>他们还是在穷的吃不上饭，去加入了丐帮。加入丐帮后有开始忧心政权的不稳，怕万一政权倒了，他</p>
+<p>们是去讨饭的资格么？</p>
+<p>政治书告诉我们，这些绝对的无产阶级是什么都不怕的，他们已经无可失去了，唯一能失去的就是枷</p>
+<p>锁，而能得到的却是一个赞新的世界。那么他们怕什么呢？那么拼了命去保护那些摇摇欲坠的政权？</p>
+<p>如北宋，如南宋。</p>
+<p>后来，我合上《天龙八部》，合上《射雕英雄传》后，明白了这个道理。</p>
+<p>所谓的匡扶朝廷，抗击外敌，只是为了让丐帮的高层可以有持续的丐帮人员的提供，因为，只有那个</p>
+<p>腐败的朝廷才可以给丐帮提供源源不断的人员。而所谓的杀死贪官污吏、土豪恶霸、大奸巨恶、负义</p>
+<p>薄幸之徒，也只是告诉丐帮帮众，你的不幸是贪官污吏、土豪恶霸、大奸巨恶、负义薄幸之徒造成</p>
+<p>的，来加入丐帮吧。我是为你出气的。</p>
+<p>至于丐帮的帮众为了什么呢？他们或许只是为了在要口饭吃的时候，不要被打，所以，他们宁愿要到</p>
+<p>一口饭，就给自己的上级，也就是三袋、四袋直至帮主上贡一些，甚至更多的馒头，花卷和酒。</p>
+<p>这样，自己就可以放心地要饭了。</p>
+<p>所以，所谓的匡扶朝廷，抗击外敌，所谓的杀贪官污吏、土豪恶霸、大奸巨恶、负义薄幸之徒，这些</p>
+<p>只是丐帮高层的目的，并不是丐帮的目的。而那些腐败的朝廷，凶狠的外敌，贪官污吏、土豪恶霸、</p>
+<p>大奸巨恶、负义薄幸之徒，才是丐帮生存的土壤。</p>
+<p>如此而已。</p>
+<h2 id="大纲">大纲</h2>
+<h2 id="百字摘要">百字摘要</h2>
+<h2 id="金庸案例">金庸案例</h2>
+<h2 id="时间消耗">时间消耗</h2>
+<h2 id="阅读理解">阅读理解：</h2>
+<h2 id="大纲-1">大纲：</h2>
+<h2 id="撰写">撰写：</h2>
+<h2 id="录音">录音</h2>
+<h2 id="一小时运动">一小时运动</h2>
+<h2 id="英文原文">英文原文</h2>
+<p>16 JANUARY</p>
+<p>The Function of Management Is to Produce Results</p>
+<p>管理的功能是产生结果</p>
+<p>Above all management is responsible for producing results.</p>
+<p>管理为产生结果负责。</p>
+<p>Management has to give direction to the institution it manages.</p>
+<p>管理人员需要为它管理的组织指明方向。</p>
+<p>It has to think through the institution’s mission, has to set its
+objectives, and has to organize</p>
+<p>resources for the results the institution has to contribute.</p>
+<p>它必须思考组织的使命，制定它的目标，并且根据组织期待的目标组织资源。</p>
+<p>Management is, indeed, J. B. Say’s “entrepreneur” and responsible for
+directing vision and</p>
+<p>resources toward greatest results and contributions.</p>
+<p>entrepreneur：</p>
+<p>a person who makes money by starting or running businesses,
+especially when this involves taking financial</p>
+<p>risks</p>
+<p>创业者，企业家（尤指涉及财务风险的）</p>
+<p>In performing these essential functions, management everywhere faces
+the same problems. It has</p>
+<p>to organize work for productivity; it has to lead the worker toward
+productivity and achievement. It</p>
+<p>is responsible for the social impact of its enterprise.</p>
+<p>为了完成那些关键功能，全世界的管理人员面临同样的问题。他们必须有效地安排工作，他们必须带</p>
+<p>领工人提高效率并且获得成功。</p>
+<dl>
+<dt>impact：</dt>
+<dd>
+<p>(of sth) (on sb/sth) the powerful effect that sth has on sb/sth</p>
+</dd>
+</dl>
+<p>巨大影响；强大作用</p>
+<p>Above all, it is responsible for producing the results—whether
+economic performance, student</p>
+<p>learning, or patient care—for the sake of which each institution
+exists.</p>
+<p>总而言之，他们的职责就是产生结果，比如经济利益、学生的学习，或者照顾病人。这些也就是每一</p>
+<p>个组织存在的意义。</p>
+<h3 id="action-point">ACTION POINT:</h3>
+<p>Is your organization delivering the results it should?</p>
+<p>你的组织在为他们的目标努力么？</p>
+<p>If not, articulate your mission.</p>
+<p>如果没有，试着清晰表达你公司的使命。</p>
+<p>articulate：</p>
+<p>[ VN ] ( formal ) to express or explain your thoughts or feelings
+clearly in words</p>
+<p>Management: Tasks, Responsibilities, Practices</p>
+<p>明确表达；清楚说明</p>
+<h2 id="january">16 JANUARY</h2>
+<h3 id="the-function-of-management">The Function of Management</h3>
+<p>Is to Produce Results</p>
+<p>Above all management is responsible for producing results.</p>
+<p>Management has to give direction to the institution it manages. It
+has to</p>
+<p>think through the institution’s mission, has to set its objectives,
+and has to</p>
+<p>organize resources for the results the institution has to con-</p>
+<p>tribute. Management is, indeed, J. B. Say’s “entrepreneur” and
+responsible for</p>
+<p>directing vision and resources toward greatest results and
+contributions.</p>
+<p>In performing these essential functions, management everywhere
+faces</p>
+<p>the same problems. It has to organize work for productivity; it has
+to lead</p>
+<p>the worker toward productivity and achievement. It is responsible for
+the</p>
+<p>social impact of its enterprise. Above all, it is responsible for
+producing</p>
+<p>the results—whether economic performance, student learning, or
+patient</p>
+<p>care—for the sake of which each institution exists.</p>
+<h3 id="action-point-1">ACTION POINT:</h3>
+<p>Is your organization delivering the results it should? If not,</p>
+<p>articulate your mission.</p>
+<h4 id="management-tasks-responsibilities-practices">Management: Tasks,
+Responsibilities, Practices</h4>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

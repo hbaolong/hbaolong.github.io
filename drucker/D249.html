@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="第三同读" />
+  <title>德鲁克日志</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">德鲁克日志</h1>
+<p class="author">第三同读</p>
+</header>
+<h2 id="透过金庸读懂德鲁克">透过金庸读懂德鲁克</h2>
+<p>《玉女心经》的设计理念</p>
+<p>玉女心经是《神雕侠侣》里非常著名的一个武功。创造者是林朝英，使用者是杨过和小龙女。</p>
+<p>杨过和小龙女使用玉女心经的武功，在武功不高的情况下，两人合力打败了金轮法王，打败了公孙</p>
+<p>止。而且看样子应该也能打败郭靖、黄蓉、黄药师这样的人。</p>
+<p>玉女心经的创造人林朝英是一个可怜的人，她喜欢王重阳，但王重阳不喜欢她。她只好化思念为脑</p>
+<p>力，创造了玉女心经。玉女心经单独使用也是一个很不错的武功，但也就止于不错。这个武功让杨过</p>
+<p>和小龙女作为个体都很有优秀，可以和同段位的敌人打斗大致不输。</p>
+<p>不过，这只是玉女心经表明的功效，它还有一个隐藏的玩法，就是杨过使用全真剑法而小龙女使用玉</p>
+<p>女心经。这时两个优秀的人可以打败几乎所有的人。说几乎是因为我不确定，不过，有记录的打斗</p>
+<p>中，这个配合100%的胜率。</p>
+<p>这两个武功使用是，男的使用全真教法，代表王重阳，女的使用玉女心经，代表林朝英，男女之间需</p>
+<p>要是情侣。两人需要把自己的全身心放在对方身上，完全忘记自己，舍己为人。这样，这套武功才可</p>
+<p>以发挥最大的功效。</p>
+<p>如果只是招式，而没有情感交融，这个武功也没有什么功效。</p>
+<p>后来，杨过中了情花之毒，不敢用情，所以，他和小龙女配合时，就不敢投入感情。这个剑法也就无</p>
+<p>效了。连公孙止都打不过。</p>
+<p>在这里，金庸表达了一个功效的观点：只有行为（形式）而没有用心，是无效的。</p>
+<p>德鲁克在表达高效能人士的习惯时，用了类似的描述，德鲁克认为，高效能人士在处理事情时，应该</p>
+<p>关注贡献，而不是收获。如果你关注你个人的收获，那么就会让自己的关注聚焦在一些细节上，没法</p>
+<p>着眼整体。</p>
+<p>而只有关注你对组织，或者其他人的贡献，你才可以全身心地做事情，只有这样，你才可以把事情做</p>
+<p>好。</p>
+<h2 id="大纲">大纲</h2>
+<h2 id="百字摘要">百字摘要</h2>
+<h2 id="金庸案例">金庸案例</h2>
+<p>《玉女心经》的设计理念</p>
+<h2 id="时间消耗">时间消耗</h2>
+<h2 id="阅读理解">阅读理解：</h2>
+<h2 id="大纲-1">大纲：</h2>
+<h2 id="撰写">撰写：</h2>
+<h2 id="录音">录音</h2>
+<h2 id="一小时运动">一小时运动</h2>
+<h2 id="英文原文">英文原文</h2>
+<p>5 SEPTEMBER</p>
+<p>Focus on Contribution</p>
+<p>The question “What should I contribute?” gives freedom because it
+gives responsibility.</p>
+<p>The great majority of executives tend to focus downward.</p>
+<p>They are occupied with efforts rather than with results.</p>
+<p>They worry over what the organization and their superiors “owe” them
+and should do for them.</p>
+<p>And they are conscious above all of the authority they “should
+have.”</p>
+<p>As a result, they render themselves ineffectual.</p>
+<p>The effective executive focuses on contribution.</p>
+<p>He looks up from his work and outward toward goals.</p>
+<p>He asks: “What can I contribute that will significantly affect the
+performance and the results of the</p>
+<p>institution I serve?” His stress is on responsibility.</p>
+<p>The focus on contribution is the key to effectiveness:</p>
+<p>in a person’s own work—its content, its level, its standards, and its
+impacts;</p>
+<p>in his relations with others—his superiors, his associates, his
+subordinates; in his use of the tools of</p>
+<p>the executive such as meetings or reports.</p>
+<p>The focus on contribution turns the executive’s attention away from
+his own specialty, his own</p>
+<p>narrow skills, his own department, and toward the performance of the
+whole.</p>
+<p>It turns his attention to the outside, the only place where there are
+results.</p>
+<h3 id="action-point">ACTION POINT:</h3>
+<p>Maintain a constant focus on the contribution you can and should make
+to your organization.</p>
+<p>The Effective Executive</p>
+<p>Management Challenges for the 21st Century</p>
+<h2 id="september">5 SEPTEMBER</h2>
+<h3 id="focus-on-contribution">Focus on Contribution</h3>
+<p>The question “What should I contribute?” gives freedom because</p>
+<p>it gives responsibility.</p>
+<p>The great majority of executives tend to focus downward. They are
+oc-</p>
+<p>cupied with efforts rather than with results. They worry over what
+the</p>
+<p>organization and their superiors “owe” them and should do for them.
+And</p>
+<p>they are conscious above all of the authority they “should have.” As
+a result,</p>
+<p>they render themselves ineffectual. The effective executive focuses
+on con-</p>
+<p>tribution. He looks up from his work and outward toward goals. He
+asks:</p>
+<p>“What can I contribute that will significantly affect the performance
+and</p>
+<p>the results of the institution I serve?” His stress is on
+responsibility.</p>
+<p>The focus on contribution is the key to effectiveness: in a person’s
+own</p>
+<p>work—its content, its level, its standards, and its impacts; in his
+relations</p>
+<p>with others—his superiors, his associates, his subordinates; in his
+use of</p>
+<p>the tools of the executive such as meetings or reports. The focus
+on</p>
+<p>contribu-tion turns the executive’s attention away from his own
+specialty,</p>
+<p>his own narrow skills, his own department, and toward the
+performance</p>
+<p>of the whole. It turns his attention to the outside, the only place
+where</p>
+<p>there are results.</p>
+<h3 id="action-point-1">ACTION POINT:</h3>
+<p>Maintain a constant focus on the contribution you can and</p>
+<p>should make to your organization.</p>
+<p>The Effective Executive</p>
+<h4 id="management-challenges-for-the-21st-century">Management
+Challenges for the 21st Century</h4>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

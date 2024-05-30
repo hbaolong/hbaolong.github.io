@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="第三同读" />
+  <title>德鲁克日志</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">德鲁克日志</h1>
+<p class="author">第三同读</p>
+</header>
+<h2 id="透过金庸读懂德鲁克">透过金庸读懂德鲁克</h2>
+<p>打听一下，日月神教怎么样？刚收到他们的Offer.</p>
+<p>有一个年轻人，在农村跟着一个老者学了几年武功。在18岁那年，他拜别了师父到了大城市。在举目</p>
+<p>无亲的大城市，很快，年轻的他就认识了好些朋友，这些朋友都说从各地到大城市来寻找机会的。</p>
+<p>每天，这些年轻人都在在城东头的一个小饭店里喝酒，聊天，打探消息，也消磨时间。</p>
+<p>一天，这个年轻人说：“你们知道么，
+我拿到了日月神教的Offer，是个初级职位，大家觉得怎么样？”</p>
+<p>年轻人神气十足地说：“大家都知道，我老板的武功天下第一，而且人很好，经常指点下属武功，也会</p>
+<p>手把手带新员工。新老员工对老板都特别尊敬，每天见到老板都会山呼‘文成武德、仁义英明的教</p>
+<p>主’”。</p>
+<p>这时，另一个年轻人用羡慕的口气说：“真好，我一直想去日月神教，可惜找不到人推荐，听说内推的</p>
+<p>机会大一些。”</p>
+<p>“有一次我自己跑到神教附近，偷偷看了一下他们，发现他们所有人都是一模一样的动作，很是帅气，</p>
+<p>而且动不动就说‘文成武德，仁义英明的教主’，看来东方教主真的很厉害，要是能在他手下干几年，去</p>
+<p>哪里都不愁工作了。”</p>
+<p>猫姐是一个很好的销售，</p>
+<p>德鲁克认为，可以用一个很简单的方式来判断一个公司的好坏，就是看员工对公司的看法。</p>
+<p>德鲁克认为，员工对公司有信心，公司才有前途。只有充满信心的员工才可以把公司带向美好的未</p>
+<p>来。</p>
+<p>今天德鲁克群里发生了一件有趣的事情。</p>
+<p>猫姐是樊登体系的一个分会会长，是一个非常优秀的会长。猫姐原本是一个优秀的销售，在某个机缘</p>
+<p>巧合下，猫姐离开了原来的体系，加入了樊登的体系。这时，樊登的体系基本成型。30多个省级分会</p>
+<p>一个萝卜一个坑，都被占住了。</p>
+<p>猫姐非常认可樊登，也非常认可樊登体系。在接下来的两年里，猫姐凭借自己的努力，在现有樊登体</p>
+<p>系中发展了大量的分会，并且完成了非常好的业绩。</p>
+<p>在两年后的某一天，樊登的体系发生了一些变化。猫姐以及另外两个优秀的分会变成了没有具体省的</p>
+<p>升级分会。猫姐也凭借自己的努力，在樊登的体系里完成了自己的成长。</p>
+<p>同时，猫姐在整个知识付费领域也有了自己的影响力。这个知识付费领域包括李善友教授的混沌大</p>
+<p>学。</p>
+<p>猫姐也是混沌大学的铁杆，根据混沌APP显示，猫姐在2017年每个月都会为混沌拉新不少用户。猫姐</p>
+<p>对混沌大学也是非常认可的。特别是对李善友教授。</p>
+<p>前几天，猫姐突然接到一个来自混沌的电话，混沌的工作人员在电话里和猫姐说：“猫姐，我知道你樊</p>
+<p>登卖的好，现在邀请你来卖卖混沌”。</p>
+<p>猫姐听到了，突然生气了。</p>
+<p>猫姐的脾气并不好，不会也轻易不会生这种无名气。而且，混沌的工作人员只是在征求她的意见。但</p>
+<p>猫姐认为自己受到了侮辱。</p>
+<p>猫姐认为：“我这么热爱樊登读书，是因为我获益，我打心意儿热爱这个产品。</p>
+<p>我觉得通过樊登读书的学习，一定能解决你或多或少的问题，从而，让我身边的人的生活过的更好。</p>
+<p>用商业的手段来推广樊登读书，是让我做一个读书人兼济天下的梦想，实现的一个工具。”</p>
+<p>而你居然只是觉得我“樊登卖的好，所以邀请我去卖混沌？！”</p>
+<p>“你觉得姐卖樊登只是为了赚么？”</p>
+<p>“什么叫你樊登读书卖的好，现在邀请你来卖混沌？滚滚滚……”</p>
+<p>猫姐真的觉得自己受到了侮辱。然后猫姐决定今后不再推荐混沌了，因为混沌的工作人员在电话中露</p>
+<p>出了自己破破烂烂的内裤。</p>
+<p>猫姐是樊登体系的会长，和樊登体系是合作关系。在当前联盟为主的商业关系中，这也可以认为是一</p>
+<p>种员工关系。</p>
+<p>给猫姐打电话的混沌工作人员是混沌的员工，他们也是想多卖一下混沌。仿佛大家都没有错。</p>
+<p>而这种没错，却可以让我们看出这两家公司的变化：樊登在逐渐内敛，让越来越多的会长甚至用户有</p>
+<p>了归属感，而这两年一直强化运营的混沌却在把用户推的越来越远。</p>
+<p>猫姐说：“混沌就是产品好，不然的话……”</p>
+<h2 id="大纲">大纲</h2>
+<h2 id="百字摘要">百字摘要</h2>
+<h2 id="金庸案例">金庸案例</h2>
+<h2 id="时间消耗">时间消耗</h2>
+<h2 id="阅读理解">阅读理解：</h2>
+<h2 id="大纲-1">大纲：</h2>
+<h2 id="撰写">撰写：</h2>
+<h2 id="录音">录音</h2>
+<p>29 AUGUST</p>
+<p>The Opportunity-Focused Organization</p>
+<p>Performing organizations enjoy what they’re doing.</p>
+<p>Organizations have a gravity, the weight is constantly being pushed
+into being problem-focused,</p>
+<p>and one has to fight it all the time. Not very many organizations are
+good at what I call “exploitation</p>
+<p>of success.” Look at what is today the world’s largest
+consumer-electronics entertainment</p>
+<p>company: Sony. Basically, all Sony has ever done is run with the tape
+recorder and build on its</p>
+<p>success. But if you build that into the organization and demand it
+from everybody, then you create</p>
+<p>a receptivity for being opportunity-focused rather than
+problem-focused. And above all, you create enjoyment. I know this is not
+the academically respectable thing to say, but performing</p>
+<p>organizations enjoy what they’re doing. I’m always asked how I know
+what kind of an organization</p>
+<p>to accept as a client. When you walk through the door, you know in
+two minutes whether they enjoy</p>
+<p>it. And if they don’t enjoy it, then I’d rather not work for
+them.</p>
+<p>But if they like it and they feel that tomorrow is going to be
+better—that creates a totally different</p>
+<p>climate.</p>
+<h3 id="action-point-do-what-you-enjoy.">ACTION POINT: Do what you
+enjoy.</h3>
+<p>“Meeting of the Minds,” Across the Board: The Conference Board
+Magazine</p>
+<h2 id="august">29 AUGUST</h2>
+<h3 id="the-opportunity-focused-organization">The Opportunity-Focused
+Organization</h3>
+<p>Performing organizations enjoy what they’re doing.</p>
+<p>Organizations have a gravity, the weight is constantly being pushed
+into</p>
+<p>being problem-focused, and one has to fight it all the time. Not very
+many</p>
+<p>organizations are good at what I call “exploitation of success.” Look
+at what</p>
+<p>is today the world’s largest consumer-electronics entertainment
+company:</p>
+<p>Sony. Basically, all Sony has ever done is run with the tape recorder
+and build</p>
+<p>on its success. But if you build that into the organization and
+demand it from</p>
+<p>everybody, then you create a receptivity for being
+opportunity-focused rather</p>
+<p>than problem-focused. And above all, you cre-ate enjoyment. I know
+this is</p>
+<p>not the academically respectable thing to say, but performing
+organizations</p>
+<p>enjoy what they’re doing. I’m always asked how I know what kind of
+an</p>
+<p>organization to accept as a client. When you walk through the door,
+you know</p>
+<p>in two minutes whether they enjoy it. And if they don’t enjoy it,
+then I’d</p>
+<p>rather not work for them. But if they like it and they feel that
+tomorrow is</p>
+<p>going to be better—that creates a totally</p>
+<p>different climate.</p>
+<h3 id="action-point">ACTION POINT:</h3>
+<p>Do what you enjoy.</p>
+<h4
+id="meeting-of-the-minds-across-the-board-the-conference-board-magazine">“Meeting
+of the Minds,” Across the Board: The Conference Board Magazine</h4>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

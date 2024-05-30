@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="第三同读" />
+  <title>德鲁克日志</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">德鲁克日志</h1>
+<p class="author">第三同读</p>
+</header>
+<h2 id="透过金庸读懂德鲁克">透过金庸读懂德鲁克</h2>
+<p>如果没有九阳神功，强练乾坤大挪移会是什么后果？</p>
+<p>张无忌出生在冰火岛，按现在的法律，他应该是美国人。虽然是美国，当时的冰火岛却非常荒凉，在</p>
+<p>无忌出生前这个岛上只有三位居民：明教护教金毛狮王谢逊，武当二代第五弟子张翠山以及天鹰教紫</p>
+<p>薇堂堂主殷素素。</p>
+<p>张无忌出生后，作为冰火岛的第四位公民，收到了很热烈的欢迎。谢逊成为他的义父，张翠山是他的</p>
+<p>父亲，殷素素自然就是他的妈妈了。</p>
+<p>谢逊、张翠山都是内外兼修的武功佼佼者，岛上左右无事，他们就教无忌学一些武功。无忌也就慢慢</p>
+<p>地联系。</p>
+<p>后来某一天，义父谢逊突然认真起来，让无忌天天“背武功”。张翠山看着直摇头，私下里也教无忌一</p>
+<p>些武当的入门内功。</p>
+<p>后来谢逊告诉他们说，他知道了回中原的方式，他的武功太深奥，无忌学不会，所以他让无忌背过，</p>
+<p>等以后长大了，内功基础好了就可以学会了。说道这里，谢逊哭了。因为他知道，他要和无忌分别</p>
+<p>了。</p>
+<p>后来，无忌跟着父母回到中原，紧接着就是一堆的事情：先是自己被抓，被毒打，然后又是被带到武</p>
+<p>当父母身边逼迫父母，然后父母双双自尽。然后师祖带着自己四处求医，然后在蝴蝶谷几年也没治</p>
+<p>好，然后护送小姑娘不悔去昆仑山，然后在昆仑山遇见朱九真，然后被朱九真的爹爹骗下一个悬崖。</p>
+<p>然后，在悬崖，张无忌遇见了九阳神功。已经绝望的张无忌开始修炼九阳神功，居然自愈了。因为张</p>
+<p>无忌受的是内伤，九阳神功自然可以修正自己的内伤。</p>
+<p>学会了九阳神功的张无忌在出来后又被朱长岭骗的掉下悬崖摔断了腿。</p>
+<p>这时的张无忌武功说不上高低，虽然九阳神功让他内里充沛，他却不会太多武功。除了儿时爹爹教他</p>
+<p>的一些武当入门武功，那就是义父逼他背诵的那些了。</p>
+<p>然后，无忌就遇见了六大派围攻光明顶，当他看到灭绝师太杀厚土旗时，他站出来劝架。</p>
+<h2 id="百字摘要">百字摘要</h2>
+<h2 id="金庸案例">金庸案例</h2>
+<p>张无忌的九阳神功和乾坤大挪移</p>
+<p>6 MAY</p>
+<p>Knowledge Does Not Eliminate Skill</p>
+<p>Eliminate：</p>
+<p>排除；清除；消除</p>
+<p>to remove or get rid of sth/sb</p>
+<p>Knowledge without skill is unproductive.</p>
+<p>unproductive：</p>
+<p>not producing very much; not producing good results</p>
+<p>产量少的；效果不佳的；无益的</p>
+<p>At present, the term “knowledge worker” is widely used to describe
+people with considerable</p>
+<p>theoretical knowledge and learning: doctors, lawyers, teachers,
+accountants, chemical engineers.</p>
+<p>present：</p>
+<p>现存的；当前的</p>
+<p>theoretical ：</p>
+<p>existing or happening now</p>
+<p>concerned with the ideas and principles on which a particular subject
+is based, rather than with practice and</p>
+<p>理论上的</p>
+<p>considerable：great in amount, size, importance, etc.
+相当多（或大、重要等）的</p>
+<p>experiment</p>
+<p>But, the most striking growth will be in “knowledge technologists”:
+computer technicians, software</p>
+<p>designers, analysts in clinical labs, manufacturing technologists,
+paralegals.</p>
+<p>striking：</p>
+<p>引人注目的；异乎寻常的；显著的</p>
+<p>clinical：</p>
+<p>临床的；临床诊断的</p>
+<p>paralegals：</p>
+<p>律师助理</p>
+<p>interesting and unusual enough to attract attention</p>
+<p>relating to the examination and treatment of patients and their
+illnesses</p>
+<p>A paralegal is someone who is paid to help lawyers with their work
+but is not qualified as a lawyer.</p>
+<p>These people are as much manual workers as they are knowledge
+workers; in fact, they usually</p>
+<p>spend far more time working with their hands than with their
+brains.</p>
+<p>So, knowledge does not eliminate skill. On the contrary, knowledge is
+fast becoming the foundation</p>
+<p>for skill.</p>
+<p>We are using knowledge more and more to enable people to acquire
+skills of a very advanced kind</p>
+<p>fast and successfully.</p>
+<p>Only when knowledge is used as a foundation for skill does it become
+productive.</p>
+<p>For example, surgeons preparing for an operation to correct a brain
+aneurysm before it produces a</p>
+<p>lethal brain hemorrhage spend hours in diagnosis before they cut—and
+that requires specialized</p>
+<p>knowledge of the highest order.</p>
+<p>surgeon：</p>
+<p>外科医生</p>
+<p>aneurysm：</p>
+<p>动脉瘤</p>
+<p>hemorrhage：[病理] 出血</p>
+<p>lethal：</p>
+<p>致命的；可致死的</p>
+<p>a doctor who is trained to perform surgery (= medical operations that
+involve cutting open a person’s body)</p>
+<p>an area of extreme swelling on the wall of an artery</p>
+<p>causing or able to cause death</p>
+<p>The surgery itself, however, is manual work—and manual work
+consisting of repetitive manual</p>
+<p>operations in which the emphasis is on speed, accuracy,
+uniformity.</p>
+<p>surgery：</p>
+<p>medical treatment of injuries or diseases that involves cutting open
+a person’s body and often removing or replacing some</p>
+<p>parts; the branch of medicine connected with this treatment</p>
+<p>repetitive：</p>
+<p>emphasis：</p>
+<p>accuracy：</p>
+<p>uniformity：</p>
+<p>外科手术；外科学</p>
+<p>saying or doing the same thing many times, so that it becomes
+boring</p>
+<p>special importance that is given to sth</p>
+<p>强调；重视；重要性</p>
+<p>重复乏味的</p>
+<p>准确（性）；精确（程度）</p>
+<p>the quality of being or looking the same as all other members of a
+group 相同(性)；统一(性)；一致(性)</p>
+<p>the state of being exact or correct; the ability to do sth skilfully
+without making mistakes</p>
+<p>And these operations are studied, organized, learned, and practiced
+exactly like any other manual</p>
+<p>work.</p>
+<h3
+id="action-point-outline-the-skills-required-in-your-work.-analyze-and-refine-these-skills-for-optimum">ACTION
+POINT: Outline the skills required in your work. Analyze and refine
+these skills for optimum</h3>
+<p>quality and productivity.</p>
+<p>optimum ：</p>
+<p>最佳的；最适宜的</p>
+<p>the best possible; producing the best possible results</p>
+<p>The Age of Discontinuity</p>
+<p>Management Challenges for the 21st Century</p>
+<p>Managing in the Next Society</p>
+<h2 id="may">6 MAY</h2>
+<h3 id="knowledge-does-not-eliminate-skill">Knowledge Does Not Eliminate
+Skill</h3>
+<p>Knowledge without skill is unproductive.</p>
+<p>At present, the term “knowledge worker” is widely used to describe
+peo-</p>
+<p>ple with considerable theoretical knowledge and learning: doctors,
+lawyers,</p>
+<p>teachers, accountants, chemical engineers. But, the most striking
+growth will</p>
+<p>be in “knowledge technologists”: computer technicians, soft-ware
+designers,</p>
+<p>analysts in clinical labs, manufacturing technologists, para-legals.
+These</p>
+<p>people are as much manual workers as they are knowledge workers; in
+fact,</p>
+<p>they usually spend far more time working with their hands</p>
+<p>than with their brains.</p>
+<p>So, knowledge does not eliminate skill. On the contrary, knowledge
+is</p>
+<p>fast becoming the foundation for skill. We are using knowledge more
+and</p>
+<p>more to enable people to acquire skills of a very advanced kind fast
+and</p>
+<p>suc-cessfully. Only when knowledge is used as a foundation for skill
+does</p>
+<p>it be-come productive. For example, surgeons preparing for an
+operation</p>
+<p>to correct a brain aneurysm before it produces a lethal brain
+hemorrhage</p>
+<p>spend hours in diagnosis before they cut—and that requires
+specialized</p>
+<p>knowledge of the highest order. The surgery itself, however, is
+manual</p>
+<p>work—and manual work consisting of repetitive manual operations
+in</p>
+<p>which the emphasis is on speed, accuracy, uniformity. And these
+opera-</p>
+<p>tions are studied, organized, learned, and practiced exactly like any
+other</p>
+<p>manual work.</p>
+<h3 id="action-point">ACTION POINT:</h3>
+<p>Outline the skills required in your work. Analyze and re-</p>
+<p>fine these skills for optimum quality and productivity.</p>
+<p>The Age of Discontinuity</p>
+<p>Management Challenges for the 21st Century</p>
+<h4 id="managing-in-the-next-society">Managing in the Next Society</h4>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

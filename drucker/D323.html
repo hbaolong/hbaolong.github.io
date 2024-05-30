@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="第三同读" />
+  <title>德鲁克日志</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">德鲁克日志</h1>
+<p class="author">第三同读</p>
+</header>
+<h2 id="透过金庸读懂德鲁克">透过金庸读懂德鲁克</h2>
+<p>自私的创业者</p>
+<p>今天上午我在群里做了一个调查：你认为你公司内所有人都是平等的么？投票的结果和我的预期差不</p>
+<p>多，却也出乎我的意料。</p>
+<p>25个投票者，只有一个认为公司内所有人都是平等的，其他的24人都认为是不平等的。有一个同学直</p>
+<p>接回答说：“绩效就不透明，如何平等？”</p>
+<p>这个投票其实很难选择，因为这里涉及到一个不大清晰的概念：平等。</p>
+<p>什么是平等？是财富（工资）平等？还是机会（升职、加薪、旅游）平等，还是人格平等？</p>
+<p>百度百科对平等有一个定义：平等是指社会主体在社会关系、社会生活中处于同等的地位，具有相同</p>
+<p>的发展机会，享有同等的权利。</p>
+<p>百度百科认为平等包括三层含义：人格平等、机会平等和权力平等。</p>
+<p>在公司内部然权力平等，大家可能会觉得有点夸张，董事长的权力肯定比我要大的多；我的经理更是</p>
+<p>直接决定我的奖金；哪来的平等？公司本来就是一个金字塔型的等级制机构，哪来的平等？</p>
+<p>至于说到人格平等，这个还可以议论一下，毕竟，公司不是强制机构，也不是黑涩会，你觉得你的人</p>
+<p>格受到侮辱，完全可以离开。你的老板觉得你侮辱了他，也同样会让你离开。</p>
+<p>所以，在表面上，大家的人格还是平等的。</p>
+<p>不过，在企业中还是有一些不同，或者说一个组织，大家凑在一起是为了做一件事。既然你加入了这</p>
+<p>个组织，说明这个组织的运行需要你。不管你是总经理还是董事长还是清洁工。公司离开你就没法运</p>
+<p>转。</p>
+<p>或者说，公司失去这个岗位就是没法正常运转的。</p>
+<p>所以，对于公司来说，每一个岗位都是不可或缺的，不管是销售还是研发还是厨师。只要存在，就说</p>
+<p>明公司需要。</p>
+<p>而所谓的公正，也就意味着对于不同的贡献给出不同的奖励：给销售业绩最好的员工股的奖励肯定要</p>
+<p>超过业绩最差的员工的简历。这才是公正和平等嘛。</p>
+<p>而所谓的上级和下级，只是工作内容、工作能力、工作经历（经验）不同而根据公司的需要设定的一</p>
+<p>些区别，这些区别展示出来的是平等，而不是不平等。</p>
+<p>那么，为什么那么多人认为公司是不平等的呢？认为董事长比清洁工要高等?</p>
+<p>中国一直有一句俗话：宁为鸡头，毋为牛后。我对这句话一直有一些不认可。只是说不出这种不认</p>
+<p>可。</p>
+<p>看到今天的投票，我发现了这句话的底层逻辑：这其实是对不平等的确认。</p>
+<p>如果在一个公司，大家都是平等的，从董事长到清洁工，大家从自己的能力、兴趣和各种资源出发，</p>
+<p>选择一个适合自己的岗位，如软件工程师，如项目经理，如销售，如清洁工，如制图；如部门经理、</p>
+<p>如总经理等等等等。</p>
+<p>如果你是普通的员工，完成你的领导安排的工作，拿到你应得的收入，过你喜欢的生活。如果你的领</p>
+<p>导，尽你的管理职责，统筹和设计以及管理你的团队实现你领导要求的目标。如果你是老板，你投入</p>
+<p>巨大的精力和资源，努力实现自己的目标。</p>
+<p>一切只是你的选择而已。当然，更多人没有选择。这是另一个问题了。</p>
+<p>现在问题来了，我们的文化中，一直认为老大是“很厉害的”，认为只有做老大才是厉害的，认为在企</p>
+<p>业中只有主子和奴才（参考：），不是主子，就是奴才。而在企业中，只有老大才不是奴才。</p>
+<p>所以，大家才觉得：宁为鸡头，毋为牛后。</p>
+<p>那些选“不平等”的人，肯定会努力往上派，这个对年轻人来说很正确。有一些更厉害的人，则会选择</p>
+<p>出来创业，直接做老大，直接做主子。</p>
+<p>其实，在一个正常成长的企业，肯定要建立平等的文化，这个平等，值得是机会上的平等，人格上的</p>
+<p>平等。</p>
+<p>企业中的每一个人，只有在平等的基础上，才可以通过自我控制，尽最大可能，最优地完成自己的工</p>
+<p>作，完成组织、领导和自己的目标。</p>
+<p>说道老板，说道主子，我可以讲个段子，其实，做了主子才知道，这哪是主子呀，这完全就是灰孙</p>
+<p>子。</p>
+<p>我认识一个女生，很漂亮的女生，那种可以随意放男生鸽子男生也不会生气的女生，那种男生会想各</p>
+<p>种办法约的女生。自从创业后，就各种约别人，陪这笑脸，还老被放鸽子。</p>
+<p>有一次我和这个女生说：“卿本佳人，奈何创业”。</p>
+<p>如果你保持“主子奴才”思维的话，真的做了主子后，你就会发现，满大街的客户都是你的“主子”，甚至</p>
+<p>你的“奴才”也是你的主子：爷，您好歹动一动呀。</p>
+<h2 id="大纲">大纲</h2>
+<h2 id="百字摘要">百字摘要</h2>
+<h2 id="金庸案例">金庸案例</h2>
+<h2 id="时间消耗">时间消耗</h2>
+<h2 id="阅读理解">阅读理解：</h2>
+<h2 id="大纲-1">大纲：</h2>
+<h2 id="撰写">撰写：</h2>
+<h2 id="录音">录音</h2>
+<h2 id="一小时运动">一小时运动</h2>
+<h2 id="英文原文">英文原文</h2>
+<p>18 NOVEMBER</p>
+<p>Hierarchy and Equality</p>
+<p>Hierarchy：</p>
+<p>[ C U ] a system, especially in a society or an organization, in
+which people are organized into different levels of</p>
+<p>importance from highest to lowest</p>
+<p>Equality：</p>
+<p>等级制度（尤指社会或组织）</p>
+<p>[ U ] the fact of being equal in rights, status, advantages, etc.</p>
+<p>平等；均等；相等</p>
+<p>One hears a great deal today about “the end of hierarchy.”</p>
+<p>That is blatant nonsense.</p>
+<p>blatant：</p>
+<p>( disapproving ) ( of actions that are considered bad</p>
+<p>坏的行为 ) done in an obvious and open way without caring if
+people</p>
+<p>明目张胆的；公然的</p>
+<p>nonsense：[ U C ] ideas, statements or beliefs that you think are
+ridiculous or not true 谬论；胡扯；胡言乱语</p>
+<p>are shocked</p>
+<p>To attack industrial society, as would the sentimental equalitarian,
+because it is based on</p>
+<p>subordination instead of on formal equality is a misunderstanding of
+the nature of both industry</p>
+<p>and society.</p>
+<p>sentimental：</p>
+<p>情感的（而非理性的）</p>
+<p>equalitarian：adj. 平均主义的</p>
+<p>formal：</p>
+<p>正式的；合乎规矩的</p>
+<p>connected with your emotions, rather than reason</p>
+<p>official; following an agreed or official way of doing things</p>
+<p>Like every other institution that coordinates human efforts to a
+social end, the corporation must be</p>
+<p>organized on hierarchical lines.</p>
+<p>But, also, everybody from the boss to the sweeper must be seen as
+equally necessary to the</p>
+<p>success of the common enterprise.</p>
+<p>At the same time, the large corporation must offer equal
+opportunities for advancement.</p>
+<p>This is simply the traditional demand for justice, a consequence of
+the Christian concept of human</p>
+<p>dignity.</p>
+<p>The demand for equal opportunities is not, as is often mistakenly
+as-sumed, a demand for absolute</p>
+<p>equality of rewards.</p>
+<p>On the contrary, equal opportunities automatically assume an
+inequality of rewards.</p>
+<p>For the very concept of justice implies rewards graduated according
+to unequal performance and</p>
+<p>unequal responsibility.</p>
+<h3 id="action-point">ACTION POINT:</h3>
+<p>Does your organization value the contribution of the boss and the
+sweeper, or just the boss?</p>
+<p>sweeper：</p>
+<p>打扫者；清扫者；清洁工</p>
+<p>a person whose job is to sweep sth</p>
+<p>Concept of the Corporation</p>
+<p>Management Challenges for the 21st Century</p>
+<p>A Functioning Society</p>
+<h2 id="november">18 NOVEMBER</h2>
+<h3 id="hierarchy-and-equality">Hierarchy and Equality</h3>
+<p>One hears a great deal today about “the end of hierarchy.”</p>
+<p>That is blatant nonsense.</p>
+<p>To attack industrial society, as would the sentimental equalitarian,
+be-</p>
+<p>cause it is based on subordination instead of on formal equality
+is</p>
+<p>Amisunderstanding of the nature of both industry and society. Like
+every</p>
+<p>other institution that coordinates human efforts to a social end, the
+corpo-</p>
+<p>ration must be organized on hierarchical lines. But, also, everybody
+from</p>
+<p>the boss to the sweeper must be seen as equally necessary to the
+success</p>
+<p>of the common enterprise. At the same time, the large corporation
+must</p>
+<p>offer equal opportunities for advancement. This is simply the
+traditional</p>
+<p>demand for justice, a consequence of the Christian concept of
+human</p>
+<p>dignity.</p>
+<p>The demand for equal opportunities is not, as is often mistakenly
+as-</p>
+<p>sumed, a demand for absolute equality of rewards. On the contrary,
+equal</p>
+<p>opportunities automatically assume an inequality of rewards. For the
+very</p>
+<p>concept of justice implies rewards graduated according to unequal
+perfor-</p>
+<p>mance and unequal responsibility.</p>
+<h3 id="action-point-1">ACTION POINT:</h3>
+<p>Does your organization value the contribution of the boss</p>
+<p>and the sweeper, or just the boss?</p>
+<p>Concept of the Corporation</p>
+<p>Management Challenges for the 21st Century</p>
+<h4 id="a-functioning-society">A Functioning Society</h4>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

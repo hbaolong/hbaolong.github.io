@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="第三同读" />
+  <title>德鲁克日志</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">德鲁克日志</h1>
+<p class="author">第三同读</p>
+</header>
+<h2 id="透过金庸读懂德鲁克">透过金庸读懂德鲁克</h2>
+<p>令狐冲和林平之</p>
+<p>令狐冲是一个很多人喜欢的角色，喜欢他的放荡不羁，喜欢他的爽朗豁达，喜欢他的豪迈潇洒，喜欢</p>
+<p>他的不拘小节。每次读到笑傲江湖时，总觉得这样的才是人生。</p>
+<p>林平之则是一个对立面，林平之以主角的姿态出场：少爷救酒女、惨遭灭门、酒女原来是大家闺秀、</p>
+<p>投入华山派、和小师妹恋爱。</p>
+<p>然后迎娶了小师妹岳林姗，一切看起来都是那么的流畅，如果没有太大意外的话，林平之会成为下一</p>
+<p>任华山掌门，林家也就完成了从镖局到入主华山的过渡。至于当了掌门后，举华山之力来灭青城报</p>
+<p>仇，那应该就是另一个故事了。</p>
+<p>不过，在关键时刻，林平之做了一个重大的决定：挥刀自宫、练习辟邪剑法。这个决定是在婚前几天</p>
+<p>做出的，林平之得到辟邪剑谱后随机自宫练剑。林平之并没有兄弟姐妹，也就是说，按传统意义，林</p>
+<p>家自此绝了。</p>
+<p>后来的林平之辜恩寡义，恩仇不分。居然莫名其妙地恨上了令狐冲，把令狐冲当成了敌人。</p>
+<p>那么令狐冲是个什么样的人呢？</p>
+<p>其实，令狐冲是一个“无足轻重”的人，因为令狐冲所有的成就，都是“别人塞给他”的，并不是他自己选</p>
+<p>择的。</p>
+<p>首先，独孤九剑是风清扬硬塞给他的，他并不想要，可是风清扬硬塞给了他，甚至，风清扬还说：“倒</p>
+<p>是我来求你学艺了。”</p>
+<p>接着，他的病是别人塞给他的。桃谷六仙硬生生地给他体内注入了六股真气，接着不戒和尚又给他体</p>
+<p>内注入了两股真气。这个和他的选择无关。</p>
+<p>后来，他被关进梅庄地狱，在狱中，他“被迫”学了吸星大法，等到他再次出现在江湖上已经是超一流的</p>
+<p>高手了。</p>
+<p>最后，他在“被哄骗下”学了易经筋，治好了吸星大法的后遗症。这时，独孤九剑|+一堆人的真气+吸星</p>
+<p>大法+易经筋。在各种被动下，令狐冲完成了自己的武功路径。</p>
+<p>回过头来在看林平之，林平之加入华山后学习也是非常努力，没多久就超过六师兄陆大有了。华山派</p>
+<p>武功虽然不是一流的，不过以他的资质和努力，超过青城派余沧海还是有可能的。</p>
+<p>不过，林平之心里有个心结，就是师父岳不群砍他那一剑。</p>
+<p>是的，林平之知道到岳不群是什么样的人，知道自己没有可能在华山这么一直下去：努力学习武功，</p>
+<p>接任掌门，然后报仇。他知道岳不群迟早会杀了他的。除非岳不群杀不了他。</p>
+<p>初期，林平之一直和岳林姗在一起，没有给岳不群机会，当林平之拿到辟邪剑谱后，林平之面临着这</p>
+<p>个人生中最大的选择：自己是学会辟邪剑法，从而彻底摆脱岳不群对自己的威胁？还是继续这么装下</p>
+<p>去，随时面临对岳不群灭口？</p>
+<p>这个抉择不好拿，经过了良久，面对着岳不群越来越大的压力，林平之做出了自己的选择：自宫练</p>
+<p>剑。</p>
+<p>我不认为林平之是为了报仇而自宫练剑的，对于林平之来说，活下来是报仇的前提，而失去了生育能</p>
+<p>力的活下来对于父母来说，并不算报仇。</p>
+<p>真正让林平之决定自宫练剑的是来自岳不群的压力：如果林平之没有在短时间内增加自己的武力，那</p>
+<p>就意味着自己随时会被岳不群灭口。自己要活着，就必须“尽快有足够强大的武力”。</p>
+<p>在反复权衡后，林平之做出了选择。</p>
+<p>而令狐冲不一样。虽然号称黑白两道都在追杀他，可是真正要杀令狐冲的人几乎没有。东方不败对他</p>
+<p>也是好奇，并不想杀他；任盈盈的那些手下更是把他当成主人一样；正派中恒山认他为掌门；华山的</p>
+<p>弟子、师娘都对他很好。岳不群虽有杀他的动机，但也有不杀他的动机（杀他了，谁来背锅？）。更</p>
+<p>何况，令狐冲一直在江湖上，而林平之却一直在岳不群身边。</p>
+<p>令狐冲是个什么样的人呢？他是大家认为的那样放荡不羁，爽朗豁达，豪迈潇洒，不拘小节么？或许</p>
+<p>是，不过，他并没有经历太多的选择，命运之神精准地把他推到了那个神位上。</p>
+<p>而林平之呢？这位历经磨难的少年，在关键时刻做了一个大家都不能理解的抉择。却不知，这可能是</p>
+<p>唯一的答案。</p>
+<h2 id="大纲">大纲</h2>
+<h2 id="百字摘要">百字摘要</h2>
+<h2 id="金庸案例">金庸案例</h2>
+<h2 id="时间消耗">时间消耗</h2>
+<h2 id="阅读理解">阅读理解：</h2>
+<h2 id="大纲-1">大纲：</h2>
+<h2 id="撰写">撰写：</h2>
+<h2 id="录音">录音</h2>
+<h2 id="一小时运动">一小时运动</h2>
+<h2 id="英文原文">英文原文</h2>
+<p>4 OCTOBER</p>
+<p>The Right Compromise</p>
+<p>“Half a loaf is better than no bread.”</p>
+<p>One has to start out with what is right rather than what is
+acceptable (let alone who is right)</p>
+<p>precisely because one always has to compromise in the end.</p>
+<p>But if one does not know what is right to satisfy the specifications
+and boundary conditions, one</p>
+<p>cannot distinguish between the right compromise and the wrong
+compromise—and will end up by</p>
+<p>making the wrong compromise.</p>
+<p>There are two different kinds of compromise.</p>
+<p>One kind is expressed in the old proverb, “Half a loaf is better than
+no bread.”</p>
+<p>The other kind is expressed in the story of the Judgment of Solomon,
+which was clearly based on</p>
+<p>the realization that “half a baby is worse than no baby at all.”</p>
+<p>In the first instance, the boundary conditions are still being
+satisfied.</p>
+<p>The purpose of bread is to provide food, and half a loaf is still
+food.</p>
+<p>Half a baby, however, does not satisfy the boundary conditions.</p>
+<p>For half a baby is not half of a living and growing child.</p>
+<p>It is a corpse in two pieces.</p>
+<h3 id="action-point">ACTION POINT:</h3>
+<p>Now think through the problem you specified in the two previous
+readings.</p>
+<p>Make a decision that represents a compromise, half a loaf, but goes
+in the right direction toward</p>
+<p>the ideal solution.</p>
+<p>Then think of a compromise that is “no bread at all.”</p>
+<p>The Effective Executive</p>
+<h2 id="october">4 OCTOBER</h2>
+<h3 id="the-right-compromise">The Right Compromise</h3>
+<p>“Half a loaf is better than no bread.”</p>
+<p>One has to start out with what is right rather than what is
+acceptable (let</p>
+<p>alone who is right) precisely because one always has to compromise in
+the</p>
+<p>end. But if one does not know what is right to satisfy the
+specifica-</p>
+<p>tions and boundary conditions, one cannot distinguish between the
+right</p>
+<p>compromise and the wrong compromise—and will end up by making the</p>
+<p>wrong compromise.</p>
+<p>There are two different kinds of compromise. One kind is expressed
+in</p>
+<p>the old proverb, “Half a loaf is better than no bread.” The other
+kind is</p>
+<p>ex-pressed in the story of the Judgment of Solomon, which was
+clearly</p>
+<p>based on the realization that “half a baby is worse than no baby at
+all.” In</p>
+<p>the first instance, the boundary conditions are still being
+satisfied. The</p>
+<p>purpose of bread is to provide food, and half a loaf is still food.
+Half</p>
+<p>Ababy, however, does not satisfy the boundary conditions. For half a
+baby</p>
+<p>is not half of a liv-ing and growing child. It is a corpse in two
+pieces.</p>
+<h3 id="action-point-1">ACTION POINT:</h3>
+<p>Now think through the problem you specified in the two</p>
+<p>previous readings. Make a decision that represents a compromise,
+half</p>
+<p>Aloaf, but goes in the right direction toward the ideal solution.
+Then think</p>
+<p>of a compromise that is “no bread at all.”</p>
+<h4 id="the-effective-executive">The Effective Executive</h4>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

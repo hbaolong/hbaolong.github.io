@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="第三同读" />
+  <title>德鲁克日志</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">德鲁克日志</h1>
+<p class="author">第三同读</p>
+</header>
+<h2 id="透过金庸读懂德鲁克">透过金庸读懂德鲁克</h2>
+<p>【300字抖音】</p>
+<p>在希望的田野上</p>
+<p>今天和一个创业者聊天，发现了一个很有趣的症结。</p>
+<p>这个创业者个人能力很不错，属于“超级”个体。超级个体的特点就是可以独立做很多事情，而且这些</p>
+<p>事情可以做的很好。不过他们的缺点也很明显：由于个人天花板的限制，到了一定程度就没法发展</p>
+<p>了。</p>
+<p>所以，很多超级个体到了一定程度后都会想要“有组织”地创业。</p>
+<p>这些超级基于自己的能力，往往想做比较大的事情。基于他们的能力以及过往经历，很多人也相信他</p>
+<p>们可以做成那些事情，毕竟，对于大多数人来说，这个世界是符合加法规则的，甚至是乘法规则的。</p>
+<p>然后，这些超级个体也就非常勇敢地去设计、策划、推动这些事情了。</p>
+<p>然后这些事就开始进行了。</p>
+<p>而有一些超级个体会有不同的行为，他们每天都在设想。</p>
+<p>超级个体所做的事情，大多是他们作为个体已经成功过的事情。而一旦进入组织领域，他们则有点犹</p>
+<p>豫不决。他们会不停地找各种不同的人交流，讨论。有了结果后，他们会扔掉这些结果继续找不同的</p>
+<p>人交流、讨论。仿佛他们要做的就是交流、讨论。</p>
+<p>每次交流、讨论，他们都会有新的想法，新的“主意”，然后又开始沾沾自喜。却不更新自己的方案，</p>
+<p>继续找不同的人交流、讨论。</p>
+<p>他们不断迭代自己的方案，而这个方案却始终没有走出自己的大脑，或者其他人的大脑，始终没有经</p>
+<p>过任何市场的验证，只是在一个或者几个大脑里飘来飘去。好像在逐步完善，又好像还是破败不堪。</p>
+<p>这些超级个体却不知道，那些飘来飘去，验证来验证去的想法，并没有什么意义，有意义的是把它推</p>
+<p>动起来，让市场去验证。而不是用大脑去验证。更不是用别人的大脑去验证。</p>
+<p>对于他们来说，他们那个“项目”每天都在希望的田野上，飘呀飘，却不知道什么时候落下来，埋到地</p>
+<p>里，施点肥，浇点水，让它生根，发芽。</p>
+<h2 id="大纲">大纲</h2>
+<h2 id="百字摘要">百字摘要</h2>
+<h2 id="金庸案例">金庸案例</h2>
+<h2 id="时间消耗">时间消耗</h2>
+<h2 id="阅读理解">阅读理解：</h2>
+<h2 id="大纲-1">大纲：</h2>
+<h2 id="撰写">撰写：</h2>
+<h2 id="录音">录音</h2>
+<p>7 AUGUST</p>
+<p>Social Innovation: The Research Lab</p>
+<p>Management is increasingly becoming the agent of social
+innovation.</p>
+<p>The research lab dates back to 1905.</p>
+<p>dates back：追溯到；回溯至</p>
+<p>It was conceived and built for the General Electric Company in
+Schenectady, New York, by one of</p>
+<p>the earliest “research managers,” the German-American physicist
+Charles Proteus Steinmetz.</p>
+<p>conceived ：</p>
+<p>想像 相信</p>
+<p>Schenectady：n. 斯克内克塔迪（美国纽约州东部城市）</p>
+<p>斯泰因梅茨（Steinmetz,Charles Proteus）
+德国-美国电机工程师，对交流电系统的发展作出巨大贡</p>
+<p>献。1865年4月9日生于德国的布雷斯劳（现为波兰的弗罗茨瓦夫；1923年10月26日卒于纽约州的舍内</p>
+<p>克塔迪。因祖父和父亲遗传，斯泰因梅茨是先天性驼背。</p>
+<p>V-T/V-I If you cannot conceive of something, you cannot imagine it or
+believe it.</p>
+<p>;</p>
+<p>Steinmetz had two clear objectives from the start: to organize
+science and scientific work for</p>
+<p>purposeful technological invention and to build continuous
+self-renewal through innovation into</p>
+<p>that new social phenomenon—the big corporation.</p>
+<p>Steinmetz’s lab radically redefined the relationship between science
+and technology in</p>
+<p>research.</p>
+<p>radically：adv. 根本上；彻底地；以激进的方式</p>
+<p>In setting the goals of his project, Steinmetz identified the new
+theoretical science needed to</p>
+<p>accomplish the desired technological results and then organized the
+appropriate “pure” research</p>
+<p>to obtain the needed new knowledge.</p>
+<p>Steinmetz himself was originally a theoretical physicist. But every
+one of his “contributions” was</p>
+<p>the result of research he had planned and specified as part of a
+project to design and to develop a</p>
+<p>new product line, for example, fractional horsepower motors.
+Technology, traditional wisdom held</p>
+<p>and still widely holds, is “applied sci-ence.”</p>
+<p>In Steinmetz’s lab, science—including the purest of “pure
+research”—is technology-driven, that is,</p>
+<p>a means to a technological end.</p>
+<h3 id="action-point">ACTION POINT:</h3>
+<p>Follow the example of Steinmetz and do market-driven research and
+development.</p>
+<p>The Ecological Vision</p>
+<h2 id="august">7 AUGUST</h2>
+<h3 id="social-innovation-the-research-lab">Social Innovation: The
+Research Lab</h3>
+<p>Management is increasingly becoming the agent of social
+innovation.</p>
+<p>The research lab dates back to 1905. It was conceived and built for
+the</p>
+<p>General Electric Company in Schenectady, New York, by one of the
+earliest</p>
+<p>“research managers,” the German-American physicist Charles
+Pro-teus</p>
+<p>Steinmetz. Steinmetz had two clear objectives from the start: to
+orga-nize</p>
+<p>science and scientific work for purposeful technological invention
+and to</p>
+<p>build continuous self-renewal through innovation into that new
+so-</p>
+<p>cial phenomenon—the big corporation.</p>
+<p>Steinmetz’s lab radically redefined the relationship between
+science</p>
+<p>and technology in research. In setting the goals of his project,
+Steinmetz</p>
+<p>identified the new theoretical science needed to accomplish the
+desired</p>
+<p>technological results and then organized the appropriate “pure”
+research</p>
+<p>to obtain the needed new knowledge. Steinmetz himself was
+originally</p>
+<p>Atheoretical physicist. But every one of his “contributions” was the
+result</p>
+<p>of research he had planned and specified as part of a project to
+design and</p>
+<p>to develop a new product line, for example, fractional horsepower
+motors.</p>
+<p>Technology, traditional wisdom held and still widely holds, is
+“applied</p>
+<p>sci-ence.” In Steinmetz’s lab, science—including the purest of “pure
+re-</p>
+<p>search”—is technology-driven, that is, a means to a technological
+end.</p>
+<h3 id="action-point-1">ACTION POINT:</h3>
+<p>Follow the example of Steinmetz and do market-driven</p>
+<p>research and development.</p>
+<h4 id="the-ecological-vision">The Ecological Vision</h4>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

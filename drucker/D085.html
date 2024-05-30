@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="第三同读" />
+  <title>德鲁克日志</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">德鲁克日志</h1>
+<p class="author">第三同读</p>
+</header>
+<h2 id="透过金庸读懂德鲁克">透过金庸读懂德鲁克</h2>
+<p>你身边的设计师赚钱了么？</p>
+<p>偶尔我会做一些图，我会找设计师。找设计师作图当然要给钱，要不是我给钱，要不就是别人给钱，</p>
+<p>总之，设计师需要收到钱。</p>
+<p>一张图便宜一点的100-200，贵一些的300-500，我做过的最贵的图是8000块钱的。那叫一个心疼</p>
+<p>呀。</p>
+<p>不过设计师还是很专业的，帮我做了一整套。在之后的很长时间里，我都没有为昨天发愁过了。</p>
+<p>有时我在想，PS也并不难，我要不要学习一下作图？这样自己就可以省一点钱了。有一次我去看了看</p>
+<p>作图的同学趴着电脑上一点点挪动线条，我就告诉自己：还是让她做吧。</p>
+<p>今天和一个朋友聊天，她在保险公司开了一个号，她说，以后买保险就可以自己卖个自己了，还可以</p>
+<p>省掉很多佣金。我听了后深以为然。</p>
+<p>其实，如果我要买房子，我可以先去售楼处入个职，然后卖房子给自己，还可以拿佣金。</p>
+<p>如果我想买樊登读书会的卡，那我做个樊登的分销？然后我就可以低价拿到卡了。据说折扣还不错。</p>
+<p>我公司组织活动不少，我是不是应该成立一个部门来组织活动？也就是找几个人呀，不然老要付给活</p>
+<p>动公司钱。</p>
+<p>公司需要会计，招一个会计？还是找会计公司？</p>
+<p>公司需要一个知识付费平台，知己开发一个？还是租一个？我公司有研发团队，还挺厉害的，我们开</p>
+<p>发一个吧。</p>
+<p>其实，在目前在社会上，一个好的架构是让身边的人赚到钱，而不是把所有的事情都做了，让别人无</p>
+<p>事可做。因为这是不可能的。</p>
+<p>对于某个人来说，你做某件事无外乎两个理由：喜欢和谋生。</p>
+<p>如果你说因为喜欢，那么你做什么都是对的；如果你是为了谋生，那么你做什么也是对的。</p>
+<p>如果某件事，你并不喜欢做，而且那件事也不影响你谋生，那么，你做他干嘛？</p>
+<p>非要把自己变成保险专家？非要把自己变成售楼专家么？非要自己养一个会计么？非要用自己团队开</p>
+<p>发的软件么？那为啥不用自己团队发的电呢？那为什么不住自己公司盖的楼呢？</p>
+<p>对于企业来说，你应该做什么呢？会计团队？设计团队？行政团队？订票专员？你应该把能外包的都</p>
+<p>外包出去，只留下自己的核心业务。最最核心的业务，其他的能外包的全部外包，让设计师、会计</p>
+<p>师、平台公司、保险业务员都赚到钱，只有你身边的人都赚到钱，你才能赚到钱。</p>
+<p>至于那些“我可以做这个”，“公司找个人做这个吧”的，大概是因为自己不知道自己要做啥吧。</p>
+<h2 id="大纲">大纲</h2>
+<h2 id="百字摘要">百字摘要</h2>
+<h2 id="金庸案例">金庸案例</h2>
+<h2 id="时间消耗">时间消耗</h2>
+<h2 id="阅读理解">阅读理解：</h2>
+<h2 id="大纲-1">大纲：</h2>
+<h2 id="撰写">撰写：</h2>
+<h2 id="录音">录音</h2>
+<h2 id="一小时运动">一小时运动</h2>
+<h2 id="英文原文">英文原文</h2>
+<p>25 MARCH</p>
+<p>From Legal Fiction to Economic Reality</p>
+<p>Fiction：</p>
+<p>Legal：</p>
+<p>虚构的事；假想之物</p>
+<p>allowed or required by law 法律允许的；合法的；法律要求的</p>
+<p>[ C U ] a thing that is invented or imagined and is not true</p>
+<p>Where do activities belong?</p>
+<p>Increasingly, the economic process depends on structures built upon
+alliances, joint ventures, and</p>
+<p>outsourcing.</p>
+<p>Structures that are built upon strategy, rather than ownership and
+control, are becoming the</p>
+<p>models for growth in the global economy.</p>
+<p>Executives in these partnership structures should organize and manage
+corporate strategy,</p>
+<p>product planning, and product costing as one economic whole.</p>
+<p>Take for example, a leading global manufacturer of consumer
+goods.</p>
+<p>Formerly the company assumed that the more in-house manufacturing it
+did, the better.</p>
+<p>Now it is asking, “Where do activities belong?”
+，云管理的概念：谁来帮我做设计？</p>
+<p>So, it has decided to place finishing activities into many of the 180
+countries where the customer is</p>
+<p>located.</p>
+<p>在设计软件时，在具体编写是，应该在哪里计算？错误的”namespace“回带来巨大的成本支出。</p>
+<p>But it produces itself fundamental compounds for the products only in
+a few regions of the world.</p>
+<p>For example, a large plant in Ireland serves all of Europe and
+Africa.</p>
+<p>The company is insourcing the basic compounds to achieve quality
+control, but it is outsourcing</p>
+<p>final assembly.</p>
+<p>It is looking at the entire value chain and decides where to place
+various activities.</p>
+<h3 id="action-point">ACTION POINT:</h3>
+<p>Think about your job.</p>
+<p>Could someone else do it cheaper and better?</p>
+<p>If so, develop a plan to get new skills to move up the food chain, by
+reading, doing research, and</p>
+<p>talking to people.</p>
+<p>Management Challenges for the 21st Century</p>
+<p>From Data to Information Literacy (Corpedia Online Program)</p>
+<h2 id="march">25 MARCH</h2>
+<h3 id="from-legal-fiction-to-economic-reality">From Legal Fiction to
+Economic Reality</h3>
+<p>Where do activities belong?</p>
+<p>Increasingly, the economic process depends on structures built upon
+al-</p>
+<p>liances, joint ventures, and outsourcing. Structures that are built
+upon</p>
+<p>strategy, rather than ownership and control, are becoming the models
+for</p>
+<p>growth in the global economy. Executives in these partnership
+structures</p>
+<p>should organize and manage corporate strategy, product planning,
+and</p>
+<p>product costing as one economic whole.</p>
+<p>Take for example, a leading global manufacturer of consumer
+goods.</p>
+<p>Formerly the company assumed that the more in-house manufacturing
+it</p>
+<p>did, the better. Now it is asking, “Where do activities belong?” So,
+it has</p>
+<p>de-cided to place finishing activities into many of the 180 countries
+where</p>
+<p>the customer is located. But it produces itself fundamental compounds
+for</p>
+<p>the products only in a few regions of the world. For example, a large
+plant</p>
+<p>in Ireland serves all of Europe and Africa. The company is
+in-sourcing the</p>
+<p>basic compounds to achieve quality control, but it is outsourcing
+final as-</p>
+<p>sembly. It is looking at the entire value chain and decides where to
+place</p>
+<p>various activities.</p>
+<h3 id="action-point-1">ACTION POINT:</h3>
+<p>Think about your job. Could someone else do it cheaper</p>
+<p>and better? If so, develop a plan to get new skills to move up the
+food</p>
+<p>chain, by reading, doing research, and talking to people.</p>
+<p>Management Challenges for the 21st Century</p>
+<h4 id="from-data-to-information-literacy-corpedia-online-program">From
+Data to Information Literacy (Corpedia Online Program)</h4>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

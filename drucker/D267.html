@@ -1,0 +1,914 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="第三同读" />
+  <title>德鲁克日志</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">德鲁克日志</h1>
+<p class="author">第三同读</p>
+</header>
+<h2 id="透过金庸读懂德鲁克">透过金庸读懂德鲁克</h2>
+<p>你为什么找不到男朋友</p>
+<p>我有一个群，群里人不多，有男有女，有已婚的，有未婚的，未婚的大多没有男朋友。</p>
+<p>这里群里讨论的话题很飘逸，每天都在各个话题之间切换。只是有一个特色：很多话题都会以单身女</p>
+<p>生的世纪之问结尾：我为什么找不到男朋友。</p>
+<p>这确实是一个世纪之问，我们每一次线下活动，只好进入开放交流阶段，不管是讨论宏观经济，还是</p>
+<p>讨论健身、美食，最后都会不由自主地进入一个话题：为什么那么多女生单身。</p>
+<p>是呀，为什么那么多女生单身呢？按国家宏观数据，同龄的男生比女生多，按这个逻辑，应该是大把</p>
+<p>的男生找不到女朋友才对呀。为什么身边什么乱七八糟的男生都不缺女朋友，而很多即使很优秀的女</p>
+<p>生也是孑孑茕立、形影相吊？</p>
+<p>是他们经济条件好了，不愿意找么？好像也不是，有些女生甚至会花一些钱去相亲网站去找对象，也</p>
+<p>会让朋友介绍，也会接受朋友的介绍。</p>
+<p>可是，现实就是，她们还是单着，而且，看起来会一直单下去。</p>
+<p>为什么呢？</p>
+<p>有一次我问一个女生，女生是81年的，容颜姣好，我见犹怜。我问她：“你要找什么样的男朋友呀？”</p>
+<p>这个女生回答说：“男的，活的”。</p>
+<p>太模糊了，我又追问：“说具体点，这样的人太多了！”</p>
+<p>然后她脱口而出：“活的有男人样的”。</p>
+<p>我看了看她，沉默了。</p>
+<p>有一个91年的女生，有一次和我聊一个事情。聊完后，她突然和我讲她的故事，她在世纪佳缘上的故</p>
+<p>事。她在讲故事时一副委屈的样子。她说，我已经设置了很严格的过滤条件呀，世纪佳缘老给我推荐</p>
+<p>一些很垃圾的男人，我觉得他们就想骗我的钱。</p>
+<p>我说，你都设置了什么条件呀。她说，有年龄、学历、收入、身高等等等。</p>
+<p>我问她：“有性别么？”</p>
+<p>她瞪了我一眼，走了。</p>
+<p>很早以前，我也会用QQ聊天，QQ聊天可以搜陌生人，我们搜模式人时，可以用一些过滤条件：城</p>
+<p>市、性别、是否有摄像头、年龄等等等等。男生喜欢的一个游戏，就是通过这些过滤条件加一些人，</p>
+<p>然后聊天。据说，这样可以很快交到朋友。</p>
+<p>之后的社交软件也基本是这样一个套路：通过一堆条件来过滤，最后选出“最适合你的朋友”，让你们</p>
+<p>去交朋友。</p>
+<p>这时一个大数据时代，微信的日活已经超过10亿了，各种社交软件也都是上亿的数据，作为一个女</p>
+<p>生，作为一个随时可以访问上亿社交数据的女生，作为一个可以随时通过过滤条件选出几百万人的一</p>
+<p>个女生，居然找不到合适的人。</p>
+<p>这些女生，每每刷半天这种社交（婚恋）软件后，就扔到一边，找个地方去抱怨自己的单身，自己的</p>
+<p>孤独。</p>
+<p>好像那个日活10亿的微信都没法给自己提供一个自己理想的男朋友。</p>
+<p>这是为什么呢？</p>
+<p>男朋友，指的是有恋爱关系的男性朋友，通常是对女生讲的。正常来说，对于一个女生，只要是男</p>
+<p>生，就可以做男朋友。在没有大数据之前，我们通过肉眼来判断：这个人还不错。</p>
+<p>在接触中，我们会逐渐发现，原来他还是个大学生，原来他还是一个学霸，原来他抽烟，原来他英语</p>
+<p>很好，他生在海边居然不会游泳……</p>
+<p>在一天天接触中，我们逐渐了解，然后两个人或者结婚，或者分手，至少谈了一次恋爱。</p>
+<p>现在有了大数据，我们可以在几万、几十万、几百万、几千万、几亿人中选择一个人，这时，你就会</p>
+<p>设置一些条件：不抽烟、不喝酒、身高不低于180、硕士以上学历、985等等等等。</p>
+<p>女生的每一个条件都有很多道理，问题时，这些条件真的有意义么？</p>
+<p>这些条件真的有意义么？</p>
+<p>抽烟影响你婚姻的幸福么？</p>
+<p>身高会影响你婚姻的幸福么？</p>
+<p>985毕业，会影响你婚姻的幸福么？</p>
+<p>这些条件有意义的可能性有多大？</p>
+<p>“我不希望我的孩子太矮，所以我要求对方要高一些”</p>
+<p>“我希望对方可以教孩子一些学科，所以希望对方985学校毕业”</p>
+<p>这些和爱情、婚姻都无关地铁条件，真的是你想要的么？</p>
+<p>大数据可以轻松为我们选择出任何条件的人，而真正的问题是，当你提出哪些无意义的问题时，你其</p>
+<p>实在心中种下了一个不可能。</p>
+<p>你需要的其实只是恋爱、结婚，如果你的目的是这样的，那么你应该做的是，看到那个你喜欢的男</p>
+<p>生，走过去，然后说：“你好，我可以坐在你身边么？”</p>
+<p>然后慢慢了解他。 而不是相反。</p>
+<h2 id="大纲">大纲</h2>
+<h2 id="百字摘要">百字摘要</h2>
+<h2 id="金庸案例">金庸案例</h2>
+<h2 id="时间消耗">时间消耗</h2>
+<h2 id="阅读理解">阅读理解：</h2>
+<h2 id="大纲-1">大纲：</h2>
+<h2 id="撰写">撰写：</h2>
+<h2 id="录音">录音</h2>
+<h2 id="一小时运动">一小时运动</h2>
+<h2 id="英文原文">英文原文</h2>
+<p>23 SEPTEMBER</p>
+<p>Controls, Control, and Management</p>
+<p>The probability of an event’s being meaningful is a much more
+important datum than the event</p>
+<p>itself.</p>
+<p>We are rapidly acquiring great capacity to design controls in
+business and in other social</p>
+<p>institutions, based on a great improvement in techniques, especially
+the ability to process and</p>
+<p>analyze large masses of data very fast. What does this mean for
+“control”? Especially, what are the</p>
+<p>requirements for these greatly improved controls to give better
+control to management? For, in the</p>
+<p>task of a manager, controls are purely a means to an end; the end is
+control. If we deal with a</p>
+<p>human being in a social insti-tution, controls must become personal
+motivation that leads to</p>
+<p>control. A translation is required before the information yielded by
+the controls can become</p>
+<p>grounds for action—the translation of one kind of information into
+another, which we call</p>
+<p>perception. In the social institution there is a second complexity, a
+second “uncertainty principle.” It</p>
+<p>is almost impossi-ble to prefigure the responses appropriate to a
+certain event in a social situation.</p>
+<p>But a control-reading “profits are falling” does not indicate, with
+any de-gree of probability, the</p>
+<p>response “raise prices,” let alone by how much; the control-reading
+“sales are falling” does not</p>
+<p>indicate the response “cut prices,” and so on. The event itself may
+not even be meaningful. But</p>
+<p>even if it is, it is by no means certain what it means.</p>
+<h3 id="action-point">ACTION POINT:</h3>
+<p>Review each of the performance measures you use to manage your
+organization.</p>
+<p>Eliminate each of those measures that is not meaningful to the
+results of the organization.</p>
+<p>Management: Tasks, Responsibilities, Practices</p>
+<p>【原书原文】</p>
+<p>Controls, Control, and Management</p>
+<p>Controls and Control—The Characteristics of Controls—Controls Are
+Goal-Setting and Value-Setting—Controls</p>
+<p>Needed for Measurable and for Nonmeasurable Events—The Specification
+for Controls—Economy—Meaning—</p>
+<p>Controls Follow
+Strategy—Appropriateness—Congruence—Timeliness—Simplicity—Controls Must
+Be Operational—</p>
+<p>The Ultimate Control of Organizations—Controls and the Spirit of an
+Organization</p>
+<p>N THE DICTIONARY OF SOCIAL INSTITUTIONS, the word “controls” is not
+the plural of the word “control.” Not only do</p>
+<p>more controls not necessarily give more con- trol, the two words, in
+the context of social institutions, have different</p>
+<p>meanings alto- gether. The synonyms for controls are measurement and
+information. The synonym for control is</p>
+<p>direction. Controls pertain to means, control to an end. Controls
+deal with facts, that is, with events of the past.</p>
+<p>Control deals with expectations, that is, with the future. Controls
+are analytical, concerned with what was and is.</p>
+<p>Control is normative and concerned with what ought to be.</p>
+<p>We are rapidly acquiring great capacity to design controls in
+business and in other so- cial institutions, based on a</p>
+<p>great improvement in techniques, especially in the application of
+logical and mathematical tools to events in a social</p>
+<p>institution, and in the ability to process and analyze large masses
+of data very fast. What does this mean for control?</p>
+<p>Spe- cifically, what are the requirements for these greatly improved
+controls to give better con- trol to management?</p>
+<p>For, in the task of a manager, controls are purely a means to an end;
+the end is control.</p>
+<p>Ordinary language and its use make abundantly clear that here is a
+problem. The man in a business who is charged</p>
+<p>with producing the controls is the controller. But most, if not all
+executives, including most controllers themselves,</p>
+<p>would consider it gross misuse and abuse of controllership were this
+controller to use his controls to exercise control</p>
+<p>in the business. This, they would argue, would actually make the
+business be “out of control” altogether.</p>
+<p>The reasons for this apparent paradox lie in the complexity both of
+human beings and of the social task.</p>
+<p>If we deal with a human being in a social institution, controls must
+become personal motivation that leads to control.</p>
+<p>Instead of a mechanical system, the control system in a human-social
+situation is a volitional system. That we know</p>
+<p>very little about the will is not even the central point. A
+translation is required before the information yielded by the</p>
+<p>controls can become grounds for action—the translation of one kind of
+information into another, which we call</p>
+<p>perception.</p>
+<p>In the social institution there is a second complexity, a second
+“uncertainty principle.” It is almost impossible to</p>
+<p>prefigure the responses appropriate to a certain event in a social
+situation.</p>
+<p>We can, and do, build controls into a machine which slow down the
+turning speed whenever it exceeds a certain figure.</p>
+<p>And we can do this either by mechanical means or by instrumentation
+which shows a human operator what the turning</p>
+<p>speed is, and which gives him the specific, unambiguous instruction
+to turn the speed down when the indicator</p>
+<p>reaches a certain point. But a control-reading “profits are falling”
+does not indicate, with any degree of probability, the</p>
+<p>response “raise prices,” let alone by how much; the control- reading
+“sales are falling” does not indicate the response</p>
+<p>“cut prices,” and so on. There is not only a large number of other
+equally probable responses—so large that it is usually</p>
+<p>not even possible to identify them in advance—there is also no
+indication in the event itself which of these responses</p>
+<p>is even possible, let alone appropriate, not to mention its being
+right. The event itself may not even be meaningful. But</p>
+<p>even if it is, it is by no means certain what it means. And the
+probability of its being meaningful is a much more</p>
+<p>important datum than the event itself and one which is almost never
+to be discerned by analyzing the event.</p>
+<p>Social situations require a decision based on assumptions—and
+essentially assump- tions not with respect to the</p>
+<p>recorded event but to the future, that is, expectations which know no
+probability but can only be judged according to</p>
+<p>plausibility. For there are no “facts” regarding the future in a
+social universe in which periodicity—at least on our minuscule time
+scale—cannot be assumed, must indeed be considered quite unlikely.</p>
+<p>The Characteristics of Controls</p>
+<p>There are three major characteristics of controls in business
+enterprise.</p>
+<ol type="1">
+<li>Controls can be neither objective nor neutral. When we measure the
+rate of fall of a stone, we are totally outside the</li>
+</ol>
+<p>event itself. By measuring we do not change the event; and measuring
+the event does not change us, the observers.</p>
+<p>Measuring physical phenom- ena is both objective and neutral.</p>
+<p>In a perceptual situation of complexity, that is, in any social
+situation of the kind we deal with in business enterprise,</p>
+<p>the act of measurement is, however, neither objective nor neutral. It
+is subjective and of necessity biased. It changes</p>
+<p>both the event and the ob- server. For it changes the perception of
+the observer—if it does not altogether create his</p>
+<p>perception. Events in the social situation acquire value by the fact
+that they are being sin- gled out for the attention of</p>
+<p>being measured. No matter how “scientific” we are, the fact that this
+or that set of phenomena is singled out for being</p>
+<p>“controlled,” signals that it is being considered to be
+important.</p>
+<p>Everybody who ever watched the introduction of a budget system has
+seen this hap- pen. For a long time—in some</p>
+<p>companies forever—realizing the budget figures becomes more important
+than what the budget is supposed to</p>
+<p>measure, namely economic perform- ance. Managers, upon first being
+exposed to</p>
+<p>a budget system, often deliberately hold back sales and cut back
+profits rather than be guilty of “not making the</p>
+<p>budget.” It takes years of experience and a very intelligent budget
+director to restore the balance. And there are any</p>
+<p>number of otherwise perfectly normal research directors who act on
+the conviction that it is a greater crime to get</p>
+<p>research results for less than the budgeted amount than not getting
+any research results at all while spending all the</p>
+<p>“proper” budget money.</p>
+<p>Controls in a social institution such as a business are goal-setting
+and value-setting. They are not “objective.” They are</p>
+<p>of necessity moral. The only way to avoid this is to flood the
+executive with so many controls that the entire system</p>
+<p>becomes meaningless, becomes mere “noise.”</p>
+<p>From that point of view maybe the gross abuse of our new
+data-processing capacity, namely as a tool for grinding out</p>
+<p>huge quantities of totally meaningless data—an abuse of which every
+early computer user is guilty—may be a blessing</p>
+<p>after all.</p>
+<p>But to render controls harmless by rendering them meaningless is
+hardly the right way to use our capacity to provide</p>
+<p>controls. This must start out with the realization that con- trols
+create vision. They change both the events measured</p>
+<p>and the observer. They endow</p>
+<p>events not only with meaning but with value. And this means that the
+basic question is not “How do we control?” but</p>
+<p>“What do we measure in our control system?”</p>
+<ol start="2" type="1">
+<li>Controls need to focus on results. Business (and every other social
+institution) ex- ists to contribute to society,</li>
+</ol>
+<p>economy, and individual. In consequence results in business exist
+only on the outside—in economy, in society, and with</p>
+<p>the customer. It is the cus- tomer only who creates a “profit.”
+Everything inside a business—manufacturing, marketing, research, and so
+on—creates only costs, is only a “cost center.”</p>
+<p>In other words, the managerial area is concerned with costs alone.
+But results are en- trepreneurial.</p>
+<p>Yet we do not have adequate, let alone reliable, information
+regarding the “outside.” It is not only by far the hardest to</p>
+<p>get—to the point where no organization for the acquisi- tion and
+collection of meaningful outside information could</p>
+<p>really be set up—the job is much too big. Above all we still lack
+necessary entrepreneurial concepts. The job itself has</p>
+<p>never been thought through—at least not so far. And the century of
+patient analysis of managerial, inside phenomena,</p>
+<p>events and data, the century of patient, skillful work on the
+individual operations and tasks within the business, has no</p>
+<p>counterpart with respect to the entrepreneurial job.</p>
+<p>We can easily record and therefore quantify efficiency, that is,
+efforts. We have very few instruments to record and</p>
+<p>quantify effects, that is, the outside. But even the most effi- cient
+buggywhip manufacturer would no longer be in business. It is of little
+value to have</p>
+<p>the most efficient engineering department if it designs the wrong
+product. The Cuban sub- sidiaries of U.S. companies</p>
+<p>were by far the best run and, apparently, the most profit- able—let
+alone the least “troublesome”—of all U.S.</p>
+<p>operations in Latin America. This was, however, irrelevant to their
+expropriation. And it mattered little, I daresay, during</p>
+<p>the period of IBM’s great expansion in the fifties and sixties how
+“efficient” its operations were; its basic</p>
+<p>entrepreneurial idea was the right, the effective one.</p>
+<p>The outside, the area of results, is much less accessible than the
+inside. The central problem of the executive in the</p>
+<p>large organization is his—necessary—insulation from the outside. This
+applies to the president of the United States as</p>
+<p>well as to the president of United States Steel. What today’s
+organization therefore needs are synthetic sense</p>
+<p>organs for the outside. If modern controls are to make a
+contribution, it would be, above all, here.</p>
+<ol start="3" type="1">
+<li>Controls are needed for measurable and non-measurable events.
+Business, like any other institution, has important</li>
+</ol>
+<p>results that are incapable of being measured. Any experi- enced
+executive knows companies or industries which are</p>
+<p>bound for extinction because</p>
+<p>they cannot attract or hold able people. This, every experienced
+executive also knows, is a more important fact about</p>
+<p>a company or an industry than last year’s profit statement. Any
+logical positivist who were to tell an executive that this</p>
+<p>statement, being incapable of un- ambiguous definition, is a
+“non-statement” dealing with a “non-problem,” would be</p>
+<p>quickly—and correctly—dismissed as an ass. Yet the statement cannot
+be defined clearly let alone “quantified.” It is</p>
+<p>anything but “intangible”; it is very “tangible” indeed (as any- one
+ever having to do with such a business quickly finds</p>
+<p>out). It is just non-measurable. And measurable results will not show
+up for a decade.</p>
+<p>But business also has measurable and quantifiable results of true
+meaning and signifi- cance. These are all those that</p>
+<p>have to do with past economic performance. For these can be expressed
+in terms of the very peculiar measurement of</p>
+<p>the economic sphere, money.</p>
+<p>This does not mean that these are “tangibles.” Indeed most of the
+things we can meas- ure by money are so totally</p>
+<p>“intangible”—take depreciation for instance—that they outdo any
+Platonic Idea in that nothing corresponds to them in</p>
+<p>any reality whatever. But they are measurable.</p>
+<p>To this comes the fact that the measurable results are things that
+happened; they are in the past. There are no facts</p>
+<p>about the future. To this comes, second, the fact that the measurable
+events are primarily inside events rather than</p>
+<p>outside events. The important developments on the outside, the things
+which determine that the buggy-whip industry</p>
+<p>disappears and that IBM becomes a big business—let alone that Cuban
+subsidiaries of American companies are</p>
+<p>confiscated—are not measurable until it is too late to have con-
+trol.</p>
+<p>A balance between the measurable and the non-measurable is therefore
+a central and constant problem of</p>
+<p>management and a true decision area.</p>
+<p>Measurements which do not spell out the assumptions with respect to
+the non- measurable statements that are being</p>
+<p>made—at least as parameters or as restraints— misdirect therefore.
+They actually misinform. Yet the more we can</p>
+<p>quantify the truly measurable areas, the greater the temptation to
+put all-out emphasis on those—the greater,</p>
+<p>therefore, the danger that what looks like better controls will
+actually mean less control if not a business out of</p>
+<p>control altogether.</p>
+<p>Specifications for Controls</p>
+<p>To give the manager control, controls must satisfy seven
+specifications:</p>
+<ol type="1">
+<li>Control is a principle of economy. The less effort needed to gain
+control, the better the control design. The fewer</li>
+</ol>
+<p>controls needed, the more effective they will be. Indeed, adding more
+controls does not give better control. All it does</p>
+<p>is create confusion.</p>
+<p>The first question the manager therefore needs to ask in designing or
+in using a system of controls is “What is the mini</p>
+<p>mum information I need to know to have control?”</p>
+<p>The answer may vary for different managers. The company’s treasurer
+needs only to know the total amount invested in</p>
+<p>inventories and whether it is going up or down. The sales manager
+needs to know the half a dozen products and</p>
+<p>product lines which together account for 70 percent of inventory, and
+those in considerable detail. But total inventory</p>
+<p>amount is not of primary importance to him. And both the treasurer
+and the sales manager do not, as a rule, need</p>
+<p>complete inventory figures except once or twice a year; a fairly
+small sample should give them all the information they</p>
+<p>need in between. But the ware- house clerk needs daily figures—and in
+detail.</p>
+<p>The capacity of the computer to spew out huge masses of data does not
+make for bet- ter controls. On the contrary,</p>
+<p>what gives control is first the question “What is the smallest number
+of reports and statistics needed to understand a</p>
+<p>phenomenon and to be able to anticipate it?” And then one asks, “And
+what is the minimum of data regarding this phenomenon that gives a
+reasonably reliable picture?”</p>
+<ol start="2" type="1">
+<li>Controls must be meaningful. That means that the events to be
+measured must be significant either in themselves,</li>
+</ol>
+<p>e.g., market standing, or they must be symptoms of at least
+potentially significant developments, e.g., a sudden sharp</p>
+<p>rise in labor turnover or absenteeism.</p>
+<p>Trivia should never be measured. One has control by controlling a few
+developments</p>
+<p>which can have significant impact on performance and results. One
+loses control by trying to control the infinity of</p>
+<p>events which are marginal to performance and results.</p>
+<p>Controls should always be related to the key objectives and to the
+priorities within them, to “key activities” and to</p>
+<p>“conscience areas” (see Chapter 42). Controls should, in other words,
+be based on a company’s definition of what our</p>
+<p>business is, what it will be, and what it should be.</p>
+<p>Controls Follow Strategy</p>
+<p>Whatever is not essential to the attainment of a company’s objectives
+should be measured infrequently and only to</p>
+<p>prevent deterioration. It should be strictly controlled by “excep-
+tion,” that is, a standard should be set, measurement</p>
+<p>should be periodical and on a sample basis; and only significant
+shortfalls below the established standard should even</p>
+<p>be re- ported, let alone paid attention to.</p>
+<p>That we can quantify something is no reason for measuring it. The
+question is “Is this</p>
+<p>what a manager should consider important?” “Is this what a manager’s
+attention should be focused on?” “Is this a true</p>
+<p>statement of the basic realities of the enterprise?” “Is this the
+proper focus for control, that is, for effective direction</p>
+<p>with maximum economy of ef- fort?”</p>
+<p>If these questions are not being asked in designing controls, we will
+end up by making business essentially</p>
+<p>uncontrolled—for then we will simply have no remedy except to pro-
+liferate control information to the point where it</p>
+<p>does not register at all.</p>
+<ol start="3" type="1">
+<li>Controls have to be appropriate to the character and nature of the
+phenomena measured. This may well be the most</li>
+</ol>
+<p>important specification; yet it is least observed in the actual
+design of controls.</p>
+<p>Because controls have such an impact it is not only important that we
+select the right ones. To enable controls to give</p>
+<p>right vision and to become the ground for effective ac- tion, the
+measurement must also be appropriate. That is, it</p>
+<p>must present the events meas- ured in structurally true form. Formal
+validity is not enough.</p>
+<p>Formal complaints, that is, grievances, coming out of a work force
+are commonly re- ported as “five grievances per</p>
+<p>thousand employees per month.” This is formally valid. But is it
+structurally valid? Or is it misdirection? The impression</p>
+<p>this report conveys is, first, that grievances are distributed
+throughout the work force in a random manner. They follow,</p>
+<p>the report seems to say, a U-shaped Gaussian distribution. And
+second—a conclu- sion from the first impression—they</p>
+<p>are a minor problem, especially if we deal with five grievances per
+thousand employees per month. This, while formally</p>
+<p>valid, completely misrepresents and misinforms, let alone
+misdirects.</p>
+<p>Grievances are a social event. Physical nature knows no such
+phenomena. And social events are almost never</p>
+<p>distributed in the “normal distribution” we find in the physical
+world. The normal distribution of social events is almost</p>
+<p>always exponential—with the</p>
+<p>hyperbola the typical curve. In other words, the great majority of
+departments in the plant, employing 95 percent of</p>
+<p>the work force, normally does not have even a single grievance during
+one year. But in one department, employing</p>
+<p>only a handful of men, we have a heavy incidence of grievances—</p>
+<p>so that the “five per thousand” may well mean (and in the actual
+example from which I took these figures, did mean) a</p>
+<p>major grievance per man per year. If this department is then the
+final assembly through which all the production has to</p>
+<p>pass, and if the workers in this department go out on strike when
+their grievances are being neglected by a management which has been
+misled by its own controls, the impact can be shattering. It</p>
+<p>bankrupted the company, which is no longer in existence.</p>
+<p>Similarly, 90 percent of the volume of a business is usually
+represented by 2 to 5 per cent of the number of its</p>
+<p>products. But 90 percent of the orders by number cover, typi- cally,
+only 4 or 5 percent of the volume—but account for</p>
+<p>90 percent and more of the costs. A modern strategic bomber may have
+a million parts. But 90 percent of its cost is</p>
+<p>represented by a very small number of parts, maybe fifty or so—and so
+is 90 percent of the upkeep it needs, though,</p>
+<p>unfortunately, the 90 percent of the dollars and the 90 per- cent of
+the upkeep needs rarely comprise the same parts.</p>
+<p>Practically all the innovations in a research laboratory, no matter
+how large, come out of the work of a very small</p>
+<p>percentage of the research people. And invariably, 80 percent of a
+company’s distributors move, at best, 20 percent of</p>
+<p>its output, while 10 percent or fewer of the distributors move
+two-thirds to three-quarters of total sales.</p>
+<p>Most measurements of sales performance, whether of the entire sales
+force or of the individual salesman, report sales</p>
+<p>in total dollars. But in many businesses this is an inap- propriate
+figure. The same dollar volume of sales may mean a</p>
+<p>substantial profit, no profit at all, or a sizable loss—dependent on
+the product mix sold. An absolute sales figure</p>
+<p>not related to product mix, therefore, gives no control
+whatever—neither to the individual salesman, nor to the sales</p>
+<p>manager, nor to top management.</p>
+<p>These are elementary things. Yet few managers seem to know them. The
+traditional information systems, especially</p>
+<p>accounting, conceal appropriateness rather than highlight it. (In
+particular the allocation of overhead tends to obscure</p>
+<p>the true distribution of eco- nomic and social phenomena.)</p>
+<p>Without controls that bring out clearly what the real structure of
+events is, the manager not only lacks knowledge. He</p>
+<p>will tend to do the wrong things. For all the weight of the daily
+work pushes him toward allocating energies and</p>
+<p>resources in proportion to the num- ber of events. There is a
+constant drift toward putting energies and resources</p>
+<p>where they can have the least results, that is, on the vast number of
+phenomena which, together, ac- count for</p>
+<p>practically no effects.</p>
+<ol start="4" type="1">
+<li>Measurements have to be congruent with the events measured. Alfred
+North Whitehead (1851-1947), the</li>
+</ol>
+<p>distinguished logician and philosopher, used to warn against the
+“danger of the false concreteness.” A measurement</p>
+<p>does not become more “accurate” by being worked out to the sixth
+decimal when the phenomenon measured is at</p>
+<p>best capa- ble of being verified within a range of, say, 50 to 70
+percent (and that, presumably, with an error of plus or</p>
+<p>minus 20 percent). This is “false concreteness,” gross inaccuracy in
+reality, and misleading.</p>
+<p>It is an important piece of information that this or that phenomenon
+cannot be meas- ured with precision but can be</p>
+<p>described only within a range or as a magnitude. To say “we have 26
+percent of the market” sounds reassuringly</p>
+<p>precise. But it is usually so inac- curate a statement as to be
+virtually meaningless. What it really means, as a rule, is</p>
+<p>“we are not the dominant factor in the market, but we are not
+marginal either.” And even then the statement is no more</p>
+<p>reliable than the definition of the market which underlies it.</p>
+<p>It is up to the manager to think through what kind of measurement is
+congruent to the phenomenon it is meant to</p>
+<p>measure. He has to know when “approximate” is more accu- rate than a
+firmlooking figure worked out in great detai1. He has to know when a
+range is more accurate than even an approximate</p>
+<p>single figure. He has to know that “larger” and “smaller,” “earlier”
+and “later,” “up” and “down” are quantitative terms</p>
+<p>and often more accurate, indeed more rigorous, than any specific
+figures or range of figures.</p>
+<ol start="5" type="1">
+<li>Controls have to be timely. The time dimension of controls is very
+similar to their congruence. Again frequent</li>
+</ol>
+<p>measurements and very rapid “reporting back” do not neces- sarily
+give better control. Indeed they may frustrate</p>
+<p>control. The time dimension of con- trols has to correspond to the
+time span of the event measured.</p>
+<p>It has lately become fashionable to talk of “real time” controls,
+that is, of controls that inform instantaneously and</p>
+<p>continuously. There are events where “real time” controls are highly
+desirable. If a batch of antibiotics in the</p>
+<p>fermentation tank spoils as soon as tem- perature or pressure deviate
+from a very narrow range for more than a</p>
+<p>moment or two, “real time” monitoring on a continuous basis is
+obviously needed. But few events need such controls.</p>
+<p>And most cannot be controlled at all by them. “Real time” is the
+wrong time span for real control.</p>
+<p>Children planting a garden are so impatient, it is said, that they
+tend to pull out the radishes as soon as their leaves</p>
+<p>show, to see whether the root is forming. This is “real time”
+control—misapplied.</p>
+<p>When a new product is being first introduced, the product manager may
+want and need daily reports from the test</p>
+<p>markets, and as close to “real time” as possible. Six months later,
+when he has worked out his promotion and selling</p>
+<p>strategy, daily reports in “real time” can only lead him into
+“pulling up the radish to see whether the root is form-</p>
+<p>ing.” He then needs to think through at what periods of time and in
+what areas he has to attain what results to be able</p>
+<p>to achieve his objectives. And then he has to pay the greatest
+attention to the measurement of results at their crucial</p>
+<p>moments in time. If he, however, worries about “real time” daily
+measurements, he is almost bound to confuse himself</p>
+<p>and his associates and to muddle even the best strategy. Similarly,
+the attempt to measure re- search progress all the</p>
+<p>time is likely to confound research results. The proper time span for
+research is a fairly long one. Once every two or</p>
+<p>three years research progress and re- search results should be
+rigorously appraised. In between an experienced</p>
+<p>manager keeps in touch. He watches for any indication of major
+unexpected trouble, and, even more, for any sign of</p>
+<p>unexpected breakthroughs. But to monitor research in “real time”—as
+some research labs have been trying to do—is</p>
+<p>pulling up the radishes.</p>
+<p>However, there is also the opposite danger—that of not measuring
+often enough. It is particularly great with</p>
+<p>developments that (a) take a fairly long time to have results,
+and</p>
+<ol start="2" type="a">
+<li>have to come together at a point in the future to produce the
+desired end result.</li>
+</ol>
+<ol start="6" type="1">
+<li>Controls need to be simple. Every major New York commercial bank
+worked in the sixties on developing internal</li>
+</ol>
+<p>controls, especially of costs and of allocation of efforts. Everyone
+spent a great deal of time and money on the task</p>
+<p>and came up with voluminous control manuals. In only one of the banks
+are the manuals being used, to the best of my</p>
+<p>knowledge. When the executive in that bank was asked how he explained
+this, he did not (as his interviewer expected</p>
+<p>him to) credit a massive training program or talk about his
+“philosophy.” He said instead, “I have two teen-age</p>
+<p>daughters. They know nothing about banking and are not terribly good
+at figures. But they are bright. Whenever I had</p>
+<p>worked out an approach to controlling an activity, I took my intended
+procedure home in draft form and asked my girls</p>
+<p>to let me explain it to them. And only when I had it so simple that
+they could explain back to me what the procedure</p>
+<p>intended to accomplish and how, did I go ahead. Only then was it
+simple enough.”</p>
+<p>Complicated controls do not work. They confuse. They misdirect from
+what is to be controlled toward attention on the</p>
+<p>mechanics and methodology of the control. But if the user has to know
+how the control works before he can apply it,</p>
+<p>he has no control at all. And if he has to sit down and figure out
+what a measurement means, he has no control either.</p>
+<p>Indeed, the bank executive’s method is a pretty good one. Training
+sessions in using a new control rarely accomplish</p>
+<p>much. Ask the intended user to explain its purpose and its use. And
+when he stumbles over complexities, ambiguities,</p>
+<p>or subtleties, redesign for simplicity.</p>
+<ol start="7" type="1">
+<li></li>
+</ol>
+<p>Finally, controls must be operational. They must be focused on
+action. Action rather than information is their purpose.</p>
+<p>The action may be only study and analysis. In other words, a
+measurement may say, “What goes on we don’t</p>
+<p>understand; but something</p>
+<p>goes on that needs to be understood.” But it should never just say,
+“Here is something you might find interesting.”</p>
+<p>This then means that controls—whether reports, studies, or
+figures—must always reach the person who is capable of</p>
+<p>taking controlling action. Whether they should reach anyone else—and
+especially someone higher up—is debatable.</p>
+<p>But their prime addressee is the manager or professional who can take
+action by virtue of his position in the flow of</p>
+<p>work and in the decision structure. And this further means that the
+measurement must be in a form that is suitable for</p>
+<p>the recipient and tailored to his needs.</p>
+<p>Workers and first-line supervisors should, as said earlier (Chapter
+18) receive meas- urements and control information</p>
+<p>that enable them to direct their own immediate efforts toward results
+they can control. Instead, typically, the first-line</p>
+<p>supervisor receives each month a statement of the quality control
+results for the entire plant—and the worker</p>
+<p>re- ceives nothing.</p>
+<p>And top management usually receives the information and measurements
+operating middle managers need and can</p>
+<p>use, and little or nothing of pertinence to their own top- management
+job.</p>
+<p>The reason for this is largely a confusion between control as
+domination of others and control as rational behavior.</p>
+<p>Unless controls are means toward the latter, and this means toward
+self-control, they lead to wrong action. They are</p>
+<p>“mis-control.”</p>
+<p>The Ultimate Control of Organizations</p>
+<p>There is one more important thing to be said. There is a fundamental,
+incurable, basic limitation to controls in a social</p>
+<p>institution. This lies in the fact that a social institution is both
+a true entity and a fiction. As an entity it has purposes of</p>
+<p>its own, a performance of its own, results of its own—and survival
+and death of its own. These are the areas of which</p>
+<p>we have been speaking so far. But a social institution is comprised
+of persons, each with his own purpose, his own</p>
+<p>ambitions, his own ideas, his own needs. No matter how authoritarian
+the institution, it has to satisfy the ambitions and</p>
+<p>needs of its members, and do so in their capacity as individuals but
+through institutional rewards and punishments,</p>
+<p>incentives, and deterrents. The expression of this may be
+quantifiable—such as a raise in salary. But the system itself</p>
+<p>is not quantitative in character and cannot be quantified.</p>
+<p>Yet here is the real control of the institution, that is, the ground
+of behavior and the cause of action. People act as they</p>
+<p>are being rewarded or punished. For this, to them, rightly (as said
+earlier in Chapter 36), is the true expression of the</p>
+<p>values of the institution and of its true, as against its professed,
+purpose and role.</p>
+<p>A system of controls which is not in conformity with this true, this
+only effective, this</p>
+<p>ultimate control of the organization which lies in its people
+decisions will therefore at best be ineffectual. At worst it</p>
+<p>will cause never-ending conflict and will push the organization out
+of control.</p>
+<p>In designing controls for an organization one has to understand and
+analyze the actual control of the business, its</p>
+<p>people decisions. Otherwise one designs a system of controls</p>
+<p>which does not lead to control. One has to realize that even the most
+powerful “instrument board” complete with</p>
+<p>computers, operations research, and simulation, is secondary to the
+invisible, qualitative control of any human</p>
+<p>organization, its systems of rewards and pun- ishments, of values and
+taboos.</p>
+<h2 id="september">23 SEPTEMBER</h2>
+<h3 id="controls-control-and-management">Controls, Control, and
+Management</h3>
+<p>The probability of an event’s being meaningful</p>
+<p>is a much more important datum than the event itself.</p>
+<p>We are rapidly acquiring great capacity to design controls in
+business</p>
+<p>and in other social institutions, based on a great improvement in
+techniques,</p>
+<p>especially the ability to process and analyze large masses of data
+very fast.</p>
+<p>What does this mean for “control”? Especially, what are the
+requirements for</p>
+<p>these greatly improved controls to give better control to management?
+For, in</p>
+<p>the task of a manager, controls are purely a means to an end; the end
+is</p>
+<p>control. If we deal with a human being in a social insti-tution,
+controls must</p>
+<p>become personal motivation that leads to control. A translation is
+required</p>
+<p>before the information yielded by the controls can become grounds for
+action</p>
+<p>—the translation of one kind of information into another, which we
+call</p>
+<p>perception. In the social institution there is a second complexity, a
+second</p>
+<p>“uncertainty principle.” It is almost impossi-ble to prefigure the
+responses</p>
+<p>appropriate to a certain event in a social situ-</p>
+<p>ation.</p>
+<p>But a control-reading “profits are falling” does not indicate, with
+any</p>
+<p>de-gree of probability, the response “raise prices,” let alone by how
+much;</p>
+<p>the control-reading “sales are falling” does not indicate the
+response “cut</p>
+<p>prices,” and so on. The event itself may not even be meaningful. But
+even</p>
+<p>if it is, it is by no means certain what it means.</p>
+<h3 id="action-point-1">ACTION POINT:</h3>
+<p>Review each of the performance measures you use to</p>
+<p>manage your organization. Eliminate each of those measures that is
+not</p>
+<p>meaningful to the results of the organization.</p>
+<h4 id="management-tasks-responsibilities-practices">Management: Tasks,
+Responsibilities, Practices</h4>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="第三同读" />
+  <title>德鲁克日志</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">德鲁克日志</h1>
+<p class="author">第三同读</p>
+</header>
+<h2 id="透过金庸读懂德鲁克">透过金庸读懂德鲁克</h2>
+<p>书友会应该是什么样子的</p>
+<p>一</p>
+<p>北京书友会，原来叫做“吴晓波北京书友会”，是一个半自发性的社群组织，由喜欢财经的书友汇集而</p>
+<p>成。慢慢地，这些同学到一些后，开始了各种玩，也就有了这么一群人。</p>
+<p>书友会是班长负责制，班长之下还有班委，如活动委员、福利委员。班长的主要职责有两个，一方面</p>
+<p>是和吴晓波频道对接，执行频道安排的一些商业的或者非商业的任务，一方面根据自己的理解和想</p>
+<p>法，对书友会有一个整体的规划，进而维持书友会的正常运转。</p>
+<p>书友会并不是一个商业机构，甚至也不是一个有明确界限的组织。在吴晓波频道会员推出之前，书友</p>
+<p>会的成员是没有任何标识的：QQ群有6000多人，微信群有2000多人，这就是当时所有的成员。</p>
+<p>当时的活动都是班委组织的，偶尔一次的线下分析《大败局》，讨论《从0到1》等。而所谓的班委组</p>
+<p>织，其实是班长组织，或者说是整个班委团队组织。</p>
+<p>所以，当时活动非常少，一个月最多也就一次。</p>
+<p>对于几千人的群体来说，这个活动频次是不对等的。</p>
+<p>二</p>
+<p>今天有一个书友和我说：“龙哥，我想组织读《魔鬼经济学》，应该如何组织呢？这套书太厚了，我自</p>
+<p>己读不下去了”。</p>
+<p>我说，你写一个组织的想法，然后发出来就好了。</p>
+<p>其实，在很久以前，书友会的班委就鼓励普通书友自发地组织活动。先是任何人只要提出合理的活</p>
+<p>动，班委们都会编好活动的报名文章发出来。</p>
+<p>再后来，在书友会之下成立了一些个人名次的小班级，如“战略导弹班”等。这些小班书友们可以自由</p>
+<p>加入。有的班也有几十人了。</p>
+<p>这样的班级我记得有七八个，各个班级也都做过一些活动，这些活动不再有班委发布，而是有“小班班</p>
+<p>长”在自己班级群里发布。我记得我参加过周辉班的好几次活动，也着实结识了一些不错的朋友，如王</p>
+<p>永斌、曲丽莉等等。</p>
+<p>三</p>
+<p>书友会一直有各种兴趣小组，户外小组是第一个成立的，是我成立的。当时做了比较详细的规划。加</p>
+<p>入户外小组的人需要交纳100元的费用并且填写一个复杂的表格。加入户外小组的书友，可以随时参加</p>
+<p>各种户外的活动，我记得第一次去的是香山好汉坡。</p>
+<p>成立没多久，户外小组就交给其他人组织了。每次活动的收入也就归活动的组织者了。</p>
+<p>还有就是金融小组、红酒小组、宏观经济小组、历史小组、美食小组（一度被称为厨娘小组）等。这</p>
+<p>些小组大多有专门的发起人和负责人，他们需要收取加入的费用，这个费用归发起人自己，并不需要</p>
+<p>分给班委。</p>
+<p>只是他们组织活动需要受到班委的约束，而且需要对“基础会员”提供会员同等的福利。</p>
+<p>四</p>
+<p>基础会员是书友会为了做标识提供的一种身份。基础会员实行了一年，也就是我做班长时的那一年。</p>
+<p>基础会员需要交纳一个相对较多的年费（980元），然后享受
+一系列的身份标识和福利。</p>
+<p>各个小组的设计活动时，也需要给基础会员提供同等的会员价格或者条件。</p>
+<p>五</p>
+<p>这几年来，书友会就是这么坐着尝试：让更多人发起活动，让活动可以更容易地发起，让更多人可以</p>
+<p>方便地参与活动。</p>
+<p>到了2018年，书友会提供了统一的活动报名接口，任何人都可以发起活动，在统一的报名处进行发</p>
+<p>布。</p>
+<p>而各个活动还是由普通书友发起，如窦鹏旭讲三体，如隗洁发起的PPT小组，如我发起的德鲁克小组。</p>
+<p>这些活动，大多是非商业的，或者用一个资格审核，或者用一定的费用（几十块钱）设为门槛。</p>
+<p>有一次，和现任班委聊天，我说，大家应该每个人都用自己的兴趣做一个兴趣小组，然后集中在自己</p>
+<p>的兴趣小组里，把自己的兴趣和内容做到最好。</p>
+<p>至于书友会整体，则由每年轮换的年轻人，新人去操心。</p>
+<p>六</p>
+<p>在这种模式下，每一个个体，每一个有些许知识生产能力的个体都根据自己的能力和兴趣组建一个兴</p>
+<p>趣小组，或者收费，或者免费。只是大家共同在书友会这个牌子下。</p>
+<p>而作为班委的那个班长小团体，则负责制定一些和大家都相关的规则，当然，这些规则应该是鼓励而</p>
+<p>不是限制各个兴趣个人或许小组的活动。鼓励大家可以通过商业或者非商业的行为在这个社群里获得</p>
+<p>各自的需要。</p>
+<p>书友会整体肯定是非商业的，而书友会下面的兴趣小组，却可以根据实际情况做一些商业的行为。只</p>
+<p>要不违反一些基本的原则就好，比如诚信，互利等。</p>
+<p>七</p>
+<p>我觉得，这应该是让每个人都最舒服的架构了，也可能是一个最佳的非商业化社群的架构了。一个指</p>
+<p>定规则，发现人才的班委团队，加上几个，几十个有内容生产能力或者活动组织能力的个体发起的兴</p>
+<p>趣小组。这样的相互扶持，才可以走的长远。才更接近生活。</p>
+<p>毕竟，社群只是生活本身。</p>
+<h2 id="大纲">大纲</h2>
+<h2 id="百字摘要">百字摘要</h2>
+<h2 id="金庸案例">金庸案例</h2>
+<h2 id="时间消耗">时间消耗</h2>
+<h2 id="阅读理解">阅读理解：</h2>
+<h2 id="大纲-1">大纲：</h2>
+<h2 id="撰写">撰写：</h2>
+<h2 id="录音">录音</h2>
+<h2 id="一小时运动">一小时运动</h2>
+<h2 id="英文原文">英文原文</h2>
+<p>20 NOVEMBER</p>
+<p>The Federal Principle</p>
+<p>Federal：</p>
+<p>having a system of government in which the individual states of a
+country have control over their own affairs, but are</p>
+<p>controlled by a central government for national decisions, etc.</p>
+<p>联邦制的</p>
+<p>Federalism relieves top management from operating duties and sets it
+free to devote itself to its</p>
+<p>proper functions.</p>
+<p>Federalism： 联邦制；联邦主义</p>
+<p>relieves：</p>
+<ol start="14" type="a">
+<li></li>
+</ol>
+<p>unionism</p>
+<p>V-T If something relieves an unpleasant feeling or situation, it
+makes it less unpleasant or causes it to disappear</p>
+<p>completely.</p>
+<p>缓解; 减轻; 解除</p>
+<p>What the enterprise needs is a principle that gives both the center
+and the parts genuine</p>
+<p>managerial functions and powers.</p>
+<p>genuine：</p>
+<p>真的；名副其实的</p>
+<p>managerial：</p>
+<p>经理的；管理的</p>
+<p>real; exactly what it appears to be; not artificial</p>
+<p>[ usually before noun ] connected with the work of a manager</p>
+<p>This principle is federalism, in which the whole of the enterprise is
+conceived as made up of</p>
+<p>autonomous units.</p>
+<p>conceived：</p>
+<p>认为</p>
+<p>autonomous：</p>
+<p>国家、地区、组织</p>
+<p>自治</p>
+<p>V-T/V-I If you conceive something as a particular thing, you consider
+it to be that thing.</p>
+<p>的；有自治权的</p>
+<p>( of a country, a region or an organization</p>
+<p>) able to govern itself or control its own affairs</p>
+<p>The federal enterprise and all its units are in the same
+business.</p>
+<p>The same economic factors determine the future of the whole as well
+as of all units; the same</p>
+<p>basic decisions have to be made for all of them; the same kind and
+type of executive is needed.</p>
+<p>factors：</p>
+<p>因素</p>
+<p>executive：</p>
+<p>（统称公司或机构的）行政领导，领导层</p>
+<p>N-COUNT A factor is one of the things that affects an event,
+decision, or situation.</p>
+<p>[ C+sing./pl.v. ] a group of people who run a company or an
+organization</p>
+<p>Hence the whole requires a unified management in charge of the basic
+functions: the decision</p>
+<p>what business the enterprise is in, the organization of the human
+resources, and the</p>
+<p>selection, training, and testing of future leaders.</p>
+<p>Hence：</p>
+<p>因此；由此</p>
+<p>( formal ) for this reason</p>
+<p>业务范围的确定，人力资源，以及领导的培养。</p>
+<p>广泛的自主权，自己未来的目标</p>
+<p>At the same time, each unit is a business by itself.</p>
+<p>It produces its own products for a distinct market.</p>
+<p>distinct ：</p>
+<p>清晰的；清楚的；明白的；明显的</p>
+<p>easily or clearly heard, seen, felt, etc.</p>
+<p>Each unit must, therefore, have wide autonomy within limits set by
+the general decisions of the</p>
+<p>management of the whole.</p>
+<p>Each unit has to have its own management.</p>
+<p>The local management will be primarily an operating management; it
+will be concerned mainly with</p>
+<p>the present and immediate future rather than with basic policy.</p>
+<p>primarily： 主要地；根本地</p>
+<p>mainly</p>
+<p>But within a limited scope it will have also to discharge real
+top-management functions.</p>
+<p>discharge：</p>
+<p>释放</p>
+<p>[ VN ] [ often passive ] to allow sb to leave prison or court</p>
+<h3 id="action-point">ACTION POINT:</h3>
+<p>Make maximum use of the federal principle.</p>
+<p>The New Society</p>
+<h2 id="november">20 NOVEMBER</h2>
+<h3 id="the-federal-principle">The Federal Principle</h3>
+<p>Federalism relieves top management from operating duties</p>
+<p>and sets it free to devote itself to its proper functions.</p>
+<p>What the enterprise needs is a principle that gives both the center
+and the</p>
+<p>parts genuine managerial functions and powers. This principle is
+federalism,</p>
+<p>in which the whole of the enterprise is conceived as made up</p>
+<p>of autonomous units. The federal enterprise and all its units are in
+the</p>
+<p>same business. The same economic factors determine the future of
+the</p>
+<p>whole as well as of all units; the same basic decisions have to be
+made for</p>
+<p>all of them; the same kind and type of executive is needed. Hence
+the</p>
+<p>whole requires a unified management in charge of the basic functions:
+the</p>
+<p>decision what business the enterprise is in, the organization of the
+human</p>
+<p>resources, and the selection, training, and testing of future
+leaders.</p>
+<p>At the same time, each unit is a business by itself. It produces its
+own</p>
+<p>products for a distinct market. Each unit must, therefore, have
+wide</p>
+<p>auton-omy within limits set by the general decisions of the
+management</p>
+<p>of the whole. Each unit has to have its own management. The local</p>
+<p>management will be primarily an operating management; it will be</p>
+<p>concerned mainly with the present and immediate future rather than
+with</p>
+<p>basic policy. But within a limited scope it will have also to
+discharge real</p>
+<p>top-management functions.</p>
+<h3 id="action-point-1">ACTION POINT:</h3>
+<p>Make maximum use of the federal principle.</p>
+<h4 id="the-new-society">The New Society</h4>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

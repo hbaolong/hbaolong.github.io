@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="第三同读" />
+  <title>德鲁克日志</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">德鲁克日志</h1>
+<p class="author">第三同读</p>
+</header>
+<h2 id="透过金庸读懂德鲁克">透过金庸读懂德鲁克</h2>
+<p>你行你上呀！</p>
+<p>最近看到一段话，这段话听起来很有道理。</p>
+<p>「如果你觉得你的祖国不好，你就去建设它；如果你觉得政府不好，你就去考公务员去做官；如果你</p>
+<p>觉得人民没素质，就从你开始做一个高素质的公民；如果你觉得同胞愚昧无知，就从你开始学习并改</p>
+<p>变身边的人，她有缺点，我们一起修正，而不是一昧的谩骂，抱怨，逃离。</p>
+<p>横眉冷对千夫指，俯首甘为孺子牛。你所站立的地方，正是你的中国；你怎么样，中国便怎么样；你</p>
+<p>是什么，中国便是什么；你若光明，中国便不黑暗，愿中国青年都摆脱冷气，只是向上走，不必听自</p>
+<p>暴自弃者流的话。能做事的做事，能发声的发声。有一分热，发一分光，就令萤火一般，也可以在黑</p>
+<p>暗里发一点光，不必等候炬火。」</p>
+<p>确实，我们都是”活的“人，这就意味着，只要我们愿意，我们就可以做任何事情。当然也就意味着我</p>
+<p>们可以改变我们认为不好的地方。不管是我们自己的家，还是我们的小区，还是我们城市，甚至我们</p>
+<p>国家。</p>
+<p>只要我们活着。</p>
+<p>这个看起来好像很有道理。</p>
+<p>其实呢？</p>
+<p>首先，我们这个社会是一个整体，既然是一个整体，那就是说，我们是共同来组成和运行这个社会。</p>
+<p>这也就意味着，我们需要分工，因为任何个人，都无法来”控制“或者”运行“这个社会。</p>
+<p>比如，你是公务员，而我是程序员，他是救火队员，还有一个她是商店售货员。在我们自己岗位上，</p>
+<p>我们都是主角。</p>
+<p>你是公务员，那么你就好好执行政府的各种规则，我是程序员，那我就好好写代码换钱，他们救火队</p>
+<p>员，一旦有老百姓需要的紧急情况，他就冲上去；她是售货员，她就好好给客户讲清楚东西，以方便</p>
+<p>客户选购。</p>
+<p>在自己的主场，我们都是主角。那么在别人的主场呢？我们就是用户了。</p>
+<p>我去政府部门办业务，你就按规章制度给我办理，别整天让我证明”我是我“。我是程序员，别人要对</p>
+<p>接我的程序时，我就老老实实告诉别人接口，提供好服务；我去买衣服，看着琳琅满目的衣服，问你</p>
+<p>的话，你就态度友好地给我解答一下。</p>
+<p>这时，我们都是用户，这时我们需要给我们提供服务的人要提供高品质的服务。</p>
+<p>其实，除了这两种角色外，我们还有一种角色，就是旁观者。我们既不是主场，也不是客户。我们只</p>
+<p>是在看。</p>
+<p>我们在看那个卖衣服的在欺骗那个买衣服的，我们再看政府的工作人员不断让老百姓跑来跑去就是办</p>
+<p>不成事，我们看到公交车的乘客去抢司机的方向盘；我们看到有些自媒体在胡说八道。</p>
+<p>在这种时候，我们既不是主角，也不少客户，可是，我们看到了。</p>
+<p>这时，我们应该怎么办？</p>
+<p>公务员做的不好，我就去考公务员替了他？那我的工作还做不做？</p>
+<p>卖衣服的小姑娘脾气不好，我就去替了她？那我的工作还做不做？</p>
+<p>自媒体大号整天胡说八道，我就去替了他？我倒是想，你帮我呀？</p>
+<p>对于现在社会，对于社会中的任何一个群体，管理有一个基本的要素，就是发挥每一个的优势，激发</p>
+<p>每个人最大的善意，通过这些优势和善意形成我们最好的生存环境。</p>
+<p>在这个环境中，每个人都在各个领域充当主角，也在无时无刻充当客户。其实，更多时候，我们是在</p>
+<p>充当”旁观者“。</p>
+<p>你不要小看旁观者这个角色。这其实才是社会、组织进步的主要因素，因为他们既没有主角的固定视</p>
+<p>角，也没有客户的心理。他们是可以相对客观地分析。不对，不是他们，是我们。</p>
+<p>所以，当有人告诉你某些地方做的有问题时，不要说：“你来呀！”，而是要仔细听他的建议。因为，</p>
+<p>他在履行“旁观者”的角色。</p>
+<p>而你，也是旁观者。</p>
+<h2 id="大纲">大纲</h2>
+<h2 id="百字摘要">百字摘要</h2>
+<h2 id="金庸案例">金庸案例</h2>
+<h2 id="时间消耗">时间消耗</h2>
+<h2 id="阅读理解">阅读理解：</h2>
+<h2 id="大纲-1">大纲：</h2>
+<h2 id="撰写">撰写：</h2>
+<h2 id="录音">录音</h2>
+<p>12 FEBRUARY R… .m4a</p>
+<p>3.87MB</p>
+<h2 id="一小时运动">一小时运动</h2>
+<h2 id="英文原文">英文原文</h2>
+<p>12 FEBRUARY</p>
+<p>Role of the Bystander</p>
+<p>Bystander：</p>
+<p>a person who sees sth that is happening but is not involved SYN
+onlooker</p>
+<p>旁观者</p>
+<p>. . . the bystander sees things neither actor nor audience
+notices.</p>
+<p>Bystanders have no history of their own.</p>
+<p>They are on the stage but are not part of the action.</p>
+<p>They are not even audience.</p>
+<p>The fortunes of the play and every actor in it depend on the
+audience, whereas the reaction of</p>
+<p>the bystander has no effect except on himself.</p>
+<p>fortunes ：</p>
+<p>whereas：</p>
+<p>（用以比较或对比两个事实）然而，但是，尽管</p>
+<p>reaction：</p>
+<p>反应；回应</p>
+<p>used to compare or contrast two facts</p>
+<p>[ C U ] ~ (to sb/sth) what you do, say or think as a result of sth
+that has happened</p>
+<p>But standing in the wings— much like the fireman in the theater—the
+bystander sees things</p>
+<p>neither actor nor audience notices.</p>
+<p>wings：</p>
+<p>建筑的 侧翼</p>
+<p>fireman：</p>
+<p>消防队员</p>
+<p>theater：n. 电影院，戏院，剧场；戏剧；手术室</p>
+<p>N-COUNT A wing of a building is a part of it that sticks out from the
+main part. (</p>
+<p>)</p>
+<p>a person, usually a man, whose job is to put out fires</p>
+<p>Above all, he sees differently from the way actors or audience
+see.</p>
+<p>By standers reflect, and reflection is a prism rather than a mirror;
+it refracts.</p>
+<p>reflect：</p>
+<p>[ VN ] [ usually passive ] ~ sb/sth (in sth) to show the image of
+sb/sth on the surface of sth such as a mirror, water or glass</p>
+<p>反映；映出（影像）</p>
+<p>prism：</p>
+<p>a transparent glass or plastic object, often with ends in the shape
+of a triangle, which separates light that passes through it</p>
+<p>into the colours of the rainbow</p>
+<p>refract：</p>
+<p>棱镜；三棱镜</p>
+<p>物 ) ( of water, air, glass, etc. 水、空气、玻璃等 ) to make light
+change direction when it goes through at an</p>
+<p>angle 使（光线）折射；使产生折射</p>
+<p>VN ] ( physics</p>
+<p>To watch and think for yourself is highly commendable.</p>
+<p>commendable：</p>
+<p>值得赞扬（或嘉许）的</p>
+<p>( formal ) deserving praise and approval</p>
+<p>But “to shock people by shouting strange views from the rooftops is
+not.” The admonition is well</p>
+<p>taken. But I have rarely heeded it.</p>
+<p>rooftops：</p>
+<p>屋顶</p>
+<p>shock：</p>
+<p>admonition：</p>
+<p>美‑ ‑</p>
+<p>N-COUNT A rooftop is the outside part of the roof of a building.</p>
+<p>( also less frequent ad·mon·ish·ment /ədˈmɒnɪʃmənt/</p>
+<p>behaviour</p>
+<p>heed：</p>
+<p>警告；告诫</p>
+<p>[ VN ] ( formal ) to pay careful attention to sb’s advice or
+warning</p>
+<p>/ ˈmɑːn / ) [ C U ] ( formal ) a warning to sb about their</p>
+<p>留心，注意，听从（劝告或警告）</p>
+<h3 id="action-point">ACTION POINT:</h3>
+<p>Be a bystander to figure out what has to be done in your
+organization.</p>
+<p>教练</p>
+<p>Then act, but know you are running the risk of shocking people.</p>
+<p>Adventures of a Bystander</p>
+<h2 id="february">12 FEBRUARY</h2>
+<h3 id="role-of-the-bystander">Role of the Bystander</h3>
+<p>. . . the bystander sees things neither actor nor audience
+notices.</p>
+<p>Bystanders have no history of their own. They are on the stage but
+are not</p>
+<p>part of the action. They are not even audience. The fortunes of the
+play and</p>
+<p>every actor in it depend on the audience, whereas the reaction of
+the</p>
+<p>bystander has no effect except on himself. But standing in the wings—
+much</p>
+<p>like the fireman in the theater—the bystander sees things neither
+actor nor</p>
+<p>audience notices. Above all, he sees differently from the way ac-tors
+or</p>
+<p>audience see. Bystanders reflect, and reflection is a prism
+rather</p>
+<p>than a mirror; it refracts.</p>
+<p>To watch and think for yourself is highly commendable. But “to
+shock</p>
+<p>people by shouting strange views from the rooftops is not.” The</p>
+<p>admonition is well taken. But I have rarely heeded it.</p>
+<h3 id="action-point-1">ACTION POINT:</h3>
+<p>Be a bystander to figure out what has to be done in your</p>
+<p>organization. Then act, but know you are running the risk of
+shocking</p>
+<p>people.</p>
+<h4 id="adventures-of-a-bystander">Adventures of a Bystander</h4>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

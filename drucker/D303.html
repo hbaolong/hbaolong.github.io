@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="第三同读" />
+  <title>德鲁克日志</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">德鲁克日志</h1>
+<p class="author">第三同读</p>
+</header>
+<h2 id="透过金庸读懂德鲁克">透过金庸读懂德鲁克</h2>
+<p>颜回穷么？</p>
+<p>我们有个论语群，论语群里每天讨论论语相关的话题。前几天大家讨论了一个话题：颜回穷么？</p>
+<p>颜回在儒家的地位非常高，被称为复圣。十三岁拜孔子为师，终生师事之，是孔子最得意的门生。孔</p>
+<p>子对颜回称赞最多，赞其好学仁人。</p>
+<p>孔子的有弟子三千，其中有七十二人被称为贤人。而颜回是七十二贤人之首。</p>
+<p>大家对颜回的主要记忆有两个，一是早亡，一是贫穷。</p>
+<p>颜回生于公元前521年，死于公元前481年，享年40岁。这个年龄在现在肯定算早亡，在春秋末期呢？</p>
+<p>肯定不能算早亡，只是和孔子比早了点，孔子活了73岁。</p>
+<p>那么，颜回穷么？咱们看看论语中对颜回的记载。</p>
+<p>《论语·雍也第六》:“一箪食，一瓢饮，在陋巷，人不堪其忧，回也不改其乐
+。贤哉回也!”</p>
+<p>这是孔子对颜回的描述，描述的是颜回吃的很简单，喝的也也很简单，住的也简单，在这种其他人没</p>
+<p>法接受的环境下，颜回还是很开心。</p>
+<p>我的理解，这里只是孔子说了颜回对物质生活要求比较低。而且在这种比较低的环境下，颜回很快</p>
+<p>乐，也就是说颜回
+“甘贫乐道”。我认为，孔子强调的是颜回的“乐”，而不是贫。</p>
+<p>那么颜回都有哪些资产呢？庄子中记载了孔子和颜回的一次对话：</p>
+<p>孔子谓颜回曰：“回，来！家贫居卑，胡不仕乎？”</p>
+<p>颜回对曰：“不愿仕。回有郭外之田五十亩，足以给飦粥；郭内之田四十亩，足以为丝麻；鼓琴足以自</p>
+<p>娱，所学夫子之道者足以自乐也。回不愿仕。”</p>
+<p>孔子愀然变容曰：“善哉回之意！丘闻之：’知足者不以利自累也，审自得者失之而不惧，行修于内者无</p>
+<p>位而不怍。’丘诵之久矣，今于回而后见之，是丘之得也。”</p>
+<p>孔子问颜回：“回呀，你这么穷，为啥不出去做官呢？”</p>
+<p>颜回说：“我不愿意做官，我在城外有50亩地，足够吃了；我在城里还有40亩地，也足够织麻布做衣</p>
+<p>服了。我自己弹琴，就可以娱乐，我跟着老师学习道理，也就可以很快乐了。所以，我不愿意做官。”</p>
+<p>是呀，颜回说的很清楚，颜回没必要做官（来赚钱养活自己），城里城外都有地。还会弹琴自娱自</p>
+<p>乐，还可以跟着当世最好的老师（孔子）学习。这些已经是完美的生活了。所以，颜回不需要做官。</p>
+<p>从这个对话可以看出，颜回是不缺钱的。</p>
+<p>其实，这里还有一个很重要的细节，就是颜回是孔子的弟子。你可以要知道，孔子的主要职业是老</p>
+<p>师，而且这个老师是收学费的，而且不便宜：“自行束脩以上，吾未尝无诲焉。”（你只要送我10条肉</p>
+<p>干，我就教你）</p>
+<p>颜回十三岁就跟着孔子学习，终身师事之，这二十多年，也不少条肉干呢。</p>
+<p>要知道，在古代，读书可不是穷人可以做到的。</p>
+<p>所以说，颜回或许并不富，但绝不穷。只是颜回甘贫而已，这也是孔子赞扬颜回的地方。</p>
+<p>咱们换一个角度看，孔子收学生10条肉干，3000个学生，就是30000条肉干，就算一天吃一条肉干，</p>
+<p>也可以吃30000天。也就是可以吃82年。孔子享寿73岁，所以，孔子也是不穷的。</p>
+<p>我一个朋友说过一句话：“你说没钱，是没有买房子的钱，而我说没钱，是没有吃饭的钱。”</p>
+<p>这才是本质。</p>
+<p>那么，孔子为什么要收学费呢？作为教育家，难道不应该尽可能为更多人提供教育机会么？为什么要</p>
+<p>通过学费来过滤掉那些真正的穷学生呢？</p>
+<p>这就是一个很重要的观点了。提升普通人的学识水平，这是一个很好的事情，这样的好事情，这样的</p>
+<p>好事情广而告之，会有人把孩子送来么？当然会，却不会多。这会有几个问题。</p>
+<p>首先，是没钱，孔子把时间用在教书上，就没有时间去种地去做其他的事情了。所以，孔子需要一些</p>
+<p>收入来维持生活。</p>
+<p>其次，如果孔子不收学费，大家则会怀疑孔子的目的：要找免费劳力？要拉你入邪教？要你“依师”？</p>
+<p>所以，还是收费来的实在。</p>
+<p>当然，如果你确实想学，而确实没钱，我才孔子也肯定教的。毕竟大部分人教学费已经把孔子的生活</p>
+<p>费问题解决了。</p>
+<p>所以，收学费才是孔子收到3000个学生的一个主要驱动力。</p>
+<h2 id="大纲">大纲</h2>
+<h2 id="百字摘要">百字摘要</h2>
+<h2 id="金庸案例">金庸案例</h2>
+<h2 id="时间消耗">时间消耗</h2>
+<h2 id="阅读理解">阅读理解：</h2>
+<h2 id="大纲-1">大纲：</h2>
+<h2 id="撰写">撰写：</h2>
+<h2 id="录音">录音</h2>
+<h2 id="一小时运动">一小时运动</h2>
+<h2 id="英文原文">英文原文</h2>
+<p>29 OCTOBER</p>
+<p>Converting Good Intentions into Results</p>
+<p>“It’s much easier to sell the Brooklyn Bridge than to give it
+away.”</p>
+<p>The nonprofit institution is not merely delivering a service.</p>
+<p>It wants the end user to be not a user but a doer.</p>
+<p>It uses a service to bring about a change in human beings.</p>
+<p>It attempts to become a part of the recipient rather than merely a
+supplier.</p>
+<p>recipient：( formal ) a person who receives sth 受方；接受者</p>
+<p>supplier：a person or company that supplies goods
+供应者；供货商；供货方</p>
+<p>Nonprofit institutions used to think they didn’t need marketing.</p>
+<p>But, as a famous old saying by a great nineteenth-century con man has
+it, “It’s much easier to sell</p>
+<p>the Brooklyn Bridge than to give it away.”</p>
+<p>con： [ sing. ] ( also BrE also formal ˈconfidence trick ) ( also
+NAmE also formalˈconfidence game ) a trick; an act of cheating</p>
+<p>sb 诡计；骗局；欺骗</p>
+<p>Nobody trusts you if you offer something for free.</p>
+<p>You need to market even the most beneficial service.</p>
+<p>But the marketing you do in the nonprofit sector is quite different
+from selling.</p>
+<p>It’s more a matter of looking at your service from the recipient’s
+point of view.</p>
+<p>You have to know what to sell, to whom to sell, and when to sell.</p>
+<h3 id="action-point">ACTION POINT:</h3>
+<p>The mission of the Salvation Army is to make citizens out of the
+rejected.</p>
+<p>Salvation：( in Christianity 基督教 ) the state of being saved from
+the power of evil 得救；救恩；救世</p>
+<p>rejected：V-T If you reject something such as a proposal, a request,
+or an offer, you do not accept it or you do not agree to</p>
+<p>it. 拒绝; 不同意</p>
+<p>How does that service look from the recipient’s point of view?</p>
+<p>How should the Salvation Army market that service?</p>
+<p>Managing the Non-Profit Organization</p>
+<p>【原书原文】</p>
+<p>Converting Good</p>
+<p>Intentions into Results</p>
+<p>The non-profit institution is not merely delivering a service. It
+wants the end user to be not a user but a doer. It uses a</p>
+<p>service to bring about change in a human being. In that sense a
+school, for instance, is quite different from Procter &amp;</p>
+<p>Gamble. It creates habits, vision, commitment, knowledge. It attempts
+to become a part of the recipient rather than</p>
+<p>merely a supplier. Until this has happened, the non-profit
+institution has had no results; it has only had good</p>
+<p>intentions.</p>
+<p>Napoleon said that there were three things needed to fight a war. The
+first is money* The second is money. And the</p>
+<p>third is money. That may be true for war, but it’s not true for the
+non-profit organization. There you need four things.</p>
+<p>You need a plan. You need marketing. You need people. And you need
+money.</p>
+<p>The plan we have just talked about, in the first part. People we will
+be talking about a little later, in this book’s fourth</p>
+<p>and fifth parts. In this part we talk about the strategies that
+convert the plan into results. How do we get our service to</p>
+<p>the “customer/ that is, to the community we exist to serve? How do we
+market it? And how do we get the money we</p>
+<p>need to provide the service?</p>
+<p>Non-profit institutions that do well used to think they didn’t need
+marketing. But, as a famous old saying by a great</p>
+<p>nineteenth-century con man has it, ’It much easier to sell the
+Brooklyn Bridge than to give it away/ Nobody trusts you if</p>
+<p>you offer something for free. You need to market even the most
+beneficial service. But the marketing you do in the</p>
+<p>non-profit sector is quite different from selling. Ifs more a matter
+of knowing your market - call it market research - of</p>
+<p>segmenting your market, of looking at your service from the
+recipient’s point of view. You have to know what to sell, to</p>
+<p>whom to sell, and when to sell. Although marketing for a non-profit
+uses many of the same tenns and even many of</p>
+<p>the same tools as a business, it is really quite different because
+the nonprofit is selling something intangible.</p>
+<p>Something that you transform into a value for the customer. The sick
+patient in the hospital doesn’t have to be sold.</p>
+<p>You are not marketing the sickness of that patient to the physician,
+who is the non-profit hospital’s main customer. You</p>
+<p>are marketing what you can do to help the physician in his or her
+practice. That’s a concept 一 an abstraction 一 and to</p>
+<p>sell a concept is different from selling a product.</p>
+<p>To run a non-profit effectively, the marketing must be built into the
+design of the service. This is very much a top</p>
+<p>management job, although, as in every other area, you need a lot of
+input from your people, from the market, and from</p>
+<p>research. A big national organization, such as the American Cancer
+Society, for instance, probably has the most</p>
+<p>elaborate market research, using detailed census data for
+fund-raising, a physician’s advisory committee to work</p>
+<p>directly with physicians who are in many ways its first market, and
+so on. The American Cancer Society doesn’t design</p>
+<p>a service and then start peddling it</p>
+<p>That uniquely American invention, the Community Chest 一 or the
+United Way, as it is often called 一 is in many ways a</p>
+<p>response to the market. People got awfully tired of being hit for a
+donation by twenty- nine different organizations and</p>
+<p>became suspicious that this meant exceedingly high collection costs,
+with most of the money going into doorbell</p>
+<p>ringing rather than feeding the hungry, The design of the United Way
+hasn’t changed much over the years: the</p>
+<p>employers of the community are its collection agents. But the United
+Way has to keep its marketing up to date, has to</p>
+<p>adjust to the changing business population, has to know which
+employers to go to and which local societies to bring</p>
+<p>onto its board, so that it can work effectively with industry. It has
+to understand the changing structure of employment</p>
+<p>to design its most effective appeal. The non-profits who don’t do
+that, who think they can rely on high-pressure</p>
+<p>selling, just don’t do very well.</p>
+<p>An important point to remember, incidentally, in designing a
+nonprofit’s service and marketing is to focus only on those</p>
+<p>things you are competent to do. If you run a hospital, you’d better
+not try to do what you are not competent to do. For</p>
+<p>clinical neurology, you need a certain critical mass 一 forty beds,
+fifty beds - to do a decent job. If you are the only</p>
+<p>hospital in Silver Fish, South Dakota, and there’s not another
+hospital around for one hundred miles, you have to do</p>
+<p>what has to be done. Even there, let me say, you probably would do
+better to fly that neurology patient by helicopter to</p>
+<p>the nearest medical centre 一 not for financial but for competence
+reasons. You know the general advice is, don’t go to</p>
+<p>a hospital to have a heart by-pass if they don’t do two or three
+hundred bypasses a year. You have to do these very</p>
+<p>demanding technical things again and again 一 and again. The same is
+true of colleges. In fact, a great disease of the</p>
+<p>liberal arts college is that it thinks it can do everything. Don’t
+put your scarce resources where you aren’t going to have</p>
+<p>results. This may be the first rule for effective marketing.</p>
+<p>And then, the second rule, know your customers. Yes, I said
+customers. Practically everybody has more than one</p>
+<p>customer, if you define a customer as a person who can say no. When
+you look at the soap manufacturer, the</p>
+<p>supermarket doesn’t have to put a manufacturer’s detergent on the
+shelf, and certainly not in a position where the</p>
+<p>housewife will see it. And yet, unless the housewife also wants to
+buy the detergent, you have no sale, so you have two</p>
+<p>customers. The Boy Scouts or Girl Scouts have even more customers:
+they have the parents, and they have the kids.</p>
+<p>But then there are the volunteers, without whom no scouting
+organization could be run. And the teachers in the school</p>
+<p>also have to be ‘sold’ on scouting, or they could easily impede or
+perhaps even veto it.</p>
+<p>Soz the design of the right marketing strategy for the non-profit
+institution’s service is the first basic strategy task: the</p>
+<p>non-profit institution needs market knowledge. It needs a marketing
+plan with specific objectives and goals. And it</p>
+<p>needs what I call marketing responsibility, which is to take one’s
+customers seriously. Not saying, We know whafs good</p>
+<p>for them, but, What are their values? How do I reach them?</p>
+<p>The non-profit institution also needs a fund development strategy.
+The source of its money is probably the greatest</p>
+<p>single difference between the non-profit sector and business and
+government. A business raises money by selling to</p>
+<p>its customers; the government taxes. The non-profit institution has
+to raise money from donors. It raises its money - at</p>
+<p>least, a large portion of it - from people who want to participate in
+the cause but who are not beneficiaries.</p>
+<p>Almost by definition, money is always scarce in a non-profit
+institution. Indeed, a good many non-profit executives</p>
+<p>seem to believe that all their problems would be solved if only they
+had more money. In fact, some of them come close</p>
+<p>to believing that money-raising is really their mission. An example
+is some presidents of private colleges or universities</p>
+<p>who are so totally preoccupied with money-raising that they have
+neither the time nor the thought for educational</p>
+<p>leadership.</p>
+<p>But a non-profit institution that becomes a prisoner of money-raising
+is in serious trouble and in a serious identity</p>
+<p>crisis. The purpose of a strategy for raising money is precisely to
+enable the non-profit institution to carry out its</p>
+<p>mission without subordinating that mission to fund-raising. This is
+why non-profit people have now changed the term</p>
+<p>they use from ‘fund raising’ to ’fund development/ Fund-raising is
+going around with a begging bowl, asking for money</p>
+<p>because the need is so great. Fund development is creating a
+constituency which supports the organization because it</p>
+<p>deserves it. It means developing what I call a membership that
+participates through giving.</p>
+<p>Your first constituency in fund development is your own board. One of
+the things we have learned about managing</p>
+<p>non-profit institutions is that the old-type board, the board that
+simply was in sympathy with the institution, is no</p>
+<p>longer enough. You need a board that takes an active lead in raising
+money, whose members both give themselves and</p>
+<p>by being fund-raisers, fund developers. When a board member calls,
+say, a real estate developer, and says, 1 am on</p>
+<p>the board of the hospital/ the first response he gets from his friend
+is, ’How much are you giving yourself, John?7 If the</p>
+<p>answer is five hundred bucks, well, thafs all you’re likely to
+get.</p>
+<p>But you also want something else on the board which has to do with
+money: the ability to audit the balance between</p>
+<p>your programme and your resources. That is what gives you assurance.
+The person who runs the church or hospital or</p>
+<p>school should be enthusiastic. You don’t want nay-sayers in those
+positions. But somebody has to ask: ’Is this the best</p>
+<p>balance between our available resources and our effectiveness?’</p>
+<p>A business earns its money on its own. The money of the non-profit
+institution is not its own; it is held in trust for the</p>
+<p>donors. And the board is the guardian to make sure the money is used
+for the results for which it has been given.</p>
+<p>Thatz tooz is part of the non-profit strategy.</p>
+<p>Not so long ago, many non-profit organizations were pretty
+selfsupporting financially. They generally needed outside</p>
+<p>money only for extra projects 一 that new science hall, or a new
+cardiac wing. Now, more and more non-profit</p>
+<p>organizations need money for operating purposes. Another reason why
+the development of financial resources is</p>
+<p>becoming more important is because great wealth is becoming less
+important. It used to be that two or three rich</p>
+<p>people in the community supported the Church. That doesn’t work
+anymore. Not only is the Church more expensive,</p>
+<p>but demands on people of great wealth have gone up out of sight. Andz
+proportionately, there are so many fewer of</p>
+<p>them around. So, non-profit executives must build a mass base.</p>
+<p>You need people on your board willing to help develop that mass base
+by giving example and leadership.</p>
+<p>Of course, there will always be need for emergency relief and appeals
+to give for it 一 for the most recent earthquake,</p>
+<p>for starving children in Africa or the Vietnamese boat people. But it
+is increasingly dangerous to depend on emotional</p>
+<p>appeal alone. A friend of mine who heads a major international relief
+organization speaks of /compassion fatigue/</p>
+<p>There is so much misery in the world that we are becoming quite
+hardened and callous to that constant plucking of our</p>
+<p>heart strings.</p>
+<p>In fund development you appeal to the heart, but you also have to
+appeal to the head, and try to build a continuing</p>
+<p>effort. The non-profit manager has to think through how to define
+results for an effort, and then report back to the</p>
+<p>donors, to show them that they are achieving results.</p>
+<p>You also have to educate donors so that they can recognize and accept
+what the results are. This is perhaps the</p>
+<p>newest development 一 this realization that a donor doesn’t
+automatically understand what the organization is trying to</p>
+<p>do. Donors are becoming too sophisticated to appeal to them simply on
+the basis that education is good or health is</p>
+<p>good. They askz Whom are you educating? Educating for what?</p>
+<p>This moves us to constituency building over the very long term. It is
+how the Claremont Colleges, where I have been</p>
+<p>teaching now for twenty years, were built. In the 1920s, the
+president of Pomona College, the mother college of the</p>
+<p>group, realized that Southern California and its college population
+would grow fast and that he would need a great deal</p>
+<p>of money for the college. He started by actually founding local new
+businesses and running them for a couple of years</p>
+<p>until they broke even. Then he called in a top-flight new graduate,
+literally gave him the business and $10,000 to boot</p>
+<p>(which was a great deal of money in those days), and said. It’s
+yours. You build it. But if it is successful, don’t repay us.</p>
+<p>Remember us/ Thafs why Pomona and the whole Claremont group are so
+well endowed today. He built an enormous</p>
+<p>constituency 一 long term. The fruits didn’t come in for twenty
+years, but they came in a thousandfold. I’m not saying</p>
+<p>that this is the way everyone should do it. But it is one example of
+building up a long-term constituency, people who</p>
+<p>remember, who are not giving simply because someone rings a doorbell.
+They see the support of the institution as</p>
+<p>self-fulfilment. This is the ultimate goal of fund development.</p>
+<h2 id="october">29 OCTOBER</h2>
+<h3 id="converting-good-intentions-into-results">Converting Good
+Intentions into Results</h3>
+<p>“It’s much easier to sell the Brooklyn Bridge than to give it
+away.”</p>
+<p>The nonprofit institution is not merely delivering a service. It
+wants the</p>
+<p>end user to be not a user but a doer. It uses a service to bring
+about a change</p>
+<p>in human beings. It attempts to become a part of the recipient</p>
+<p>rather than merely a supplier.</p>
+<p>Nonprofit institutions used to think they didn’t need marketing. But,
+as</p>
+<p>a famous old saying by a great nineteenth-century con man has it,
+“It’s</p>
+<p>much easier to sell the Brooklyn Bridge than to give it away.”
+Nobody</p>
+<p>trusts you if you offer something for free. You need to market even
+the</p>
+<p>most ben-eficial service. But the marketing you do in the nonprofit
+sector</p>
+<p>is quite dif-ferent from selling. It’s more a matter of looking at
+your</p>
+<p>service from the recipient’s point of view. You have to know what to
+sell,</p>
+<p>to whom to sell, and when to sell.</p>
+<h3 id="action-point-1">ACTION POINT:</h3>
+<p>The mission of the Salvation Army is to make citizens out</p>
+<p>of the rejected. How does that service look from the recipient’s
+point of</p>
+<p>view? How should the Salvation Army market that service?</p>
+<h4 id="managing-the-non-profit-organization">Managing the Non-Profit
+Organization</h4>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

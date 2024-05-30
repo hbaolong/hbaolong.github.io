@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="第三同读" />
+  <title>德鲁克日志</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">德鲁克日志</h1>
+<p class="author">第三同读</p>
+</header>
+<h2 id="透过金庸读懂德鲁克">透过金庸读懂德鲁克</h2>
+<p>当杨过知道这个可爱的小姑娘就是郭襄时，杨过知道自己千载难逢的机会来了。</p>
+<p>杨过一直想回到郭伯伯身边。他知道在这个江湖上，只有郭伯伯身边才是江湖的核心，才是侠义之士</p>
+<p>应该停留的地方，才是自己可以从神雕侠成为神雕大侠的地方。</p>
+<p>杨过知道郭伯伯很想要自己去找他，自己也很想去找郭伯伯，帮着郭伯伯抵抗蒙古军队。</p>
+<p>可是，自己并没有机会，自己这么默然跑去，算什么呀。毕竟这几年自己也混的人模狗样地。</p>
+<p>当杨过知道面前这个小姑娘是郭襄时，他知道最好的机会来了：自己不好去找郭靖，不好去找郭芙，</p>
+<p>不好去找黄蓉。因为郭靖、黄蓉、郭芙没有邀请他，可是郭襄可以呀，郭襄可以邀请他呀。</p>
+<p>机智的杨过马上拿出三根金针递给小郭襄：“我见此金针，如见你面。你如不能亲自会我，托人持针传</p>
+<p>命，我也必给你办到。”</p>
+<p>杨过清楚，自己至少有了三次见郭襄的机会，而郭襄这个年纪，大概会和郭靖、黄蓉在一起。这样一</p>
+<p>来，自己就能见到郭伯伯了。</p>
+<p>果然，小郭襄拿到金针后很开心，马上拿出一根，要求他摘下面具。杨过无奈，只好摘下了面具。小</p>
+<p>郭襄一看，果然是个帅哥哥。</p>
+<p>杨过正在恼悔少了一次机会，这时小郭襄又拿起一根金针。要他在自己十六岁生日时，去到襄阳和她</p>
+<p>说一会子话。</p>
+<p>杨过这个气呀。三次机会，这么快就用去了两次。这个要求虽然麻烦一些，可是还是小孩子的要求，</p>
+<p>对自己没要求呀。杨过本来想着黄蓉见到金针后主动邀请自己，看起来也要白费了。</p>
+<p>当小郭襄拿起第三根针时，杨过要气哭了。还好，小郭襄脸一红：“这第三个心愿，我现下想不出，日</p>
+<p>后再跟你说。”</p>
+<p>杨过好好舒了口气。就把小郭襄送走了。然后等着黄蓉或者郭靖的招呼。</p>
+<p>左等，没人来，右等，也没人了，杨过受不了。杨过没想到小郭襄回去后，根本就没告诉父母遇见了</p>
+<p>自己：“不让你说，你就真的不说呀！这个傻丫头！！”</p>
+<p>怎么办？机会不说等来的，等不来就创造机会。杨过知道自己必须回到郭伯伯身边，而且要会的有面</p>
+<p>子，有里子，让郭伯伯接受、认可自己。为了让郭伯伯接受、认可自己，杨过需要证明自己的能力和</p>
+<p>侠义。特别是侠义，这些是郭伯伯看重的。</p>
+<p>怎么做呢？现在只有一个事情可以使用，就是答应的郭襄的生日会。</p>
+<p>既然如此，那就把这个生日会变成自己的演艺场吧，演艺自己的才华、武功、智慧以及侠义。</p>
+<p>杨过有非常高的武功，学完孤独求败的剑法后，杨过在十六年的江湖闯荡中增长了丰富的作战经验。</p>
+<p>也创造了自己独特的武功：黯然销魂掌。在武学上，杨过已经是超一流的人物了。</p>
+<p>这十六年，杨过躲着郭伯伯所带领和影响的武林，自己也形成了自己的圈子，这是一个半地下的圈</p>
+<p>子，而且还不小。这些人也甚是可以办一些事。</p>
+<p>杨过很清楚自己的目标：就是让郭伯伯、黄伯母接受自己。怎么办呢？</p>
+<p>很快，杨过就确定了几件事：</p>
+<ol type="1">
+<li>减弱甚至消除围攻襄阳的蒙古军队襄阳的威胁。这个需要比较多武林高手，比如几百个，甚至上千</li>
+</ol>
+<p>个。杨过计划杀死一些先锋队，并且烧毁蒙古军的粮食。这样襄阳的威胁就会减弱很多，郭伯伯就会</p>
+<p>认可自己。</p>
+<p>2.郭伯母呢？很久没见郭伯母了，杨过也不知道郭伯母需要什么。那就冒险去襄阳探听一下吧。果然，</p>
+<p>杨过探听到鲁帮主被杀，打狗棒被抢。俺就帮郭伯母找回打狗棒把。</p>
+<ol start="3" type="1">
+<li>郭伯伯和郭伯母接受自己了。不过自己也不能做的痕迹太重，还是搞一些烟花爆竹戏台大肉什么的</li>
+</ol>
+<p>吧。</p>
+<p>恩，就这么办。</p>
+<h2 id="大纲">大纲</h2>
+<h2 id="百字摘要">百字摘要</h2>
+<ol type="1">
+<li><p>别定一个自己完成不了的目标</p></li>
+<li><p>环境需要啥？</p></li>
+<li><p>我如何可以实现这个目标？凭借个人能力？凭借人脉圈子？凭借坑蒙拐骗？我应该如何做？</p></li>
+<li><p>为了标新立腕，我需要达成什么样的结果？</p></li>
+</ol>
+<h2 id="金庸案例">金庸案例</h2>
+<h2 id="时间消耗">时间消耗</h2>
+<h2 id="阅读理解">阅读理解：</h2>
+<h2 id="大纲-1">大纲：</h2>
+<h2 id="撰写">撰写：</h2>
+<h2 id="录音">录音</h2>
+<h2 id="一小时运动">一小时运动</h2>
+<h2 id="英文原文">英文原文</h2>
+<p>11 SEPTEMBER</p>
+<p>Results That Make a Difference</p>
+<p>What results have to be achieved to make a difference?</p>
+<p>One question has to be asked to decide “What should I
+contribute?”</p>
+<p>“Where and how can I have results that make a difference?” The answer
+to this question has to</p>
+<p>balance a number of things.</p>
+<p>Results should be hard to achieve.</p>
+<p>They should require “stretching,” to use the present buzzword.</p>
+<p>present：</p>
+<p>现存的；当前的</p>
+<p>buzzword：</p>
+<p>[ only before noun ] existing or happening now</p>
+<p>N-COUNT A buzzword is a word or expression that has become
+fashionable in a particular field and is being used a lot</p>
+<p>by the media.</p>
+<p>某领域的时髦用语</p>
+<p>But they should be within reach.</p>
+<p>To aim at results that cannot be achieved—or can be achieved only
+under the most unlikely</p>
+<p>circumstances—is not being “ambitious.”</p>
+<p>circumstances：</p>
+<p>情形</p>
+<p>ambitious：</p>
+<p>有野心的；有雄心的</p>
+<p>N-COUNT The circumstances of a particular situation are the
+conditions which affect what happens.</p>
+<p>determined to be successful, rich, powerful, etc.</p>
+<p>It is being foolish. At the same time, results should be
+meaningful.</p>
+<p>meaningful：</p>
+<p>严肃的；重要的；重大的</p>
+<p>serious and important</p>
+<p>They should make a difference. And they should be visible and, if at
+all possible, measurable.</p>
+<p>make a difference：有影响，有关系</p>
+<p>be influential in, militate</p>
+<p>The decision about “What should my contribution be?” balances three
+elements.</p>
+<p>First comes the question: “What does the situation require?”</p>
+<p>Then comes the question: “How could I make the greatest contribution,
+with my strengths, my</p>
+<p>way of performing, my values, to what needs to be done?”</p>
+<p>Finally, there is the question: “What results have to be achieved to
+make a difference?”</p>
+<p>This then leads to the action conclusions: what to do, where to
+start, how to start, what goals and</p>
+<p>deadlines to set.</p>
+<p>conclusions：</p>
+<p>N-COUNT When you come to a conclusion, you decide that something is
+true after you have thought about it</p>
+<p>carefully and have considered all the relevant facts.</p>
+<p>结论</p>
+<h3 id="action-point">ACTION POINT:</h3>
+<p>Define results for your position that will make a difference.</p>
+<p>How can you make the greatest contribution based upon your
+strengths?</p>
+<p>Establish goals and set deadlines for them.</p>
+<p>Management Challenges for the 21st Century</p>
+<h2 id="september">11 SEPTEMBER</h2>
+<h3 id="results-that-make-a-difference">Results That Make a
+Difference</h3>
+<p>What results have to be achieved to make a difference?</p>
+<p>One question has to be asked to decide “What should I
+contribute?”</p>
+<p>“Where and how can I have results that make a difference?” The
+an-swer</p>
+<p>to this question has to balance a number of things. Results should be
+hard</p>
+<p>to achieve. They should require “stretching,” to use the present
+buzz-</p>
+<p>word. But they should be within reach. To aim at results that cannot
+be</p>
+<p>achieved—or can be achieved only under the most unlikely circum-</p>
+<p>stances—is not being “ambitious.” It is being foolish. At the same
+time,</p>
+<p>re-sults should be meaningful. They should make a difference. And
+they</p>
+<p>should be visible and, if at all possible, measurable.</p>
+<p>The decision about “What should my contribution be?” balances
+three</p>
+<p>elements. First comes the question: “What does the situation
+require?”</p>
+<p>Then comes the question: “How could I make the greatest
+contribution,</p>
+<p>with my strengths, my way of performing, my values, to what needs to
+be</p>
+<p>done?” Finally, there is the question: “What results have to be
+achieved to</p>
+<p>make a difference?” This then leads to the action conclusions: what
+to do,</p>
+<p>where to start, how to start, what goals and deadlines to set.</p>
+<h3 id="action-point-1">ACTION POINT:</h3>
+<p>Define results for your position that will make a differ-</p>
+<p>ence. How can you make the greatest contribution based upon your</p>
+<p>strengths? Establish goals and set deadlines for them.</p>
+<h4 id="management-challenges-for-the-21st-century">Management
+Challenges for the 21st Century</h4>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

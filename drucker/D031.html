@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="第三同读" />
+  <title>德鲁克日志</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">德鲁克日志</h1>
+<p class="author">第三同读</p>
+</header>
+<h2 id="透过金庸读懂德鲁克">透过金庸读懂德鲁克</h2>
+<p>那些流离失所的湖北人是谁？</p>
+<p>前几天在呦呦鹿鸣的公号看到一个视频，说的是一个河南驻马店外出打工的人回家过年。在家门口被</p>
+<p>拦住了，拦在了被土堆封掉的大桥前。他说自己没问题，同意被隔离，怎么都行，只要让他回家。</p>
+<p>可是，就是不让他回家。而且有规定，就是不能回家，也没有解决方案。</p>
+<p>还有一个抖音上视频，是一个开车的人录的视频，他在西安住酒店，发现他是湖北人后，酒店就不让</p>
+<p>他住。他说愿意检测，酒店也不接收，就是让他退房。我不知道大半夜的，他会去哪里住。</p>
+<p>这几天很多朋友陆陆续续回到北京上班，北京的一些小区限制外来人进入，就算是租房子也不行。北</p>
+<p>京市规定外地到北京，需要在家隔离14天。他们进不了小区怎么隔离？</p>
+<p>每每出现这样的新闻，网友都会大喊：硬核！汉子！</p>
+<p>我想，这些人大概都认为自己就是在村里没出去的人，自己就是在北京的某个小区被保护起来的人，</p>
+<p>自己就是在远离湖北的那些本地人。</p>
+<p>自己要远离那些湖北人，远离那些病毒，只要远离的病毒，我就安全了。至于那些人应该如何？并不</p>
+<p>是他们的事情。</p>
+<p>那么，那些流离失所的”湖北人“是谁呢？</p>
+<p>在一个完整的社会里，每个人都应该起明确的身份和地位，也要有其明确的权利。而所有的其他人，</p>
+<p>包括公权力，也不可以侵犯其他人的权利。</p>
+<p>是的，你是在保护你不被传染的权力，那么，那个人在大冬天在室外过夜会不会被冻死呢？</p>
+<p>那个在西安的湖北人，他晚上住哪里呢？那些从河南河北山东山西来到北京工作的人，他们住在哪里</p>
+<p>呢？</p>
+<p>你可以这不是你关注的问题，那么这是谁的问题呢？这是我们的社会，不是你的社会，这个社会属于</p>
+<p>每一个人，而不是属于你自己。</p>
+<p>你在拼尽全力保护你自己时，你有没有想过别人的权力呢？别人也是有活下去的权力的。</p>
+<p>而这个权力，应该是我们国家给予保护的，国家应该保护每一个公民的合法权力，而不是纵容一部分</p>
+<p>人，夸他们”硬核“，”汉子“。</p>
+<p>因为那些流离失所的湖北人，其实就是我们自己。</p>
+<p>当我在一个小群里说出我对封路反感时，一个朋友说：”你是不是把自己代入那个在外面的人了？“我</p>
+<p>说，是呀，不然呢？”</p>
+<p>前几天我在群里发起了一个投票：为了你的健康，你愿意放弃什么？今天再次发起，大家选一下吧。</p>
+<h2 id="大纲">大纲</h2>
+<h2 id="百字摘要">百字摘要</h2>
+<h2 id="金庸案例">金庸案例</h2>
+<h2 id="时间消耗">时间消耗</h2>
+<h2 id="阅读理解">阅读理解：</h2>
+<h2 id="大纲-1">大纲：</h2>
+<h2 id="撰写">撰写：</h2>
+<h2 id="录音">录音</h2>
+<h2 id="一小时运动">一小时运动</h2>
+<h2 id="英文原文">英文原文</h2>
+<p>31 JANUARY</p>
+<p>A Functioning Society</p>
+<p>Unless power is legitimate there can be no social order.</p>
+<p>A functioning society must always be capable of organizing the
+tangible reality of the social order.</p>
+<p>tangible：</p>
+<p>有形的；实际的；真实的</p>
+<p>[ usually before noun ] that can be clearly seen to exist</p>
+<p>It must master the material world, make it meaningful and
+comprehensible for the individual, and it</p>
+<p>must establish legitimate social and political power.</p>
+<p>No society can function unless it gives the individual member social
+status and function, and</p>
+<p>unless the decisive social power is legitimate power.</p>
+<p>decisive：</p>
+<p>决定性的；关键的</p>
+<p>very important for the final result of a particular situation</p>
+<p>The former establishes the basic frame of social life: the purpose
+and meaning of society.</p>
+<p>former：</p>
+<p>以前的</p>
+<p>that used to exist in earlier times</p>
+<p>The latter shapes the space within the frame: it makes society
+concrete and creates its institutions.</p>
+<p>If the individual is not given social status and function, there can
+be no society but only a mass of</p>
+<p>social atoms flying through space without aim or purpose.</p>
+<p>And unless power is legitimate, there can be no social fabric; there
+is only a social vacuum held</p>
+<p>together by mere slavery or inertia.</p>
+<h3 id="action-point">ACTION POINT:</h3>
+<p>What will the emerging government in Iraq have to do to become
+legitimate?</p>
+<p>emerging ：</p>
+<p>（从隐蔽处或暗处）出现，浮现，露出</p>
+<p>[ V ] ~ (from sth) to come out of a dark, confined or hidden
+place</p>
+<p>What must a legitimate government do to create status and function
+for Iraqis?</p>
+<p>legitimate：</p>
+<p>合法的；法律认可的；法定的</p>
+<p>allowed and acceptable according to the law</p>
+<p>A Functioning Society</p>
+<p>The Future of Industrial Man</p>
+<h2 id="january">31 JANUARY</h2>
+<h3 id="a-functioning-society">A Functioning Society</h3>
+<p>Unless power is legitimate there can be no social order.</p>
+<p>Afunctioning society must always be capable of organizing the
+tangible</p>
+<p>reality of the social order. It must master the material world, make
+it</p>
+<p>meaningful and comprehensible for the individual, and it must
+establish</p>
+<p>legitimate social and political power.</p>
+<p>No society can function unless it gives the individual member
+social</p>
+<p>sta-tus and function, and unless the decisive social power is
+legitimate</p>
+<p>power. The former establishes the basic frame of social life: the
+purpose</p>
+<p>and meaning of society. The latter shapes the space within the frame:
+it</p>
+<p>makes society concrete and creates its institutions. If the
+individual is not</p>
+<p>given so-cial status and function, there can be no society but only a
+mass</p>
+<p>of social atoms flying through space without aim or purpose. And
+unless</p>
+<p>power is le-gitimate, there can be no social fabric; there is only a
+social</p>
+<p>vacuum held together by mere slavery or inertia.</p>
+<h3 id="action-point-1">ACTION POINT:</h3>
+<p>What will the emerging government in Iraq have to do to</p>
+<p>become legitimate? What must a legitimate government do to create</p>
+<p>status and function for Iraqis?</p>
+<p>A Functioning Society</p>
+<h4 id="the-future-of-industrial-man">The Future of Industrial Man</h4>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="第三同读" />
+  <title>德鲁克日志</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">德鲁克日志</h1>
+<p class="author">第三同读</p>
+</header>
+<h2 id="透过金庸读懂德鲁克">透过金庸读懂德鲁克</h2>
+<p>听说有人用易经选股？</p>
+<p>前几天有人在一个群里说“我用易经选股，准确率有80%”。</p>
+<p>我很好奇这个80%的准确率是怎么算的。</p>
+<p>买一只股票，涉及到什么时候，以什么价位，买多少股，什么时候，以什么价位卖出。我不清楚这个</p>
+<p>“易经”算的哪个是80%？也不知道这个80%是哪里来的？</p>
+<p>还有一个群友说，“我用易经测算天气，准确率是80%”。不知道他为什么也选择了“80%”这个数字，</p>
+<p>我也不懂80%意味着什么，他说明天晴天，说10次8次准？还是他说明天30度，其实是30*80%，大约</p>
+<p>24度？</p>
+<p>我想，大概这“80%”，最像秦桧嘴里的“莫须有”吧，也就是“大概其”的意思吧。</p>
+<p>我经常在想，800里外，一枪干掉敌人机枪手的可能性有多大。</p>
+<p>我又想，800里外，一枪干掉敌人机枪手的意义有多少，如果真有人掌握了800里外一枪干掉敌人的手</p>
+<p>段，整个世界会非常的不安全。</p>
+<p>所以，这种武器只能是非常稀少的。而且需要非常大的成本，非常复杂的流程。所以，你大概不会拿</p>
+<p>去打机枪手，更不会去打蚂蚁。</p>
+<p>《易经》，又称《周易》，传说是周文王姬昌所作。细分一下，易经可以分为《经》和《传》。</p>
+<p>《经》很简单，由六十四卦和三百八十四爻组成。《传》则比较复杂了，传是《经》中的爻辞和爻辞</p>
+<p>进行解释，一共有7本10篇，所以，也成为《十翼》。</p>
+<p>《易经》一共有64卦，每一卦有6爻，分别是初、二、三、四、五、上六爻。所谓的算卦，也就是针对</p>
+<p>某件事，用一些行为找出一些某个特定卦的某个特定爻，看这个”爻“如何说。进而”牵强附会“，做一些</p>
+<p>解读。</p>
+<p>当然，我这里的”牵强附会“并不是贬义词，而是对《易经》里“象”的一个描述。</p>
+<p>那么，什么是卦，什么是象呢？《系辞》提到了：圣人设卦观象，系辞焉而明吉凶，刚柔相推而生变</p>
+<p>化。也就是说，圣人（易经认为，生而知之为圣人，学而知之为君子，日用而不知为百姓，也就是你</p>
+<p>我这样的人）创造了“卦”，然后观察“天地万物的象”，然后又写了一些“辞”来表明万事万物的“吉凶”。</p>
+<p>那么，什么是吉凶呢？易经又说：“吉凶者，失得之象也。”这句话很白，就是说：（易经讲的是）“失</p>
+<p>去或者得到”的规律。</p>
+<p>既然是讲“失去和得到”的规律的，那么有人“推算”出某只牛股票，不是很正常么？有人又“推算”出明天</p>
+<p>的天气，不也很正常么？</p>
+<p>是呀，当经济学家预测明年的GDP增幅是10%时，你觉得这个增幅和你的收入会是什么关系呢？你的</p>
+<p>收入可能会突飞猛进，也可能会停滞不前，甚至有可能大幅度减少，更有可能，“你死了”。</p>
+<p>然后，即使你死了，
+你邻居都死了，国家的GDP还是会在10%，个体对整体的影响是微乎其微的。特</p>
+<p>别是在一个十几亿人的国家，特别是在一个70亿人的地球。（当然，新冠除外，这个魔鬼）</p>
+<p>而《易经》，所描述的是人类，以及人类生活的这个星球，以及社会的一个整体的框架和趋势。比</p>
+<p>如，在《易经》卦的六爻，就大概有这么个规律：初难知，上易知。也就是说，每一件事物的开始都</p>
+<p>是模糊不清、混乱嘈杂的，到了最后，总是觉得一切都那么自然，应该。</p>
+<p>再具体一些，可以说：初难知、二多誉、三多凶、四多惧、五多功、上易知。而这个从初到上过程，</p>
+<p>也就是事物发展的一个普遍规律。</p>
+<p>如果，某个人在一个孩子一出生时就说：“这个孩子肯定富贵生”，这明显违反了“初难知”的规律嘛。而</p>
+<p>到了这个人100多岁，马上就要咽气了，你大概对这个人就有一个定义了：盖棺论定嘛。</p>
+<p>《易经》还告诉你在什么情况下应该如何做，比如复卦的初爻：不远复，无祗悔，元吉。说的是，“在</p>
+<p>错误的道路上”，走出去没多远就回来了，不会后悔的，大吉大利。因为这是试错么，它告诉你，当你</p>
+<p>发现错误后，就即使终止，不要一错再错，就是“元吉”，也就是大吉大利。</p>
+<p>再比如，你有时会觉得，你什么错都没有，每一步都做的非常正确，为什么结果却不如人意？无妄卦</p>
+<p>的上九则告诉你：无妄行，有眚，无攸利。无妄之行，穷之灾也。
+也就是说，你一切都作对了，还是</p>
+<p>出错了，而且没有得到好处，这叫做“穷之灾”也，也就是相当于“物极必反”的意思。</p>
+<p>这些都是规律，可以用来让我们理解这个世界，也可以用来让知道我们的而一些行为。</p>
+<p>比如，当你一帆风顺时，当你春风得意马蹄疾时，你可以想到：亢龙有悔，盈不可久也。这时，你就</p>
+<p>应该小心翼翼。当你一生都小心翼翼，还是四处不顺，你就可以知道“喔，这是‘无妄之灾’“，而无妄之</p>
+<p>行，穷之灾也。怎么办？”穷则思变“呗。</p>
+<p>这些都是《易经》的正确打开方式。至于那些”通过某种行为“找到一个卦、爻，然后牵强附会，告诉</p>
+<p>你躲开水，往南方去，多吃猪肉，少见人，娶南方媳妇等等，如果你开心，听听就好。</p>
+<p>至于那些通过”乞天之意“算出某只股票，让你交钱的。他要能算出来，他早就买了去赚钱了，还轮的</p>
+<p>上你？</p>
+<p>”兄弟，过来。我给你指条明路“</p>
+<p>”有明路你早走了！“</p>
+<p>在《易经》这样一趋势和规律为描述对象的经典里，”你家的狗跑哪里去了“这样的事件，都是杂音。</p>
+<p>不存在的。</p>
+<h2 id="大纲">大纲</h2>
+<h2 id="百字摘要">百字摘要</h2>
+<h2 id="金庸案例">金庸案例</h2>
+<h2 id="时间消耗">时间消耗</h2>
+<h2 id="阅读理解">阅读理解：</h2>
+<h2 id="大纲-1">大纲：</h2>
+<h2 id="撰写">撰写：</h2>
+<h2 id="录音">录音</h2>
+<h2 id="一小时运动">一小时运动</h2>
+<h2 id="英文原文">英文原文</h2>
+<p>30 MARCH</p>
+<p>Nature of Complex Systems</p>
+<p>In respect to short-term phenomena, there is no system.</p>
+<p>phenomena：</p>
+<p>a fact or an event in nature or society, especially one that is not
+fully understood</p>
+<p>There is only chaos.</p>
+<p>chaos：</p>
+<p>[ U ] a state of complete confusion and lack of order</p>
+<p>现象</p>
+<p>混乱；杂乱；紊乱</p>
+<p>The fastest growing field of modern mathematics is the theory of
+complexity.</p>
+<p>It shows, with rigorous mathematical proof, that complex systems do
+not allow prediction; they are</p>
+<p>controlled by factors that are not statistically significant.</p>
+<p>rigorous：</p>
+<p>谨慎的；细致的；彻底的</p>
+<p>statistically：adv. 统计地；统计学上</p>
+<p>significant：</p>
+<p>有重大意义的；显著的</p>
+<p>done carefully and with a lot of attention to detail SYN thorough</p>
+<p>large or important enough to have an effect or to be noticed</p>
+<p>This has become known as the “butterfly effect”: a whimsical but
+mathematically rigorous (and</p>
+<p>experimentally proven) theorem shows that a butterfly flapping its
+wings in the Amazon rain forest</p>
+<p>can and sometimes does control the weather in Chicago a few weeks or
+months later.</p>
+<p>whimsical ：</p>
+<p>异想天开的；想入非非的；心血来潮的；滑稽可</p>
+<p>笑的</p>
+<p>unusual and not serious in a way that is either amusing or
+annoying</p>
+<p>In complex systems, the climate is predictable and has high
+stability; the “weather” is not</p>
+<p>predictable and is totally unstable.</p>
+<p>climate：</p>
+<p>气候</p>
+<p>C U ] the regular pattern of weather conditions of a particular
+place</p>
+<p>And no complex system can exclude anything as “external.”</p>
+<p>In respect to the weather, that is, in respect to short-term
+phenomena, there is no system.</p>
+<p>There is only chaos.</p>
+<p>Economics and economic policy deal with short-term phenomena.</p>
+<p>They deal with recessions and changes in prices.</p>
+<p>recession：</p>
+<p>[ C U ] a difficult time for the economy of a country, when there is
+less trade and industrial activity than usual and more</p>
+<p>people are unemployed</p>
+<p>经济衰退；经济萎缩</p>
+<p>Contemporary economics and economic policy assume that the system,
+the long term, is made by</p>
+<p>short-term policies, for example, changes in interest rates,
+government spending, tax rates, and so</p>
+<p>on.</p>
+<p>Contemporary：</p>
+<dl>
+<dt>属同时期的；同一时代的</dt>
+<dd>
+<p>(with sb/sth) belonging to the same time</p>
+</dd>
+</dl>
+<p>For a complex system this is simply not true, as modern mathematics
+has now proven.</p>
+<h3 id="action-point">ACTION POINT:</h3>
+<p>Identify the long-term phenomena affecting your organization.</p>
+<p>How will these affect your organization in both the short term and
+the long term?</p>
+<p>The New Realities</p>
+<h2 id="march">30 MARCH</h2>
+<h3 id="nature-of-complex-systems">Nature of Complex Systems</h3>
+<p>In respect to short-term phenomena, there is no system. There is only
+chaos.</p>
+<p>The fastest growing field of modern mathematics is the theory of
+com-</p>
+<p>plexity. It shows, with rigorous mathematical proof, that complex
+sys-tems do</p>
+<p>not allow prediction; they are controlled by factors that are not
+statistically</p>
+<p>significant. This has become known as the “butterfly effect”: a
+whimsical but</p>
+<p>mathematically rigorous (and experimentally proven) theo-rem shows
+that</p>
+<p>Abutterfly flapping its wings in the Amazon rain forest can and
+sometimes does</p>
+<p>control the weather in Chicago a few weeks or months later. In
+complex</p>
+<p>systems, the climate is predictable and has high stability; the
+“weather” is not</p>
+<p>predictable and is totally unstable. And no complex system can
+exclude</p>
+<p>anything as “external.” In respect to the weather, that is, in
+respect to short-</p>
+<p>term phenomena, there is no system. There is only</p>
+<p>chaos.</p>
+<p>Economics and economic policy deal with short-term phenomena.</p>
+<p>They deal with recessions and changes in prices. Contemporary
+econom-</p>
+<p>ics and economic policy assume that the system, the long term, is
+made</p>
+<p>by short-term policies, for example, changes in interest rates,
+government</p>
+<p>spending, tax rates, and so on. For a complex system this is simply
+not</p>
+<p>true, as modern mathematics has now proven.</p>
+<h3 id="action-point-1">ACTION POINT:</h3>
+<p>Identify the long-term phenomena affecting your organi-</p>
+<p>zation. How will these affect your organization in both the short
+term and</p>
+<p>the long term?</p>
+<h4 id="the-new-realities">The New Realities</h4>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

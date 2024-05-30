@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="第三同读" />
+  <title>德鲁克日志</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">德鲁克日志</h1>
+<p class="author">第三同读</p>
+</header>
+<h2 id="透过金庸读懂德鲁克">透过金庸读懂德鲁克</h2>
+<p>宋朝末年，被少林寺开除的张君宝一路向南，仓皇而逃，沿路风餐露宿，不敢停留，直到湖北武当山</p>
+<p>附近才歇了一口气，这时已经一周过去了。十几岁的张君宝看到武当山青翠挺拔，而且也离着少林挺</p>
+<p>远了，就爬到山顶，找了个石洞，打扫干净，整理了座椅板凳。轻声对着石头说：“我创业了，就叫武</p>
+<p>当派吧。”</p>
+<p>这个创业的起点虽然有点仓促，进展却还不错。张君宝拿出在少林打工时的经理觉远给的一些技术资</p>
+<p>料，努力研究、设计新的产品，没几年，全新的产品就问世了，而且很受市场欢迎。这是张君宝给自</p>
+<p>己改了个名字，叫做张三丰。也算在江湖上开门接客，扬名立万了。</p>
+<p>随着市场越来越大，张三丰也忙不过来了，就计划招一些人一起把市场做大。在之后的几十年里，张</p>
+<p>三丰陆续找了7个经理人作为中高层。这七位中高层都是非常优秀的管理者和领导者，在张三丰和七位</p>
+<p>中高层的用心经营下，武当派市值直冲江湖第一，和少林派不相上下。</p>
+<p>而且武当派的业务非常稳定，看起来有百年，甚至千年企业的样子。张三丰经常谦虚地说：“不敢不</p>
+<p>敢，我们武当只要101年就好了。”</p>
+<p>这一年更，张三丰马上就要90岁生日了。这几十年张三丰已经把CEO给了大弟子宋远桥，自己担着一</p>
+<p>个董事长的虚职，每天打坐，扫地，偶尔研发一下产品。日子甚是悠闲。连续20多年来，每年一次的</p>
+<p>生日是他唯一必须要做的事。张三丰经常想，自己要能不参加生日就好了。白白耽误一天研究，多可</p>
+<p>惜。</p>
+<p>90岁生日那天，三弟子俞岱岩没回来，张三丰感觉不好。没几天，被捏断骨头的俞岱岩被送到了武当</p>
+<p>山上。一向疼爱弟子的张三丰看到终身残疾的俞岱岩，伤心欲绝。立即派几个弟子去帮老三报仇。</p>
+<p>回到山上后，张三丰开始考虑一件很重要的事情。</p>
+<p>虽然张三丰已经90岁了，可是他从来没有想过自己养老的问题。一方面自己勤练道家功夫，正常情况</p>
+<p>下，即使年老体衰，只要不散功，临死前也不会失能，不大需要别人的照顾。</p>
+<p>另一方面，自己有7个弟子，自己和7个弟子情同父子。不管自己遇到什么情况，弟子们都会照顾自己</p>
+<p>的。</p>
+<p>所以张三丰没有想过自己重伤或者生病后的事情。</p>
+<p>当他看到三弟子俞岱岩终身残疾后，他意识到了这个问题。</p>
+<p>自己百年后，肯定是五个弟子中的一个做掌门人，他们有老三都是兄弟之情，肯定会照顾老三的。万</p>
+<p>一继任弟子，不管是宋还是俞还是张，有意外离世，第三代掌门人对俞岱岩不一定有多少感情，那</p>
+<p>么，到时谁来照顾俞岱岩呢？</p>
+<p>俞岱岩的残疾虽然是个个案，随着时间的推移，门派里肯定还有不少弟子会受伤，或者残疾，他们也</p>
+<p>需要照顾。总不能只靠他们个人的情感吧，这个事情需要及早做个准备，才可以让子弟们安心，敢于</p>
+<p>放心在江湖上拼命。</p>
+<p>是呀，是时候设置一些制度了，不但让每天在江湖上的那些弟子可以得到荣誉，成长。也要让那些受</p>
+<p>伤的，残疾的，或者只是年老的门人可以有尊严的生活。</p>
+<p>就像少林那样。</p>
+<p>恩，对，先学习一下少林的做法。</p>
+<p>预知张三丰如何设计武当派的养老制度？明天再说。</p>
+<h2 id="百字摘要">百字摘要</h2>
+<h2 id="金庸案例">金庸案例</h2>
+<p>14 JUNE</p>
+<p>Pension-Fund Shareholders</p>
+<p>Pension：</p>
+<ol start="14" type="a">
+<li>an amount of money paid regularly by a government or company to sb
+who is considered to be too old or too ill/sick to</li>
+</ol>
+<p>work</p>
+<p>养老金；退休金；抚恤金</p>
+<p>Short-term results and long-term performance are not irreconcilable,
+but are different, and will</p>
+<p>have to be balanced.</p>
+<p>irreconcilable：</p>
+<p>不能调</p>
+<p>和的；无法化解的</p>
+<p>if differences or disagreements are irreconcilable , they are so
+great that it is not possible to settle them</p>
+<p>The new corporation will have to balance short-term performance with
+the long-term interests of</p>
+<p>pension-fund shareholders.</p>
+<p>Maximizing short-term performance will jeopardize the interests of
+pension-fund stock-holders.</p>
+<p>jeopardize:</p>
+<p>[ VN ] ( formal ) to risk harming or destroying sth/sb</p>
+<p>冒…的危险；危及；危害；损害</p>
+<p>Significantly, the claim of the absolute primacy of business gains
+that made shareholder</p>
+<p>sovereignty possible has also highlighted the importance of the
+corporation’s social function.</p>
+<p>The new shareholders whose emergence since 1960 or 1970 produced
+shareholder sovereignty</p>
+<p>are not “capitalists” in the traditional sense.</p>
+<p>They are employees who own a stake in the business through their
+retirement and pension funds.</p>
+<p>By 2000, pension funds and mutual funds in the U.S. had come to own
+the majority of the share</p>
+<p>capital of America’s large companies.</p>
+<p>This has given shareholders the power to demand short-term
+rewards.</p>
+<p>But the need for a secure retirement income will increasingly focus
+people’s minds on the future</p>
+<p>value of the investment.</p>
+<p>Corporations, therefore, will have to pay attention both to their
+short-term business results and to</p>
+<p>their long-term performance as providers of retirement benefits.</p>
+<p>The two are not irreconcilable, but they are different, and they will
+have to be balanced.</p>
+<h3
+id="action-point-manage-your-company-so-that-it-produces-both-short-term-results-and-has-strong">ACTION
+POINT: Manage your company so that it produces both short-term results
+and has strong</h3>
+<p>results over the long term to satisfy the interests of pension-fund
+shareholders.</p>
+<p>Managing in the Next Society</p>
+<p>The Next Society (Corpedia Online Program)</p>
+<h2 id="june">14 JUNE</h2>
+<h3 id="pension-fund-shareholders">Pension-Fund Shareholders</h3>
+<p>Short-term results and long-term performance are not
+irreconcilable,</p>
+<p>but are different, and will have to be balanced.</p>
+<p>The new corporation will have to balance short-term performance with
+the</p>
+<p>long-term interests of pension-fund shareholders. Maximizing
+short-term</p>
+<p>performance will jeopardize the interests of pension-fund stock-</p>
+<p>holders.</p>
+<p>Significantly, the claim of the absolute primacy of business gains
+that</p>
+<p>made shareholder sovereignty possible has also highlighted the
+impor-</p>
+<p>tance of the corporation’s social function. The new shareholders
+whose</p>
+<p>emergence since 1960 or 1970 produced shareholder sovereignty are
+not</p>
+<p>“capitalists” in the traditional sense. They are employees who own a
+stake</p>
+<p>in the business through their retirement and pension funds. By 2000,
+pen-</p>
+<p>sion funds and mutual funds in the U.S. had come to own the majority
+of</p>
+<p>the share capital of America’s large companies. This has given</p>
+<p>shareholders the power to demand short-term rewards. But the need
+for</p>
+<p>Asecure retire-ment income will increasingly focus people’s minds on
+the</p>
+<p>future value of the investment. Corporations, therefore, will have to
+pay</p>
+<p>attention both to their short-term business results and to their
+long-term</p>
+<p>performance as providers of retirement benefits. The two are not</p>
+<p>irreconcilable, but they are different, and they will have to be
+balanced.</p>
+<h3 id="action-point">ACTION POINT:</h3>
+<p>Manage your company so that it produces both short-term</p>
+<p>results and has strong results over the long term to satisfy the
+interests of</p>
+<p>pension-fund shareholders.</p>
+<p>Managing in the Next Society</p>
+<h4 id="the-next-society-corpedia-online-program">The Next Society
+(Corpedia Online Program)</h4>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

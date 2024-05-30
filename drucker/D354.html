@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="第三同读" />
+  <title>德鲁克日志</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">德鲁克日志</h1>
+<p class="author">第三同读</p>
+</header>
+<h2 id="透过金庸读懂德鲁克">透过金庸读懂德鲁克</h2>
+<p>从一件小事看黄蓉的智慧</p>
+<p>黄蓉给大家的印象是聪慧，机智，机会没有她解决不了的问题。</p>
+<p>十几岁的她，远远超过钻研了一辈子术数的瑛姑；随便摆个阵，就可以困住武功远远告诉她的金轮法</p>
+<p>王；一边看一边就学会了洪七公的《逍遥游》；面对武功远高于自己的欧阳克，在那样一个孤岛上，</p>
+<p>还带着一个受了重伤的洪七公，居然压住了欧阳克。</p>
+<p>不过，这些聪明或多或少有一些金庸的喜爱在里头，甚至有些聪明表现的有点过，近似妖了。</p>
+<p>今天我要说的是一个很小的细节，从这个细节可以看出，即使没有主角光环，黄蓉也是聪慧异常的。</p>
+<p>而且是那种久经历练的大智慧。</p>
+<p>我要说的是黄蓉和李莫愁打斗一场后，发现李莫愁其实对自己的孩子还是挺好的，就对李莫愁有了好</p>
+<p>感。</p>
+<p>同时，黄蓉需要去找杨过，一方面救助杨过，一方面找回被杨过带走的小郭襄。而杨过大概是去了活</p>
+<p>死人墓。</p>
+<p>找到杨过后，黄蓉还需要去绝情谷去救武三通的师叔天竺神僧和朱子柳。所以黄蓉需要武力。</p>
+<p>这时，黄蓉身边有李莫愁；武三通父子三人；耶律齐、耶律燕兄妹二人；还有郭芙。其中李莫愁、武</p>
+<p>三通和耶律齐的武功都不错。</p>
+<p>李莫愁和武三通有深仇大恨；耶律齐有点喜欢郭芙，而耶律燕有点喜欢武敦儒。</p>
+<p>所以，为了完成找回郭襄，救助杨过，救回天竺神僧以及朱子柳。黄蓉需要联合手边仅有的这些武</p>
+<p>力。何况李莫愁是唯一知道如何进入活死人墓的人。</p>
+<p>这是一个简单地联盟，这个联盟由四方组成：黄蓉母女、武三通父子、耶律齐兄妹、李莫愁。</p>
+<p>在组成联盟前，各自有各自的目的。</p>
+<p>黄蓉母子要找过郭襄；武三通父子要救天竺神僧和朱子柳，耶律齐兄妹想留下了接触自己喜欢的人，</p>
+<p>而李莫愁想进入活死人墓，取到玉女心经。</p>
+<p>为了各自的目的，大家首先要进入活死人墓，找到杨过。</p>
+<p>这时，黄蓉做的第一件事是确定一个领导人：</p>
+<p>黄蓉道：“嗯，咱们人虽不多，也得有个发号施令之人。武兄，大夥儿一齐听你号令，谁都不可有</p>
+<p>违。”武三通连连摇手，说道：“有你这个神机妙算、亚赛诸葛的女军师在此，谁还敢发号施令？自然</p>
+<p>是穆桂英挂帅。”黄蓉笑道：“当真？”武三通道：“那还有假？”黄蓉笑道：“小辈们也还罢了，就怕你不</p>
+<p>听我号令。”武三通大声道：“你说什么，我便干什么。赴汤蹈火，在所不辞。”黄蓉道：“在这许多小辈</p>
+<p>之前，你可不能说过了话不算？”武三通胀红了脸，道：“便无人在旁，我也岂能言而无信？”</p>
+<p>当然，黄蓉确定的这个领导人是自己。她知道，在这些人里，自己是最佳的人选。</p>
+<p>接着黄蓉就逼着武三通答应不和李莫愁寻仇，当然，只是在联盟阶段。</p>
+<p>接着，黄蓉就宣布了这个联盟的步奏：先去活死人墓找杨过，找回郭襄，然后带着杨过一起去绝情谷</p>
+<p>找公孙止和裘千尺要绝情丹，同时救天竺神僧和朱子柳。</p>
+<p>黄蓉也知道，这个小联盟里，自己、武三通、李莫愁、耶律齐是四方的代表人，所以，在后续的历程</p>
+<p>中，黄蓉小心地处理这四人之间的关系。</p>
+<p>当李莫愁想反悔时，黄蓉就用武三通压她。让她不得不跟着联盟一起走下去。</p>
+<p>最后，这个联盟到了绝情谷，基本上完成了设定的任务。</p>
+<p>从这个小小的遭遇事件可以看出，黄蓉不亏是一个有智慧的人，也不愧做了这么多年的丐帮管理，而</p>
+<p>她在临时组织的这个联盟里，基本上做到了德鲁克建议的步奏：</p>
+<ol type="1">
+<li><p>在联盟前，考虑每个组织的目的，以及联盟的目的；</p></li>
+<li><p>考虑联盟成立后如何运作；</p></li>
+<li><p>精心选择联盟的负责人；</p></li>
+<li><p>每个组织都应该公布自己的组织架构；</p></li>
+<li><p>应该由每个组织的主要负责人负责和联盟的沟通。</p></li>
+</ol>
+<h2 id="大纲">大纲</h2>
+<h2 id="百字摘要">百字摘要</h2>
+<h2 id="金庸案例">金庸案例</h2>
+<h2 id="时间消耗">时间消耗</h2>
+<h2 id="阅读理解">阅读理解：</h2>
+<h2 id="大纲-1">大纲：</h2>
+<h2 id="撰写">撰写：</h2>
+<h2 id="录音">录音</h2>
+<h2 id="一小时运动">一小时运动</h2>
+<h2 id="英文原文">英文原文</h2>
+<p>19 DECEMBER</p>
+<p>Rules for Successful Alliances</p>
+<p>Alliances tend to get into serious trouble when they succeed.</p>
+<p>succeed：</p>
+<p>[ V ] ~ (in sth) | ~ (as sth) to be successful in your job, earning
+money, power, respect, etc.</p>
+<p>成功；有成就；有作为</p>
+<p>While their failure rate in early years is no higher than that of new
+ventures, alliances tend to get</p>
+<p>into serious trouble—sometimes fatal— when they succeed.</p>
+<p>ventures：</p>
+<p>冒险</p>
+<p>(</p>
+<p>从事活动)</p>
+<p>V-I If you venture into an activity, you do something that involves
+the risk of failure because it is new and different.</p>
+<p>Often when an alliance does well, it becomes apparent that the goals
+and objectives of the</p>
+<p>partners are not compatible.</p>
+<p>apparent：</p>
+<p>显而易见；明</p>
+<p>白易懂；显然</p>
+<p>[ not usually before noun ] ~ (from sth) (that…) | ~ (to sb) (that…)
+easy to see or understand SYN obvious</p>
+<p>The problems can be anticipated and largely prevented by following
+five rules.</p>
+<p>anticipated：</p>
+<p>ADJ If an event, especially a cultural event, is eagerly anticipated,
+people expect that it will be very good, exciting,</p>
+<p>or interesting.</p>
+<p>受期盼的</p>
+<p>Before the alliance is completed, all parties must think through
+their objectives and the objectives</p>
+<p>of the “child.” （ 1 ）</p>
+<p>Equally important is advance agreement on how the joint enterprise
+should be run. （ 2 ）</p>
+<p>Equally：</p>
+<p>平等地；同样地</p>
+<p>to the same degree; in the same or in a similar way</p>
+<p>Next, there has to be careful thinking about who will manage the
+alliance. （ 3 ）</p>
+<p>Each partner needs to make provisions in its own structure for the
+relationship to the joint</p>
+<p>enterprise and the other partners. （ 4 ）</p>
+<p>provisions：</p>
+<p>N-UNCOUNT The provision of something is the act of giving it or
+making it available to people who need or want it.</p>
+<p>提供</p>
+<p>The best way, especially in a large organization, is to entrust all
+such “dangerous liaisons” to one</p>
+<p>senior executive.</p>
+<p>entrust：</p>
+<p>委托；交托；托付</p>
+<p>liaisons：</p>
+<p>[ VN ] ~ A (to B) | ~ B with A to make sb responsible for doing sth
+or taking care of sb</p>
+<p>N-UNCOUNT If someone acts as liaison with a particular group, or
+between two or more groups, their job is to encourage</p>
+<p>联络员</p>
+<p>dangerous
+liaisons：中港韩三地红星章子怡、张柏芝和张东健携手主演的《危险关系》（Dangerous
+Liaisons）是最新版本，</p>
+<p>也是首部中国版</p>
+<p>co-operation and the exchange of information.</p>
+<p>Finally, there has to be prior agreement on how to resolve
+disagreements. （ 5 ）</p>
+<p>prior：</p>
+<p>优先的；占先的；较重要的</p>
+<p>already existing and therefore more important</p>
+<p>The best way is to agree, in advance of any dispute, on an arbitrator
+whom all sides know and</p>
+<p>respect and whose verdict will be accepted as final by all of
+them.</p>
+<p>dispute：</p>
+<p>美</p>
+<p>/dɪˈspjuːt/ /ˈdɪspjuːt/</p>
+<p>[ C U ] ~ (between A and B) | ~ (over/about sth) an argument or a
+disagreement between two</p>
+<p>people, groups or countries; discussion about a subject where there
+is disagreement</p>
+<p>arbitrator：</p>
+<p>verdict：</p>
+<p>a person who is chosen to settle a disagreement</p>
+<p>断</p>
+<p>仲裁人；公断人</p>
+<p>争论；辩论；争端；纠纷</p>
+<p>a decision that is made by a jury in court, stating if sb is
+considered guilty of a crime or not</p>
+<p>（陪审团的）裁定，裁决，裁</p>
+<h3
+id="action-point-alliances-have-been-portrayed-as-dangerous-liaisons.">ACTION
+POINT: Alliances have been portrayed as “dangerous liaisons.”</h3>
+<p>What is so dangerous about entering into an alliance?</p>
+<p>portrayed ：</p>
+<p>V-T When an actor or actress portrays someone, he or she plays that
+person in a play or movie.</p>
+<p>扮演</p>
+<p>liaisons：</p>
+<p>N-UNCOUNT Liaison is cooperation and the exchange of information
+between different organizations or between different</p>
+<p>sections of an organization.</p>
+<p>联络</p>
+<p>Managing for the Future</p>
+<h2 id="december">19 DECEMBER</h2>
+<h3 id="rules-for-successful-alliances">Rules for Successful
+Alliances</h3>
+<p>Alliances tend to get into serious trouble when they succeed.</p>
+<p>While their failure rate in early years is no higher than that of new
+ven-</p>
+<p>tures, alliances tend to get into serious trouble—sometimes fatal—
+when they</p>
+<p>succeed. Often when an alliance does well, it becomes apparent</p>
+<p>that the goals and objectives of the partners are not compatible.</p>
+<p>The problems can be anticipated and largely prevented by
+following</p>
+<p>five rules.</p>
+<p>Before the alliance is completed, all parties must think through</p>
+<p>their objectives and the objectives of the “child.”</p>
+<p>Equally important is advance agreement on how the joint</p>
+<p>enterprise should be run.</p>
+<p>Next, there has to be careful thinking about who will manage the</p>
+<p>alliance.</p>
+<p>Each partner needs to make provisions in its own structure for
+the</p>
+<p>relationship to the joint enterprise and the other partners. The
+best</p>
+<p>way, especially in a large organization, is to entrust all such</p>
+<p>“dangerous liaisons” to one senior executive.</p>
+<p>Finally, there has to be prior agreement on how to resolve</p>
+<p>disagreements. The best way is to agree, in advance of any
+dispute,</p>
+<p>on an arbitrator whom all sides know and respect and whose</p>
+<p>verdict will be accepted as final by all of them.</p>
+<h3 id="action-point">ACTION POINT:</h3>
+<p>Alliances have been portrayed as “dangerous liaisons.”</p>
+<p>What is so dangerous about entering into an alliance?</p>
+<h4 id="managing-for-the-future">Managing for the Future</h4>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

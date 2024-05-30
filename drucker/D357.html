@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="第三同读" />
+  <title>德鲁克日志</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">德鲁克日志</h1>
+<p class="author">第三同读</p>
+</header>
+<h2 id="透过金庸读懂德鲁克">透过金庸读懂德鲁克</h2>
+<p>做坏人奸！做好人要更奸！！！</p>
+<p>做好人的资格</p>
+<p>我为什么讨厌江南七怪</p>
+<p>我是非常讨厌江南七怪的。不但讨厌柯镇恶，也讨厌朱聪，也讨厌南希仁，全金发也不喜欢，甚至连</p>
+<p>着韩小莹也一起讨厌起来了。</p>
+<p>经常，我自己对自己的这个讨厌都感到莫名其妙。江南七怪是一些挺好的人呀，为什么我这么讨厌他</p>
+<p>们呢？</p>
+<p>首先，江南七怪都是很重情义的。在江湖上，这绝对是优良品质。江南七怪之间是很重情义的，即使</p>
+<p>张阿生死了，他们在教授郭靖武功时，还是教授了张阿生的武功，张阿生也算是郭靖的师父。</p>
+<p>当柯镇恶以为黄药师杀死了自己的其他兄弟时，他想的就是杀死郭靖、黄蓉等报仇。不惜一切代价。</p>
+<p>这些都是含金量非常高的情义。</p>
+<p>而且，江南七怪非常重侠义，这个在江湖上也是优良品质。当江南七怪知道侠义后代郭靖被人绑架</p>
+<p>后，当即万里追敌。</p>
+<p>当听说全真教要去收拾黄药师时，也不辞辛苦赶到桃花岛报信。</p>
+<p>最后，江南七怪是非常诚信的一个人，而且是愚信，一言九鼎。即使明知赴死，也绝不愿意食言。</p>
+<p>这样的人，我为什么那么讨厌呢？是我的三观有问题么？难道我居然是个坏人？</p>
+<p>今天读了德鲁克之后，我才知道，原来另有原因。</p>
+<p>江南七怪非常侠义，他们受人之托去阻止丘处机。他们一直觉得丘处机在为金兵工作，是金狗，可是</p>
+<p>他们倒是问一下呀。</p>
+<p>七个大活人，啥也见面就噼里啪啦一顿打，但凡有一个有脑子的，开个口，也不至于闹那么大的误</p>
+<p>会。</p>
+<p>再说，你就算帮焦木，也要问清楚呀，不问清楚，白白放走了抓着郭静妈妈林萍的段天德。</p>
+<p>再说了，你和丘处机大，打得过也算，打不过，不说，没理也不说，还那么横。仗着侠义，就着没脑</p>
+<p>子硬生生用自己的好心做成了坏事。</p>
+<p>再说柯镇恶的那些兄弟死在桃花岛的事情。也算杨康计策狠毒，放了瞎眼的柯镇恶去江湖上四处传说</p>
+<p>黄药师的狠毒。</p>
+<p>柯镇恶的眼睛是瞎的，他的心也是瞎的么？一些小小的计谋，就给自己的像儿子一样的弟子郭靖带来</p>
+<p>了灭顶之灾。</p>
+<p>他还觉得自己很委屈，不能为“兄弟们”报仇，不能全情义。</p>
+<p>对，这不是他第一次想杀郭靖，在郭靖十几岁的时候就有一次。那时，郭靖正在跟着丹阳子马钰学习</p>
+<p>轻功和金雁功。</p>
+<p>柯镇恶感觉到郭靖武功进展突然飞速了，就怀疑他有了别的师父。他们觉得不放心，就跟踪郭靖一</p>
+<p>趟，发现了梅超风的一些头骨。</p>
+<p>柯镇恶用他的猪脑子马上判断出了郭靖是在跟着梅超风学武，很快就要害死他们兄弟几个了。</p>
+<p>柯镇恶做了一个决定：</p>
+<p>柯镇恶将铁杖在地下重重一顿，低沉了声音道：“咱们现下回去，只作不知，待靖儿回来，先把他废</p>
+<p>了。“</p>
+<p>其实，这个决定韩小莹是不同意的，韩小莹认为，郭靖不是这样的人，毕竟，郭靖是他们带大的。</p>
+<p>不过，她自己一个人也做不了主，最后还是统一”废掉“郭靖了。由柯镇恶来下手。</p>
+<p>柯镇恶是如何做的呢？</p>
+<p>（郭靖）突然左右双手的手腕同时一紧，已给人抓住，跟着膝後剧疼，给人踢倒在地，呼的一声，铁</p>
+<p>杖当头砸落。郭靖侧身倒地，见持杖打来的正是大师父柯镇恶，只吓得魂飞天外，再也想不到抵挡挣</p>
+<p>扎，只闭目待死，却听得当的一声，兵刃相交，一人扑在自己身上。</p>
+<p>他睁眼看时，只见七师父韩小莹护住了自己，叫道：“大哥，且慢！”她手中长剑却已给柯镇恶铁杖砸</p>
+<p>飞。柯镇恶出声长叹，铁杖重重一顿，说道：“七妹总是心软。”</p>
+<p>还好七妹心软，不然郭靖就死在了柯镇恶手里，全剧终。</p>
+<p>这一段，柯镇恶杀郭靖的逻辑也是通的，也是本的兄弟情谊，因为他们要为张阿生报仇。</p>
+<p>唯一欠缺的，是这几人没脑子。</p>
+<p>是的，江南七怪重情义，有侠义，守诺言，他们也一心做好事，问题是，他们根本没有做好事的能</p>
+<p>力，每一件好事都做成了坏事，最后付出了惨痛的代价，如果不是郭靖、黄蓉的主角光环，这几个重</p>
+<p>情重义的侠义之士，早就被人打死了。</p>
+<h2 id="大纲">大纲</h2>
+<h2 id="百字摘要">百字摘要</h2>
+<h2 id="金庸案例">金庸案例</h2>
+<h2 id="时间消耗">时间消耗</h2>
+<h2 id="阅读理解">阅读理解：</h2>
+<h2 id="大纲-1">大纲：</h2>
+<h2 id="撰写">撰写：</h2>
+<h2 id="录音">录音</h2>
+<h2 id="一小时运动">一小时运动</h2>
+<h2 id="英文原文">英文原文</h2>
+<p>22 DECEMBER</p>
+<p>Limits of Social Responsibility</p>
+<p>“It is not enough for business to do well; it must also do good.”</p>
+<p>But in order to “do good,” a business must first “do well.”</p>
+<p>Whenever a business has disregarded the limitation of economic
+performance and has assumed</p>
+<p>social responsibilities that it could not support economically, it
+has soon gotten into trouble.</p>
+<p>disregarded：</p>
+<p>对 置之不理</p>
+<p>V-T If you disregard something, you ignore it or do not take account
+of it.</p>
+<p>…</p>
+<p>Union Carbide was not socially responsible when it put its plant into
+Vienna, West Virginia, to</p>
+<p>alleviate unemployment there.</p>
+<p>plant：</p>
+<p>发电厂；工厂</p>
+<p>alleviate：</p>
+<p>减轻；缓和；缓解</p>
+<p>[ C ] a factory or place where power is produced or an industrial
+process takes place</p>
+<p>[ VN ] to make sth less severe</p>
+<p>It was, in fact, irresponsible.</p>
+<p>irresponsible：</p>
+<p>( disapproving ) ( of a person</p>
+<p>responsibility</p>
+<p>不负责任的；无责任感的</p>
+<p>人 ) not thinking enough about the effects of what they do; not
+showing a feeling of</p>
+<p>The plant was marginal to begin with.</p>
+<p>marginal ：</p>
+<p>小的；微不足道的；不重要的</p>
+<p>small and not important</p>
+<p>The process was obsolescent.</p>
+<p>obsolescent： 荒废的；即将过时的；逐渐被废弃的</p>
+<p>process：</p>
+<ol start="14" type="a">
+<li></li>
+</ol>
+<p>dilapidated, ruined</p>
+<p>a method of doing or making sth, especially one that is used in
+industry</p>
+<p>做事方法；工艺流程；工序</p>
+<p>At best the plant could barely keep its head above water.</p>
+<p>And this, inevitably, meant a plant unable to take on social
+responsibility, even for its own impacts.</p>
+<p>inevitably：</p>
+<p>不可避免地；必然地</p>
+<p>impacts：</p>
+<p>as is certain to happen</p>
+<p>on them.</p>
+<p>影响</p>
+<p>N-COUNT The impact that something has on a situation, process, or
+person is a sudden and powerful effect that it has</p>
+<p>Because the plant was uneconomical to begin with, Union Carbide
+resisted so long all demands to</p>
+<p>clean it up.</p>
+<p>uneconomical：</p>
+<p>( also un·eco·nom·ic ) ~ (to do sth) using too much time or money, or
+too many materials, and therefore not</p>
+<p>likely to make a profit</p>
+<p>clean it up：清理</p>
+<p>浪费的；不节俭的；不经济的</p>
+<p>This particular demand could not have been foreseen in the late
+1940s, when concern with jobs far</p>
+<p>outweighed any concern for the environment.</p>
+<p>outweighed：vt. 比…重（在重量上）；比…重要；比…有价</p>
+<p>But demands of some kind can always be expected.</p>
+<p>To do something out of social responsibility that is economically
+irrational and untenable is</p>
+<p>therefore never responsible.</p>
+<p>out of:由于；缺乏；自…离开；用…（材料）</p>
+<p>irrational：</p>
+<p>不合逻辑的；没有道理的</p>
+<p>untenable：</p>
+<p>理论、地位等</p>
+<p>难以捍卫的；</p>
+<p>not based on, or not using, clear logical thought</p>
+<p>( formal ) ( of a theory, position, etc.</p>
+<p>站不住脚的；不堪一击的</p>
+<p>It is sentimental.</p>
+<p>sentimental：</p>
+<p>) that cannot be defended against attack or criticism</p>
+<p>connected with your emotions, rather than reason</p>
+<p>情感的（而非理性的）</p>
+<p>The result is always greater damage.</p>
+<h3 id="action-point">ACTION POINT:</h3>
+<p>Explain why this is true: In order for a business to “do good,” it
+must first “do well,” and indeed very</p>
+<p>well.</p>
+<p>Management: Tasks, Responsibilities, Practices</p>
+<p>【原书原文】</p>
+<p>Union Carbide and Vienna, West Virginia</p>
+<p>West Virginia, never one of the more prosperous areas of the United
+States, went into rapid</p>
+<p>economic decline in the late twenties as the coal industry, long the
+state’s mainstay, began to</p>
+<p>shrink. The decline of the coal industry was hastened by rising
+concern with mine accidents and</p>
+<p>miners diseases. For many of the coal mines of West Virginia were
+small and marginal and could</p>
+<p>not afford modern safety precautions or adequate health
+protection.</p>
+<p>By the late 1940s the leading industrial company in the state became
+alarmed over the steady</p>
+<p>economic shrinkage of the region. Union Carbide, one of America’s
+major chemi- cal companies,</p>
+<p>had its headquarters in New York. But the original plants of the
+company had been based on West</p>
+<p>Virginia coal, and the company was still the largest employer in the
+state, other than a few large</p>
+<p>coal mines. Accordingly, the company’s top management asked a group
+of young engineers and</p>
+<p>economists in its employ to prepare a plan for the creation of
+employment opportunities in West</p>
+<p>Virginia, and especially for the location of the company’s new plant
+facilities in areas of major</p>
+<p>unemployment in the state. For the worst afflicted area, however, the
+westernmost corner of the</p>
+<p>state on the border of Ohio, the planners could not come up with an
+attractive project. Yet this area</p>
+<p>needed jobs the most. In and around the little town of Vienna, West
+Virginia, there was total</p>
+<p>unemploy- ment, and no prospects for new industries. The</p>
+<p>only plant that could possibly be put in the Vienna area was a
+ferroalloy plant using a process that</p>
+<p>had already become obsolete and had heavy cost disadvantages compared
+to more modern</p>
+<p>processes such as Union Car- bide’s competitors were already
+using.</p>
+<p>Even for the old process, Vienna was basically an uneconomical
+location. The process required</p>
+<p>very large amounts of coal of fair quality. But the only coal
+available within the area was coal of</p>
+<p>such high sulfur content that it could not be used without expensive
+treatment and scrubbing. Even</p>
+<p>then—that is, after heavy capital investment—the process was
+inherently noisy and dirty, releasing</p>
+<p>large amounts of fly ash and of noxious gases.</p>
+<p>In addition, the only transportation facilities, both rail and road,
+were not in West Virignia but across</p>
+<p>the river, on the Ohio side. Putting the plant there, however, meant
+that the prevailing westerly</p>
+<p>winds would blow the soot from the smokestacks and the sul- fur
+released by the power plants</p>
+<p>directly into the town of Vienna, on the other bank of the river.</p>
+<p>Yet the Vienna plant would provide 1,500 jobs in Vienna itself and
+another 500 to 1,000 jobs in a</p>
+<p>new coal field not too far distant. In addition, the new coal field
+would be capable of being stripmined, so the new mining jobs would be
+free from the accident and health hazards that had</p>
+<p>become increasingly serious in the old and worked-out coal mines of
+the area. Union Carbide top</p>
+<p>management came to the conclusion that social responsi- bility
+demanded building the new plant,</p>
+<p>despite its marginal economics.</p>
+<p>The plant was built with the most up-to-date antipollution equipment
+known at the time. Whereas</p>
+<p>even big-city power stations were then content to trap half the fly
+ash es- caping their</p>
+<p>smokestacks, the Vienna plant installed scrubbers to catch 75
+percent— though there was little</p>
+<p>anyone could do about the sulfur dioxide fumes emitted by the
+high-sulfur coal.</p>
+<p>When the plant was opened in 1951, Union Carbide was the hero.
+Politicians, public figures,</p>
+<p>educators, all praised the company for its social responsibility. But
+ten years later the former savior</p>
+<p>was fast becoming the public enemy. As the nation became
+pollutionconscious, the citizens of Vienna began to complain more and
+more bitterly about the ash, the</p>
+<p>soot, and the fumes that floated across the river into their town and
+homes. About 1961 a new</p>
+<p>mayor was elected on the platform “fight pollution,” which meant
+“fight Un- ion Carbide.” Ten years</p>
+<p>later the plant had become a “national scandal.” Even Business
+Week—hardly a publication hostile</p>
+<p>to business—chastised Union Carbide (in February, 1971) in an article
+entitled “A Corporate Polluter</p>
+<p>Learns the Hard Way.”</p>
+<p>There is little doubt that Union Carbide’s management did not behave
+very intelli- gently. They</p>
+<p>should have realized in the early sixties that they were in trouble,
+rather than delay and</p>
+<p>procrastinate, make and then break promises—until the citizens, the
+state gov- ernment, the press,</p>
+<p>the environmentalists, and the federal government all were aiming
+their biggest guns at the</p>
+<p>company. It was not very smart to protest for years that there was
+nothing wrong with the plant and</p>
+<p>then, when governmental authorities began to get nasty, announce that
+the plant would have to be</p>
+<p>closed as it could not be brought up to environ- mental
+standards.</p>
+<p>Yet this is not the basic lesson of this cautionary tale. Once the
+decision had been made to employ</p>
+<p>an obsolescent process and to build an economically marginal plant
+in</p>
+<p>order to alleviate unemployment in a bitterly depressed area, the
+rest followed more or less</p>
+<p>automatically. This decision meant that the plant did not generate
+the revenues needed to be</p>
+<p>rebuilt. There is very little doubt that on economic reasoning alone
+the plant would never have been</p>
+<p>built. Public opinion forced Union Carbide to invest substantial sums
+in that plant to remedy the</p>
+<p>worst pollution problems—though it is questionable whether the
+technology exists to do more than</p>
+<p>a patch-up job. Publicity also forced Union Carbide to keep the plant
+open. But, once the spotlight</p>
+<p>shifts elsewhere, most of the jobs in the Vienna, West Virginia,
+plant are likely to disappear again, if</p>
+<p>indeed the plant re- mains open at all.</p>
+<h2 id="december">22 DECEMBER</h2>
+<h3 id="limits-of-social-responsibility">Limits of Social
+Responsibility</h3>
+<p>“It is not enough for business to do well; it must also do good.”</p>
+<p>But in order to “do good,” a business must first “do well.”</p>
+<p>Whenever a business has disregarded the limitation of economic
+per-formance</p>
+<p>and has assumed social responsibilities that it could not</p>
+<p>support economically, it has soon gotten into trouble.</p>
+<p>Union Carbide was not socially responsible when it put its plant into
+Vi-</p>
+<p>enna, West Virginia, to alleviate unemployment there. It was, in
+fact, irre-</p>
+<p>sponsible. The plant was marginal to begin with. The process was</p>
+<p>obsolescent. At best the plant could barely keep its head above
+water. And</p>
+<p>this, inevitably, meant a plant unable to take on social
+responsibility, even for</p>
+<p>its own impacts. Because the plant was uneconomical to begin with,
+Union</p>
+<p>Carbide resisted so long all demands to clean it up. This particular
+demand</p>
+<p>could not have been foreseen in the late 1940s, when concern with
+jobs far</p>
+<p>outweighed any concern for the environment. But demands of some kind
+can</p>
+<p>always be expected. To do something out of social responsi-bility
+that is</p>
+<p>economically irrational and untenable is therefore never
+re-sponsible. It is</p>
+<p>sentimental. The result is always greater damage.</p>
+<h3 id="action-point-1">ACTION POINT:</h3>
+<p>Explain why this is true: In order for a business to “do</p>
+<p>good,” it must first “do well,” and indeed very well.</p>
+<h4 id="management-tasks-responsibilities-practices">Management: Tasks,
+Responsibilities, Practices</h4>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

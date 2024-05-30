@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="第三同读" />
+  <title>德鲁克日志</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">德鲁克日志</h1>
+<p class="author">第三同读</p>
+</header>
+<h2 id="透过金庸读懂德鲁克">透过金庸读懂德鲁克</h2>
+<p>如何获得权力？</p>
+<p>韦小宝说过，小丈夫一日不可无钱，大丈夫一日不可无权。我是小丈夫，所以比较爱财，身边也有一</p>
+<p>些大丈夫，他们比较爱权。</p>
+<p>其实财和权，相互呼应、勾结，有钱自然就有一些权；而有权也就很容易有钱。小宝作为一个不大不</p>
+<p>小的官，短短的几年里贪污了几百万两白银，很好滴证明了有权就可以有钱。</p>
+<p>那么，怎么可以快速获得权力呢？获得权力有很多方式，比如卖身相府就是一个很好的途径。不是说</p>
+<p>宰相门前七品官嘛，接近权力是最好的获得权力的方式。</p>
+<p>不过，这些指的都是成熟的权力体系。那么在一个人群中，普普通通的人群中，如何获得权力呢？靠</p>
+<p>知识？靠认知？靠钱财？</p>
+<p>或许都可以，那么，靠知识、认知或者钱财获得权力的本质是什么呢？某一天我突然找到了答案：恐</p>
+<p>惧。</p>
+<p>按照马斯洛的需求层次理论，人最底层的两个需求是生理需求和安全需求。人一旦满足了基本的生理</p>
+<p>需求后，就面临着安全的需求。而人是一个安全性很差的动物。在现实社会中，人会为了安全的需求</p>
+<p>让渡很多权利。</p>
+<p>比如，飞机的安检，人们期待非常安全的飞机，所以可以接受任何级别的飞机安检。没有人认为飞机</p>
+<p>安检有辱人格。</p>
+<p>地铁安检也一样，每一个地铁口都放一个口号：配合安检，安全你我他。大家觉得被人拿着棍棍在身</p>
+<p>上摸来摸去是很正常的：他们是为我们的安全考虑呀。</p>
+<p>有资料显示美国政府是获得了日本偷袭珍珠港的情报的，不过，他们并没有采取动作，因为他需要让</p>
+<p>自己的国民陷入恐惧中，这样他们才可以迅速通过相关的军事法案。</p>
+<p>果然，偷袭珍珠港后，美国政府获得了巨大的权力，美国所有的涉军事行动的法案都迅速通过，二战</p>
+<p>局势从而改变。</p>
+<p>其实，这是政治人物用的方式：贩卖一些恐惧，然后告诉你，他是来解除你的恐惧的。而你唯一要付</p>
+<p>出的就是你的一部分自由：让他搜身，甚至让他随意处置你的生命。</p>
+<p>随着你出让的权力越多，他获得的权力也就越大。</p>
+<p>随着他的权力越来越大，他也就有能力做任何事情。甚至得到其他民众的支持。</p>
+<p>你可以试想，如果你不配合安检，恐怕首先发怒的不是安检人员，而是其他被安检的人员：你他妈的</p>
+<p>怎么那么多事？人家可是为你好呀。</p>
+<p>所以，刘慈欣说：当人类真正流落太空时，极权只需五分钟。因为在太空中，所有人都亟需安全感。</p>
+<h2 id="大纲">大纲</h2>
+<h2 id="百字摘要">百字摘要</h2>
+<p>自由 VS 平等和安全</p>
+<h2 id="金庸案例">金庸案例</h2>
+<h2 id="时间消耗">时间消耗</h2>
+<h2 id="阅读理解">阅读理解：</h2>
+<h2 id="大纲-1">大纲：</h2>
+<h2 id="撰写">撰写：</h2>
+<h2 id="录音">录音</h2>
+<h2 id="一小时运动">一小时运动</h2>
+<h2 id="英文原文">英文原文</h2>
+<p>26 DECEMBER</p>
+<p>Return of the Demons</p>
+<p>Demon：</p>
+<p>恶魔；魔鬼，</p>
+<p>an evil spirit</p>
+<p>( informal ) a person who does sth very well or with a lot of
+energy</p>
+<p>人，something that causes a person to worry and makes them unhappy
+（使人担忧和不快的）邪恶事物</p>
+<p>技艺出众的人；精力充沛的</p>
+<p>Return of：？？？</p>
+<p>If freedom is incompatible with security, the masses will decide for
+security.</p>
+<dl>
+<dt>incompatible：</dt>
+<dd>
+<p>(with sth) two actions, ideas, etc. that are incompatible are not
+acceptable or possible together because of</p>
+</dd>
+</dl>
+<p>basic differences</p>
+<p>masses：</p>
+<p>（与某事物）不一致，不相配</p>
+<p>N-PLURAL the body of common people</p>
+<p>群众</p>
+<p>The masses, then, have become prepared to abandon freedom if this
+promises to reestablish the</p>
+<p>rationality of the world.</p>
+<p>promises：</p>
+<p>承诺</p>
+<p>reestablish： 恢复，重建；复兴</p>
+<p>rationality：</p>
+<p>有限理性</p>
+<p>V-T/V-I If you promise that you will do something, you say to someone
+that you will definitely do it.</p>
+<ol start="14" type="a">
+<li></li>
+</ol>
+<p>restore, repair</p>
+<p>bounded rationality</p>
+<p>If freedom is incompatible with equality, they will give up
+freedom.</p>
+<p>equality：</p>
+<p>平等；均等；相等</p>
+<p>[ U ] the fact of being equal in rights, status, advantages, etc.</p>
+<p>If it is incompatible with security, they will decide for
+security.</p>
+<p>decide for：作对…有利的决定；赞成做某事</p>
+<p>To be free or not has become a secondary question, since the freedom
+available does not help to</p>
+<p>banish the demons.</p>
+<p>banish：</p>
+<p>放逐；流放；把</p>
+<p>[ usually passive ] ~ sb (from…) (to…) to order sb to leave a place,
+especially a country, as a punishment</p>
+<p>（某人）驱逐出境</p>
+<p>Since the “free” society is the one that is threatened by the demons,
+it seems more than plausible</p>
+<p>to blame freedom and to expect delivery from despair through the
+abandonment of freedom.</p>
+<p>threatened：adj. 受到威胁的</p>
+<p>plausible：</p>
+<p>借口或解释</p>
+<p>有道理的；可信的</p>
+<p>blame：</p>
+<p>把 归咎于；责怪；指责</p>
+<p>despair：</p>
+<p>绝望</p>
+<p>delivery：</p>
+<p>传送；递送；交付</p>
+<p>( of an excuse or explanation</p>
+<p>) reasonable and likely to be true</p>
+<p>[ VN ] ~ sb/sth (for sth) | ~ sth on sb/sth to think or say that
+sb/sth is responsible for sth bad</p>
+<p>…</p>
+<p>[ U ] the feeling of having lost all hope</p>
+<p>[ U C ] the act of taking goods, letters, etc. to the people they
+have been sent to</p>
+<h3 id="action-point">ACTION POINT:</h3>
+<p>The passage refers to the embrace by Europe of Nazism to escape the
+demons of war and</p>
+<p>depression.</p>
+<p>passage：</p>
+<p>章节；段落；乐段</p>
+<p>[ C ] a short section from a book, piece of music, etc.</p>
+<p>embrace：</p>
+<p>[ VN ] ( formal ) to accept an idea, a proposal, a set of beliefs,
+etc., especially when it is done with enthusiasm</p>
+<p>受，乐意采纳（思想、建议等）；信奉（宗教、信仰等）</p>
+<p>Nazism：n. 纳粹主义</p>
+<p>depression：</p>
+<p>不景气</p>
+<p>[ C U ] a period when there is little economic activity and many
+people are poor or without jobs</p>
+<p>欣然接</p>
+<p>萧条期；经济衰退；</p>
+<p>Why will society be more likely to embrace complete regimentation and
+totalitarianism in the</p>
+<p>absence of strong institutions?</p>
+<p>embrace：</p>
+<p>欣然接</p>
+<p>[ VN ] ( formal ) to accept an idea, a proposal, a set of beliefs,
+etc., especially when it is done with enthusiasm</p>
+<p>受，乐意采纳（思想、建议等）；信奉（宗教、信仰等）</p>
+<p>regimentation：N-UNCOUNT Regimentation is very strict control over
+the way a group of people behave or the way something</p>
+<p>is done. 严格管理; 严格控制</p>
+<p>totalitarianism：n. 极权主义</p>
+<p>institutions：N-COUNT/N-IN-NAMES An institution is a large important
+organization such as a university, church, or bank. 机构</p>
+<p>The End of Economic Man</p>
+<h2 id="december">26 DECEMBER</h2>
+<h3 id="return-of-the-demons">Return of the Demons</h3>
+<p>If freedom is incompatible with security, the masses will decide for
+security.</p>
+<p>The masses, then, have become prepared to abandon freedom if this</p>
+<p>promises to reestablish the rationality of the world. If freedom is
+in-</p>
+<p>compatible with equality, they will give up freedom. If it is
+incompatible</p>
+<p>with security, they will decide for security. To be free or not has
+become</p>
+<p>Asecondary question, since the freedom available does not help to
+banish</p>
+<p>the demons. Since the “free” society is the one that is threatened by
+the</p>
+<p>demons, it seems more than plausible to blame freedom and to expect
+de-</p>
+<p>livery from despair through the abandonment of freedom.</p>
+<h3 id="action-point-1">ACTION POINT:</h3>
+<p>The passage refers to the embrace by Europe of Nazism to</p>
+<p>escape the demons of war and depression. Why will society be more</p>
+<p>likely to embrace complete regimentation and totalitarianism in the
+ab-</p>
+<p>sence of strong institutions?</p>
+<h4 id="the-end-of-economic-man">The End of Economic Man</h4>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

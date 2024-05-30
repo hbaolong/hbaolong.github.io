@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="第三同读" />
+  <title>德鲁克日志</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">德鲁克日志</h1>
+<p class="author">第三同读</p>
+</header>
+<h2 id="透过金庸读懂德鲁克">透过金庸读懂德鲁克</h2>
+<p>德鲁克说了一个很有趣的观点，就是在1918年到1960年之间，民众对政府有着无限的依赖。那个时间</p>
+<p>正好经历的两次世界大战。</p>
+<p>1960年之后，民众和政府的热恋期结束了，因为政府一次次让民众失望。</p>
+<p>在蜜月期，民众习惯性把自己需要的东西告诉政府，然后就认为这件事解决的，而有时候这件事也确</p>
+<p>实解决了。</p>
+<p>后来，越来越多的事情，政府解决不了，民众就会提出修改的方案，并且认为政府还是会解决的。</p>
+<p>再后来，越来越多的事情政府解决不了。热恋期就结束了。</p>
+<p>亚当斯密对君主的职责有个定义：</p>
+<p>君主只有三种应尽的职责，这三条职责虽然极其重要，但对于常人都是简单易懂的：</p>
+<p>第一，保护社会不受其他独立社会之侵犯；</p>
+<p>第二，尽可能保护社会任何成员不受其他任何成员的侵犯和压迫，即设立完全公正的司法机构；</p>
+<p>第三，建立和维护个人或小团体所不感兴趣投入的某些公共设施和公共机构，因为这些设施和机构产</p>
+<p>生的利润绝不可能补偿个人和小团体的投入，尽管对社会整体来说，常常是不仅能收回投入，而且还</p>
+<p>能得到大得多的回报。</p>
+<p>热恋期的民众期待政府做更多的事情，政府也确实的努力做更多的事情，然而政府的能力是有限的。</p>
+<p>并做不了更多的事情。</p>
+<p>最后，德鲁克给出了一个建议：用企业的逻辑来解决社会问题。</p>
+<h2 id="百字摘要">百字摘要</h2>
+<h2 id="金庸案例">金庸案例</h2>
+<p>10 MAY</p>
+<p>Sickness of Government</p>
+<p>Our love affair with government is over, although we keep the old
+mistress around.</p>
+<p>mistress：</p>
+<p>（尤指旧时雇用仆人的）女主人，主妇</p>
+<p>he female head of a house, especially one who employed servants</p>
+<p>Rarely has there been a more torrid political love affair than that
+between government and the</p>
+<p>generations that reached adulthood between 1918 and 1960.</p>
+<p>torrid ：</p>
+<p>（尤指情爱）热烈的，狂热的，热情洋溢的</p>
+<p>political：</p>
+<p>政治的；政府的；政权的</p>
+<p>generations ：</p>
+<p>full of strong emotions, especially connected with sex and love</p>
+<p>connected with the state, government or public affairs</p>
+<p>A generation is all the people in a group or country who are of a
+similar age, especially when they are considered</p>
+<p>as having the same experiences or attitudes.</p>
+<p>一代人</p>
+<p>Anything anyone felt needed doing during this period was to be turned
+over to government—and</p>
+<p>this, everyone seemed to believe, made sure that the job was already
+done.</p>
+<p>turned over：移交给；</p>
+<p>But now our attitudes are in transition.</p>
+<p>transition：</p>
+<p>the process or a period of changing from one state or condition to
+another</p>
+<p>过渡；转变；变革；变迁</p>
+<p>We are rapidly moving to doubt and distrust of government.</p>
+<p>We still, if only out of habit, turn social tasks over to
+government.</p>
+<p>We still revise unsuccessful programs over and over again, and assert
+that nothing is wrong with</p>
+<p>them that a change in procedures will not cure.</p>
+<p>revise:</p>
+<p>改变，修改（意见或计划）</p>
+<p>to change your opinions or plans, for example because of sth you have
+learned</p>
+<p>But we no longer believe these promises when we reform a bungled
+program for the third time.</p>
+<p>reform:</p>
+<p>改革；改进；改良</p>
+<p>bungled</p>
+<p>搞砸</p>
+<p>to improve a system, an organization, a law, etc. by making changes
+to it</p>
+<p>:If you bungle something, you fail to do it properly, because you
+make mistakes or are clumsy.</p>
+<p>We no longer expect results from government.</p>
+<p>Who, for instance, believes anymore that changes in the foreign aid
+program of the United States</p>
+<p>(or of the United Nations) will really produce rapid worldwide
+development?</p>
+<p>What was a torrid romance between the people and government for so
+very long has now become</p>
+<p>a tired, middleaged liaison that we do not know how to break off but
+that only becomes</p>
+<p>exacerbated by being dragged out.</p>
+<h3
+id="action-point-propose-a-program-to-your-congressional-representative-that-applies-logic-from-the">ACTION
+POINT: Propose a program to your congressional representative that
+applies logic from the</h3>
+<p>work of your enterprise to solve a social problem and that doesn’t
+require new government funds.</p>
+<p>The Age of Discontinuity</p>
+<h2 id="may">10 MAY</h2>
+<h3 id="sickness-of-government">Sickness of Government</h3>
+<p>Our love affair with government is over,</p>
+<p>although we keep the old mistress around.</p>
+<p>Rarely has there been a more torrid political love affair than that
+be-tween</p>
+<p>government and the generations that reached adulthood be-tween 1918
+and</p>
+<ol start="1960" type="1">
+<li>Anything anyone felt needed doing during this period was to be
+turned</li>
+</ol>
+<p>over to government—and this, everyone seemed to</p>
+<p>believe, made sure that the job was already done.</p>
+<p>But now our attitudes are in transition. We are rapidly moving to
+doubt</p>
+<p>and distrust of government. We still, if only out of habit, turn
+social tasks</p>
+<p>over to government. We still revise unsuccessful programs over and
+over</p>
+<p>again, and assert that nothing is wrong with them that a change in
+proce-</p>
+<p>dures will not cure. But we no longer believe these promises when we
+re-</p>
+<p>form a bungled program for the third time. We no longer expect
+results</p>
+<p>from government. Who, for instance, believes anymore that changes
+in</p>
+<p>the foreign aid program of the United States (or of the United
+Nations)</p>
+<p>will re-ally produce rapid worldwide development? What was a
+torrid</p>
+<p>romance between the people and government for so very long has
+now</p>
+<p>become a tired, middle-aged liaison that we do not know how to break
+off</p>
+<p>but that only becomes exacerbated by being dragged out.</p>
+<h3 id="action-point">ACTION POINT:</h3>
+<p>Propose a program to your congressional representative</p>
+<p>that applies logic from the work of your enterprise to solve a
+social</p>
+<p>problem and that doesn’t require new government funds.</p>
+<h4 id="the-age-of-discontinuity">The Age of Discontinuity</h4>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="第三同读" />
+  <title>德鲁克日志</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">德鲁克日志</h1>
+<p class="author">第三同读</p>
+</header>
+<h2 id="透过金庸读懂德鲁克">透过金庸读懂德鲁克</h2>
+<p>从微信群封群说起</p>
+<p>今天下午15：30分左右，我所在的一个群被封了。15：30分左右，新群建立起来了。新群和老群几乎</p>
+<p>是同一个人群，老群是360多人，新群是300多人。</p>
+<p>这几天由于NCP的原因，很多热所在的群都被封了，也有很多群建立起来了。这也是微信生态的一个</p>
+<p>特色：因为建群的零边际成本，每个人都在无数的群中。而大部分群，都是没有价值的。</p>
+<p>每一个群，都它的一开始，都是有一些想法的。它总是试着改变些什么，而且很多群也确实改变了很</p>
+<p>多。比如，我有一个20多人的群，到现在已经6、7年了吧。还是一直很活跃，群里的人我从一个都没</p>
+<p>见过到现在见过超过一半了。而且和大家的感情非常好。而且，这个群对我的改变也很大。</p>
+<p>那么，什么样的群是有价值的呢？如何做一个有价值的群呢？群为什么会没人说话呢？没人说话的群</p>
+<p>应该如何处理呢？</p>
+<p>如果，你要做一个有价值的群，在做这个群之前你要想好你这个群的目的。一个人加入一个群，无外</p>
+<p>乎这几个理由：认识人，获取信息或者收获好友。</p>
+<p>如果你要做一个有价值的群，首先你要有一个目的，这个目的是目前没有人在做的，或者身边有人需</p>
+<p>要但没有的。比如，很多男生或者女生需要认识可以恋爱的异性。这就是一个需求，如果你有这个想</p>
+<p>法，你就可以把这个当成目的。</p>
+<p>当然，这几天NCP的事情是重点，你也可以组建一个群来让大家交流NCP的信息，这肯定也会有很多</p>
+<p>人加入的。</p>
+<p>有了目的后，就要定义人群了。未来每个加入群的人都会有自己的诉求，而你，作为这个群的发起</p>
+<p>人，要有自己的诉求。</p>
+<p>「我没有诉求，就是觉得好玩」，其实，这也是诉求，就像你喜欢开个茶馆，每天坐在茶馆听人来人</p>
+<p>往的唠嗑一样。所以，每一个建群的人，都要明确自己的诉求：我是想获取人脉？获取什么样的人</p>
+<p>脉？获取信息？获取什么样的信息？交朋友？交到什么样的朋友？这些是你一定要清楚的。</p>
+<p>清楚了自己的诉求后，就可以根据自己的诉求来定义人群，如果你是想尽可能多地了解”年轻妈妈在孩</p>
+<p>子教育上是如何想的“，那么，你就要去邀请尽可能多的妈妈群体。（我们有个智慧父母群，有兴趣的</p>
+<p>同学欢迎加微信dtsxiaobao（备注智慧父母）加入）。</p>
+<p>定义好人群后，你要想一下这个群应该有哪些日常的交流。</p>
+<p>如果是一个信息交流群的话，你需要邀请几个信息信息达人。如果是智慧父母群的话，你需要邀请几</p>
+<p>个教育界的人士。如果是金庸武侠交流群的话，你需要找到一些”九品高手“。</p>
+<p>找到这些人后，你的群就建立起来了。这些人就是你的”启动客户群“。</p>
+<p>然后就是nobody了，符合要求的nobody。智慧父母群，就是家有小宝的爸爸妈妈们了；信息交流群就</p>
+<p>是各种信息的关注者了。微信互相点赞群，就是用微信读书的用户了，而跑步群，就是喜欢而且经常</p>
+<p>跑步或者健身的人群了。</p>
+<p>有了这些人后，一个群就建立起来了。这个群可能会非常活跃，也可能不大活跃，这都没关系，这就</p>
+<p>是你下一步要做的了：不断给这个“池塘”蓄水，或者添加“鱼”。</p>
+<p>每一个活跃的群，都是一个生态圈，这个生态圈需要各种角色，当生态不完整时，群就需要外力的干</p>
+<p>涉（充氧？加温？），一旦生态圈建立起了了，他就可以自运行了。</p>
+<p>如果建立不起来，那么，过段时间，这个群也就死了：几具尸体，遍地荒凉。这时的你，也就认了</p>
+<p>吧，把群解散。</p>
+<p>你有没有发现，建一个微信群非常像做一个公司，如果你想开公司，又没有经验的话，你可以研究一</p>
+<p>下身边的需求（客户需求分析），确定一个微信群主题（确定创业项目），并定位群友（定位客户群</p>
+<p>体），然后找到群最基础的一些人（初期启动客户），然后运营这个群（形成生态）。这一套下来，</p>
+<p>你会感触颇多。</p>
+<p>在这个大家都待在家疯狂上网的时节，你要不要试试？</p>
+<p>【投票】</p>
+<h2 id="大纲">大纲</h2>
+<h2 id="百字摘要">百字摘要</h2>
+<h2 id="金庸案例">金庸案例</h2>
+<h2 id="时间消耗">时间消耗</h2>
+<h2 id="阅读理解">阅读理解：</h2>
+<h2 id="大纲-1">大纲：</h2>
+<h2 id="撰写">撰写：</h2>
+<h2 id="录音">录音</h2>
+<h2 id="一小时运动">一小时运动</h2>
+<h2 id="英文原文">英文原文</h2>
+<p>9 FEBRUARY</p>
+<p>Organizations Destabilize Communities</p>
+<p>Destabilize：</p>
+<p>[ VN ] to make a system, country, government, etc. become less firmly
+established or successful</p>
+<p>使（制度、国家、</p>
+<p>政府等）动摇；使不安定；使不稳定</p>
+<p>Communities：[ sing. ] all the people who live in a particular area,
+country, etc. when talked about as a group 社区；社会</p>
+<p>In its culture, the organization always transcends the community.</p>
+<p>transcends：</p>
+<p>them.</p>
+<p>超越</p>
+<p>V-T Something that transcends normal limits or boundaries goes beyond
+them, because it is more significant than</p>
+<p>Modern organizations have to operate in a community.</p>
+<p>Their results are in the community.</p>
+<p>Yet the organization cannot submerge itself in the community or
+subordinate itself to that</p>
+<p>community.</p>
+<p>submerge：</p>
+<p>（使）潜入水</p>
+<p>to go under the surface of water or liquid; to put sth or make sth go
+under the surface of water or liquid</p>
+<p>中，没入水中，浸没，淹没</p>
+<p>subordinate：/səˈbɔːdɪneɪt/ 美 /‑ˈbɔːrd‑/ [ VN ] ~ sb/sth (to sb/sth)
+to treat sb/sth as less important than sb/sth else 把…置于次要</p>
+<p>地位；使从属于</p>
+<p>Its “culture” has to transcend community.</p>
+<p>transcends：</p>
+<p>them.</p>
+<p>V-T Something that transcends normal limits or boundaries goes beyond
+them, because it is more significant than</p>
+<p>超越</p>
+<p>Companies on which local communities depend for employment close
+their factories or replace</p>
+<p>grizzled model-makers who have spent years learning their craft with
+twenty-five-year-old “whiz</p>
+<p>kids” who know computer simulation.</p>
+<p>grizzled：</p>
+<p>（头发）灰白的，花白的</p>
+<p>craft：</p>
+<p>手艺；工艺</p>
+<p>whiz kid：</p>
+<p>优等生；神童</p>
+<p>( literary ) having hair that is grey or partly grey</p>
+<p>[ C U ] an activity involving a special skill at making things with
+your hands</p>
+<p>whiz kid n.</p>
+<p>Every one of such changes upsets the community.</p>
+<p>upsets：upsets：</p>
+<p>you.</p>
+<p>难过的; 沮丧的</p>
+<p>ADJ If you are upset, you are unhappy or disappointed because
+something unpleasant has happened to</p>
+<p>Every one is perceived as “unfair.”</p>
+<p>perceived：</p>
+<p>V-T If you perceive something, you see, notice, or realize it,
+especially when it is not obvious.</p>
+<p>感知到</p>
+<p>Every one destabilizes.</p>
+<p>destabilizes：</p>
+<p>V-T To destabilize something such as a country or government means to
+create a situation which reduces its</p>
+<p>power or influence.</p>
+<p>使不稳定</p>
+<p>It is the nature of the task that determines the culture of an
+organization, rather than the</p>
+<p>community in which that task is being performed.</p>
+<p>Each organization’s value system is determined by its task.</p>
+<p>Every hospital, every school, every business, has to believe that
+what it is doing is an essential</p>
+<p>contribution on which all the others in the community depend in the
+last analysis.</p>
+<p>analysis：</p>
+<p>（对事物的）</p>
+<p>[ U C ] the detailed study or examination of sth in order to
+understand more about it; the result of the study</p>
+<p>分析，分析结果</p>
+<p>To perform its task successfully, it has to be organized and managed
+the same way.</p>
+<p>If an organization’s culture clashes with the values of its
+community, the organization’s culture will</p>
+<p>prevail—or else the organization will not be able to make its social
+contribution.</p>
+<p>clashes ：</p>
+<p>发生冲突 产生矛盾</p>
+<p>prevail：</p>
+<p>普遍存在；盛行；流行</p>
+<p>V-RECIP When people clash, they fight, argue, or disagree with each
+other.</p>
+<dl>
+<dt>;</dt>
+<dd>
+<p>(in/among sth) to exist or be very common at a particular time or in
+a particular place</p>
+</dd>
+</dl>
+<h3 id="action-point">ACTION POINT:</h3>
+<p>If WalMart wishes to move into your neighborhood against the wishes
+of the neighborhood, what</p>
+<p>actions should WalMart take?</p>
+<p>Under what conditions would it be wise for it to withdraw its
+move?</p>
+<p>Post-Capitalist Society</p>
+<h2 id="february">9 FEBRUARY</h2>
+<h3 id="organizations-destabilize-communities">Organizations Destabilize
+Communities</h3>
+<p>In its culture, the organization always transcends the community.</p>
+<p>Modern organizations have to operate in a community. Their results
+are</p>
+<p>in the community. Yet the organization cannot submerge itself in
+the</p>
+<p>community or subordinate itself to that community. Its “culture” has
+to</p>
+<p>transcend community. Companies on which local communities depend
+for</p>
+<p>employment close their factories or replace grizzled model-makers who
+have</p>
+<p>spent years learning their craft with twenty-five-year-old “whiz
+kids” who</p>
+<p>know computer simulation. Every one of such changes upsets the
+community.</p>
+<p>Every one is perceived as “unfair.” Every one destabilizes.</p>
+<p>It is the nature of the task that determines the culture of an
+organization,</p>
+<p>rather than the community in which that task is being performed. Each
+or-</p>
+<p>ganization’s value system is determined by its task. Every hospital,
+every</p>
+<p>school, every business, has to believe that what it is doing is an
+essential</p>
+<p>contribution on which all the others in the community depend in the
+last</p>
+<p>analysis. To perform its task successfully, it has to be organized
+and man-</p>
+<p>aged the same way. If an organization’s culture clashes with the
+values of its</p>
+<p>community, the organization’s culture will prevail—or else the
+organiza-tion</p>
+<p>will not be able to make its social contribution.</p>
+<h3 id="action-point-1">ACTION POINT:</h3>
+<p>If Wal-Mart wishes to move into your neighborhood</p>
+<p>against the wishes of the neighborhood, what actions should
+Wal-Mart</p>
+<p>take? Under what conditions would it be wise for it to withdraw its
+move?</p>
+<h4 id="post-capitalist-society">Post-Capitalist Society</h4>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

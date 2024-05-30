@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="第三同读" />
+  <title>德鲁克日志</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">德鲁克日志</h1>
+<p class="author">第三同读</p>
+</header>
+<h2 id="透过金庸读懂德鲁克">透过金庸读懂德鲁克</h2>
+<p>智者鸠摩智</p>
+<p>最近在重读《天龙八部》，逐字读完后，我对两个人的看法发生了天翻地覆的变化，一个是段延庆，</p>
+<p>一个是鸠摩智。</p>
+<p>我认为，《天龙八部》里只有三个头脑清楚的人，这三个人是有完整甚至完美人格的，这三个人就是</p>
+<p>萧峰、段延庆和鸠摩智。</p>
+<p>关于萧峰，我写的比较多，段延庆以后慢慢来夸他，今天我就使劲夸一下鸠摩智。</p>
+<p>鸠摩智是一个佛教徒，出场时武功就极高，独自一人和天龙寺的枯荣加五本（本因，本参，本相，本</p>
+<p>尘，本观）六人打斗，枯荣等全力以赴仍然没法对抗鸠摩智，只好烧毁《六脉神剑》孤本，让鸠摩智</p>
+<p>死心。</p>
+<p>随后，鸠摩智发现段誉会六脉神剑，
+随即活捉段誉后，在重重重围下，逃出天龙寺，逃出大理国，奔</p>
+<p>往苏州参合庄。</p>
+<p>这一段是鸠摩智的独角戏，显示了鸠摩智高超的武功和智慧。（在大理国，当着武功最高的6个人，活</p>
+<p>捉一个王子，并且全身而退）。</p>
+<p>虽然打了胜仗，还抢了一个熟记六脉神剑的王子，可是，没有拿到六脉神剑剑谱，还是输了。不过，</p>
+<p>鸠摩智并没有气馁，而且丝毫没有恋战。转而逼迫段誉王子写出六脉神剑的剑谱。</p>
+<p>这个过程也是曲折有趣，最终在阿朱阿碧的协助下，段誉跑了，鸠摩智再次失利。不过，鸠摩智还是</p>
+<p>没有纠缠。而是采取了下一个方法。</p>
+<p>鸠摩智是熟读佛经的人，开坛讲经也是座无虚席。对于经书，也是辩才无碍，一口道破枯荣所参之</p>
+<p>禅。在不长的时间里，在吐蕃那个偏僻之地，在那个武学不是特别丰富地方，鸠摩智也练出了惊天的</p>
+<p>武功。</p>
+<p>不过，鸠摩智还是羡慕中原的武学：少林的武功，慕容家的武功，大理的武功。年轻的鸠摩智想，我</p>
+<p>要是能学会那些武功该有多好。作为个体，一个人的武功可以到多高呢？世界上最厉害的武功究竟长</p>
+<p>什么样呢？</p>
+<p>这些是鸠摩智所追求的。</p>
+<p>所以，当他求六脉神剑失败后，逼迫段誉写六脉神剑再次失败后，鸠摩智随即去慕容博家，看能不能</p>
+<p>偷一些武林秘籍。</p>
+<p>在很多年去，鸠摩智认识了慕容博，和慕容博一见如故，慕容博交给了他少林七十二绝技的抄本，而</p>
+<p>且答应他去他家的书房查阅武功。现在慕容博死了，自己去查阅，也不算太大的过错。</p>
+<p>鸠摩智潜入慕容博家，在慕容博家，他偷到了小无相功的秘籍。回到吐蕃后，用了没多久，他就吧小</p>
+<p>无相功练习的如火纯情，还用小无相用位内力，驱动了慕容博交给他的少林七十二绝技。</p>
+<p>这时的鸠摩智相信，自己的武功应该是非常厉害了，即使不是天下第一，也差不多了。</p>
+<p>虽然小无相功是道家武功，对于深谙佛教经典的鸠摩智，他很清楚佛祖是个道士的观点，他相信自己</p>
+<p>可以把道家的小无相功，和佛教的七十二绝技融合贯通，形成新的流派，而这个新的东西，会是一项</p>
+<p>惊天地泣鬼神的新武功。</p>
+<p>鸠摩智期待这一天的到来。</p>
+<p>学成小无相功，熟练少林七十二绝技的鸠摩智再次来到中原。他听说聋哑先生摆下了珍珑局，邀请天</p>
+<p>下英雄去对弈，得胜者会有莫大的好处。</p>
+<p>处于对武功的好奇，鸠摩智也上得山来。当他看到珍珑局后，很快就判断出这个不是自己能解决的，</p>
+<p>甚至不是人力能解决的，随意下了两下，便即放弃。多亏如此，才没有蹈慕容复和段延庆的覆辙。这</p>
+<p>也说明鸠摩智对形势和自己的精确认识。</p>
+<p>后来鸠摩智来到少林寺，用小无相功操控七十二绝技，震惊了少林以及各路高手。俨然成为武林第一</p>
+<p>人。</p>
+<p>后来机械战神扫地僧出面，夺去了鸠摩智的光环。扫地僧当众讲经，鸠摩智的脸都绿了，因为鸠摩智</p>
+<p>发现，扫地僧讲了很多他不能领悟的东西。这些是佛经么？或许是，或许不是。鸠摩智不愿意相信，</p>
+<p>不愿意相信自己努力追求的天下武学没有意义。</p>
+<p>当他向扫地僧挑战时，发现扫地僧是对的。他看到了神，鸠摩智第一次感受到了挫败感，这是一种真</p>
+<p>正的挫败感：我本来以为我要封神，才发现我只是万千俗人中最俗的一个。</p>
+<p>鸠摩智再次离开少林回到吐蕃，他决定静下来思考扫地僧的讲经。这时，有个俗事加进来了，就是西</p>
+<p>夏公主招驸马。鸠摩智是吐蕃国的国师，吐蕃国王子是他的小徒弟。吐蕃和西夏联姻在政治上是一个</p>
+<p>很重要的事情。</p>
+<p>鸠摩智决定把这件事做完后再去思考扫地僧的话语。</p>
+<p>在西夏，鸠摩智终于走火入魔了，小无相功练出来的内功，在七十二绝技的激发下，在体内四处激</p>
+<p>荡，无法控制，也无法归位。鸠摩智感觉整个人都在燃烧。眼见就要崩裂而死了。</p>
+<p>这时，他触碰到了身边的段誉，激发了段誉的北冥神功，他那些无处可归的，通过小无相功练出来的</p>
+<p>真气，都被段誉的北冥神功吸走了。</p>
+<p>鸠摩智感觉轻松了很多，随着自己内力离开自己的身体，自己也定下来了。直到最后，自己体内的内</p>
+<p>力消失殆尽。</p>
+<p>鸠摩智也就平复了。</p>
+<p>第二天，当他和段誉都醒来后，鸠摩智直到自己多年来在武学上的追求都付诸东流了。这是的鸠摩智</p>
+<p>反而更清楚了，他回想自己为了学习神妙武功所作出的行为，不禁汗颜。</p>
+<p>就像《六脉神剑》被烧了后，就像段誉失踪后，就像他判断出珍珑局误解后，就像他仿佛听懂扫地僧</p>
+<p>的讲经后，鸠摩智哈哈一笑，和段誉说了一些真心的感激之话，感激了缘法。离开了西夏，成为一名</p>
+<p>普通的僧人。返回吐蕃，埋首钻研佛经，成为一代高僧。</p>
+<p>回顾鸠摩智的一生，精研佛法而有所求，在一路披荆斩棘，遇到问题或解决，或绕过，绝不恋战。偶</p>
+<p>尔犯错，也不会再犯，即使沉迷武学，也保持对自己清醒认知。当他认识到自己的贪嗔痴后，随即回</p>
+<p>归佛法。</p>
+<p>孔子曰：不贰过。我想鸠摩智应该做到了。</p>
+<h2 id="大纲">大纲</h2>
+<p>鸠摩智的成长之路</p>
+<ol type="1">
+<li><p>立论：鸠摩智是一个伟大的人</p></li>
+<li><p>鸠摩智的出场:求六脉神剑</p></li>
+<li><p>鸠摩智结识慕容博</p></li>
+<li><p>鸠摩智练习小无相功</p></li>
+<li><p>鸠摩智回归佛法</p></li>
+<li><p>孔子曰：不贰过；易经曰：无大过。</p></li>
+</ol>
+<h2 id="百字摘要">百字摘要</h2>
+<h2 id="金庸案例">金庸案例</h2>
+<h2 id="时间消耗">时间消耗</h2>
+<h2 id="阅读理解">阅读理解：</h2>
+<h2 id="大纲-1">大纲：</h2>
+<h2 id="撰写">撰写：</h2>
+<h2 id="录音">录音</h2>
+<h2 id="一小时运动">一小时运动</h2>
+<h2 id="英文原文">英文原文</h2>
+<p>7 NOVEMBER</p>
+<p>The Failed Strategy</p>
+<p>Most of the people who persist in the wilderness leave nothing behind
+but bleached bones.</p>
+<p>wilderness：</p>
+<p>a large area of land that has never been developed or used for
+growing crops because it is difficult to live there</p>
+<p>未开</p>
+<p>发的地区；荒无人烟的地区；荒野</p>
+<p>bleached：V-T/V-I If the sun bleaches something, or something
+bleaches, its colour gets paler until it is almost white. 晒白;
+逐渐变</p>
+<p>白</p>
+<p>When a strategy or an action doesn’t seem to be working, the rule is,
+“If at first you don’t succeed,</p>
+<p>try once more. Then do something else.” The first time around, a new
+strategy very often doesn’t</p>
+<p>work.</p>
+<p>Then one must sit down and ask what has been learned.</p>
+<p>Maybe the service isn’t quite right.</p>
+<p>Try to improve it, to change it, and make another major effort.</p>
+<p>Maybe, though I am reluctant to encourage this, you might make a
+third effort. After that, go to</p>
+<p>work where the results are.</p>
+<dl>
+<dt>reluctant：</dt>
+<dd>
+<p>(to do sth) hesitating before doing sth because you do not want to do
+it or because you are not sure that it is the right</p>
+</dd>
+</dl>
+<p>thing to do</p>
+<p>不情愿的；勉强的</p>
+<p>There is only so much time and so many resources, and there is so
+much work to be done.</p>
+<p>吾生也有涯，而知也无涯。以有涯随无涯，殆已！</p>
+<p>There are exceptions. You can see some great achievements where
+people labored in the</p>
+<p>wilderness for twenty-five years. But these examples are very
+rare.</p>
+<p>labored：adj. 吃力的；费劲的；不自然的</p>
+<p>Most of the people who persist in the wilderness leave nothing behind
+but bleached bones.</p>
+<p>There are also true believers who are dedicated to a cause where
+success, failure, and results are</p>
+<p>irrelevant, and we need such people.</p>
+<p>irrelevant：</p>
+<dl>
+<dt>无关紧要的；不相关的</dt>
+<dd>
+<p>(to sth/sb) not important to or connected with a situation</p>
+</dd>
+</dl>
+<p>They are our conscience.</p>
+<p>conscience：</p>
+<p>[ C U ] the part of your mind that tells you whether your actions are
+right or wrong</p>
+<p>良心；良知</p>
+<p>But very few of them achieve. Maybe their rewards are in Heaven. But
+that’s not sure either.</p>
+<p>“There is no joy in Heaven over empty churches,” Saint Augustine
+wrote sixteen hundred years ago</p>
+<p>to one of his monks who busily built churches all over the
+desert.</p>
+<p>monks：</p>
+<p>a member of a religious group of men who often live apart from other
+people in a monastery and who do not marry or have</p>
+<p>personal possessions</p>
+<p>僧侣；修道士</p>
+<p>So, if you have no results, try a second time. Then look at it
+carefully and move on to something</p>
+<p>else.</p>
+<h3 id="action-point">ACTION POINT:</h3>
+<p>If at first you don’t succeed, sit down and ask what you have
+learned.</p>
+<p>Improve your approach and try once more. Maybe make a third effort.
+Then do something else.</p>
+<p>approach：</p>
+<p>[ C ] ~ (to sth) a way of dealing with sb/sth; a way of doing or
+thinking about sth such as a problem or a task</p>
+<p>物或思考问题的）方式，方法，态度</p>
+<p>Managing the Non-Profit Organization</p>
+<p>（待人接</p>
+<h2 id="november">7 NOVEMBER</h2>
+<h3 id="the-failed-strategy">The Failed Strategy</h3>
+<p>Most of the people who persist in the wilderness leave nothing
+behind</p>
+<p>but bleached bones.</p>
+<p>When a strategy or an action doesn’t seem to be working, the rule is,
+“If</p>
+<p>at first you don’t succeed, try once more. Then do something else.”
+The first</p>
+<p>time around, a new strategy very often doesn’t work. Then one</p>
+<p>must sit down and ask what has been learned. Maybe the service
+isn’t</p>
+<p>quite right. Try to improve it, to change it, and make another major
+effort.</p>
+<p>Maybe, though I am reluctant to encourage this, you might make a
+third</p>
+<p>effort. After that, go to work where the results are. There is only
+so much</p>
+<p>time and so many resources, and there is so much work to be done.</p>
+<p>There are exceptions. You can see some great achievements where</p>
+<p>peo-ple labored in the wilderness for twenty-five years. But
+these</p>
+<p>examples are very rare. Most of the people who persist in the
+wilderness</p>
+<p>leave nothing behind but bleached bones. There are also true
+believers</p>
+<p>who are dedi-cated to a cause where success, failure, and results
+are</p>
+<p>irrelevant, and we need such people. They are our conscience. But
+very</p>
+<p>few of them achieve. Maybe their rewards are in Heaven. But that’s
+not</p>
+<p>sure either. “There is no joy in Heaven over empty churches,”
+Saint</p>
+<p>Augustine wrote sixteen hun-dred years ago to one of his monks
+who</p>
+<p>busily built churches all over the desert. So, if you have no
+results, try</p>
+<p>Asecond time. Then look at it carefully and move on to something
+else.</p>
+<h3 id="action-point-1">ACTION POINT:</h3>
+<p>If at first you don’t succeed, sit down and ask what you</p>
+<p>have learned. Improve your approach and try once more. Maybe make</p>
+<p>Athird effort. Then do something else.</p>
+<h4 id="managing-the-non-profit-organization">Managing the Non-Profit
+Organization</h4>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

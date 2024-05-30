@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="第三同读" />
+  <title>德鲁克日志</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">德鲁克日志</h1>
+<p class="author">第三同读</p>
+</header>
+<h2 id="透过金庸读懂德鲁克">透过金庸读懂德鲁克</h2>
+<p>欧阳克之死</p>
+<p>欧阳克是西毒之子，西毒是五绝之一，武林中顶尖的人物。欧阳克从小跟随父亲学习武功。出场时30</p>
+<p>多岁，正是年富力强的时候。</p>
+<p>欧阳家族是西域的大家族，从欧阳克出场的样子也可以看出他家的豪奢。作为一个有钱，有闲，武功</p>
+<p>又高的，又年富力强的人，欧阳克可谓是春风得意。</p>
+<p>完颜洪烈不知在哪里找到了欧阳克，并且把他拉近了他的武力集团。可以看得出来，他比那些沙通</p>
+<p>天、彭连虎、灵智上人、梁子翁、侯通海等的武功要高的多。</p>
+<p>就这样一位人物，在神雕中居然从来没有胜过。</p>
+<p>先是他的两位女徒弟想抢马，被打死了。后来他在完颜洪烈的王爷府想留着黄蓉，结果被黄蓉戏耍了</p>
+<p>一顿，还爱上了黄蓉。</p>
+<p>后来想去偷个女人（程瑶迦），被洪七公一顿教训。</p>
+<p>驱赶蛇去欺负梅超风，又被黄药师给揍了。</p>
+<p>拜托老爹去向黄药师求亲，结果被郭靖截胡了。</p>
+<p>好容易和黄蓉同在一个孤岛，正是演绎爱情的时候，被黄蓉安排的一个大石头压断了腿。领了一张残</p>
+<p>疾证。</p>
+<p>成了残疾人的欧阳克想着，凭借自己的财富、武功，安养天年应该没什么问题吧。偶尔还可以调戏调</p>
+<p>戏良家妇女，结果在调戏一个叫做穆念慈的时候被杨康给捅死了，用一把破铁枪。</p>
+<p>呜呼哀哉。</p>
+<p>欧阳克的经历告诉我们，没有主角光环的所有优质资源，都不是资源。</p>
+<p>今天咱们仔细说说欧阳克之死。</p>
+<p>欧阳克的死因其实在他们离开孤岛后就种下了。那是在杨康向欧阳锋拜师的时候。杨康看到欧阳锋武</p>
+<p>功超一流，就起了拜师的心。欧阳锋委婉拒绝了：“老朽门中向来有个规矩，本门武功只一脉单传，决</p>
+<p>无旁枝。老朽已传了舍侄，不能破例再收弟子，请王爷见谅。”</p>
+<p>当时的武功最高的几个人：洪七公、周伯通、黄药师、一灯、欧阳锋，杨康有可能拜师的也就欧阳锋</p>
+<p>了。欧阳锋直接拒绝杨康，而且用欧阳克作为借口，这就给欧阳克埋下了死因。</p>
+<p>杨康想拜欧阳锋为师，以杨康的身份和谋略，他是一定要实现的。卑辞、厚礼这两个常规方法，他都</p>
+<p>愿意，可是这些没用。</p>
+<p>所以杨康去想别的方法，而最直接的方法就是让欧阳克消失。</p>
+<p>我相信，之后的杨康一直在寻找机会杀死欧阳克的机会。杀死欧阳克最佳的机会肯定会眷顾他的好朋</p>
+<p>友。</p>
+<p>所以，杨康就成为了欧阳克的好朋友，和他一起玩女人，一起摸小脚。</p>
+<p>欧阳克还是风流成性，也难怪，他的武功、财富以及人品都可以支撑这些。</p>
+<p>这一天，欧阳克来到牛家村曲家酒馆里，残疾人欧阳克看到了程瑶迦和穆念慈两位美女。想着闲着也</p>
+<p>是闲着，就顺便调戏一下吧。</p>
+<p>这时杨康也进来了，欧阳克就招呼他一起来玩，杨康假装欣然向前，趁欧阳克得意忘形之际，用一截</p>
+<p>铁枪头直刺入欧阳克的小腹之中，随即翻了个筋斗跑开了。</p>
+<p>欧阳克重伤不治，然后就死了。</p>
+<p>欧阳锋也就没有了传人，没有了儿子。</p>
+<p>后来，再次见到欧阳锋的杨康随即向欧阳锋再提拜师，欧阳锋感于他的诚意，也就答应了。</p>
+<p>如果不是后来黄蓉捣乱，杨康也就成为了欧阳锋的徒弟，未来也可能成为一位武林高手。</p>
+<p>可惜，在黄蓉的捣乱下，不但没有拜师成功，反而命丧铁枪庙。</p>
+<h2 id="大纲">大纲</h2>
+<h2 id="百字摘要">百字摘要</h2>
+<h2 id="金庸案例">金庸案例</h2>
+<h2 id="时间消耗">时间消耗</h2>
+<h2 id="阅读理解">阅读理解：</h2>
+<h2 id="大纲-1">大纲：</h2>
+<h2 id="撰写">撰写：</h2>
+<p>11 JULY</p>
+<p>Organized Improvement</p>
+<p>Continuous improvements in any area eventually transform the
+operation.</p>
+<p>The next policy for the change leader is organized improvement.</p>
+<p>Whatever an enterprise does internally and externally needs to be
+improved systematically and</p>
+<p>continuously: product and service production processes, marketing,
+service, technology,</p>
+<p>training and development of people, using information.</p>
+<p>Continuous improvements in any area eventually transform the
+operation.</p>
+<p>However, continuing improvement requires a major decision.</p>
+<p>What constitutes “performance” in a given area?</p>
+<p>constitutes：</p>
+<p>V-LINK If something constitutes a particular thing, it can be
+regarded as being that thing.</p>
+<p>构成</p>
+<p>If performance is to be improved, we need to define clearly what
+“performance” means.</p>
+<p>For example, a major commercial bank decided that the way to improve
+performance in its</p>
+<p>branches was to offer new and more advanced financial “products.”</p>
+<p>But when the bank introduced the new products in its branches, it
+rapidly lost customers.</p>
+<p>Only then did the bank find out that to customers, performance of a
+bank branch means not having</p>
+<p>to wait in line for routine transactions.</p>
+<p>The bank’s solution was to concentrate the tellers at the branches on
+the simple, repetitive, routine</p>
+<p>services, which require neither skill nor time.</p>
+<p>The new financial products were assigned to different groups of
+people who were moved to</p>
+<p>separate tables, with big signs advertising the products in which
+each table specialized.</p>
+<p>As soon as this was done, business went up sharply, both for the
+traditional and the new services.</p>
+<h3 id="action-point-make-systematic-improvement-a-priority.">ACTION
+POINT: Make systematic improvement a priority.</h3>
+<p>Management Challenges for the 21st Century</p>
+<h2 id="july">11 JULY</h2>
+<h3 id="organized-improvement">Organized Improvement</h3>
+<p>Continuous improvements in any area eventually transform the
+operation.</p>
+<p>The next policy for the change leader is organized improvement.
+What-</p>
+<p>ever an enterprise does internally and externally needs to be
+improved</p>
+<p>systematically and continuously: product and service production</p>
+<p>processes, marketing, service, technology, training and development
+of</p>
+<p>people, using information. Continuous improvements in any area
+eventu-</p>
+<p>ally transform the operation.</p>
+<p>However, continuing improvement requires a major decision. What</p>
+<p>constitutes “performance” in a given area? If performance is to be
+im-</p>
+<p>proved, we need to define clearly what “performance” means. For
+exam-</p>
+<p>ple, a major commercial bank decided that the way to improve</p>
+<p>performance in its branches was to offer new and more advanced</p>
+<p>financial “products.” But when the bank introduced the new products
+in</p>
+<p>its branches, it rapidly lost customers. Only then did the bank find
+out that</p>
+<p>to customers, performance of a bank branch means not having to wait
+in</p>
+<p>line for routine transactions. The bank’s solution was to concentrate
+the</p>
+<p>tellers at the branches on the simple, repetitive, routine services,
+which</p>
+<p>require neither skill nor time. The new financial products were
+assigned</p>
+<p>to differ-ent groups of people who were moved to separate tables,
+with</p>
+<p>big signs ad-vertising the products in which each table specialized.
+As</p>
+<p>soon as this was done, business went up sharply, both for the
+traditional</p>
+<p>and the new ser-vices.</p>
+<h3 id="action-point">ACTION POINT:</h3>
+<p>Make systematic improvement a priority.</p>
+<h4 id="management-challenges-for-the-21st-century">Management
+Challenges for the 21st Century</h4>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

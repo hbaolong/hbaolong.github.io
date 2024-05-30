@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="第三同读" />
+  <title>德鲁克日志</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">德鲁克日志</h1>
+<p class="author">第三同读</p>
+</header>
+<h2 id="透过金庸读懂德鲁克">透过金庸读懂德鲁克</h2>
+<p>宋远桥当过掌门么？</p>
+<p>今天讨论一个小话题：宋远桥当过掌门么？有人说，宋远桥当过掌门，因为张三丰很早就不管事物</p>
+<p>了。宋远桥做为大弟子一直管理武当的具体事物。在某个具体时间，估计是为了办事顺当，张三丰卸</p>
+<p>任，让宋远桥当了武当掌门。</p>
+<p>也有人说，宋远桥并没有当做武当掌门，因为张三丰一直活在，估计活的比宋远桥还长，老掌门没</p>
+<p>死，哪有新掌门呀。</p>
+<p>虽然张三丰不大管事，可张三丰才是正在的掌门呀。</p>
+<p>在讨论这个话题前，咱们先说说张三丰在忙些什么。</p>
+<p>张三丰是武当的创始人，是当时武林的第一高手，是一个武痴，每天都想着如何创建新的武功，如何</p>
+<p>完善现有的武功，经常随随便便就发明出一套可以改变武林格局的武功（如倚天屠龙笔法）。</p>
+<p>年轻时，张三丰还经常在江湖上混，回到武当山后，也会和弟子们一起讲习、练习武功。</p>
+<p>后来，张三丰年龄大了。也就不大去江湖了，有什么事情，七个弟子也都搞的定。张三丰在武当的时</p>
+<p>间也就越来越多了。</p>
+<p>留在武当的张三丰的时间主要花费在两个地方：武当派务的管理以及武学研究。</p>
+<p>张三丰毕竟是武当的创始人和掌门人，武当的很多事情还是需要他点头、决策的。甚至包括买一些柴</p>
+<p>米油盐啥的。</p>
+<p>刚退休的张三丰估计还挺新鲜，张老头每天跑跑这里，跑跑那里，看着武当的兴旺，感受到自己在各</p>
+<p>种地方被需要，张老头也是很开心。</p>
+<p>时间一长，张老头就不开心了：没时间练武了，也没时间研究武功了。早上刚醒来，买菜的就等在门</p>
+<p>口了，中午正要吃饭，山下的屠夫送来了两头杀好的猪，说是要给张真人养养身体。下午张老头正在</p>
+<p>研究一个武功，大弟子宋远桥来请示，说有一个弟子不服管教，需要开除。张真人本着治病救人的态</p>
+<p>度详细询问了一些细节，还是留下了这个门人。</p>
+<p>到了晚上，张老头要睡觉了，门口还是站着一些请示的弟子们。</p>
+<p>张老头发现，自己根本没有时间研究武功了。而研究武功才是自己最大的乐趣呀，也是武当之所以为</p>
+<p>武当的根本原因。</p>
+<p>这一天，张老头醒来，把宋远桥叫过来，说：“远桥呀，我要去闭关一个月了，这一个月，你来管一下</p>
+<p>派里的事吧。什么事情，你自己看着办，实在搞不定再找我”。</p>
+<p>然后张老头就闭关了一个月。出来后，一套优秀的武功也出来了，张老头教给了五弟子张翠山。</p>
+<p>又管了几个月的武当派后，张三丰再次吧宋远桥叫来，说：“远桥呀，我要去闭关半年了，研究一下九</p>
+<p>阳功的一些缺陷，这半年你来管理呀，没事别找我”。</p>
+<p>半年后，九阳功更加纯了。</p>
+<p>后来张无忌中了玄冥神掌，需要更纯的九阳功。张三丰干脆吧宋远桥叫来，说：“远桥呀，我要去闭关</p>
+<p>研究九阳功了，不知道要多久，这样吧，你来做掌门吧。这些年你一直管着这些事，也没什么差错。</p>
+<p>以后你就是掌门了。有事没事都别问我了。实在有大事再说。”</p>
+<p>就这样，张三丰为了自己有足够的整块时间研究武功，就让宋远桥做了掌门，因为张三丰还活着，宋</p>
+<p>远桥只能是“掌门弟子”，虽然是弟子，可也是货真价实的掌门。</p>
+<p>这时的张三丰把所有的俗事都交给了宋远桥，自己留下大把的时间来研究武学，武当的武功库也就越</p>
+<p>来越丰富了。</p>
+<p>张三丰呢，也就基本上不管具体的事情了，最多就是每年过生日时，听各个弟子唠叨唠叨。不过张三</p>
+<p>丰的兴趣已经完全集中在了武学研究上：你们说的都好，好好好。</p>
+<p>后来武当发生了大事，非常大的大事，武当掌门宋远桥的儿子宋青书杀死了自己的师叔莫声谷，而且</p>
+<p>犯了武林中很多忌讳。这种事张三丰就不能不管了，因为这个涉及到了武当掌门。张三丰出面后迅速</p>
+<p>罢黜宋远桥的武当掌门身份，让二弟子俞莲舟做了新的掌门。然后张三丰又去闭关练武了。</p>
+<p>所以，宋远桥是当过武当掌门的，不过他也是唯一一个被前掌门罢黜的掌门罢了。</p>
+<h2 id="大纲">大纲</h2>
+<h2 id="百字摘要">百字摘要</h2>
+<h2 id="金庸案例">金庸案例</h2>
+<h2 id="时间消耗">时间消耗</h2>
+<h2 id="阅读理解">阅读理解：</h2>
+<h2 id="大纲-1">大纲：</h2>
+<h2 id="撰写">撰写：</h2>
+<h2 id="录音">录音</h2>
+<h2 id="一小时运动">一小时运动</h2>
+<h2 id="英文原文">英文原文</h2>
+<p>3 SEPTEMBER</p>
+<p>Consolidate Time</p>
+<p>Effective executives know that one rarely overprunes.</p>
+<p>The final step in time management is to consolidate the time that
+record and analysis show as</p>
+<p>normally available and under the executive’s control.</p>
+<p>To be effective every executive needs to be able to dispose of time
+in fairly large chunks.</p>
+<p>This is particularly true with respect to time spent working with
+people, which is, of course, a</p>
+<p>central task in the work of the executive.</p>
+<p>The manager who thinks that she can discuss the plans, di-rection,
+and performance of one of her</p>
+<p>subordinates in fifteen minutes is just deceiving herself.</p>
+<p>There are a good many ways to consolidate time.</p>
+<p>Some people work at home one or more days a week.</p>
+<p>Other executives schedule all the operating work—the meetings,
+reviews, problem-sessions, and</p>
+<p>so on—for two days a week and set aside the mornings of the remaining
+days for consistent,</p>
+<p>continuing work on major issues.</p>
+<p>But the method by which one consoli-dates one’s discretionary time is
+far less important than the</p>
+<p>approach.</p>
+<p>Effective executives start out by estimating how much discretionary
+time they can realistically call</p>
+<p>their own.</p>
+<p>And if they find later that other matters en-croach on this reserve,
+they scrutinize their record again</p>
+<p>and get rid of some more time demands from less-than-fully-productive
+activities.</p>
+<h3 id="action-point">ACTION POINT:</h3>
+<p>Consolidate your time and set aside large blocks of time to complete
+major tasks.</p>
+<p>The Effective Executive</p>
+<h2 id="september">3 SEPTEMBER</h2>
+<h3 id="consolidate-time">Consolidate Time</h3>
+<p>Effective executives know that one rarely overprunes.</p>
+<p>The final step in time management is to consolidate the time that
+record</p>
+<p>and analysis show as normally available and under the execu-tive’s
+control.</p>
+<p>To be effective every executive needs to be able to dispose of time
+in fairly</p>
+<p>large chunks. This is particularly true with respect to time spent
+working with</p>
+<p>people, which is, of course, a central task in the work of the
+executive. The</p>
+<p>manager who thinks that she can discuss the plans, di-rection,
+and</p>
+<p>performance of one of her subordinates in fifteen minutes is</p>
+<p>just deceiving herself.</p>
+<p>There are a good many ways to consolidate time. Some people work
+at</p>
+<p>home one or more days a week. Other executives schedule all the
+operat-ing</p>
+<p>work—the meetings, reviews, problem-sessions, and so on—for two
+days</p>
+<p>Aweek and set aside the mornings of the remaining days for
+consistent,</p>
+<p>continuing work on major issues. But the method by which one
+consoli-dates</p>
+<p>one’s discretionary time is far less important than the approach.
+Ef-fective</p>
+<p>executives start out by estimating how much discretionary time they
+can</p>
+<p>realistically call their own. And if they find later that other
+matters en-croach</p>
+<p>on this reserve, they scrutinize their record again and get rid of
+some more</p>
+<p>time demands from less-than-fully-productive activities.</p>
+<h3 id="action-point-1">ACTION POINT:</h3>
+<p>Consolidate your time and set aside large blocks of time to</p>
+<p>complete major tasks.</p>
+<h4 id="the-effective-executive">The Effective Executive</h4>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

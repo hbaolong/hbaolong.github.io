@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="第三同读" />
+  <title>德鲁克日志</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">德鲁克日志</h1>
+<p class="author">第三同读</p>
+</header>
+<h2 id="透过金庸读懂德鲁克">透过金庸读懂德鲁克</h2>
+<p>为什么茅十八加入不了的天地会，小宝却直接成了香主？</p>
+<p>韦小宝是妓女的儿子，在短短十几年的混社会里，先后任职了多家公司，并且都任职高管。</p>
+<p>先是在康熙公司里任御膳房副总管，然后与御前侍卫，直到最后的鹿鼎公；</p>
+<p>加入天地后就，直接就是高管：天地会青木堂香主。</p>
+<p>这么一个妓女而儿子，而且不会什么武功，凭什么就让陈近南直接任命成为青木堂香主呢？</p>
+<p>前几天和一个正在面试的一个女生聊天，女生说现在面试可变态了，要如此这般。我在想，小宝入职</p>
+<p>天地会，好像也没有那么多面试呀。入职时，还老大不情愿。最后在大家劝说下，才“脑袋掉了不过碗</p>
+<p>大个疤”地就任了。</p>
+<p>那么，为什么陈近南为什么没有做过多审核，就给了小宝这么高的位置呢？</p>
+<p>而茅十八却想法设法也加入不了天地会，为什么呢？</p>
+<p>咱们看看茅十八和小宝的区别，茅十八是一个武功不错的江湖人士，在江湖上也有一些名声，一贯的</p>
+<p>反抗清政府的压迫，算是和天地会有共同的愿景。</p>
+<p>那么，天地会是什么样的组织呢？天地会的前身是军队，也就是国姓爷撤离大陆时，留在大陆的军人</p>
+<p>转成的一个帮会。在天地会，入职是很严格的。如果你本身是国姓爷的士兵，那么就很容易，如果不</p>
+<p>是就很难了。你需要经历各种背景调查，然后观察很久很久才可以。所以，加入天地会并不是一件很</p>
+<p>容易的事情。</p>
+<p>那么，小宝呢？小宝为什么会这么容易加入天地会呢？还占了那么好的位置？</p>
+<p>咱们看一下加入天地会前小宝都做过些什么。</p>
+<p>首先，小宝交了一个朋友，就是康熙。这半年多来，小宝天天和康熙一起玩，和康熙结下了深厚的友</p>
+<p>谊。应该说，小宝之后所有的成就，都和这段友谊有直接或者间接的关系。</p>
+<p>其次，小宝杀了鳌拜。在康熙的授意下，小宝不但参与了抓鳌拜，还直接杀了鳌拜。这一方面更加获</p>
+<p>得了康熙的器重，一方面也在朝中获得了相应的地位，至少大家都觉得小宝不是一个只凭康熙宠爱的</p>
+<p>人。</p>
+<p>最后，小宝的这些行为显示，小宝是一个有脑子，且动脑子的人。</p>
+<p>天地会不缺高手，不缺忠心的人，不缺一致对外的人，却很缺有脑子也动脑子的人。</p>
+<p>陈近南一听之下，觉得这徒儿见事明白，天地会中武功好手不少，头脑如此清楚之人却没几个。</p>
+<p>而茅十八，虽然武功不错，脑子却有点糊涂，这样的人，天地会本来就不缺。</p>
+<p>所以，在思考了一分钟后，陈近南就决定拉小宝入伙，并且给了很高的位置。</p>
+<p>因为，对于陈近南，对于天地会来说，小宝这样的人，是人才呀，是宝呀。</p>
+<h2 id="大纲">大纲</h2>
+<h2 id="百字摘要">百字摘要</h2>
+<h2 id="金庸案例">金庸案例</h2>
+<h2 id="时间消耗">时间消耗</h2>
+<h2 id="阅读理解">阅读理解：</h2>
+<h2 id="大纲-1">大纲：</h2>
+<h2 id="撰写">撰写：</h2>
+<h2 id="录音">录音</h2>
+<h2 id="一小时运动">一小时运动</h2>
+<h2 id="英文原文">英文原文</h2>
+<p>7 JANUARY</p>
+<p>Knowledge Workers: Asset Not Cost</p>
+<p>Management’s duty is to preserve the assets of the institution in its
+care.</p>
+<p>preserve：</p>
+<p>保护；维护；保留</p>
+<p>in its care：</p>
+<p>[ VN ] to keep a particular quality, feature, etc.; to make sure that
+sth is kept</p>
+<p>Knowledge workers own the means of production.</p>
+<p>It is the knowledge between their ears.</p>
+<p>And it is a totally portable and enormous capital asset.</p>
+<p>enormous：</p>
+<p>巨大的；庞大的；极大的</p>
+<p>portable：</p>
+<p>便携式的；手提的；轻便的</p>
+<p>capital：</p>
+<p>extremely large</p>
+<p>that is easy to carry or to move</p>
+<p>[ sing. ] a large amount of money that is invested or is used to
+start a business</p>
+<p>资本；资金；启动资金</p>
+<p>Because knowledge workers own their means of production, they are
+mobile.</p>
+<p>means of production：</p>
+<p>N-PLURAL (in Marxist theory) the raw materials and means of labour
+(tools, machines, etc) employed</p>
+<p>in the production process</p>
+<p>生产资料</p>
+<p>Manual workers need the job much more than the job needs them.</p>
+<p>It may still not be true for all knowledge workers that the
+organization needs them more than they</p>
+<p>need the organization.</p>
+<p>But for most of them it is a symbiotic relationship in which the two
+need each other in equal</p>
+<p>measure.</p>
+<p>symbiotic：</p>
+<p>all.</p>
+<p>共生的</p>
+<p>ADJ A symbiotic relationship is one in which organisms, people, or
+things exist together in a way that benefits them</p>
+<dl>
+<dt>measure：</dt>
+<dd>
+<p>(sb/sth) (for sth) to find the size, quantity, etc. of sth in
+standard units</p>
+</dd>
+</dl>
+<p>测量；度量</p>
+<p>Management’s duty is to preserve the assets of the institution in its
+care.</p>
+<p>preserve：</p>
+<p>保护；维护；保留</p>
+<p>[ VN ] to keep a particular quality, feature, etc.; to make sure that
+sth is kept</p>
+<p>What does this mean when the knowledge of the individual knowledge
+worker becomes an asset</p>
+<p>and, in more and more cases, the main asset of an institution?</p>
+<p>What does this mean for personnel policy?</p>
+<p>What is needed to attract and to hold the highest-producing knowledge
+workers?</p>
+<p>What is needed to increase their productivity and to convert their
+increased productivity into</p>
+<p>performance capacity for the organization?</p>
+<h3 id="action-point">ACTION POINT:</h3>
+<p>Attract and hold the highest-producing knowledge workers by treating
+them and their knowledge</p>
+<p>as the organization’s most valuable assets.</p>
+<p>highest-producing：产出最高</p>
+<p>Management Challenges for the 21st Century</p>
+<h2 id="january">7 JANUARY</h2>
+<h3 id="knowledge-workers-asset-not-cost">Knowledge Workers: Asset Not
+Cost</h3>
+<p>Management’s duty is to preserve the assets of the institution in its
+care.</p>
+<p>Knowledge workers own the means of production. It is the
+knowledge</p>
+<p>between their ears. And it is a totally portable and enormous capital
+asset.</p>
+<p>Because knowledge workers own their means of production, they are
+mobile.</p>
+<p>Manual workers need the job much more than the job needs them. It may
+still</p>
+<p>not be true for all knowledge workers that the organiza-tion needs
+them more</p>
+<p>than they need the organization. But for most of them it is a
+symbiotic</p>
+<p>relationship in which the two need each other in</p>
+<p>equal measure.</p>
+<p>Management’s duty is to preserve the assets of the institution in its
+care.</p>
+<p>What does this mean when the knowledge of the individual
+knowledge</p>
+<p>worker becomes an asset and, in more and more cases, the main asset
+of an</p>
+<p>institution? What does this mean for personnel policy? What is needed
+to</p>
+<p>attract and to hold the highest-producing knowledge workers? What is
+needed</p>
+<p>to increase their productivity and to convert their increased
+pro-ductivity into</p>
+<p>performance capacity for the organization?</p>
+<h3 id="action-point-1">ACTION POINT:</h3>
+<p>Attract and hold the highest-producing knowledge work-</p>
+<p>ers by treating them and their knowledge as the organization’s most
+valu-</p>
+<p>able assets.</p>
+<h4 id="management-challenges-for-the-21st-century">Management
+Challenges for the 21st Century</h4>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

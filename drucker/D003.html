@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="第三同读" />
+  <title>德鲁克日志</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">德鲁克日志</h1>
+<p class="author">第三同读</p>
+</header>
+<h2 id="透过金庸读懂德鲁克">透过金庸读懂德鲁克</h2>
+<p>我发现了很多奇迹</p>
+<p>我发现了很多奇迹。</p>
+<p>比如，太阳每天都从东方升起，然后从西方落下去，从小到大都没有出过错。我在想，大自然需要如</p>
+<p>何的用心才可以让那个大个太阳如此周而复始，从不出错？</p>
+<p>春天过去就是夏天，然后就是秋天和冬天，一年四季也从来没有出过错。我经常想，大自然需要如何</p>
+<p>的用心才可以形成如此精准的春夏秋冬？</p>
+<p>当我看到长城时，我又发现了奇迹，我在想，秦始皇是一个很有才的人，那么多兵丁，每天挨着鞭</p>
+<p>子，居然可以修缮出质量这么好的长城？你没见现在的豆腐渣工程么？</p>
+<p>然后，我又发现了奇迹，我发现万恶的元朝把那么多有才的人赶出了朝堂，却创造除了绚烂的元曲，</p>
+<p>同时为明清小说做出了准备。这需要这个社会如何的用心才可以让这些人才各尽其用，为我们留下灿</p>
+<p>烂的文化呀。</p>
+<p>然后，我又发现了奇迹，当我早上来不及吃饭，在路边买一个鸡蛋灌饼时，我发现那对勤劳的夫妻可</p>
+<p>以非常快递准备好一份一份的早餐。</p>
+<p>有一次我和那对夫妻聊天，他们说，其实很简单。设备是找人买的，3000块钱一套，饼是做好后送过</p>
+<p>来的，他们加热一下就好了，鸡蛋是上午4点多送到摊位的。其他的酌料也会同时送过来。</p>
+<p>至于做灌饼的人手艺，他们是经过培训的，三天就可以了。</p>
+<p>至于灌饼车是哪里来的，鸡蛋是哪里来的，酌料是哪里来的，他们也不知道。</p>
+<p>是呀，其实，当我行色匆匆地在灌饼摊钱用1分多种买到一个灌饼时，这其实也是一件很伟大的事情。</p>
+<p>需要有庞大的物流、合作。</p>
+<p>而这一切的背后，都是管理。</p>
+<p>我记得中国卫星上天时，东森电视台采访台湾的军方，台湾军方表示，他们也拥有同样的技术，只是</p>
+<p>“不屑于”上天而已。</p>
+<p>其实，卫星上天，一方面是技术问题，一方面是管理问题。</p>
+<p>二</p>
+<p>在很多人的印象里，中国一直是落后的，特别是在IT领域：缺芯少屏没有系统。这是中国IT业的现状。</p>
+<p>其实，中国不缺少优秀的工程师，不缺少院士，为什么就是做不出好的芯片和系统呢？</p>
+<p>这中间的差距就是管理。</p>
+<p>三</p>
+<p>阿里的崛起，京东的崛起，美团的崛起，滴滴的崛起，大家看到的是这些企业在中国的人口红利下的</p>
+<p>快速崛起，却没有看到的是阿里、京东、美团、滴滴这些公司在如此复杂的人口、资源的高效调配中</p>
+<p>所展示出的高超的管理能力。</p>
+<p>而管理能力才是一个社会的软实力。</p>
+<p>四</p>
+<p>期待，我也相信，我们的国家在管理方面已经非常厉害了。至于其他的？只是资源的有效调配而已。</p>
+<p>我期待。</p>
+<h2 id="大纲">大纲</h2>
+<h2 id="百字摘要">百字摘要</h2>
+<h2 id="金庸案例">金庸案例</h2>
+<h2 id="时间消耗">时间消耗</h2>
+<h2 id="阅读理解">阅读理解：</h2>
+<h2 id="大纲-1">大纲：</h2>
+<h2 id="撰写">撰写：</h2>
+<h2 id="录音">录音</h2>
+<h2 id="一小时运动">一小时运动</h2>
+<h2 id="英文原文">英文原文</h2>
+<p>3 JANUARY</p>
+<p>Management Is Indispensable</p>
+<dl>
+<dt>Indispensable：</dt>
+<dd>
+<p>(to sb/sth) | ~ (for sth/for doing sth) too important to be
+without</p>
+</dd>
+</dl>
+<p>不可或缺的；必不可少的</p>
+<p>Whoever makes two blades of grass grow where only one grew before
+deserves better of mankind</p>
+<p>than any speculative philosopher or metaphysical system builder.</p>
+<p>blade：</p>
+<p>刀身；刀片；刀刃</p>
+<p>the flat part of a knife, tool or machine, which has a sharp edge or
+edges for cutting</p>
+<p>Management will remain a basic and dominant institution perhaps as
+long as Western civilization</p>
+<p>itself survives.</p>
+<p>dominant：</p>
+<p>首要的；占支配地位的；占优势的；显著的</p>
+<p>institution：</p>
+<p>（由来已久的）风俗习</p>
+<p>more important, powerful or noticeable than other things</p>
+<p>惯，制度</p>
+<p>[ C ] a custom or system that has existed for a long time among a
+particular group of people</p>
+<p>For management is not only grounded in the nature of the modern
+industrial system and in the</p>
+<p>needs of modern business enterprise, to which an industrial system
+must entrust its productive</p>
+<p>resources, both human and material.</p>
+<p>entrust：</p>
+<p>委托；交托；托付</p>
+<p>[ VN ] ~ A (to B) | ~ B with A to make sb responsible for doing sth
+or taking care of sb</p>
+<p>Management also expresses the basic beliefs of modern Western
+society.</p>
+<p>It expresses the belief in the possibility of controlling man’s
+livelihood through the</p>
+<p>systematic organization of economic resources.</p>
+<p>It expresses the belief that economic change can be made into the
+most powerful engine for</p>
+<p>human betterment and social justice—that, as Jonathan Swift first
+overstated it three hundred</p>
+<p>years ago, whoever makes two blades of grass grow where only one grew
+before deserves better</p>
+<p>of mankind than any speculative philosopher or metaphysical system
+builder.</p>
+<p>betterment：</p>
+<p>改进；改善；改良</p>
+<p>overstated：</p>
+<p>[ U ] ( formal ) the process of becoming or making sth/sb better</p>
+<p>V-T If you say that someone is overstating something, you mean they
+are describing it in a way that makes it seem</p>
+<p>more important or serious than it really is.</p>
+<p>blade：</p>
+<p>deserve：</p>
+<p>夸大</p>
+<p>the flat part of a knife, tool or machine, which has a sharp edge or
+edges for cutting</p>
+<p>刀身；刀片；刀刃</p>
+<p>不用于进行时 ) if sb/sth deserves sth, it is right that they should
+have</p>
+<p>it, because of the way they have behaved or because of what they are
+值得；应得；应受</p>
+<p>speculative：based on guessing or on opinions that have been formed
+without knowing all the facts 推测的；猜测的；推断的</p>
+<p>metaphysical：adj. 形而上学的；超自然的；玄学派诗歌的</p>
+<p>[ also + V -ing ] ( not used in the progressive tenses</p>
+<p>Management—which is the organ of society specifically charged with
+making resources</p>
+<p>productive, that is, with the responsibility for organized economic
+advance—therefore reflects the</p>
+<p>basic spirit of the modern age.</p>
+<p>organ：</p>
+<p>（人</p>
+<p>a part of the body that has a particular purpose, such as the heart
+or the brain; part of a plant with a particular purpose</p>
+<p>体或动植物的）器官</p>
+<p>It is, in fact, indispensable, and this explains why, once begotten,
+it grew so fast and with so little</p>
+<p>opposition.</p>
+<p>indispensable：</p>
+<p>不可或缺的；必不可少的</p>
+<dl>
+<dt>opposition：</dt>
+<dd>
+<p>(to sb/sth) | ~ (for sth/for doing sth) too important to be
+without</p>
+</dd>
+</dl>
+<p>[ U ] ~ (to sb/sth) the act of strongly disagreeing with sb/sth,
+especially with the aim of preventing sth from happening</p>
+<p>（强烈的）反对，反抗，对抗</p>
+<h3 id="action-point">ACTION POINT:</h3>
+<p>Come up with a few examples of why management, its competence, its
+integrity, and its</p>
+<p>performance, is so decisive to the free world.</p>
+<p>competence：</p>
+<p>能力；胜任</p>
+<p>integrity：</p>
+<p>诚实正直</p>
+<p>performance：</p>
+<p>表现；性能；业绩；工作情况</p>
+<p>decisive：</p>
+<p>决定性的；关键的</p>
+<p>[ U C ] ( also less frequent com·pe·ten·cy ) ~ (in sth) | ~ (in doing
+sth) the ability to do sth well</p>
+<p>the quality of being honest and having strong moral principles</p>
+<p>[ U C ] how well or badly you do sth; how well or badly sth works</p>
+<p>very important for the final result of a particular situation</p>
+<p>The Practice of Management</p>
+<h2 id="january">3 JANUARY</h2>
+<h3 id="management-is-indispensable">Management Is Indispensable</h3>
+<p>Whoever makes two blades of grass grow where only one grew before</p>
+<p>deserves better of mankind than any speculative philosopher or
+metaphysical</p>
+<p>system builder.</p>
+<p>Management will remain a basic and dominant institution perhaps as
+long</p>
+<p>as Western civilization itself survives. For management is not only
+grounded</p>
+<p>in the nature of the modern industrial system and in the</p>
+<p>needs of modern business enterprise, to which an industrial system
+must</p>
+<p>entrust its productive resources, both human and material.
+Management</p>
+<p>also expresses the basic beliefs of modern Western society. It
+expresses</p>
+<p>the belief in the possibility of controlling man’s livelihood through
+the</p>
+<p>system-atic organization of economic resources. It expresses the
+belief</p>
+<p>that eco-nomic change can be made into the most powerful engine
+for</p>
+<p>human betterment and social justice—that, as Jonathan Swift first</p>
+<p>overstated it three hundred years ago, whoever makes two blades of
+grass</p>
+<p>grow where only one grew before deserves better of mankind than
+any</p>
+<p>speculative philosopher or metaphysical system builder.</p>
+<p>Management—which is the organ of society specifically charged
+with</p>
+<p>making resources productive, that is, with the responsibility for
+organized</p>
+<p>economic advance—therefore reflects the basic spirit of the modern
+age.</p>
+<p>It is, in fact, indispensable, and this explains why, once begotten,
+it grew</p>
+<p>so fast and with so little opposition.</p>
+<h3 id="action-point-1">ACTION POINT:</h3>
+<p>Come up with a few examples of why management, its</p>
+<p>competence, its integrity, and its performance, is so decisive to the
+free</p>
+<p>world.</p>
+<h4 id="the-practice-of-management">The Practice of Management</h4>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="第三同读" />
+  <title>德鲁克日志</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">德鲁克日志</h1>
+<p class="author">第三同读</p>
+</header>
+<h2 id="透过金庸读懂德鲁克">透过金庸读懂德鲁克</h2>
+<p>有一个和一个创投圈的大佬聊天，大佬说，所谓的创业，无外乎找人找钱找方向。</p>
+<p>我赶忙点头称是，毕竟，人家是大佬呀。可是，我心里想的却是：你没人没钱没方向，创啥业呀，这</p>
+<p>不是闹着玩么？</p>
+<p>后来，和创业者接触多了，我越来越发现，这个大佬说的太对了。我遇到的每一个创业者，每天思考</p>
+<p>的都是这三个问题：人在哪里？钱在哪里？方向在哪里？</p>
+<p>不管是草根创业者，还是口含金匙的精英创业者。</p>
+<p>然后，我又想了一下，其实，人生又何尝不是如此呢？我们孤零零来到这个世界上，每时每刻都是在</p>
+<p>找人找钱找方向，何曾有过例外？</p>
+<p>有一个人叫做亚伯拉罕·马斯洛，他对人的需求做了分析、总结，总结出了人的五种需求。这个总结被</p>
+<p>称为马斯洛需求层次理论，今天偶尔看到这个理论，突然发现，这个所谓的五层需求，每一层也都是</p>
+<p>找人找钱找方向呀。只是每一层略有不同而已。</p>
+<p>马斯洛认为，人类具有一些先天需求，人的需求越是低级的需求就越基本，越与动物相似；越是高级</p>
+<p>的需求就越为人类所特有。同时这些需求都是按照先后顺序出现的，当一个人满足了较低的需求之</p>
+<p>后，才能出现较高级的需求，即需求层次。</p>
+<p>马斯洛的第一层是生理上的需求，也就是食色的需求，具体可以表现为空气、水、食物、睡眠、性</p>
+<p>等。</p>
+<p>马斯洛认为，只有这些最基本的需要满足到维持生存所必需的程度后，其他的需要才能成为新的激励</p>
+<p>因素，而到了此时，这些已相对满足的需要也就不再成为激励因素了。</p>
+<p>那么，如何满足这些需求呢？除了性需要找人外，空气、水、食物、睡眠，都是需要找钱的，处于这</p>
+<p>个阶段的人，如何找钱呢?大概率是工作，也就是出卖自己有的东西：体力、脑力、身体。</p>
+<p>处于这个阶段的人需要方向么？或许需要，不过，对于他们来说，任何方向都是可以的，只要给他们</p>
+<p>空气、水、食物、睡眠、性，他们几乎可以接受任何方向。</p>
+<p>当第一层的需求得到满足后，人就开始追求第二层的需求了：安全上的需求，这一层的需求具体表现</p>
+<p>在人身安全、健康保障、工作职位保障、家庭安全。</p>
+<p>马斯洛认为，整个有机体是一个追求安全的机制，人的感受器官、效应器官、智能和其他能量主要是</p>
+<p>寻求安全的工具。</p>
+<p>那么，处于这一层的人，如何满足这个需求呢？当人吃饱、穿暖有住所后，人就不愿意再冒险了。妓</p>
+<p>女赚了比较多的前后，就想着从良，毕竟，性交易是有很高的人身风险的。男人从事危险工作一段时</p>
+<p>间后，一旦赚到足够的钱，就不想再去了，毕竟，在有钱的情况下，命比钱重要。</p>
+<p>这个层级的人，可以寻找一些朋友，事业上能帮助自己的。也会通过工作来赚更多地钱，通过这些钱</p>
+<p>和朋友让自己获得安全的工作环境、身体有健康的保障，家庭有健康的保障。</p>
+<p>通过这一层后，人就进入了第三层需求，也就是情感和归属的需求。这一层具体表现在友情、爱情、</p>
+<p>性亲密等。这时的你，吃穿不用愁了，也有比较强的安全感了。你的需求就表现在需要别人的关心，</p>
+<p>需要别人爱。对性的需求也不是交配的需求了，而是想和自己心爱的人享受温柔，柔情。</p>
+<p>如何做到呢？肯定还是找人，找钱，找方向。友情、爱情，都是非常挑剔的，你需要找到合适的人，</p>
+<p>或许你或遇到很多很多人，你却需要找到那个特别的人来疼你，爱你。你可以花钱买到easy
+girl，你需</p>
+<p>要的确实和某个人在温柔乡里缠绵。当然，美妙的爱情不能是无源之水，你还是需要钱。</p>
+<p>有了这些后，你就开始有了新的需求，这就是马斯洛定义的第四层的需求：尊重的需求。这一层次的</p>
+<p>需求具体表现在自我尊重、信心、成就、对他人的尊重以及被他人尊重。</p>
+<p>这时的你，对圈子以及很挑剔了。你不会接受你不喜欢的人在你的圈子里走来走去，
+你会用心去挑选</p>
+<p>进入你生活圈子的人。当然，你也需要找更好地找钱的方法，因为，这种需求对钱的消耗也会大一</p>
+<p>些。如果找不到足够的钱，你就没法满足自己的这个需求。</p>
+<p>在这个层级的人，对他人是非常尊重的，他尊重身边的每一个人，一方面因为他认为做人是值得尊重</p>
+<p>的，另一方便，身边的人本来就是他选的值得尊重的那些，而这些人也会尊重他。</p>
+<p>满足了这些需求后，这个人已经非常非常优秀了。他会进入会后一个层级的需求：自我实现的需求。</p>
+<p>对于处于这一层的人来说，他们对生活以及对生活的周边以及没有更多的诉求了，他们更多是要实现</p>
+<p>自我。而实现自我无外乎立德、立功、立言（太上有立德，其次有立功，其次有立言）。不管这个人</p>
+<p>是想立德，还是立功，还是立言，他都需要找人，这些都不是自己一个人可以做的，他也需要找钱，</p>
+<p>不然事情也没法做，更主要的是，他需要找方向。德于什么？功在何处？言在何方？</p>
+<p>其实，除了第一层，你不需要考虑方向外，其他层，你都需要找到适合的人，找到适合的钱，然后明</p>
+<p>确自己的方向，否则，你的需求就很难被满足。</p>
+<p>而且，在这些层级，人无疑要比钱重要的多，人对了，钱就来了，人和钱来了，需求也就满足了。人</p>
+<p>生也就圆满了。</p>
+<p>如果一个人，满足了所有的五层需求，是不是就成为”五全人“了呢？就像乾隆的十全老人。</p>
+<p>你目前正在哪个层级努力呢？你在努力时，是关注人多一些？还是钱多一些？还是其他？</p>
+<h2 id="大纲">大纲</h2>
+<h2 id="百字摘要">百字摘要</h2>
+<h2 id="金庸案例">金庸案例</h2>
+<h2 id="时间消耗">时间消耗</h2>
+<h2 id="阅读理解">阅读理解：</h2>
+<h2 id="大纲-1">大纲：</h2>
+<h2 id="撰写">撰写：</h2>
+<h2 id="录音">录音</h2>
+<h2 id="一小时运动">一小时运动</h2>
+<h2 id="英文原文">英文原文</h2>
+<p>10 DECEMBER</p>
+<p>Resource-Allocation Decisions</p>
+<p>Resource-Allocation：资源配置</p>
+<p>The allocation of capital and people determine whether the
+organization will do well or poorly.</p>
+<p>The allocation of capital and performing people converts into action
+all that management knows</p>
+<p>about its business—they determine whether the organization will do
+well or poorly.</p>
+<p>An organization should allocate human resources as purposefully and
+as thoughtfully as it</p>
+<p>allocates capital.</p>
+<p>purposefully: 有目的地；自觉地</p>
+<p>thoughtfully 沉思地；体贴地，亲切地</p>
+<ol start="14" type="a">
+<li></li>
+</ol>
+<p>:n.</p>
+<p>consciously, self-consciously</p>
+<p>warmly, meditatively</p>
+<p>To understand a capital investment, a company has to look at four
+measures: return on</p>
+<p>investment, payback period, cash flow, and discounted present
+value.</p>
+<p>Each of these four measures tells the executive something different
+about a prospective capital</p>
+<p>investment.</p>
+<p>prospective:</p>
+<p>有望的；可能的；预期的；潜在的</p>
+<p>expected to do sth or to become sth</p>
+<p>Each looks at the investment through a different lens.</p>
+<p>lens:</p>
+<p>a curved piece of glass or plastic that makes things look larger,
+smaller or clearer when you look through it</p>
+<p>透镜；镜片</p>
+<p>Decision makers should not evaluate capital investments in isolation,
+but as part of a cluster of</p>
+<p>projects.</p>
+<p>evaluate:</p>
+<p>估计；评价；评估</p>
+<p>isolation：</p>
+<p>隔离；隔离状态</p>
+<p>cluster：</p>
+<p>（同类物丛生或聚集的）簇，团，束，串</p>
+<p>to form an opinion of the amount, value or quality of sth after
+thinking about it carefully</p>
+<p>the act of separating sb/sth; the state of being separate</p>
+<p>a group of things of the same type that grow or appear close
+together</p>
+<p>They should then select the cluster that shows the best ratio between
+opportunity and risk.</p>
+<p>The results of capital spending should be assessed against
+expectations in the post audit</p>
+<p>procedure.</p>
+<p>assessed：</p>
+<p>V-T When you assess a person, thing, or situation, you consider them
+in order to make a judgment about them.</p>
+<p>评估</p>
+<p>Information gathered from the procedure can then be used to help make
+decisions about future</p>
+<p>investments.</p>
+<p>The decisions to hire, to fire, and to promote are among the most
+important decisions of the</p>
+<p>executive.</p>
+<p>They are more difficult than the capital allocation decision.</p>
+<p>An organization needs to have a systematic process for making people
+decisions that is just as</p>
+<p>rigorous as the one it has for making decisions about capital.</p>
+<p>rigorous：</p>
+<p>done carefully and with a lot of attention to detail SYN thorough</p>
+<p>谨慎的；细致的；彻底的</p>
+<p>Executives need to evaluate people against expectations.</p>
+<p>evaluate:</p>
+<p>expectations：</p>
+<p>to form an opinion of the amount, value or quality of sth after
+thinking about it carefully</p>
+<p>估计；评价；评估</p>
+<p>N-UNCOUNT Your expectations are your strong hopes or beliefs that
+something will happen or that you will get</p>
+<p>something that you want.</p>
+<p>期盼</p>
+<h3 id="action-point">ACTION POINT:</h3>
+<p>Review your capital allocation decisions of the past year.</p>
+<p>Are they meeting your expectations?</p>
+<p>Review your hiring and promotion decisions of the past year. Are they
+meeting your expectations?</p>
+<p>Make changes to your resource allocation procedures based on feedback
+analysis.</p>
+<p>Management Challenges for the 21st Century</p>
+<p>From Data to Information Literacy (Corpedia Online Program).</p>
+<h2 id="december">10 DECEMBER</h2>
+<h3 id="resource-allocation-decisions">Resource-Allocation
+Decisions</h3>
+<p>The allocation of capital and people determine whether the
+organization</p>
+<p>will do well or poorly.</p>
+<p>The allocation of capital and performing people converts into action
+all</p>
+<p>that management knows about its business—they determine whether
+the</p>
+<p>organization will do well or poorly. An organization should
+allocate</p>
+<p>human resources as purposefully and as thoughtfully as it allocates
+capital. To</p>
+<p>understand a capital investment, a company has to look at four
+mea-sures:</p>
+<p>return on investment, payback period, cash flow, and discounted
+present</p>
+<p>value. Each of these four measures tells the executive something
+different</p>
+<p>about a prospective capital investment. Each looks at the invest-ment
+through</p>
+<p>a different lens. Decision makers should not evaluate capital
+investments in</p>
+<p>isolation, but as part of a cluster of projects. They should then
+select the</p>
+<p>cluster that shows the best ratio between opportunity and risk. The
+results of</p>
+<p>capital spending should be assessed against expectations in the
+postaudit</p>
+<p>procedure. Information gathered from the procedure can then be used
+to help</p>
+<p>make decisions about future investments.</p>
+<p>The decisions to hire, to fire, and to promote are among the most
+impor-</p>
+<p>tant decisions of the executive. They are more difficult than the
+capital alloca-</p>
+<p>tion decision. An organization needs to have a systematic process for
+making</p>
+<p>people decisions that is just as rigorous as the one it has for
+making decisions</p>
+<p>about capital. Executives need to evaluate people against
+expectations.</p>
+<h3 id="action-point-1">ACTION POINT:</h3>
+<p>Review your capital allocation decisions of the past year. Are</p>
+<p>they meeting your expectations? Review your hiring and promotion
+decisions</p>
+<p>of the past year. Are they meeting your expectations? Make changes to
+your</p>
+<p>resource allocation procedures based on feedback analysis.</p>
+<p>Management Challenges for the 21st Century</p>
+<h4 id="from-data-to-information-literacy-corpedia-online-program.">From
+Data to Information Literacy (Corpedia Online Program).</h4>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="第三同读" />
+  <title>德鲁克日志</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">德鲁克日志</h1>
+<p class="author">第三同读</p>
+</header>
+<h2 id="透过金庸读懂德鲁克">透过金庸读懂德鲁克</h2>
+<p>为什么那些人不买课？</p>
+<p>我在推广一个课，有一段时间，我每天都在朋友圈发这个课，每天都会有一些人买。</p>
+<p>我朋友圈有4000多人，其中有1500多人买了这个课，我每次发都会有新的好友购买。我一直很奇怪，</p>
+<p>这些新购买的同学，以前没看到我发么？</p>
+<p>我更奇怪的是，还有那2000多人，他们为什么不买呢？因为这个课确实很好。</p>
+<p>这个课是给孩子们设计的，内容孩子们也特别喜欢，结合了知识姓和趣味性，很多大人也很喜欢听。</p>
+<p>我自己也听了2遍，收获不小，为什么我朋友圈还有2500多人没有订阅呢？</p>
+<p>订阅了课程的小伙伴会带着兴奋的语气和我说这个课程如何如何好，对自己的孩子如何如何有帮助。</p>
+<p>偶尔会有人问我课程的内容如何，我通常的回答是“有试听课，您可以听一下”，这个回答感觉很“专业”</p>
+<p>的，然后，这些人大概不会买。</p>
+<p>我记得有个年轻的妈妈，和我交流过6次，最后也没有购买，至于她没有购买的理由，我也不大记得</p>
+<p>了。</p>
+<p>我建了好几个群，每个群里有好几百人，都是订阅了这个课的，我每天都会和他们聊天，同学们也会</p>
+<p>和我交流对课程的诉求和诉求，也会讨论课程的内容。他们对课程有很多建议，也有很好的创意和玩</p>
+<p>法。</p>
+<p>对于那些没有订阅课的，我是不大关注的，我对他们说的最多的话就是：“扫码可以试听”。</p>
+<p>有一次，有个年轻的妈妈问我：“这个课真的很好，还有类似的课程么？”</p>
+<p>我很开心地回答说：“目前没有了，有的话我会推给你”。</p>
+<p>又有一次，我问一个同学说：“你订阅了这个课了么？”她说：“我孩子还小，听不懂”。</p>
+<p>我本来应该和她说这个课也适合自己听，可是一想，“我没有必要去说服她呀”，她试听后，自然就有</p>
+<p>了自己的选择。所以，我也就没有再交流了。</p>
+<p>而且，1500人也不少了，每天和他们交流，可以更好地了解课程的内容，这对我来说也是比较容易的</p>
+<p>事情，毕竟我已经很了解了。</p>
+<p>所以，我很少去关注那没有购买的2500人。</p>
+<p>今天我突然发现，我为什么不去了解一下那没有订阅的2500人在想什么呢？他们肯定也看到了我发的</p>
+<p>信息，有的还试听过，有的没有试听，他们在想什么？</p>
+<p>已经购买的人，他们是接受和认可这个课程的内容和形式的，那些没有购买的人，他们在意的是什么</p>
+<p>呢？这个课程应该做哪些调整呢？做那些改变呢？</p>
+<p>这或许是更重要的事情。</p>
+<p>never go to war, especially with your self.</p>
+<h2 id="大纲">大纲</h2>
+<h2 id="百字摘要">百字摘要</h2>
+<p>客户是唯一的利润中心，我们同时需要非客户的信息。因为他们也是客户。</p>
+<h2 id="金庸案例">金庸案例</h2>
+<h2 id="时间消耗">时间消耗</h2>
+<h2 id="阅读理解">阅读理解：</h2>
+<h2 id="大纲-1">大纲：</h2>
+<h2 id="撰写">撰写：</h2>
+<h2 id="录音">录音</h2>
+<h2 id="一小时运动">一小时运动</h2>
+<h2 id="英文原文">英文原文</h2>
+<p>28 MARCH</p>
+<p>Information for Strategy</p>
+<p>The only profit center of a business is a customer</p>
+<p>whose check hasn’t bounced.</p>
+<p>bounced：</p>
+<p>V-I If an e-mail or other electronic message bounces, it is returned
+to the person who sent it because the address was</p>
+<p>wrong or because of a problem with one of the computers involved in
+sending it.</p>
+<p>退回</p>
+<p>Strategy has to be based on information about markets, customers, and
+noncustomers, about</p>
+<p>technology in one’s own industry and others’, about worldwide
+finance, and about the changing</p>
+<p>world economy.</p>
+<p>For that is where the results are.</p>
+<p>Inside an organization there are only cost centers.</p>
+<p>Major changes always start outside an organization.</p>
+<p>A retailer may know a great deal about the people who shop at its
+stores.</p>
+<p>retailer：</p>
+<p>零售商；零售店</p>
+<p>a person or business that sells goods to the public</p>
+<p>But no matter how successful, no retailer ever has more than a small
+fraction of the market as its</p>
+<p>customers; the great majority are noncustomers.</p>
+<p>majority：</p>
+<p>大部分；大多数</p>
+<p>[ sing.+sing./pl.v. ] ~ (of sb/sth) the largest part of a group of
+people or things</p>
+<p>It is always with noncustomers that basic changes begin and become
+significant.</p>
+<p>At least half of the important new technologies that have transformed
+an industry in the past fifty</p>
+<p>years came from outside the industry itself.</p>
+<h3 id="action-point">ACTION POINT:</h3>
+<p>Set up a system for your organization to collect and organize
+relevant information on the</p>
+<p>environment, including information about markets, customers,
+noncustomers, and technology in</p>
+<p>and outside of your industry.</p>
+<p>relevant ：</p>
+<p>紧密相关的；切题的</p>
+<p>closely connected with the subject you are discussing or the
+situation you are thinking about</p>
+<p>Management Challenges for the 21st Century</p>
+<h2 id="march">28 MARCH</h2>
+<h3 id="information-for-strategy">Information for Strategy</h3>
+<p>The only profit center of a business is a customer</p>
+<p>whose check hasn’t bounced.</p>
+<p>Strategy has to be based on information about markets, customers,
+and</p>
+<p>noncustomers, about technology in one’s own industry and others’,
+about</p>
+<p>worldwide finance, and about the changing world economy. For that is
+where</p>
+<p>the results are. Inside an organization there are only cost centers.
+Major</p>
+<p>changes always start outside an organization. A retailer may know a
+great</p>
+<p>deal about the people who shop at its stores. But no matter how
+suc-</p>
+<p>cessful, no retailer ever has more than a small fraction of the
+market as its</p>
+<p>customers; the great majority are noncustomers. It is always with
+noncus-</p>
+<p>tomers that basic changes begin and become significant. At least half
+of</p>
+<p>the important new technologies that have transformed an industry in
+the</p>
+<p>past fifty years came from outside the industry itself.</p>
+<h3 id="action-point-1">ACTION POINT:</h3>
+<p>Set up a system for your organization to collect and orga-</p>
+<p>nize relevant information on the environment, including
+information</p>
+<p>about markets, customers, noncustomers, and technology in and
+outside</p>
+<p>of your industry.</p>
+<h4 id="management-challenges-for-the-21st-century">Management
+Challenges for the 21st Century</h4>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

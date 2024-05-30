@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="第三同读" />
+  <title>德鲁克日志</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">德鲁克日志</h1>
+<p class="author">第三同读</p>
+</header>
+<h2 id="透过金庸读懂德鲁克">透过金庸读懂德鲁克</h2>
+<p>浙江在扫码的时候，甘肃在给人剃光头</p>
+<p>这几天各种新闻很多，今天特别留意到了两个新闻，一个是甘肃的，一个是浙江的。</p>
+<p>甘肃第三次派出了医疗队，都是一些年轻的姑娘，在出发前，这些姑娘都（被）剃了光头，科学的说</p>
+<p>法是为了减少病毒传播，现场变现出的是一些不同的感觉：</p>
+<p>【插入视频】</p>
+<p>为了减少病毒传播，必须剃光头么？好像也不是，江苏、上海、福建等地支援武汉的女护士，也就是</p>
+<p>剪了短发，照样在一线干得好好的。但是，到了甘肃，加码了，直接剃光头，而且还拍了视频。</p>
+<p>呦呦鹿鸣说：”为什么要剃光头？工作不一定需要，那谁需要呢？本地领导需要。这就像过去的酒局一</p>
+<p>样。“我喝了您随意”，难道敬酒的人和被敬酒的人不知道喝酒伤身吗？不知道喝醉了丑态毕露吗？他</p>
+<p>们当然知道；但是，这本质上就是一个忠诚度测试，你喝了，就表示你宁愿牺牲自己的身体，也要显</p>
+<p>示对被敬者的忠顺，而被敬酒的人则享受那种“一切尽在掌握”的快感。如今，剃光头也是如此，让你</p>
+<p>剃光，你就剃光，这就说明你是我的人，至于前线是不是需要，那有什么关系。“
+参考（呦呦鹿鸣：）</p>
+<p>与此同时，浙江正在紧张地复工。</p>
+<p>为了让外地务工人员赶紧回城，杭州宣布：包专列，向疫情平稳地区开专列组织企业员工返程复工，</p>
+<p>首批免费。</p>
+<p>嘉善：政府掏钱包飞机！</p>
+<p>包高铁才是起步待遇，嘉善干脆包飞机，从四川把154名返岗员工，接到了杭州萧山机场，然后再通过</p>
+<p>巴士，送员工直接抵达县企业。</p>
+<p>海宁：指导企业包车、包机、包专列，接新老员工返岗，政府补2/3的路费。</p>
+<p>义乌：政府掏钱组织专车、专列、专门车厢！</p>
+<p>对于重点地区、重点企业的员工，由政府组织专车、专列、专门车厢负责接送，费用全部由政府买</p>
+<p>单。</p>
+<p>看着浙江各个地方这么急迫地复工，很多人就担心了：现在疫情这么紧张，怎么就敢复工呢？你知道</p>
+<p>空气中飘得是什么呢？</p>
+<p>浙江是不是傻呀？你知道路上每个人他们是什么情况么？</p>
+<p>浙江说，我们知道。</p>
+<p>因为浙江是做了足够的准备的，这就是”一图一码一指数“。</p>
+<p>一图指的是疫情图，浙江根据各县疫情风险状况，用五种颜色进行等级区分，只有低风险的县，才鼓</p>
+<p>励推进复工复产。</p>
+<p>“一码”，即健康码，分绿码、黄码、红码三种二维码，拥有绿码即绝大多数人能自由流动，红码、黄</p>
+<p>码人员则进行必要隔离。</p>
+<p>红码，赋予确诊病人、疑似病人、密切接触者或医学观察人员，以及来自省外重点地区和省内外其他</p>
+<p>高风险地区的人员；</p>
+<p>黄码，赋予有发热、呼吸道症状的人员，以及来自省内外较高风险地区的人员；</p>
+<p>除此之外的被赋予绿码，可谓经过大数据监测的普通健康人群。</p>
+<p>这些健康码可以通过支付宝、微信等生成，跨域互认，全省通行，这样，全省范围内，人员健康状况</p>
+<p>一目了然。</p>
+<p>3、“一指数”，即精密智控指数，由管控指数和畅通指数构成，浙江用这个指数，作为KPI，对各设区</p>
+<p>市进行评价。</p>
+<p>这样，谁干的好，谁干的差，一目了然。</p>
+<p>这里的领导和机构，真的很专业！</p>
+<p>有了这些工具和努力，在各种指标的指导下，浙江当然理直气壮地复工了，毕竟，经济也是不能耽误</p>
+<p>的。</p>
+<p>而且，浙江有杭州，杭州有阿里，这样的公司，他们用信息化解决了人的识别的问题。这就很好滴替</p>
+<p>代了延路设卡测体温的方法，而且更有效。</p>
+<p>政府出政策，出资金，调动大量的国有资源（飞机、高铁等），在技术的支持下，勇敢地推出政策，</p>
+<p>助力企业复工，让政府、企业和人民达成了多赢的局面。可以想象，2020年，抢跑的浙江经济肯定是</p>
+<p>最好的。</p>
+<p>我突然想起来另外一家高科技公司，是我国的一家搜索引擎公司，不是百度，是一家叫做“即刻搜索”</p>
+<p>的公司，即刻搜索是搜索的国家队，是人民搜索网络股份公司与2011年推出的一家公司，后来和盘古</p>
+<p>搜索合并为中国搜索。中国搜索由中国搜索信息科技股份有限公司创办运营，该公司是由中国七大新</p>
+<p>闻机构人民日报社、新华通讯社、中央电视台、光明日报社、经济日报社、中国日报社、中国新闻社</p>
+<p>联合设立的互联网企业。其中光即刻搜索就投资了20亿。首任总经理是邓亚萍。</p>
+<p>现在这家公司如何呢？我搜了一下2019年中国搜索引擎的市场：</p>
+<p>前六一家占了99.79%，可以推算中国搜索的份额应该少于0.21%。</p>
+<p>我在查看中国搜索资料时，看到一句话：</p>
+<p>我们要知道毕竟国家的搜索是不以盈利为目的的投资，因此大可不必对于邓亚萍上纲上线的指责。邓</p>
+<p>亚萍虽然有着经济学博士的学位，但是毕竟商场是非常残酷的，在商言商，人民搜索管理的不好，走</p>
+<p>人是正常的调动。</p>
+<p>有一次我听一个经济学家讲课，有人提到了中国搜索，这位经济学家说：”政府应该把20亿投资给百度</p>
+<p>这样的企业。而不应该直接下场竞赛“。</p>
+<p>是呀，政府的优势在于公信力、庞大的资金以及政策推动力。而企业的优势是高效的利益驱动机制。</p>
+<p>像浙江那样，政府充分利用自己的优势，同时借助企业的优势，为人民提供一个良好的生活环境，这</p>
+<p>样就是最好的。</p>
+<p>至于政府不擅长做的那些，交给企业就好了。</p>
+<p>目前，浙江没有一个死亡病例，也没有医务人员感染，19个县连续14天以上没有新增确诊病例。这</p>
+<p>些，都是浙江政府的靓丽成绩。</p>
+<p>期待去浙江。</p>
+<h2 id="大纲">大纲</h2>
+<h2 id="百字摘要">百字摘要</h2>
+<h2 id="金庸案例">金庸案例</h2>
+<h2 id="时间消耗">时间消耗</h2>
+<h2 id="阅读理解">阅读理解：</h2>
+<h2 id="大纲-1">大纲：</h2>
+<h2 id="撰写">撰写：</h2>
+<h2 id="录音">录音</h2>
+<h2 id="一小时运动">一小时运动</h2>
+<h2 id="英文原文">英文原文</h2>
+<p>18 FEBRUARY</p>
+<p>Reinventing Government</p>
+<p>Reinventing：</p>
+<p>现</p>
+<p>[ VN ] ~ sth/yourself (as sth) to present yourself/sth in a new form
+or with a new image</p>
+<p>以新形象示人；以新形式出</p>
+<p>Government has to regain a modicum of performance capacity.</p>
+<p>regain:</p>
+<p>重新获得，恢复（能力或品质等）</p>
+<p>modicum</p>
+<p>少量，一点点（好事或愉快的事）</p>
+<p>to get back sth you no longer have, especially an ability or a
+quality</p>
+<p>:[ sing. ] ( formal ) a fairly small amount, especially of sth good
+or pleasant</p>
+<p>Governments have become powerless against the onslaught of
+special-interest groups, have,</p>
+<p>indeed, become powerless to govern—to make decisions and to enforce
+them.</p>
+<p>onslaught:</p>
+<p>攻击；猛攻</p>
+<p>enforce</p>
+<dl>
+<dt>强制执行，强行实施（法律或规定）</dt>
+<dd>
+<p>(against/on sb/sth) | ~ (of sth) a strong or violent attack</p>
+</dd>
+<dd>
+<p>~ sth (on/against sb/sth) to make sure that people obey a particular
+law or rule</p>
+</dd>
+</dl>
+<p>The new tasks—protection of the environment, stamping out private
+armies and international</p>
+<p>terrorism, making arms control effective—all will require more rather
+than less government.</p>
+<p>stamping out:</p>
+<p>杜绝</p>
+<p>terrorism</p>
+<p>恐怖主义</p>
+<p>PHRASAL VERB If you stamp something out, you put an end to it.</p>
+<p>:[ U ] the use of violent action in order to achieve political aims
+or to force a government to act</p>
+<p>But they will require a different form of government.</p>
+<p>Government has to regain a modicum of performance capacity.</p>
+<p>modicum</p>
+<p>少量，一点点（好事或愉快的事）</p>
+<p>:[ sing. ] ( formal ) a fairly small amount, especially of sth good
+or pleasant</p>
+<p>It has to be turned around.</p>
+<p>turned around:转向反方向；(生意或经济) 好转；船只留港</p>
+<p>To turn around any institution—whether a business, a labor union, a
+university, a hospital, or a</p>
+<p>government—always requires the same three steps:</p>
+<p>(放弃)Abandonment of the things that do not work, the things that
+have never worked, the things</p>
+<p>that have outlived their usefulness and their capacity to
+contribute.</p>
+<p>（聚焦）Concentration on the things that do work, the things that
+produce results, the things that</p>
+<p>improve the organization’s ability to perform.</p>
+<p>Concentration:</p>
+<p>专心；专注</p>
+<p>[ U ] the ability to direct all your effort and attention on one
+thing, without thinking of other things</p>
+<p>（分析）Analysis of the half-successes, the half-failures.</p>
+<p>A turnaround requires abandoning whatever does not perform and doing
+more of what does</p>
+<p>perform.</p>
+<h3 id="action-point">ACTION POINT:</h3>
+<p>Can your business profit from government incompetence much like FedEx
+and UPS have profited</p>
+<p>from the shortcomings of the U.S. Postal Service?</p>
+<p>profit from：得益于；利用</p>
+<p>incompetence：</p>
+<p>无能力；不胜任；不称职</p>
+<p>[ U ] the lack of skill or ability to do your job or a task as it
+should be done</p>
+<p>If you work for government, improve your effectiveness by
+concentrating on what works.</p>
+<p>Post-Capitalist Society</p>
+<h2 id="february">18 FEBRUARY</h2>
+<h3 id="reinventing-government">Reinventing Government</h3>
+<p>Government has to regain a modicum of performance capacity.</p>
+<p>Governments have become powerless against the onslaught of
+special-</p>
+<p>interest groups, have, indeed, become powerless to govern—to make</p>
+<p>decisions and to enforce them. The new tasks—protection of the
+environ-</p>
+<p>ment, stamping out private armies and international terrorism, making
+arms</p>
+<p>control effective—all will require more rather than less
+government.</p>
+<p>But they will require a different form of government.</p>
+<p>Government has to regain a modicum of performance capacity. It
+has</p>
+<p>to be turned around. To turn around any institution—whether a
+business,</p>
+<p>a labor union, a university, a hospital, or a government—always
+requires</p>
+<p>the same three steps:</p>
+<p>Abandonment of the things that do not work, the things that</p>
+<p>have never worked, the things that have outlived their usefulness</p>
+<p>and their capacity to contribute.</p>
+<p>Concentration on the things that do work, the things that produce</p>
+<p>results, the things that improve the organization’s ability to
+perform.</p>
+<p>Analysis of the half-successes, the half-failures.</p>
+<p>A turnaround requires abandoning whatever does not perform and
+doing</p>
+<p>more of what does perform.</p>
+<h3 id="action-point-1">ACTION POINT:</h3>
+<p>Can your business profit from government incompe-tence</p>
+<p>much like FedEx and UPS have profited from the shortcomings of
+the</p>
+<p>U.S. Postal Service? If you work for government, improve your
+effec-</p>
+<p>tiveness by concentrating on what works.</p>
+<h4 id="post-capitalist-society">Post-Capitalist Society</h4>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

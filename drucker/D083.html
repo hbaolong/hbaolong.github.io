@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="第三同读" />
+  <title>德鲁克日志</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">德鲁克日志</h1>
+<p class="author">第三同读</p>
+</header>
+<h2 id="透过金庸读懂德鲁克">透过金庸读懂德鲁克</h2>
+<p>我就想简单地录个课</p>
+<p>今天有个朋友问我：“你认识混沌大学的商务么？我有专家和好的内容，看有没有机会和混沌合作”，</p>
+<p>我想了想问她：“你以为混沌没有（专家和好的内容）么？”</p>
+<p>这是一个信息的边界成本为0的时代，而资源有汇聚的本能，资源总是往可以让自己最大可能使用的地</p>
+<p>方去用的。</p>
+<p>凭借李善友的个人魅力和人脉，混沌大学吸引了全球各地、各行各业，不仅有来自全球知名高校/商学</p>
+<p>院的顶级教授，也有一线的实战企业领袖，比如，《人类简史》、《未来简史》作者尤瓦尔·赫拉利，</p>
+<p>《失控》作者凯文·凯利，爱奇艺创始人龚宇、VIPKID创始人米雯娟等。</p>
+<p>凭着这个名单，混沌基本上可以找到全世界最优秀的老师。</p>
+<p>我身边有一个很棒的唐诗课，还有一个很棒的论语课。自从有了小鹅通，而小鹅通有了平台功能后，</p>
+<p>网上冒出无数个“平台”，花一点钱租用一个小鹅通，然后四处代理课程。我看了一下，很多代理的课</p>
+<p>程销售量都是个位数，更多是0.</p>
+<p>而那个很棒的唐诗课，申请分销的机构多达500家，我看了那些“平台”，大多数所谓的平台，上面胡乱</p>
+<p>摆放一些课程，销量大都接近0.</p>
+<p>我经常在想。在小鹅通上线一个课程，技术上已经可以触达所有的人了，为什么还有再分销一次呢？</p>
+<p>一个爆款会带来庞大的流量，喜欢唐诗课的人，大概率也会喜欢宋词，所以，经常有人问我：你有宋</p>
+<p>词可以听么？</p>
+<p>如果有好的宋词，我大概率会介绍给大家，可惜，我也没有。</p>
+<p>现在，有两个模式：</p>
+<p>一是流量模式，比如混沌，已经有了庞大的流量了，所以，他可以吸引足够多的优秀教授加入，他已</p>
+<p>经只一个平台，一个创业者汇集的平台。</p>
+<p>既然是创业者汇集的平台，他们就希望在这个平台获得和创业相关的任何信息，而不用再去其他地方</p>
+<p>找了。毕竟，信任的成本是很高的。</p>
+<p>另一个就是内容模式，我做一个非常好的内容，然后把这个内容打爆，对于很多个人或者小团队来</p>
+<p>说，一个爆款课程的利润已经非常高了。</p>
+<p>不过，一旦你打爆了一门课，你获取了流量后，你的流量就会问你要类似的课程，你不卖么？</p>
+<p>这样，你就会增加一些同质的课程，你又变成一个小平台了。</p>
+<p>当你成为顶级平台后，你就会用心去筛选内容了。</p>
+<p>至于那些花点钱注册一个小鹅通（或者有赞、千聊、荔枝啥的），然后找一些莫名其妙的课程放上</p>
+<p>去，然后就开始在朋友圈卖。那个还不如做微商，因为你既没有流量，也没有内容。</p>
+<p>你只是在赌博，而不是做生意。</p>
+<h2 id="大纲">大纲</h2>
+<h2 id="百字摘要">百字摘要</h2>
+<h2 id="金庸案例">金庸案例</h2>
+<h2 id="时间消耗">时间消耗</h2>
+<h2 id="阅读理解">阅读理解：</h2>
+<h2 id="大纲-1">大纲：</h2>
+<h2 id="撰写">撰写：</h2>
+<h2 id="录音">录音</h2>
+<h2 id="一小时运动">一小时运动</h2>
+<h2 id="英文原文">英文原文</h2>
+<p>23 MARCH</p>
+<p>The Great Strength of E-Commerce</p>
+<p>Selling is tied no longer to production but to distribution.</p>
+<p>E-commerce is to the information revolution what the railroad was to
+the industrial revolution.</p>
+<p>railroad：n. 铁路；铁路公司</p>
+<p>The railroad mastered distance— e-commerce eliminates it.</p>
+<p>eliminates：</p>
+<p>V-T To eliminate something, especially something you do not want or
+need, means to remove it completely.</p>
+<p>根除</p>
+<p>The Internet provides the enterprise with the ability to link one
+activity to another and to make realtime data widely available, both
+within the company and to outside suppliers, outside channels of</p>
+<p>distribution, and customers.</p>
+<p>It strengthens the move to disintegrate the corporation.</p>
+<p>disintegrate：</p>
+<p>碎裂；解体；分裂</p>
+<p>to break into small parts or pieces and be destroyed</p>
+<p>But, the great strength of e-commerce is that it provides the
+consumer with a whole range of</p>
+<p>products, no matter who makes them.</p>
+<p>Examples include Amazon.com and CarsDirect.com.</p>
+<p>E-commerce separates, for the first time, selling and producing.</p>
+<p>Selling is tied no longer to production but to distribution.</p>
+<p>There is absolutely no reason why any e-commerce facility should
+limit itself to marketing and</p>
+<p>selling one maker’s products or brands.</p>
+<h3 id="action-point">ACTION POINT:</h3>
+<p>Is your business the equivalent of Amazon.com or the local bookstore?
+If the latter, determine how</p>
+<p>you can use e-commerce to fight back.</p>
+<p>equivalent：</p>
+<dl>
+<dt>（价值、数量、意义、重要性等）相等的，相同的</dt>
+<dd>
+<p>(to sth) equal in value, amount, meaning, importance, etc.</p>
+</dd>
+</dl>
+<p>Managing in the Next Society</p>
+<p>The Next Society (Corpedia Online Program)</p>
+<h2 id="march">23 MARCH</h2>
+<h3 id="the-great-strength-of-e-commerce">The Great Strength of
+E-Commerce</h3>
+<p>Selling is tied no longer to production but to distribution.</p>
+<p>E-commerce is to the information revolution what the railroad was
+to</p>
+<p>the industrial revolution. The railroad mastered distance— e-</p>
+<p>commerce eliminates it. The Internet provides the enterprise with
+the</p>
+<p>ability to link one activity to another and to make real-time data
+widely</p>
+<p>available, both within the company and to outside suppliers, outside
+chan-</p>
+<p>nels of distribution, and customers. It strengthens the move to
+disintegrate</p>
+<p>the corporation.</p>
+<p>But, the great strength of e-commerce is that it provides the
+consumer with</p>
+<p>a whole range of products, no matter who makes them. Examples
+in-clude</p>
+<p>Amazon.com and CarsDirect.com. E-commerce separates, for the first
+time,</p>
+<p>selling and producing. Selling is tied no longer to production but
+to</p>
+<p>distribution. There is absolutely no reason why any e-commerce
+facility</p>
+<p>should limit itself to marketing and selling one maker’s products or
+brands.</p>
+<h3 id="action-point-1">ACTION POINT:</h3>
+<p>Is your business the equivalent of Amazon.com or the local</p>
+<p>bookstore? If the latter, determine how you can use e-commerce to
+fight</p>
+<p>back.</p>
+<p>Managing in the Next Society</p>
+<h4 id="the-next-society-corpedia-online-program">The Next Society
+(Corpedia Online Program)</h4>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

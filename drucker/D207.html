@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="第三同读" />
+  <title>德鲁克日志</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">德鲁克日志</h1>
+<p class="author">第三同读</p>
+</header>
+<h2 id="透过金庸读懂德鲁克">透过金庸读懂德鲁克</h2>
+<p>标题： 杨过的16年</p>
+<p>从绝情谷出来后，杨过心情很忧郁。</p>
+<p>自己的爱人小龙女被南海神尼带走了，因为要治病，16年后才可以再会。伯伯郭靖和伯母黄蓉要守卫</p>
+<p>襄阳，也早早离开了。</p>
+<p>爱人走了，为了不惹麻烦，自己和红颜知己程英、陆无双结拜为兄妹。虽然自己很喜欢这两个义妹，</p>
+<p>为了避免麻烦，在未来的十六年里还是不应该和这两个义妹在一起。</p>
+<p>郭靖和黄蓉在守卫襄阳，自己应该去襄阳帮助郭伯伯么？当然应该。不过郭伯伯已经有大武小武，还</p>
+<p>有整个丐帮，还有很多仰慕郭伯伯的武林人士也会去帮助郭伯伯，自己去了最多也就是带着几个兵丁</p>
+<p>偶尔巡巡城。</p>
+<p>自己的武功不算低了，却也不算很高，郭伯伯虽然需要自己，但好像也没有特别的需要，自己应该去</p>
+<p>么？</p>
+<p>感觉自己的意义不大，杨过决定还是不去郭伯伯哪里了。</p>
+<p>那么，自己可以去哪里呢？自己性格偏邪，不是像郭伯伯那么正气凛然的人，自己也喜欢交朋友，三</p>
+<p>教九流都喜欢交，就算和金轮法王也可以有不错的交情。自己在襄阳帮不上郭伯伯太多，在江湖上说</p>
+<p>不定可以帮到更多。</p>
+<p>是呀，郭伯伯在守卫襄阳，也可以说被困在了襄阳，郭伯母本来也有联合黑白两道的能力，也被困在</p>
+<p>了襄阳。全真教、丐帮已经江湖上所有的正派力量，都被郭靖吸引随时愿意协助郭黄。</p>
+<p>那么，江湖的其他力量呢？那些力量虽然不强，连接在一起还是非常惊人的。那些才是江湖真正的力</p>
+<p>量。</p>
+<p>杨过认为自己应该不去襄阳，不但不去襄阳，而且应该远离和郭靖有关的所有势力：襄阳、全真教、</p>
+<p>桃花岛等等，到那些郭靖够不着，没有关注的地方去。</p>
+<p>九阴真经已经面世五十多年了，这五十多年年，除了九阴真经、独孤剑法之外，肯定还有很多其他的</p>
+<p>武林秘籍在江湖各处被发现，被学习，演绎着另类的江湖故事。这时的江湖应该是真正的藏龙卧虎，</p>
+<p>而自己从十几岁开始，就一直在五绝圈子里混，对整个江湖完全不了解，对江湖的深浅没有什么认</p>
+<p>识，这个也不符合自己的个性。</p>
+<p>正好，自己的爱人要离开自己16年，这一十六年，就让自己离开郭伯伯的VIP套房，到真正的江湖里摸</p>
+<p>吧滚打一下吧，见识一下真正的江湖吧。如果能成长，就让自己成长成一个不确定的可能性吧。</p>
+<p>或许那才是我想要的。</p>
+<p>走吧，我的十六年。</p>
+<h2 id="大纲">大纲</h2>
+<h2 id="百字摘要">百字摘要</h2>
+<h2 id="金庸案例">金庸案例</h2>
+<h2 id="时间消耗">时间消耗</h2>
+<h2 id="阅读理解">阅读理解：</h2>
+<h2 id="大纲-1">大纲：</h2>
+<h2 id="撰写">撰写：</h2>
+<p>25 JULY</p>
+<p>Four Lessons in Marketing</p>
+<p>Henry Ford is supposed to have said: “We can sell the Model T at such
+a low price only because it</p>
+<p>earns such a nice profit.”</p>
+<p>Of the top marketing lessons for the highly competitive twenty-first
+century, the most crucial one is</p>
+<p>that buying customers doesn’t work.</p>
+<p>The collapse of the Hyundai Excel was a spectacular marketing
+failure.</p>
+<p>collapse：</p>
+<p>（突然）倒塌，坍塌</p>
+<p>spectacular：</p>
+<p>壮观的；壮丽的；令人惊叹的</p>
+<p>[ V ] to fall down or fall in suddenly, often after breaking
+apart</p>
+<p>very impressive</p>
+<p>There was nothing wrong with the car.</p>
+<p>But the company had greatly underpriced it.</p>
+<p>As a result, it had no profits to plow back into promotion, service,
+dealers, or improvements to the</p>
+<p>car itself.</p>
+<p>How to define the market is the second lesson—the lesson of what was
+both a marketing success</p>
+<p>and a major marketing fiasco: the conquest of the American market by
+the fax machine.</p>
+<p>fiasco：</p>
+<p>惨败；可耻的失败；尴尬的结局</p>
+<p>conquest：</p>
+<p>征服；占领</p>
+<p>something that does not succeed, often in a way that causes
+embarrassment</p>
+<p>[ sing. U ] the act of taking control of a country, city, etc. by
+force</p>
+<p>The Japanese did not ask, “What is the market for this machine?”
+Instead they asked, “What is the</p>
+<p>market for what it does?” （这两种问法，有个鸟的区别呀）</p>
+<p>And they immediately saw, when looking at the growth of courier
+services such as Federal</p>
+<p>Express, that the market for the fax machine had already been
+established.</p>
+<p>courier：</p>
+<p>（递送包裹或重要文件的）信使，通</p>
+<p>a person or company whose job is to take packages or important papers
+somewhere</p>
+<p>讯员，专递公司</p>
+<p>The next lesson is that marketing starts with all customers in the
+market rather than with our</p>
+<p>customers.</p>
+<p>The final lesson is that of the success of the new “pastoral”
+churches by exploiting demographic</p>
+<p>changes as a marketing opportunity.</p>
+<p>pastoral：</p>
+<p>relating to the work of a priest or teacher in giving help and advice
+on personal matters, not just those connected with</p>
+<p>牧灵的，牧师的，教牧的（有关圣职人员及教师对个人幸福的关顾）</p>
+<p>demographic：adj. 人口结构的；人口统计的</p>
+<p>religion or education</p>
+<p>exploiting：</p>
+<p>V-T If you say that someone is exploiting you, you think that they
+are treating you unfairly by using your work or ideas</p>
+<p>and giving you very little in return.</p>
+<p>利用; 剥削</p>
+<h3 id="action-point">ACTION POINT:</h3>
+<p>Apply these four marketing lessons to your business:</p>
+<p>Don’t try to buy customers. Ask, “What is the market for what the
+product does?” Consider all</p>
+<p>customers in the market. Exploit demographic changes.</p>
+<ol type="1">
+<li><p>不要购买客户？</p></li>
+<li><p>这个产品的功能可以为市场做什么？</p></li>
+<li><p>考虑所有客户，而不是你的客户</p></li>
+<li><p>分析人群结构变化</p></li>
+</ol>
+<p>Managing for the Future</p>
+<h2 id="july">25 JULY</h2>
+<h3 id="four-lessons-in-marketing">Four Lessons in Marketing</h3>
+<p>Henry Ford is supposed to have said: “We can sell the Model T at
+such</p>
+<p>a low price only because it earns such a nice profit.”</p>
+<p>Of the top marketing lessons for the highly competitive twenty-first
+cen-</p>
+<p>tury, the most crucial one is that buying customers doesn’t work. The
+collapse</p>
+<p>of the Hyundai Excel was a spectacular marketing failure. There was
+nothing</p>
+<p>wrong with the car. But the company had greatly underpriced it. As a
+result, it</p>
+<p>had no profits to plow back into promotion, service, dealers,</p>
+<p>or improvements to the car itself.</p>
+<p>How to define the market is the second lesson—the lesson of what
+was</p>
+<p>both a marketing success and a major marketing fiasco: the conquest
+of the</p>
+<p>American market by the fax machine. The Japanese did not ask, “What
+is the</p>
+<p>market for this machine?” Instead they asked, “What is the market for
+what it</p>
+<p>does?” And they immediately saw, when looking at the growth of
+courier</p>
+<p>services such as Federal Express, that the market for the fax machine
+had</p>
+<p>already been established. The next lesson is that marketing starts
+with all</p>
+<p>customers in the market rather than with our customers. The final
+lesson is</p>
+<p>that of the success of the new “pastoral” churches by exploiting
+demo-graphic</p>
+<p>changes as a marketing opportunity.</p>
+<h3 id="action-point-1">ACTION POINT:</h3>
+<p>Apply these four marketing lessons to your business: Don’t try</p>
+<p>to buy customers. Ask, “What is the market for what the product
+does?”</p>
+<p>Consider all customers in the market. Exploit demographic
+changes.</p>
+<h4 id="managing-for-the-future">Managing for the Future</h4>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

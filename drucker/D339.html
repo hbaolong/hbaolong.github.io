@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="第三同读" />
+  <title>德鲁克日志</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">德鲁克日志</h1>
+<p class="author">第三同读</p>
+</header>
+<h2 id="透过金庸读懂德鲁克">透过金庸读懂德鲁克</h2>
+<p>陈近南、归辛树和小宝</p>
+<p>吴六奇死了，被一个傻子和一个女人杀死了。这个傻子和女人的武功都非常不错，正面和吴六奇打</p>
+<p>架，打败了吴六奇，割了吴六奇的脑袋。</p>
+<p>不过，这个傻子和女人也惹了祸了，因为吴六奇是陈近南的部下，是韦小宝的同事，是韦小宝最心爱</p>
+<p>的女人双儿的结拜大哥。所以，这个傻子和女人注定要付出代价。</p>
+<p>这个傻子是归辛树的儿子，这个女儿是归辛树的婆娘。归辛树华山派的二弟子，在当时的江湖上，除</p>
+<p>了远在海外的袁承志外，归辛树可能是江湖的第一高手。</p>
+<p>吴六奇除了和陈近南、魏晓波、双儿的关系外，他还是反清复明的义士。这个身份在当时的汉人中有</p>
+<p>很高的地位。</p>
+<p>所以 ，这个傻子和这个女人闯下了大祸。</p>
+<p>韦小宝在无意间抓住了归辛树和归辛树的傻儿子归钟还有归辛树的婆娘归二娘，当小宝发现归钟腰里</p>
+<p>别着吴六奇的脑袋时，小宝就决定杀死归钟一家人。这时陈近南也来了。</p>
+<p>陈近南是武林豪杰，是天地会的总舵主，是当世武林以及政治力量中不可忽视的一块。换句话说，陈</p>
+<p>近南是武林人的同时，还是一个政治人物。</p>
+<p>当他知道杀死吴六奇的居然是归辛树的儿子和婆娘时。痛苦的陈近南只能选择原谅归家：以归辛树在</p>
+<p>武林的地位，杀死归辛树会引起很多人的追杀，以及武林人士对天地会的敌视。而且，归家虽然性格</p>
+<p>乖离，去也是一心归汉的人。和陈近南的天地会同属一心。痛苦的陈近南经过短暂的纠结后，只好选</p>
+<p>择原谅归家。</p>
+<p>归家也当即表示后悔，归二娘随即选择自杀以谢罪。被陈近南救了下来。然后归辛树决定去杀死康熙</p>
+<p>来赎罪（他们觉得杀死康熙就可以赎杀死吴六奇的罪，脑回路也是够神奇）。</p>
+<p>小宝是康熙是好朋友，自然不想归辛树去杀康熙。而且归辛树一家三口武功太厉害，如果有人能杀死</p>
+<p>康熙的话，归辛树肯定会排在第一位。</p>
+<p>所以，小宝决定劝阻。小宝劝阻的方式很简单，就是和归辛树算成本账：</p>
+<p>韦小宝听他二人说要去行刺皇帝，心想这三个姓“龟”的家伙武功极高，小皇帝未曾防备，别要给他们</p>
+<p>害死，叫道：“这是天下大事，你们这位公子，做事很有点儿乱七八糟，这一次如再坏了事，你们三位</p>
+<p>就算一古脑儿的自杀，也不免臭……臭气万年。”</p>
+<p>归辛树听了，感觉有点道理，却也说不出什么道理。小宝进一步说：“现下的皇帝年纪小，不大懂事，</p>
+<p>搞得吴三桂造反，一塌里胡涂。你们如杀了他，换上一个年纪大的厉害鞑子来做皇帝，咱们汉人的江</p>
+<p>山，就坏在你们手上了。”归辛树缓缓点头，回过身来。</p>
+<p>这时陈近南也乘机劝说道：”两位前辈，这孩子年纪小，说话没上没下，冲撞莫怪。”说着拱手致歉，</p>
+<p>又道：“但他的顾虑似乎也可从长计议。如此大事，咱们谋定而后动如何？”</p>
+<p>归辛树听后，觉得也是这么个道理，就答应了。</p>
+<p>从这个小小的对话可以看出，归辛树是个二杆子，就是一把枪，谁都能扣动扳机，最后还走火伤了自</p>
+<p>己。</p>
+<p>而陈近南则是个在武林人士和政治人物之间纠结的悲剧人物。一方面，他需要政治人物的智慧去包容</p>
+<p>有共同目标的同盟，以方便，他有需要遵守武林人士的各种规则，让他束手束脚。</p>
+<p>而小宝则是一个彻彻底底的商人，在任何问题面前，想到的永远是利益的最大化。</p>
+<p>这个商人模式，虽然几千年人被人鄙视，却在二杆子和纠结的政治人物摇摆不定之间，成为了最佳的</p>
+<p>选择方式。</p>
+<h2 id="大纲">大纲</h2>
+<h2 id="百字摘要">百字摘要</h2>
+<h2 id="金庸案例">金庸案例</h2>
+<h2 id="时间消耗">时间消耗</h2>
+<h2 id="阅读理解">阅读理解：</h2>
+<h2 id="大纲-1">大纲：</h2>
+<h2 id="撰写">撰写：</h2>
+<h2 id="录音">录音</h2>
+<h2 id="一小时运动">一小时运动</h2>
+<h2 id="英文原文">英文原文</h2>
+<p>4 DECEMBER</p>
+<p>Information on Cost and Value</p>
+<p>成本和价值</p>
+<p>We cannot achieve results until we have information on cost and
+value.</p>
+<p>Basic structural information is focused upon the value that is
+created for customers and the</p>
+<p>resources used to do so.</p>
+<p>The concepts and tools of accounting are now in the throes of its
+most fundamental change.</p>
+<p>throes：</p>
+<p>（尤指死亡时的）剧痛</p>
+<p>[ pl. ] violent pains, especially at the moment of death</p>
+<p>The new accounting tools are not just different views of recording
+transactions but represent</p>
+<p>different concepts of what business is and what results are.</p>
+<p>represent：</p>
+<p>代表 表示 象征</p>
+<p>V-T If a sign or symbol represents something, it is accepted as
+meaning that thing.</p>
+<p>;</p>
+<p>;</p>
+<p>So even the executive far removed from any work in accounting, such
+as a research manager in a</p>
+<p>development laboratory, needs to understand the basic theory and
+concepts represented by</p>
+<p>these changes in accounting.</p>
+<p>represented：</p>
+<p>代表 表示 象征</p>
+<p>far removed from：远离</p>
+<p>V-T If a sign or symbol represents something, it is accepted as
+meaning that thing.</p>
+<p>;</p>
+<p>;</p>
+<p>These new concepts and tools include: activity-based costing,
+priceled costing, economicchain costing, economic value added, and
+bench-marking.</p>
+<p>bench-marking：. 标杆分析法
+就是将本企业各项活动与从事该项活动最佳者进行比较，从而提出行</p>
+<p>动方法，以弥补自身的不足。Benchmarking是将本企业经营的各方面状况和环节与竞争对手或行业内</p>
+<p>外一流的企业进行对照分析的过程，是一种评价自身企业和研究其他组织的手段，是将外部企业的持</p>
+<p>久业绩作为自身企业的内部发展目标并将外界的最佳做法移植到本企业的经营环节中去的一种方法。</p>
+<p>实施benchmarking的公司必须不断对竞争对手或一流企业的产品、服务、经营业绩等进行评价来发现</p>
+<p>优势和不足。</p>
+<p>priceled costing：以价格为基础的成本计算
+意思是,企业应该考虑消费者为了这个商品愿意花多少钱,并在此基础上定</p>
+<p>价。</p>
+<p>economic-chain costing：</p>
+<p>1、价值链成本核算法（economic－chaincosting）</p>
+<p>新经济的一个主要特点是以信息网络为技术手段。由于电脑的广泛运用，电子商务的迅速发展，使得</p>
+<p>信息共享已成为可能，也使得价值链成本核算法得以实现，从而为建立新的绩效评价体系提供了技术</p>
+<p>上的可能性。</p>
+<p>资源的有限性及信息创造利润的巨大性，使企业之间不再是绝对的竞争关系，合作变得更为重要。共</p>
+<p>享信息以降低信息成本，达到资源的最有效配置，就能实现双赢。因此，公司仅仅了解自身的经营成</p>
+<p>本还不够，还需要了解与产品有关的整个价值链成本，并与处于价值链上的其他伙伴合作，共同控制</p>
+<p>成本，寻求最大收益率。丰田公司在这方面就做得很好，它了解并控制它的供应商和销售商的成本，</p>
+<p>它与所有的供应商和销售商组成一条价值链。通过这个价值链连接成的网络，丰田可以像管理单一的</p>
+<p>成本流一样管理汽车制造、销售、维修服务，使成本降到最低，从而使收益最高。最近，上海汽车集</p>
+<p>团公司将销售权全部收回不能说没有这方面的考虑。目前，国产彩电的价格战仍在继续，它与90年代</p>
+<p>初在美国发生的通用、福特和克莱斯勒等汽车企业的价格竞争十分相似。当年，通用、福特和克莱斯</p>
+<p>勒的价格竞争不但花费了三大汽车巨头的巨额资金，还损失了大量的潜在客户，使其市场地位大大下</p>
+<p>降，而日本汽车制造商却从中得利。如果当时几大汽车巨头能考虑以整个价值链来进行成本核算，无</p>
+<p>谓的价格竞争便不会发生。</p>
+<p>近年来，计算机硬件性能价格比发生了巨大的变化，计算机软件和数据库技术也取得了飞跃式发展，</p>
+<p>企业可以从更多的渠道，以更快的速度和更低的成本取得信息，并加以分析、储存和传播。为了进入</p>
+<p>这个快速运转的系统中，以享受信息利润，各公司自然会采取相匹配的会计系统，主动加入价值链管</p>
+<p>理体系中。</p>
+<p>economic value added： EVA（Economic Value
+Added）是经济增加值的英文缩写，指从税后净营</p>
+<p>业利润中扣除包括股权和债务的全部投入资本成本后的所得。其核心是资本投入是有成本的，企业的</p>
+<p>盈利只有高于其资本成本（包括股权成本和债务成本）时才会为股东创造价值。</p>
+<p>公司每年创造的经济增加值等于税后净营业利润与全部资本成本之间的差额。其中资本成本包括债务</p>
+<p>资本的成本，也包括股本资本的成本。</p>
+<p>从算术角度说，EVA 等于税后经营利润减去债务和股本成本。EVA 是对真正
+“经济”利润的评价，或者</p>
+<p>说，是表示净营运利润与投资者用同样资本投资其他风险相近的有价证券的最低回报相比，超出或低</p>
+<p>于后者的量值。</p>
+<p>EVA是一种评价企业经营者有效使用资本和为股东创造价值能力，体现企业最终经营目标的经营业绩</p>
+<p>考核工具。</p>
+<p>Activity-based costing reports all the costs of a product or service
+until the customer actually</p>
+<p>buys the product, and provides the foundation for integrating cost
+and value into one analysis.</p>
+<p>Activity-based costing
+：现代管理学将ABC成本法定义为“基于活动的成本管理”。ABC成本法是根</p>
+<p>据事物的经济
+、技术等方面的主要特征，运用数理统计方法，进行统计、排列和分析，抓住主要矛</p>
+<p>盾，分清重点与一般，从而有区别地采取管理方式的一种定量管理方法</p>
+<p>foundation：</p>
+<p>地基；房基；基</p>
+<p>[ C usually pl. ] a layer of bricks, concrete, etc. that forms the
+solid underground base of a building</p>
+<p>础</p>
+<h3 id="action-point">ACTION POINT:</h3>
+<p>Pick up a book on Activity-Based Costing and become proficient with
+the strategic, conceptual,</p>
+<p>and procedural issues of this accounting concept.</p>
+<p>proficient：</p>
+<p>熟练的；娴熟的；精通的；训练有</p>
+<dl>
+<dt>素的</dt>
+<dd>
+<p>(in/at sth) | ~ (in/at doing sth) able to do sth well because of
+training and practice</p>
+</dd>
+</dl>
+<p>strategic：</p>
+<p>的</p>
+<p>done as part of a plan that is meant to achieve a particular purpose
+or to gain an advantage</p>
+<p>conceptual：</p>
+<p>procedural：adj. 程序上的</p>
+<p>issues：</p>
+<p>( formal ) related to or based on ideas</p>
+<p>概念（上）的；观念（上）的</p>
+<p>N-COUNT An issue is an important subject that people are arguing
+about or discussing.</p>
+<p>Management Challenges for the 21st Century</p>
+<p>From Data to Information Literacy (Corpedia Online Program)</p>
+<p>议题</p>
+<p>根据全局而安排的；战略性</p>
+<h2 id="december">4 DECEMBER</h2>
+<h3 id="information-on-cost-and-value">Information on Cost and
+Value</h3>
+<p>We cannot achieve results until we have information on cost and
+value.</p>
+<p>Basic structural information is focused upon the value that is
+created</p>
+<p>for customers and the resources used to do so. The concepts and tools
+of</p>
+<p>accounting are now in the throes of its most fundamental change.
+The</p>
+<p>new accounting tools are not just different views of recording
+transactions</p>
+<p>but represent different concepts of what business is and what results
+are.</p>
+<p>So even the executive far removed from any work in accounting, such
+as</p>
+<p>a re-search manager in a development laboratory, needs to understand
+the</p>
+<p>basic theory and concepts represented by these changes in
+accounting.</p>
+<p>These new concepts and tools include: activity-based costing,
+price-led</p>
+<p>costing, economic-chain costing, economic value added, and bench-</p>
+<p>marking.</p>
+<p>Activity-based costing reports all the costs of a product or service
+until</p>
+<p>the customer actually buys the product, and provides the foundation
+for</p>
+<p>in-tegrating cost and value into one analysis.</p>
+<h3 id="action-point-1">ACTION POINT:</h3>
+<p>Pick up a book on Activity-Based Costing and become</p>
+<p>proficient with the strategic, conceptual, and procedural issues of
+this ac-</p>
+<p>counting concept.</p>
+<p>Management Challenges for the 21st Century</p>
+<h4 id="from-data-to-information-literacy-corpedia-online-program">From
+Data to Information Literacy (Corpedia Online Program)</h4>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

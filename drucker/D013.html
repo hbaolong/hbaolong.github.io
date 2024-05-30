@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="第三同读" />
+  <title>德鲁克日志</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">德鲁克日志</h1>
+<p class="author">第三同读</p>
+</header>
+<h2 id="透过金庸读懂德鲁克">透过金庸读懂德鲁克</h2>
+<p>管理学是科学还是人文艺术？</p>
+<p>我认为，管理学是人文艺术。因为，如果它是科学的话，它应该拿小白鼠做实验，而不是直接拿人来</p>
+<p>做实验。</p>
+<p>我认为，所有和人有关的行为，都是人文的，也都需要艺术的天分。</p>
+<p>人有膝跳反应，也就是说，在你坐下时，只要轻快地叩击膝腱，小腿就会做出急速前踢的反应，这个</p>
+<p>是医学，属于科学。</p>
+<p>人困了必须睡觉，一般来说，人每天要睡6-8个小时，可是，在需要的情况下，人可以连续三四天不睡</p>
+<p>觉。所以，人每天都要睡觉，这并不是科学的，至少不像膝跳反应那么科学。这个就是人文的，艺术</p>
+<p>的。</p>
+<p>而管理学，并不会去处理膝跳反应这样的事情，管理学需要处理的是人需要睡觉，而事需要做的事</p>
+<p>情。</p>
+<p>人可以每周工作六天，每天工作12个小时，这就是传说中的996；人也可以每天工作4个小时，每周工</p>
+<p>作5天。这就是股民。</p>
+<p>人可以每天吃三顿饭，也可以每天吃6-10顿饭，也可以每天只吃一顿饭。</p>
+<p>人可以晚上10点睡觉，也可以晚上12点睡觉，也可以夜里2点再睡觉。这个也是管理学要考虑的问题。</p>
+<p>有的人每个月1000块钱就够用了，有的人每年1000万还嫌少，这也是管理学要考虑的问题。</p>
+<p>有的人聪明，有的人笨一些；聪明的人，或许并不会把聪明用在工作上，而笨的人却有可能把事情闹</p>
+<p>出没必要的错误。</p>
+<p>有的人有野心，有的人很本分；有野心的人会带着公司快速前行，却也会带来一些隐患；而很本分的</p>
+<p>人会按公司安全，而很多公司都在安全的感觉中悄悄死亡。</p>
+<p>而管理学就是对这些人的很大的灵活性的处理，人的情感，自我认识，智商，以及各种社会情况。庆</p>
+<p>幸的是，管理学关注这些，有一个明确的标尺，就是“可以为企业获得收益”。</p>
+<p>毕竟，每一个企业只有一个目的，就是盈利。</p>
+<p>那么，作为管理者，你应该如何让自己可以“艺术性”地让自己可以管理自己的时间、精力、智商、睡</p>
+<p>眠、情感、认知。以及管理别人的时间、精力、智商、睡眠、情感、认知？</p>
+<p>是学习”要事优先“？还是练习更加敏锐的情感感触能力？是学习很多”操控人心“的讨论？还是让自己更</p>
+<p>加敏锐地感受自己和他人？</p>
+<p>毕竟，管理是只和人相关的学科。</p>
+<h2 id="大纲">大纲</h2>
+<h2 id="百字摘要">百字摘要</h2>
+<h2 id="金庸案例">金庸案例</h2>
+<h2 id="时间消耗">时间消耗</h2>
+<h2 id="阅读理解">阅读理解：</h2>
+<h2 id="大纲-1">大纲：</h2>
+<h2 id="撰写">撰写：</h2>
+<h2 id="录音">录音</h2>
+<h2 id="一小时运动">一小时运动</h2>
+<h2 id="英文原文">英文原文</h2>
+<p>13 JANUARY</p>
+<p>Management and the Liberal Arts</p>
+<p>Liberal：</p>
+<p>concerned with increasing sb’s general knowledge and experience
+rather than particular skills</p>
+<p>人文（教育）的</p>
+<p>Management is a liberal art.</p>
+<p>Management is what tradition used to call a liberal art—“liberal”
+because it deals with the</p>
+<p>fundamentals of knowledge, self-knowledge, wisdom, and leadership;
+“art” because it deals with</p>
+<p>practice and application.</p>
+<p>application：</p>
+<p>Managers draw upon all of the knowledges and insights of the
+humanities and social sciences—</p>
+<p>on psychology and philosophy, on economics and history, on the
+physical sciences and ethics.</p>
+<p>draw upon：利用；开出；总结</p>
+<p>humanities：</p>
+<p>人性</p>
+<p>psychology ：</p>
+<p>心理学</p>
+<p>N-UNCOUNT A person’s humanity is their state of being a human being,
+rather than an animal or an object.</p>
+<p>[ U ] the scientific study of the mind and how it influences
+behaviour</p>
+<p>But they have to focus this knowledge on effectiveness and results—on
+healing a sick patient,</p>
+<p>teaching a student, building a bridge, designing and selling a
+“user-friendly” software program.</p>
+<h3 id="action-point">ACTION POINT:</h3>
+<p>What is your plan to develop yourself in the humanities and social
+sciences?</p>
+<p>Develop such a plan today.</p>
+<p>The New Realities</p>
+<h2 id="january">13 JANUARY</h2>
+<h3 id="management-and-the-liberal-arts">Management and the Liberal
+Arts</h3>
+<p>Management is a liberal art.</p>
+<p>Management is what tradition used to call a liberal art—“liberal”
+be-</p>
+<p>cause it deals with the fundamentals of knowledge, self-knowledge,
+wisdom,</p>
+<p>and leadership; “art” because it deals with practice and
+applica-tion.</p>
+<p>Managers draw upon all of the knowledges and insights of the
+hu-manities</p>
+<p>and social sciences—on psychology and philosophy, on economics
+and</p>
+<p>history, on the physical sciences and ethics. But they have to focus
+this</p>
+<p>knowledge on effectiveness and results—on healing a sick pa-tient,
+teaching</p>
+<p>a student, building a bridge, designing and selling a “user-</p>
+<p>friendly” software program.</p>
+<h3 id="action-point-1">ACTION POINT:</h3>
+<p>What is your plan to develop yourself in the humanities</p>
+<p>and social sciences? Develop such a plan today.</p>
+<h4 id="the-new-realities">The New Realities</h4>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

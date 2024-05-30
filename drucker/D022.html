@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="第三同读" />
+  <title>德鲁克日志</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">德鲁克日志</h1>
+<p class="author">第三同读</p>
+</header>
+<h2 id="透过金庸读懂德鲁克">透过金庸读懂德鲁克</h2>
+<p>人生的《序》</p>
+<p>开元大哥说要写一本书，书名就是《序》。</p>
+<p>我第一次听到时，觉得这个名字怪怪的，好好的一本书，为啥叫做《序》呢？</p>
+<p>开元大哥和我说，他认为，人生最重要的就是把顺序搞清楚，比如，对于在学校的男生来说，折腾比</p>
+<p>成绩重要，对于女学生来说，漂亮比成绩重要。对于30岁左右的女生来说，结婚比事业重要。人生很</p>
+<p>多事情，都是顺序的问题，《序》错了，事情就大了，《序》对了，就都是小事。</p>
+<p>我听了后，感觉有点道理。</p>
+<p>前几天看新闻，爱闯祸的王石又出来嘚瑟了。这位月薪一千多万的退休人士对年轻人说：“现在的年轻</p>
+<p>人太急躁了，没想好自己的目标之前，先做公益，或是探险去，别老想着赚钱，别被一些东西困住。”</p>
+<p>作为四十多岁的人，我是非常认可王石的话的，我认为年轻人也应该花一些精力在公益上，或者偶尔</p>
+<p>GAP WEEK， 或者GAP
+MONTH，一下，让自己的繁忙的生活中有时间思考，不要被每天的事物锁</p>
+<p>死，禁锢住。</p>
+<p>然后，王石举了一个例子，他有一个朋友叫做汪建，汪建有个女儿不想参加高考，就对汪建说想去爬</p>
+<p>山，去冒险。汪建就答应了。</p>
+<p>过了一年后，这个女儿又回来和汪建说想去读书，然后就去参加考试了，考上了杜克大学，毕业后就</p>
+<p>去了麦肯锡。王石特别说了这个女儿的面试过程，一般来说，麦肯锡的面试就20分钟，后来她和面试</p>
+<p>官聊了一个多小时，因为面试官竟然也是登山爱好者！当时她就被录取了，面试官说：杜克大学毕业</p>
+<p>的人很多，能登雪山的有几个？</p>
+<p>恩，这个例子很有说服力，我几乎要被说服了。如果不是我不知道杜克大学是不是211或者985的话。</p>
+<p>毕竟，我的母校同时是211和985， 很看不起这些野鸡大学。</p>
+<p>我最近在读易经，易经有六十四个卦，每个卦有6个爻。64个卦就是64中人生历程，没每一卦的六个</p>
+<p>爻就是这个人生中的六个阶段。这六个爻的名字好记：初、二、三、四、五、上。</p>
+<p>虽然易经的这六十四个卦所展示的六十四中人生历程各不相同，大概还是有一些规律的，初爻总是模</p>
+<p>糊不清的，因为每个人的人生，一开始总是没有什么迹象的，这就是初难知；再大一些，稍微做一点</p>
+<p>事，就算走路快一些，或者会打篮球，也会有人夸你，这就是二多誉；然后，你就可以蜜汁自信了，</p>
+<p>觉得自己很牛逼了，这时是很危险的，这就是三多凶；经历一些事后，你开始知道害怕了，开始谨小</p>
+<p>慎微、小心翼翼了，这就是四多惧；这样，再前行一段时间，你会发现你也可以做出一些成就了，这</p>
+<p>就是五多功，乾卦的九五就是飞龙在天了。而九五之尊也就是大家熟悉的巨大功绩。到了人生的结</p>
+<p>尾，不管你的人生如何，你都开始清楚了，你做过些什么，你还能做什么，这些都比较明确了。所以</p>
+<p>上爻大多是易知。</p>
+<p>这就是易经六爻的规律：初难知，二多誉，三多凶，四多惧，五多誉，上易知。</p>
+<p>这也是人生的规律，你的人生阶段在三的时候，你是不会忧谗畏讥的。因为这时的你只有冲劲。</p>
+<p>这就是人生的《序》，在什么阶段做什么事。</p>
+<p>当你爬到山顶的时候，回过头来看，你发现在三分之二处应该休息一会，会更有利于后续的攀爬，而</p>
+<p>在三分之是的休息完全没有必要，浪费了时间。</p>
+<p>不过，这些都是你在山顶时发现的，你在行进途中并不会发现。所以，月收入千万的王石会建议年轻</p>
+<p>人不要急着去考大学，不要急着去工作，先去做一些公益。这是到了他的高度时发现的。</p>
+<p>那么，王石的建议对你有用么？</p>
+<p>如果你每个月房租2000块钱，每个月收入5000块钱，让你去做公益，你去么？</p>
+<p>如果你父母在努力供你功高中，一家人都在省吃俭用，你会在高中毕业时说你要去爬山么？</p>
+<p>在你人生的某个阶段，你应该做什么，别人会给你建议，一些书籍也会给你建议，不过，你是应该找</p>
+<p>到自己的序。</p>
+<p>我们的古人说过，仓廪足而知礼仪。你来到院里看一圈，粮仓里有粮食，柴房里有柴火，这时你会想</p>
+<p>着过年请谁来家吃饭。想着别少了礼。</p>
+<p>如果你家里没有粮食呢？那就去找粮食呀，这时的你就别讲什么礼仪了，全力去找粮食，让自己的仓</p>
+<p>廪足起来。</p>
+<p>这个阶段的你，应该关注的是你所处的时代的一切经济规则：金融的，劳动的，知识付费的，贸易</p>
+<p>的，用你所知道的一切经济方式去赚钱，去让你的仓廪足起来。</p>
+<p>如果你运气好，这个阶段很快就过去了，这时你就可以进入正常的生活了，这时的你才可以谈生活。</p>
+<p>而上面说的那个王石的朋友，那个汪建，他女儿之所以会放弃高考去爬山，一年后进入杜克大学，然</p>
+<p>后面试进入麦肯锡，是因为汪建是现任华大基因董事长，深圳华大基因研究院名誉院长，深圳市登山</p>
+<p>户外运动协会会长。2019年10月10日，胡润百富榜发布，汪建排名第472位，财富值85亿元人民币。</p>
+<p>她的女儿自然就天生带一个足足的仓廪，可以去爬山，可以去杜克，可以去麦肯锡。</p>
+<p>你呢？还是去努力赚钱吧，这才是你这个阶段的事情，这就是你目前人生的序。</p>
+<p>后记：</p>
+<p>如果你赚的钱差不多了，那也就行了，不要去无止境地赚钱，因为，生活才是生活的重心，赚钱不</p>
+<p>是。期待每一个你，也包括我，可以尽快越过这个“赚钱”的序，进入真正的生活阶段。做自己喜欢的</p>
+<p>事情。</p>
+<h2 id="大纲">大纲</h2>
+<h2 id="百字摘要">百字摘要</h2>
+<h2 id="金庸案例">金庸案例</h2>
+<h2 id="时间消耗">时间消耗</h2>
+<h2 id="阅读理解">阅读理解：</h2>
+<h2 id="大纲-1">大纲：</h2>
+<h2 id="撰写">撰写：</h2>
+<h2 id="录音">录音</h2>
+<h2 id="一小时运动">一小时运动</h2>
+<h2 id="英文原文">英文原文</h2>
+<p>22 JANUARY</p>
+<p>Economics as a Social Dimension</p>
+<p>Dimension：</p>
+<p>a measurement in space, for example the height, width or length of
+sth</p>
+<p>维（构成空间的因素）；尺寸</p>
+<p>Keynes was interested in the behavior of commodities, while I was
+interested in the behavior of</p>
+<p>people.</p>
+<p>Keynes：n. 凯恩斯（英国经济学家）</p>
+<p>commodities：</p>
+<p>商品</p>
+<p>N-COUNT A commodity is something that is sold for money.</p>
+<p>I do not accept the basic premise on which economics as a discipline
+is based and without which</p>
+<p>it can not be sustained.</p>
+<p>premise：</p>
+<p>( BrE also also less frequent prem·iss ) ( formal ) a statement or an
+idea that forms the basis for a reasonable line of</p>
+<p>前提；假定</p>
+<p>discipline：[ C ] an area of knowledge; a subject that people study
+or are taught, especially in a university 知识领域；（尤指大学</p>
+<p>的）学科，科目</p>
+<p>sustained：V-T If something sustains you, it supports you by giving
+you help, strength, or encouragement. 支撑</p>
+<p>argument</p>
+<p>I do not accept that the economic sphere is an independent sphere,
+let alone that it is the</p>
+<p>dominant one.</p>
+<p>dominant：</p>
+<p>首要的；占支配地位的；占优势的；显著的</p>
+<p>more important, powerful or noticeable than other things</p>
+<p>It is surely an important sphere.</p>
+<p>And as Bertolt Brecht said, “first comes the belly and then
+morality（仓廪足而知礼仪）”—and</p>
+<p>filling the belly is what economics is all about in the main.</p>
+<p>belly ：</p>
+<p>腹部；肚子</p>
+<p>morality：</p>
+<p>道德；道德准则；道义</p>
+<p>the part of the body below the chest</p>
+<p>[ U ] principles concerning right and wrong or good and bad
+behaviour</p>
+<p>I not only am willing but insist that in all political and social
+decisions the economic costs are</p>
+<p>calculated and taken into account.</p>
+<p>To talk only of “benefits,” I consider irresponsible and bound to
+lead to disaster.</p>
+<p>irresponsible：irresponsible</p>
+<p>( disapproving ) ( of a person</p>
+<p>showing a feeling of responsibility</p>
+<p>不负责任的；无责任感的</p>
+<p>人 ) not thinking enough about the effects of what they do; not</p>
+<p>And I believe in free markets, having seen far too much of the
+alternative.</p>
+<p>But still, for me the economic sphere is one sphere rather than the
+sphere.</p>
+<p>Economic considerations are restraints rather than overriding
+determinants.</p>
+<p>Economic wants and economic satisfactions are important but not
+absolutes.</p>
+<p>Above all, economic activities, economic institutions, economic
+rationality, are means to</p>
+<p>noneconomic (that is, human or social) ends rather than ends in
+themselves.</p>
+<p>And this means that I do not see economics as an autonomous
+“science.” In short, it means that I</p>
+<p>am not an economist—something I have known since, in 1934 as a young
+economist in a London</p>
+<p>merchant bank, I sat in the John Maynard Keynes seminar in
+Cambridge.</p>
+<p>I suddenly realized that Keynes was interested in the behavior of
+commodities, while I was</p>
+<p>interested in the behavior of people.</p>
+<h3 id="action-point">ACTION POINT:</h3>
+<p>Before you finalize a major budget or strategic decision, set aside
+half an hour to make sure you</p>
+<p>have really considered the impact it will have on your people in your
+organization and on your</p>
+<p>customers.</p>
+<p>The Ecological Vision</p>
+<h2 id="january">22 JANUARY</h2>
+<h3 id="economics-as-a-social-dimension">Economics as a Social
+Dimension</h3>
+<p>Keynes was interested in the behavior of commodities,</p>
+<p>while I was interested in the behavior of people.</p>
+<p>Ido not accept the basic premise on which economics as a discipline
+is based</p>
+<p>and without which it cannot be sustained. I do not accept that the
+economic</p>
+<p>sphere is an independent sphere, let alone that it is the dominant
+one. It is surely</p>
+<p>an important sphere. And as Bertolt Brecht said, “first comes the
+belly and then</p>
+<p>morality”—and filling the belly is what economics is all about in the
+main. I not</p>
+<p>only am willing but insist that in all political and so-cial
+decisions the economic</p>
+<p>costs are calculated and taken into account. To talk only of
+“benefits,” I consider</p>
+<p>irresponsible and bound to lead to disaster. And I believe in free
+markets, having</p>
+<p>seen far too much of the alternative.</p>
+<p>But still, for me the economic sphere is one sphere rather than the
+sphere.</p>
+<p>Economic considerations are restraints rather than overriding
+de-terminants.</p>
+<p>Economic wants and economic satisfactions are important but not
+absolutes.</p>
+<p>Above all, economic activities, economic institutions, eco-nomic
+rationality,</p>
+<p>are means to noneconomic (that is, human or social) ends rather than
+ends in</p>
+<p>themselves. And this means that I do not see eco-nomics as an
+autonomous</p>
+<p>“science.” In short, it means that I am not an economist—something I
+have</p>
+<p>known since, in 1934 as a young economist in a London merchant bank,
+I sat</p>
+<p>in the John Maynard Keynes seminar in Cambridge. I suddenly realized
+that</p>
+<p>Keynes was interested in the behavior of commodities, while I was
+interested</p>
+<p>in the behavior of people.</p>
+<h3 id="action-point-1">ACTION POINT:</h3>
+<p>Before you finalize a major budget or strategic decision,</p>
+<p>set aside half an hour to make sure you have really considered the
+impact</p>
+<p>it will have on your people in your organization and on your
+customers.</p>
+<h4 id="the-ecological-vision">The Ecological Vision</h4>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

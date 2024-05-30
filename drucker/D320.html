@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="第三同读" />
+  <title>德鲁克日志</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">德鲁克日志</h1>
+<p class="author">第三同读</p>
+</header>
+<h2 id="透过金庸读懂德鲁克">透过金庸读懂德鲁克</h2>
+<h2 id="大纲">大纲</h2>
+<h2 id="百字摘要">百字摘要</h2>
+<h2 id="金庸案例">金庸案例</h2>
+<p>你的老板是谁？</p>
+<p>最近我一直在想一个问题：老板是谁？</p>
+<p>当然，我说的不是抽油烟机。</p>
+<p>有那么一个公司，有一个老板，有一个梦想，注册了一个公司，找了一些人帮他做事情。有助理，有</p>
+<p>各个方面的技术人员。</p>
+<p>老板每天都在全国各地飞来飞去，谈客户，讲课程。他的助理，他的技术人员都在等他落单后干活、</p>
+<p>赚钱，然后吃饭。</p>
+<p>真个公司所有的人都围着老板转，都在配合老板的想法，都在执行老板的安排。</p>
+<p>看着这个老板，我想，那一天，这个老板生病了，公司一下子就停下了了。</p>
+<p>这个老板，是老板么？</p>
+<p>我还认识一个著名财经作家，他有很多公司，而且随时也在孵化很多公司，这些公司的老大，也就是</p>
+<p>总经理大多都是在他身边成长起来的。</p>
+<p>这个作家很离开，有一个宏大的构想，而且，也在推动这个构想一步步成型。当身边有人成长起来</p>
+<p>后，他就会成立一个公司，这个公司往往是他宏大战略的一部分。</p>
+<p>而这个新的总经理也就是去执行他的命令。</p>
+<p>结果是，这个作家的大部分公司都惨淡经营。</p>
+<p>这个拥有很多公司的作家，是老板么？</p>
+<p>前几天有个段子。接头采访，问一个路人：“在古代，你现在的职业叫做什么？”</p>
+<p>路上略作思考后回答：“奴才……”</p>
+<p>作为奴才，那么，你应该称对方位什么呢？老板？不对，是“主子”。</p>
+<p>对，这就是现在职场上常见的两种关系：主子和奴才 VS 老板和员工。</p>
+<p>怎么定义主子和奴才的关系呢？我们的一代奇人韦小宝曾经给出过明确的定义：</p>
+<p>。</p>
+<p>在上面这两个公司里，虽然有“老板”，有“员工”，而且员工也拿着高薪，也在做着“总经理”，“运营总</p>
+<p>监”等的角色，其实只是在执行“老板”的即时命令。在当代来说，他们只是老板的助理，在古代来说，</p>
+<p>他们则是主子的奴才。</p>
+<p>那么什么样的人，才是老板呢？</p>
+<p>德鲁克有个定义，这个定义很清晰：就是看你有没有收到过一封信，一封你的员工发给你的信。</p>
+<p>在这封信里，你的员工会明确指出作为老板的你，目前的工作目标是什么，为了实现这个目标，你需</p>
+<p>要做什么。</p>
+<p>接着，他会告诉你，为了实现你的这个目标，他会做哪些事情，为了做这些事情，需要你配合做些什</p>
+<p>么。</p>
+<p>最后，他会列出他想要实现的目标，并且告诉你，你需要帮助他完成这些目标。</p>
+<p>而在收到这封信之前，你并不知道他会写给你这封信，你也不知道他会写什么。</p>
+<p>如果你收到了这封信，或者你收到过这样的一封信，恭喜你，你是老板了。</p>
+<p>因为，你拥有了一个真正的员工。</p>
+<p>是的，这就是现在职场的第二种关系：老板和员工的关系。</p>
+<p>老板还是有目标的，有愿景，有理想的。而员工是认可你的目标，你的愿景和理想的。</p>
+<p>老板有很多资源，员工有一些能力。</p>
+<p>老板不断告诉所有人他的目标，而你的员工在一次次交流中了解你的目标，并且把你的目标和他的目</p>
+<p>标相结合。</p>
+<p>你的员工发现，只要你的目标实现了，他的目标也就实现了。</p>
+<p>你的员工发现，他只需要权力帮助你实现目标，他就可以得到他想要的一切：目标，愿景，理想。</p>
+<p>所以，他每天都在思考如何可以思想你的目标：需要做什么？需要如何做？自己需要哪些技能？还需</p>
+<p>要哪些外部资源？</p>
+<p>而对于员工来说，他最大的外部资源就是老板。所以，他会要求老板提供足够的支持和资源。</p>
+<p>为了实现老板的目标，也为了实现自己的目标，他会非常清晰地而主动地给做为老板的你写这样的一</p>
+<p>封信：我明确你的目标是什么，我需要做这些事情才可以实现这个目标，为了让我可以顺利做这些，</p>
+<p>我需要得到你的支持。</p>
+<p>这也就意味着，如果你不能提供这些支持，你的员工很大可能会离开你。</p>
+<p>因为，对他来说，吸引他来到你身边的，是你的目标，而不是你。</p>
+<p>这就是老板和员工的关系。</p>
+<p>现在问题来了。</p>
+<p>如果你是老板，你有这样的员工么？如果没有，那么你只是一个主子而已，记住，你千万不要生病，</p>
+<p>也不能请假。因为你要养活一大家子奴才。</p>
+<p>如果你有这样的员工，那么去找他商量，和他共同确定你们共同的目标吧，毕竟，你手里的资源是他</p>
+<p>做成的强有力的支持。</p>
+<p>如果你是员工，你知道你老板的目标么？你的目标和你老板的目标一致么？你有没有为了实现自己的</p>
+<p>目标，去和老板商量，明确而坚定地请求他的支持？</p>
+<p>如果没有，那么你清楚你是“奴才”，而不是“员工”么？</p>
+<h2 id="时间消耗">时间消耗</h2>
+<h2 id="阅读理解">阅读理解：</h2>
+<h2 id="大纲-1">大纲：</h2>
+<h2 id="撰写">撰写：</h2>
+<h2 id="录音">录音</h2>
+<h2 id="一小时运动">一小时运动</h2>
+<h2 id="英文原文">英文原文</h2>
+<p>15 NOVEMBER</p>
+<p>The Management Letter</p>
+<p>Managing managers requires special efforts not only to establish
+common direction, but to</p>
+<p>eliminate misdirection.</p>
+<p>eliminate：</p>
+<p>排除；清除；消除</p>
+<p>[ VN ] ~ sth/sb (from sth) to remove or get rid of sth/sb</p>
+<p>Setting objectives is so important that some of the most effective
+managers I know have each of</p>
+<p>their subordinates write a “manager’s letter” twice a year.</p>
+<p>In this letter to his superior, each manager first defines the
+objectives of his superior’s job and of</p>
+<p>his own job as he sees them.</p>
+<p>He then sets down the performance standards that he believes are
+being applied to him.</p>
+<p>applied：</p>
+<p>尤指学科</p>
+<p>应用的；实用的</p>
+<p>[ usually before noun ] ( especially of a subject of study</p>
+<p>) used in a practical way; not theoretical</p>
+<p>Next, he lists the things he must do to attain these goals—and the
+things within his own unit he</p>
+<p>considers the major obstacles. He lists the things his superior and
+the company do that help him</p>
+<p>and the things that hamper him.</p>
+<p>obstacles：</p>
+<p>N-COUNT An obstacle is an object that makes it difficult for you to
+go where you want to go, because it is in your way.</p>
+<p>障碍物</p>
+<p>hamper：</p>
+<p>[ VN ] [ often passive ] to prevent sb from easily doing or achieving
+sth</p>
+<p>妨碍；阻止；阻碍</p>
+<p>Finally, he outlines what he proposes to do during the next year to
+reach his goals.</p>
+<p>proposes：</p>
+<p>V-T If you propose something such as a plan or an idea, you suggest
+it for people to think about and decide upon.</p>
+<p>议</p>
+<p>建</p>
+<p>If his superior accepts this statement, the “manager’s letter”
+becomes the charter under which</p>
+<p>the manager operates.</p>
+<p>statement:</p>
+<p>说明；说法；表白；表态</p>
+<p>charter</p>
+<p>（说明某部分民众应有权利的）</p>
+<p>[ C ] something that you say or write that gives information or an
+opinion</p>
+<p>宪章</p>
+<p>:[ C ] a written statement describing the rights that a particular
+group of people should have</p>
+<p>operates:</p>
+<p>V-T/V-I If you operate a business or organization, you work to keep
+it running. If a business or organization operates, it</p>
+<p>carries out its work.</p>
+<p>经营; 运营</p>
+<p>Mutual understanding can never be attained by “communications down,”
+can never be created by</p>
+<p>talking.</p>
+<p>Mutual:</p>
+<p>used to describe feelings that two or more people have for each other
+equally, or actions that affect two or more people</p>
+<p>equally</p>
+<p>相互的；彼此的</p>
+<p>It can result only from “communications up.” It requires both the
+superior’s willingness to listen and</p>
+<p>a tool especially designed to make lower managers heard.</p>
+<h3 id="action-point">ACTION POINT:</h3>
+<p>Write a management letter to your superior twice a year.</p>
+<p>The Practice of Management</p>
+<p>Management: Tasks, Responsibilities, Practices</p>
+<h2 id="november">15 NOVEMBER</h2>
+<h3 id="the-management-letter">The Management Letter</h3>
+<p>Managing managers requires special efforts not only to</p>
+<p>establish common direction, but to eliminate misdirection.</p>
+<p>Setting objectives is so important that some of the most effective
+man-</p>
+<p>agers I know have each of their subordinates write a “manager’s
+letter” twice</p>
+<p>a year. In this letter to his superior, each manager first defines
+the ob-jectives</p>
+<p>of his superior’s job and of his own job as he sees them. He then
+sets down</p>
+<p>the performance standards that he believes are being applied to him.
+Next, he</p>
+<p>lists the things he must do to attain these goals—and the things
+within his</p>
+<p>own unit he considers the major obstacles. He lists the things his
+superior and</p>
+<p>the company do that help him and the things that hamper him. Finally,
+he</p>
+<p>outlines what he proposes to do during the next year to reach his
+goals. If his</p>
+<p>superior accepts this statement, the “manager’s letter”</p>
+<p>becomes the charter under which the manager operates.</p>
+<p>Mutual understanding can never be attained by “communications</p>
+<p>down,” can never be created by talking. It can result only from</p>
+<p>“communi-cations up.” It requires both the superior’s willingness to
+listen</p>
+<p>and a tool es-pecially designed to make lower managers heard.</p>
+<h3 id="action-point-1">ACTION POINT:</h3>
+<p>Write a management letter to your superior twice a year.</p>
+<p>The Practice of Management</p>
+<h4 id="management-tasks-responsibilities-practices">Management: Tasks,
+Responsibilities, Practices</h4>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

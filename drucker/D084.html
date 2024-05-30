@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="第三同读" />
+  <title>德鲁克日志</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">德鲁克日志</h1>
+<p class="author">第三同读</p>
+</header>
+<h2 id="透过金庸读懂德鲁克">透过金庸读懂德鲁克</h2>
+<p>为什么保险也不会被电商替代？</p>
+<p>我发现，每一个还没有被电子商务替代的销售领域，都认为自己具有不可替代性。而所谓的不可替代</p>
+<p>性无外乎人性、温度等等。</p>
+<p>门口的小超市认为，自己不会被电商替代，因为他们的位置就在居民的身边，他们方便了居民随性购</p>
+<p>买的需求，这个是电子商务解决不了的。</p>
+<p>然后京东超市，顺丰超市来了，你可以下单，然后去超市“拿”。小区门口的超市成为了京东、物美等</p>
+<p>的提货点。</p>
+<p>目前全国有800万保险从业者，同时也有很多在线投保的平台，比如阿里、腾讯、快保，700度等。不</p>
+<p>过，保险业务员还是认为自己的不可替代性，他们认为，我可以处理复杂的问题，我可以给客户提供</p>
+<p>陪伴，还可以帮客户解决售后问题，甚至陪伴客户一辈子的财富之路。</p>
+<p>看起来好像很有道理，那么电子商务可以改变保险行业么？可以替代掉业务员么？</p>
+<p>去年我在支付宝买了一个一年期的意外险，100万的保额，大概是400块钱左右，整个购买构成很简</p>
+<p>单，支付宝有我的大部分信息，我点一下购买，填几个信息，然后支付，我就收到了电子保单，这里</p>
+<p>并没有业务员的参与。</p>
+<p>我看了一下，大童有个快保的app，我也可以在上面购买一些保险，据说有些保险必须要有业务员才可</p>
+<p>以买，其他的我可以自己购买。</p>
+<p>也就是说，我要买一些特定的保险，比如年金险、终身寿险就必须有一个业务员。</p>
+<p>这是“法规遵从”。也是是《保险法》的要求。</p>
+<p>那么，电子商务可以替代保险业务员么？或者说，保险业务员在整个保险市场上的价值在哪里呢？</p>
+<p>如果你买一个意外险，你大概率不会去找一个业务员（其实，这个找业务员也挺好的，比如，你的业</p>
+<p>务员会推荐你一个100块钱一年的1000万航意险），随便买一个就好了。</p>
+<p>一个保单的签署无外乎几个流程。首先是保险业务员了解用户的信息；然后是保险业务员根据用户的</p>
+<p>信息以及自己的保险知识选择产品；然后就是客户充分理解这个方案（产品）的优劣势以及关键信</p>
+<p>息。最后就是支付成交了。</p>
+<p>当然，保单签署有还会比较多的售后服务，比如理赔、保单抵押、贷款等等。</p>
+<p>在这里，保险业务员真正付出的其实是专业知识，这个专业知识可以分为两部分：了解客户和了解产</p>
+<p>品。</p>
+<p>那么，客户可以了解自己么？当然可以只要客户具备基本的保险的概念和知识；那么客户可以了解产</p>
+<p>品么？这个稍微难一些，不过也没有太难，有心的客户还是可以做到的。</p>
+<p>其实，这里还有一个助手，就是”大数据“，大数据会根据你的实际情况给你建议和推荐，就像支付宝</p>
+<p>给我推荐的意外险。大数据对你的了解是超过你的想象的，它大概会比任何业务员甚至你自己更加了</p>
+<p>解你。当然，它也会更加了解产品。</p>
+<p>可以想象，大数据在了解客户、了解产品、形成方案方面会具有强大的优势，而他形成的方案，你是</p>
+<p>可以直接付费和买单的。</p>
+<p>有人说，平台形成的方案可读性不强。这个问题有两个角度来看。</p>
+<p>首先，你真的需要去读那么复杂的保单么？</p>
+<p>其次，你觉得把一份方案做的可读性强一些， 是很复杂的事情么？</p>
+<p>在这种情况下，80%以上的人的80%以上的情况的保单购买，可以通过大数据驱动下的电子商务完</p>
+<p>成。最多后台有一些AI客服+少数的人工客户就可以。</p>
+<p>当然，如果你说有几千万、几亿资产的高净值用户，需要复杂的财富处理、信托等，你当然需要专业</p>
+<p>的财富管理团队了。不过，这部分也是普通保险业务员的领域了。</p>
+<p>这个角度来开，保险平台替代普通的保险业务员的概率就很大了。除非”法规遵从“，事实上，通过法</p>
+<p>规保护的行业，大多活不下去，比如出租车行业。</p>
+<p>事实上，我从去年开始了解各个保险公司，现在大部分保单的签署都不需要业务员和客户的见面，而</p>
+<p>客户的情况的了解，也不再是业务员和客户的秉烛夜谈。而是通过一篇文章来形成的。</p>
+<p>而所谓的复杂问题，售后，都是平台可以做的更好的，至于陪伴？有多少人买保险是为了找人陪伴？</p>
+<p>我去交个朋友不好么？</p>
+<p>其实，其他的销售行业也一样，不要津津乐道你所以为的那些”行业门槛“，那只是你的自以为而已，</p>
+<p>那只是”还没有被替代而已“，那并不是你的优势。</p>
+<p>其实，只有一个行业是电商不会接入的，那就是”没有利润“。</p>
+<h2 id="大纲">大纲</h2>
+<h2 id="百字摘要">百字摘要</h2>
+<h2 id="金庸案例">金庸案例</h2>
+<h2 id="时间消耗">时间消耗</h2>
+<h2 id="阅读理解">阅读理解：</h2>
+<h2 id="大纲-1">大纲：</h2>
+<h2 id="撰写">撰写：</h2>
+<h2 id="录音">录音</h2>
+<h2 id="一小时运动">一小时运动</h2>
+<h2 id="英文原文">英文原文</h2>
+<p>24 MARCH</p>
+<p>E-Commerce: The Challenge</p>
+<p>It is going to CANNIBALIZE our business.</p>
+<p>CANNIBALIZE：</p>
+<p>一部车或机器）蚕食</p>
+<p>to take the parts of a machine, vehicle, etc. and use them to repair
+or build another</p>
+<p>拆用（旧零件修理或装配另</p>
+<p>We don’t know yet which goods and services will turn out to be most
+suitable for e-commerce.</p>
+<p>But we do know that any success in selling through e-commerce,
+whether business-to-business or</p>
+<p>business-to-consumer, is going to be seen as a threat by the
+traditional distribution channels, such</p>
+<p>as the supermarkets or the local offices of the brokerage houses.</p>
+<p>brokerage：</p>
+<p>经纪业务</p>
+<p>the business of being a broker</p>
+<p>“It is going to CANNIBALIZE our business,” the traditional
+distributors will scream.</p>
+<p>Actually, if past experience is any guide, it may, in many cases, ADD
+traditional business and</p>
+<p>actually, increase their business and their profits.</p>
+<p>That’s very often the result of a new distribution channel.</p>
+<p>But we won’t know that for a good many years.</p>
+<p>Nor will we know for some years which goods and services will lend
+themselves to distribution</p>
+<p>through e-commerce.</p>
+<p>And there’s no point in trying to guess.</p>
+<p>So the decision to push e-commerce is a risky one.</p>
+<p>And yet, no business can risk NOT pushing e-commerce if there’s the
+slightest indication that it will</p>
+<p>become an important distribution channel for its goods and
+services,</p>
+<p>if not the most important one.</p>
+<h3 id="action-point">ACTION POINT:</h3>
+<p>List the three main ways e-commerce has changed your distribution
+channels and the three</p>
+<p>ways it will change those channels in the next few
+years.可以对保险行业做一个分析。</p>
+<p>Managing in a Time of Great Change</p>
+<p>The Five Deadly Business Sins (Corpedia Online Program)</p>
+<h2 id="march">24 MARCH</h2>
+<h3 id="e-commerce-the-challenge">E-Commerce: The Challenge</h3>
+<p>It is going to CANNIBALIZE our business.</p>
+<p>We don’t know yet which goods and services will turn out to be
+most</p>
+<p>suitable for e-commerce. But we do know that any success in selling
+through</p>
+<p>e-commerce, whether business-to-business or business-to-consumer, is
+going</p>
+<p>to be seen as a threat by the traditional distribution channels, such
+as the</p>
+<p>supermarkets or the local offices of the brokerage houses. “It is
+going to</p>
+<p>CANNIBALIZE our business,” the traditional dis-tributors will
+scream.</p>
+<p>Actually, if past experience is any guide, it may, in many cases,
+ADD</p>
+<p>traditional business and actually, increase their business and their
+profits.</p>
+<p>That’s very often the result of a new distribution channel. But we
+won’t know</p>
+<p>that for a good many years. Nor will we know for some years which
+goods</p>
+<p>and services will lend themselves to distribution through e-commerce.
+And</p>
+<p>there’s no point in trying to guess. So the deci-sion to push
+e-commerce is</p>
+<p>Arisky one. And yet, no business can risk NOT pushing e-commerce if
+there’s</p>
+<p>the slightest indication that it will become an important
+distribution channel</p>
+<p>for its goods and services, if not the most</p>
+<p>important one.</p>
+<h3 id="action-point-1">ACTION POINT:</h3>
+<p>List the three main ways e-commerce has changed your</p>
+<p>distribution channels and the three ways it will change those
+channels in</p>
+<p>the next few years.</p>
+<p>Managing in a Time of Great Change</p>
+<h4 id="the-five-deadly-business-sins-corpedia-online-program">The Five
+Deadly Business Sins (Corpedia Online Program)</h4>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

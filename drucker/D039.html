@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="第三同读" />
+  <title>德鲁克日志</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">德鲁克日志</h1>
+<p class="author">第三同读</p>
+</header>
+<h2 id="透过金庸读懂德鲁克">透过金庸读懂德鲁克</h2>
+<p>我应该告诉谁？</p>
+<p>如果，我每天都在做昨天的事情，我身边的人每天也在做昨天的事情，那么，我们几乎不需要交流。</p>
+<p>如果，每天都是昨天的复制，如果这个世界是一条直直的心跳图，那么，我们几乎不需要交流。</p>
+<p>遗憾（幸运）的是，并不是。</p>
+<p>在我们这个世界上，每天都在变化，每小时都在变化，每一分钟都在变化，每一刻都在变化。而所谓</p>
+<p>的变化，有些是延续，有些是突变。</p>
+<p>那些延续的变化，我们大概知道它会变成什么样，比如，我今天醒来就会去看一下新冠肺炎的确诊人</p>
+<p>数，我知道大概它是增长的，大概每天会增长15%左右。打开后看一下，果然差不多，或多或少。</p>
+<p>还有一些突变的变化，就像春节后没几天，突然我就不能出门了。所有人都号召和要求我们不要出</p>
+<p>门。新鲜空气也不要了，阳光明媚也不要了，只是不要出门。这就是我们目前遇到的突变。</p>
+<p>不管是突变，还是延续的变化，还是变化的延续，一切都在变化。我的今天和昨天不一样，我身边的</p>
+<p>人也会不一样，他们每天也都在变化。</p>
+<p>所以，我们需要和别人交流。</p>
+<p>比如，我今天身体不好，会晚到公司一会，我会通知我的领导和HR；比如，我在下班时会同步我的项</p>
+<p>目信息给项目中的同事，以及有关的客户。</p>
+<p>现在，很多人都在家办公，晚上出来很多线上办公的工具，好多人也收到公司的各种要求学习各种工</p>
+<p>具。一时之间，各种平台工具都爆了，据说钉钉2亿用户在线。</p>
+<p>那么在家办公和在办公室办公的主要区别是什么呢？其实就是需要同步更多的信息了。</p>
+<p>你需要把你的变化及时同步给相关的人。（加粗）</p>
+<p>比如，当你碰到一个问题后，你需要把你碰到的问题及时告诉相光的人，如你的项目组成员，你的领</p>
+<p>导，你的客户，以及其他你认为有关的人。</p>
+<p>当你发现一个信息后，或者对它存疑，或者对它确信，你也需要把这个信息通知给相关的人。</p>
+<p>至于如何处理那些信息，就是信息接收人的事情了。</p>
+<p>当然，你也是信息接收人，你每天也要接收到很多信息，这些信息是不同同事或者客户，或者供应商</p>
+<p>或者朋友发给你的，你也需要根据这些信息来调整自己的工作，生活，以及各种其他。</p>
+<p>那么，问题来了，如果你知道了一个信息，比如说，你是一个眼科医生，你知道了有一种“冠状病毒”</p>
+<p>在人和人之间传染，这时，你会告诉谁呢？</p>
+<p>你的父母？你的妻儿？你的同学（毕竟，你的同学也都是医生，他们可能会有更好的判断）？还是</p>
+<p>谁？</p>
+<p>给父母、齐儿、同学、同事、客户等同步自己认为需要同步的信息时，有没有什么要注意的呢？</p>
+<p>这就是，要清楚自己的目的，自己的价值观，以及：不要违法。</p>
+<p>同时，作为社会，或者公司，也应该对那些及时反馈信息的人做出奖励，而不是训诫，毕竟，信息的</p>
+<p>流通是最佳的沟通，没有什么比没有信息有更大的伤害了。</p>
+<h2 id="大纲">大纲</h2>
+<h2 id="百字摘要">百字摘要</h2>
+<h2 id="金庸案例">金庸案例</h2>
+<h2 id="时间消耗">时间消耗</h2>
+<h2 id="阅读理解">阅读理解：</h2>
+<h2 id="大纲-1">大纲：</h2>
+<h2 id="撰写">撰写：</h2>
+<h2 id="录音">录音</h2>
+<h2 id="一小时运动">一小时运动</h2>
+<h2 id="英文原文">英文原文</h2>
+<p>8 FEBRUARY</p>
+<p>Balance Continuity and Change</p>
+<p>Continuity：</p>
+<p>[ U ] the fact of not stopping or not changing</p>
+<p>连续性；持续性</p>
+<p>Precisely because change is a constant, the foundations have to be
+extra strong.</p>
+<p>Precisely：</p>
+<p>used to emphasize that you agree with a statement, especially because
+you think it is obvious or is similar to what you</p>
+<p>（加强同意的语气）对，的确如此，一点也不错</p>
+<p>constant：[ usually before noun ] happening all the time or
+repeatedly 连续发生的；不断的；重复的</p>
+<p>have just said</p>
+<p>The more an institution is organized to be a change leader, the more
+it will need to establish</p>
+<p>continuity internally and externally, the more it will need to
+balance rapid change and continuity.</p>
+<p>One way is to make partnership in change the basis of continuing
+relationships.</p>
+<p>Balancing change and continuity requires continuous work on
+information.</p>
+<p>Nothing disrupts continuity and corrupts relationships more than poor
+or unreliable</p>
+<p>information.</p>
+<p>disrupts：</p>
+<p>V-T If someone or something disrupts an event, system, or process,
+they cause difficulties that prevent it from</p>
+<p>continuing or operating in a normal way.</p>
+<p>妨碍; 扰乱</p>
+<p>It has to become routine for any enterprise to ask at any change,
+even the most minor one: “Who</p>
+<p>needs to be informed of this?”</p>
+<p>routine：</p>
+<p>计</p>
+<p>例行程序；例程</p>
+<p>[ C ] ( computing</p>
+<p>) a list of instructions that enable a computer to perform a
+particular task</p>
+<p>And this will become more and more important as more enterprises come
+to rely on people</p>
+<p>working together without actually working together—that is, on people
+using the new</p>
+<p>technologies of information.</p>
+<p>德鲁克是不是正在中国，所以写下了这句话？</p>
+<p>Above all, there is need for continuity in respect to the
+fundamentals of the enterprise: its mission,</p>
+<p>its values, its definition of performance and results.</p>
+<p>Finally, the balance between change and continuity has to be built
+into compensation,</p>
+<p>recognition, and rewards.</p>
+<p>We will have to learn, similarly, that an organization will have to
+reward continuity—for instance,</p>
+<p>by considering people who deliver continuing improvement to be as
+valuable to the organization,</p>
+<p>and as deserving of recognition and reward, as the genuine
+innovator.</p>
+<h3 id="action-point">ACTION POINT:</h3>
+<p>When you make a decision or a change, ask yourself, “Who needs to be
+informed of this?”</p>
+<p>Management Challenges for the 21st Century</p>
+<h2 id="february">8 FEBRUARY</h2>
+<h3 id="balance-continuity-and-change">Balance Continuity and
+Change</h3>
+<p>Precisely because change is a constant,</p>
+<p>the foundations have to be extra strong.</p>
+<p>The more an institution is organized to be a change leader, the more
+it will</p>
+<p>need to establish continuity internally and externally, the more it
+will need to</p>
+<p>balance rapid change and continuity. One way is to make part-nership
+in</p>
+<p>change the basis of continuing relationships. Balancing change and
+continuity</p>
+<p>requires continuous work on information. Nothing disrupts continuity
+and</p>
+<p>corrupts relationships more than poor or unreliable infor-mation. It
+has to</p>
+<p>become routine for any enterprise to ask at any change, even the most
+minor</p>
+<p>one: “Who needs to be informed of this?” And this will become more
+and</p>
+<p>more important as more enterprises come to rely on people working
+together</p>
+<p>without actually working together—that is, on people using the
+new</p>
+<p>technologies of information. Above all, there is need for continuity
+in respect</p>
+<p>to the fundamentals of the enterprise: its mission,</p>
+<p>its values, its definition of performance and results.</p>
+<p>Finally, the balance between change and continuity has to be built
+into</p>
+<p>compensation, recognition, and rewards. We will have to learn,
+similarly,</p>
+<p>that an organization will have to reward continuity—for instance, by
+con-</p>
+<p>sidering people who deliver continuing improvement to be as valuable
+to</p>
+<p>the organization, and as deserving of recognition and reward, as the
+gen-</p>
+<p>uine innovator.</p>
+<h3 id="action-point-1">ACTION POINT:</h3>
+<p>When you make a decision or a change, ask yourself,</p>
+<p>“Who needs to be informed of this?”</p>
+<h4 id="management-challenges-for-the-21st-century">Management
+Challenges for the 21st Century</h4>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

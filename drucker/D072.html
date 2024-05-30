@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="第三同读" />
+  <title>德鲁克日志</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">德鲁克日志</h1>
+<p class="author">第三同读</p>
+</header>
+<h2 id="透过金庸读懂德鲁克">透过金庸读懂德鲁克</h2>
+<p>你为什么学武功？</p>
+<p>在金庸的江湖中，有很多武术高手，那么，这些高手都是为什么而学武功呢？</p>
+<p>少林的方丈大多是少林同一代中的第一高手，如方证，玄慈等。这说明要做少林方丈，一个基本的要</p>
+<p>求就是成为同辈人中的第一高手。</p>
+<p>这个规则也对其他门派适合，如泰山派的天门，衡山派的莫大，昆仑派的铁琴先生等。这些为了获得</p>
+<p>权力，成为一帮一派的老大，必须苦练武功，让自己的拳头有足够的说服力。</p>
+<p>其次，就是各个主角了。金庸的主角有个特点，就是大多不愿意学武功。可是，机缘巧合，武功硬塞</p>
+<p>进了了。咱们看看这些主角们吧。</p>
+<p>首先是令狐冲，令狐冲本来是华山派大弟子，学习本门武功还算刻苦，算是本门第一。他的理想是接</p>
+<p>任师父成为华山派掌门，进而迎娶小师妹岳灵珊。所以，他虽然聪明，对武功也没有多少苛求。</p>
+<p>所以，他学习独孤九剑，是风清扬“求”他学的。而且是在田伯光作为外部压力下学的。如果没有这个</p>
+<p>压力，学不学就不好说了。</p>
+<p>后来方证想收他为弟子，传授他“易经筋”，哪怕面临死亡威胁，他也拒绝了。再后来，学习“吸星大</p>
+<p>法”，本意是为了偏偏黑白子的。不小心就学了。再后来，一个一个吸别人内力，好像都是迫不得已，</p>
+<p>让人看着就来气。</p>
+<p>如果你问令狐冲为啥要学武功，他肯定说：“我不想学呀，我宁愿还是在思过崖那样，没什么武功，天</p>
+<p>天快乐”。看到这个回答，林平之真想阉了他。</p>
+<p>张无忌呢？本身是武当弟子，机缘巧合下，学了医术、毒术、九阳神功、乾坤大挪移等高阶武功。每</p>
+<p>次学武功，都是为了救命，而不是因为好学，在一次次救命中，成为了天下第一高手。</p>
+<p>那么，张无忌学武功是为了什么呢？张无忌肯定会说：“为了治病，为了逃命”。</p>
+<p>第一次华山论剑，王重阳独照鳌头，东邪西毒南帝北丐四人屈居其下。王重阳得到了《九阴真经》。</p>
+<p>不过，他说他不学，为什呢？他的理由是：“我本来就是天下第一了，再学还是天下第一”，这个理由</p>
+<p>看起来不错，看来王重阳学武功的目的是成为“天下第一”。</p>
+<p>不过，这个道士很虚伪，他不但学了，而且还四处传播，给了林朝英一份（后来杨过得到了），给了</p>
+<p>斗酒僧一份（成就了后来的《九阳真经》）。其实，王重阳学真经是非常可以理解的。因为他本来就</p>
+<p>是反金的军队首领，他需要武功来提供自身的实力，并且在武功中找到编练军队的方法。</p>
+<p>东邪西毒为什么要《九阴真经》呢？当然是为了得到天下第一的名分了。不同的是东邪后来有了女</p>
+<p>婿，女婿武功天下第一了，他也就不争了。而西毒欧阳锋的儿子死了，他也就疯了。</p>
+<p>南帝北丐为什么要《九阴真经》呢？都是为了治病，北丐是为了给自己治病，南帝是为了给自己治病</p>
+<p>的同时，也给别人治病。</p>
+<p>还有一个武功天下第一的人，就是东方不败。东方不败应该是个武痴。他在学习《葵花宝典》前，已</p>
+<p>经被称为”不败“了，居然还是去自割练气。他为什么要学习武功呢？《葵花宝典》前应该是为了当老</p>
+<p>大，当神教的教主。当了教主后呢？当他看到《葵花宝典》这样的武功时，刺激他的应该是好奇心</p>
+<p>吧。</p>
+<p>其实，对于江湖中的人来说，武功都是一个工具，是为了实现自己目标的工具，比如治病，比如权</p>
+<p>力，比如带军队。作为一个江湖人，他们学习武功，一定有一个武功之外的目的。</p>
+<p>不过，有两个例外，一个是周伯通，一个是韦小宝。</p>
+<p>周伯通学习武功，只是为了学习武功。他好像没有什么目的，只是为了消耗用不尽的精力。而韦小宝</p>
+<p>呢？当他发现他的智力、钱以及情商可以轻松地解决他遇到的问题时，他果断放弃了学武。</p>
+<p>起身再拿那册子来看，依法打坐修习，过不多时，双眼又沉重之极，忍不住要睡，心想：“他们打定了</p>
+<p>主意，要过河拆桥，我这座桥是青石板大桥也罢，是烂木头独木桥也罢，他们总是要拆的，我练不练</p>
+<p>功夫，也不相干。”既找到了不练功夫的藉口，心下大宽，倒头呼呼大睡。</p>
+<h2 id="大纲">大纲</h2>
+<h2 id="百字摘要">百字摘要</h2>
+<h2 id="金庸案例">金庸案例</h2>
+<h2 id="时间消耗">时间消耗</h2>
+<h2 id="阅读理解">阅读理解：</h2>
+<h2 id="大纲-1">大纲：</h2>
+<h2 id="撰写">撰写：</h2>
+<h2 id="录音">录音</h2>
+<h2 id="一小时运动">一小时运动</h2>
+<h2 id="英文原文">英文原文</h2>
+<p>12 MARCH</p>
+<p>The Purpose of a Business</p>
+<p>A business enterprise has two basic functions: marketing and
+innovation.</p>
+<p>If we want to know what a business is, we have to start with its
+purpose.</p>
+<p>And the purpose must lie outside the business itself.</p>
+<p>In fact, it must lie in society, since a business enterprise is an
+organ of society.</p>
+<p>There is only one valid definition of business purpose: to create a
+customer.</p>
+<p>The customer is the foundation of a business and keeps it in
+existence.</p>
+<p>He alone gives employment.</p>
+<p>And it is to supply the customer that society entrusts
+wealth-producing resources to the business</p>
+<p>enterprise.</p>
+<p>Because it is the purpose to create a customer, any business
+enterprise has two—and only two—</p>
+<p>basic functions: marketing and innovation.</p>
+<p>These are the entrepreneurial functions.</p>
+<p>Marketing is the distinguishing, the unique function of Business.</p>
+<p>distinguishing：</p>
+<p>V-T/V-I If you can distinguish one thing from another or distinguish
+between two things, you can see or</p>
+<p>understand how they are different.</p>
+<p>辨别; 区分</p>
+<h3 id="action-point">ACTION POINT:</h3>
+<p>Find out what needs your customers want fulfilled today.</p>
+<p>fulfilled:</p>
+<p>感到满足的；觉得满意的；满足的</p>
+<p>feeling happy and satisfied that you are doing sth useful with your
+life</p>
+<p>Determine how well your products are meeting the needs of your
+customers.</p>
+<p>The Practice of Management</p>
+<h2 id="march">12 MARCH</h2>
+<h3 id="the-purpose-of-a-business">The Purpose of a Business</h3>
+<p>A business enterprise has two basic functions: marketing and
+innovation.</p>
+<p>If we want to know what a business is, we have to start with its
+purpose.</p>
+<p>And the purpose must lie outside the business itself. In fact, it
+must lie in</p>
+<p>society, since a business enterprise is an organ of society. There is
+only one</p>
+<p>valid definition of business purpose: to create a customer. The
+customer is the</p>
+<p>foundation of a business and keeps it in existence. He alone gives
+em-</p>
+<p>ployment. And it is to supply the customer that society entrusts
+wealth-</p>
+<p>producing resources to the business enterprise.</p>
+<p>Because it is the purpose to create a customer, any business
+enterprise</p>
+<p>has two—and only two—basic functions: marketing and innovation.</p>
+<p>These are the entrepreneurial functions. Marketing is the
+distinguishing,</p>
+<p>the unique function of Business.</p>
+<h3 id="action-point-1">ACTION POINT:</h3>
+<p>Find out what needs your customers want fulfilled today.</p>
+<p>Determine how well your products are meeting the needs of your
+cus-</p>
+<p>tomers.</p>
+<h4 id="the-practice-of-management">The Practice of Management</h4>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

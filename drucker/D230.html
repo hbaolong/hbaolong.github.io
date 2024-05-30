@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="第三同读" />
+  <title>德鲁克日志</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">德鲁克日志</h1>
+<p class="author">第三同读</p>
+</header>
+<h2 id="透过金庸读懂德鲁克">透过金庸读懂德鲁克</h2>
+<p>破釜沉舟和孤注一掷</p>
+<p>在我国古代，有一个叫做项羽的人。有一天他看到秦始皇游玩，气势很大，项羽就和叔叔说：“我也要</p>
+<p>创业，我要做皇帝”。</p>
+<p>叔叔对这个侄子很支持，反正家里也有钱，就拿出了启动资金：几千江东子弟。项羽的目标是当皇</p>
+<p>帝，这也就意味着他没有什么退路，因为只能有一个皇帝。</p>
+<p>所以，项目过江后就做了一件事：皆沉船，破釜甑，烧庐舍，持三日粮，以示士卒必死，无一还心。</p>
+<p>后来，太史公司马迁记录为“破釜沉舟”。</p>
+<p>当然，项目这个战略取得了阶段性的胜利，打败了秦朝。只可惜后来在面对刘邦时，被刘邦“明修栈道</p>
+<p>暗度宝鸡”，替他收了胜利的果实。</p>
+<p>这件事发生后大约2000年，在美洲发生的南北战争，在这场南北战争中有一个南部联邦骑兵将军经常</p>
+<p>“孤注一掷”。因为对于他们来说，win or
+die！对于他们来说，不能赢就去死。所以，他把每次战役都</p>
+<p>当成最有一次战役，因为对他们来说，如果不能取得胜利，那么一切都没有意义。</p>
+<p>又过了200年，进入21世纪后，这种“战略”越来越多地被用到了企业中，很多企业特别是一些有野心的</p>
+<p>年轻人会用这种策略，对他们来说，只有成为老大才有意义。比如苹果、微软。还有滴滴、摩拜。</p>
+<p>对于这些公司来说，他们需要
+的是不惜一切代价成为绝对的老大：甚至不惜自己的死亡。</p>
+<p>大多时候，这样的公司都会死亡，只有极少数的成功者会被反复传颂。而死亡者大多被唾弃，然后踩</p>
+<p>上一万只脚。如OFO的戴维，昨天还是人人称颂的创业英雄，今天就成为人人喊打的骗子。</p>
+<p>这就是破釜沉舟、孤掷一注这类战略的可怕之处。当然，他们也成就了微软、腾讯、阿里等巨头。</p>
+<p>“秦始皇游会稽，渡浙江，梁与籍俱观，籍曰：“彼可取而代也”。</p>
+<h2 id="大纲">大纲</h2>
+<h2 id="百字摘要">百字摘要</h2>
+<h2 id="金庸案例">金庸案例</h2>
+<h2 id="时间消耗">时间消耗</h2>
+<h2 id="阅读理解">阅读理解：</h2>
+<h2 id="大纲-1">大纲：</h2>
+<h2 id="撰写">撰写：</h2>
+<h2 id="录音">录音</h2>
+<p>17 AUGUST</p>
+<p>First with the Most</p>
+<p>“Being Fustest with the Mostest.”</p>
+<p>“First with the most” was the expression used by a Confederate
+general to describe his cavalry</p>
+<p>unit’s consistent victories in the Civil War.</p>
+<p>In business, it describes the strategy in which an innovator looks to
+attain leadership, if not outright</p>
+<p>dominance.</p>
+<p>This is the entrepreneurial strategy with the potentially highest
+rewards; but it’s also the most risky</p>
+<p>one.</p>
+<p>There can be no mistakes or second chances.</p>
+<p>The outcome is either market and industry leadership or nothing at
+all.</p>
+<p>Entrepreneurs must be right the first time; otherwise, they fail.</p>
+<p>For every innovator that succeeds with this strategy, dozens
+fail.</p>
+<p>Yet if the “first with the most” strategy succeeds, the innovator
+reaps tremendous rewards.</p>
+<p>It’s the strategy that underlies the success and market leadership of
+such giants as 3M, Procter &amp;</p>
+<p>Gamble, Intel, and Microsoft.</p>
+<p>Yet there is a special risk to this strategy: to achieve initial
+success, then to be outflanked by</p>
+<p>someone practicing the next entrepreneurial strategy, “hitting them
+where they aren’t.”</p>
+<p>For example, the two young engineers who started the Apple computer
+company in the proverbial</p>
+<p>garage, without financial backers or previous business experience,
+aimed from the beginning at</p>
+<p>creating an industry and dominating it.</p>
+<p>But they were soon outflanked by IBM.</p>
+<p>outflank：</p>
+<p>to move around the side of an enemy or opponent, especially in order
+to attack them from behind</p>
+<p>包抄；侧翼包围</p>
+<h3 id="action-point">ACTION POINT:</h3>
+<p>When you develop a new product, process, or service, remember,
+protect your flank.</p>
+<p>Innovation and Entrepreneurship</p>
+<p>Entrepreneurial Strategies (Corpedia Online Program)</p>
+<h2 id="august">17 AUGUST</h2>
+<h3 id="first-with-the-most">First with the Most</h3>
+<p>“Being Fustest with the Mostest.”</p>
+<p>“First with the most” was the expression used by a Confederate
+general to</p>
+<p>describe his cavalry unit’s consistent victories in the Civil War. In
+busi-ness, it</p>
+<p>describes the strategy in which an innovator looks to attain
+leader-ship, if not</p>
+<p>outright dominance. This is the entrepreneurial strategy with the
+potentially</p>
+<p>highest rewards; but it’s also the most risky one. There can be no
+mistakes or</p>
+<p>second chances. The outcome is either market and in-dustry leadership
+or</p>
+<p>nothing at all. Entrepreneurs must be right the first time;
+otherwise, they fail.</p>
+<p>For every innovator that succeeds with this strat-egy, dozens fail.
+Yet if the</p>
+<p>“first with the most” strategy succeeds, the inno-vator reaps
+tremendous</p>
+<p>rewards. It’s the strategy that underlies the success and market
+leadership of</p>
+<p>such giants as 3M, Procter &amp; Gamble, Intel, and</p>
+<p>Microsoft.</p>
+<p>Yet there is a special risk to this strategy: to achieve initial
+success,</p>
+<p>then to be outflanked by someone practicing the next
+entrepreneurial</p>
+<p>strategy, “hitting them where they aren’t.” For example, the two
+young</p>
+<p>engineers who started the Apple computer company in the
+proverbial</p>
+<p>garage, with-out financial backers or previous business experience,
+aimed</p>
+<p>from the be-ginning at creating an industry and dominating it. But
+they</p>
+<p>were soon outflanked by IBM.</p>
+<h3 id="action-point-1">ACTION POINT:</h3>
+<p>When you develop a new product, process, or service, re-</p>
+<p>member, protect your flank.</p>
+<p>Innovation and Entrepreneurship</p>
+<h4
+id="entrepreneurial-strategies-corpedia-online-program">Entrepreneurial
+Strategies (Corpedia Online Program)</h4>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

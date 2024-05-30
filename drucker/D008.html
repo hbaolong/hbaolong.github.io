@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="第三同读" />
+  <title>德鲁克日志</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">德鲁克日志</h1>
+<p class="author">第三同读</p>
+</header>
+<h2 id="透过金庸读懂德鲁克">透过金庸读懂德鲁克</h2>
+<p>优秀员工是如何炼成的</p>
+<p>尊重和责任</p>
+<p>不管你身边有多少创业者，总还是打工仔多，而且要多的多。那么，如何做一个优秀员工呢？德鲁克</p>
+<p>认为，做到两点就够了。</p>
+<p>这就是尊重和责任。</p>
+<p>首先是公司对员工的尊重。对于公司来说，你雇佣了一个员工，肯定是某个职位有需要。你需要利用</p>
+<p>这个员工的脑力来帮你做事。那么，如何用好员工的脑力呢？</p>
+<p>脑力，也就是智力，这是你所雇佣的员工唯一的资产。也是你支付薪水换来的东西。脑力是一个很奇</p>
+<p>妙的东西，几乎没有两个人的脑力是一样的。每个人的脑力都是由这个人过往的历史、学习经历、习</p>
+<p>惯以及社会关系确定的。所以，你不能用同样的方法要求两个人，特别是对那些需要用到脑力的职</p>
+<p>位。</p>
+<p>所以作为公司，作为公司的管理者，你要做的就是对员工足够的尊重，足够的授权，让他用自己的方</p>
+<p>式去做事情，你要做的是把事情说清楚。</p>
+<p>在做事这件事上，需要员工自己做主。</p>
+<p>然后就是员工对自己的责任了。</p>
+<p>对于知识工作者，或者说，以智力来工作的人，他们是需要对自己负责的。</p>
+<p>也就是说，他们需要明白自己的职责，并且愿意承担自己的职责，而不是“摸鱼”。知识工作者和体力</p>
+<p>工作者、手工业工作者不同，他们的工作成果很难量化。所以，他们需要“自己对”自己工作的成果负</p>
+<p>责。如果一个知识工作者，自己不愿意承担责任，这个工作肯定做不好。</p>
+<p>所以，从员工的角度，你在了解了你的工作职责后，需要勇敢地，责无旁贷地承担起你工作的职责。</p>
+<p>在你工作职责范围内，你可以征求别人的意见和建议，却必须自己做出判断和结论，为一切负责。</p>
+<p>有了公司对你的授权和尊重，再加上你对你职责的承担，一个优秀员工就诞生了。</p>
+<p>你觉得你和优秀员工之间的差距是什么呢？</p>
+<h2 id="大纲">大纲</h2>
+<h2 id="百字摘要">百字摘要</h2>
+<h2 id="金庸案例">金庸案例</h2>
+<h2 id="时间消耗">时间消耗</h2>
+<h2 id="阅读理解">阅读理解：</h2>
+<h2 id="大纲-1">大纲：</h2>
+<h2 id="撰写">撰写：</h2>
+<h2 id="录音">录音</h2>
+<h2 id="一小时运动">一小时运动</h2>
+<h2 id="英文原文">英文原文</h2>
+<p>8 JANUARY</p>
+<p>Autonomy in Knowledge Work</p>
+<p>Autonomy：</p>
+<p>the freedom for a country, a region or an organization to govern
+itself independently</p>
+<p>Knowledge work requires both autonomy and accountability.</p>
+<p>accountability：n. 有义务；有责任；可说明性</p>
+<p>自治；自治权</p>
+<p>Demanding of knowledge workers that they define their own task and
+its results is necessary</p>
+<p>because knowledge workers must be autonomous.</p>
+<p>As knowledge varies among different people, even in the same field,
+each knowledge worker</p>
+<p>carries his or her own unique set of knowledge.</p>
+<p>With this specialized, unique knowledge, each worker should know more
+about his or her specific</p>
+<p>area than anyone else in the organization.</p>
+<p>Indeed, knowledge workers must know more about their areas than
+anyone else; they are paid to</p>
+<p>be knowledgeable in their fields.</p>
+<p>What this means is that once each knowledge worker has defined his or
+her own task and once the</p>
+<p>work has been appropriately restructured, each worker should be
+expected to work out his or her</p>
+<p>own course and to take responsibility for it.</p>
+<p>appropriately：adv. 适当地；合适地；相称地</p>
+<p>Knowledge workers should be asked to think through their own work
+plans and then to submit</p>
+<p>them.</p>
+<p>submit：</p>
+<p>律</p>
+<p>表示；认为；主张；建议</p>
+<p>[ V that ] ( law</p>
+<p>) ( formal ) to say or suggest sth</p>
+<p>What am I going to focus on?</p>
+<p>What results can be expected for which I should be held
+accountable?</p>
+<p>By what deadline?</p>
+<p>accountable：</p>
+<p>[ not usually before noun ] ~ (to sb) (for sth) responsible for your
+decisions or actions and expected to explain</p>
+<p>them when you are asked</p>
+<p>（对自己的决定、行为）负有责任，有说明义务</p>
+<p>Knowledge work requires both autonomy and accountability.</p>
+<p>accountability：n. 有义务；有责任；可说明性</p>
+<h3 id="action-point">ACTION POINT:</h3>
+<p>Write a work plan that includes your focus, desired results, and
+deadline.</p>
+<p>Submit it to your boss.</p>
+<p>Management Challenges for the 21st Century</p>
+<p>Knowledge Worker Productivity (Corpedia Online Program)</p>
+<h2 id="january">8 JANUARY</h2>
+<h3 id="autonomy-in-knowledge-work">Autonomy in Knowledge Work</h3>
+<p>Knowledge work requires both autonomy and accountability.</p>
+<p>Demanding of knowledge workers that they define their own task and
+its</p>
+<p>results is necessary because knowledge workers must be au-tonomous.
+As</p>
+<p>knowledge varies among different people, even in the same field,
+each</p>
+<p>knowledge worker carries his or her own unique set of knowl-edge.
+With this</p>
+<p>specialized, unique knowledge, each worker should know more about his
+or</p>
+<p>her specific area than anyone else in the organization. Indeed,
+knowledge</p>
+<p>workers must know more about their areas than anyone else; they are
+paid to</p>
+<p>be knowledgeable in their fields. What this means is that once
+each</p>
+<p>knowledge worker has defined his or her own task and once the work
+has</p>
+<p>been appropriately restructured, each worker should be ex-pected to
+work out</p>
+<p>his or her own course and to take responsibility for it. Knowledge
+workers</p>
+<p>should be asked to think through their own work plans and then to
+submit</p>
+<p>them. What am I going to focus on? What results can be expected for
+which I</p>
+<p>should be held accountable? By what deadline? Knowl-</p>
+<p>edge work requires both autonomy and accountability.</p>
+<h3 id="action-point-1">ACTION POINT:</h3>
+<p>Write a work plan that includes your focus, desired re-</p>
+<p>sults, and deadline. Submit it to your boss.</p>
+<p>Management Challenges for the 21st Century</p>
+<h4 id="knowledge-worker-productivity-corpedia-online-program">Knowledge
+Worker Productivity (Corpedia Online Program)</h4>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

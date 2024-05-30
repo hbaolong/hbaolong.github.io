@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="第三同读" />
+  <title>德鲁克日志</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">德鲁克日志</h1>
+<p class="author">第三同读</p>
+</header>
+<h2 id="透过金庸读懂德鲁克">透过金庸读懂德鲁克</h2>
+<p>何谓“躬身入局”？</p>
+<p>今天是2020年1月2日，两天前的2019年12月31日，罗胖讲了他对2019年的回顾，进一步对2020年做</p>
+<p>出了预测。他认为中国会越来越好。</p>
+<p>在罗胖给出预测的12月31日之前的一天，也就是2019年12月30日。财经作家吴晓波老师也对2020年</p>
+<p>做出了预测，八个预测。</p>
+<p>这这几天，经济学家，社会学家，聪明人，妄人，星象家、易学者等等等等，都在给出各种预测。</p>
+<p>那么，什么是预测呢？应该如何预测呢？那些预测是靠谱的呢？我们应该如何看待预测呢？</p>
+<p>二</p>
+<p>有一句鸡汤很励志：预测未来最好的方法就是去创造未来。你可以做一个预测，我会成为这条街最有</p>
+<p>钱的人。这是一个预测，然后，你努力奋斗、赚钱，最后，你成为了这条街最有钱的人。</p>
+<p>这就是一个励志故事，你创造了你预测的未来。</p>
+<p>那么，这就是最好的预测么？</p>
+<p>当然不是。</p>
+<p>三</p>
+<p>经济学家最爱预测，因为经济学的过去是不可知的，经济学的现在是不可知的，经济学的未来也是不</p>
+<p>可知的。</p>
+<p>对于过去的描述
+，不同的经济学家会给出不同的观点，对于现在也一样，就像对于未来。</p>
+<p>所以，经济学家根据各抒己见的过去，分析五彩斑斓的现在，然后预测模棱两可的未来，是一件很有</p>
+<p>趣的事情。</p>
+<p>比如，吴晓波说体验经济的美好爆发，什么叫做体验经济呢？什么叫做美好呢？什么叫做爆发呢？如</p>
+<p>何界定这个预测的对错呢？其实很难，</p>
+<p>“快公司面临中考”也一样，快公司？多块算快？中考？何谓中考？</p>
+<p>到了2021年，这八个预测如何回应呢？总是可以找到对的角度的，毕竟，社会的发展是连续的，极端</p>
+<p>情况很难突然发生的。</p>
+<p>四</p>
+<p>那么，是不是预测未来就没有意义了呢？如果预测没有意义，为什么还有那么多人在聆听这些“神”对</p>
+<p>未来的预测呢？</p>
+<p>大家在等待什么呢？一个跨年的狂欢，和几个人在一个偌大的场馆里接受一场洗礼？</p>
+<p>或许是，就像去101大厦去看烟花。去洛杉矶做倒数。</p>
+<p>五</p>
+<p>其实，那么什么是预测呢？德鲁克有个定义。德鲁克认为，预测就是看到以及出现的趋势的未来。</p>
+<p>吴老师的八个预测就是这样的预测，吴老师首先是看到了趋势，看到了起于青萍之末的风以及成于微</p>
+<p>澜之间浪，在风和浪之间，吴老师看到了未来的一种可能性。</p>
+<p>然后把这个可能性告诉大家，告诉尽可能多的人。</p>
+<p>有的人听到后，嗤之以鼻，有的人听到后觉得不错，然后就着手去做了。</p>
+<p>做了一段时间后发现“力不能逮”，然后就放弃了，放弃前大骂一声：“骗子”。</p>
+<p>有的人一直做，做到最后成功了。然后他会在某一天遇到吴晓波老师后会说：“吴老师，你改变了我一</p>
+<p>生”。</p>
+<p>这三种人都存在，都被预测影响了。而且影响的程度都差不多。</p>
+<p>六</p>
+<p>为什么这么说呢？这其实就是罗振宇说的一句话：躬身入局。</p>
+<p>预测的对错与否，其实并不重要，重要的是你对预测的态度。因为当你入局后，你才可以摸着时代的</p>
+<p>脉搏，和这个时代共振，而只有躬身你才可以真正聆听时代的频率，及时修改别人的预测，把别人的</p>
+<p>预测最终变成自己的预测。</p>
+<p>当你不断修改预测时，你就开始去验证：预测未来最好的方法就是去创造未来。因为，随着时间的推</p>
+<p>移，你不断在修正预测和未来之间的差距。</p>
+<p>在某个时刻，未来和预测相逢了。</p>
+<p>七</p>
+<p>这就是我们对待预测的态度。</p>
+<p>「我辈中人，不会去坐而论预测的对错好坏，而是躬身入局，去和未来角力，共同创造未来」</p>
+<p>这应该就是罗振宇这句PPT的含义吧。</p>
+<h2 id="大纲">大纲</h2>
+<h2 id="百字摘要">百字摘要</h2>
+<h2 id="金庸案例">金庸案例</h2>
+<h2 id="时间消耗">时间消耗</h2>
+<h2 id="阅读理解">阅读理解：</h2>
+<h2 id="大纲-1">大纲：</h2>
+<h2 id="撰写">撰写：</h2>
+<h2 id="录音">录音</h2>
+<h2 id="一小时运动">一小时运动</h2>
+<h2 id="英文原文">英文原文</h2>
+<p>2 JANUARY</p>
+<p>Identifying the Future</p>
+<p>The important thing is to identify the “future that has already
+happened.”</p>
+<p>已经发生的未来。</p>
+<p>Futurists always measure their batting average by counting how many
+things they have</p>
+<p>predicted that have come true.</p>
+<p>Futurists：n. 未来主义者；未来派画家</p>
+<p>batting average：</p>
+<p>棒 击球率，安打率</p>
+<p>predicted：</p>
+<p>预言；预告；预报</p>
+<p>batting average [</p>
+<p>]</p>
+<p>to say that sth will happen in the future</p>
+<p>They never count how many important things come true that they did
+not predict.</p>
+<p>predict：</p>
+<p>预言；预告；预报</p>
+<p>to say that sth will happen in the future</p>
+<p>Everything a forecaster predicts may come to pass.</p>
+<p>forecaster：</p>
+<p>a person who says what is expected to happen, especially sb whose job
+is to forecast the weather</p>
+<p>天气预报员，气象预报员</p>
+<p>predict：to say that sth will happen in the future
+预言；预告；预报</p>
+<p>pass：[ V ] when time passes , it goes by 推移；逝去</p>
+<p>预测者；（尤指）</p>
+<p>Yet, he may not have seen the most meaningful of the emergent
+realities or, worse still, may not</p>
+<p>have paid attention to them.</p>
+<p>emergent：</p>
+<p>新兴的；处于发展初期的</p>
+<p>realities：现实</p>
+<p>[ usually before noun ] new and still developing</p>
+<p>There is no way to avoid this irrelevancy in forecasting, for the
+important and distinctive are</p>
+<p>always the result of changes in values, perception, and goals, that
+is, in things that one can divine</p>
+<p>but not forecast.</p>
+<p>irrelevancy： 离题；无关之事物；不合时宜</p>
+<p>distinctive：</p>
+<p>独特的；特别的；有特色的</p>
+<p>perception：</p>
+<p>术语</p>
+<p>知觉；感知</p>
+<p>divine：</p>
+<p>天赐的；上帝的；神的</p>
+<p>forecast：</p>
+<p>预测；预报</p>
+<ol start="14" type="a">
+<li></li>
+</ol>
+<p>off the point, digression</p>
+<p>having a quality or characteristic that makes sth different and
+easily noticed</p>
+<p>[ U ] ( technical</p>
+<p>) ( formal ) the way you notice things, especially with the
+senses</p>
+<p>[ usually before noun ] coming from or connected with God or a
+god</p>
+<p>to say what you think will happen in the future based on information
+that you have now</p>
+<p>But the most important work of the executive is to identify the
+changes that have already</p>
+<p>happened.</p>
+<p>The important challenge in society, economics, politics, is to
+exploit the changes that have already</p>
+<p>occurred and to use them as opportunities.</p>
+<p>exploit ：</p>
+<p>( disapproving ) to treat a person or situation as an opportunity to
+gain an advantage for yourself</p>
+<p>利用（…为自己谋利）</p>
+<p>The important thing is to identify the “future that has already
+happened”—and to develop a</p>
+<p>methodology for perceiving and analyzing these changes.</p>
+<p>methodology：</p>
+<p>（从事某一活动的）方法，</p>
+<p>原则</p>
+<p>[ C U ] ( formal ) a set of methods and principles used to perform a
+particular activity</p>
+<p>perceiving：</p>
+<p>analyzing：分析</p>
+<p>V-T If you perceive something, you see, notice, or realize it,
+especially when it is not obvious.</p>
+<p>感知到</p>
+<p>A good deal of this methodology is incorporated in my 1985 book
+Innovation and</p>
+<p>Entrepreneurship, which shows how one systematically looks to the
+changes in society, in</p>
+<p>demographics, in meaning, in science and technology, as opportunities
+to make the future.</p>
+<p>incorporated：</p>
+<p>商</p>
+<p>组成有法人地位的营业公司的；组成</p>
+<p>公司的</p>
+<p>abbr. Inc. ) ( business</p>
+<p>) formed into a business company with legal status</p>
+<p>Innovation and Entrepreneurship：创新与企业家精神</p>
+<p>demographics：</p>
+<p>统计</p>
+<p>[ pl. ] ( statistics</p>
+<p>) data relating to the population and different groups within it</p>
+<p>人口统计数据</p>
+<h3 id="action-point">ACTION POINT:</h3>
+<p>Identify the major trends in your market that have already
+appeared.</p>
+<p>trends：</p>
+<p>趋势</p>
+<p>N-COUNT A trend is a change or development toward something new or
+different.</p>
+<p>Write a page on their likely longevity and impact on your life and
+organization.</p>
+<p>longevity：</p>
+<p>长寿；长命；持久</p>
+<p>impact：</p>
+<p>巨大影响；强大作用</p>
+<dl>
+<dt>[ U ] ( formal ) long life; the fact of lasting a long time</dt>
+<dd>
+<p>(of sth) (on sb/sth) the powerful effect that sth has on sb/sth</p>
+</dd>
+</dl>
+<p>The Ecological Vision</p>
+<p>The Age of Discontinuity</p>
+<h2 id="january">2 JANUARY</h2>
+<h3 id="identifying-the-future">Identifying the Future</h3>
+<p>The important thing is to identify the “future that has already
+happened.”</p>
+<p>Futurists always measure their batting average by counting how
+many</p>
+<p>things they have predicted that have come true. They never count how
+many</p>
+<p>important things come true that they did not predict. Everything a
+forecaster</p>
+<p>predicts may come to pass. Yet, he may not have seen the most
+meaningful of</p>
+<p>the emergent realities or, worse still, may not have paid at-tention
+to them.</p>
+<p>There is no way to avoid this irrelevancy in forecasting, for the
+important and</p>
+<p>distinctive are always the result of changes in values, per-</p>
+<p>ception, and goals, that is, in things that one can divine but not
+forecast.</p>
+<p>But the most important work of the executive is to identify the
+changes</p>
+<p>that have already happened. The important challenge in society,
+econom-ics,</p>
+<p>politics, is to exploit the changes that have already occurred and to
+use them</p>
+<p>as opportunities. The important thing is to identify the “future that
+has already</p>
+<p>happened”—and to develop a methodology for perceiving and
+analyzing</p>
+<p>these changes. A good deal of this methodology is incorporated in my
+1985</p>
+<p>book Innovation and Entrepreneurship, which shows how one
+systematically</p>
+<p>looks to the changes in society, in demographics, in mean-ing, in
+science and</p>
+<p>technology, as opportunities to make the future.</p>
+<h3 id="action-point-1">ACTION POINT:</h3>
+<p>Identify the major trends in your market that have al-ready</p>
+<p>appeared. Write a page on their likely longevity and impact on your
+life</p>
+<p>and organization.</p>
+<p>The Ecological Vision</p>
+<h4 id="the-age-of-discontinuity">The Age of Discontinuity</h4>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

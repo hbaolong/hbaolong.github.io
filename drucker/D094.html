@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="第三同读" />
+  <title>德鲁克日志</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">德鲁克日志</h1>
+<p class="author">第三同读</p>
+</header>
+<h2 id="透过金庸读懂德鲁克">透过金庸读懂德鲁克</h2>
+<p>% 德鲁克日志： % <span class="citation"
+data-cites="hbaolong">@hbaolong</span></p>
+<p>这篇的标题是 The Spirit Of Performance.
+中文版翻译成了绩效精神。我感觉不大准确。</p>
+<p>虽然在管理领域，Performance通常翻译为绩效，我觉得这里理解为性能会更好一些，我愿意吧这个标</p>
+<p>题理解为“性能的本质”。</p>
+<p>也就是组织保持高性能需要关注的事情。</p>
+<p>德鲁克首先给组织的目的做出了定义：组织就是让普通人连接到一起做出不普通的事情。这就是性能</p>
+<p>提高的标识。</p>
+<p>优秀的人当然效率很高，不过优秀是一种很稀缺的品种，而且非常不稳定，风险极高，所以组织才会</p>
+<p>只需要依赖普通的人。</p>
+<p>进一步，德鲁克认为，组织必须聚焦绩效，也就是生成成果的能力。高的绩效标准不管对组织还是个</p>
+<p>人都是应该被要求的。不要组织就失去了组织在一起的意义。</p>
+<p>其次，组织应该着眼机遇而不是问题，问题总是很多的，在机遇的推送下，快速发展的组织会掩盖或</p>
+<p>者延缓很多问题。所以，对于组织而言，抓住机遇比解决问题更重要。</p>
+<p>再其次，组织在对人的处理中（包括职位确定、薪水确定，升职、降职、解职等）必须展示组织自己</p>
+<p>的价值和信仰，而不是在意相关方的对错。这里可以举例诸葛亮的挥泪斩马谡，马谡虽非全责，也并</p>
+<p>非非死不可，不过，如果他不死，诸葛亮的权威就会受到影响。</p>
+<p>还有一个例子，就是在微信群运营过程中，如果要请出不适当的人，必须公开而明确地指出对方的问</p>
+<p>题。因为在对人的问题处理时，是最好的展示组织价值观和信仰的时机。</p>
+<p>最后，作为一个组织，必须明确展示其对诚信、正直等品质瑕疵的洁癖，对于管理人员，必须在入职</p>
+<p>前就确定这些品质，因为这些品质是没法在后续培养的。</p>
+<p>整体而言，在绩效方面，组织应该关注绩效本身，以及机遇、人以及人的品质。</p>
+<p>You have told me all about it ,but i’m not got it yet.</p>
+<p>English Version</p>
+<p>Spirit of Performance</p>
+<p>The purpose of an organization is to enable common men to do uncommon
+things.</p>
+<p>Morality, to have any meaning at all, must not be exhortation,
+sermon, or good intentions. It must</p>
+<p>be practices. Specifically:</p>
+<p>Morality：道德</p>
+<p>exhortation：讲道词，训词</p>
+<p>sermon：启示，冗长的讲话，训诫</p>
+<p>good intentions：好的目的、意图</p>
+<p>The focus of the organization must be on performance. The first
+requirement of the spirit of</p>
+<p>performance is high performance standards, for the group as well as
+for each individual.</p>
+<p>The focus of the organization must be on opportunities rather than on
+problems.</p>
+<p>组织必须聚焦机遇而不是问题（问题总是解决不完的，只有可以快速发展，问题就可以掩盖过去）。</p>
+<p>The decisions that affect people—their placement, pay, promotion,
+demotion, and severance—must</p>
+<p>express the values and beliefs of the organization.</p>
+<p>对人的处理（职位，薪水，升职，降职，解职）必须展示（根据）组织的价值观和信仰。</p>
+<p>Finally, in its people decisions, management must demonstrate that it
+realizes that integrity is</p>
+<p>one absolute requirement of any manager, the one quality that he has
+to bring with him and cannot</p>
+<p>be expected to acquire later on.</p>
+<p>就是说，组织需要告诉所有人其道德洁癖。</p>
+<p>people decision: 人事决策</p>
+<p>demonstrate：展示、论证</p>
+<p>realizes：实现、意识到</p>
+<p>integrity:正直、诚实、廉正</p>
+<h3 id="action-point">ACTION POINT:</h3>
+<p>Focus on performance, opportunities, people, and integrity.</p>
+<h4 id="management-tasks-responsibilities-practices">Management: Tasks,
+Responsibilities, Practices</h4>
+<h4 id="full-version">FULL VERSION</h4>
+<p>THE PURPOSE OF AN ORGANIZATION is to enable common men to do
+uncommon</p>
+<p>things.</p>
+<p>No organization can depend on genius; the supply is always scarce and
+unreliable.</p>
+<p>It is the test of an organization to make ordinary human beings
+perform better than they</p>
+<p>seem capable of, to bring out whatever strength there is in its
+members, and to use each</p>
+<p>man’s strength to help all the other members perform. It is the task
+of organization at the</p>
+<p>same time to neutralize the individual weaknesses of its members. The
+test of an organization</p>
+<p>is the spirit of performance.</p>
+<p>The spirit of performance requires that there be full scope for
+individual excellence.</p>
+<p>The focus must be on the strengths of a man—on what he can do rather
+than on what he</p>
+<p>cannot do.</p>
+<p>“Morale” in an organization does not mean that “people get along
+together”; the test is</p>
+<p>performance, not conformance. Human relations that are not grounded
+in the satisfaction</p>
+<p>of good performance in work are actually poor human relations and
+result in a mean</p>
+<p>spirit. And there is no greater indictment of an organization than
+that the strength and</p>
+<p>ability of the outstanding man become a threat to the group and his
+performance a source</p>
+<p>of difficulty, frustration, and discouragement for the others.</p>
+<p>Spirit of performance in a human organization means that its energy
+output is larger</p>
+<p>than the sum of the efforts put in. It means the creation of energy.
+This cannot be accomplished</p>
+<p>by mechanical means. A mechanical contrivance can, at its theoretical
+best, conserve</p>
+<p>energy, but it cannot create it. To get out more than is being put in
+is possible only</p>
+<p>in the moral sphere.</p>
+<p>Morality does not mean preachments. Morality, to have any meaning at
+all, must be a</p>
+<p>principle of action. It must not be exhortation, sermon, or good
+intentions. It must be</p>
+<p>practices. Specifically:</p>
+<p>1 The focus of the organization must be on performance. The first
+requirement</p>
+<p>of the spirit of organization is high performance standards, for the
+group as</p>
+<p>well as for each individual. The organization must inculcate in
+itself the habit</p>
+<p>of achievement.</p>
+<p>But performance does not mean “success every time.” Performance
+is</p>
+<p>rather a “batting average.” It will, indeed it must, have room for
+mistakes and</p>
+<p>even for failures. What performance has no ronm for is complacency
+and low</p>
+<p>standards.</p>
+<h2 id="april">3 APRIL</h2>
+<h3 id="spirit-of-performance">Spirit of Performance</h3>
+<p>The purpose of an organization is to enable common men to do uncommon
+things.</p>
+<p>Morality, to have any meaning at all, must not be exhortation,
+sermon, or good intentions. It must be practices. Specifically:</p>
+<p>The focus of the organization must be on performance.</p>
+<p>The first requirement of the spirit of performance is high
+performance standards, for the group as well as for each individual.</p>
+<p>The focus of the organization must be on opportunities rather than on
+problems.</p>
+<p>The decisions that affect people—their placement, pay, promotion,
+demotion, and severance—must express the values and beliefs of the
+organization.</p>
+<p>Finally, in its people decisions, management must demonstrate that it
+realizes that integrity is one absolute requirement of any manager, the
+one quality that he has to bring with him and cannot be expected to
+acquire later on.</p>
+<h3 id="action-point-1">ACTION POINT:</h3>
+<p>Focus on performance, opportunities, people, and integrity.</p>
+<h4 id="management-tasks-responsibilities-practices-1">Management:
+Tasks, Responsibilities, Practices</h4>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

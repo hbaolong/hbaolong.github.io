@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="第三同读" />
+  <title>德鲁克日志</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">德鲁克日志</h1>
+<p class="author">第三同读</p>
+</header>
+<h2 id="透过金庸读懂德鲁克">透过金庸读懂德鲁克</h2>
+<p>华为：让40岁的人离开，是最大的慈悲</p>
+<p>前几天和一个创业有几年的朋友聊天，朋友说她计划观点一个研发中心，大约有十几个人。我有点唏</p>
+<p>嘘。</p>
+<p>不过，项目已经结束了，关掉也算正常。毕竟，剩下的运营需要的人员会比较少，而且，需要的人员</p>
+<p>架构也和研发团队区别挺大。</p>
+<p>第二天，我和一个共同的朋友聊天。这个朋友也算一个创业者，她的第一反应是：那些人跟了她那么</p>
+<p>就久，怎么就要解散呀？</p>
+<p>看到这个回复，我久久没有反应。我想的是另外一个问题。</p>
+<p>在商业环境下，我们有项目，持续从几天到几个月到几年都有；也有公司，存活从几个月到几年到97</p>
+<p>年都有；也有各种其他的复杂组合形式，可能是几分钟，也可能是很久。对于所有的商业合作来说，</p>
+<p>我们的生命大多是超过它的。毕竟，我们的生命短则四五十年，长则上百年。</p>
+<p>这也就意味着，商业合作结束后，我们会分开。或者赚钱后分钱分手，或者赔钱后大家结算一下分</p>
+<p>手。或者好合好散，或者大闹一场，对簿公堂。最后还是散了。也就这样。</p>
+<p>不管如何散，总之是会散的。这就是商业的宿命。</p>
+<p>在商业结束之前，在商业进行之中，参与其中的个体也可能（可以）随时离开，或者主动，或者被</p>
+<p>动。大多都是各种考量。</p>
+<p>每个个体都有选择的自由，每个商业主体也有选择的自由。个人在什么时候应该离开？商业在什么时</p>
+<p>候会要求人离开？这是一个很有智慧的事情。</p>
+<p>很久很久以前，有一个传说，说的是华为的故事。华为被传有个“政策”是“辞退40岁的员工”。这个看</p>
+<p>起来很冷血。可是，我认为这是华为对员工最大的仁慈。</p>
+<p>不管你可以举多少40岁还年富力强的个案，40岁的人在工作精力、时间以及很多方面都开始减弱。</p>
+<p>正常情况下，40岁的人孩子、家人也一堆了，正是上有老下有小的时候，精力也不能更多地花在工作</p>
+<p>上。让这些人在关键岗位上则会影响整个公司的顺畅前行。</p>
+<p>网上一个主流的话题是，员工为华为贡献了青春，到了40岁了，华为把员工一脚踢出去了，这个合适</p>
+<p>么？这是一个表面上是一个道德问题。其本质是一个管理问题。</p>
+<p>假设一个员工30岁进入华为，40岁离开，为华为服务10年。普通技术人员，按华为现行机制，10年间</p>
+<p>大概可以拿到700-900万的薪水。如果离职的话，不管是被辞退，还是主动辞职，大概还可以拿到100</p>
+<p>万+的离职安置金。</p>
+<p>10年的时间，在华为这样的大厂，一个普通的技术人员大概可以磨砺出比较好的技术，或者在某个领</p>
+<p>域比较突出。而且，也会有丰富的协作经验。所以，这些人在离职后，在一切企业还是有很强的竞争</p>
+<p>力的。</p>
+<p>那么，这些是肯定离开华为么？其实并不是，每4年一次的审核，还是有一些人会留下来的，只是这些</p>
+<p>留下来的人，可能会有岗位调整，比如顾问岗，技术支持岗等。</p>
+<p>其实，即使华为不要求他们离开，还是会有一些人主动离开，毕竟，40岁的人，社会阅历丰富了，技</p>
+<p>术也成熟了，人际关系也熟练了。对于那些有想法的人来说，这是最佳的创业时机，为什么不趁这时</p>
+<p>出去创业呢？还可以得到华为同事的一些支持。手头的那些现金，也可以让你有一个比较好的创业起</p>
+<p>点。</p>
+<p>如果你是那种寻求自我的人呢?几百万的现金，可以通过一些安全的理财产品，获得一个相对安全的收</p>
+<p>益。这些收益，虽然不足以让你过上奢华的生活，普通生活还是可以的。</p>
+<p>至少你可以选择自己喜欢的生活。</p>
+<p>对于这些员工的离开，其实华为也有自己的收益和损失。华为的损失最主要的是熟练员工的缺失，不</p>
+<p>过，对于有良好的培训机制的华为来说，这个可以忽略。</p>
+<p>华为的收益是什么呢？就是可以让华为保持持续的战斗力和活力。而这个是华为这样的公司非常需要</p>
+<p>的。</p>
+<p>其实，这里还有一个隐藏的收益，这个我在网上没有查到，不过，德鲁克说到了，这就是高龄管理层</p>
+<p>决策的问题。</p>
+<p>当大部分员工在40岁以下，并且绝大多数管理层低于60岁时，可以有效避免决策者做出自己看不到结</p>
+<p>果的决策。这样，决策者在决策过程中会更加用心。而华为也就更稳定发展了。</p>
+<p>让40岁的员工离开华为，这个决定，不论对于华为涞水，还是对于每一个普通的华为员工来说，都是</p>
+<p>一个最佳的选择。10年的华为生涯，至少你可以获得一个选择的机会，选择自己喜欢、期待的生活方</p>
+<p>式，而这个，我认为是最大的一种仁慈。</p>
+<h2 id="大纲">大纲</h2>
+<h2 id="百字摘要">百字摘要</h2>
+<h2 id="金庸案例">金庸案例</h2>
+<h2 id="时间消耗">时间消耗</h2>
+<h2 id="阅读理解">阅读理解：</h2>
+<h2 id="大纲-1">大纲：</h2>
+<h2 id="撰写">撰写：</h2>
+<h2 id="录音">录音</h2>
+<h2 id="一小时运动">一小时运动</h2>
+<h2 id="英文原文">英文原文</h2>
+<p>22 SEPTEMBER</p>
+<p>Overage Executives</p>
+<p>Stay out of decisions if one won’t be around to help bail out the
+organization.</p>
+<p>Stay out of: vt. 置身于……之外</p>
+<p>bail out:n. 跳伞；保释；舀出 parachute jump, release on bail</p>
+<p>be around to:n. 来访；露面 show oneself, show up</p>
+<p>An employer should have in place a policy for the over-sixties in
+managerial and professional ranks.</p>
+<p>The basic rule, and one that should be clearly established and firmly
+enforced, is that people</p>
+<p>beyond their early sixties should ease out of major managerial
+responsibilities.</p>
+<p>It is a sensible rule for anyone, and not only for the executive, to
+stay out of decisions if one won’t</p>
+<p>be around to help bail out the company when the decisions cause
+trouble a few years down the</p>
+<p>road—as most of them do.</p>
+<p>The older executive should move into work one performs on one’s own
+rather than be the “boss.”</p>
+<p>This way, he or she specializes and concentrates on one major
+contribution, advises, teaches, sets</p>
+<p>standards, and resolves conflicts, rather than works as a
+“manager.”</p>
+<p>The Japanese have “counselors,” and they work very effectively,
+sometimes well into their eighties.</p>
+<h3 id="action-point">ACTION POINT:</h3>
+<p>Develop a retirement policy for senior executives.</p>
+<p>Make sure these executives are not the sole decision-makers in
+decisions whose outcomes will</p>
+<p>occur beyond the tenure of these executives.</p>
+<p>sole：only; single 仅有的；唯一的</p>
+<p>outcome：the result or effect of an action or event 结果；效果</p>
+<p>tenure：the period of time when sb holds an important job, especially
+a political one; the act of holding an important job</p>
+<p>（尤指重要政治职务的）任期，任职</p>
+<p>The Frontiers of Management</p>
+<h2 id="september">22 SEPTEMBER</h2>
+<h3 id="overage-executives">Overage Executives</h3>
+<p>Stay out of decisions if one won’t be around to help bail out</p>
+<p>the organization.</p>
+<p>An employer should have in place a policy for the over-sixties in
+mana-</p>
+<p>gerial and professional ranks. The basic rule, and one that should be
+clearly</p>
+<p>established and firmly enforced, is that people beyond their early
+sixties</p>
+<p>should ease out of major managerial responsibilities. It is a
+sensible rule for</p>
+<p>anyone, and not only for the executive, to stay out of decisions if
+one won’t</p>
+<p>be around to help bail out the company when the decisions cause
+trouble</p>
+<p>Afew years down the road—as most of them do. The older ex-ecutive
+should</p>
+<p>move into work one performs on one’s own rather than be the “boss.”
+This</p>
+<p>way, he or she specializes and concentrates on one major
+contribution,</p>
+<p>advises, teaches, sets standards, and resolves conflicts, rather than
+works as</p>
+<p>A“manager.” The Japanese have “counselors,” and they work</p>
+<p>very effectively, sometimes well into their eighties.</p>
+<h3 id="action-point-1">ACTION POINT:</h3>
+<p>Develop a retirement policy for senior executives. Make</p>
+<p>sure these executives are not the sole decision-makers in decisions
+whose</p>
+<p>outcomes will occur beyond the tenure of these executives.</p>
+<h4 id="the-frontiers-of-management">The Frontiers of Management</h4>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

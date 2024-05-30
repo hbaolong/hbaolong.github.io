@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="第三同读" />
+  <title>德鲁克日志</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">德鲁克日志</h1>
+<p class="author">第三同读</p>
+</header>
+<h2 id="透过金庸读懂德鲁克">透过金庸读懂德鲁克</h2>
+<p>福威镖局成为了青城派的目标后，很快就惨遭灭门了。</p>
+<p>青城派在江湖上不算太厉害，比少林武当自然差的很远，比五岳剑派也差的很远，甚至比很多大一点</p>
+<p>的门派也不如。</p>
+<p>福威镖局是江湖第一大镖局，创始人是福威镖局现任掌门人林震南的祖父林远图，当年，林远图凭借</p>
+<p>72路辟邪剑法打遍天下英豪，开创了百年基业。</p>
+<p>到了林震南这一代，福威镖局以“福”为主，以“威”为辅，生意也越做越大，在全国设置了10处镖局，有</p>
+<p>上百名武师。林震南多交朋友，再加上百年前林远图的威名，福威镖局面子上还是过得去的。</p>
+<p>青城派要攻打福威镖局，这并不是秘密，岳不群也知道了。不过，很多人应该会觉得，这场战役应该</p>
+<p>会持续一段时间，毕竟福威镖局有是十处分支，还有金刀无敌的王家做为后援，还有其他亲朋好友。</p>
+<p>攻打开始后，短短十多天，福威镖局惨遭灭门，只有林震南夫妇以及独自林平之逃脱，而这个逃脱只</p>
+<p>是青城派的设计，因为青城派的目的并不是灭门，也不少报仇，而是林家的《辟邪剑谱》。</p>
+<p>林震南夫妇从福威镖局跑出后，一路向北，往洛阳跑去，在路上被木高峰截获，逼问后因伤重死亡，</p>
+<p>临死前向唯一在身边的令狐冲交代了后事。</p>
+<p>看了福威镖局的这段突如其来的灭门，我在想，如果我是林震南，如何才能避免这种突如其来的灭门</p>
+<p>呢？如何才能在遇见这种大灾难时有更多的躲避地方，而不是千里迢迢赶到洛阳，去找一个自身难保</p>
+<p>的金刀王家。</p>
+<p>福威镖局的掌门人林震南自己在教林平之武功。估计门下那些趟子手大多也是武功平平，也就是力气</p>
+<p>大。多数从街坊邻居或者市井里找人，或者家人里培养。</p>
+<p>一方面，这些人肯定武功不会太高，另一方面，这些人的社交圈子也基本上就是林家。</p>
+<p>如果，当时林家换一个思路呢？会不会好一些呢？</p>
+<p>比如，林家不再自己教授武师武功，而是把这些武师派到少林、武当、华山、嵩山等学习。一方面可</p>
+<p>以学习一些真正有用的武功，另一方面也多认识一些其他派的师兄、师弟、师父。</p>
+<p>或者更进一步，林家定期从少林俗家弟子、武当俗家弟子、华山弟子等招录一些作为武师。一方面较</p>
+<p>少了选人的成本，一方面也提高了自己镖局的能力和社交圈子。</p>
+<p>可以设想一下，如果林平之是少林方生的记名弟子，青城派在攻打福威镖局时会那么肆无忌惮么？</p>
+<p>在面临灭门时，林震南让他的家人独自逃命，有的家人走了，有的家人没走，最后不管是走的还是没</p>
+<p>走的，都死了。</p>
+<p>这一方面是武力的绝对劣势，另一方面是人员的配置：大家都是家人，都是学的林家的“假”的辟邪剑</p>
+<p>法，怎么和人家打呀。</p>
+<p>如果当时林家的武师，有10个是华山的弟子，有6个是少林俗家弟子，有8个是武当俗家弟子，有12个</p>
+<p>嵩山记名弟子，有25个衡山的弟子，这些弟子还多少娶了一些恒山的俗家弟子。</p>
+<p>面对这样一张网，余沧海敢打林家的主意么？</p>
+<p>就算攻打了林家，林家可以选择的逃亡之地，也远远多过一个洛阳。</p>
+<p>所以，德鲁克给企业一个很重要的建议，就是人事资源的外包，而不是自己负责从招募到培训的等</p>
+<p>等。让那些真正有实力的机构去帮你找人、培养人，然后，你用人就用了。关注自己的核心业务，用</p>
+<p>最合适的人。</p>
+<h2 id="百字摘要">百字摘要</h2>
+<h2 id="金庸案例">金庸案例</h2>
+<p>人力资源外包和业务流程外包</p>
+<p>15 MAY</p>
+<p>Use of PEOs and BPOs</p>
+<p>Outsourcing human resources management can save up to 30 percent of
+the cost and increase</p>
+<p>employee satisfaction as well.</p>
+<p>Companies are experiencing important changes in human resources
+management and the</p>
+<p>Professional Employer Organizations, or PEOs, have been one response
+to these changes.</p>
+<p>Primary factors driving the growth of the industry include an
+increase in the complexity of laws and</p>
+<p>regulations governing the human resource function and the subse-quent
+need for professional</p>
+<p>expertise to manage and maintain a workforce to deal with these new
+realities.</p>
+<p>PEOs concentrate mainly on small- and medium-size companies.</p>
+<p>The use of PEOs frees up managers to focus on their core competencies
+rather than on</p>
+<p>employment-related rules, regulations, and paperwork.</p>
+<p>This industry, which twenty years ago barely existed, is now growing
+at a rate of 30 percent a year.</p>
+<p>In contrast to PEOs, Business Process Outsourcing firms, or BPOs,
+assume full responsibility for</p>
+<p>performing the work of the human resource function in large
+enterprises, companies typically with</p>
+<p>twenty thousand or more employees.</p>
+<p>The innovator and leader in the BPO industry, Exult, founded in 1998,
+now manages the full</p>
+<p>spectrum of employee process such as payroll, recruiting and
+staffing, training administration,</p>
+<p>employee-data manage-ment, relocation, and severance administration
+for a number of Global</p>
+<p>For-tune 500 companies.</p>
+<p>According to a study by McKinsey, the management consultancy,
+outsourcing human resources</p>
+<p>management in these ways can save up to 30 percent of the cost and
+increase employee</p>
+<p>satisfaction as well.</p>
+<h3
+id="action-point-are-you-outsourcing-part-of-your-human-resource-function-why-or-why-not">ACTION
+POINT: Are you outsourcing part of your human resource function? Why or
+why not?</h3>
+<p>Managing in the Next Society</p>
+<p>The Next Society (Corpedia Online Program)</p>
+<h2 id="may">15 MAY</h2>
+<h3 id="use-of-peos-and-bpos">Use of PEOs and BPOs</h3>
+<p>Outsourcing human resources management can save up to 30 percent</p>
+<p>of the cost and increase employee satisfaction as well.</p>
+<p>Companies are experiencing important changes in human resources</p>
+<p>management and the Professional Employer Organizations, or PEOs,
+have</p>
+<p>been one response to these changes. Primary factors driving the
+growth of the</p>
+<p>industry include an increase in the complexity of laws and
+regulations</p>
+<p>governing the human resource function and the subse-quent need
+for</p>
+<p>professional expertise to manage and maintain a workforce to deal
+with these</p>
+<p>new realities. PEOs concentrate mainly on small- and medium-size</p>
+<p>companies. The use of PEOs frees up managers to focus on their
+core</p>
+<p>competencies rather than on employment-related rules, regula-tions,
+and</p>
+<p>paperwork. This industry, which twenty years ago barely existed,</p>
+<p>is now growing at a rate of 30 percent a year.</p>
+<p>In contrast to PEOs, Business Process Outsourcing firms, or BPOs,
+as-</p>
+<p>sume full responsibility for performing the work of the human
+resource func-</p>
+<p>tion in large enterprises, companies typically with twenty thousand
+or more</p>
+<p>employees. The innovator and leader in the BPO industry, Exult,
+founded in</p>
+<p>1998, now manages the full spectrum of employee process such as
+payroll,</p>
+<p>recruiting and staffing, training administration, employee-data
+manage-ment,</p>
+<p>relocation, and severance administration for a number of Global
+For-tune 500</p>
+<p>companies. According to a study by McKinsey, the management
+consultancy,</p>
+<p>outsourcing human resources management in these ways can save up to
+30</p>
+<p>percent of the cost and increase employee satisfaction as well.</p>
+<h3 id="action-point">ACTION POINT:</h3>
+<p>Are you outsourcing part of your human resource func-</p>
+<p>tion? Why or why not?</p>
+<p>Managing in the Next Society</p>
+<h4 id="the-next-society-corpedia-online-program">The Next Society
+(Corpedia Online Program)</h4>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

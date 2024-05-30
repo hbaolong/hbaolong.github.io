@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="第三同读" />
+  <title>德鲁克日志</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">德鲁克日志</h1>
+<p class="author">第三同读</p>
+</header>
+<h2 id="透过金庸读懂德鲁克">透过金庸读懂德鲁克</h2>
+<p>王重阳的安排</p>
+<p>王重阳知道自己快死了。</p>
+<p>这一年他57岁，去年，他力压得了五绝之首的光荣称号。不过，这个并不容易，他和黄药师、欧阳</p>
+<p>锋、洪七公、段智兴争斗了七天七夜才让他们折服。当然，更多是这些人对他人品的信服，他们相信</p>
+<p>他不会真的去练习《九阴真经》上的武功。</p>
+<p>在三年前，他的暧昧女友也病逝了，林朝英虽然和自己没有结成连理，两人却你知我心，我知你心。</p>
+<p>林朝英的死让王重阳心灰意冷，如果不是为了《九阴真经》的后事料理，估计自己当时就死过去了。</p>
+<p>现在的王重阳有一个师弟，叫做周伯通，还有七个弟子。这七个弟子武功不算高，也不算低，普普通</p>
+<p>通吧。王重阳知道这七个弟子没有武学天赋。自己快死了，如何让重阳宫在自己死后还可以延续下</p>
+<p>去？这是王重阳要面对的问题。</p>
+<p>王重阳首先要解决的是外患。也就是五绝中的西毒。</p>
+<p>西毒武功很高，在华山论剑中，西毒并不认可王重阳的武功天下第一。后来王重阳得到了一灯和洪七</p>
+<p>公的支持，西毒也就不得不支持了。</p>
+<p>王重阳知道，自己死后西毒一定会来欺负自己的弟子们。来偷《九阴真经》，怎么办呢？</p>
+<p>王重阳先是去大理，和大理的皇帝段智兴进行了大规模杀伤性武器的扩散：王重阳教授了南帝段兴智</p>
+<p>先天功，而段智兴教授了王重阳一阳指。</p>
+<p>因为先天功是克制西毒的蛤蟆功的唯一途径，这样一来，自己死后，还有人可以克制西毒欧阳锋。</p>
+<p>同时，王重阳设计了一次装死。他停止呼吸装死后，西毒果然迫不及待地来抢《九阴真经》，王重阳</p>
+<p>拼尽全力用一阳指破了欧阳锋的蛤蟆功。欧阳锋落荒而逃，只是居然这的逃了。不过，几年内他应该</p>
+<p>没能力再攻击重阳宫了。</p>
+<p>解决了外患后，就是内忧了：谁来做掌教？</p>
+<p>自己是个行伍出身。是个暴脾气，自己的那些弟子，脾气也大多不好，只有大弟子马钰的脾气稍微好</p>
+<p>一些，那个丘处机更是火爆，一点就着。谁来做掌教，管理这个已经近百人的全真教呢？</p>
+<p>王重阳把这七个弟子扒拉来扒拉去，叹了口气说，还是马钰吧。</p>
+<p>王重阳知道自己死后，重阳宫以及全真教就进入了一个新的时代，
+在这个新的时代，需要什么样的人</p>
+<p>来做什么样的事？王重阳并不清楚。</p>
+<p>自己的师弟周伯通是个武学奇才，他之后的修为应该不会次于自己。其他的弟子也就那样了，好在自</p>
+<p>己带兵时常用的一些阵法也找了一个容易的交给了马钰、丘处机他们。打架估计没啥用，自保应该还</p>
+<p>可以。</p>
+<p>王重阳知道自己应该对这七个弟子做一些安排，可是他的身体实在吃不消了。每天一闭眼就看到林朝</p>
+<p>英。</p>
+<p>王重阳知道自己应该让丘处机还俗，带着一些弟子落草为寇，在江湖上和全真教做呼应。</p>
+<p>王重阳知道自己应该让马钰放弃武功，一心研究教义，把全真教带向一个宗教团体，这样才不会被武</p>
+<p>林人士攻击。</p>
+<p>王重阳也知道自己应该让师弟周伯通用心学习《九阴真经》，这样才有能力保护重阳宫，可是自己做</p>
+<p>不到。</p>
+<p>是呀，自己老了，要死了。外患好除，内患难处呀。</p>
+<p>在一指戳伤欧阳锋后，王重阳看着那些慌乱的弟子，摇摇头，自己走回棺材，深深叹了一口气，自己</p>
+<p>闭上了眼睛。</p>
+<p>这次他真的死了。</p>
+<h2 id="大纲">大纲</h2>
+<h2 id="百字摘要">百字摘要</h2>
+<h2 id="金庸案例">金庸案例</h2>
+<h2 id="时间消耗">时间消耗</h2>
+<h2 id="阅读理解">阅读理解：</h2>
+<h2 id="大纲-1">大纲：</h2>
+<h2 id="撰写">撰写：</h2>
+<h2 id="录音">录音</h2>
+<p>13 AUGUST</p>
+<p>Management Team for the New Venture</p>
+<p>Key activities are not to be found in books.</p>
+<p>They emerge from analysis of the specific enterprise.</p>
+<p>emerge：vi. 浮现；摆脱；暴露</p>
+<p>Whenever the objective economic indicators of a new venture indicate
+that the business may</p>
+<p>double within three or five years, then it is the duty of the founder
+or founders to build the</p>
+<p>management team the new venture will soon require.</p>
+<p>First of all the founders, together with other key people in the
+firm, will have to think through the</p>
+<p>key activities of their business.</p>
+<p>What are the specific areas upon which the survival and success of
+this particular business</p>
+<p>depend?</p>
+<p>Every activity that any member of the group thinks belongs there
+should go down on the list.</p>
+<p>The next step is, then, for each member of the group, beginning with
+the founder, to ask: “What are</p>
+<p>the activities that I am doing well? And what are the activities that
+each of my key associates in this</p>
+<p>business is actually doing well?” Next one asks: “Which of the key
+activities should each of us,</p>
+<p>therefore, take on as his or her first and major responsibility
+because they fit the individual’s</p>
+<p>strengths? Which individual fits which key activity?”</p>
+<p>Then the work on building a team can begin.</p>
+<p>But all key activities need to be covered by someone who has proven
+ability in performance.</p>
+<h3 id="action-point">ACTION POINT:</h3>
+<p>Examine a successful new venture either inside or outside of your
+enterprise.</p>
+<p>Was the innovator successful in defining key activities and assigning
+those to people of proven</p>
+<p>competence?</p>
+<p>innovator：</p>
+<p>革新者，创新者</p>
+<p>Innovation and Entrepreneurship</p>
+<p>someone who introduces changes and new ideas</p>
+<h2 id="august">13 AUGUST</h2>
+<h3 id="management-team-for-the-new-venture">Management Team for the New
+Venture</h3>
+<p>Key activities are not to be found in books.</p>
+<p>They emerge from analysis of the specific enterprise.</p>
+<p>Whenever the objective economic indicators of a new venture
+indi-cate</p>
+<p>that the business may double within three or five years, then it is
+the duty of</p>
+<p>the founder or founders to build the management team the</p>
+<p>new venture will soon require. First of all the founders, together
+with</p>
+<p>other key people in the firm, will have to think through the key
+activities</p>
+<p>of their business. What are the specific areas upon which the
+survival and</p>
+<p>success of this particular business depend? Every activity that
+any</p>
+<p>member of the group thinks belongs there should go down on the
+list.</p>
+<p>The next step is, then, for each member of the group, beginning with
+the</p>
+<p>founder, to ask: “What are the activities that I am doing well? And
+what are</p>
+<p>the activities that each of my key associates in this business is
+actually doing</p>
+<p>well?” Next one asks: “Which of the key activities should each of
+us,</p>
+<p>therefore, take on as his or her first and major responsibility
+because they fit</p>
+<p>the individual’s strengths? Which individual fits which key
+activ-ity?” Then</p>
+<p>the work on building a team can begin. But all key activities need to
+be</p>
+<p>covered by someone who has proven ability in performance.</p>
+<h3 id="action-point-1">ACTION POINT:</h3>
+<p>Examine a successful new venture either inside or out-side</p>
+<p>of your enterprise. Was the innovator successful in defining key
+activi-ties</p>
+<p>and assigning those to people of proven competence?</p>
+<h4 id="innovation-and-entrepreneurship">Innovation and
+Entrepreneurship</h4>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

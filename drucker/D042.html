@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="第三同读" />
+  <title>德鲁克日志</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">德鲁克日志</h1>
+<p class="author">第三同读</p>
+</header>
+<h2 id="透过金庸读懂德鲁克">透过金庸读懂德鲁克</h2>
+<p>码农告诉你什么是管理</p>
+<p>很少有人认为码农会做管理。大部分人甚至认为码农是不大会和人说话的，他们脑力里都是僵化的要</p>
+<p>命的无趣。而管理，在我们的文化里管理需要情商高，会来事，需要和人打交道，需要揣摩人心。</p>
+<p>其实，这是大家对码农的一个误解，如果你知道码农们每天在想什么，你就会发现，码农其实是最</p>
+<p>懂，也最适合做管理的一个群体了。</p>
+<p>一、易经：方以类聚</p>
+<p>易经告诉我们，这个世界是以类组织在一起的。而我们码农是有类的。我们每天都要思考我们有哪些</p>
+<p>类。</p>
+<p>类其实是我们看这个世界的一个视角。就像你看到一棵树，一个人，一条狗，一辆车一样，我们看到</p>
+<p>的一类。一类生物，一类植物，一类宠物，一类交通工具。我们看一个事情时，先去判断他的类。所</p>
+<p>以，在我们的视角中，这个世界并没有那么复杂。</p>
+<p>一旦我们知道了一个类，我们就确定了三件事：这个类代表了一系列的行为；这个类中有很多实物或</p>
+<p>者事物；这个类中的实物或者事物可能会差别非常大。就像自行车和宇宙飞船都是交通工具一样。</p>
+<p>二、我们有对象</p>
+<p>是的，我们不但会用类来看这个世界，我们还有对象。</p>
+<p>什么是对象呢？比如，我们说车时，我们知道它属于交通工具这个类，而车是这个类中的一个“实</p>
+<p>例”。交通工具是一个虚的，而车就很具体了。</p>
+<p>所以，当我们说“车”时，我们知道我们在说一种特殊的、具体到眼前和身边的车。</p>
+<p>我们认为，对象就是一个类的具体实现。</p>
+<p>三、我们的对象都是自我管理的</p>
+<p>我们不但有对象，我们的对象还很乖，他们自己处理很多事情，并不需要我们去关注。比如，只要是</p>
+<p>车，那就说明它一定会动。至于他是怎么动的，那就是他自己要解决的事情了。</p>
+<p>四、我们有很多对象</p>
+<p>在我们码农的世界里，整个世界都是对象，遍地都是对象。我们不关注那些对象的内部是如何做的。</p>
+<p>我们只关注两件事：</p>
+<ol type="1">
+<li><p>这个对象可以做什么</p></li>
+<li><p>它需要从哪里获得信息</p></li>
+<li><p>它需要把信息送给谁</p></li>
+</ol>
+<p>至于每个对象内部是如何完成的，那是设计那个对象的人做的，那是项目一部的事情，那是项目二部</p>
+<p>的事情。</p>
+<p>而我们，只需要用那些对象就行了。</p>
+<p>五、我们相信别人，别人也相信我们</p>
+<p>对于我们码农来说，我们相信你说的话，所以，我们看到每一个类，就去读它的“README”，
+看看他</p>
+<p>都实现了哪些功能，它需要从哪里获得信息，它生产的数据会以什么格式交给谁。只要他写了我就认</p>
+<p>为他实现了。</p>
+<p>如果他没有实现他写的功能呢？那我就换一个对象。</p>
+<p>如果它有它没写的功能呢？那和我无关， 我只用我需要的。</p>
+<p>六、对我们来说，这个世界很简单</p>
+<p>对于我们码农来说，这个世界很简单，每个人把自己的事情做好，然后和信息提供方和信息接收方协</p>
+<p>商好接口，如此而已。</p>
+<p>七、为什么说我们码农是最好的管理者呢？</p>
+<p>如果把一个公司或者一个部门交给我们，我们首先会把每一个部门、每个小组、甚至每个人的定义为</p>
+<p>对象，把他们的“README”公布出来给所以的人，这样公司所有的人都知道其他人的职责和能力了。</p>
+<p>其次，我们会保证信息在部门之间，小组之间以及人和人之间充分地交流。</p>
+<p>我们认为，所谓的管理，其实就是让每一个“对象”都把自己的能力表现出来，并且把自己不擅长的交</p>
+<p>给另一个对象去做。</p>
+<p>至于自己不擅长的那些？有么？你的“README”里不用说你不会做什么的。</p>
+<p>八、你认为我们码农是最好的管理者么？</p>
+<p>我知道答案是：是。因为这是我们每天的思考方式。</p>
+<p>我们每天都在找能做某件事的对象，然后把它的能力融合到我们的产品（项目）中来。并且让他们无</p>
+<p>间地合作。这不就是最好的管理么？</p>
+<h2 id="大纲">大纲</h2>
+<h2 id="百字摘要">百字摘要</h2>
+<h2 id="金庸案例">金庸案例</h2>
+<h2 id="时间消耗">时间消耗</h2>
+<h2 id="阅读理解">阅读理解：</h2>
+<h2 id="大纲-1">大纲：</h2>
+<h2 id="撰写">撰写：</h2>
+<h2 id="录音">录音</h2>
+<h2 id="一小时运动">一小时运动</h2>
+<h2 id="英文原文">英文原文</h2>
+<p>11 FEBRUARY</p>
+<p>Human Factor in Management</p>
+<p>Management is about human beings.</p>
+<p>The task of management is to make people capable of joint
+performance, to make their strengths</p>
+<p>effective and their weaknesses irrelevant.</p>
+<p>irrelevant：</p>
+<dl>
+<dt>无关紧要的；不相关的</dt>
+<dd>
+<p>(to sth/sb) not important to or connected with a situation</p>
+</dd>
+</dl>
+<p>This is what organization is all about, and it is the reason that
+management is the critical,</p>
+<p>determining factor.</p>
+<p>Management must be built on communications and on individual
+responsibility.</p>
+<p>All members need to think through what they aim to accomplish—and
+make sure their associates</p>
+<p>know and understand that aim.</p>
+<p>All have to think through what they owe to others—and make sure that
+others understand.</p>
+<p>owe to：归功于；由于</p>
+<p>All have to think through what they, in turn, need from others—and
+make sure others know what is</p>
+<p>expected of them.</p>
+<p>面向对象的理念。</p>
+<p>Management must enable the enterprise and each of its members to grow
+and to develop as needs</p>
+<p>and opportunities change.</p>
+<h3 id="action-point">ACTION POINT:</h3>
+<p>Are you a great actor in a terrible play?</p>
+<p>你有猪队友么？如果有的话，你会如何做？</p>
+<p>What are you going to do about it?</p>
+<p>The New Realities</p>
+<h2 id="february">11 FEBRUARY</h2>
+<h3 id="human-factor-in-management">Human Factor in Management</h3>
+<p>Management is about human beings.</p>
+<p>The task of management is to make people capable of joint
+perfor-mance,</p>
+<p>to make their strengths effective and their weaknesses irrele-vant.
+This is</p>
+<p>what organization is all about, and it is the reason that</p>
+<p>management is the critical, determining factor.</p>
+<p>Management must be built on communications and on individual re-</p>
+<p>sponsibility. All members need to think through what they aim to
+accom-</p>
+<p>plish—and make sure their associates know and understand that aim.
+All</p>
+<p>have to think through what they owe to others—and make sure that
+others</p>
+<p>understand. All have to think through what they, in turn, need from
+oth-</p>
+<p>ers—and make sure others know what is expected of them.</p>
+<p>Management must enable the enterprise and each of its members to</p>
+<p>grow and to develop as needs and opportunities change.</p>
+<h3 id="action-point-1">ACTION POINT:</h3>
+<p>Are you a great actor in a terrible play? What are you</p>
+<p>going to do about it?</p>
+<h4 id="the-new-realities">The New Realities</h4>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

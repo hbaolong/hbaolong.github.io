@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="第三同读" />
+  <title>德鲁克日志</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">德鲁克日志</h1>
+<p class="author">第三同读</p>
+</header>
+<h2 id="透过金庸读懂德鲁克">透过金庸读懂德鲁克</h2>
+<p>我的肺呀，你怎么了？</p>
+<p>这个春节过得不太平，很多热的肺出了问题。被病毒入侵了，然后肺就发炎了。这个病毒还可以通过</p>
+<p>空气、接触传染，一时之间，人心惶惶。</p>
+<p>因为，我们不知道身边的人是否携带病毒，也不知道自己是否携带病毒，也不知道病毒会如何对付自</p>
+<p>己。这一切，我们都不知道。</p>
+<p>按理来说，我们是我们自己身体的主人，我们应该知道自己身体的情况才对呀，我的手腕不舒服我是</p>
+<p>知道的，我头疼我也是知道的，我眼睛近视了我也是知道的，我心情不好我也是知道的。那为什么我</p>
+<p>的肺被病毒入侵，得了肺炎，我就不知道呢？</p>
+<p>那么，我还是我身体的主人么？我的大脑，或者说我的意识，和身体是什么关系？我的意识只是寄存</p>
+<p>在我的身体里？</p>
+<p>李笑来说，我们是我们大脑的主人，我们可以要求他让我们快乐。</p>
+<p>我第一次听到这句话时，觉得好牛逼。现在我突然在想，我们真的是我们大脑的主人么？我们大脑真</p>
+<p>的是我们身体的指挥官么？</p>
+<p>我可以要求我的大脑，让大脑命令我的免疫系统去清除那些入侵的病毒么？我的免疫系统会执行我大</p>
+<p>脑的命令么？还是它们只会按自己的既定流程去做？</p>
+<p>【插入视频】</p>
+<p>显然不能，事实上，我们对大脑控制很少。我们不能保证大脑不会突然失控，就像大脑不能保证手足</p>
+<p>不会失控一样。</p>
+<p>我偶尔会崴脚，这肯定不能怪脚，却也不能怪大脑，要不要去责怪腿呢？好像也说不上，可是我就是</p>
+<p>崴脚了，而且，我并不知道那个环节出错让我崴脚了。</p>
+<p>我的大脑是不知道我如何走路的，不知道我腿部、膝盖、脚部的肌肉，骨骼如何工作才能走路的，甚</p>
+<p>至是意识不到这些。所以，我的大脑对走路是完全没有管理权的。</p>
+<p>我猜想，当我想走路随时，我就会告诉大脑，而我的大脑会向负责走路的部门去申请，那个部门或者</p>
+<p>同意，或者不同意，我的大脑是没有任何决定权的。</p>
+<p>甚至，大脑对自己也是没有决定权的，比如，我想睡觉，我的大脑也非常想睡觉，但就是睡不着。</p>
+<p>也就是说，我的整个人，我是完全没有控制权的，当我想打字时，我只是把这个想法告诉大脑，大脑</p>
+<p>把这个指令告诉相关的部门（可能包括手指，胳膊，眼睛，耳朵等待），这些部门合作来做，至于结</p>
+<p>果？谁知道呢？</p>
+<p>这就是我们的人体，我们虽然自称为万物之灵，其实，我们的灵，也只是寄存在这句肉体里，我们完</p>
+<p>全不知道这句肉体是如何走路、如何看东西、如何吃东西、如何情感波动、如何恋爱、如何摇头、如</p>
+<p>何写出这篇文字。</p>
+<p>但我们每天都在走路，都在看东西，都在吃东西，会去喜欢、愤怒、忧虑、思念、悲伤、恐惧、惊</p>
+<p>吓。我们享受快乐，也享受不快乐，也享受各种惊吓和恐惧，就像我现在面对的这个新冠状病毒的入</p>
+<p>侵。</p>
+<p>突然，某天，我有个假设，假设我的大脑被开了挂，入主了我的身体，可以管理和控制我身体的一切</p>
+<p>包括大脑自己。当我要求我的大脑休息时，它马上就休息了。当我要求他的血液停止时，它马上就停</p>
+<p>止了。当我要求进入我身体内的每一个病毒都做一个严格的登记和筛选时，那些坏的病毒就被拦在了</p>
+<p>外面，我也就永远不会生病了。</p>
+<p>这样一来，我的走路，我的看美女，我的吃东西，我的踢球，一切都是由我的大脑来控制的，我的脚</p>
+<p>如何踢出，完全是大脑的决策结果，而不是我不知道的脚的习惯。</p>
+<p>那该多好呀。</p>
+<p>也就是说，我身体的每一个器官，包括每一个细胞，都是由大脑统一管理和调配的，大家必须完全配</p>
+<p>合。所有的细胞，部件，组织，部门，都是大脑的“配件”，都是大脑的“助理”。这该多好呀，这样的</p>
+<p>我，效率改多高呀。</p>
+<p>那样，我就永远不会忧伤了，因为我可以命令大脑用快乐代替忧伤。</p>
+<p>曾经有一个亿万富翁用10亿美金做了这个实验，这个人叫做亨利福特，他重新设计了公司的架构，公</p>
+<p>司里所有的人都是他的助理，如果某个“经理”胆敢做他授权之外的事情，一定会被开除。因为亨利福</p>
+<p>特认为，一个企业就是由老板+足够多的助理组成的。</p>
+<p>好在亨利福特活的足够久，而且足够有钱，所以，他有机会修正这个错误。也就给了他孙子再次崛起</p>
+<p>的机会。</p>
+<p>那么，问题来了，如果你机会让你的大脑控制你整个身体的每一部分，包括头发，你愿意拥有这种能</p>
+<p>力么？</p>
+<p>如果你做一个公司，你愿意要你的每一个员工，包括经理都是你的助理，严格执行你的命令么？</p>
+<p>如果你加入一个公司，老板认为每个人都是他的助理，必须严格执行他的指令，而不可自由发挥，你</p>
+<p>会加入这样的公司么？</p>
+<h2 id="大纲">大纲</h2>
+<h2 id="百字摘要">百字摘要</h2>
+<h2 id="金庸案例">金庸案例</h2>
+<h2 id="时间消耗">时间消耗</h2>
+<h2 id="阅读理解">阅读理解：</h2>
+<h2 id="大纲-1">大纲：</h2>
+<h2 id="撰写">撰写：</h2>
+<h2 id="录音">录音</h2>
+<h2 id="一小时运动">一小时运动</h2>
+<h2 id="英文原文">英文原文</h2>
+<p>28 JANUARY</p>
+<p>Controlled Experiment in Mismanagement</p>
+<p>The story of Henry Ford, his rise and decline, and of the revival of
+his company is what one might</p>
+<p>call a controlled experiment in mismanagement.</p>
+<p>revival：</p>
+<p>（状况或力量的）进步，振兴，复苏</p>
+<p>[ U C ] an improvement in the condition or strength of sth</p>
+<p>The story of Henry Ford, his rise and decline, and of the revival of
+his company under his grandson,</p>
+<p>Henry Ford II, has been told many times.</p>
+<p>But it is not commonly realized that this dramatic story is far more
+than a story of personal</p>
+<p>success and failure.</p>
+<p>dramatic：</p>
+<p>戏剧性的；戏剧般的；夸张做作的</p>
+<p>exaggerated in order to create a special effect and attract people’s
+attention</p>
+<p>It is, above all, what one might call a controlled experiment in
+mismanagement.</p>
+<p>The first Ford failed because of his firm conviction that a business
+did not need managers and</p>
+<p>management.</p>
+<p>conviction：</p>
+<p>坚定的看法（或信念）</p>
+<p>firm：</p>
+<p>坚固的；坚硬的；结实的</p>
+<p>[ C U ] ~ (that…) a strong opinion or belief</p>
+<p>fairly hard; not easy to press into a different shape</p>
+<p>All it needed, he believed, was the owner-entrepreneur with his
+“helpers.”</p>
+<p>entrepreneur：</p>
+<p>a person who makes money by starting or running businesses,
+especially when this involves taking financial</p>
+<p>risks</p>
+<p>创业者，企业家（尤指涉及财务风险的）</p>
+<p>The only difference between Ford and most of his business
+contemporaries, in the U.S. as well as</p>
+<p>abroad, was that, as in everything else he did, Henry Ford stuck
+uncompromisingly to his</p>
+<p>convictions.</p>
+<p>contemporaries：</p>
+<p>同时代的人</p>
+<p>stuck：</p>
+<p>陷（入）；困（于）</p>
+<p>uncompromisingly： 坚决地；不妥协地</p>
+<p>N-COUNT Someone’s contemporary is a person who is or was alive at the
+same time as them.</p>
+<p>in an unpleasant situation or place that you cannot escape from</p>
+<ol start="14" type="a">
+<li></li>
+</ol>
+<p>firmly, resolutely</p>
+<p>The way he applied them—for example, by firing or sidelining any one
+of his “helpers,” no matter</p>
+<p>how able, who dared act as a “manager,” make a decision, or take
+action without orders from Ford</p>
+<p>—can only be described as a test of a hypothesis that ended up by
+fully disproving it.</p>
+<p>sidelining：</p>
+<p>N-PLURAL If you are on the sidelines in a situation, you do not
+influence events at all, either because you have</p>
+<p>chosen not to be involved, or because other people have not involved
+you.</p>
+<p>hypothesis：</p>
+<p>置身事外</p>
+<p>[ C ] an idea or explanation of sth that is based on a few known
+facts but that has not yet been proved to be true or</p>
+<p>（有少量事实依据但未被证实的）假说，假设</p>
+<p>disproving：V-T To disprove an idea, belief, or theory means to show
+that it is not true. 证明 (想法、信念或理论) 为误</p>
+<p>correct</p>
+<p>In fact, what makes the Ford story unique—but also important—is that
+Ford could test the</p>
+<p>hypothesis, in part because he lived so long and in part because he
+had a billion dollars to back his</p>
+<p>convictions.</p>
+<p>Ford’s failure was not the result of personality or temperament but,
+first and foremost, the result</p>
+<p>of his refusal to accept managers and management as necessary and as
+grounded in task and</p>
+<p>function rather than in “delegation” from the “boss.”</p>
+<p>temperament：</p>
+<p>（人或</p>
+<p>[ C U ] a person’s or an animal’s nature as shown in the way they
+behave or react to situations or people</p>
+<p>动物的）气质，性情，性格，禀性</p>
+<p>foremost：adj. the most important or famous; in a position at the
+front 最重要的；最著名的；最前的</p>
+<p>refusal ：[ U C ] ~ (of sth) | ~ (to do sth) an act of saying or
+showing that you will not do, give or accept sth 拒绝；回绝</p>
+<p>grounded in：打好…的基础</p>
+<h3 id="action-point">ACTION POINT:</h3>
+<p>Are you an owner-executive who treats all your employees as your
+helpers?</p>
+<p>Are you an employee who is treated as a helper?</p>
+<p>List three ways your organization could be more profitable if
+employees were encouraged to</p>
+<p>assume responsibility.</p>
+<p>Management: Tasks, Responsibilities, Practices</p>
+<h2 id="january">28 JANUARY</h2>
+<h3 id="controlled-experiment-in-mismanagement">Controlled Experiment in
+Mismanagement</h3>
+<p>The story of Henry Ford, his rise and decline, and of the revival of
+his</p>
+<p>company is what one might call a controlled experiment in
+mismanagement.</p>
+<p>The story of Henry Ford, his rise and decline, and of the revival of
+his</p>
+<p>company under his grandson, Henry Ford II, has been told many times.
+But it</p>
+<p>is not commonly realized that this dramatic story is far more than a
+story of</p>
+<p>personal success and failure. It is, above all, what one might</p>
+<p>call a controlled experiment in mismanagement.</p>
+<p>The first Ford failed because of his firm conviction that a business
+did not</p>
+<p>need managers and management. All it needed, he believed, was the
+owner-</p>
+<p>entrepreneur with his “helpers.” The only difference between Ford and
+most</p>
+<p>of his business contemporaries, in the U.S. as well as abroad, was
+that, as in</p>
+<p>everything else he did, Henry Ford stuck uncompromisingly to his</p>
+<p>convictions. The way he applied them—for example, by firing or
+sidelining</p>
+<p>any one of his “helpers,” no matter how able, who dared act as a
+“manager,”</p>
+<p>make a decision, or take action without orders from Ford—can only
+be</p>
+<p>described as a test of a hypothesis that ended up by fully disproving
+it. In fact,</p>
+<p>what makes the Ford story unique—but also important—is that Ford
+could</p>
+<p>test the hypothesis, in part because he lived so long and in part
+because he</p>
+<p>had a billion dollars to back his convictions. Ford’s failure was not
+the result</p>
+<p>of personality or temperament but, first and foremost, the re-sult of
+his refusal</p>
+<p>to accept managers and management as necessary and as grounded in
+task</p>
+<p>and function rather than in “delegation” from the “boss.”</p>
+<h3 id="action-point-1">ACTION POINT:</h3>
+<p>Are you an owner-executive who treats all your employ-</p>
+<p>ees as your helpers? Are you an employee who is treated as a helper?
+List</p>
+<p>three ways your organization could be more profitable if employees
+were</p>
+<p>encouraged to assume responsibility.</p>
+<h4 id="management-tasks-responsibilities-practices">Management: Tasks,
+Responsibilities, Practices</h4>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

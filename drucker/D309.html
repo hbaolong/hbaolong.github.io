@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="第三同读" />
+  <title>德鲁克日志</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">德鲁克日志</h1>
+<p class="author">第三同读</p>
+</header>
+<h2 id="透过金庸读懂德鲁克">透过金庸读懂德鲁克</h2>
+<p>霍都王子的使命</p>
+<p>霍都王子是金轮法王的三弟子，是达尔巴的师弟。在重阳宫一役中，杨过单手用一柄玄铁宝剑力压达</p>
+<p>尔巴、霍都和受伤的金轮法王，霍都见势不妙，大声对师兄达尔巴说：“师兄，你独自承一下，我先救</p>
+<p>师父”。</p>
+<p>爱师心切的达尔巴拼着吃奶的力独自撑起杨过的神力，减轻压力的霍都抽身后，并没有去救师父，而</p>
+<p>是跑远后，对杨过说：“青山不改，绿水长流，后会有期”，跑了！！！</p>
+<p>霍都跑了后，不敢回蒙古，怕师父和师兄找自己算账，只好在中原一带躲藏。好在他武功高强，普通</p>
+<p>人也不是他的对手。简单化妆后，霍都也就这么相安无事地过了几年。</p>
+<p>不过。霍都是有任务在身的，忽必烈曾经给过他一个任务，就是破坏丐帮，让丐帮内乱，不要影响蒙</p>
+<p>古军队南侵。</p>
+<p>霍都一直在努力这个任务。这可能是他洗白的唯一机会，也就是立下军功，而且是忽必烈的军功。</p>
+<p>怎么做呢？霍都一直在努力。</p>
+<p>搞乱一个组织最有效的方式，就是加入这个组织，是呀，城堡都是中内突破的。</p>
+<p>霍都决定加入丐帮，从最底层做起，找准机会，把丐帮搞乱，甚至摧毁。</p>
+<p>为了保险起见，某一天，霍都杀死了一个叫做“何师我”的乞丐，用他的名字开始在丐帮内部活动。这</p>
+<p>个何师我非常丑，也没什么朋友，所以，霍都也就成为了丐帮弟子。</p>
+<p>丐帮一向号称几大神功，首先就是帮助的打狗棒法，还有就是降龙十八掌，这两项都是帮主个人的。</p>
+<p>对于丐帮所有弟子来说，丐帮还有一个大大的神功，就是信息的极度发达：众所周知，丐帮的消息最</p>
+<p>灵通。</p>
+<p>所以，霍都加入丐帮后并不敢做什么。先是换了个城市，换到了襄阳附近。然后老老实实讨饭，干</p>
+<p>活，领导让干嘛就干嘛，几年下来，居然也成了五袋弟子了。霍都对丐帮的体制也非常熟悉了。这时</p>
+<p>的霍都开始了自己捣乱丐帮的计划。</p>
+<p>霍都先是四处杀人，杀一些有名的人，以乞丐的身份，不过，这是个乱世，死几个人根本没人查。</p>
+<p>霍都又想杀丐帮的人，杀丐帮的重要人物。</p>
+<p>丐帮现在的帮主虽然是鲁有脚，黄蓉却还是太上帮主，黄蓉安排包括鲁有脚在内的所有丐帮高层、中</p>
+<p>层日夜巡逻，霍都也就没有机会下手。</p>
+<p>某一天，霍都终于找到了机会，这一天，鲁有脚只带了两个低袋弟子就出去巡街去了。霍都故意行迹</p>
+<p>可以，诱使鲁有脚来到郊外，三下两下，霍都打死了鲁有脚，留了一个活口，捡起来打狗棒就走了。</p>
+<p>霍都本来想逐个杀死丐帮的高层。当他捡到打狗棒时，他有的新的想法。“既然鲁有脚死了，丐帮肯定</p>
+<p>要选新帮主，看自己有没有机会当帮主，或者扶持一个自己的好朋友当帮主”。</p>
+<p>对，就是这个主意。</p>
+<p>果然，如霍都所料，黄蓉决定比武来选帮主。霍都知道现场的都不是自己的对手，包括耶律齐。凭武</p>
+<p>力，他当帮主肯定没问题，只是不能被黄蓉发现。</p>
+<p>所以，霍都在最后时刻才上台，并且在台上轻松打败了黄蓉内定的耶律齐。霍都看着台下脸色难看的</p>
+<p>要死的黄蓉，内心几多复仇的快感。</p>
+<p>黄蓉内心也在迅速计算，计算怎么才能不承认这个帮主。这时梁长老已经准备宣布新帮主了。霍都还</p>
+<p>是很会讨好大家的，说自己目前只是代理，不杀霍都，自己不做帮主。得到了众位长老的支持。</p>
+<p>黄蓉还在算计，毕竟，自己现在只是卸任帮主，职权是低于现任帮主的，一旦那个长的很丑的人成为</p>
+<p>帮主，自己也就无能为力了。</p>
+<p>正在这时，杨过派了几个打手来了，在霍都正式就任帮主之前揭穿了霍都的身份。</p>
+<p>霍都被杀，先是被达尔巴胖揍了一顿，然后被杨过和黄药师的两个石子击穿胸口。当场死亡。</p>
+<p>丐帮一向号称信息第一，却让霍都这样的人在襄阳，在丐帮隐藏了十几年。而且在丐帮推举帮主大会</p>
+<p>上，居然差点成为丐帮帮主，差点让丐帮陷入万劫不复的境地。这个事件证明，丐帮所谓的消息灵</p>
+<p>通，只是底层的八卦消息而已，真正的、有价值的消息，丐帮并没有能力传递和处理。</p>
+<p>这对于像丐帮这样的“天下第一帮”来说，是个悲惨的结论。</p>
+<h2 id="大纲">大纲</h2>
+<ol type="1">
+<li><p>霍都的阴谋</p></li>
+<li><p>鲁有脚之死</p></li>
+<li><p>丐帮的信息体系</p></li>
+<li><p>黄蓉的应对</p></li>
+<li><p>霍都之死</p></li>
+</ol>
+<h2 id="百字摘要">百字摘要</h2>
+<h2 id="金庸案例">金庸案例</h2>
+<h2 id="时间消耗">时间消耗</h2>
+<h2 id="阅读理解">阅读理解：</h2>
+<h2 id="大纲-1">大纲：</h2>
+<h2 id="撰写">撰写：</h2>
+<h2 id="录音">录音</h2>
+<h2 id="一小时运动">一小时运动</h2>
+<h2 id="英文原文">英文原文</h2>
+<p>4 NOVEMBER</p>
+<p>The Test of Intelligence Information</p>
+<p>The ultimate test of an information system is that there are no
+surprises.</p>
+<p>ultimate：</p>
+<p>happening at the end of a long process</p>
+<p>最后的；最终的；终极的</p>
+<p>The ultimate test of an information system is that there are no
+surprises.</p>
+<p>Before events become significant, executives have already adjusted to
+them, analyzed them,</p>
+<p>understood them, and taken appropriate action.</p>
+<p>significant:</p>
+<p>有重大意义的；显著的</p>
+<p>large or important enough to have an effect or to be noticed</p>
+<p>One example is the very few American financial institutions that, in
+the late 1990s, were not</p>
+<p>surprised by the collapse of mainland Asia.</p>
+<p>collapse:</p>
+<p>（突然）倒塌，坍塌</p>
+<p>[ V ] to fall down or fall in suddenly, often after breaking
+apart</p>
+<p>They had thought through what “information” means in respect to Asian
+economies and Asian</p>
+<p>currencies.</p>
+<p>in respect to：关于、涉及</p>
+<p>They had gradually eliminated all the information they got from
+within their own subsidiaries and</p>
+<p>affiliates in these countries—these, they had begun to realize, were
+just “data.”</p>
+<p>Instead, they had begun to organize their information about such
+things as the ratio between shortterm borrowing and the country’s
+balance of payments and information about funds available to</p>
+<p>service foreign short-term debt.</p>
+<p>Long before these ratios turned so unfavorable as to make a panic in
+mainland Asia inevitable,</p>
+<p>these executives had realized that it was coming.</p>
+<p>They realized that they had to decide whether to pull out of these
+countries, or to stay for the very</p>
+<p>long term.</p>
+<p>They had, in other words, realized what economic data are meaningful
+in respect to emerging</p>
+<p>countries, had organized them, had analyzed them, and had interpreted
+them.</p>
+<p>They had turned the data into information—and had decided what action
+to take long before that</p>
+<p>action became necessary.</p>
+<h3 id="action-point">ACTION POINT:</h3>
+<p>Identify key variables in your environment.</p>
+<p>Make sure you have intelligence information about each of these
+variables to minimize surprises.</p>
+<p>Management Challenges for the 21st Century</p>
+<h2 id="november">4 NOVEMBER</h2>
+<h3 id="the-test-of-intelligence-information">The Test of Intelligence
+Information</h3>
+<p>The ultimate test of an information system is that there are no
+surprises.</p>
+<p>The ultimate test of an information system is that there are no
+surprises.</p>
+<p>Before events become significant, executives have already adjusted to
+them,</p>
+<p>analyzed them, understood them, and taken appropriate action. One
+example</p>
+<p>is the very few American financial institutions that, in the late
+1990s, were</p>
+<p>not surprised by the collapse of mainland Asia. They had thought
+through</p>
+<p>what “information” means in respect to Asian economies and Asian</p>
+<p>currencies. They had gradually eliminated all the information they
+got from</p>
+<p>within their own subsidiaries and affiliates in these
+coun-tries—these, they</p>
+<p>had begun to realize, were just “data.” Instead, they had begun to
+organize</p>
+<p>their information about such things as the ratio between short-term
+borrowing</p>
+<p>and the country’s balance of payments and informa-tion about funds
+available</p>
+<p>to service foreign short-term debt. Long before these ratios turned
+so</p>
+<p>unfavorable as to make a panic in mainland Asia in-evitable, these
+executives</p>
+<p>had realized that it was coming. They realized that they had to
+decide whether</p>
+<p>to pull out of these countries, or to stay for the very long term.
+They had, in</p>
+<p>other words, realized what economic data are meaningful in respect
+to</p>
+<p>emerging countries, had organized them, had analyzed them, and
+had</p>
+<p>interpreted them. They had turned the data into information—and
+had</p>
+<p>decided what action to take long before that action</p>
+<p>became necessary.</p>
+<h3 id="action-point-1">ACTION POINT:</h3>
+<p>Identify key variables in your environment. Make sure you</p>
+<p>have intelligence information about each of these variables to
+mini-mize</p>
+<p>surprises.</p>
+<h4 id="management-challenges-for-the-21st-century">Management
+Challenges for the 21st Century</h4>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

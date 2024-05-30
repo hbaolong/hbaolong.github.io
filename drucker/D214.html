@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="第三同读" />
+  <title>德鲁克日志</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">德鲁克日志</h1>
+<p class="author">第三同读</p>
+</header>
+<h2 id="透过金庸读懂德鲁克">透过金庸读懂德鲁克</h2>
+<p>【300字抖音】</p>
+<p>提问：想多赚钱，应该找什么样的兼职呢？</p>
+<p>一个人找兼职，无外乎三个原因：第一，多赚点钱；第二，有特长，不想浪费，第三，有爱好，不想</p>
+<p>辜负自己。</p>
+<p>那么应该找什么样的兼职呢？今天来聊聊这个话题。</p>
+<p>每个人都有自己优势，每个人也都有自己的圈子，大家都是在用自己的优势，在自己的圈子里赚钱，</p>
+<p>你的主业和副业，都应该围绕自己的优势和圈子来选择。</p>
+<p>主业和副业之间并没有明确的定义，副业走着走着，也可能会变成主业，而这个演变，在你漫长的一</p>
+<p>生中很有很多次。</p>
+<p>如何让这个演变变得更加顺畅呢？德鲁克给出了建议：你的主业和副业之间，或者基于你的优势，或</p>
+<p>者基于你的圈子。</p>
+<p>比如，如果你的优势是演讲，那么，你可以选择和演讲有关的任何职业，比如讲课；如果你的圈子是</p>
+<p>妈妈群，那么你可以做和妈妈群有关的任何生意。</p>
+<p>只有如此，你才可以在未来的职业演化过程中比较坦然，比较成功。</p>
+<p>黄蓉为什么不学降龙十八掌</p>
+<p>黄蓉是丐帮第十代任帮主。</p>
+<p>丐帮有两大神功：降龙十八掌和打狗棒法。丐帮的历代帮主大多都同时学着两种武功，除了黄蓉和史</p>
+<p>红石。</p>
+<p>黄蓉不但是丐帮帮主，还是黄药师的女儿，还是洪七公的弟子。黄药师和洪七公都是五绝之一，他们</p>
+<p>的武学宝藏多的数不胜数。</p>
+<p>黄蓉又是一个非常聪明的女孩，一天就可以学会一个武功，比如，他跟着洪七公学习逍遥游，一会就</p>
+<p>学会了。</p>
+<p>这么聪明的女孩，为什么不学降龙十八掌呢？毕竟，降龙十八掌是天下至强的武功呀。连扫地僧都承</p>
+<p>受不了，一掌被萧峰打断了三根肋骨。</p>
+<p>我们先看看黄蓉都学了那些武功：打狗棒法、逍遥游、落英神剑掌、兰花拂穴手等，还有就是阅读了</p>
+<p>《九阴真经》获得了较高的武学理论。</p>
+<p>从这些武功的名字可以看出，黄蓉学习的都是一些借力打力的武功，都是一些虚虚实实的武功，这和</p>
+<p>黄蓉的个性有关。黄蓉当然是一个聪明的孩子了，这个聪明的孩子爱好也很多，爱好多，在某一件事</p>
+<p>上可以分配的时间就会少。这也就意味着，黄蓉并不会在某个事情上下非常大的功夫。</p>
+<p>打狗棒法、逍遥游，都是招数很多，可以让敌人迷惑，在敌人迷惑中让自己处于有效的位置，从而获</p>
+<p>胜。还有落英神剑掌、兰花拂穴手，一看名字就知道是借助巧劲才让敌人受制的武功。</p>
+<p>那么，降龙十八掌是什么样的武功呢？</p>
+<p>洪七公年轻时也是一个风流潇洒的人，练习的是逍遥游这样的武功，分分钟几十招过去了。后来年龄</p>
+<p>大了，也是遇到了新的师父，就转向学习降龙十八掌了。再后来，随着功力的增加，一掌过去，很少</p>
+<p>有人可以接住，也就懒得用逍遥游让自己飘来飘去等待敌人出错了：毕竟，不管是如何懂，我就一</p>
+<p>掌。多实在！</p>
+<p>打狗棒呢？按洪七公的说法，打狗棒比降龙十八掌更厉害。洪七公几次说，他觉得欧阳锋也不是太坏</p>
+<p>的人，一直没有用打狗棒法，没想到反而被欧阳锋暗算。</p>
+<p>那么，黄蓉如何说打狗棒和降龙十八掌呢？黄蓉在某次对郭芙讲武功时说：“适才我传授鲁长老那绊丶</p>
+<p>劈丶缠丶戳丶挑丶引丶封丶转八诀，那一诀是用蛮力的？你说我这是个骗人的玩意儿，那不错，武功</p>
+<p>之中，十成中九成是骗人玩意儿，只要能把高手骗倒，那就胜了。只有你爹爹的降龙十八掌这等武</p>
+<p>功，那才是真功夫硬拚，用不着使巧劲诈着。可是要练到这一步，天下能有几人能够？”</p>
+<p>黄蓉还学了奇门遁甲，还学了兵法，这些本质都是“骗人的玩意儿”。这和黄蓉的聪明本质是一致的。</p>
+<p>而降龙十八掌那样，凭证自己真正的内力和对方硬碰硬，则不是黄蓉喜欢、擅长的。</p>
+<p>降龙十八掌用到的是真正的内力和少量的技巧，打狗棒法用的是少量的内力和无穷的技巧。这是降龙</p>
+<p>十八掌和打狗棒法的区别。</p>
+<p>萧峰和洪七公两人都同时掌握这两大神功，而且都用的非常好。洪七公用降龙十八掌在第一次华山论</p>
+<p>剑上获得了五绝的身份，同时计划在第二次华山论剑上用打狗棒法争夺个天下第一。</p>
+<p>他们为什么可以同时掌握这两个呢？</p>
+<p>因为他们都是足够聪明灵活，而且又有深厚的内力。</p>
+<p>萧峰和洪七公都不止会这两大神功，还会沛然有雨、擒龙功、太祖长拳、逍遥游等等，这说明他们都</p>
+<p>是足够聪明到可以学会很多武功的人。这两大神功和他们的“底层架构”是匹配的：深厚的功力和足够</p>
+<p>的聪明。</p>
+<p>那么黄蓉为什么不去学降龙十八掌呢？因为降龙十八掌和她的“底层架构”不匹配：以她的性格，她很</p>
+<p>难有深厚的功力。</p>
+<p>就像这个武功，郭靖就不去学一样，因为郭靖知道，那么复杂的武功，和自己的“底层架构”也是不匹</p>
+<p>配的。</p>
+<p>所以，黄蓉学了很多武功，看起来五花八门，其实都是用的一个巧。巧之外的武功，不管多好，她都</p>
+<p>不要。</p>
+<p>洪七公在年轻时多取巧
+，到了一定年龄后，也就老老实实走了“实力派”的路线了。</p>
+<p>最后，再说另一个有趣的事情：郭靖、黄蓉加上杨过，为什么可以把那么多黑白两道的人都汇集到襄</p>
+<p>阳，给小郭襄过生日呢？</p>
+<p>那些看起来水火不相容的人，是如何被链接在一起的呢?那些人这是看“杨过”的面子么？</p>
+<p>当然有杨过的面子在里面，不过，更多是大家对抗击蒙古的共同诉求。杨过只是一个引子，只是有了</p>
+<p>杨过，有了郭襄那个十六岁的生日，他们有了更好的理解来到襄阳，做那些他们一直想做的事情。</p>
+<p>这种融合，固然是郭靖、黄蓉、杨过的魅力，也是共同敌人的作用。在蒙古人面前，他们的职业都是</p>
+<p>抗蒙义士，就连那个黄药师、老顽童都义无反顾地来了。</p>
+<h2 id="大纲">大纲</h2>
+<ol type="1">
+<li><p>开篇，丐帮只有黄蓉和史红石没有学习降龙十八掌</p></li>
+<li><p>黄蓉学了落英缤纷、逍遥游、九阴真经、打狗棒法等。</p></li>
+<li><p>降龙十八掌和打狗棒法的区别</p></li>
+<li><p>萧峰和洪七公为什么两个都学，因为技术统一</p></li>
+<li><p>黄蓉为什么不学，因为技术不统一</p></li>
+<li><p>那么，郭靖、黄蓉还有杨过，为什么可以把黑白两道都汇集在襄阳呢？因为市场一致。</p></li>
+<li><p>结论：所有表面的多样性，都有底层的一致性，这个一致性或者技术，或者市场。</p></li>
+</ol>
+<h2 id="百字摘要">百字摘要</h2>
+<h2 id="金庸案例">金庸案例</h2>
+<h2 id="时间消耗">时间消耗</h2>
+<h2 id="阅读理解">阅读理解：</h2>
+<h2 id="大纲-1">大纲：</h2>
+<h2 id="撰写">撰写：</h2>
+<h2 id="录音">录音</h2>
+<p>1 AUGUST Diver….m4a</p>
+<p>6.35MB</p>
+<p>1 AUGUST</p>
+<p>Diversification</p>
+<p>Diversification： n. 多样化；变化 ，</p>
+<p>多元化经营；经营多角化</p>
+<p>“Shoemaker, stick to your last!”</p>
+<p>Shoemaker：</p>
+<p>鞋匠；制鞋工人</p>
+<p>business diversification</p>
+<p>a person whose job is making shoes and boots</p>
+<p>The old cliché is still sound advice.</p>
+<p>advice：</p>
+<p>cliché：</p>
+<p>劝告；忠告；建议；意见</p>
+<p>[ C ] a phrase or an idea that has been used so often that it no
+longer has much meaning and is not interesting 陈词滥调；</p>
+<p>[ U ] ~ (on sth) an opinion or a suggestion about what sb should do
+in a particular situation</p>
+<p>陈腐的套语</p>
+<p>The less diverse a business, the more manageable it is.</p>
+<p>diverse：</p>
+<p>不同的；相异的；多种多样的；形形色色的</p>
+<p>very different from each other and of various kinds</p>
+<p>Simplicity makes for clarity.</p>
+<p>clarity：</p>
+<p>the quality of being expressed clearly</p>
+<p>清晰；清楚；明确</p>
+<p>People can understand their own job and see its relationship to
+results and to the performance of</p>
+<p>the whole.</p>
+<p>Efforts will tend to be concentrated.</p>
+<p>concentrated：</p>
+<p>showing determination to do sth</p>
+<p>决心要做的；全力以赴的</p>
+<p>Expectations can be defined, and results can easily be appraised and
+measured.</p>
+<p>Expectation：</p>
+<p>预料；预期；期待</p>
+<p>appraised：</p>
+<p>[ U C ] ~ (of sth) | ~ (that…) a belief that sth will happen because
+it is likely</p>
+<p>V-T If you appraise something or someone, you consider them carefully
+and form an opinion about them.</p>
+<p>评价</p>
+<p>The less complex a business is, the fewer things can go wrong.</p>
+<p>And the more complex a business is, the more difficult it is to
+figure out what went wrong and to</p>
+<p>take the right remedial action.</p>
+<p>remedial ：</p>
+<p>旨在解</p>
+<p>aimed at solving a problem, especially when this involves correcting
+or improving sth that has been done wrong</p>
+<p>决问题的；补救的；纠正的</p>
+<p>Complexity creates problems of communications. The more complex a
+business, the more</p>
+<p>layers of management, the more forms and procedures, the more
+meetings, and the more delays in</p>
+<p>making decisions.</p>
+<p>There are only two ways in which diversity can be harmonized into
+unity.</p>
+<p>diversity：</p>
+<p>harmonized :</p>
+<p>unity:n. 团结；一致；联合；个体</p>
+<p>差异（性）；不同（点）</p>
+<p>V-RECIP If two or more things harmonize with each other, they fit in
+well with each other. 彼此协调</p>
+<p>[ U ] [ C usually sing. ] a range of many people or things that are
+very different from each other</p>
+<p>[ U sing. ] the state of being in agreement and working together; the
+state of being joined</p>
+<p>together to form one unit</p>
+<p>团结一致；联合；统一</p>
+<p>A business can be highly diversified and yet have fundamental unity
+if its businesses and</p>
+<p>technologies, its products and product lines, and its activities are
+embraced within the unity of a</p>
+<p>common market.</p>
+<p>diversified:</p>
+<p>V-T/V-I When an organization or person diversifies into other things,
+or diversifies their product line, they increase the</p>
+<p>variety of things that they do or make.</p>
+<p>embraced：</p>
+<p>使多样化</p>
+<p>V-RECIP If you embrace someone, you put your arms around them and
+hold them tightly, usually in order to show</p>
+<p>your love or affection for them. You can also say that two people
+embrace.</p>
+<p>拥抱</p>
+<p>And a business can be highly diversified and have fundamental unity
+if its businesses, its markets,</p>
+<p>its products and product lines, and its activities are held together
+in a common technology.</p>
+<h3 id="action-point">ACTION POINT:</h3>
+<p>Examine your business.</p>
+<p>Is it focused or diffused? If diffused, develop a plan to bring unity
+out of the diversity using market</p>
+<p>or technology as the basis for unity.</p>
+<dl>
+<dt>diffused</dt>
+<dd>
+<p>V-T/V-I If something such as knowledge or information is diffused, or
+if it diffuses somewhere, it is made known over a</p>
+</dd>
+</dl>
+<p>wide area or to a lot of people.</p>
+<p>传播 (知识、消息等); 散布</p>
+<p>Management: Tasks, Responsibilities, Practices</p>
+<h2 id="august">1 AUGUST</h2>
+<h3 id="diversification">Diversification</h3>
+<p>“Shoemaker, stick to your last!”</p>
+<p>The old cliché is still sound advice. The less diverse a business,
+the more</p>
+<p>manageable it is. Simplicity makes for clarity. People can understand
+their</p>
+<p>own job and see its relationship to results and to the performance of
+the</p>
+<p>whole. Efforts will tend to be concentrated. Expectations can be
+de-fined, and</p>
+<p>results can easily be appraised and measured. The less complex a
+business is,</p>
+<p>the fewer things can go wrong. And the more complex a busi-ness is,
+the</p>
+<p>more difficult it is to figure out what went wrong and to take the
+right</p>
+<p>remedial action. Complexity creates problems of communications. The
+more</p>
+<p>complex a business, the more layers of management, the more forms
+and</p>
+<p>procedures, the more meetings, and the more delays in making</p>
+<p>decisions.</p>
+<p>There are only two ways in which diversity can be harmonized into</p>
+<p>unity. A business can be highly diversified and yet have
+fundamental</p>
+<p>unity if its businesses and technologies, its products and product
+lines,</p>
+<p>and its ac-tivities are embraced within the unity of a common
+market.</p>
+<p>And a business can be highly diversified and have fundamental unity
+if its</p>
+<p>businesses, its markets, its products and product lines, and its
+activities</p>
+<p>are held together in a common technology.</p>
+<h3 id="action-point-1">ACTION POINT:</h3>
+<p>Examine your business. Is it focused or diffused? If dif-</p>
+<p>fused, develop a plan to bring unity out of the diversity using
+market or</p>
+<p>tech-nology as the basis for unity.</p>
+<h4 id="management-tasks-responsibilities-practices">Management: Tasks,
+Responsibilities, Practices</h4>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

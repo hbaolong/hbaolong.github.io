@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="第三同读" />
+  <title>德鲁克日志</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">德鲁克日志</h1>
+<p class="author">第三同读</p>
+</header>
+<h2 id="透过金庸读懂德鲁克">透过金庸读懂德鲁克</h2>
+<p>一个员工的自我修养</p>
+<p>如果做一个好员工呢？其实很简单，遵守六个原则就好了。</p>
+<p>原则一：知道自己的工作是什么以及工作应该是什么。</p>
+<p>每天下班前，想一下这一天你都做了什么，而这一天你本来应该做什么。你的工作是技术，那么你用</p>
+<p>你掌握的技术为公司解决问题了么？而是用去修打印机泡公司的行政小妹妹了？</p>
+<p>原则二：知道自己为公司做了什么以及应该做什么。</p>
+<p>想一下，你所做的事情，为公司带来了什么价值，以及你应该为公司带来什么价值？加入你是销售，</p>
+<p>你为公司带来订单了么？你做了什么来为公司带来订单么？</p>
+<p>原则三：知道你公司赖以生存的基础是什么。</p>
+<p>万幸，在寒冷的2019年，你公司还活着，还在给你发工资，那么你知道你公司赖以生存的基础是什么</p>
+<p>呢？是你老板的钱包？还是你们的产品？还是创新的模式？</p>
+<p>原则四：了解你公司需要哪些信息</p>
+<p>你公司为了活下去，需要哪些信息？如何获得这些信息？这些信息，哪些是你可以获得呢？你应该如</p>
+<p>何获得？</p>
+<p>原则五：明确作为一个好员工，你应该获得哪些信息</p>
+<p>作为一个员工，技术也好，销售也好，市场也好，为了做一个好员工，你应该获得哪些信息？如何获</p>
+<p>得？</p>
+<p>原则六：给多少钱，干多少事。</p>
+<p>这是一个经济时代，我们处在一个经济社会，老板给多少钱，就干多少事，如果你觉得自己能力超</p>
+<p>群，可以稍微多干一些，但不要太多。因为，你老板不会为你的努力买单的，特别是大公司。</p>
+<h2 id="大纲">大纲</h2>
+<h2 id="百字摘要">百字摘要</h2>
+<h2 id="金庸案例">金庸案例</h2>
+<h2 id="时间消耗">时间消耗</h2>
+<h2 id="阅读理解">阅读理解：</h2>
+<h2 id="大纲-1">大纲：</h2>
+<h2 id="撰写">撰写：</h2>
+<h2 id="录音">录音</h2>
+<h2 id="一小时运动">一小时运动</h2>
+<h2 id="英文原文">英文原文</h2>
+<p>31 DECEMBER</p>
+<p>From Data to Information Literacy</p>
+<p>Literacy:</p>
+<p>读写能力</p>
+<p>[ U ] the ability to read and write</p>
+<p>The executive and the knowledge worker have only one
+tool—information.</p>
+<p>Information is what holds an organization together and information is
+what makes individual</p>
+<p>knowledge workers effective.</p>
+<p>Enterprises and individuals will have to learn what information they
+need and how to get it.</p>
+<p>They will have to learn how to organize information as their key
+resource.</p>
+<p>In moving from data literacy to information literacy, you need to
+answer two principal questions:</p>
+<p>“What information does my enterprise need?” and “What information do
+I need?” To answer these</p>
+<p>questions you have to rethink:</p>
+<p>What your job is, and what it should be</p>
+<p>What your contribution is, or should be</p>
+<p>What the fundamentals are of your organization</p>
+<p>You will need three different types of information, each with its own
+concepts.</p>
+<p>The three primary types of information are: external information,
+internal information, and</p>
+<p>cross-organizational information.</p>
+<p>Your success and the success of your organization depend upon getting
+these answers right.</p>
+<h3 id="action-point">ACTION POINT:</h3>
+<p>Answer these questions: “What is my job? What should be my
+contribution?” and “What are the</p>
+<p>fundamentals of the organization?”</p>
+<p>Then answer: “What information does my organization need?” and “What
+information do I need?”</p>
+<p>Management Challenges for the 21st Century</p>
+<p>From Data to Information Literacy (Corpedia Online Program)</p>
+<h2 id="december">31 DECEMBER</h2>
+<h3 id="from-data-to-information-literacy">From Data to Information
+Literacy</h3>
+<p>The executive and the knowledge worker have only one
+tool—information.</p>
+<p>Information is what holds an organization together and information is
+what</p>
+<p>makes individual knowledge workers effective. Enterprises and
+in-dividuals</p>
+<p>will have to learn what information they need and how to get it. They
+will</p>
+<p>have to learn how to organize information as their key resource. In
+moving</p>
+<p>from data literacy to information literacy, you need to answer two
+principal</p>
+<p>questions: “What information does my enterprise need?” and “What</p>
+<p>information do I need?” To answer these questions you have to</p>
+<p>rethink:</p>
+<p>•What your job is, and what it should be</p>
+<p>•What your contribution is, or should be</p>
+<p>•What the fundamentals are of your organization</p>
+<p>You will need three different types of information, each with its
+own</p>
+<p>concepts. The three primary types of information are: external
+informa-</p>
+<p>tion, internal information, and cross-organizational information.
+Your suc-</p>
+<p>cess and the success of your organization depend upon getting
+these</p>
+<p>answers right.</p>
+<h3 id="action-point-1">ACTION POINT:</h3>
+<p>Answer these questions: “What is my job? What should be</p>
+<p>my contribution?” and “What are the fundamentals of the
+organiza-tion?”</p>
+<p>Then answer: “What information does my organization need?” and
+“What</p>
+<p>information do I need?”</p>
+<p>Management Challenges for the 21st Century</p>
+From Data to Information Literacy (Corpedia Online Program)
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

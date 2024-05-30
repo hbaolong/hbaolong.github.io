@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="第三同读" />
+  <title>德鲁克日志</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">德鲁克日志</h1>
+<p class="author">第三同读</p>
+</header>
+<h2 id="透过金庸读懂德鲁克">透过金庸读懂德鲁克</h2>
+<p>厉害了我的国</p>
+<p>我爱我的祖国，因为我和我的祖国在一起，而且，一刻也不会分离。</p>
+<p>而且，我的祖国也在变得越来也好，阳光越来也明媚，空气越来也好，男人也越来越帅气，女人也越</p>
+<p>来越美丽，人们也越来越从容，生活也越来越自在。</p>
+<p>比如，我们的龙队就有一个新发现，他发现，居然可以躺在家里借书，然后就用人把书送达家，而这</p>
+<p>一切，都是免费的。</p>
+<p>后来，我也发现，在我家门口也开了一家书店，很大，很宽敞，还很漂亮。</p>
+<p>（放入通州店的图片）</p>
+<p>我走进这件书店，发现这家书店很有特色，居然是一家图书馆主题的书店。没听懂？就是说，这个书</p>
+<p>店可以免费借阅图书馆的书，以及新书，也可以还图书馆的书。</p>
+<p>而且，书店里可以喝咖啡，还有懒人沙发。我可以葳蕤地待一天。或者看书，或者不看书。</p>
+<p>书店里的人不多，和就和店长聊了会天，店长说，书店在商业化下，带有公益性质，目的还是给社区</p>
+<p>的人提供阅读的场所和书籍。</p>
+<p>这个书店叫做更读书社。目前在大兴，通州和隆福寺各有一个，都是在700平米左右。</p>
+<p>更读书社还运营了一些24小时书房，大约有二十多个。24小时书房是一个很有趣的存在，他们大多在</p>
+<p>小区附近，采用人脸识别技术，或者刷卡技术。24小时，同学们随时可以通过北京除国图外的任何图</p>
+<p>书馆卡进入。</p>
+<p>你可以在里面阅读、借阅、还书。</p>
+<p>2018年1月1日，国家的《公共图书馆法》正式生效，按《公共图书馆法》</p>
+<p>第十三条：国家建立覆盖城乡、便捷实用的公共图书馆服务网络。公共图书馆服务网络建设坚持政府</p>
+<p>主导，鼓励社会参与。</p>
+<p>县级以上地方人民政府应当根据本行政区域内人口数量、人口分布、环境和交通条件等因素，因地制</p>
+<p>宜确定公共图书馆的数量、规模、结构和分布，加强固定馆舍和流动服务设施、自助服务设施建设。</p>
+<p>网上经常有人发一些很励志的帖子，说中国人读书如何如何少，犹太人读书如何如何多，说欧洲人在</p>
+<p>地铁上都是看说，而我们都是看手机，如此云云。</p>
+<p>不管我们说多少这样的话，也改变不了我们的阅读习惯。而这个图书馆法却在悄悄改变着什么。</p>
+<p>去多了更读书社后，也认识了几个他们的运营人员。了解到他们的部分场地是政府买单的，这样一</p>
+<p>来，他们的运营成本就低了很多，优雅的场地，也吸引更多的人愿意经常来休息，阅读，以及参加书</p>
+<p>店里的各种活动。他们的咖啡也就卖的不错了。（客观来说，他们的咖啡确实不错。）</p>
+<p>运营一个书店，最大的成本肯定是房租成本，这一部分成本由政府承当了一部分后，让书店运营的难</p>
+<p>度就降低了很多，也让更多有情怀的人愿意去启动一个书店，运营一个书店。</p>
+<p>在你身边，这样的书店，书房越来越多，你看书的可能性也就越来越多。</p>
+<p>创赢读书会的发起人，陈开元老师曾经说过：“我做这个读书会，首先是因为我个人自己要读书，其</p>
+<p>次，我希望把一些中年人从牌桌拉到书桌上来。”</p>
+<p>是呀，我们读书少，只是五抱怨是没有什么用的。</p>
+<p>从政府的角度，他们会出台一些法律；相光的地方政府根据法律，出台一些对应的政策，而做为有商</p>
+<p>业敏感性，又有情怀的一些人，如更读书社的老板，他们就会借助法律的支持，结合各地落实政策的</p>
+<p>特点，成立这种让你流连忘返的书店。</p>
+<p>是呀，我不一定读书，也不一定不读书。在我空闲时，我走出家门，随意走进一个书店，看着各种书</p>
+<p>籍，看着各种阅读的人，看着各种碰撞的思想。我想，一切都在悄悄的变化。</p>
+<p>我爱我的祖国，因为我看到了这一点点的变化。</p>
+<h2 id="大纲">大纲</h2>
+<h2 id="百字摘要">百字摘要</h2>
+<h2 id="金庸案例">金庸案例</h2>
+<h2 id="时间消耗">时间消耗</h2>
+<h2 id="阅读理解">阅读理解：</h2>
+<h2 id="大纲-1">大纲：</h2>
+<h2 id="撰写">撰写：</h2>
+<h2 id="录音">录音</h2>
+<h2 id="一小时运动">一小时运动</h2>
+<h2 id="英文原文">英文原文</h2>
+<p>24 OCTOBER</p>
+<p>Strong Government</p>
+<p>Government would be the “conductor” who tries to think through what
+each instrument is best</p>
+<p>designed to do.</p>
+<p>conductor：</p>
+<p>a person who stands in front of an orchestra , a group of singers
+etc., and directs their performance, especially sb</p>
+<p>who does this as a profession</p>
+<p>（管弦乐队、合唱队等的）指挥；职业指挥</p>
+<p>We do not face a “withering away of the state,” as Karl Marx
+promised.</p>
+<p>withering：</p>
+<p>神情、话语等</p>
+<p>尖刻的；使人难堪的；令人无地自容</p>
+<p>的</p>
+<p>( of a look, remark, etc.</p>
+<p>) intended to make sb feel silly or ashamed</p>
+<p>On the contrary, we need a vigorous, a strong, and a very active
+government.</p>
+<p>vigorous：</p>
+<p>充满活力的；果断的；精力充沛的</p>
+<p>very active, determined or full of energy</p>
+<p>But we do face a choice between big and impotent government and a
+government that is strong</p>
+<p>because it confines itself to decision and direction and leaves the
+“doing” to others.</p>
+<p>impotent：</p>
+<p>无能为力的；不起作用的</p>
+<p>having no power to change things or to influence a situation</p>
+<p>confines：vt. 限制；禁闭（confine的三单形式）</p>
+<p>We do not face a “return of laissez-faire” in which the economy is
+left alone.</p>
+<p>laissez-faire：</p>
+<p>[ U ] ( from French ) the policy of allowing private businesses to
+develop without government control</p>
+<p>商业的）自由放任政策</p>
+<p>（政府对私有</p>
+<p>In all major areas we have a new choice in this pluralist society of
+organizations: an organic</p>
+<p>diversity in which institutions are used to do what they are best
+equipped to do.</p>
+<p>pluralist：</p>
+<p>社会</p>
+<p>多元性的；多元化的</p>
+<p>organic：</p>
+<p>食品、耕作方式等</p>
+<p>有机的；不使</p>
+<p>( of a society</p>
+<p>) having many different groups of people and different political
+parties in it</p>
+<p>( of food, farming methods, etc.</p>
+<p>) produced or practised without using artificial chemicals</p>
+<p>用化肥的；绿色的</p>
+<p>diversity：[ U ] [ C usually sing. ] a range of many people or things
+that are very different from each other 差异（性）；不同（点）</p>
+<p>Government would figure out how to structure a given political
+objective so as to make it</p>
+<p>attractive to one of the autonomous institutions.</p>
+<p>And just as we praise a composer for his ability to write “playable”
+music, which best uses the</p>
+<p>specific performance characteristic of French horn, violin, or flute,
+we may come to praise the</p>
+<p>lawmaker who best structures a particular task so as to make it most
+congenial for this or that of</p>
+<p>the autonomous, self-governing, private institutions of pluralist
+society.</p>
+<p>congenial：</p>
+<p>人</p>
+<p>意气相投</p>
+<p>( of a person</p>
+<p>) pleasant to spend time with because their interests and character
+are similar to your own</p>
+<p>的；情趣相投的；合得来的</p>
+<p>autonomous：( of a country, a region or an organization
+国家、地区、组织 ) able to govern itself or control its own affairs
+自治</p>
+<p>的；有自治权的</p>
+<h3
+id="action-point-write-a-letter-to-an-editor-praising-a-lawmaker-who-structures-government">ACTION
+POINT: Write a letter to an editor praising a lawmaker who structures
+government</h3>
+<p>programs to be managed by nongovernmental institutions and to have
+the ability to solve social</p>
+<p>problems where government programs are deficient.</p>
+<p>The Age of Discontinuity</p>
+<h2 id="october">24 OCTOBER</h2>
+<h3 id="strong-government">Strong Government</h3>
+<p>Government would be the “conductor” who tries to think through</p>
+<p>what each instrument is best designed to do.</p>
+<p>We do not face a “withering away of the state,” as Karl Marx
+promised.</p>
+<p>On the contrary, we need a vigorous, a strong, and a very active
+gov-ernment.</p>
+<p>But we do face a choice between big and impotent government and</p>
+<p>Agovernment that is strong because it confines itself to decision and
+di-rection</p>
+<p>and leaves the “doing” to others. We do not face a “return of
+laissez-faire” in</p>
+<p>which the economy is left alone. In all major areas we have a new
+choice in</p>
+<p>this pluralist society of organizations: an organic diversity in</p>
+<p>which institutions are used to do what they are best equipped to
+do.</p>
+<p>Government would figure out how to structure a given political
+objec-</p>
+<p>tive so as to make it attractive to one of the autonomous
+institutions. And</p>
+<p>just as we praise a composer for his ability to write “playable”
+music,</p>
+<p>which best uses the specific performance characteristic of French
+horn,</p>
+<p>violin, or flute, we may come to praise the lawmaker who best
+structures</p>
+<p>a particular task so as to make it most congenial for this or that of
+the</p>
+<p>autonomous, self-governing, private institutions of pluralist
+society.</p>
+<h3 id="action-point">ACTION POINT:</h3>
+<p>Write a letter to an editor praising a lawmaker who struc-</p>
+<p>tures government programs to be managed by nongovernmental
+institu-</p>
+<p>tions and to have the ability to solve social problems where
+government</p>
+<p>programs are deficient.</p>
+<h4 id="the-age-of-discontinuity">The Age of Discontinuity</h4>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

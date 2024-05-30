@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="第三同读" />
+  <title>德鲁克日志</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">德鲁克日志</h1>
+<p class="author">第三同读</p>
+</header>
+<h2 id="透过金庸读懂德鲁克">透过金庸读懂德鲁克</h2>
+<p>任我行、左冷禅、岳不群，谁最行？</p>
+<p>《笑傲江湖》有三个大反派，这三个人共同的特点都是要统一武林。</p>
+<p>任我行靠的是实力，凭借自己的吸星大法，凭借魔教的恐怖势力，带着三山五岳的江湖人士，人挡杀</p>
+<p>人，佛单杀佛。在各种机缘巧合下，成为了武林中最有势力的人，如果不是心肌梗塞猝死，他是很有</p>
+<p>可能成为武林第一人的。</p>
+<p>左冷禅有点不同，他一方面用阳谋：作为五岳派盟主，他觉得做个盟主不如做掌门实惠，而且，为了</p>
+<p>对抗日益嚣张的魔教，把五岳派并称一个五岳剑派，也是一个非常优秀的途径。所以，左冷禅发起了</p>
+<p>五岳派的并派提议。并且得到了部分人的附议。</p>
+<p>同时，左冷禅也用阴谋，他在华山派派出了自己的弟子劳德诺做卧底；在泰山派收买了玉玑子等人；</p>
+<p>在恒山派，左冷禅派出了一些武功高强的师弟去围剿恒山三定，一举杀死了三人，让恒山派群龙无</p>
+<p>首；衡山派，左冷禅抓住了掌门人莫大的师弟刘正风和魔教长老曲洋勾结（其实是交好）的证据，借</p>
+<p>机杀死了刘正风，削弱了衡山的实力。</p>
+<p>凭借左手阳谋，右手阴谋，左冷禅认为自己可以完成五岳派的并购。</p>
+<p>岳不群完全不同，岳不群是有阴谋。岳不群认为，既然左冷禅要做，就让他去做，自己扮猪吃虎，让</p>
+<p>左冷禅去下聘礼，雇乐队，定日子，娶媳妇；而自己，只需要在入洞房时抢先就好了。</p>
+<p>然后，在左冷禅左手阳谋，右手阴谋折腾了很久后，果然让岳不群入了洞房。</p>
+<p>这就是这三个人的区别，也是这三个人的性格所在。</p>
+<p>今天我们在群里聊天，聊起了雄才大略。大家讨论任我行、左冷禅和岳不群谁有雄才大略。</p>
+<p>然后，我提出了一个直接的问题：啥是雄才？啥是大略？这时，马云峰说道：’张学良评价父亲张作霖</p>
+<p>“有雄才，无大略”，评价蒋介石“有大略，无雄才”，这么看就是有区别的。’</p>
+<p>我想了想，这确实是最好的注脚。</p>
+<p>那么，用这个角度来看这三个人呢？</p>
+<p>我个人认为，并派也好，统一江湖也好，这个是符合大家的期待的，毕竟，大家都喜欢和平的年代，</p>
+<p>和平的江湖。在这一点上，任我行、左冷禅、岳不群并没有什么不同。</p>
+<p>不同的是他们的做事方法。</p>
+<p>任我行有目的，有方法，也有势力，逐步推进，如果不是意外猝死，他大概会成功。所以，任我行算</p>
+<p>有雄才，有大略。</p>
+<p>左冷禅明面上搞阳谋，却夹带了太多的私货，用阴谋来处理如此大的江湖事项。明明是可以拿到台面</p>
+<p>上的事情，却搞成了偷鸡摸狗。显示出小鸡子气。所以，左冷禅算有雄才，却无大略，做事手段不够</p>
+<p>高明。</p>
+<p>岳不群呢？岳不群没有雄才，他应该也想象不出并派这样的格局。不过，他却有很强的执行力，当他</p>
+<p>看到左冷禅的谋略后，随即设计出了可以算计左冷禅的谋略，让左冷禅白白辛苦一场，为他人做了嫁</p>
+<p>衣。</p>
+<p>所以说，岳不群虽然没有雄才，却有大略。</p>
+<p>我们从五岳派合并后岳不群的动作，也可以看出岳不群的大略。</p>
+<p>首先，左冷禅并派，就是强推，他觉得联盟转为门派是自然的事情。他通过收买、陷害的方式，企图</p>
+<p>用武力来并派；而岳不群则不同，他是从并派可以消除争议，减少仇杀的角度来看待并说服大家同意</p>
+<p>并派的。这是一个战略的考虑，而不是一个武力的考虑。</p>
+<p>其次，岳不群让女儿岳灵珊演示了各个门派的武功。通过这个演示，岳不群告诉大家，并派后，五岳</p>
+<p>派的武功可以融会贯通，达到新的高度。</p>
+<p>接着，岳不群提到了并派的规则和操作手法：让武功类似的门派合并，让地缘接近的门派合并。武功</p>
+<p>接近则容易形成新的武功，地缘接近则容易形成血亲关系。而五岳剑派，都是用的剑，确实适合合</p>
+<p>并。</p>
+<p>接下来，岳不群做了五岳派掌门人后，第一件事就是用原来各个门派的负责人来管理。这一方面表达</p>
+<p>了对各个门派的尊重，一方面也迅速地稳定了局势。</p>
+<p>其实，大家应该可以推断，用不了多久，新的管理团队就会代替这个现在的团队来管理这个五岳派。</p>
+<p>这只是时间问题。</p>
+<p>最后，岳不群说出了思过崖后的武学宝库，告诉所有人可以去华山学习武学宝库，为五岳剑派的每个</p>
+<p>人提升武功提供了很好的机会。</p>
+<p>如果不是左冷禅捣乱，如果不是令狐冲追杀，如果不是恒山复仇，如果不是岳不群为了并派欠下了太</p>
+<p>多的血债，凭借这六步，岳不群是可以完成一个完美的江湖第一大并购：五岳剑派合并。</p>
+<p>江湖没有假设。左冷禅的雄才没有搭配上岳不群的大略，而有雄才大略的任我行则心肌梗塞死掉了。</p>
+<p>留下一个吊儿郎当的令狐冲在笑傲江湖。</p>
+<p>那么令狐冲笑傲江湖的代价是什么呢？是他已经成了事实上的武林第一人：孤独九剑、吸星大法、易</p>
+<p>筋经的集合体。</p>
+<p>在这个令狐冲笑傲的江湖里，还是一个最原始的规则：武力最强者才可以笑。</p>
+<p>惜哉，并派！</p>
+<p>本来这个江湖是可以让普通人笑的，最后还是只能强者大笑。</p>
+<ol type="1">
+<li><p>收购需要基于商业战略，而不是财务战略</p></li>
+<li><p>收购需要考虑收购者可以为收购做哪些事情</p></li>
+<li><p>收购者和被收购者需要共享一个核心：如市场和营销，或技术，或核心竞争力。</p></li>
+<li><p>收购者必须尊重被收购着的业务、产品、客户以及价值观。</p></li>
+<li><p>收购人必须准备在相当短的时间内(最多一年)向被收购企业提供最高管理层。</p></li>
+<li><p>收购必须迅速为双方人员创造明显的发展机会。</p></li>
+</ol>
+<h2 id="大纲">大纲</h2>
+<ol type="1">
+<li><p>岳不群是个反派</p></li>
+<li><p>岳不群的雄才</p></li>
+<li><p>岳不群的大略</p></li>
+<li><p>所谓的伟人，都是被万人唾骂的</p></li>
+<li><p>谁在笑傲？令狐冲？任盈盈？方证和尚？他们凭什么笑傲？</p></li>
+<li><p>岳不群的江湖</p></li>
+</ol>
+<h2 id="百字摘要">百字摘要</h2>
+<h2 id="金庸案例">金庸案例</h2>
+<h2 id="时间消耗">时间消耗</h2>
+<h2 id="阅读理解">阅读理解：</h2>
+<h2 id="大纲-1">大纲：</h2>
+<h2 id="撰写">撰写：</h2>
+<h2 id="录音">录音</h2>
+<h2 id="一小时运动">一小时运动</h2>
+<h2 id="英文原文">英文原文</h2>
+<p>11 DECEMBER</p>
+<p>Six Rules of Successful Acquisitions</p>
+<p>Acquisitions:</p>
+<p>企业并购；兼并与收购</p>
+<p>mergers and acquisitions</p>
+<p>Acquisitions should be successful, but few are, in fact.</p>
+<p>Acquisitions:</p>
+<p>企业并购；兼并与收购</p>
+<p>mergers and acquisitions</p>
+<p>Acquisitions should be successful, but few are, in fact. The reason
+for this nonperformance is</p>
+<p>always the same: disregard of the well-known and well-tested rules
+for successful acquisitions.</p>
+<p>disregard:</p>
+<p>不理会；不顾；漠视</p>
+<p>[ VN ] to not consider sth; to treat sth as unimportant</p>
+<p>The six rules of successful acquisitions are:</p>
+<ol type="1">
+<li>The successful Acquisitions must be based on business strategy, not
+financial strategy.</li>
+</ol>
+<p>Acquisitions:</p>
+<p>企业并购；兼并与收购</p>
+<p>mergers and acquisitions</p>
+<ol start="2" type="1">
+<li>The successful acquisition must be based on what the acquirer
+contributes to the</li>
+</ol>
+<p>acquisition.</p>
+<p>acquirer ：n. 收买者；受让人；需方；捕捉器</p>
+<p>收购者能为收购做出哪些贡献。</p>
+<ol start="3" type="1">
+<li>The two entities must share a common core of unity, such as markets
+and marketing, or</li>
+</ol>
+<p>technology, or core competencies.</p>
+<p>这两个实体必须共享一个统一的共同核心，如市场和营销，或技术，或核心竞争力。</p>
+<ol start="4" type="1">
+<li>The acquirer must respect the business, products, and customers of
+the acquired company, as</li>
+</ol>
+<p>well as its values.</p>
+<p>收购者必须尊重被收购着的业务、产品、客户以及价值观。</p>
+<p>respect:</p>
+<p>acquired</p>
+<p>[ U sing. ] ~ (for sb/sth) a feeling of admiration for sb/sth because
+of their good qualities or achievements</p>
+<p>:V-T If you acquire something, you buy or obtain it for yourself, or
+someone gives it to you.</p>
+<p>获得</p>
+<p>尊敬；敬意；尊重</p>
+<ol start="5" type="1">
+<li>The acquirer must be prepared to provide top management to the
+acquired business within a</li>
+</ol>
+<p>fairly short period, a year at most.</p>
+<p>收购人必须准备在相当短的时间内(最多一年)向被收购企业提供最高管理层。</p>
+<p>fairly ：</p>
+<p>( before adjectives and adverbs</p>
+<p>用于形容词和副词前 ) to some extent but not very 一定地；相当地</p>
+<p>The successful acquisition must rapidly create visible opportunities
+for advancement for both the</p>
+<p>people in the acquiring business and people in the acquired
+business.</p>
+<p>成功的收购必须迅速为收购方的人员和被收购方的人员创造明显的发展机会。</p>
+<h3 id="action-point">ACTION POINT:</h3>
+<p>Evaluate three acquisition prospects against these six rules. Which
+ones would you recommend</p>
+<p>that your organization pursue?</p>
+<p>Evaluate：</p>
+<p>估计；评价；评估</p>
+<p>prospects：</p>
+<p>可能性 前景</p>
+<p>recommend：</p>
+<p>劝告；建议</p>
+<p>pursue：</p>
+<p>追求；致力于；执行；贯彻</p>
+<p>to form an opinion of the amount, value or quality of sth after
+thinking about it carefully</p>
+<p>N-VAR If there is some prospect of something happening, there is a
+possibility that it will happen.</p>
+<p>to advise a particular course of action; to advise sb to do sth</p>
+<p>[ VN ] to do sth or try to achieve sth over a period of time</p>
+<p>;</p>
+<p>The Frontiers of Management</p>
+<p>The Successful Acquisition (Corpedia Online Program).</p>
+<p>人很难赚到符合你认知的钱</p>
+<p>除非你靠运气</p>
+<h2 id="december">11 DECEMBER</h2>
+<h3 id="six-rules-of-successful-acquisitions">Six Rules of Successful
+Acquisitions</h3>
+<p>Acquisitions should be successful, but few are, in fact.</p>
+<p>Acquisitions should be successful, but few are, in fact. The reason
+for this</p>
+<p>nonperformance is always the same: disregard of the well-known</p>
+<p>and well-tested rules for successful acquisitions.</p>
+<p>The six rules of successful acquisitions are:</p>
+<p>The successful acquisition must be based on business strategy,</p>
+<p>not financial strategy.</p>
+<p>The successful acquisition must be based on what the acquirer</p>
+<p>contributes to the acquisition.</p>
+<p>The two entities must share a common core of unity, such as</p>
+<p>markets and marketing, or technology, or core competencies.</p>
+<p>The acquirer must respect the business, products, and customers
+of</p>
+<p>the acquired company, as well as its values.</p>
+<p>The acquirer must be prepared to provide top management to the</p>
+<p>acquired business within a fairly short period, a year at most.</p>
+<p>The successful acquisition must rapidly create visible</p>
+<p>opportunities for advancement for both the people in the
+acquiring</p>
+<p>business and people in the acquired business.</p>
+<h3 id="action-point-1">ACTION POINT:</h3>
+<p>Evaluate three acquisition prospects against these six rules.</p>
+<p>Which ones would you recommend that your organization pursue?</p>
+<p>The Frontiers of Management</p>
+<h4 id="the-successful-acquisition-corpedia-online-program.">The
+Successful Acquisition (Corpedia Online Program).</h4>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

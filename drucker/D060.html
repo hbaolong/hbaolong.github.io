@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="第三同读" />
+  <title>德鲁克日志</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">德鲁克日志</h1>
+<p class="author">第三同读</p>
+</header>
+<h2 id="透过金庸读懂德鲁克">透过金庸读懂德鲁克</h2>
+<p>刘正风之死</p>
+<p>刘正风死了。</p>
+<p>不但自己死了，自己的大儿子也死了，自己的女儿也死了，自己的弟子们也都死了。刘正风被灭门</p>
+<p>了。</p>
+<p>而且是被嵩山派灭门的，或者说，是被五岳派剑派灭门的。</p>
+<p>左冷禅以五岳剑派盟主的身份派出4名武功高强的师弟以及几十位第二代弟子围攻了刘正风的洗手大</p>
+<p>礼，在众目睽睽之下，当着泰山掌门天门道长，华山掌门岳不群，恒山派定逸师太以及上千位高手的</p>
+<p>面杀死了刘正风一家。</p>
+<p>定逸试图动手保护，受伤后愤然而退，岳不群和天门道长也悄然而退。众英雄也哑然而退。</p>
+<p>然后，刘正风就这样被灭门了，灭门的理由是“为了武林中千百万同道的身家性命”。</p>
+<p>衡山派历代高手都喜好音乐，刘正风是这样，莫大掌门也是这样。因着音乐，刘正风认识了魔教的曲</p>
+<p>洋，两个人琴箫相合，互相引为知己。</p>
+<p>两人商量后，考虑各自的身份，两人决定共同退出江湖，不再参与江湖中的恩怨。他们本来以为魔教</p>
+<p>不好退，没成想首先被灭门的反而是号称正派的五岳剑派。</p>
+<p>刘正风是衡山派弟子。在当时，魔教势力大五岳剑派各自岌岌可危，为了应对魔教的威胁，五岳剑派</p>
+<p>选择结盟，形成互相呼应的机制来对抗魔教庞大的势力。这就是五岳剑派的来历。</p>
+<p>可以看出，五岳剑派加入联盟的主要职责是互相照应，对抗魔教的威胁。不过，五岳剑派还是五个单</p>
+<p>独的门派，门派内的事情，肯定还是各自的掌门说了算。除非是影响到整体的危险，盟主对五岳剑派</p>
+<p>里各个人是没有什么权限的。</p>
+<p>这是刘正风对五岳剑派的理解。所以，刘正风把自己退出衡山派的事情告诉了师兄莫大，也告诉了盟</p>
+<p>主左冷禅。他倒没有什么可担心的。毕竟，这只是衡山派的事情。师兄是什么样的人自己很清楚，反</p>
+<p>正也不理自己。</p>
+<p>可是，左冷禅不这么想。</p>
+<p>左冷禅要和魔教对抗，需要更强大的实力。五岳剑派联合起来能不能打败魔教呢？左冷禅并不知道，</p>
+<p>不过，他还是要试试。</p>
+<p>所以，虽然大家认为五岳剑派是联盟，各个派内的事情还是各个掌门自己的事情，左冷禅却认为都是</p>
+<p>自己的事情：如果刘正风离开了，哪天王正风再离开怎么办？岳不群离开怎么办？仪琳小姑娘也离开</p>
+<p>怎么办？</p>
+<p>所以，左冷禅必须不能让刘正风离开，并不是“为了武林中千百万同道的身家性命”，而是为了自己好</p>
+<p>容易建立起来的联盟，绝不容许任何人破坏。</p>
+<p>这也就意味着，为了“对抗魔教”，必须消灭五岳剑派自由进出的规则，所有人必须为我所用。这就是</p>
+<p>左冷禅的想法。</p>
+<p>但这并不是岳不群的想法，也不少天门的想法，也不是定逸的想法，更不是莫大的想法。</p>
+<p>定逸师太外刚内和，脾气虽然暴躁，心地却极慈祥，首先道：“如此什好，也免得伤了大家的和气。丁</p>
+<p>师兄、陆师兄，咱们答应了刘贤弟罢。他既不再跟魔教中人结交，又远离中原，等如世上没了这人，</p>
+<p>又何必定要多造杀业？”天门道人点头道：“这样也好，岳贤弟，你以为如何？”岳不群道：“刘贤弟言出</p>
+<p>如山，他既这般说，大家都信得过的。来来来，咱们化干戈为玉帛，刘贤弟，你放了费贤弟，大夥儿</p>
+<p>喝一杯解和酒，明儿一早，你带了家人弟子，便离开衡山城罢！”</p>
+<p>所以，这些人还是想让刘正风离开，但左冷禅不同意。左冷禅给了刘正风两个选择：</p>
+<ol type="1">
+<li><p>一个月内杀死曲洋。</p></li>
+<li><p>灭你全家。</p></li>
+</ol>
+<p>这时，岳不群、天门、定逸、包括刘正风都很清楚知道。大家本来期望结成联盟来对抗魔教的五岳剑</p>
+<p>派，也成了一个新的魔教。</p>
+<p>（定逸）心知受伤已然不轻，眼前无法与抗，一挥手，怒道：“咱们走！”大踏步向门外走去，门下群</p>
+<p>尼都跟了出去。</p>
+<p>然后，刘正风就死了。同时死去的还有五岳剑派。因为，这时的五岳剑派，已经不再是成立之初的那</p>
+<p>个五岳剑派了。</p>
+<h2 id="大纲">大纲</h2>
+<h2 id="百字摘要">百字摘要</h2>
+<h2 id="金庸案例">金庸案例</h2>
+<h2 id="时间消耗">时间消耗</h2>
+<h2 id="阅读理解">阅读理解：</h2>
+<h2 id="大纲-1">大纲：</h2>
+<h2 id="撰写">撰写：</h2>
+<h2 id="录音">录音</h2>
+<h2 id="一小时运动">一小时运动</h2>
+<h2 id="英文原文">英文原文</h2>
+<p>29 FEBRUARY</p>
+<p>Understanding What the Customer Buys</p>
+<p>What does the customer consider value?</p>
+<p>The final question needed in order to come to grips with business
+purpose and business mission is:</p>
+<p>“What is value to the customer?”</p>
+<p>It may be the most important question.</p>
+<p>Yet it is the one least often asked.</p>
+<p>least：</p>
+<p>( usually the least ) smallest in size, amount, degree, etc.</p>
+<p>最小的；最少的；程度最轻的</p>
+<p>One reason is that managers are quite sure that they know the
+answer.</p>
+<p>Value is what they, in their business, define as quality.</p>
+<p>But this is almost always the wrong definition.</p>
+<p>The customer never buys a product.</p>
+<p>By definition the customer buys the satisfaction of a want.</p>
+<p>He buys value.</p>
+<p>For the teenage girl, for instance, value in a shoe is high
+fashion.</p>
+<p>It has to be “in.”</p>
+<p>Price is a secondary consideration and durability is not value at
+all.</p>
+<p>durability： 耐久性；坚固；耐用年限</p>
+<ol start="14" type="a">
+<li></li>
+</ol>
+<p>For the same girl as a young mother, a few years later, high fashion
+becomes a restraint.</p>
+<p>restraint：</p>
+<p>约束力；管制措施；制</p>
+<p>约因素</p>
+<p>[ C usually pl. ] ~ (on sb/sth) a rule, a fact, an idea, etc. that
+limits or controls what people can do</p>
+<p>She will not buy something that is quite unfashionable.</p>
+<p>But what she looks for is durability, price, comfort and fit, and so
+on.</p>
+<p>The same shoe that represents the best buy for the teenager is a very
+poor value for her slightly</p>
+<p>older sister.</p>
+<p>What a company’s different customers consider value is so complicated
+that it can be answered</p>
+<p>only by the customers themselves.</p>
+<p>Management should not even try to guess at the answers—it should
+always go to the customers in</p>
+<p>a systematic quest for them.</p>
+<h3 id="action-point">ACTION POINT:</h3>
+<p>What do your customers consider most valuable about the product or
+service you provide?</p>
+<p>If you don’t know, find out. If you do know, ask your customers if
+you are delivering.</p>
+<p>delivering：</p>
+<p>履行</p>
+<p>V-T/V-I If you deliver something that you have promised to do, make,
+or produce, you do, make, or produce it.</p>
+<p>Management: Tasks, Responsibilities, Practices</p>
+<p>实现;</p>
+<h2 id="february">29 FEBRUARY</h2>
+<h3 id="understanding-what-the-customer-buys">Understanding What the
+Customer Buys</h3>
+<p>What does the customer consider value?</p>
+<p>The final question needed in order to come to grips with business
+pur-pose</p>
+<p>and business mission is: “What is value to the customer?” It may be
+the most</p>
+<p>important question. Yet it is the one least often asked. One rea-</p>
+<p>son is that managers are quite sure that they know the answer. Value
+is</p>
+<p>what they, in their business, define as quality. But this is almost
+always</p>
+<p>the wrong definition. The customer never buys a product. By
+definition</p>
+<p>the customer buys the satisfaction of a want. He buys value.</p>
+<p>For the teenage girl, for instance, value in a shoe is high fashion.
+It has to</p>
+<p>be “in.” Price is a secondary consideration and durability is not
+value at all.</p>
+<p>For the same girl as a young mother, a few years later, high fashion
+be-comes</p>
+<p>a restraint. She will not buy something that is quite unfashionable.
+But what</p>
+<p>she looks for is durability, price, comfort and fit, and so on. The
+same shoe</p>
+<p>that represents the best buy for the teenager is a very poor value
+for her</p>
+<p>slightly older sister. What a company’s different customers consider
+value is</p>
+<p>so complicated that it can be answered only by the customers
+themselves.</p>
+<p>Management should not even try to guess at the answers—it should
+always</p>
+<p>go to the customers in a systematic quest for them.</p>
+<h3 id="action-point-1">ACTION POINT:</h3>
+<p>What do your customers consider most valuable about the</p>
+<p>product or service you provide? If you don’t know, find out. If you
+do</p>
+<p>know, ask your customers if you are delivering.</p>
+<h4 id="management-tasks-responsibilities-practices">Management: Tasks,
+Responsibilities, Practices</h4>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

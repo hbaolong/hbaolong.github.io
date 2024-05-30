@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="第三同读" />
+  <title>德鲁克日志</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">德鲁克日志</h1>
+<p class="author">第三同读</p>
+</header>
+<h2 id="透过金庸读懂德鲁克">透过金庸读懂德鲁克</h2>
+<p>傻姑的价值</p>
+<p>傻姑是金庸小说里我很喜欢的一个角色，我经常想，我会不会想傻姑那样大大咧咧地走来走去，大声</p>
+<p>拍着手唱着歌，旁若无人地开心快乐。</p>
+<p>显然，我做不到。</p>
+<p>傻姑的第一次出现是遇见郭靖、黄蓉和老顽童，通过傻姑的几招武功以及一些行为，黄蓉判断出了她</p>
+<p>就是师兄曲灵风的女儿。黄蓉念及同门之情，让她叫“姑姑”。</p>
+<p>很快，郭靖黄蓉又回来了，这次郭靖受伤了，需要经历7天7夜的救治，这个救治需要很安全、安静的</p>
+<p>地方，黄蓉就想到了傻姑家的那个暗室。</p>
+<p>在这个暗室治疗的7天里，黄药师、欧阳锋、杨康、程瑶迦、还有很多江湖人经过，杨康还通过傻姑的</p>
+<p>一些话语发现了黄蓉，进而抢走了黄蓉的打狗棍。</p>
+<p>在牛家村的傻姑店里，傻姑无意识传达的信息一直推动着整个故事的进展。</p>
+<p>后来在铁枪庙里，一心认为兄弟被黄药师杀死的柯镇恶正在想方设法杀死黄蓉。这时欧阳锋、杨康等</p>
+<p>带着傻姑路过，住了进来。</p>
+<p>聪明的黄蓉看到了机会，就直接现身和傻姑交流，通过引导让傻姑说出了桃花岛上发生的事情，也让</p>
+<p>柯镇恶知道了杀死他兄弟的是欧阳锋、杨康一伙人，而他（柯镇恶）之所以没死，就是因为他瞎的，</p>
+<p>可以放到江湖上给黄药师捣乱。如果是任何第三人说出的话，柯镇恶可能都不会相信，但那些事实从</p>
+<p>傻姑嘴里说出来，柯镇恶马上就清楚了。</p>
+<p>傻姑居然是最佳的信息传递者。</p>
+<p>杨康也因为傻姑的信息传递而死去。</p>
+<p>后来到了《射雕侠侣》里，我最喜欢的居然还是傻姑，虽然这时傻姑已经是40多岁的中年人了。</p>
+<p>傻姑第一次出现是在李莫愁要杀程英、杨过、陆无双时。这时的傻姑手中拿着一柄烧火用的火叉，嘴</p>
+<p>里唱着天真烂漫的儿歌：“摇摇摇，摇到外婆桥，外婆叫我好宝宝，糖一包，果一包，吃了还要拿一</p>
+<p>包。”声音虽然不年轻了，却充满了欢乐。傻傻的傻姑居然因此救了杨过等人。</p>
+<p>后来在和杨过等人相处时，被杨过以游戏的方式问出了自己父亲（杨康）之死和黄蓉有关。杨过对这</p>
+<p>个信息没有任何质疑，然后就开始了杀死郭靖和黄蓉的计划。进而和金轮法王合作，进而发现了小龙</p>
+<p>女，并且最后和郭靖相互敬重。</p>
+<p>在金庸的成名作射雕三部曲里的前两部里，傻姑充当了一个很重的的信息传递的环节：曲灵风、黄</p>
+<p>蓉、郭靖、桃花岛杀人真相、欧阳克死亡真相等。而傻姑传递的信息，几乎没有质疑。这就是因为傻</p>
+<p>姑的“傻”字。</p>
+<p>一般来说，大家认为一个傻的人是不会编造事情的，只会说自己看到的事情。这样，他们就成为了有</p>
+<p>效信息的最佳传播环节。</p>
+<p>德鲁克认为，在一个信息系统驱动的组织里，每一个人都是一个信息的传播者，每一个人都需要对信</p>
+<p>息的传播负责。每一个人都需要清楚：这个组织里，谁需要依靠我的信息？我需要依靠谁的信息？</p>
+<p>很显然，黄蓉、黄药师、欧阳锋、欧阳克、杨过、柯镇恶等都需要依靠傻姑的信息，因为傻姑的信息</p>
+<p>是最可靠的。</p>
+<h2 id="百字摘要">百字摘要</h2>
+<h2 id="金庸案例">金庸案例</h2>
+<p>4 JUNE</p>
+<p>Taking Information Responsibility</p>
+<p>Information specialists are tool makers. They can tell us what tool
+to use to hammer upholstery</p>
+<p>nails into a chair.</p>
+<p>We need to decide whether we should be upholstering a chair at
+all.</p>
+<p>A requirement of an information-based organization is that everyone
+take information</p>
+<p>responsibility.</p>
+<p>The bassoonist in the orchestra takes information responsibility
+every time he plays a note.</p>
+<p>Doctors and paramedics work with an elaborate system of reports and
+an information center,</p>
+<p>the nurses’ station on the patient’s floor.</p>
+<p>paramedics：</p>
+<p>医</p>
+<p>疗) 护理人员</p>
+<p>elaborate：</p>
+<p>N-COUNT A paramedic is a person whose training is similar to that of
+a nurse and who helps to do medical work. (</p>
+<p>[ usually before noun ] very complicated and detailed; carefully
+prepared and organized</p>
+<p>复杂的；详尽的；精心制作的</p>
+<p>The district officer in India acted on this responsibility every time
+he filed a report.</p>
+<p>The key to such a system is that everyone asks: “Who in this
+organization depends on me for</p>
+<p>what information? And on whom, in turn, do I depend?”</p>
+<p>Each person’s list will always include superiors and subordinates.
+But the most important names on</p>
+<p>it will be those of colleagues, people with whom one’s primary
+relationship is coordination.</p>
+<p>The relationship of the internist, the surgeon, and the
+anesthesiologist is one example.</p>
+<p>internist：n. [内科] 内科医生</p>
+<p>surgeon：</p>
+<p>外科医生</p>
+<p>anesthesiologist：</p>
+<p>麻醉师</p>
+<p>a doctor who is trained to perform surgery (= medical operations that
+involve cutting open a person’s body)</p>
+<p>a doctor who studies the use of anaesthetics</p>
+<p>But the relationship of a biochemist, a pharmacologist, the medical
+director in charge of clinical</p>
+<p>testing, and a marketing specialist in a pharmaceutical company is no
+different.</p>
+<p>It, too, requires each party to take the fullest information
+responsibility.</p>
+<h3
+id="action-point-take-information-responsibility-by-getting-the-right-information-to-the-right">ACTION
+POINT: Take information responsibility by getting the right information
+to the right</h3>
+<p>people at the right time. Make a list of whom you depend on for what
+information and, in turn,</p>
+<p>who depends on you.</p>
+<p>The Ecological Vision</p>
+<h2 id="june">4 JUNE</h2>
+<h3 id="taking-information-responsibility">Taking Information
+Responsibility</h3>
+<p>Information specialists are tool makers. They can tell us what tool
+to use to</p>
+<p>hammer upholstery nails into a chair. We need to decide whether we
+should be</p>
+<p>upholstering a chair at all.</p>
+<p>Arequirement of an information-based organization is that everyone
+take</p>
+<p>information responsibility. The bassoonist in the orchestra takes
+information</p>
+<p>responsibility every time he plays a note. Doctors and para-medics
+work with</p>
+<p>an elaborate system of reports and an information center, the nurses’
+station</p>
+<p>on the patient’s floor. The district officer in India acted on this
+responsibility</p>
+<p>every time he filed a report. The key to such a system is that
+everyone asks:</p>
+<p>“Who in this organization depends on me for what in-formation? And
+on</p>
+<p>whom, in turn, do I depend?” Each person’s list will al-ways
+include</p>
+<p>superiors and subordinates. But the most important names on it will
+be those</p>
+<p>of colleagues, people with whom one’s primary relationship is
+coordination.</p>
+<p>The relationship of the internist, the surgeon, and the
+anesthesiologist is one</p>
+<p>example. But the relationship of a biochemist, a pharmacologist, the
+medical</p>
+<p>director in charge of clinical testing, and a marketing specialist
+in</p>
+<p>Apharmaceutical company is no different. It, too,</p>
+<p>requires each party to take the fullest information
+responsibility.</p>
+<h3 id="action-point">ACTION POINT:</h3>
+<p>Take information responsibility by getting the right infor-</p>
+<p>mation to the right people at the right time. Make a list of whom you
+de-</p>
+<p>pend on for what information and, in turn, who depends on you.</p>
+<h4 id="the-ecological-vision">The Ecological Vision</h4>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="第三同读" />
+  <title>德鲁克日志</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">德鲁克日志</h1>
+<p class="author">第三同读</p>
+</header>
+<h2 id="透过金庸读懂德鲁克">透过金庸读懂德鲁克</h2>
+<p>王重阳终于死了，全真教进了一个新的时代。</p>
+<p>这时全真教的掌教是马钰，虽然武功不是很高，却是王重阳的大弟子，而且为人很好，深受大家的敬</p>
+<p>重。</p>
+<p>另一个比较知名的二代弟子是丘处机。丘处机算二代里武功最高的，也爱出风头，所以，丘处机在江</p>
+<p>湖上名气非常大，很多人知道丘处机而不知道马钰，甚至认为丘处机才是全真教的掌教。</p>
+<p>全真教二代还有一起其他弟子，都没有什么特别的地方。</p>
+<p>看起来，全真教已经完成了权力的第一次继承，全真教开始了第二代的正常运转了。</p>
+<p>不过，全真教还有一个BUG，就是王重阳的师弟，周伯通。</p>
+<p>周伯通是王重阳的师弟，周伯通的武功是跟着王重阳学的，而且周伯通的武学天赋很高。所以，周伯</p>
+<p>通的武学修为是非常惊人的。远远超过丘处机、马钰等二代弟子。</p>
+<p>那么，如何安排周伯通呢？这是放在马钰和丘处机面前的一个问题。周伯通是一个很强大的武力资</p>
+<p>源，这个资源是全真教的核心资产。</p>
+<p>另一方面，周伯通的个性又不喜欢承担责任。和瑛姑有了孩子后，周伯通的第一反应是逃避而不是解</p>
+<p>决。这说明周伯通是不愿意接受责任的。</p>
+<p>而且，周伯通是王重阳的师弟，是马钰、丘处机的师叔，是全真教硕果仅存的第一代唯一长辈。这位</p>
+<p>师叔的话，听还是不听？这位师叔经常性的胡言乱语应该如何处理？</p>
+<p>最后，周伯通是一个贪玩的人，是一个追求自我的人，是一个不愿意被束缚的人。</p>
+<p>所以，如何定位周伯通对于马钰、丘处机来说是一个很尴尬的问题。</p>
+<p>一方面需要利用周伯通强大的武力来对抗其他四绝的压力，另一方面又要约束周伯通的胡言乱语，还</p>
+<p>要兼容周伯通的异常行为。</p>
+<p>后来，马钰、丘处机给出了比较好的解决方案。就是恭维周伯通的身份和地位，但不给周伯通任何权</p>
+<p>力，因为周伯通不能（不愿）承担责任。</p>
+<p>德鲁克认为，没有责任的权力是灾难。</p>
+<p>而这对周伯通也是最好的，周伯通喜欢玩，喜欢练武，喜欢交朋友。而且经常很久很久找不到。如果</p>
+<p>非要给周伯通安排什么责任的话，也是对老顽童的一种压力。因为老顽童在全真教没有权力，也就没</p>
+<p>有责任了。</p>
+<p>当全真教被烧，有人安排他背着一箱书搬家时，他很开心地背着书玩了起来。</p>
+<p>这应该是大家都喜欢的。</p>
+<h2 id="百字摘要">百字摘要</h2>
+<p>权力和责任</p>
+<h2 id="金庸案例">金庸案例</h2>
+<ol type="1">
+<li>为什么丘处机不听周伯通的</li>
+</ol>
+<p>25 APRIL</p>
+<p>Sloan on Social Responsibility</p>
+<p>Authority without responsibility is illegitimate; but so is
+responsibility without authority.</p>
+<p>Authority:</p>
+<p>权力；威权；当权（地位）</p>
+<p>illegitimate:</p>
+<p>不符合规定的；非法的</p>
+<p>the power to give orders to people</p>
+<p>not allowed by a particular set of rules or by law</p>
+<p>“Public” responsibility was to Alfred Sloan worse than
+unprofessional; it was irresponsible, a</p>
+<p>usurpation of power.</p>
+<p>irresponsible:</p>
+<p>不负责任的；无责任感</p>
+<p>的</p>
+<p>not thinking enough about the effects of what they do; not showing a
+feeling of responsibility</p>
+<p>usurpation:篡夺；夺取</p>
+<p>“We have a responsibility toward higher education,” a chief executive
+of a major American</p>
+<p>corporation once said at a meeting both Sloan and I attended. “Do we
+in business have any</p>
+<p>authority over higher education?” Sloan asked. “Should we have any?”
+“Of course not,” was the</p>
+<p>answer. “Then let’s not talk about ‘responsibility,’” said Sloan with
+asperity. “You are a senior</p>
+<p>executive in a big company and you know the first rule: authority and
+responsibility must be</p>
+<p>congruent and commensurate to each other. If you don’t want authority
+and shouldn’t have</p>
+<p>it, don’t talk about responsibility. And if you don’t want
+responsibility and shouldn’t have it,</p>
+<p>don’t talk about authority.”</p>
+<p>asperity:</p>
+<p>（尤指语言、态度）粗暴，严厉</p>
+<p>congruent</p>
+<p>适合的；适当的；恰当的；相称的</p>
+<p>commensurate：</p>
+<p>（在大小、重要性、质量等方面）相称的，相当的</p>
+<dl>
+<dt>the fact of being rough or severe, especially in the way you speak
+to or treat sb</dt>
+<dd>
+<p>suitable for sth; appropriate in a particular situation</p>
+</dd>
+</dl>
+<p>matching sth in size, importance, quality, etc.</p>
+<p>Sloan based this on management principles. But of course it is the
+first lesson of political theory</p>
+<p>and political history.</p>
+<p>Authority without responsibility is illegitimate; but so is
+responsibility without authority.</p>
+<p>Both lead to tyranny.</p>
+<p>tyranny：</p>
+<p>unfair or cruel use of power or authority</p>
+<p>暴虐；专横；苛政；专政</p>
+<p>Sloan wanted a great deal of authority for his professional manager,
+and was ready to take high</p>
+<p>responsibility.</p>
+<p>But for that reason he insisted on limiting authority to the areas of
+professional competence, and</p>
+<p>refused to assert or admit responsibility in areas outside them.</p>
+<h3
+id="action-point-do-your-areas-of-responsibility-match-your-authority-make-recommendations-for">ACTION
+POINT: Do your areas of responsibility match your authority? Make
+recommendations for</h3>
+<p>achieving a closer match.</p>
+<p>你的职责范围与你的权限相符吗？</p>
+<p>Adventures of a Bystander</p>
+<h2 id="april">25 APRIL</h2>
+<h3 id="sloan-on-social-responsibility">Sloan on Social
+Responsibility</h3>
+<p>Authority without responsibility is illegitimate;</p>
+<p>but so is responsibility without authority.</p>
+<p>“Public” responsibility was to Alfred Sloan worse than
+unprofessional; it</p>
+<p>was irresponsible, a usurpation of power. “We have a responsibility
+to-ward</p>
+<p>higher education,” a chief executive of a major American corporation
+once</p>
+<p>said at a meeting both Sloan and I attended. “Do we in business have
+any</p>
+<p>authority over higher education?” Sloan asked. “Should we have any?”
+“Of</p>
+<p>course not,” was the answer. “Then let’s not talk about
+‘responsibility,’” said</p>
+<p>Sloan with asperity. “You are a senior executive in a big company and
+you</p>
+<p>know the first rule: authority and responsibility must be congruent
+and</p>
+<p>commensurate to each other. If you don’t want authority and shouldn’t
+have it,</p>
+<p>don’t talk about responsibility. And if you don’t want
+responsibility</p>
+<p>and shouldn’t have it, don’t talk about authority.”</p>
+<p>Sloan based this on management principles. But of course it is the
+first</p>
+<p>lesson of political theory and political history. Authority without
+responsi-</p>
+<p>bility is illegitimate; but so is responsibility without authority.
+Both lead to</p>
+<p>tyranny. Sloan wanted a great deal of authority for his professional
+man-ager,</p>
+<p>and was ready to take high responsibility. But for that reason he
+in-sisted on</p>
+<p>limiting authority to the areas of professional competence, and
+refused to</p>
+<p>assert or admit responsibility in areas outside them.</p>
+<h3 id="action-point">ACTION POINT:</h3>
+<p>Do your areas of responsibility match your authority?</p>
+<p>Make recommendations for achieving a closer match.</p>
+<h4 id="adventures-of-a-bystander">Adventures of a Bystander</h4>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

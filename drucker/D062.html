@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="第三同读" />
+  <title>德鲁克日志</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">德鲁克日志</h1>
+<p class="author">第三同读</p>
+</header>
+<h2 id="透过金庸读懂德鲁克">透过金庸读懂德鲁克</h2>
+<p>微信群原来可以这样用</p>
+<p>有个朋友想写书。他是某个领域的专业人士，想写专业方面的说，说自己缺少案例。</p>
+<p>我说，你建一个微信群，然后找各个和你工作相光的人，每天和大家聊，同时鼓励大家互相聊，同时</p>
+<p>你有意地引导话题，很快就可以得到很多素材了。</p>
+<p>身边有很多朋友做知识付费，就是录一个课，然后卖给想学习、听课的同学。这些同学经常发愁说课</p>
+<p>程买的人太少。找不到客户。</p>
+<p>我说，很容易呀，你建一个群，找到你认为可能感兴趣的人，然后和他们聊，看他们想要什么愿意为</p>
+<p>什么样的内容付费，希望是什么形式，沟通上一段时间，你就清楚了。</p>
+<p>有一个朋友做场地运营，他经验丰富，每个场地都被他安排的很舒服，很惬意。不过，这两年他也有</p>
+<p>点纠结，好像大家多少有一些不满意。</p>
+<p>我说，你的感觉可能是对的，你可以建一个微信群，把你的租户，以及有意向的人拉在一起，一方面</p>
+<p>你可以和他们聊，一方面也可以引导他们互相聊天，在这些聊天过程中，你就会发现这些人的真正需</p>
+<p>求了。</p>
+<p>微信有一个SLOGON是“连接一切”，虽然还没有做到，也已经连接了几乎所有的人，不论你是做什么</p>
+<p>的，你的朋友圈都会有你的客户的，这些人一方面可能会买单你的产品，一方面也可能指着你的鼻子</p>
+<p>给你提意见。</p>
+<p>有时，你和某个人私聊，
+活着打电话问意见，你不一定能得到准确的信息，当你把很多人拉到一起，</p>
+<p>拉到一个群，这些人的交流就会给你很多触动。前提是你做好引导。</p>
+<p>当你客户混到一起后，就会触发无规则的交流，因着你的产品，因着你的服务，因着他们的需求。</p>
+<p>然后，你就可以跟着这些人的建议，结合自己的想法，做出符合需求的产品，或者服务。</p>
+<p>微信群其实是一个很好的获取客户信息的方法。因为感兴趣的才会进来，不感兴趣的就会推出，留在</p>
+<p>群里还愿意聊天的，一定是对产品有许多话说的人，而这些话，是私聊和问卷都拿不到了。</p>
+<p>所以，如果你不了解你的客户，那么，建个微信群吧。让他们进来随意聊天，让他们告诉你，什么才</p>
+<p>是他们想要的。</p>
+<h2 id="大纲">大纲</h2>
+<h2 id="百字摘要">百字摘要</h2>
+<h2 id="金庸案例">金庸案例</h2>
+<h2 id="时间消耗">时间消耗</h2>
+<h2 id="阅读理解">阅读理解：</h2>
+<h2 id="大纲-1">大纲：</h2>
+<h2 id="撰写">撰写：</h2>
+<h2 id="录音">录音</h2>
+<p>2 MARCH Test o….m4a</p>
+<p>4.51MB</p>
+<h2 id="一小时运动">一小时运动</h2>
+<h2 id="英文原文">英文原文</h2>
+<p>2 MARCH</p>
+<p>Test of Innovation</p>
+<p>Measure innovations by what they contribute to market and
+customer.</p>
+<p>The test of an innovation is whether it creates value.</p>
+<p>Innovation means the creation of new value and new satisfaction for
+the customer.</p>
+<p>A novelty only creates amusement.</p>
+<p>novelty：</p>
+<p>amusement：</p>
+<p>[ U ] the quality of being new, different and interesting</p>
+<p>新奇；新颖；新鲜</p>
+<p>[ U ] the feeling that you have when sth is funny or amusing, or it
+entertains you</p>
+<p>可笑；愉悦；娱乐</p>
+<p>Yet, again and again, managements decide to innovate for no other
+reason than that they are bored</p>
+<p>with doing the same thing or making the same product day in and day
+out.</p>
+<p>The test of an innovation, as well as the test of “quality,” is not
+“Do we like it?”</p>
+<p>It is “Do customers want it and will they pay for it?”</p>
+<p>Organizations measure innovations not by their scientific or
+technological importance but by what</p>
+<p>they contribute to market and customer.</p>
+<p>They consider social innovation to be as important as technological
+innovation.</p>
+<p>Installment selling may have had a greater impact on economics and
+markets than most of the</p>
+<p>great scientific advances in this century.</p>
+<p>Installment：</p>
+<p>分期付款方式；分期付款购物法</p>
+<p>impact</p>
+<p>巨大影响；强大作用</p>
+<p>installment plan n.</p>
+<p>:~ (of sth) (on sb/sth) the powerful effect that sth has on
+sb/sth</p>
+<h3 id="action-point">ACTION POINT:</h3>
+<p>Identify innovations in your organization that are novelties versus
+those that are creating value.</p>
+<p>Did you launch the novelties because you were bored with doing the
+same thing?</p>
+<p>novelties:</p>
+<p>廉价小饰物；小玩意儿</p>
+<p>[ C ] a small cheap object sold as a toy or a decorative object</p>
+<p>If so, make sure your next new product or service meets your
+customers’ needs.</p>
+<p>The Frontiers of Management</p>
+<p>Management Challenges for the 21st Century</p>
+<h2 id="march">2 MARCH</h2>
+<h3 id="test-of-innovation">Test of Innovation</h3>
+<p>Measure innovations by what they contribute to market and
+customer.</p>
+<p>The test of an innovation is whether it creates value. Innovation
+means the</p>
+<p>creation of new value and new satisfaction for the customer. A
+nov-elty only</p>
+<p>creates amusement. Yet, again and again, managements decide to
+innovate for</p>
+<p>no other reason than that they are bored with doing the same thing or
+making</p>
+<p>the same product day in and day out. The test of an inno-vation, as
+well as the</p>
+<p>test of “quality,” is not “Do we like it?” It is “Do cus-</p>
+<p>tomers want it and will they pay for it?”</p>
+<p>Organizations measure innovations not by their scientific or
+technolog-</p>
+<p>ical importance but by what they contribute to market and customer.
+They</p>
+<p>consider social innovation to be as important as technological
+innovation.</p>
+<p>Installment selling may have had a greater impact on economics and
+mar-</p>
+<p>kets than most of the great scientific advances in this century.</p>
+<h3 id="action-point-1">ACTION POINT:</h3>
+<p>Identify innovations in your organization that are novel-</p>
+<p>ties versus those that are creating value. Did you launch the
+novelties be-</p>
+<p>cause you were bored with doing the same thing? If so, make sure
+your</p>
+<p>next new product or service meets your customers’ needs.</p>
+<p>The Frontiers of Management</p>
+<h4 id="management-challenges-for-the-21st-century">Management
+Challenges for the 21st Century</h4>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

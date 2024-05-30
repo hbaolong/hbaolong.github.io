@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="第三同读" />
+  <title>德鲁克日志</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">德鲁克日志</h1>
+<p class="author">第三同读</p>
+</header>
+<h2 id="透过金庸读懂德鲁克">透过金庸读懂德鲁克</h2>
+<p>金庸最喜欢的一门武功：龙爪手</p>
+<p>金庸笔下有很多武功，武功本身有一些高低之分，更多还是和使用的人有关系。比如太祖长拳，这应</p>
+<p>该是金庸笔下最基础的武功了，到了萧峰手里变得炉火纯青，可以和少林寺达摩院首座玄难大师对</p>
+<p>打，而且居然还赢了。</p>
+<p>这就是金庸的武功观，武功是次要的，使用的人才是主要的。同样的武功，不用人使出来会有不同的</p>
+<p>表现，这和使用者的内力、天分、悟性有直接的关系。就算天下第一的外家武功降龙十八掌到了史火</p>
+<p>龙手里也变得不伦不类了。</p>
+<p>不过，功夫究竟是有高低之分的，金庸笔下有很多神功都被推崇备至的，比如降龙十八掌、打狗棒</p>
+<p>法、九阴真经、乾坤大挪移、辟邪剑法、左右互搏等等。这些武功都是非常难练的，不但需要下苦</p>
+<p>功，还需要机缘。</p>
+<p>今天说说金庸最喜欢的一门武功，之所以说金庸最喜欢，是因为金庸直接定义它为“不败的武功”，这</p>
+<p>在金庸笔下是唯一一个。</p>
+<p>遗憾的是，这个不败的武功的两次主要出场都败了，而且第二次失败，它的使用者脑袋直接被割了下</p>
+<p>来。</p>
+<p>这就是少龙龙爪手。</p>
+<p>少林龙抓手是少林七十二绝技之一，只有三十六招，要旨端在凌厉狠辣，不求变化繁多，经过数百年</p>
+<p>的千锤百炼，实已可说是不败的武功。这个武功的主要使用者是少林的四大神僧之一的空性。</p>
+<p>空性神僧第一次用来和张无忌对打，张无忌一开始手忙脚乱，被打的措手不及。后来，已经学会了乾</p>
+<p>坤大挪移的张无忌凭借后发先至的龙爪手才赢了空性神僧。这次对打空性败了。</p>
+<p>第二次使用是在空性回少林的路上，空性和赵敏的手下阿三对打，指力对指力被阿三破了龙爪手。这</p>
+<p>次脑袋也被割了下来。</p>
+<p>好好的一个绝顶的武功，就这么上场，这么领盒饭了。</p>
+<p>龙爪手是少林七十二绝技之一，山林开派千年，号称的也就是这七十二绝技。少林有个达摩院，是专</p>
+<p>门研究武功的。上千年来，山林达摩院的各位高僧不断打磨着他们熟悉的这七十二绝技，在时间和智</p>
+<p>力的打磨下，少林的七十二绝技几乎都称得上“千锤百炼”，就像龙爪手，它虽然败给了张无忌，败给</p>
+<p>了阿三，却还是少林的绝技。</p>
+<p>几百年后，张无忌的后人不见了，明教也不见了，阿三更是不知道去哪里了，而少林还在。因为少林</p>
+<p>在设计和打磨他们的七十二绝技时，在设计他们的核心竞争力时，不是考虑东方不败、张无忌、令狐</p>
+<p>冲、萧峰这样的“骡”，而是考虑的少林的整体高位，整体竞争优势以及长久存在。</p>
+<p>在这个需求下，少林选择的是让七十二绝技可以公开、高效；在上千年的时间长河里，让七十二绝技</p>
+<p>的每一招每一式逐步优化，优化到没有一招废的，没有一招无效的。</p>
+<p>这样的结果就是少林虽然没有绝顶高手，却有非常多的一流高手，非常多的二流高手，非常多的三流</p>
+<p>好手。</p>
+<p>真正的绝顶高手，大多是天才，而少林市的那些经过打磨的，公开、高效的武功却让少林经过了上千</p>
+<p>年的风风雨雨，依然屹立。</p>
+<p>金庸觉得，一个好的武功，就是去掉武功中那些无效的话招式，而这个“好”字，成就了少林，千年少</p>
+<p>林。</p>
+<h2 id="大纲">大纲</h2>
+<h2 id="百字摘要">百字摘要</h2>
+<h2 id="金庸案例">金庸案例</h2>
+<h2 id="时间消耗">时间消耗</h2>
+<h2 id="阅读理解">阅读理解：</h2>
+<h2 id="大纲-1">大纲：</h2>
+<h2 id="撰写">撰写：</h2>
+<p>7 JULY</p>
+<p>Creating Customer Value</p>
+<p>There is no loss to the customer by eliminating activities that do
+not add value.</p>
+<p>Activity-based costing provides the foundation for integrating into
+one analysis the several</p>
+<p>procedures required to create customer value.</p>
+<p>With activity costs as a starting point, the enterprise can separate
+activities that add value to</p>
+<p>customers from those that do not, and eliminate the latter.</p>
+<p>The chain of value-creating activities uncovered during value
+analysis is the starting point for</p>
+<p>analyzing the underlying process of value creation. Process analysis
+seeks to: improve the features</p>
+<p>of the product or service, re-structure the process while reducing
+costs, and maintain or improve</p>
+<p>quality.</p>
+<p>Process analysis in an automobile company involves designing and
+redesigning components and</p>
+<p>subfunctions in order to carry out each function at predetermined
+cost targets.</p>
+<p>For instance, the basic function of an automobile is to provide
+transportation, but secondary</p>
+<p>functions include comfort, fuel efficiency, and safety.</p>
+<p>Each of the functions and subfunctions require components or services
+that create value for the</p>
+<p>customer.</p>
+<p>Each also contributes to the quality of the automobile as well as to
+the cost.</p>
+<p>A process team is formed from personnel who perform the value-chain
+activities.</p>
+<p>This team often includes suppliers and customers.</p>
+<p>The task of the team is to identify the functions the product or
+service is to perform and to analyze</p>
+<p>the components or services that go into each function with the
+objective of achieving value and</p>
+<p>quality objectives while meeting cost targets.</p>
+<h3 id="action-point">ACTION POINT:</h3>
+<p>Eliminate activities that do not create value.</p>
+<p>Analyze the underlying processes of value-creating activities and
+redesign the processes if</p>
+<p>necessary to enhance customer value.</p>
+<p>Management Challenges for the 21st Century</p>
+<p>From Data to Information Literacy (Corpedia Online Program)</p>
+<h2 id="july">7 JULY</h2>
+<h3 id="creating-customer-value">Creating Customer Value</h3>
+<p>There is no loss to the customer by eliminating activities</p>
+<p>that do not add value.</p>
+<p>Activity-based costing provides the foundation for integrating into
+one analysis</p>
+<p>the several procedures required to create customer value.</p>
+<p>With activity costs as a starting point, the enterprise can separate
+activities</p>
+<p>that add value to customers from those that do not, and eliminate the
+latter.</p>
+<p>The chain of value-creating activities uncovered during value
+analysis is the</p>
+<p>starting point for analyzing the underlying process of value
+creation. Process</p>
+<p>analysis seeks to: improve the features of the product or service,
+re-structure</p>
+<p>the process while reducing costs, and maintain or improve
+quality.</p>
+<p>Process analysis in an automobile company involves designing and
+re-</p>
+<p>designing components and subfunctions in order to carry out each
+func-tion at</p>
+<p>predetermined cost targets. For instance, the basic function of an
+automobile</p>
+<p>is to provide transportation, but secondary functions include
+comfort, fuel</p>
+<p>efficiency, and safety. Each of the functions and subfunctions
+require</p>
+<p>components or services that create value for the customer. Each
+also</p>
+<p>contributes to the quality of the automobile as well as to the cost.
+A process</p>
+<p>team is formed from personnel who perform the value-chain
+activ-ities. This</p>
+<p>team often includes suppliers and customers. The task of the team is
+to</p>
+<p>identify the functions the product or service is to perform and to
+analyze the</p>
+<p>components or services that go into each function with the ob-jective
+of</p>
+<p>achieving value and quality objectives while meeting cost
+targets.</p>
+<h3 id="action-point-1">ACTION POINT:</h3>
+<p>Eliminate activities that do not create value. Analyze the</p>
+<p>underlying processes of value-creating activities and redesign
+the</p>
+<p>processes if necessary to enhance customer value.</p>
+<p>Management Challenges for the 21st Century</p>
+<h4 id="from-data-to-information-literacy-corpedia-online-program">From
+Data to Information Literacy (Corpedia Online Program)</h4>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

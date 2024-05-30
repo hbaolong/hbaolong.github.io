@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="第三同读" />
+  <title>德鲁克日志</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">德鲁克日志</h1>
+<p class="author">第三同读</p>
+</header>
+<h2 id="透过金庸读懂德鲁克">透过金庸读懂德鲁克</h2>
+<p>《天龙八部》究竟是一本什么书？</p>
+<p>有人说，天龙八部是一本爸爸去哪儿的书，书里的各位大侠都在找爸爸。丐帮帮主乔峰每天喝酒打架</p>
+<p>正开心的时候，突然有人对他说你爸爸不是你爸爸，快去找爸爸吧；少林的虚竹自出生就在少林寺，</p>
+<p>以为自己是天生地养的佛门弟子，突然来了个妈妈，当然也就有个爸爸；大理镇南王世子段誉，整天</p>
+<p>在父母身边撒娇，突然某一天，妈妈和他说，你爸爸不是你爸爸，那个高度残疾人才是你爸爸。</p>
+<p>木婉清在找爸爸，阿朱、阿紫在找爸爸，王语嫣在找爸爸，仿佛上演着现代社会的爸爸缺失。</p>
+<p>也有人说，《天龙八部》是一本讲父母坑孩子的书。萧峰的爸爸萧远山四处杀人，然后家伙给孩子，</p>
+<p>让孩子各种为难；慕容复的爸爸慕容博四处杀人，嫁祸给儿子，让儿子四处为难；段誉的“爸爸”段正</p>
+<p>淳四处沾花惹草，搞得段誉泡一个妞，是自己妹妹，泡一个妞，又是自己妹妹。</p>
+<p>秦红棉自己欠下的债，结果木婉清伤透了心；阮星竹欠下的债，阿朱送了命；父母对孩子仿佛没有一</p>
+<p>点爱心，好像真的只是快乐的遗物。</p>
+<p>还有人说，《天龙八部》是一本讲三个主人公的“求不得”的故事。萧峰求民族大义而不得；段誉求爱</p>
+<p>情而不得；虚竹求精神寄托而不得。</p>
+<p>这些说的都对，而且颇为有趣。我今天给一个新的视角，我认为，《天龙八部》讲的是在权力的追逐</p>
+<p>下，会有写什么事情。</p>
+<p>《天龙八部》的分类是武侠小说，里面的主人公都有高深、奇妙的武功，配角也都身手敏捷。不过，</p>
+<p>这本书和金庸的其他小说比，多了更多的权力追逐。</p>
+<p>首先，这本说的官府是最多的。有大宋，有大理，有西夏，有辽，还有金。这些官府都和武林人士勾</p>
+<p>结在一起，武林人士也都依靠某一个官府。</p>
+<p>比如，段延庆为首的四大恶人一旦遇到挫折，就投靠了西夏，加入了一品堂。</p>
+<p>除了这些正式的官府外，整个江湖也充满着官府的气息，如丐帮、少林、星宿派、逍遥派、灵鹫派，</p>
+<p>甚至无量派等，无不沾染这权力的气息。</p>
+<p>丐帮，这个最穷的，最没有路的人集合在一起的一个门派，居然也成了天下第一大帮。这样一来，帮</p>
+<p>主也就成了很有权势的人。</p>
+<p>武林之中，单是一句话便能调动数万人众的，以前有丐帮帮主。嗯，少林弟子遍天下，少林派掌门</p>
+<p>方丈一句话，那也能调动数万人众……</p>
+<p>也就是说，丐帮也成了一方势力，这个势力甚至和大理的镇南王不相上下。</p>
+<p>少林自然也是如此，天下武功出少林，几百年来，江湖上各大门派，或多或少都和少林有千丝万缕的</p>
+<p>联系。这样一来，少林的方丈也就成了炙手可热的一方势力。</p>
+<p>丐帮、少林，本来是两个最与世无争的清净之地，居然也有了官府气息，也充满权力的博弈。</p>
+<p>这不，乔峰在这个博弈中去找爸爸去了；而少林听到有人来抢他家的武功秘籍，居然派人去截杀。逍</p>
+<p>遥派的无崖子被徒弟丁春秋收拾后，师妹李秋水也去了西夏，做了太后，谋求更大的权力空间。</p>
+<p>南慕容，本身就是政治势力，每天都在收割江湖上那些七零八碎的闲散势力，意图拼凑一个大燕国。</p>
+<p>段延庆和段正明之间的明争暗斗，灵鹫宫和西夏国之间的权力相争。康敏意图借助丐帮和大理抗衡，</p>
+<p>辽国希望通过萧峰一统大宋。</p>
+<p>在这个时代，江湖中都是政府，政府中也充满武林。武力，作为稀缺品，不断寻求世俗权力的红利。</p>
+<p>大理干脆就是武术世家的建国。小小的吐蕃国也豢养了鸠摩智这样的牛人。</p>
+<p>丐帮的帮主，少林的方丈，其权势不次于大理西夏这样的君主。</p>
+<p>在《天龙八部》里，金庸就是构建了这样一个世界，在这个世界里，武林人物，都是政治人物，包括</p>
+<p>辛双清这样的女子，也要学会站队。</p>
+<p>底层都在活命，中层都在站队，高层都在斗争。而所谓的爸爸去哪里，所谓的父子、母女亲情的缺</p>
+<p>失，所谓的求不得，其实只是高层斗争的产物而已。</p>
+<p>权力是什么？权力的来源在哪里？</p>
+<p>在这个时代，武力是权力的唯一来源，钟万仇是没法和大理段家斗的。萧峰父子，慕容复父子，加一</p>
+<p>个鸠摩智，就可以决定大宋、大辽、大燕、大理、吐蕃的局势。</p>
+<p>而扫地僧则可以更高层决定这个局势。</p>
+<p>那么他们的权力合法么？当然合法，在之后100年，到了五绝时代，这些江湖人物只能在江和湖之间笑</p>
+<p>傲了。到了明末清初，这些武林人物就只能依靠在官府身边，被官府豢养了。</p>
+<p>这些人的武功还是不错，比如陈近南，比如吴六奇，然而，在清政府面前，这些人的武功又有多大的</p>
+<p>意义呢？</p>
+<p>这时，个人的武功已经被世俗权力的网给锁得死死的，再也没什么作为了。</p>
+<p>建国后，有一个叫做李成福的人，自称是唐代后人，在河南省嵩县称帝，建立万顺天国，被乡政府的</p>
+<p>三名民警干掉了。</p>
+<h2 id="大纲">大纲</h2>
+<h2 id="百字摘要">百字摘要</h2>
+<h2 id="金庸案例">金庸案例</h2>
+<h2 id="时间消耗">时间消耗</h2>
+<h2 id="阅读理解">阅读理解：</h2>
+<h2 id="大纲-1">大纲：</h2>
+<h2 id="撰写">撰写：</h2>
+<h2 id="录音">录音</h2>
+<h2 id="一小时运动">一小时运动</h2>
+<h2 id="英文原文">英文原文</h2>
+<p>16 OCTOBER</p>
+<p>Legitimate Power in Society</p>
+<p>Legitimate：</p>
+<p>for which there is a fair and acceptable reason</p>
+<p>正当合理的；合情合理的</p>
+<p>No society can function as a society unless the decisive social power
+is legitimate.</p>
+<p>decisive：</p>
+<p>决定性的；关键的</p>
+<p>very important for the final result of a particular situation</p>
+<p>Legitimate power stems from the same basic belief of society
+regarding man’s nature and</p>
+<p>fulfillment on which the individual’s social status and function
+rest.</p>
+<p>stems：</p>
+<p>起源于</p>
+<p>fulfillment：n. 履行；实行；满足（感）</p>
+<p>V-I If a condition or problem stems from something, it was caused
+originally by that thing.</p>
+<p>Indeed legitimate power can be defined as rulership that finds its
+justification in the basic ethos of</p>
+<p>society.</p>
+<p>In every society there are many powers that have nothing to do with
+such a principle, and</p>
+<p>institutions that in no way are either designed or devoted to its
+fulfillment.</p>
+<p>In other words, there are always a great many “unfree” institutions
+in a free society, a great many</p>
+<p>inequalities in an equal society, and a great many sinners among the
+saints.</p>
+<p>But as long as the decisive social power that we call ruler-ship is
+based upon the claim of freedom,</p>
+<p>equality, or saintliness, and is exercised through institutions that
+are designed toward the fulfillment</p>
+<p>of these ideal purposes, society can function as a free, equal, or
+saintly society.</p>
+<p>For its institutional structure is one of legitimate power.</p>
+<h3 id="action-point">ACTION POINT:</h3>
+<p>Think about the problem of creating legitimate power in Iraq after
+the fall of Saddam Hussein.</p>
+<p>What “unfree” institutions are likely to remain? What inequalities
+are likely to persist once legitimate</p>
+<p>power is established?</p>
+<p>The Future of Industrial Man</p>
+<h2 id="october">16 OCTOBER</h2>
+<h3 id="legitimate-power-in-society">Legitimate Power in Society</h3>
+<p>No society can function as a society unless</p>
+<p>the decisive social power is legitimate.</p>
+<p>Legitimate power stems from the same basic belief of society
+regarding</p>
+<p>man’s nature and fulfillment on which the individual’s social status
+and</p>
+<p>function rest. Indeed legitimate power can be defined as rulership
+that finds</p>
+<p>its justification in the basic ethos of society. In every society
+there are many</p>
+<p>powers that have nothing to do with such a principle, and
+institutions that in</p>
+<p>no way are either designed or devoted to its fulfillment. In other
+words, there</p>
+<p>are always a great many “unfree” institutions in a free society, a
+great many</p>
+<p>inequalities in an equal society, and a great many sinners among the
+saints.</p>
+<p>But as long as the decisive social power that we call ruler-ship is
+based upon</p>
+<p>the claim of freedom, equality, or saintliness, and is ex-ercised
+through</p>
+<p>institutions that are designed toward the fulfillment of these ideal
+purposes,</p>
+<p>society can function as a free, equal, or saintly society.</p>
+<p>For its institutional structure is one of legitimate power.</p>
+<h3 id="action-point-1">ACTION POINT:</h3>
+<p>Think about the problem of creating legitimate power in</p>
+<p>Iraq after the fall of Saddam Hussein. What “unfree” institutions
+are</p>
+<p>likely to remain? What inequalities are likely to persist once
+legitimate</p>
+<p>power is established?</p>
+<h4 id="the-future-of-industrial-man">The Future of Industrial Man</h4>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

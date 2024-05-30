@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="第三同读" />
+  <title>德鲁克日志</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">德鲁克日志</h1>
+<p class="author">第三同读</p>
+</header>
+<h2 id="透过金庸读懂德鲁克">透过金庸读懂德鲁克</h2>
+<p>倒霉的何太冲</p>
+<p>何太冲大概是何足道的后人，因为他恰好是何足道开创的昆仑派的掌门人，又恰好姓何。不过何太冲</p>
+<p>做掌门的昆仑派却有点别扭。</p>
+<p>何足道为了避开张三分、郭襄等优秀的年轻人，所以远离中原，回到了昆仑山，在老家开创了昆仑</p>
+<p>派。何足道本来觉得，凭着自己的武功，在中原或许不算什么，在昆仑山这一亩三分地里，还是很算</p>
+<p>什么的，就这样吧，以后我就在这里混了。反正昆仑派的旗子也扛起来了。</p>
+<p>何足道开始了收徒，授艺的过程，十几年后，昆仑派也颇具规模了。何足道在这十几年了，对昆仑山</p>
+<p>附近更熟悉了，他觉得自己的选择非常对，在昆仑山，基本上自己就是说了算，而且周围的武林人士</p>
+<p>和普通百姓对自己都非常崇拜。十几年后的今天，即使在中原，昆仑派也有了一定的影响力。</p>
+<p>不过，何足道发现了意见让他有点头疼的事情。不对，应该是非常头疼的事情，就是那个明教居然也</p>
+<p>看重了昆仑山，并且把自己的总坛设置在了光明顶。</p>
+<p>自从明教把总坛设置在了光明顶，大批的各界高手就聚集到了昆仑山，而且，每年明教的年会也会招</p>
+<p>来很多稀奇古怪的武林高手，有些高手高的不像话，即使何足道自己都没有把握和他们打斗。何足道</p>
+<p>只好约束自己的弟子，尽量不要和他们冲突。</p>
+<p>更让何足道难受的是，他没有合适的传人。随着时间的推进，自己也快老了，可是自己的弟子没有可</p>
+<p>以接替自己位置的，甚至连勉强接替的都没有。武功差一些还好说，性格都不大成熟，万一自己死</p>
+<p>了，新人的掌门人火爆脾气，惹上光明顶，偌大个昆仑派也就说没就没了。</p>
+<p>带着这两个难以解决的问题，何足道还是死掉了。昆仑派还在继续前行。接任的掌门人火气并不大，</p>
+<p>只是装作不知到有光明顶的明教，也不惹他们，就自己做自己的掌门人。</p>
+<p>后来传到了何太冲，何太冲按门规还没资格做掌门，不过，他得到了师姐的支持，加上自己也是武学</p>
+<p>天才，在打败了所有的师兄弟后，做上了掌门人。</p>
+<p>何太冲是个武学天才，虽然人品不怎么样，武功确实不错。他当了昆仑掌门后，一方面娶了师姐为</p>
+<p>妻，一方面开始筹划和明教说道说道。</p>
+<p>可是何太冲怎么是明教的对手呢？特别是那个叫做杨逍的光明左使。</p>
+<p>很快，何太冲就被杨左使欺负了，连带这整个昆仑派也被杨左使的风云雷电四门欺负。高的何太冲都</p>
+<p>不想在昆仑呆了，恨不得到中原去，也省得在昆仑受杨逍的气。</p>
+<p>后来，何太冲果然去了中原，然后死在了中原，昆仑派也就那么烟消云散了。</p>
+<h2 id="大纲">大纲</h2>
+<h2 id="百字摘要">百字摘要</h2>
+<h2 id="金庸案例">金庸案例</h2>
+<h2 id="时间消耗">时间消耗</h2>
+<h2 id="阅读理解">阅读理解：</h2>
+<h2 id="大纲-1">大纲：</h2>
+<h2 id="撰写">撰写：</h2>
+<h2 id="录音">录音</h2>
+<p>24 AUGUST</p>
+<p>Threats to Niche Strategies</p>
+<p>While it lasts, the niche strategy is the most profitable
+entrepreneurial strategy.</p>
+<p>What all niche strategies have in common is that they are unlikely to
+endure forever.</p>
+<p>One threat is for the niche to be outflanked, and especially by
+technological change.</p>
+<p>That happened to Alcon.</p>
+<p>Fifteen years after it became a worldwide near-monopoly, somebody in
+Czechoslovakia invented a</p>
+<p>new cataract operation, the implant lens, in which eye muscle has to
+be maintained rather than</p>
+<p>dissolved. And Alcon’s solvent became</p>
+<p>history.</p>
+<p>Another threat is if a niche becomes the main mass market. That’s
+what happened to the Travelers</p>
+<p>Cheque. Before World War II, a European trip for Americans was still
+the rare exception. Now the</p>
+<p>transatlantic jets carry more passengers in two days between Europe
+and the U.S. than all the</p>
+<p>steamships carried in an entire year before World War II. And the new
+mass traveler uses a credit</p>
+<p>card. And when the automobile market became a mass market, in the
+U.S. during World War I and</p>
+<p>in Europe and Japan after World War II, the intense pressure to cut
+costs meant that to be the niche</p>
+<p>supplier depending on a specialty skill ceased to yield niche
+profits. These players were the ones,</p>
+<p>and still are, on which the automobile companies put the greatest
+pressure to cut prices. And they</p>
+<p>had no choice but to yield.</p>
+<h3
+id="action-point-evaluate-the-threats-of-obsolescence-to-any-of-your-prod-ucts-processes-and">ACTION
+POINT: Evaluate the threats of obsolescence to any of your prod-ucts,
+processes, and</h3>
+<p>services. Maintain a systematic program of innovation to offset
+inevitable threats to the products</p>
+<p>and services of your enterprise.</p>
+<p>Innovation and Entrepreneurship</p>
+<p>Entrepreneurial Strategies (Corpedia Online Program)</p>
+<h2 id="august">24 AUGUST</h2>
+<h3 id="threats-to-niche-strategies">Threats to Niche Strategies</h3>
+<p>While it lasts, the niche strategy is the most profitable</p>
+<p>entrepreneurial strategy.</p>
+<p>What all niche strategies have in common is that they are unlikely
+to</p>
+<p>endure forever. One threat is for the niche to be outflanked, and
+es-pecially by</p>
+<p>technological change. That happened to Alcon. Fifteen years after it
+became</p>
+<p>Aworldwide near-monopoly, somebody in Czechoslovakia invented a
+new</p>
+<p>cataract operation, the implant lens, in which eye muscle has to be
+maintained</p>
+<p>rather than dissolved. And Alcon’s solvent became</p>
+<p>history.</p>
+<p>Another threat is if a niche becomes the main mass market. That’s
+what</p>
+<p>happened to the Travelers Cheque. Before World War II, a European
+trip for</p>
+<p>Americans was still the rare exception. Now the transatlantic jets
+carry more</p>
+<p>passengers in two days between Europe and the U.S. than all the
+steamships</p>
+<p>carried in an entire year before World War II. And the new mass
+traveler uses</p>
+<p>a credit card. And when the automobile market became a mass market,
+in the</p>
+<p>U.S. during World War I and in Europe and Japan after World War II,
+the</p>
+<p>intense pressure to cut costs meant that to be the niche supplier
+depending on</p>
+<p>a specialty skill ceased to yield niche profits. These players were
+the ones,</p>
+<p>and still are, on which the automobile companies put the greatest
+pressure to</p>
+<p>cut prices. And they had no choice but to yield.</p>
+<h3 id="action-point">ACTION POINT:</h3>
+<p>Evaluate the threats of obsolescence to any of your prod-ucts,</p>
+<p>processes, and services. Maintain a systematic program of innovation
+to</p>
+<p>offset inevitable threats to the products and services of your
+enterprise.</p>
+<p>Innovation and Entrepreneurship</p>
+<h4
+id="entrepreneurial-strategies-corpedia-online-program">Entrepreneurial
+Strategies (Corpedia Online Program)</h4>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

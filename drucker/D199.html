@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="第三同读" />
+  <title>德鲁克日志</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">德鲁克日志</h1>
+<p class="author">第三同读</p>
+</header>
+<h2 id="透过金庸读懂德鲁克">透过金庸读懂德鲁克</h2>
+<p>【资料】</p>
+<p>荆南（924-963）</p>
+<p>武平（951-963）</p>
+<p>后蜀（934-966）</p>
+<p>南汉（917-971）</p>
+<p>南唐（937-976）</p>
+<p>吴越（907-978）</p>
+<p>北汉（951-979）</p>
+<p>慕容龙城：我要做皇帝</p>
+<p>每天早上起来，慕容龙城都和和自己说一句：“龙城，你是慕容家的希望，你要做皇帝！”</p>
+<p>然后龙城就会研究武功，教授弟子，同时指导门人弟子在各地发展，获得武林中的地位。</p>
+<p>同时，龙城还会研究全国政权的动态，特别是赵匡胤。</p>
+<p>公元963年荆南之主高继冲主动找到赵匡胤投降了，同年武平节度使，12岁的周保权被赵匡胤的军队活</p>
+<p>捉。</p>
+<p>龙城早上起来后，对着镜子大声和自己说：“龙城龙城，你是慕容家的希望，你是要做皇帝的……”</p>
+<p>公元966年，宋太祖赵匡胤攻入成都，收复了盘踞在这里的后蜀，孟昶向投降后去世。</p>
+<p>公元971年，宋太祖派潘（仁）美攻入广东，收复了盘踞在这里的南汉，南汉之主刘鋹投降。</p>
+<p>龙城早上起来后，和已经是丐帮帮主的大金子交流了一下丐帮的管理。这一天龙城没有对着镜子说</p>
+<p>话，而是问大金子：“你觉得赵匡胤会对武林动手么？”</p>
+<p>丐帮帮主大金子说：“我觉得不会，因为没有必要。武林人士武功高，但人数少，而且也不占据有价值</p>
+<p>的资源….”</p>
+<p>龙城也觉得大金子说的对。晚上，龙城走到镜子面前，说：“龙城龙城，你是慕容家的希望，你要努力</p>
+<p>做皇帝，至少要为后人做好铺垫……”</p>
+<p>公元975年，宋军占领金陵，五代是最有名的诗人皇帝，南唐后主李煜投降。南唐灭国。</p>
+<p>公元976年底，49岁的赵匡胤死掉了，他的弟弟赵光义继位。</p>
+<p>公元978年，盘踞在杭州一代的吴越之主钱弘俶“纳土归宋”，吴越亡国。</p>
+<p>48岁的慕容龙城这几天非常焦虑，随着赵匡胤所创立的宋朝的军事行动和政治行动。越来越多的小国</p>
+<p>家被吞并，还有一些国家更是主动“纳土”，整个国家很快就要统一了。大理也已经向大宋称臣，成为</p>
+<p>了赵官家的藩属国。</p>
+<p>慕容龙城知道慕容家的皇帝之梦越来越远了。</p>
+<p>晚上，龙城再次走到镜子前，对着镜子说：“龙城龙城，你要延续慕容家的希望，为后人做皇帝做好铺</p>
+<p>垫……”</p>
+<p>公元979年，赵光义率军亲征，围攻太原，北汉皇帝刘继元被迫出降，北汉灭亡。</p>
+<p>这时，除了北方的辽和西北的西夏外，全部城池和土地都被赵官家收回了，包括慕容家的参合庄。</p>
+<p>这一天，龙城带着自己的儿子和弟子大金子来到慕容家的祖宗牌位前。</p>
+<p>龙城跪在前面，儿子和大金子跪在身后。龙城大声说：“大燕国的列祖列宗，龙城无能，错失了建国时</p>
+<p>机，只好寄希望与后人。凡我慕容家子弟，需以复国为终生大业，凡我慕容家弟子，需终身辅助慕容</p>
+<p>家弟子复国。有为此誓，天人公愤！”</p>
+<p>儿子和大金子面面相觑，然后使劲磕了几个头。</p>
+<p>把儿子和大金子送走后，龙城走到镜子前，对着镜子说到：“龙城呀龙城，你需要用余生为后人建立足</p>
+<p>够的武林力量和资源。并且把资源分布在尽可能广的地方，为后人的复兴做好准备。”</p>
+<p>这一年龙城五十岁，面对宋朝的崛起，龙城更改了自己的目标。这个更改，引起了江湖上的剧烈动</p>
+<p>荡，引发了许多可歌可泣的故事，咱们明天再说。</p>
+<h2 id="大纲">大纲</h2>
+<h2 id="百字摘要">百字摘要</h2>
+<h2 id="金庸案例">金庸案例</h2>
+<h2 id="时间消耗">时间消耗</h2>
+<h2 id="阅读理解">阅读理解：</h2>
+<h2 id="大纲-1">大纲：</h2>
+<h2 id="撰写">撰写：</h2>
+<p>17 JULY</p>
+<p>Industry and Market Structure</p>
+<p>Market and industry structures are quite brittle.</p>
+<p>brittle:</p>
+<p>硬但易碎的；脆性的</p>
+<p>hard but easily broken</p>
+<p>One small scratch and they disintegrate, often fast.</p>
+<p>scratch:</p>
+<p>挠，搔（痒处）</p>
+<p>disintegrate：</p>
+<dl>
+<dt>碎裂；解体；分裂</dt>
+<dd>
+<p>(at sth) to rub your skin with your nails, usually because it is
+itching</p>
+</dd>
+</dl>
+<p>to break into small parts or pieces and be destroyed</p>
+<p>Industry and market structures appear so solid that the people in an
+industry are likely to consider</p>
+<p>them foreordained, part of the order of nature, and certain to endure
+forever.</p>
+<p>foreordained：</p>
+<p>预言 v. （上帝、命运）预先决定</p>
+<p>endure：</p>
+<p>持续；持久</p>
+<p>V to determine (events, results, etc) in the future</p>
+<p>( formal ) to continue to exist for a long time</p>
+<p>A change in market or industry structure is a major opportunity for
+innovation.</p>
+<p>In industry structure, a change requires entrepreneurship from every
+member of the</p>
+<p>industry.</p>
+<p>It requires that each one ask anew: “What is our business?” And each
+of the members will have to</p>
+<p>give a different, but above all a new, answer to that question.</p>
+<p>anew：</p>
+<p>重新；再</p>
+<p>( formal ) if sb does sth anew , they do it again from the beginning
+or do it in a different way</p>
+<p>Large, dominant producers and suppliers, having been successful and
+unchallenged for many</p>
+<p>years, tend to be arrogant.</p>
+<p>dominant ：</p>
+<p>首要的；占支配地位的；占优势的；显著的</p>
+<p>arrogant：</p>
+<p>傲慢的；自大的</p>
+<p>more important, powerful or noticeable than other things</p>
+<p>behaving in a proud, unpleasant way, showing little thought for other
+people</p>
+<p>At first they dismiss the newcomer as insignificant and, indeed,
+amateurish.</p>
+<p>insignificant：</p>
+<p>微不足道的；无足轻重的</p>
+<p>not big or valuable enough to be considered important</p>
+<p>amateurish：</p>
+<p>( also ama·teur ) ( usually disapproving ) not done or made well or
+with skill</p>
+<p>外行的；生手的；业余的</p>
+<p>But even when the newcomer takes a larger and larger share of their
+business, they find it hard to</p>
+<p>mobilize themselves for counteraction.</p>
+<p>mobilize ：</p>
+<p>组织；鼓动；动员</p>
+<p>counteraction： 中和；反对的行动；抵抗；反动</p>
+<p>to work together in order to achieve a particular aim; to organize a
+group of people to do this</p>
+<ol start="14" type="a">
+<li></li>
+</ol>
+<p>resistance, reaction</p>
+<p>For example, the U.S. Post Office did not react when UPS and FedEx
+took away larger and larger</p>
+<p>shares of its business.</p>
+<p>What had made the Post Office so vulnerable was rapid growth in the
+demand for urgent delivery</p>
+<p>of time-sensitive documents and packages.</p>
+<p>vulnerable：</p>
+<dl>
+<dt>（身体上或感情上）脆弱的，易受 伤害的</dt>
+<dd>
+<p>(to sb/sth) weak and easily hurt physically or emotionally</p>
+</dd>
+</dl>
+<h3 id="action-point">ACTION POINT:</h3>
+<p>Never stop asking yourself, “What is our business?”</p>
+<p>Innovation and Entrepreneurship</p>
+<p>Driving Change (Corpedia Online Program)</p>
+<p>…</p>
+<h2 id="july">17 JULY</h2>
+<h3 id="industry-and-market-structure">Industry and Market
+Structure</h3>
+<p>Market and industry structures are quite brittle.</p>
+<p>One small scratch and they disintegrate, often fast.</p>
+<p>Industry and market structures appear so solid that the people in an
+in-dustry</p>
+<p>are likely to consider them foreordained, part of the order of
+na-ture, and certain</p>
+<p>to endure forever. A change in market or industry structure is a
+major opportunity</p>
+<p>for innovation. In industry structure, a change requires
+entrepreneurship from</p>
+<p>every member of the industry. It re-quires that each one ask anew:
+“What is our</p>
+<p>business?” And each of the members will have to give a different, but
+above all</p>
+<p>Anew, answer to that question. Large, dominant producers and
+suppliers, having</p>
+<p>been success-ful and unchallenged for many years, tend to be
+arrogant. At first</p>
+<p>they dis-miss the newcomer as insignificant and, indeed, amateurish.
+But even</p>
+<p>when the newcomer takes a larger and larger share of their business,
+they</p>
+<p>find it hard to mobilize themselves for counteraction.</p>
+<p>For example, the U.S. Post Office did not react when UPS and
+FedEx</p>
+<p>took away larger and larger shares of its business. What had made
+the</p>
+<p>Post Office so vulnerable was rapid growth in the demand for
+urgent</p>
+<p>delivery of time-sensitive documents and packages.</p>
+<h3 id="action-point-1">ACTION POINT:</h3>
+<p>Never stop asking yourself, “What is our business?”</p>
+<p>Innovation and Entrepreneurship</p>
+<h4 id="driving-change-corpedia-online-program">Driving Change (Corpedia
+Online Program)</h4>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

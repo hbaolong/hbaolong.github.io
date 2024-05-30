@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="第三同读" />
+  <title>德鲁克日志</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">德鲁克日志</h1>
+<p class="author">第三同读</p>
+</header>
+<h2 id="透过金庸读懂德鲁克">透过金庸读懂德鲁克</h2>
+<p>风际中是一个农村来的孩子，颇有天赋。</p>
+<p>在村里时，一群孩子跟着一个老爷爷学习武功，很多小孩三天打鱼两天晒网，学着学着就不学了，想</p>
+<p>着也没啥意思，反正长大后也就是像爸爸他们那样。</p>
+<p>风际中却一直在学，他不想一辈子都呆着这山里，想去师父说的那些大城市里看看。</p>
+<p>师父说他的武功学的非常好，已经超过师父了。风际中就和师父告别，和父母告别，一个人收拾行</p>
+<p>李，去北京闯荡了。</p>
+<p>到北京后，先是在康亲王府做了几天保安，发现基本上没有机会见康亲王，就连管家都见不上，最多</p>
+<p>也就是和保安队长沟通一下。</p>
+<p>于是风际中一边在康亲王府做保安，一边寻找别的机会。既然白道路太窄，那就去看看黑道，这一点</p>
+<p>上，风际中是没有在意的</p>
+<p>当时北京乃至全国的黑道，影响力最大的当属天地会以及天地会在北京的青木堂。风际中在一次打架</p>
+<p>中展示了高深的武功，很快就被青木堂的关夫子引荐，加入了青木堂，做了一名普通的帮众。青木堂</p>
+<p>人并不多，在几次打斗中，风际中都起了骨干作用，特别是在和沐王府的一次斗争中，风际中一人分</p>
+<p>别演示两人的武功，惊动四座，俨然成为青木堂武功最高的一位。</p>
+<p>风际中人长得和非常憨厚，所以大家都觉得风际中是最好的一个伙伴，武功高，又不嚣张。</p>
+<p>不过，风际中是有自己的想法的。风际中本来想做青木堂堂主，以他的武功，尹香主死后，自然以他</p>
+<p>武功最高。可是却没有人提议他。他只好继续隐忍。后来韦小宝做了香主，他发现了一个机会。</p>
+<p>韦小宝在清廷中有很高的地位，这是风际中一直甚至都不敢想的。通过韦香主，风际中看到了重新走</p>
+<p>白道的机会：能走白道，谁还走黑道呀。</p>
+<p>在后来的接触中，风际中发现，韦香主对黑道是更上心的，看来，通过韦香主走白道是一天危险而且</p>
+<p>走不通的。一旦向韦香主表明，甚至可能带来杀身之祸。</p>
+<p>所以风际中选择了隐忍，继续寻找机会。</p>
+<p>韦香主身边经常有一些侍卫，这些侍卫都是正黄旗的，属于皇帝的亲军。是可以和皇帝直接对话的。</p>
+<p>而一旦可以直接和皇帝对话，那么洗白自然不是问题，未来也是不可限量的。</p>
+<p>所以，在某一天，某一个夜晚，风际中邀请了一个侍卫一起喝酒。然后给了她一个信封，让他把这个</p>
+<p>信封交给康熙皇帝。</p>
+<p>侍卫也够意思，而且给皇帝递信本书也是侍卫的职责之一，风际中的这封信很快就到了康熙皇帝手</p>
+<p>里。</p>
+<p>没多久，康熙就亲子召见了风际中，仔细询问了几个时辰后，康熙封他为***，命他继续呆在天地会，</p>
+<p>做康熙的内应，监控小宝的一举一动。</p>
+<p>终于，风际中完成了人生重要的一步。得到了康熙皇帝的特命，实现了儿时的梦想。</p>
+<p>后来，在通吃岛上，风际中被韦香主发现是康熙内应后，立即处死。结束了一个年轻人努力奋斗的一</p>
+<p>生。</p>
+<h2 id="百字摘要">百字摘要</h2>
+<h2 id="金庸案例">金庸案例</h2>
+<h2 id="时间消耗">时间消耗</h2>
+<p>7:10~7:38 阅读理解</p>
+<p>26 APRIL</p>
+<p>Corporate Greed and Corruption</p>
+<p>Greed：</p>
+<p>Corruption：</p>
+<p>贪婪；贪心；贪欲</p>
+<p>dishonest or illegal behaviour, especially of people in authority
+腐败；贪污；贿赂；受贿</p>
+<p>a strong desire for more wealth, possessions, power, etc. than a
+person needs</p>
+<p>Every boom puts crooks in at the top.</p>
+<p>crooks：</p>
+<p>A crook is a dishonest person or a criminal.</p>
+<p>无赖; 恶棍</p>
+<p>It is easy to look good in a boom. But also, every boom—and I have
+lived and worked through four</p>
+<p>or five—puts crooks in at the top.</p>
+<p>In January 1930, my first assignment as a young journalist was to
+cover the trial of the top</p>
+<p>management of what had been Europe’s biggest and proudest insurance
+company, who had</p>
+<p>systematically plundered their company—and so it goes after every
+boom.</p>
+<p>systematically：有系统地；有组织地</p>
+<p>journalist：</p>
+<p>新闻记者；新闻工</p>
+<p>作者</p>
+<p>a person whose job is to collect and write news stories for
+newspapers, magazines, radio or television</p>
+<p>trial：</p>
+<p>a formal examination of evidence in court by a judge and often a jury
+, to decide if sb accused of a crime is guilty or not</p>
+<p>的）审讯，审理，审判</p>
+<p>plundered：If someone plunders a place or plunders things from a
+place, they steal things from it. 掠夺</p>
+<p>（法院</p>
+<p>The only thing new is that the last boom considerably increased the
+temptation to fake the books—</p>
+<p>the exclusive emphasis on quarterly figures, the overemphasis on the
+stock price, the well-meant</p>
+<p>but idiotic belief that executives should have major financial stakes
+in the company, the stock</p>
+<p>options (which I have always considered an open invitation to
+mismanagement), and so on.</p>
+<p>Otherwise there’s no difference.</p>
+<p>considerably：</p>
+<p>非常；很；相当多地</p>
+<p>temptation：</p>
+<p>引诱；诱惑</p>
+<p>fake：</p>
+<p>假的</p>
+<p>exclusive：</p>
+<p>（个人或集体）专用的，</p>
+<p>much; a lot</p>
+<p>the desire to do or have sth that you know is bad or wrong</p>
+<p>not genuine; appearing to be sth it is not</p>
+<p>only to be used by one particular person or group; only given to one
+particular person or group</p>
+<p>专有的，独有的，独占的</p>
+<p>emphasis ：</p>
+<p>quarterly：</p>
+<p>overemphasis：</p>
+<p>well-meant：</p>
+<p>强调；重视；重要性</p>
+<p>produced or happening every three months 季度的；每季的</p>
+<p>too much emphasis or importance 过分强调；过于重视</p>
+<p>special importance that is given to sth</p>
+<p>something you say or do that is well-meant is intended to be helpful,
+but does not have the result you intended</p>
+<p>话或行动〕出于好意的〔但结果不如意〕</p>
+<p>idiotic：very stupid 十分愚蠢的；白痴般的</p>
+<h3
+id="action-point-beware-economic-booms-bring-financial-predators-as-well-as-prosperity.">ACTION
+POINT: Beware: economic booms bring financial predators, as well as
+prosperity.</h3>
+<p>predators：</p>
+<p>捕食性动物</p>
+<p>prosperity：</p>
+<p>兴旺；繁荣；成功；昌盛</p>
+<p>an animal that kills and eats other animals</p>
+<p>he state of being successful, especially in making money</p>
+<p>“An Interview with Peter Drucker,” The Academy of Management
+Executive</p>
+<p>〔说</p>
+<h2 id="april">26 APRIL</h2>
+<h3 id="corporate-greed-and-corruption">Corporate Greed and
+Corruption</h3>
+<p>Every boom puts crooks in at the top.</p>
+<p>It is easy to look good in a boom. But also, every boom—and I have
+lived and</p>
+<p>worked through four or five—puts crooks in at the top. In January
+1930, my first</p>
+<p>assignment as a young journalist was to cover the trial of the top
+management of</p>
+<p>what had been Europe’s biggest and proudest insur-ance company, who
+had</p>
+<p>systematically plundered their company—and so it goes after every
+boom. The</p>
+<p>only thing new is that the last boom consider-ably increased the
+temptation to</p>
+<p>fake the books—the exclusive emphasis on quarterly figures, the
+overemphasis</p>
+<p>on the stock price, the well-meant but idiotic belief that executives
+should have</p>
+<p>major financial stakes in the company, the stock options (which I
+have always</p>
+<p>considered an open invi-</p>
+<p>tation to mismanagement), and so on. Otherwise there’s no
+difference.</p>
+<h3 id="action-point">ACTION POINT:</h3>
+<p>Beware: economic booms bring financial predators, as</p>
+<p>well as prosperity.</p>
+<h4
+id="an-interview-with-peter-drucker-the-academy-of-management-executive">“An
+Interview with Peter Drucker,” The Academy of Management Executive</h4>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

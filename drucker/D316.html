@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="第三同读" />
+  <title>德鲁克日志</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">德鲁克日志</h1>
+<p class="author">第三同读</p>
+</header>
+<h2 id="透过金庸读懂德鲁克">透过金庸读懂德鲁克</h2>
+<p>金庸教你如何送礼物</p>
+<p>我们大中华一向是个礼仪之邦，人情往来是生活中的方方面面。前几天和金庸群的小伙伴聚会，大家</p>
+<p>第一次见面。酒足饭饱后，北京土著岳哥从怀里掏出几个装饰精美的盒子，小心打开后，岳哥说，这</p>
+<p>是南宋时期山西大同附近的窑烧制的瓷碗，当时应该是金统治的地界。看着岳哥精心准备的礼物，我</p>
+<p>们一边开心，一边内疚：没啥拿得出手呀。</p>
+<p>其实，金庸就是一个很会送礼的人，金庸笔下就有很多送礼的情节，当然，礼仪之邦的礼不是行贿的</p>
+<p>哪种礼。</p>
+<p>今天咱们来梳理一下金庸笔下的人物是如何送礼的。</p>
+<p>收礼最多的肯定是令狐冲，因着圣姑的垂青，三教九流的妖魔鬼怪都上赶着去给令狐冲送礼治病。比</p>
+<p>如五毒教的蓝凤凰，还有黄河老祖的祖千秋。</p>
+<p>祖千秋知道老头子求了一副可以起死回生的药，也知道令狐冲得了非死不可的病，既然是非死不可的</p>
+<p>病，那么就得起死回生的药。所以，祖千秋去偷了好朋友老头子为女儿求的药，然后带着酒和各种神</p>
+<p>奇的器皿，“骗”着令狐冲喝了下去。</p>
+<p>令狐冲果然上当了，喝了这么多的好酒，也喝么珍贵的药。</p>
+<p>在祖千秋看来，这个礼物是非常珍贵的，那么，这个礼物如何呢？其实没用。</p>
+<p>因为令狐冲得力的内力过于亢奋的病，而老头子求的药是先天虚弱的药。药不对症，令狐冲喝了后，</p>
+<p>病情没有丝毫好转，反而白白耽误了老头子女儿，老不死小姐的病。</p>
+<p>好像做了坏事，这个礼物就送的不好。因为送礼者花费巨大，而接受礼物的却没有任何收益。</p>
+<p>那么金庸笔下有没有那种送礼者和收礼者都有巨大收益的呢？</p>
+<p>当然有了，这就是咱们今天要学习的，也就是庄家少奶奶给韦小宝送的礼。</p>
+<p>庄夫人道：“此去五台山，路程不近，只怕沿途尚有风波。我们想送恩公一件礼物，务请勿却是</p>
+<p>幸。”韦小宝笑道：“人家好意送我东西，倒是从来没有不收过。”</p>
+<p>庄夫人道：“那好极了。”指着双儿道：“这个小丫头双儿，跟随我多年，做事也还妥当，我们就送</p>
+<p>了给恩公，请你带去，此后服侍恩公。”</p>
+<p>庄家少奶奶的一家都被一个叫做吴之荣的人告发，然后被鳌拜抓住，满门抄斩。庄家少奶奶等人在流</p>
+<p>放路上被何铁手救了后，就在某处安家。庄家的女人们一直想报仇，她们认为她们的仇人是鳌拜和吴</p>
+<p>之荣。</p>
+<p>当韦小宝第一次到庄家家的时候，因缘际会，少奶奶救了小宝，这时，少奶奶发现这个少年居然是皇</p>
+<p>宫里的桂公公，而正是这位桂公公，手刃了自己的仇人鳌拜。</p>
+<p>为了表达为小宝的感激之情，庄家少奶奶决定送个小宝一个礼物。</p>
+<p>送什么礼物呢？这个确实要花费一些心思。</p>
+<p>小宝随身带着巨款（几十万两的银票），而且身在皇宫，
+也不缺什么珍宝，所以，送钱小宝肯定不看</p>
+<p>在眼里。</p>
+<p>武功呢？就是他们不知道小宝不爱武功，也知道小宝是陈近南的徒弟，作为陈近南的徒弟，小宝也是</p>
+<p>不缺武功的。（当然，小宝练的很差，几乎不会）所以，庄家那点武功，在小宝面前也拿不出手。</p>
+<p>可是，庄家少奶奶还是想送小宝一个礼物。为什么呢？我想在少奶奶心里应该清楚，这位少年不但已</p>
+<p>经帮助自己杀了鳌拜，以后还有可能帮更大的忙。“投之以桃，报之以李，非为报也，永结为好也”</p>
+<p>投桃报李，应该是庄少奶奶的一个主要目的。</p>
+<p>反复权衡后，少奶奶决定吧双儿送给小宝。这是一个非常棒的决定。</p>
+<p>咱们来看一下。</p>
+<p>双儿是谁？她是少奶奶的丫头，武功虽然不错，身份虽然不高，却和少奶奶家有很深的感情。</p>
+<p>而且双儿年龄也大了，也需要找婆家了，庄少奶奶简单判断后，她感觉小宝应该还是个不错的小伙</p>
+<p>子。双儿跟着他也算有个归宿。这是从庄少奶奶这边考虑的。</p>
+<p>从小宝那边考虑呢？小宝武功不好，身边没有人保护。虽然聪明伶俐，可是，在江湖上还是会遇到那</p>
+<p>种硬碰硬的时候，小宝身边也不适合跟着那些粗鲁的汉子，如徐天川等。一个小姑娘，一个武功高强</p>
+<p>的小姑娘，待在小宝身边不被人注意，却可以很好滴保护小宝。</p>
+<p>另一方面，小宝做的事很多是私密的事情，私密的事情，肯定需要信得过的人，小宝这个年龄，还没</p>
+<p>有什么信得过的贴心人，双人到了他身边后，以双儿的性格，很快就会成为小宝很贴心的丫头。</p>
+<p>当双儿在庄少奶奶家时，她只是一个普通的丫头，最多就是一个聪明勤勉的丫头，而到了小宝这里，</p>
+<p>她就是贴身丫头，可以真正照顾和关心小宝的贴心丫头。而这个，真是小宝最缺的。</p>
+<p>所以，当小宝知道庄少奶奶要送给自己的礼物居然是这个可爱的丫头时，可开心坏了。虽然担心带着</p>
+<p>双儿路上多有不便，还是很开心的答应了。</p>
+<p>确定了礼物后，庄少奶奶作为送礼方，再次表达了自己选这个礼物的用心：</p>
+<p>庄夫人（对小宝）道：“那倒不用担心，双儿年纪虽小，身手却颇灵便，不会成为恩公的累赘，尽管放</p>
+<p>心便是。”</p>
+<p>庄夫人抚摸她头发，温言道：“桂相公少年英雄，年纪轻轻便已名扬天下。你好好服侍相公，他答允了</p>
+<p>待你好的。”双儿应道：“是。”转过身来，向韦小宝盈盈拜倒。</p>
+<p>双儿如何说呢？这个小丫头也很清楚，这是她最好的归宿：</p>
+<p>双儿道：“夫人待我恩德深重，相公对我庄家又有大恩，夫人叫我服侍相公，我一定尽心。相公待我</p>
+<p>好，是我命好，待我不好，是我……是我命苦罢啦。”</p>
+<p>当然，小宝也很开心：</p>
+<p>韦小宝哈哈一笑，道：“你命很好，不会命苦的。”</p>
+<p>两人相处没多久，小宝就认识到庄少奶奶送自己这份礼的分量，他已经决定报答庄少奶奶了：</p>
+<p>韦小宝道：“还没见过，慢慢的找，总找得着。双儿，我想拿你换一个人。”双儿吃了一惊，颤声道：</p>
+<p>“你……你要拿我去送给人？”韦小宝道：“不是送给别人，是换一个人。”双儿眼圈儿早已红了，急得要</p>
+<p>哭了出来，道：“什么……什么换一个人？”</p>
+<p>韦小宝道：“你三少奶将你送给了我，这样一份大礼，可不容易报答。我得想法子将吴之荣那厮捉了</p>
+<p>来，去送给你三少奶。那么这份礼物也差不多了。”</p>
+<p>后来，韦小宝和双儿果然押着吴之荣来到了庄家，在灵位面前杀死了吴之荣，为庄家报了大仇。</p>
+<p>在最后，双儿也嫁给了小宝，成为了小宝的夫人，对于一个丫头来说，这确实是最好的结局。</p>
+<p>而这一切，都来自庄少奶奶精心准备的这份礼物。</p>
+<p>你学会选礼物了么？</p>
+<h2 id="大纲">大纲</h2>
+<h2 id="百字摘要">百字摘要</h2>
+<h2 id="金庸案例">金庸案例</h2>
+<h2 id="时间消耗">时间消耗</h2>
+<h2 id="阅读理解">阅读理解：</h2>
+<h2 id="大纲-1">大纲：</h2>
+<h2 id="撰写">撰写：</h2>
+<h2 id="录音">录音</h2>
+<h2 id="一小时运动">一小时运动</h2>
+<h2 id="英文原文">英文原文</h2>
+<p>11 NOVEMBER</p>
+<p>Divestment</p>
+<p>In looking for a husband for your daughter, says an old proverb,
+don’t ask:</p>
+<p>“Who’ll make the best husband for her?” Ask instead: “For which kind
+of a man would she make a</p>
+<p>good wife?”</p>
+<p>Divestment is a “marketing” rather than a “selling” problem.</p>
+<p>Divestment：[ U C ] ( finance 财 ) the act of selling the shares you
+have bought in a company or of</p>
+<p>taking money away from where you have invested it
+转让股份；撤销投资</p>
+<p>The question is not: “What do we want to sell and for how much?” It
+is: “For whom is this venture</p>
+<p>‘value’ and under what conditions?”</p>
+<p>The salient point is finding the potential buyer for whom what is
+misfit to the seller is a perfect fit,</p>
+<p>the buyer to whom the venture to be sold offers the best opportunity
+or solves the worst problem.</p>
+<p>misfit：a person who is not accepted by a particular group of people,
+especially because their</p>
+<p>behaviour or their ideas are very different
+与别人合不来的人；行为（或思想）怪异的人</p>
+<p>salient：[ only before noun ] most important or noticeable
+最重要的；显著的；突出的</p>
+<p>This is then also the buyer who will pay the most.</p>
+<p>A major printing company decided that a mass-circulation magazine it
+owned was at best a partial</p>
+<p>fit and should be sold.</p>
+<p>mass-circulation：大批量发行</p>
+<p>partial：not complete or whole 部分的；不完全的</p>
+<p>The magazine had been bought originally to hold its printing
+contract.</p>
+<p>They asked, “What is value to a magazine publishing company?” “If it
+is a growing magazine</p>
+<p>company,” they answered, “its greatest need is cash. For a growing
+magazine re-quires heavy cash</p>
+<p>investments in building circulation for several years.</p>
+<p>“How can we supply this need of the potential buyer to our own
+advan-tage?” was the next</p>
+<p>question. And the answer was, “By giving him ninety days rather than
+the customary thirty days to</p>
+<p>pay his print and paper bill to our printing plants.”</p>
+<p>The printing company then rapidly found a publishing group that
+filled their requirements.</p>
+<h3 id="action-point">ACTION POINT:</h3>
+<p>Identify a “partial fit” business of yours. For whom is this misfit a
+perfect fit?</p>
+<p>Management: Tasks, Responsibilities, Practices</p>
+<h2 id="november">11 NOVEMBER</h2>
+<h3 id="divestment">Divestment</h3>
+<p>In looking for a husband for your daughter, says an old proverb,
+don’t ask:</p>
+<p>“Who’ll make the best husband for her?” Ask instead:</p>
+<p>“For which kind of a man would she make a good wife?”</p>
+<p>Divestment is a “marketing” rather than a “selling” problem. The
+ques-</p>
+<p>tion is not: “What do we want to sell and for how much?” It is: “For
+whom is</p>
+<p>this venture ‘value’ and under what conditions?” The salient point is
+finding</p>
+<p>the potential buyer for whom what is misfit to the seller is a
+per-fect fit, the</p>
+<p>buyer to whom the venture to be sold offers the best opportunity or
+solves the</p>
+<p>worst problem. This is then also the buyer who will pay the</p>
+<p>most.</p>
+<p>A major printing company decided that a mass-circulation magazine
+it</p>
+<p>owned was at best a partial fit and should be sold. The magazine had
+been</p>
+<p>bought originally to hold its printing contract. They asked, “What is
+value</p>
+<p>to a magazine publishing company?” “If it is a growing magazine
+com-</p>
+<p>pany,” they answered, “its greatest need is cash. For a growing
+magazine</p>
+<p>re-quires heavy cash investments in building circulation for several
+years.</p>
+<p>“How can we supply this need of the potential buyer to our own
+advan-</p>
+<p>tage?” was the next question. And the answer was, “By giving him
+ninety</p>
+<p>days rather than the customary thirty days to pay his print and paper
+bill</p>
+<p>to our printing plants.” The printing company then rapidly found</p>
+<p>Apublish-ing group that filled their requirements.</p>
+<h3 id="action-point-1">ACTION POINT:</h3>
+<p>Identify a “partial fit” business of yours. For whom is this</p>
+<p>misfit a perfect fit?</p>
+<h4 id="management-tasks-responsibilities-practices">Management: Tasks,
+Responsibilities, Practices</h4>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

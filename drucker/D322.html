@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="第三同读" />
+  <title>德鲁克日志</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">德鲁克日志</h1>
+<p class="author">第三同读</p>
+</header>
+<h2 id="透过金庸读懂德鲁克">透过金庸读懂德鲁克</h2>
+<p>萧峰：我好后悔</p>
+<p>一</p>
+<p>乔峰峰是一个天不怕地不怕的人，一生光明磊落。从一个山民的孩子，到少林高僧的弟子，然后是丐</p>
+<p>帮帮主的弟子，最后成长成为丐帮帮主。</p>
+<p>乔峰喜欢打打杀杀，遇到战斗，小心谨慎却无所畏惧。凭着惊人的武功，谨慎的性格还有丐帮的势</p>
+<p>力，乔峰的人生应该很顺才对。</p>
+<p>没成想，某一天，突然被揭露出自己的契丹人的真相，自己也就从乔峰变成了萧峰。</p>
+<p>紧接着，自己的养父养母被杀，自己的师父被杀，自己身世的知情人一个个被杀，而自己背上了杀人</p>
+<p>的恶名。</p>
+<p>好容易有一个女子喜欢自己，也死在了自己掌下；这个女子在临死前委托自己照顾她妹妹，结果她妹</p>
+<p>妹也差点死在自己手里。</p>
+<p>然后，自己这个粗鲁的汉子，和那个把细而鬼机灵的小丫头阿紫开始了长时间的感情纠结。最后，间</p>
+<p>接死在了这位妹子手里：半截长枪插入心脏。</p>
+<p>而这位妹子也挖去了双眼，抱着这位自己心爱的男人跳下了悬崖。</p>
+<p>而这一切的起点，只是在某年丐帮在洛阳开一个百花会，在会上，萧峰只顾着和丐帮兄弟们喝酒，没</p>
+<p>有留意与会的一位美女，也就是马大元的媳妇康敏。</p>
+<p>康敏觉得，自己这么漂亮，所有男人都应该看自己，而，那位男人中权势最高，武功最高，最帅气的</p>
+<p>乔峰，居然都不看自己。</p>
+<p>怎么办？搞他！安排！</p>
+<p>然后，萧峰就悲剧了。</p>
+<p>我在想，萧峰知道了这件事的前因后果后，会不会后悔在百花会上没看康敏那一眼？</p>
+<p>二、</p>
+<p>其实更后悔的应该是包惜弱。这个可怜的女儿，一向怜惜各种小动物。所以，当她看到柴火房里有一</p>
+<p>个受伤的人时，她毫不犹豫地救了一下，帮他包扎，止血。</p>
+<p>包扎好后，包惜弱想去告诉老公杨铁心，可是那个酒鬼醉的什么似的。</p>
+<p>包惜弱再回来看那个受伤的人时，发现他已经走了。包惜弱想了想，也就算了。</p>
+<p>没想多，几个月后，来了一群人围观郭杨两家，郭啸天当场死亡。杨铁心好像也死了，郭啸天的媳妇</p>
+<p>李萍好像也死了。</p>
+<p>只有自己被一个人救了。</p>
+<p>没想到这个人是大金国的王爷完颜洪烈。然后，她生下了一个小孩子，名字叫做完颜康。自己也做了</p>
+<p>完颜洪烈的妃子。</p>
+<p>十几年后，自己的老公找到自己，带着自己从完颜洪烈的王府逃出，在路上，杨铁心和自己死在了一</p>
+<p>起。</p>
+<p>几年后，自己的儿子也在意外中死亡。</p>
+<p>我在想，在临死前，包惜弱有没有后悔去救那个柴火房的受伤之人？</p>
+<p>三、</p>
+<p>我想，即使回到百花会上，乔峰也不会去看康敏；即使再次回到柴火房，包惜弱也不会不救那个完颜</p>
+<p>洪烈。这是他们的性格。</p>
+<p>虽然这两件不起眼的小事都引起了悲剧性的泼天大事，在事情的开始，乔峰或者包惜弱也不会去对这</p>
+<p>样的事情做思考。</p>
+<p>因为，这样的事情是没法思考的。</p>
+<p>记得有人做过一个推测，关于丘处机路过牛家村的。</p>
+<p>1、假如当时丘处机没有路过牛家村。
+那么，秘密跟踪他的那些金兵就不会死在郭，杨二人的院子里，</p>
+<p>同样，完颜洪烈也不会见到包惜弱而对她念念不忘。</p>
+<p>2、那些金兵不会死在丘处机手里，而郭，杨两家以后不会受到牵连。</p>
+<p>3、郭，杨两家不受波及，李萍不会流亡大漠，郭靖和杨康将会平平安安出生在牛家村。江南七怪自然</p>
+<p>也不会前往大漠。</p>
+<p>4、而要是没有郭靖和七怪相助，铁木真就会死在扎木合他们手里，蒙古各部也就不能统一。</p>
+<p>5、蒙古不能统一，也就不会有什么西征。火药就不会传入欧洲。</p>
+<p>6、没有火药，铁甲士在欧洲的统治就不会动摇。因此，黑暗的中世纪将延长一千年，也就没有文艺复</p>
+<p>兴。</p>
+<p>7、没有了文艺复兴，自然也没有大航海。北美洲将始终是游牧的印第安人的家园。</p>
+<p>8、同样，西班牙人不会将铁炮传入日本。长筱会战是武田方面获胜，日本战国时代将一直持续不能统</p>
+<p>一。</p>
+<p>9、在另一国度，完颜洪烈没有包惜弱，只能全力参加*争。金国因此会内乱。</p>
+<p>10、没有蒙古，金国又内乱，因此，宋不但不会灭亡，反而会统一。宋朝注重商贸，因此，资本主义</p>
+<p>萌芽将在中国出现。</p>
+<p>11、如果发展到今天，中国将是最发达的国家，远远领先于日本，西班牙，西欧，美洲。</p>
+<p>12、今天的金融危机也就不会出现，所有的一切，都怪丘处机，你说你一道士，没事干嘛路过什么牛</p>
+<p>家村嘛</p>
+<p>都怪丘处机！！</p>
+<p>所以，在我们普通人眼里，上帝就是掷骰子的，而你身边发生的一起，其实都已经是最好的安排。</p>
+<p>你能做的是接受现实，用你的智力和体力，让自己的未来更舒服一些。</p>
+<p>如此而已。</p>
+<h2 id="大纲">大纲</h2>
+<h2 id="百字摘要">百字摘要</h2>
+<h2 id="金庸案例">金庸案例</h2>
+<h2 id="时间消耗">时间消耗</h2>
+<h2 id="阅读理解">阅读理解：</h2>
+<h2 id="大纲-1">大纲：</h2>
+<h2 id="撰写">撰写：</h2>
+<h2 id="录音">录音</h2>
+<h2 id="一小时运动">一小时运动</h2>
+<h2 id="英文原文">英文原文</h2>
+<p>17 NOVEMBER</p>
+<p>Limits of Quantification</p>
+<p>Quantification： n. [统计] 定量，量化</p>
+<p>Quantification for most of the phenomena in a social ecology is
+misleading or at best useless.</p>
+<p>phenomena：</p>
+<p>现象</p>
+<p>ecology：</p>
+<p>生态；生态学</p>
+<p>a fact or an event in nature or society, especially one that is not
+fully understood</p>
+<p>[ U ] the relation of plants and living creatures to each other and
+to their environment; the study of this</p>
+<p>The most important reason why I am not a quantifier is that in social
+affairs, events that matter</p>
+<p>cannot be quantified.</p>
+<p>For example, Henry Ford’s ignorance in 1900 or 1903 of the prevailing
+economic wisdom that the</p>
+<p>way to maximize profit was to be a monopolist—that is, to keep
+production low and prices high—</p>
+<p>led him to assume that the way to make money was to keep prices low
+and production high.</p>
+<p>prevailing：</p>
+<p>普遍的；盛行的；流行的</p>
+<p>monopolist：</p>
+<p>术语</p>
+<p>垄断者；专卖者；专营者</p>
+<p>production：</p>
+<p>产量</p>
+<p>existing or most common at a particular time</p>
+<p>( technical</p>
+<p>) a person or company that has a monopoly</p>
+<p>[ U ] the quantity of goods that is produced</p>
+<p>This, the invention of “mass production,” totally changed industrial
+economics.</p>
+<p>It would have been impossible, however, to quantify the impact even
+as late as 1918 or 1920, years</p>
+<p>after Ford’s success had made him the richest industrialist in the
+United States, and probably in</p>
+<p>the world.</p>
+<p>impact：</p>
+<p>巨大影响；强大作用</p>
+<p>industrialist：</p>
+<dl>
+<dt>工业家；实业家；工厂主</dt>
+<dd>
+<p>(of sth) (on sb/sth) the powerful effect that sth has on sb/sth</p>
+</dd>
+</dl>
+<p>a person who owns or runs a large factory or industrial company</p>
+<p>He had revolutionized industrial production, the automobile industry,
+and the economy in general,</p>
+<p>and had, above all, completely changed our perception of
+industry.</p>
+<p>perception：</p>
+<p>看</p>
+<p>法；见解</p>
+<p>[ U C ] ~ (that…) ( formal ) an idea, a belief or an image you have
+as a result of how you see or understand sth</p>
+<p>The unique event that changes the universe is an event “at the
+margin.”</p>
+<p>unique：</p>
+<p>唯一的；独一无二的</p>
+<p>event：</p>
+<p>发生的事情；（尤指）重要事情，大事</p>
+<p>being the only one of its kind</p>
+<p>a thing that happens, especially sth important</p>
+<p>By the time it becomes statistically significant, it is no longer
+“future”; it is, indeed, no longer even</p>
+<p>“present.” It is already “past.”</p>
+<p>statistically：adv. 统计地；统计学上</p>
+<h3 id="action-point">ACTION POINT:</h3>
+<p>Identify a unique event with an impact that is unquantifiable now,
+but is likely to transform your</p>
+<p>organization in the next decade.</p>
+<p>Be out in front and take advantage of the opportunities it will
+afford.</p>
+<p>The Ecological Vision</p>
+<h2 id="november">17 NOVEMBER</h2>
+<h3 id="limits-of-quantification">Limits of Quantification</h3>
+<p>Quantification for most of the phenomena in a social ecology</p>
+<p>is misleading or at best useless.</p>
+<p>The most important reason why I am not a quantifier is that in social
+af-</p>
+<p>fairs, events that matter cannot be quantified. For example, Henry
+Ford’s</p>
+<p>ignorance in 1900 or 1903 of the prevailing economic wisdom that the
+way to</p>
+<p>maximize profit was to be a monopolist—that is, to keep pro-duction
+low and</p>
+<p>prices high—led him to assume that the way to make money was to
+keep</p>
+<p>prices low and production high. This, the invention of “mass
+production,”</p>
+<p>totally changed industrial economics. It would have been
+impossible,</p>
+<p>however, to quantify the impact even as late as 1918 or 1920, years
+after</p>
+<p>Ford’s success had made him the richest industrialist in the United
+States, and</p>
+<p>probably in the world. He had revolutionized indus-trial production,
+the</p>
+<p>automobile industry, and the economy in general,</p>
+<p>and had, above all, completely changed our perception of
+industry.</p>
+<p>The unique event that changes the universe is an event “at the
+margin.”</p>
+<p>By the time it becomes statistically significant, it is no longer
+“future”; it</p>
+<p>is, indeed, no longer even “present.” It is already “past.”</p>
+<h3 id="action-point-1">ACTION POINT:</h3>
+<p>Identify a unique event with an impact that is unquantifi-</p>
+<p>able now, but is likely to transform your organization in the next
+decade.</p>
+<p>Be out in front and take advantage of the opportunities it will
+afford.</p>
+<h4 id="the-ecological-vision">The Ecological Vision</h4>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="第三同读" />
+  <title>德鲁克日志</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">德鲁克日志</h1>
+<p class="author">第三同读</p>
+</header>
+<h2 id="透过金庸读懂德鲁克">透过金庸读懂德鲁克</h2>
+<p>回不去北京？不可能！</p>
+<p>这几天大家陆陆续续从乡村、小城镇往大城市走，最多的肯定是北上广深这四大城市。然后就是成</p>
+<p>都、杭州、重庆、武汉、苏州、西安、天津、南京、郑州、长沙、沈阳、青岛、宁波、东莞、无锡这</p>
+<p>些城市了。</p>
+<p>每年过年，我们中国人都会回家，北京这样的城市这几天会非常“舒服”，车很少，地铁人也很少。这</p>
+<p>说明这个城市的2100万人大多都是外地人。而平时那个挤得要命的地铁、公路、写字楼，挤得都是外</p>
+<p>地人。</p>
+<p>中国有四个一线城市：北上广深。这四个城市加起来差不多有8000万人，中国一共有14亿人，也就是</p>
+<p>说，每17个人就有一个在这四个城市。</p>
+<p>所以，我们所谓的一线城市，其实是举全国的人才建立起来的。或者，说的消极一点，是举全国的人</p>
+<p>建立起来的。</p>
+<p>我以前读过一本书，是可欣的《都市妖奇谈》，里面有一句经典的台词：大城市就像一个大妖怪，把</p>
+<p>一个一个年轻人吞进去，把老人吐出来。</p>
+<p>这就是大城市繁华的根本原因。</p>
+<p>城市的发展，最需要的其实并不是钱，也不是技术，而是人。可是，这几十年来，大家都不愿意</p>
+<p>（能）生孩子，大部分家庭只有1个孩子，有的家庭还没有孩子。</p>
+<p>在人口学领域有一个研究：一个区域要想持续发展，每一个适龄女性应该生2.2个孩子，不然这个区域</p>
+<p>就会萎缩。</p>
+<p>可是，北上广深并没有萎缩，这是为什么呢？</p>
+<p>这就是“移民”的威力。</p>
+<p>北上广深靠自己的人肯定是撑不起这么大的城市的，而且，按照中国这几十年的人口出生率，大概率</p>
+<p>还是乡村的模样，不过，这些城市是中国的政治、文化、教育的中心，每年都会有大量的年轻人都全</p>
+<p>国各地来到和几个城市，并且在之后的几十年为这座城市献出自己的青春。这些“移民”为这些城市提</p>
+<p>供了活力和生机。</p>
+<p>所以，并不是你需要来北上广深打工，而是这些城市需要你。他们需要很多优秀的人才来创造设计这</p>
+<p>个城市，也需要无数普普通通的年轻人来着个城市，被这个城市吞下去，然后在另一头吐出来。</p>
+<p>这就是中国这几十年来快速发展的一个原因：大家往大城市跑，其次是中等城市，再次是小城市。而</p>
+<p>把大量的老年人留在了农村。</p>
+<p>听我老家的人说，现在，在我们村里60岁算年轻人了。</p>
+<p>所以，不管大城市出现什么样的问题，作为一个区域，他们都要解决“源源不断提供年轻人”的问题。</p>
+<p>要么是生，要么是移民。</p>
+<p>而生，现在肯定来不及，这就是为什么北京一定要欢迎你。</p>
+<p>具体到现在的问题，如果你回北京后进不了家门，可以给12345市长热线打电话，也可以直接打110报</p>
+<p>警。</p>
+<p>这个城市需要你。</p>
+<h2 id="大纲">大纲</h2>
+<h2 id="百字摘要">百字摘要</h2>
+<h2 id="金庸案例">金庸案例</h2>
+<h2 id="时间消耗">时间消耗</h2>
+<h2 id="阅读理解">阅读理解：</h2>
+<h2 id="大纲-1">大纲：</h2>
+<h2 id="撰写">撰写：</h2>
+<h2 id="录音">录音</h2>
+<h2 id="一小时运动">一小时运动</h2>
+<h2 id="英文原文">英文原文</h2>
+<p>5 FEBRUARY</p>
+<p>Shrinking of the Younger Population</p>
+<p>Shrinking：</p>
+<p>to become smaller, especially when washed in water that is too hot;
+to make clothes, cloth, etc. smaller in this way</p>
+<p>（使）缩水，收缩，缩小，皱缩</p>
+<p>The next society will be with us shortly.</p>
+<p>In the developed countries, the dominant factor in the next society
+will be something to which</p>
+<p>most people are only just beginning to pay attention: the rapid
+growth of the older population and</p>
+<p>the rapid shrinking of the younger generation.</p>
+<p>dominant：</p>
+<p>首要的；占支配地位的；占优势的；显著的</p>
+<p>more important, powerful or noticeable than other things</p>
+<p>The shrinking of the younger population will cause an even greater
+upheaval than the growing</p>
+<p>number of older people, if only because nothing like this has
+happened since the dying centuries of</p>
+<p>the Roman Empire.</p>
+<p>upheaval：</p>
+<p>剧变；激变；动乱；动荡</p>
+<p>[ C U ] a big change that causes a lot of confusion, worry and
+problems</p>
+<p>In every single developed country, but also in China and Brazil, the
+birth rate is now well below the</p>
+<p>replacement rate of 2.2 live births per woman of reproductive
+age.</p>
+<p>reproductive：</p>
+<p>生殖的；繁殖的</p>
+<p>[ only before noun ] connected with reproducing babies, young animals
+or plants</p>
+<p>Politically, this means that immigration will become an important—and
+highly divisive—issue in all</p>
+<p>rich countries.</p>
+<p>divisive：</p>
+<p>造成不和的；引起分歧</p>
+<p>( disapproving ) causing people to be split into groups that disagree
+with or oppose each other</p>
+<p>的；制造分裂的</p>
+<p>It will cut across all traditional political alignments.</p>
+<p>cut across：</p>
+<p>PHRASAL VERB If an issue or problem cuts across the division between
+two or more groups of people, it affects or</p>
+<p>matters to people in all the groups.</p>
+<p>超越 (界限)</p>
+<p>Economically, the decline in the younger population will change
+markets in fundamental ways.</p>
+<p>Growth in family formation has been the driving force of all domestic
+markets in the developed</p>
+<p>world, but the rate of family formation is certain to fall steadily
+unless bolstered by large-scale</p>
+<p>immigration of younger people.</p>
+<p>formation：</p>
+<p>组成；形成</p>
+<p>domestic：</p>
+<p>本国的；国内的</p>
+<p>steadily：adv. 稳定地；稳固地；有规则地</p>
+<p>bolstered：</p>
+<p>增强</p>
+<p>[ U ] the action of forming sth; the process of being formed</p>
+<p>[ usually before noun ] of or inside a particular country; not
+foreign or international</p>
+<p>V-T If you bolster something such as someone’s confidence or courage,
+you increase it.</p>
+<h3 id="action-point">ACTION POINT:</h3>
+<p>Determine whether your organization is betting on young people, older
+people, or immigrants.</p>
+<p>Make sure you have a plan for the gradual decrease in the youth
+market and the increase in</p>
+<p>newcomers and the aged.</p>
+<p>Managing in the Next Society</p>
+<h2 id="february">5 FEBRUARY</h2>
+<h3 id="shrinking-of-the-younger-population">Shrinking of the Younger
+Population</h3>
+<p>The next society will be with us shortly.</p>
+<p>In the developed countries, the dominant factor in the next society
+will be</p>
+<p>something to which most people are only just beginning to pay
+attention: the</p>
+<p>rapid growth of the older population and the rapid shrinking of the
+younger</p>
+<p>generation. The shrinking of the younger population will cause an
+even greater</p>
+<p>upheaval than the growing number of older people, if only be-cause
+nothing like</p>
+<p>this has happened since the dying centuries of the Roman Empire. In
+every single</p>
+<p>developed country, but also in China and Brazil, the birth rate is
+now well below</p>
+<p>the replacement rate of 2.2 live births per woman of reproductive
+age. Politically,</p>
+<p>this means that immigra-tion will become an important—and highly
+divisive—</p>
+<p>issue in all rich</p>
+<p>countries. It will cut across all traditional political
+alignments.</p>
+<p>Economically, the decline in the younger population will change
+mar-</p>
+<p>kets in fundamental ways. Growth in family formation has been the</p>
+<p>driving force of all domestic markets in the developed world, but the
+rate</p>
+<p>of family formation is certain to fall steadily unless bolstered by
+large-</p>
+<p>scale immigra-tion of younger people.</p>
+<h3 id="action-point-1">ACTION POINT:</h3>
+<p>Determine whether your organization is betting on young</p>
+<p>people, older people, or immigrants. Make sure you have a plan for
+the</p>
+<p>gradual decrease in the youth market and the increase in newcomers
+and</p>
+<p>the aged.</p>
+<h4 id="managing-in-the-next-society">Managing in the Next Society</h4>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="第三同读" />
+  <title>德鲁克日志</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">德鲁克日志</h1>
+<p class="author">第三同读</p>
+</header>
+<h2 id="透过金庸读懂德鲁克">透过金庸读懂德鲁克</h2>
+<p>薛兆丰，请走出教室和演播室吧</p>
+<p>薛兆丰这两年比较火，在经济学家里是一个网红：网红经济学家。我参加过一次《奇葩说》的现场录</p>
+<p>制，在现场，薛兆丰一边卖萌，一边思维缜密地回答问题。收获了无数粉丝，也包括我。我当时就</p>
+<p>想，原来拥有了知识后，在娱乐场所可以如此有魅力。</p>
+<p>今年春节，我们不幸遇到了疫情，作为网红经济学家，当然也会发表一些观点，薛兆丰对口罩涨价发</p>
+<p>表了自己的观点。薛兆丰认为应该放开口罩价格，鼓励大家去赚“国难财”，这样才可以解决口罩的供</p>
+<p>需问题。</p>
+<p>经济学家圈看到后不认可，就大手一挥，回了一个《夏春：薛兆丰，请回教室补课》。夏春认为，薛</p>
+<p>兆丰太久没有学习经济学了，或者学了忘记了，忘记了经济学中的一些概念，比如“市场失灵”，
+“自</p>
+<p>利”， ”公平“的价值，”道德“等等等等。</p>
+<p>我没学过经济学，不知道夏春教授（他应该是教授吧）说的对不对，这些也不少我关心的视角，有兴</p>
+<p>趣的同学可以点上面的链接去看。我今天要说的是，想请薛兆丰教授走出教室，走出演播室，来到这</p>
+<p>个有泥土芬芳的大地上踩一踩。感受一下这个真实的世界。</p>
+<p>首先，我认为薛教授是很厉害。我读过薛教授的书，也写的特别好，理性又有趣地解释了很多经济学</p>
+<p>的观点以及我们现实生活中的现象。他的书，我都是一口气读完的，手不释卷。</p>
+<p>而且，我认为，在经济学领域，薛教授肯定是专家。如果有游戏来比喻的话，薛教授一定是经济学领</p>
+<p>域的高级玩家。经济学的各种规则了如指掌，各种排列组合也都是信手拈来。</p>
+<p>最后，我是不认可薛兆丰的”发国难财“的。不过，我不是从经济学角度去”不认可“的，而是从逻辑角度</p>
+<p>不认可。因为我不懂经济，而自认为多少懂一些逻辑。（别扔我，谁还不认为自己很讲逻辑呀）</p>
+<p>薛兆丰认为在疫情时期也应该发挥市场的调节左右，让市场来决定价格。通过市场的调节，才可以让</p>
+<p>更多的人用到口罩。</p>
+<p>我认为薛兆丰说的对，不过，他忽略了大家的愤怒：四处都是病毒，你居然口罩涨价？看我不砸了</p>
+<p>你！</p>
+<p>是的，我一个人不敢砸你，几十个人在推推搡搡之间，不小心砸了你呢？</p>
+<p>至于到了村里，一个村子都是一家人，你涨价？半夜给你家扔砖头。</p>
+<p>政府管不管呢？你涨价如果政府不管的话，那么别人砸你，政府为什么管？</p>
+<p>你要知道，经济学是在这个社会之上抽象出来的一些普适的规律，这些规律在到了具体的事情后，又</p>
+<p>会有不同的表现。而具体到疫情，具体到口罩，再具体的某地的口罩，就不再是简单的经济学问题</p>
+<p>了。</p>
+<p>而且，如果政府不管，大家就会把愤怒转移到政府身上：商家赚黑钱，政府背锅？</p>
+<p>所以，到了这种情况，虽然经济学家告诉大家，只要价格合理，口罩就会有充足的供应，可是，谁敢</p>
+<p>等那个价格合理钱的波动期呢？</p>
+<p>这就是为什么这件事在经济学上可行，可是到了具体的这件事就不可行了。</p>
+<p>所以，我想请薛教授走出教室，走出演播室，来到城市，城镇，小乡村，来体会一下人和人之间真实</p>
+<p>的关联，人和商业之间真实的关联，而不是在卧室，书房建模，在教室、演播室侃侃而谈。</p>
+<p>毕竟，学问只是学问，这个世界是真实的，没有NG。</p>
+<p>经济学家圈为大家分享了系列关于“国难财”的文章，大家兴趣很大，也引发了经济学家圈里圈外的讨</p>
+<p>论。</p>
+<p>赞成的很多，毕竟买薛兆丰的课程和看奇葩说的粉丝基数不小，反对的也不少，众多名家也公开发表</p>
+<p>文章进行批判，经济学家圈也都一一作了刊登。</p>
+<p>这个问题是经济学的基础观点，但是遇到疫情现实后，讨论又热闹了起来。书本上，课堂上是一回</p>
+<p>事，现实中又不一样。此次疫情下，到底该不该发国难财的问题，多了一个现实的视角来审视这些我</p>
+<p>们习以为常的观点。很多人一看，呀，不是那么回事啊。所以我们也看到，很多支持薛兆丰的人，此</p>
+<p>次也倒戈了，说赞美发国难财是不对的，深层次的理由是这个说法根本解释不了现实。</p>
+<p>作为此次话题的发起方，我们简单总结下这个争论，希望多个视角供大家讨论。</p>
+<p>结论其实很简单，就是要尊重现实世界：涨价肯定是没有问题的，理性经济人也要求涨价，但是涨价</p>
+<p>并非世界上唯一真实存在的事实。真是世界不是这个样子的。</p>
+<p>薛兆丰“我们应该赞美那些发国难财的人”观点有三个问题。</p>
+<p>第一是，薛兆丰选择性挑选事实，忽略对自己结论不利的事实。</p>
+<p>薛兆丰说商业是最大的慈善，但是我们又看到盖茨做了大量的捐款，如何解释盖茨的行为呢？盖茨肯</p>
+<p>定比薛兆丰理性。</p>
+<p>此次疫情中，很多企业第一时间做了捐款，并维持不涨价，甚至免费，例如很多在线课程就宣布了免</p>
+<p>费等。目前据不完全统计已经超过120亿。如果薛兆丰的观点正确，如何解释这些企业的行为呢？这些</p>
+<p>捐款的企业比如BAT和TMD肯定比薛兆丰更理性。</p>
+<p>此次疫情中，很多上前线，捐口罩，自发送菜的，这些人的行为是不理性的吗？薛兆丰可能会觉得没</p>
+<p>必要，即使把钱和物烧成灰也比捐款好，但是能否说这些人的行为是不理性呢？是傻鸟吗？</p>
+<p>这些实实在在发生的事实，如何解释呢？这就是薛兆丰赞美发国难财所忽视的现实，难道就薛兆丰是</p>
+<p>上帝，别人都是傻瓜？</p>
+<p>张五常说，如果解释不了慈善和捐款，整个经济学的理论架构会塌下来，溃不成军。实际上，薛兆丰</p>
+<p>赞美国难财的言论就让大厦崩塌了。他只赞美发国难财的人，而对其他大量存在的事实没有做充分的</p>
+<p>解释说明，所以也就引发了如潮水般的讨论。</p>
+<p>第二，薛兆丰通过对事实的捏造来欺骗不求甚解者和善良的人，这点是最不可取的。毕竟薛兆丰的粉</p>
+<p>丝众多，即使被欺骗几天也是一种罪恶。</p>
+<p>比如薛兆丰一直举的卡特里娜飓风的故事，实际上薛兆丰一直在捏造一些事实，欺骗他善良的粉丝。</p>
+<p>薛兆丰举例的卡特里娜飓风卖发电机事件专题片中并没有“国难财”这个词，例子里英语原文是price</p>
+<p>gouging
+，也就是哄抬物价敲竹杠的意思。哄抬物价敲竹杠从哪里都翻译不成国难财，除非为了故意</p>
+<p>诱导别人而刻意捏造。</p>
+<p>薛兆丰自从看了这个不到5分钟的短短的视频专题片后，就一直拿来佐证自己的观点，也一直故意错误</p>
+<p>把哄抬物价说成发国难财，发鸡毛国难财啊，这怎么能他喵的翻译成发国难财呢？</p>
+<p>经济学家圈国内独家首次发布这个视频，也做了中文字幕翻译，希望大家看一看这个视频的真实内</p>
+<p>容。经济学是严肃的，不是带有感情的，薛兆丰由于比较早的混迹论坛，对粉色情绪操作到位，经常</p>
+<p>用煽动的方法来吸引大家的注意，“国难财”就是薛兆丰用来欺骗国内粉丝的。当然，能成功煽动情绪</p>
+<p>是非常厉害的，但是事实不要歪曲。这就好比指着一个6岁的小孩子说，这是一个20岁的少年。事实是</p>
+<p>什么最关键。但是好像罗胖也不太讲究事实，他们这些人都这样。</p>
+<p>以下是卡特里娜飓风后发电机价格敲竹杠的视频实录，大家可以对比视频来看。（顺便说一句，转载</p>
+<p>本文或本文视频，务必注明出处，否则感情将出现问题。事实证明，诅咒是组好防治抄袭的手段）。</p>
+<p>我们现在来看薛兆丰赞美发国难财的原文：</p>
+<p>【在美国曾经发生过这样一个事情。好几年前，美国发生过一次叫做“卡崔娜”的飓风灾难，造成了密</p>
+<p>西西比河附近大规模断电。</p>
+<p>电视台播出这个地区大规模断电的消息以后，有位哥们儿就想，能够赚点钱。所以他把自己的积蓄拿</p>
+<p>出来，买了19台发电机，又租了一辆大卡车，开了1000多公里的路程，从肯塔基开到了密西西比。</p>
+<p>来到这以后，他用双倍的价钱出售这19台发电机，当时的很多居民都迫切需要发电机。但就在这个时</p>
+<p>候，警察出现了。警察认为，这个人违反了当地所谓的反价格欺诈条例，也就是说，这个人在牟取暴</p>
+<p>利，把价格抬得过高了。</p>
+<p>结果警察把这个人投到监狱里面去了，他的那19台发电机也被没收了。这人在监狱里面待了4天后放出</p>
+<p>来了，而那19台发电机，还扣押在政府的仓库里面。</p>
+<p>美国广播公司的一个实事节目叫“20/20”的，就专门报道了这个事情。顺便说说这个节目为什么叫</p>
+<p>“20/20”，那是因为在美国，他们测视力用的指标就是20、20，不是咱们的1.5、1.5，所以20/20的意</p>
+<p>思是我们要把事情看个清楚。</p>
+<p>这个节目的主持人叫约翰·斯托塞尔（John
+Stossel），他就问了一个问题：</p>
+<p>到底是想要发财的哥们儿帮助了居民，还是把所有发电机都扣押在政府仓库里面的警察、政府帮助了</p>
+<p>居民，到底是谁对居民造成了伤害？</p>
+<p>当他采访那些居民的时候，居民都说，“我们要的是发电机，我们要电，我们要食物。”</p>
+<p>我们会很自然地想发国难财不对，但是如果不能发财，你怎么能让别人跑1000多公里路，把自己的积</p>
+<p>蓄拿出来，买那么多发电机，送到人们需要的地方呢？</p>
+<p>我们学习价格的作用，在风平浪静的时候，你觉得一切都可以接受，一旦有了具体的事例，价格的作</p>
+<p>用，你就往往会忽略。</p>
+<p>这个节目的主持人，斯托塞尔还挺有意思的。他跑到街上问大家：“发国难财对不对？”所有人都告诉</p>
+<p>他：“发国难财是不对的，我都不知道你是怎么想的。”</p>
+<p>紧接着，约翰·斯托塞尔又跑去采访了3位诺贝尔经济学奖得主，问他们发国难财到底对不对。</p>
+<p>这三位经济学家，一位是1992年获得诺贝尔奖的加里·贝克尔（GaryBecker
+），他说发国难财是增加</p>
+<p>供给的最好办法，当然应该鼓励。</p>
+<p>第二位经济学家，是2002年拿诺奖的弗农·史密斯（VernonSmith
+），他说发国难财是好事。</p>
+<p>第三位经济学家，是大家熟悉的、1976年诺奖得主弥尔顿·弗里德曼（MiltonFriedman
+），他说：“这</p>
+<p>些发国难财的人，是在救别人的命，他们应该得到一个奖章，而不是得到惩罚。”】</p>
+<p>如果你不看原文，可能你觉得薛兆丰讲的很符合他那个逻辑，所以很多粉丝也会相信。但是薛兆丰你</p>
+<p>不能欺骗你的粉丝啊，你把国难财这三个字强加到这个案例上来欺骗大家。</p>
+<p>好了，我先现在来看真实记录，这个记录是国内首发，经济学家圈也做了中文字幕，转载一定注明出</p>
+<p>处。</p>
+<p>看完视频来看下文字实录：</p>
+<p>哄抬物价（price
+gouging）是不是很邪恶的行为？【注意视频都在说哄抬物价敲竹杠，而不是发国难</p>
+<p>财】</p>
+<p>【主持人：所有人都会说，在诸如飓风之类的灾害发生时，如果有贪婪的卖家竟然把物价翻倍，这不</p>
+<p>仅仅是坏，这简直就是道德崩坏。</p>
+<p>当油价上涨时，人们有这样的反映：</p>
+<p>受访者1 ：他们这是在敲诈我们。</p>
+<p>受访者2 ：我觉得我们被裹挟了。</p>
+<p>受访者3 ：我们被玩弄了，这帮石油大亨正在割我们的韭菜。</p>
+<p>受访者4：如今敲竹杠盛行啊。</p>
+<p>主持人：但到底什么才算是哄抬物价？人们说，就是涨价涨太多了。但怎么算是涨价太多？谁说了</p>
+<p>算？</p>
+<p>受访者：那些占危难之中的人便宜的人，在我看来，他们的行为违背了圣经里的每一条道德准则。</p>
+<p>背景音：卡利特里娜飓风发生后，密西西比的检察总长展开了对哄抬物价行为的打击。</p>
+<p>出镜女主持：到处都是一片狼藉。</p>
+<p>背景音：在因为哄抬物价而遭到逮捕的人中，有个叫约翰·舍普森的人。他和家人住在肯塔基。当他从</p>
+<p>电视新闻中看到了飓风的消息，并得知当地人急缺物资。</p>
+<p>受访者：我妻子刚刚出院，她病得很厉害，我们需要发电机。</p>
+<p>背景音：约翰觉得自己可以出手相助（薛兆丰把这点省略了），他也想趁机赚点钱。他买了19台发电</p>
+<p>机，和家人租了一台货车，然后驱车600英里到了密西西比灾区（薛兆丰说1200英里，当然这个无伤</p>
+<p>大雅）。当时灾区正急缺电力设备。</p>
+<p>出境女主持人：当地有500万人没有电力供应。（注：实际上解决电力供应的可不仅仅约翰这一个案</p>
+<p>例，专题片并没有说这点）</p>
+<p>背景音：约翰以成本价两倍的价格销售这批发电机。人们争相抢购。</p>
+<p>约翰：大家都很兴奋，我这是雪中送暖。</p>
+<p>背景音：但警察却没收了这批发电机，约翰也被逮捕，罪名正是哄抬物价。</p>
+<p>约翰：他们把我给抓了。他们竟然抓我，我很震惊。</p>
+<p>背景音：执法机构把他关了4天，到如今他的发电机也还被扣压在警察那里。</p>
+<p>约翰：就那么毫无用处地放着，谁都用不了。</p>
+<p>背景音：所以公众从中受益了么。真正的问题是，到底应该怎么应对各种灾后的物资短缺现象？</p>
+<p>群众呼喊：大家一起说，我们需要什么？发电机！食物！</p>
+<p>受访者：每当出现自然灾害，比如飓风和地震，人们急需的那些物资，电池，手电筒，发电机，水，</p>
+<p>牛奶，要么涨价，要么根本买不到。</p>
+<p>背景音：经济学家罗斯·罗伯茨（Russ
+Roberts）指出，在灾情发生后，如果卖家不涨价，供给就会消</p>
+<p>失。恐慌的顾客会大排长龙，囤积商品。他们会觉得不快点去抢就什么也买不到了。</p>
+<p>受访者：大众的需求超过了现有商品数量，你怎么办？你怎么解决这个问题？你用什么方法去分配这</p>
+<p>些稀缺物资？</p>
+<p>尼克松画面：我们正面对一次严重能源危机。</p>
+<p>背景音：在上次能源危机中，政客们的应对方法是抑制物价。但这非但没解决问题，反而雪上加霜。</p>
+<p>背景音2：完全是一场灾难。到处大排长龙，你却加不上油。</p>
+<p>背景音：这也是为什么如罗伯特说的，为什么高油价变成了一件好事。因为这可以激励石油公司去生</p>
+<p>产更多的石油。</p>
+<p>主持人：你是支持他们谋取巨额暴利吗？</p>
+<p>受访者：没错。涨价确实会伤害消费者，但他只是短期对消费有害，从长期看，高价格能激励石油公</p>
+<p>司去发现和冶炼更多的能源，因此是有利于消费者的。</p>
+<p>主持人：政客们所说的哄抬物价，实际上是一件好事。我知道你肯定不信这个。</p>
+<p>受访者1: 荒谬，太荒谬了！</p>
+<p>受访者2：证明给我们看看，我要证明！</p>
+<p>受访者1：我不知道主持人脑子里装着什么东西！</p>
+<p>主持人：好吧。你们可能信不过我，信不过经济学家罗伯特，但诺贝尔经济学奖得主你也信不过吗？</p>
+<p>他们三个可是都说哄抬物价是个好事儿（没有说发国难财），而且这是让最需要的人得到供给的最好</p>
+<p>方法。</p>
+<p>诺奖得主加里·贝克尔：这是最好的方式。（没有说发国难财）</p>
+<p>诺奖得主弗农·史密斯：好事儿。（没有说发国难财）</p>
+<p>诺奖得主米尔顿·弗里德曼：哄抬物价的人，应该获颁一枚奖章。（没有说发国难财，请大家注意看，</p>
+<p>这里没有一个在说国难财，而是再说哄抬物价，或者敲竹杠。薛兆丰在这里都把发国难财安到这三个</p>
+<p>人身上。你翻译成哄抬物价不行吗？为什么非要翻译成发国难财？）</p>
+<p>背景音：因为更高的价格会带来人们急需的物资。</p>
+<p>受访者：不涨价，就不会有足够的发电机；涨价，人们就会有动力去把发电机送进来。</p>
+<p>约翰：当出现灾害或者紧急情况时，我们指望有人给他们送去需要的物资。但你要是什么也不想付出</p>
+<p>置身事外，那也别指望别人能来搭救你。</p>
+<p>主持人：经济学家说约翰是个英雄。他把发电机卖给自愿出高价的人，但你却说他们不道德。</p>
+<p>受访者1：我们的任务是执行法律。我们州的法律规定，在本州宣布出现紧急状况时，你不可哄抬物</p>
+<p>价。</p>
+<p>受访者2：人们期望生活在一个由爱推动，人人互助的世界里。爱确实也在发挥这个作用。但光靠爱是</p>
+<p>不够的。对陌生人的爱不足以激励人们驾驶货车，满载一车的发电机，去帮助一群饥寒交迫的人。】</p>
+<p>这个视频是首次在国内出现，由经济学家圈首发，以正视听。转载请注明出处。</p>
+<p>薛兆丰用这个案例来分析出现灾情后物品应该涨价是没有问题的，涨价的这个人的行为也没有问题，</p>
+<p>受到谴责的现象也是存在的事实，毕竟主持人也没问那些降价的企业行为是否合理。经济学也认可价</p>
+<p>格上涨，但是问题是，这里不能翻译成发国难财。赞美是一个价值取向，你可以赞美这个卖发电机</p>
+<p>的，但是你不能说你赞美发国难财。因为你不能偷换概念。这里要特别强调，贩卖发电机（价格两</p>
+<p>倍）的这个人可不是发国难财。薛兆丰这里用了欺骗的方法，把一个敲竹杠直接偷换概念成发国难</p>
+<p>财，没有学者求真的风格。</p>
+<p>第三，更为重要的是，在卡特琳娜飓风发生后，各种现场都有，并非只有这个视频所说的这些，薛兆</p>
+<p>丰却只提供了一类事实而已。</p>
+<p>我们公号曾发表过一篇夏春的文章，夏春说薛兆丰基本都早就远离一线研究了，恐怕他们并不知道经</p>
+<p>济学前沿研究已经对“发国难财”的行为更新了认知。这句话是对的，不仅理论，更有事实。</p>
+<p>薛兆丰的视野局限在上个世纪的经济理论之中，并未传授最新的经济学家理论。这里面的原因可能是</p>
+<p>他有很强的“意识形态”，手里有把锤子，看什么都是钉子，说直接一点就是死脑筋。而这一点，对于</p>
+<p>每个要进步的人来说，一定要警醒，这点特别重要。</p>
+<p>诺奖得主塞勒，在他一本行为经济学的书中说，对于打算长期与同一批顾客打交道的公司来说，公平</p>
+<p>的价值应该更高，因为这些公司如果表现出不公平，损失将会更大。事实上，飓风过后，胶合板售价</p>
+<p>最便宜的地方往往是受灾最严重的地方。这也是一个事实，但是在薛兆丰以及薛兆丰所影响到的粉丝</p>
+<p>们的认知里，根本没有。</p>
+<p>真实世界是什么样子的呢？比如新奥尔良遭遇卡特里娜飓风侵袭后，美国家得宝公司以及其他家居连</p>
+<p>锁店将一车车食品和瓶装水运到灾区，免费发放给受灾民众。与此同时，这样一场自然灾害也诱使临</p>
+<p>近新奥尔良的一些人装满一车车的胶合板，以尽可能高的价格将其卖给灾民。这个现象中国也是存在</p>
+<p>的，每次巨灾中我们都能看到这种捐款捐物的行为，比如此次疫情之中。也有一些人涨价，赚取利</p>
+<p>润。两种行为都很正常，没有什么不正常。只说一种情况才不正常。</p>
+<p>诺奖得主塞勒说，在这个案例中，所有卖家都在追求最大的利润。家居连锁店通过公平的救援行为建</p>
+<p>立的声誉会使它们得到长期回报，而那些“发灾难财的人”（注意并非国难财）很快就可以带着客观的</p>
+<p>利润回家，但同时他们要么很愧疚，要么因为提高了稀缺资源的配置而对自己的所作所为感到自豪，</p>
+<p>具体是哪种感受将因人而异。</p>
+<p>这才是现实，每个个体都有自己的打算，有卖低价的，有卖高价的，为什么要赞美高价的呢？低价的</p>
+<p>也很理性啊，实际上也没违背传统的经济学理论，也更容易得到大众的理解，为什么不赞美呢？只赞</p>
+<p>美发国难财的才真是脑袋有包。跟着薛兆丰学习的同学们，也一定要敞开自己的思维，观察真实的世</p>
+<p>界。</p>
+<p>塞勒指出，当需求突然上升时，卖家需要平衡短期收益和长期的信誉损失，而后者是很难度量的。此</p>
+<p>时，公司们应该扪心自问，是不是一直因为自己采取的“不公平”举措而受到惩罚。塞勒说，不管是暴</p>
+<p>风雪还是歌手去世造成了需求的临时性猛增，都不是公司表现贪婪的好时机。“如果你在圣诞节假期哄</p>
+<p>抬物价敲竹杠，他们明年就不会再来了”，塞勒说，想要基业长青的公司都这样做。</p>
+<p>所以，深信薛兆丰“赞美发国难财”说法的人们一定要注意，千万不要傻不拉几的向你的老板提这个建</p>
+<p>议，或者你自己的公司做这个行为，除非你是个憨憨。</p>
+<p>薛兆丰的理论过于狭隘，充满了敌意般的意识形态，仿佛除了涨价其他都是错的。更大的可能是薛兆</p>
+<p>丰对事实的故意扭曲并捏造，比如发国难财的这段自我捏造，他就撒谎了。同时他忽略了非常明显的</p>
+<p>现实，比如只赞美涨价的，而忽视捐款者，降价者，其实他们也很理性，为什么不赞美呢。</p>
+<p>张五常说，那些说抢着去发国难财的言论是番书读得太多了。圈君倒是觉得这些人可能是读的书少</p>
+<p>了，并在很少的基础上捏造一些细节撒谎欺骗大家，并告诉大家世界就是他想的那个样子的。世界并</p>
+<p>不是那个样子的，而是丰富多彩的，祝福诸君身体健康！</p>
+<h2 id="大纲">大纲</h2>
+<h2 id="百字摘要">百字摘要</h2>
+<h2 id="金庸案例">金庸案例</h2>
+<h2 id="时间消耗">时间消耗</h2>
+<h2 id="阅读理解">阅读理解：</h2>
+<h2 id="大纲-1">大纲：</h2>
+<h2 id="撰写">撰写：</h2>
+<h2 id="录音">录音</h2>
+<h2 id="一小时运动">一小时运动</h2>
+<h2 id="英文原文">英文原文</h2>
+<p>7 FEBRUARY</p>
+<p>The Educated Person</p>
+<p>The educated person needs to bring knowledge to bear on the present,
+not to mention molding</p>
+<p>the future.</p>
+<p>molding：</p>
+<p>mention：</p>
+<dl>
+<dt>提到；写到；说到</dt>
+<dd>
+<p>sth/sb (to sb) to write or speak about sth/sb, especially without
+giving much information</p>
+</dd>
+</dl>
+<p>In his 1943 novel, published in English as Magister Ludi (1949),
+Hermann Hesse anticipated the</p>
+<p>sort of world the humanists want—and its failure.</p>
+<p>Magister：</p>
+<p>humanists：</p>
+<p>人道主义者；人类学者，人文学者；人</p>
+<p>humanist n.</p>
+<p>…</p>
+<p>The book depicts a brotherhood of intellectuals, artists, and
+humanists who live a life of splendid</p>
+<p>isolation, dedicated to the Great Tradition, its wisdom and its
+beauty.</p>
+<p>depict：</p>
+<p>描绘；描画</p>
+<p>splendid：</p>
+<p>极佳的；非常好的</p>
+<p>isolation：</p>
+<p>隔离；隔离状态</p>
+<p>Tradition：</p>
+<p>to show an image of sb/sth in a picture</p>
+<p>( old-fashioned ) excellent; very good</p>
+<p>the act of separating sb/sth; the state of being separate</p>
+<p>[ C U ] a belief, custom or way of doing sth that has existed for a
+long time among a particular group of people; a set of</p>
+<p>these beliefs or customs</p>
+<p>传统；传统的信仰（或风俗）</p>
+<p>But the hero, the most accomplished Master of the Brotherhood,
+decides in the end to return to the</p>
+<p>polluted, vulgar, turbulent, strife torn, money grubbing reality—for
+his values are only fool’s gold</p>
+<p>unless they have relevance to the world.</p>
+<p>vulgar：</p>
+<p>庸俗的；粗俗的；粗野的；不雅的</p>
+<p>turbulent：</p>
+<p>动荡的；动乱的；骚动的；</p>
+<p>not having or showing good taste; not polite, elegant or well
+behaved</p>
+<p>混乱的</p>
+<p>in which there is a lot of sudden change, confusion, disagreement and
+sometimes violence</p>
+<p>strife：</p>
+<p>torn：</p>
+<p>冲突；争斗；倾轧</p>
+<p>to damage sth by pulling it apart or into pieces or by cutting it on
+sth sharp; to become damaged in this way 撕裂；撕碎；扯</p>
+<p>[ U ] ( formal ) ( literary ) angry or violent disagreement between
+two people or groups of people</p>
+<p>破；戳破</p>
+<p>grubbing：</p>
+<p>寻；挖掘寻找</p>
+<p>[ V ] ~ (around/about) (for sth) to look for sth, especially by
+digging or by looking through or under other things</p>
+<p>翻找；搜</p>
+<p>relevance：n. 关联；适当；中肯</p>
+<p>Post capitalist society needs the educated person even more than any
+earlier society did, and</p>
+<p>access to the great heritage of the past will have to be an essential
+element.</p>
+<p>heritage：</p>
+<p>[ usually sing. ] the history, traditions and qualities that a
+country or society has had for many years and that are</p>
+<p>considered an important part of its character</p>
+<p>遗产（指国家或社会长期形成的历史、传统和特色）</p>
+<dl>
+<dt>essential：</dt>
+<dd>
+<p>(to/for sth) | ~ (to do sth) | ~ (that…) completely necessary;
+extremely important in a particular situation or for a</p>
+</dd>
+</dl>
+<p>particular activity SYN vital</p>
+<p>完全必要的；必不可少的；极其重要</p>
+<p>But liberal education must enable the person to understand reality
+and master it.</p>
+<p>liberal：</p>
+<p>willing to understand and respect other people’s behaviour, opinions,
+etc., especially when they are different from your own;</p>
+<p>believing people should be able to choose how they behave</p>
+<p>宽宏大度的；心胸宽阔的；开明的</p>
+<h3 id="action-point">ACTION POINT:</h3>
+<p>Read a book on politics, history, or anything that interests you.</p>
+<p>What did you learn?</p>
+<p>How can you put that knowledge to work?</p>
+<p>Post-Capitalist Society</p>
+<h2 id="february">7 FEBRUARY</h2>
+<h3 id="the-educated-person">The Educated Person</h3>
+<p>The educated person needs to bring knowledge to bear on the
+present,</p>
+<p>not to mention molding the future.</p>
+<p>In his 1943 novel, published in English as Magister Ludi (1949),
+Her-</p>
+<p>mann Hesse anticipated the sort of world the humanists want—and
+its</p>
+<p>failure. The book depicts a brotherhood of intellectuals, artists,
+and hu-</p>
+<p>manists who live a life of splendid isolation, dedicated to the Great
+Tradi-</p>
+<p>tion, its wisdom and its beauty. But the hero, the most
+accomplished</p>
+<p>Master of the Brotherhood, decides in the end to return to the
+polluted,</p>
+<p>vulgar, turbulent, strife-torn, moneygrubbing reality—for his values
+are</p>
+<p>only fool’s gold unless they have relevance to the world.</p>
+<p>Postcapitalist society needs the educated person even more than
+any</p>
+<p>earlier society did, and access to the great heritage of the past
+will have to</p>
+<p>be an essential element. But liberal education must enable the person
+to</p>
+<p>un-derstand reality and master it.</p>
+<h3 id="action-point-1">ACTION POINT:</h3>
+<p>Read a book on politics, history, or anything that interests</p>
+<p>you. What did you learn? How can you put that knowledge to work?</p>
+<h4 id="post-capitalist-society">Post-Capitalist Society</h4>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

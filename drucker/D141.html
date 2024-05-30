@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="第三同读" />
+  <title>德鲁克日志</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">德鲁克日志</h1>
+<p class="author">第三同读</p>
+</header>
+<h2 id="透过金庸读懂德鲁克">透过金庸读懂德鲁克</h2>
+<p>一句话说出了教育的本质</p>
+<p>最近接触了很多做“教育”的，有的称呼自己为“K12”的，有的称呼自己为做“培训”的，有的说自己是“商</p>
+<p>学院”，有的自称为“院长”。</p>
+<p>随着年龄的增长，慢慢也有人叫我“老师”了，我常常的回答是“老则老矣，师则不敢”。</p>
+<p>这些做“教育”的，有的说“孩子教育问题，首先是家长的教育”，有的说“多读书，一年要多50本书”，</p>
+<p>有的说，要有知识体系，来， “我帮你更换一下你的底层操作系统”。
+有的说，教育就是“好好学习”。</p>
+<p>那么，什么是教育呢？</p>
+<p>其实，我们的老祖宗早就用一句话说清楚了。这句话就是论语的开篇。</p>
+<p>也就是“学而时习之”。</p>
+<p>我们的老祖先认为，教育就是学习，而学习就是两件事：学和习。</p>
+<p>学之的是知识的理论而习指的是知识的实践。</p>
+<p>德鲁克把工人分为知识工人和体力劳动者。这两者都是需要教育的。知识教育的方式略有不同。</p>
+<p>体力劳动者有少量的学，更多的是习。他们简单地学一下，然后反复地习，通过习让自己变得更加熟</p>
+<p>练，更加高效和不容易出错。</p>
+<p>在工业时代，有一个叫做弗雷德里克·温斯洛·泰勒的人觉得，体力劳动者个体的习会有问题，由于个体的差</p>
+<p>异已经时间的加持，大家的水平会不一致，所以，弗雷德里克·温斯洛·泰勒针对工业时代的习给出了建议：</p>
+<ol type="1">
+<li><p>对体力劳动的工作进行分析，把它分解成一些动作。</p></li>
+<li><p>记录每一个动作，记录这个动作的时间以及效果</p></li>
+<li><p>通过科学分析，消除不必要的动作。</p></li>
+</ol>
+<p>4.剩下的动作就是必需而且有效的动作，并且需要最少的体力，最少的时间</p>
+<ol start="5" type="1">
+<li><p>把这些动作按逻辑连接起来，变成一个“工作”。</p></li>
+<li><p>最后根据这个“工作”设计工具，或者反复练习。</p></li>
+</ol>
+<p>对于体力工作来说，习就是主要的，比如做一个钳工，比如车工，都是简单学习后就是反复练习，直</p>
+<p>到成为最佳。这个习的方式对所有的体力劳动者都是有效的。</p>
+<p>那么对于知识工人呢？特别是在发达国家，或者发达的区域，这里的工人以知识工人为主。如果让他</p>
+<p>们高效呢？</p>
+<p>他们工作所需要的技能需要以“学”为主。他们需要学习高深的理论才可以应对所遇见的工作。比如外</p>
+<p>科医生，机械师，律师，高级经理等。</p>
+<p>然后，学习并不能让他们成为优秀而高效的外科医生、机械师、律师等，他们还是需要“习”，甚至也</p>
+<p>是大量的习。</p>
+<p>因为在他们面临工作时，不只要“动脑”，这部分是没办法大大提高效率的；还要进行大量的体力劳</p>
+<p>动，比如外科医生十七八个小时的手术。</p>
+<p>对于他们来说，他们在需要“学”的同时，也需要“习”。而他们面临的这个“习”，可以用弗雷德里克·温斯洛·</p>
+<p>泰勒的方式优化。</p>
+<p>学习，就是学和习。几千年前的老祖宗孔子告诉我们的“学而时习之”，就是教育的本质。</p>
+<p>对于体力劳动者，今天你习了么？</p>
+<p>对于脑力劳动者，今天你“学”了么，学了后“习”了么？</p>
+<p>对于知识工人，也就是脑力劳动者，德鲁克给出了一个建议：把你工作中的脑力劳动和体力劳动分</p>
+<p>开，用弗雷德里克·温斯洛·泰勒的方式来优化你的体力劳动。</p>
+<h2 id="百字摘要">百字摘要</h2>
+<h2 id="金庸案例">金庸案例</h2>
+<p>20 MAY</p>
+<p>Making Manual Work Productive</p>
+<p>Knowledge work includes manual operations that require industrial
+engineering.</p>
+<p>Frederick Winslow Taylor’s principles sound deceptively simple.</p>
+<p>deceptively:adv. 看似；不像看上去那么；比实际更显得</p>
+<p>The first step in making the manual worker productive is to look at
+the task and to analyze its</p>
+<p>constituent motions.</p>
+<p>constituent:</p>
+<p>成分；构成要素</p>
+<p>one of the parts of sth that combine to form the whole</p>
+<p>The next step is to record each motion, the physical effort it takes
+and the time it takes.</p>
+<p>Then motions that are not needed can be eliminated.</p>
+<p>eliminated:</p>
+<p>V-T To eliminate something, especially something you do not want or
+need, means to remove it completely.</p>
+<p>根除</p>
+<p>Then each of the motions that remain as essential to obtaining the
+finished product is set up so as</p>
+<p>to be done the simplest way, the easiest way, the way that puts the
+least physical and mental strain</p>
+<p>on the operator, the way that requires the least time.</p>
+<p>Then these motions are put together again into a “job” that is in
+logical sequence.</p>
+<p>Finally, the tools needed to do the motions are redesigned.</p>
+<p>Taylor’s approach is still going to be the organizing principle in
+countries in which manual work is</p>
+<p>the growth sector of society and economy.</p>
+<p>In developed countries the challenge is no longer to make manual work
+productive.</p>
+<p>The central challenge will be to make knowledge workers
+productive.</p>
+<p>But, there is a tremendous amount of knowledge work—including work
+requiring highly advanced</p>
+<p>and theoretical knowledge—that includes manual operations.</p>
+<p>tremendous:</p>
+<p>巨大的；极大的</p>
+<p>very great</p>
+<p>theoretical</p>
+<p>experiment</p>
+<p>:concerned with the ideas and principles on which a particular
+subject is based, rather than with practice and</p>
+<p>理论上的</p>
+<p>And the productivity of these operations also requires Industrial
+Engineering, the name by which</p>
+<p>Taylor’s methodology now goes.</p>
+<h3
+id="action-point-figure-out-the-mix-of-knowledge-work-and-manual-work-in-your-job.-apply-the-basic">ACTION
+POINT: Figure out the mix of knowledge work and manual work in your job.
+Apply the basic</h3>
+<p>principles of industrial engineering to the latter.</p>
+<p>Management Challenges for the 21st Century</p>
+<h2 id="may">20 MAY</h2>
+<h3 id="making-manual-work-productive">Making Manual Work
+Productive</h3>
+<p>Knowledge work includes manual operations</p>
+<p>that require industrial engineering.</p>
+<p>Frederick Winslow Taylor’s principles sound deceptively simple. The
+first</p>
+<p>step in making the manual worker productive is to look at the task
+and to</p>
+<p>analyze its constituent motions. The next step is to record each
+mo-tion, the</p>
+<p>physical effort it takes and the time it takes. Then motions that are
+not needed</p>
+<p>can be eliminated. Then each of the motions that remain as es-sential
+to</p>
+<p>obtaining the finished product is set up so as to be done the
+sim-plest way, the</p>
+<p>easiest way, the way that puts the least physical and mental strain
+on the</p>
+<p>operator, the way that requires the least time. Then these mo-tions
+are put</p>
+<p>together again into a “job” that is in logical sequence. Finally,</p>
+<p>the tools needed to do the motions are redesigned.</p>
+<p>Taylor’s approach is still going to be the organizing principle in
+coun-</p>
+<p>tries in which manual work is the growth sector of society and
+economy.</p>
+<p>In developed countries the challenge is no longer to make manual
+work</p>
+<p>pro-ductive. The central challenge will be to make knowledge
+workers</p>
+<p>produc-tive. But, there is a tremendous amount of knowledge work—</p>
+<p>including work requiring highly advanced and theoretical
+knowledge—</p>
+<p>that includes manual operations. And the productivity of these
+operations</p>
+<p>also requires Industrial Engineering, the name by which Taylor’s</p>
+<p>methodology now goes.</p>
+<h3 id="action-point">ACTION POINT:</h3>
+<p>Figure out the mix of knowledge work and manual work in</p>
+<p>your job. Apply the basic principles of industrial engineering to the
+latter.</p>
+<h4 id="management-challenges-for-the-21st-century">Management
+Challenges for the 21st Century</h4>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

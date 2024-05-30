@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="第三同读" />
+  <title>德鲁克日志</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">德鲁克日志</h1>
+<p class="author">第三同读</p>
+</header>
+<h2 id="透过金庸读懂德鲁克">透过金庸读懂德鲁克</h2>
+<p>如何做到天下无敌？对于很多人来说，这是疯子才会想到问题，而对于有些人来说这只是一个科研项</p>
+<p>目。</p>
+<p>全真教有一个天罡北斗阵，是王重阳设计又来对抗小支军队的，用几十个人对抗一支军队。这样的设</p>
+<p>计在一定程度上是天下无敌的，因为一直军队围观几个人的机会非常少。</p>
+<p>可惜这个阵法表现并不好。（参考：）</p>
+<p>后来张三丰也发明了一个阵法，叫做“真武七截阵”，这是一套武功，分为七部分，每人练习一部分。</p>
+<p>单独使出了固然有精妙之处，而连在一起，师兄弟之间相辅相成、攻守兼备，威力大增。若七人同时</p>
+<p>使用，犹如六十四位当世一流高手同时出手。几乎天下无敌了。</p>
+<p>后来张三丰又想把这套武功变成一个人施展，总是不行。没多久，张三丰终于想明白了：“这路武功倘</p>
+<p>若一人能使，岂非单是一人，便可匹敌当世六十四为第一流高手，这年头未免过于荒诞狂妄了。”之后</p>
+<p>便放弃了。</p>
+<p>不过，有一个人却在认真思考这个问题，并且彻底解决了这个问题。就是如何做到天下无敌。</p>
+<p>这个人不但解决了天下无敌的问题，而且还加重了筹码，对任何人的打击，都用对方的最擅长的方</p>
+<p>法。这就在天下无敌的基础上增加了一个传奇的色彩，不但在武力上战胜对方，而且在精神上彻底摧</p>
+<p>毁对方，打的对方怀疑人生。为什么要这样的？如何做到的呢？这就是今天说的这位。</p>
+<p>这位就是五代末年的慕容龙城，慕容龙城可能你不大熟悉，他有一个后代你肯定熟悉，就是慕容博，</p>
+<p>慕容博有一个儿子叫做慕容复，也就是“北乔峰、南慕容”的慕容复。</p>
+<p>慕容龙城不但是一位武林人士，还是大燕国的皇族，大燕国虽然已经覆灭多年，大燕国的皇族还是一</p>
+<p>心谋求复国。而复国需要武力，在那个时代，最强大的武力肯定就是武功了。</p>
+<p>慕容龙城是位武学天才，年轻时即练就了一身绝世的武功，横行天下莫逢敌手。如果是普通武林人</p>
+<p>士，这就很满足了：欺男霸女什么的不在话下了。</p>
+<p>可是慕容龙城并不满足，因为他需要的是统治天下而不是横行天下。他就需要比武功更多的东西。</p>
+<p>在三十多岁那年，慕容龙城打算把自己打造成神。因为只有神才可以获得别人的尊重、畏惧和追随。</p>
+<p>慕容龙城把自己打造成神的方式很简单：我不但能打败任何人（这个在他20多岁时就可以达到了），</p>
+<p>而且还可以用对方最擅长的武功打败对方。</p>
+<p>定下这个“神迹”后，慕容龙城就宣布，如果我不能用你最擅长的武功杀死你，那么我就不会去杀你。</p>
+<p>然后江湖上就陆续出现了很多神迹：很多武林人士都死于自己最擅长的武功中最擅长的招式。慕容龙</p>
+<p>城称自己的武功为“斗转星移”，江湖人俗称之为“以彼之道，还施彼身”。仿佛传说中的报应。</p>
+<p>果然，没多久，慕容龙城就成了神的传说，身边也聚集了很多热烈信仰的追随者。</p>
+<p>那么慕容龙城是如何做到的呢？其实很简单。</p>
+<p>要实现以彼之道还施彼身，要满足以下两个条件：</p>
+<ol type="1">
+<li><p>充分了解对方的武功。</p></li>
+<li><p>可以用相同的武功对付对方，并且要比对方练习了几十年的表现还要好。</p></li>
+</ol>
+<p>这个看起来很难，其实理论上并不难。</p>
+<p>首先，慕容龙城把天下武功分成了三类：</p>
+<ol type="1">
+<li><p>初阶武功</p></li>
+<li><p>中阶武功</p></li>
+<li><p>高阶武功</p></li>
+</ol>
+<p>初阶武功，指的是以力气和基础内功为主的，附带一些招式的技巧，如太祖长拳等，这类武功大多类</p>
+<p>似，内功的路数也接近。会这类武功的人，江湖上很多。作为武学高手，慕容龙城并不需要去学对方</p>
+<p>的武功，只需要知道对方最擅长的招式的使用结果就好了。因为那些结果慕容龙城可以轻松模仿出</p>
+<p>来，形成“以彼之道还施彼身”的效果。</p>
+<p>中阶武功指的是有较深的内功，并且内功有一些特殊的地方，比如走任督二脉，走奇经八脉等等，有</p>
+<p>的招式的方位和动作也怪异，比如鳄鱼剪，还有五斗米神功等。这类武功的应对，就是慕容龙城的“斗</p>
+<p>转星移”的主要应对群体。</p>
+<p>“斗转星移”基本上是一个高阶的“四两拨千斤”，只是在“拨千斤”的时候用了精巧的计算可以让对方被自</p>
+<p>己的力量伤害，从而造成“以彼之道还施彼身”的效果。这个的前提还是这类武功只是普通复杂，而且</p>
+<p>这人的武功和慕容龙城差别很大。</p>
+<p>对于高阶武功，就比较麻烦了，比如打狗棍法，比如降龙十八掌，比如少林寺的大部分绝技，如：袖</p>
+<p>里乾坤，拈花指等。</p>
+<p>使用这类武功的人，虽然打不过慕容龙城，但差别也不会太大。那个对付中阶武功的“斗转星移”并不</p>
+<p>能对付这些人。</p>
+<p>怎么办呢？这部分只要下功夫了，毕竟这类的高阶武功不多，只要足够聪明，还是学的会的。</p>
+<p>所以，慕容龙城启动了一个庞大的“武学图书馆”计划，就是收集江湖上所有的武学秘籍，特别是那写</p>
+<p>高阶武学秘籍，如六脉神剑等。</p>
+<p>慕容龙城确实是个天才，而且是一个优秀的政治家，他一方面收集到了很多高阶武功，一方面学习一</p>
+<p>些简单的使用方法，一方面又和这些会高阶武功的人保持良好的关系，偶尔杀几个有名无实的中阶高</p>
+<p>手来强化一下自己的“神迹”。这样一来，慕容家的声望就更高了，在慕容龙城的筹划下，这种威望持</p>
+<p>续了上百年，到了北宋末年还成就了一个和北乔峰齐名的南慕容。</p>
+<p>从天才的慕容龙城，我们可以看到一个解决问题的方法，就是用多重的知识来定义一个问题，进而去</p>
+<p>解决他。</p>
+<p>慕容龙城需要的是通过“神迹”来放大自己的影响力。而神迹并不是打败对方，而是用不可思议的方式</p>
+<p>打败对方，最不可思议的方式就是用对方的方式：因为常人认为，不可能有人会天下所有的武功，那</p>
+<p>就说明会的人一定不是常人。</p>
+<p>进一步，慕容龙城通过对初阶、中阶武功的大量分析，得出了这些武功的规律，创造了对初阶、中阶</p>
+<p>武功的“斗转星移”。</p>
+<p>又通过大量了解和学习高阶武功，如降龙十八掌、打狗棍等，形成绝对的威慑。最终达到的自己的目</p>
+<p>的。</p>
+<p>老年的慕容龙城已经是神的存在了，所有人都知道他无所不知，无所不能。都期待住在他的附近，感</p>
+<p>受神的魅力。</p>
+<p>而这，正是慕容龙城想要的。在这个意义上，慕容龙城真的做到了天下无敌：因为没人敢和他为敌</p>
+<p>了。</p>
+<p>你和他讲道理，他和你耍流氓；你和他耍流氓，他和你讲法制；你和他讲法制，他和你讲政治；你和</p>
+<p>他讲政治，他和你讲国情；你和他讲国情，他和你讲接轨；你和他讲接轨，他和你讲文化；你和他讲</p>
+<p>文化，他和你讲孔子；你和他讲孔子，他和你讲老子；你和他讲老子，他给你装孙子。</p>
+<p>【提纲】</p>
+<h2 id="百字摘要">百字摘要</h2>
+<p>格栅理论</p>
+<h2 id="金庸案例">金庸案例</h2>
+<h2 id="may">29 MAY</h2>
+<h3 id="raise-the-yield-of-existing-knowledge">Raise the Yield of
+Existing Knowledge</h3>
+<p>“Only connect.” In learning and teaching, we do have to focus on the
+tool.</p>
+<p>In usage, we have to focus on the end result, on the task, on the
+work.</p>
+<p>“Only connect” was the constant admonition of a great English
+novelist, E.M.Forster.</p>
+<p>It has always been the hallmark of the artist, but equally of the
+great scientist.</p>
+<p>At their level, the capacity to connect may be inborn and part of
+that mys-tery we call “genius.”</p>
+<p>But to a large extent, the ability to connect and thus to raise the
+yield of existing knowledge is learnable.</p>
+<p>Eventually, it should be-come teachable.</p>
+<p>It requires Amethodology for problem definition—even more urgently
+perhaps than it requires the methodology for “problem solv-ing.”</p>
+<p>It requires systematic analysis of the kind of knowledge and
+informa-tion a given problem requires, and Amethodology for organizing
+the stages in which a given problem can be tackled —the methodology that
+underlies what we now call “systems research.”</p>
+<p>It requires what might be called “Or-ganizing Ignorance”—and there is
+always so much more ignorance around than there is knowledge.</p>
+<p>Specialization into knowledges has given us enormous performance
+po-tential in each area.</p>
+<p>But because knowledges are so specialized, we need also a
+methodology, a discipline, a process to turn this potential into
+perfor-mance.</p>
+<p>Otherwise, most of the available knowledge will not become
+pro-ductive; it will remain mere information.</p>
+<p>To make knowledge productive, we will have to learn to connect.</p>
+<h3 id="action-point">ACTION POINT:</h3>
+<p>Spend sufficient time on the definition of a problem prior to making
+a decision.</p>
+<h4 id="post-capitalist-society">Post-Capitalist Society</h4>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

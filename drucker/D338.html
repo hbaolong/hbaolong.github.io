@@ -1,0 +1,1046 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="第三同读" />
+  <title>德鲁克日志</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">德鲁克日志</h1>
+<p class="author">第三同读</p>
+</header>
+<h2 id="透过金庸读懂德鲁克">透过金庸读懂德鲁克</h2>
+<p>金庸掌门人的进化</p>
+<p>金庸笔下有很多门派，每个门派都有一个或多个掌门人。每一个门派多的有几万几十万人，少的或者</p>
+<p>只有一个人，却也是个门派。</p>
+<p>门派是金庸笔下主要的江湖组织，大概是因为人是群居性动物，一个人总是太孤独。比如，优秀如金</p>
+<p>毛狮王谢逊，出去玩了一圈，也结交了一些朋友。和殷天正、韦蝠王成为了异姓兄弟，共同加入了明</p>
+<p>教，也算是有组织的人了。</p>
+<p>那么，金庸笔下的门派的发展，有什么规律么？我今天按时间轴梳理了一下，还真发现了一个有趣的</p>
+<p>规律，来和大家说说。</p>
+<p>除了春秋时期的阿青，金庸的江湖大概是从五胡十国开始的，也就是慕容龙城、段思平等。而真正出</p>
+<p>场的第一个掌门人或许便是逍遥派的无崖子。</p>
+<p>不过，无崖子的结局很惨，先是被自己的弟子丁春秋打个半死。在另一个弟子苏星河的救助下，以高</p>
+<p>位残疾的身份在一个破窑里呆了几十年。</p>
+<p>好容易通过自己的猪脑子想办法找了一个接班的掌门人，用性命把掌门之位传给了自己的这个陌生弟</p>
+<p>子，还被自己的师姐、师妹欺负来欺负去的。</p>
+<p>无崖子的师姐师妹李秋水、童姥看到虚竹后就知道了，虚竹掌门人的身份，虽然百般欺负了虚竹，却</p>
+<p>也不敢不认可虚竹的掌门人身份。</p>
+<p>童姥在临死前，也把自己的所有资产都交给了虚竹这个逍遥派的掌门人。</p>
+<p>这就是金庸笔下的第一代掌门人：拥有生杀予夺的最高权力，也就所有人争夺的焦点。为了争夺这个</p>
+<p>掌门人之位，父子、兄弟、师徒都不再有人性。</p>
+<p>第一代掌门人的代表人物并不是无崖子，而是黄药师。作为桃花岛的岛主，黄药师对于岛上的一切</p>
+<p>人，包括徒弟、哑仆、女儿都拥有绝对的生杀予夺的权力。这一代掌门和弟子之间的关系，更像主奴</p>
+<p>的关系。黄药师可以随意打断弟子的腿，弟子也不会有任何的怨念。</p>
+<p>这种掌门人和弟子的关系，太残忍，太冷酷，也确实不可持久。很快，这种关系就消失了。</p>
+<p>这时已经到了元朝末年，这时的江湖上出现了第二代掌门人，也就是张三丰。</p>
+<p>张三丰创办了武当派，自任第一代掌门人。武当派的弟子也都是张三丰的徒弟，这一点就和黄药师的</p>
+<p>桃花岛一样。不过，不同的是，张三丰和众弟子的关系更像合伙人而不是主奴。</p>
+<p>张三丰用心寻找一个一个有资质，有才华，有能力人，如宋远桥，如俞莲舟，如俞岱岩，如张松溪，</p>
+<p>如张翠山等。因为用心，所以，张三丰的弟子们都很厉害，很快就在江湖中独当一面，为武当的崛起</p>
+<p>立下了功劳。</p>
+<p>随着年龄增大，张三丰把掌门之位传给了宋远桥。后来宋远桥因为儿子的原因，被免去掌门之位，由</p>
+<p>二弟子俞莲舟任武当派掌门。</p>
+<p>这就是第二代掌门人的特征：和弟子更多想合伙人，或者兄弟，有用一定的权力，但不再随意生杀予</p>
+<p>夺了。弟子们还会争夺掌门之位，却大多是私下斗争，即使做不了掌门，还可以生活的很自在。</p>
+<p>不过，第二代掌门人也会出现很多问题，比如华山的鲜于通就暗杀了掌门的候选人白垣。造成了很多</p>
+<p>人间悲剧。</p>
+<p>而同门弟子之间，虽然有人愿意为大家服务，更多的还是认为在失去了“服务权”后，也可以正常滴生</p>
+<p>活。</p>
+<p>随着时间推进到大清，第三代掌门人出现了。这时江湖上主要的门派，不再是传统的少林、武当了，</p>
+<p>而是天地会、红花会等。这些门派都有明确的政治目的，其掌门人也有很高的威望，如天地会的陈近</p>
+<p>南，红花会的陈家洛等等。</p>
+<p>这些掌门人，也都武功超绝，陈近南的凝血神爪也是冠绝江湖的绝技。那么陈近南和天地会其他人的</p>
+<p>关系是什么呢？我感觉更像同事。</p>
+<p>是的，更像同事。陈近南负责提供目标，伙同其他同事共同向目标走去。陈近南更像企业的领导。</p>
+<p>这就是第三代掌门人的特征，这些掌门人仍然拥有生杀予夺的权力，却非常谨慎用这些权力，而且他</p>
+<p>们为了实现目标，面对门人弟子时会非常谨慎，甚至需要去“哈着”弟子。</p>
+<p>所以，虽然还是拥有巨大的权限，却很少有人愿意做这样的掌门人了。当青木堂的人来找韦小宝做天</p>
+<p>地会总舵主时。韦小宝是很惊慌的。</p>
+<p>韦小宝连连摇手，说道：“总舵主我是决计做不来的。”</p>
+<h2 id="大纲">大纲</h2>
+<p>第一代：黄药师</p>
+<p>第二代：张三丰</p>
+<p>第三代：陈近南</p>
+<h2 id="百字摘要">百字摘要</h2>
+<h2 id="金庸案例">金庸案例</h2>
+<h2 id="时间消耗">时间消耗</h2>
+<h2 id="阅读理解">阅读理解：</h2>
+<h2 id="大纲-1">大纲：</h2>
+<h2 id="撰写">撰写：</h2>
+<h2 id="录音">录音</h2>
+<h2 id="一小时运动">一小时运动</h2>
+<h2 id="英文原文">英文原文</h2>
+<p>3 DECEMBER</p>
+<p>The New Entrepreneur</p>
+<p>Entrepreneur：a person who makes money by starting or running
+businesses, especially when this</p>
+<p>involves taking financial risks
+创业者，企业家（尤指涉及财务风险的）</p>
+<p>History moves in a spiral; one returns to the preceding position,but
+on a higher level, and by a</p>
+<p>corkscrew-like path.</p>
+<p>spiral：a shape or design, consisting of a continuous curved line
+that winds around a central point,</p>
+<p>with each curve further away from the centre 螺旋形；螺旋式</p>
+<p>corkscrew-like：a tool for pulling corks from bottles. Most
+corkscrews have a handle and a long</p>
+<p>twisted piece of metal for pushing into the cork .
+瓶塞钻；螺旋开瓶起子</p>
+<p>preceding：to happen before sth or come before sth/sb in order
+在…之前发生（或出现）；先于</p>
+<p>We are again entering an era in which emphasis will be on
+entrepreneurship.</p>
+<p>entrepreneurship：n. 企业家精神</p>
+<p>emphasis：~ (on/upon sth) special importance that is given to sth
+强调；重视；重要性</p>
+<p>However, it will not be an entrepreneurship of a century ago, that
+is, the ability of a single man to</p>
+<p>organize a business he himself could run, control, embrace.</p>
+<p>It will rather be the ability to create and direct an organization
+for the new.</p>
+<p>We need men and women who can build a new structure of
+entrepreneurship on the managerial</p>
+<p>foundations laid these last eighty years.</p>
+<p>managerial：[ usually before noun ] connected with the work of a
+manager 经理的；管理的</p>
+<p>laid ：v. 放；铺设；安排（lay的过去分词）</p>
+<p>History, it has often been observed, moves in a spiral; one returns
+to the preceding position, or to</p>
+<p>the preceding problem, but on a higher level, and by a corkscrew-like
+path.</p>
+<p>In this fashion we are going to return to entrepreneurship on a path
+that led out from a lower level,</p>
+<p>that of the single entrepreneur, to the manager, and now back, though
+upward, to entrepreneurship</p>
+<p>again.</p>
+<p>The businessperson will have to acquire a number of new abilities,
+all of them entrepreneurial in</p>
+<p>nature, but all of them to be exercised in and through a managerial
+organization.</p>
+<ol type="1">
+<li>First of all the businessman will have to learn to understand the
+dynamics of technology and to anticipate</li>
+</ol>
+<p>the direction and speed of technological change.</p>
+<p>2.The businessman will increasingly have to understand the dynamics
+of the market.</p>
+<ol start="3" type="1">
+<li>Businessmen will have to learn to build and manage an innovative
+organization.</li>
+</ol>
+<h3 id="action-point">ACTION POINT:</h3>
+<p>Establish an entrepreneurial culture in your organization.</p>
+<p>The Age of Discontinuity</p>
+<p>【原书原文】</p>
+<p>The New Entrepreneur</p>
+<p>The fifty years before the outbreak of World War I have been called
+the “Heroic Age of Invention.” They</p>
+<p>might equally be called the “Heroic Age of the Entrepreneur.” The
+inventors of this period had to know how to</p>
+<p>convert their technical work into economic performance, and their
+invention into a business.* It was then that</p>
+<p>the big businesses of today were founded. Even then the ability to
+manage that is, to organize people for</p>
+<p>ongoing work was important. Without it the greatest inventor lost his
+business, no matter how keenly he may</p>
+<p>have wanted to be a tycoon. This, for instance, was the fate of
+Edison despite his burning ambition to be the</p>
+<p>owner and head of a big company. But needed above all was
+entrepreneurshipthat is, the ability to create the</p>
+<p>new and different.</p>
+<p>In the fifty years since World War I, the premium has been on
+management. Not that entrepreneurship has been</p>
+<p>lacking, or that the opportunities for it have been limited. On the
+contrary. In the twenty years since the end of</p>
+<p>World War II, more new businesses have been founded in every
+developed country than in any similar period</p>
+<p>before both absolutely and in relation to the number of businesses in
+the economy. More of these new</p>
+<p>businesses have grown to respectable size, some into worldwide
+giants, such as IBM, Xerox,</p>
+<ul>
+<li>The Germans had a word for it. They called this period the
+“Gruenderjahre”the years of the founders.</li>
+</ul>
+<p>and some of the pharmaceutical companies. Yet the great need has been
+for the productive organization of</p>
+<p>large numbers of people to do what could already be planned,
+projected, and laid out, that is, for doing</p>
+<p>something that was already reasonably well known.</p>
+<p>Now we are entering again an era in which emphasis will be on
+entrepreneurship. However, it will not be the</p>
+<p>entrepreneurship of a century ago, that is, the ability of a single
+man to organize a business he himself could</p>
+<p>run, control, embrace. It will rather be the ability to create and
+direct an organization for the new. We need men</p>
+<p>who can build a new structure of entrepreneurship on the managerial
+foundations laid these last fifty years.</p>
+<p>History, it has often been observed, moves in a spiral; one returns
+to the preceding position, or to the preceding</p>
+<p>problem, but on a higher level, and by a corkscrew- like path. In
+this fashion we are going to return to</p>
+<p>entrepreneurship on a path that led out from a lower level, that of
+the single entrepreneur, to the manager, and</p>
+<p>now back, though upward, to entrepreneurship again.</p>
+<p>The businessman will have to acquire a number of new abilities, all
+of them entrepreneurial in nature, but all of</p>
+<p>them to be exercised in and through a managerial, and usually a
+fairly large and complex, organization.</p>
+<p>The Dynamics of Technology</p>
+<p>First of all the businessman will have to learn to understand the
+dynamics of technology and to anticipate</p>
+<p>the direction and speed of technological change. As long as new
+technology originated with the lone inventor</p>
+<p>operating outside the existing economy, there was no need for such
+understanding. If, however, a going,</p>
+<p>developed economy is to be capable of rapid innovation and change,
+its businessmen must be able to anticipate</p>
+<p>technology and to take advantage of the opportunities that
+technological developments offer.</p>
+<p>“Prediction” of technological change in the strict meaning of the
+term would require ability to know both what</p>
+<p>changes could be expected and when they would occur. I doubt that we
+can ever know in advance the timing</p>
+<p>of major technological changes. But we can know with high probability
+what technological changes are likely;</p>
+<p>which of those are likely to have major economic impact, that is, to
+bring about new industries; and whether</p>
+<p>such changes are indeed approaching or imminent. The dynamics of
+technology are not particularly mysterious.</p>
+<p>The first dynamic element in technology, and the one most easily
+identified, is economic needs and</p>
+<p>opportunities. Necessity is not the mother of invention; it is,
+however, its midwife. The first indicator of the</p>
+<p>need for major innovation is one with which economists have been
+familiar for well over a century: declining</p>
+<p>productivity of capital in a major industry. Wherever a major
+industry requires increasing investment to produce</p>
+<p>the same quantity, especially if the higher capital requirements are
+not more than offset by savings in labor, the</p>
+<p>industry is in a sharp decline. No matter how prosperous and
+profitable it may look at the moment, it is rushing</p>
+<p>toward senility unless it can reverse the trend.</p>
+<p>New technology is not produced on command. One cannot simply expect
+technological results because one</p>
+<p>puts men and money to work. But at the same time, new technology can
+only result from human effort. A major</p>
+<p>industry will rarely put its best brains to work on basic changes. It
+will rather tend to fritter away its energies on</p>
+<p>desperate efforts to keep yesterday going a little longer. But in
+such a situation imaginative and knowledgeable</p>
+<p>people outside the industry often see the opportunity and go to work.
+Should they produce results, they are</p>
+<p>likely to have major impact fast.</p>
+<p>One example of such an economic opportunity for major new
+technology</p>
+<p>has already been mentioned: the steel process. Twenty years ago,
+before anyone had even heard of the new</p>
+<p>oxygen process developed by an obscure Austrian steel mill during
+World War II, some people, especially</p>
+<p>economists outside the steel industry, already saw clearly the need
+for major technological change that would</p>
+<p>convert steelmaking into a chemical flow process. In fact, they saw
+this much more clearly than</p>
+<p>anyone within the industry. (The outsider sees such a basic</p>
+<p>economic vulnerability almost always much more clearly than the
+insider, who tends</p>
+<p>to become a prisoner of the familiar.) Without being able to be
+specific as to the “how” of the new process, one</p>
+<p>could say twenty years ago, “If anything happens to convert
+steelmaking into a temperature-conserving</p>
+<p>flow processor even to bring steelmaking a little closer to such a
+processit will create a new steel technology</p>
+<p>fairly fast.”</p>
+<p>Similarly one could, even before World War II, anticipate major</p>
+<p>technological changes in shipbuilding on the basis of a rapid decline
+of the productivity of capital in ocean</p>
+<p>shipping. Again this indicated a fundamental vulnerability in the
+processthe economic waste of a system of</p>
+<p>loading and unloading in port which had remained virtually unchanged
+since the Phoenicians. Perhaps no one</p>
+<p>in the late 1930’s or early 1940’s could have predicted the
+container-ship or the floating military base which the</p>
+<p>U.S. Defense Department wants to build under the name of “Fast
+Deployment Logistics Ship” (and which</p>
+<p>would, in effect, eliminate the port with its installations
+altogether). Yet it was possible to say thirty years</p>
+<p>ago that any process that leads to merchandise freight being handled
+at the</p>
+<p>dockside, the way we already handle petroleum or iron ore or grain,
+should have an immediate major economic</p>
+<p>impact. It would create a new technology rapidly.</p>
+<p>One can say the same about the paper industryagain because a steady
+decline in the productivity of capital</p>
+<p>indicates that new technology, if developed where the process is
+economically vulnerable, would have</p>
+<p>immediate and major impact.</p>
+<p>Similar analysis brings out the opportunities created by gaps in a
+technology.</p>
+<p>A good example is the kind of thinking that has made the Swedes
+leaders in power transmission. The Swedes</p>
+<p>apparently saw twenty years ago that atomic energy would become
+competitive, and indeed would be the most</p>
+<p>economical form of power generation, provided very large
+generating</p>
+<p>stations were built. They also saw, however, that this meant that the
+ability</p>
+<p>to transmit high voltages without loss would become crucialrather
+than the ability to generate them. Once this</p>
+<p>had been seen, it took comparatively little work and little money to
+develop the needed new technology; all the</p>
+<p>knowledge necessary for it actually had been produced seventy years
+before.</p>
+<p>Such analysis of the dynamics of technology has made Sweden, a small
+country, with limited resources of men</p>
+<p>and money, the undisputed leader in today’s high-power technology,
+even though other countries with much</p>
+<p>bigger resources, the United States, Russia, Great Britain, France,
+Germany, and Japan, all spent much larger</p>
+<p>sums on high-voltage researchbut spent them in the wrong place.</p>
+<p>The second place to look in order to anticipate technology is
+knowledge of all kinds. One asks: “What is going</p>
+<p>on in knowledge areas and what technological opportunities might this
+create?”</p>
+<p>It is fashionable today to assert that knowledge is being converted
+into technology much faster than in the past.</p>
+<p>The evidence, however, fails to support this assertion. On the
+contrary, the lead time for the conversion of</p>
+<p>knowledge into technology seems to have lengthened.</p>
+<p>There is nothing today that is comparable to the speed with which,
+for instance, Heinrich Hertz’s scientific</p>
+<p>discoveries in wave physics were translated into Marconi’s new
+wireless telegraphy in less than two decades.</p>
+<p>The lead time between new knowledge and new technology today is much
+more likely to be thirty to forty</p>
+<p>years. In addition, the time it takes to develop new technology into
+marketable products and processes seems to</p>
+<p>have lengthened, too.</p>
+<p>What has shortened, and appreciably, is the time lag between the
+introduction of a new product or process into</p>
+<p>the market and its general adoption. Fifty or seventy-five years ago
+there was a good deal of time to adapt to the</p>
+<p>appearance of a new product or a new process. It took five or even
+ten years for it to cross national boundaries,</p>
+<p>let alone the Atlantic Ocean (though this did not apply to major new
+innovations such as the electric light bulb,</p>
+<p>the telephone, or the streetcar, all of which spread across the whole
+world with a speed since unmatched).</p>
+<p>Today the period of diffusion is a few weeks or a few months.</p>
+<p>One can therefore anticipate technology by systematically looking for
+new knowledgeand by being alert to the</p>
+<p>first sign that it is being transformed into technology. However, the
+new no longer derives purely from</p>
+<p>“science,” as the earlier analysis of the new industries should have
+made clear. It comes from all areas in which</p>
+<p>there is systematic work on knowledge, whether “sciences” in the
+traditional sense or not.</p>
+<p>It has always been the rule that the major new changes in one area
+are more likely to originate in a field or</p>
+<p>discipline outside that area than from within.</p>
+<p>The modern psychologist’s configuration concepts, such as
+“personality”</p>
+<p>or “Gestalt,” originated in the “field theory” of nineteenth-century
+physics. In turn, the modern electronics</p>
+<p>engineer got his idea of “systems engineering” from the psychologists
+(with an assist by the biologists). The</p>
+<p>great contemporary advances in genetics grew in part out of
+physical</p>
+<p>chemistry, with its discovery of the primacy of spatial
+relationships, and in part out of electronic engineering</p>
+<p>which discovered ’’information theory” as a general property of
+electronic circuits.</p>
+<p>All through history, human knowledge, no matter how much the
+“experts” might departmentalize it, has been</p>
+<p>like fluid in a set of communicating vessels: an advance in one of
+them will result in a higher level in other</p>
+<p>areas.</p>
+<p>To understand the dynamics of technology, therefore, one always
+starts out with areas of knowledge other than</p>
+<p>one’s own. Not only is one likely to be blinded in one’s own field,
+where one knows, as a rule, far too much, and</p>
+<p>especially all the things that cannot be donemost of them untested,
+of course. It is also more probable that a</p>
+<p>truly major advance is more likely to result from a development in
+another field than from within one’s own</p>
+<p>field.</p>
+<p>Finally, new major technological opportunities are prefigured in new
+intellectual attitudes, and even in</p>
+<p>intellectual slogans. Industry began to talk, for instance, of
+“materials” a good ten or twenty years before it</p>
+<p>could actually design and make them. Vision, as a rule, comes before
+action, and understanding comes even</p>
+<p>later. Thomas Watson, Sr., the man who founded and built IBM, did not
+live to see the triumph of the computer.</p>
+<p>But he began to talk forty years earlier about “data processing,”
+even though no one at that time would have</p>
+<p>been able to say what the term meant. Everybody today talks of the
+“megalopolis,” the “super-city,” though no</p>
+<p>one can define it yet.</p>
+<p>Not only do such slogans indicate new need; they indicate new
+insight. And a great deal of new technology is</p>
+<p>not new knowledge; it is new perception. It is putting together
+things that no one had thought of putting</p>
+<p>together before, things that by themselves had been around a long
+time.</p>
+<p>It is often said, and with considerable justice, that Henry Ford
+innovated nothing. Indeed there is no machine,</p>
+<p>no tool, no new product, no process that bears his name, was invented
+by him, or could have been patented by</p>
+<p>him. Everything he used was known. There were plenty of automobiles
+on</p>
+<p>the market before he brought out his first one. And yet Henry Ford
+was a true innovator. What he contributed</p>
+<p>were mass production, the mass market, the profitability of the very
+cheap, and so on. Perceptions have greater</p>
+<p>impact, as a rule, economically, socially, and culturally, than have
+many “new” things or even “new” ideas.</p>
+<p>Analyzing technology and its dynamics is not a “scientific” process,
+but it is not “intuition” either. It is true</p>
+<p>analysis. It is not in itself “technology.” Indeed it is, as a rule,
+not done well by the technologist himself. It is</p>
+<p>done best by someone who thinks as an entrepreneur and who asks:
+’’Where are the opportunities for a new</p>
+<p>industry, or at least for a new major process?” “What new technical
+developments are likely to be of major</p>
+<p>economic impact because they fit a major need of an existing industry
+or an existing market?” “What major</p>
+<p>new knowledge has come into being that has not yet had an economic
+impact, has not yet resulted in new</p>
+<p>industries, new processes, new economic capabilities, or new
+productivity?” “What new insights are there, what</p>
+<p>new perceptions that are likely to make effective new technologyand
+what kinds of new technology?”</p>
+<p>It is not possible from such an analysis to deduce that such-and-such
+a development, looking this or that way,</p>
+<p>will come in a given year and lead to sales of x million dollars
+within five years. But something much more</p>
+<p>important can be said; namely, that any development of a certain
+kind, if and when it appears or is made to</p>
+<p>appear, will have major impact, will indeed have the potential for
+becoming a new industry rather than just a</p>
+<p>new product, a new technology rather than just a new tool or a new
+method.</p>
+<p>In an age of rapid change, a technological strategy is essential for
+the success and indeed for the survival of a</p>
+<p>business and perhaps even of an industrial nation. It is necessary to
+have thought through in advance where to</p>
+<p>put one’s own technological efforts. Should they focus on
+modification and improvement, as do practically all</p>
+<p>the efforts now known in industry under the name of “research and
+development”? Should they aim at</p>
+<p>producing new technology? Or perhaps even new knowledge? Or should
+they, as the Swedes did in respect to</p>
+<p>power transmission, be used to exploit a gap between technological
+and economic potential? Such strategy</p>
+<p>would also think through whether a given business should aim to
+develop fundamental technology for its own</p>
+<p>use, or whether it should develop technology to license to others.
+And at what stage should the company, in</p>
+<p>turn, import technology, and what should it look for and stand ready
+to pick up whenever it appears on the</p>
+<p>horizon?</p>
+<p>No one in an age of rapid change can possibly hope to produce all the
+technology that is needed, not even in</p>
+<p>one’s own area. Not even the biggest companyand not even the most
+powerful countrycan any longer do what</p>
+<p>the research establishments, founded between 1890 and 1930, were
+meant to do: produce all the new</p>
+<p>technology and innovation (or even all the new knowledge) in a given
+field.</p>
+<p>This idea of technological self-sufficiency underlay the creation of
+the first</p>
+<p>research laboratory in the German chemical industry almost a century
+ago. It still underlay a generation later the</p>
+<p>creation of the great government- sponsored scientific research
+organization of Germany, the Kaiser Wilhelm</p>
+<p>Institutes (now Max Planck Institutes). It underlay the foundation of
+the first great research laboratories in the</p>
+<p>United States, that of the General Electric Company in Schenectady
+around 1900, and ten years or so later,</p>
+<p>the foundation of the Bell Laboratories of the Telephone Company.</p>
+<p>Today, however, everyone, even the most powerful research institutes
+with all the resources of a government</p>
+<p>behind them, will have to accept that no one can possibly be
+self-supporting in technology.</p>
+<p>Everyone will have to learn what to concentrate on, but also what to
+bring in from others, and at what stage.</p>
+<p>The most rapidly growing area in international trade is probably no
+longer the trade in goods, but the trade in</p>
+<p>technology, in patents and licenses. Everybody will have to learn to
+develop a strategy for it. What are we going</p>
+<p>to do ourselves? What are we going to sell to others? And what are we
+going to buy, and at what stage?</p>
+<p>An early example of successful technological strategy is Japan. It
+was</p>
+<p>obvious to the founders of modern Japan that the country could not
+attempt to lead in technological innovation;</p>
+<p>all its energies had to go into social and cultural innovations. And
+although one could import neither society nor</p>
+<p>culture, one could import technology. The Japanese, as a result, have
+learned how one looks for the emergence</p>
+<p>of new technology; how one acquires new technology from abroad at the
+right stage; and how one</p>
+<p>develops the foreign-born idea into a successful, marketable product
+fast.</p>
+<p>But even the Japanese know so far only how to buy technology and
+have</p>
+<p>had little occasion to learn how one sells it, or how one
+concentrates one’s own resources so as to obtain the</p>
+<p>greatest possible yield in new knowledge, new technology, and
+economic results from one’s own efforts.</p>
+<p>In the West, only the Swedes so far have given thought to such
+technological strategy.</p>
+<p>High-voltage transmission is just one example of the Swedish
+achievement</p>
+<p>in thinking through where the technological gaps were and how they
+could</p>
+<p>be exploited. The Swedish automobile industry, with its emphasis on a
+car that combines passenger-car styling</p>
+<p>with the ruggedness needed for poor roads, is another. And so is the
+Swedish aircraft industrythe only viable</p>
+<p>aircraft industry in a small countryconcentrating on planes capable
+of landing and taking off on very short</p>
+<p>runways, that is, again under the conditions that are typical in
+countries other than the very big or the very rich.</p>
+<p>Yet Swedish technological strategy has not been formulated by
+technologists. It seems to have come mostly</p>
+<p>from the industrial development bankers who head the country’s three
+large banks. Not one of them is a</p>
+<p>scientist or an engineer; all of them, however, apparently understand
+the need for a technological strategy that is</p>
+<p>appropriate to a small country where available resources have to be
+concentrated on filling gaps in a few areas</p>
+<p>rather than on providing the main advance. When World War II ended,
+Sweden was still largely a mining and</p>
+<p>lumbering economy. Now she has become, in terms of per capita output,
+Europe’s leading industrial economy</p>
+<p>and has attained a standard of living second only to that of the
+United States.</p>
+<p>The Dynamics of the Market</p>
+<p>The businessman will increasingly have to understand the dynamics of
+the market. The market is the most</p>
+<p>potent source of ideas for innovation. A study done by the U.S.
+Department of Commerce during the last few</p>
+<p>years showed, for instance, that even among patented products and
+processesthat is, among products and</p>
+<p>processes with a high technology contentthe majority had their origin
+in the needs of the market rather than in</p>
+<p>technology alone.</p>
+<p>Understanding the dynamics of the market is necessary to prevent loss
+of the fruits of technological</p>
+<p>achievements. Technologically, no country has done a better job these
+last twenty-five years than Great Britain.</p>
+<p>Antibiotics, radar, and the jet engine, to name only three, are all
+British in origin. The computer, too, owes a</p>
+<p>great deal to British technology, and so does the atomic reactor. Yet
+in none of these have the British reaped</p>
+<p>where they sowed and cultivated. And although there is no single
+explanation for this, the failure to understand</p>
+<p>the market and to be concerned with its dynamics is clearly a central
+reason.</p>
+<p>The importance of marketing for technology has been documented in a
+study of the “technology gap” said to</p>
+<p>exist between the United States and Europe.* This study showed that
+of those inventions that could be</p>
+<p>attributed almost entirely to work in one country in the postwar
+period, 19 were made in the United States and</p>
+<p>10 in Western Europe (Britain, France and Germany). But the United
+States led in 22 of the major innovations</p>
+<p>flowing from these 29 inventions, whereas all European countries
+together are leading in only 7 of them. The</p>
+<p>difference is entirely a result of marketing,** that is, of the
+ability to translate the technically new into the</p>
+<p>economically productive.</p>
+<p>But the role of marketing in making technology economically effective
+was proven much earlier.</p>
+<ul>
+<li>J. Ben David, Fundamental Research and Government Policy (Paris:
+Committee for Science Policy, Organiza</li>
+</ul>
+<p>tion for Economic Cooperation and Development [OECD], 1966).</p>
+<p>** The fundamental work in this area is the book by the American
+economist</p>
+<p>J. Schmookler, Invention and Economic Growth (Cambridge: Harvard
+University Press, 1966).</p>
+<p>The best technical work on the electric light bulb was done not by
+Edison but by his British competitor, Sir</p>
+<p>Joseph Swan. And yet it was Edison’s bulb that won out in the
+marketplace for the simple reason that, unlike</p>
+<p>Swan, Edison looked at the market. He put himself into the position
+of the electric power companies and asked:</p>
+<p>“What do they need and what can they use?” And he put himself in the
+position of the homeowner and asked</p>
+<p>the same questions. Technically, Swan’s solution may have been much
+more elegant, but it just did not fit the</p>
+<p>expectations, the behavior, the values of the two markets that had to
+accept the new product if it was to be</p>
+<p>economically possible, let alone successful.</p>
+<p>Most businessmen, when they speak of “marketing,” mean nothing more
+sophisticated than the systematic and</p>
+<p>purposeful organization of all the work that has to be done to sell a
+product, to deliver it to the customer, and to</p>
+<p>get paid for it. What is needed to be an entrepreneur in an era of
+rapid technological change is “marketing” in</p>
+<p>two other senses.</p>
+<p>First, we need “marketing” that looks upon the entire business from
+the point of view of its ultimate purpose</p>
+<p>and justification, that is, from the point of view of the customer
+(or rather the “customers,” since every business</p>
+<p>and every product has at least two, and usually many more, quite
+different kinds of customers to satisfy). This</p>
+<p>means, above all, that one does not try to look at the customer for
+“our product.” As long as one thinks of ’’our</p>
+<p>product,” one is still thinking in terms of selling rather than in
+terms of marketing. What matters is the</p>
+<p>customer’s behavior, his values, and his expectations. And under this
+aspect, one’s own business, let alone one’s</p>
+<p>own product, hardly exists at all. In a true marketing point of view
+no product and no company is assumed to</p>
+<p>have the slightest importance to the customer or indeed to be even
+noticed by him. It is axiomatic that the</p>
+<p>customer is only interested in the satisfaction he seeks and in his
+needs and expectations. The customer’s</p>
+<p>question is always, “What will this product or this business do for
+me tomorrow?”</p>
+<p>Second, businessmen will have to learn to practice “marketing” as an
+innovating force in itself. They have to</p>
+<p>learn that the truly new does not, as a rule, satisfy demands that
+already exist. It creates new expectations, sets</p>
+<p>new standards, makes possible new satisfactions.</p>
+<p>“Innovative marketing” therefore creates markets. New technology
+always needs new markets which were not</p>
+<p>even conceivable until the new technology created new demands.</p>
+<p>The chemical industry has known this all along.</p>
+<p>Before the chemical industry acquired a substantial number of the
+carpet mills in the United States, the carpet</p>
+<p>industry was in a decline. It advertised its products; it sold
+“hard.” But its share in the total consumer</p>
+<p>expenditures on housing and home furnishings steadily diminished.
+Then, in the early 1950’s the chemical</p>
+<p>industry came into the carpet businesslargely to save an important
+customer for their synthetic fibers. It</p>
+<p>immediately began innovative marketing.</p>
+<p>It first asked: “What is the biggest unfulfilled expectation of the
+typical home buyer?” The answerand like all</p>
+<p>right answers, it sounds obvious once it has been givenwas: bring the
+level of the home that typical young</p>
+<p>families buy a little closer to their aspirations and tastes, that
+is, bridge the gap between the house they read</p>
+<p>about in the home magazines and the house they can afford. This
+immediately showed a new role for carpeting.</p>
+<p>Floor covering is one of the few ways in which the basic taste and
+comfort</p>
+<p>level of a home can be raised with comparatively little outlay.</p>
+<p>The next question was then: “What can the young people afford?” And
+the answerequally obviouswas that they</p>
+<p>can afford a few pennies more in monthly carrying charges but cannot
+afford to pay a larger lump sum when</p>
+<p>they buy the home and are inundated already by demands on their
+slender resources. The moment this answer</p>
+<p>had been given, it became clear that the one kind of floor covering
+that could be bought by the young couple</p>
+<p>was the most expensive kind, namely, wall-to-wall carpeting. For
+that,</p>
+<p>being fixed to the structure, can be included in the homeowner’s
+mortgage.</p>
+<p>The final question was: “Who decides what is being bought?” In
+other</p>
+<p>words: “Who is really the customer?” The answer to this was the mass
+builder rather than the young couple</p>
+<p>itself. If, in other words, floor covering is offered in such a way
+that it is attractive to the mass builder</p>
+<p>because it enables him to save on flooringwhich means wall-to-wall
+carpeting; because it makes it easier for</p>
+<p>him to sell a house by making it look better; and because it enables
+him to sell the carpeted home without any</p>
+<p>increase in the down payment and with only a slight increase in
+the</p>
+<p>monthly carrying chargethen floor covering becomes immediately a
+major</p>
+<p>satisfaction of the homeowner. As a result of such innovative</p>
+<p>marketing, the declining, if not dying, carpet industry in the United
+States has again become healthy, growing,</p>
+<p>and profitable.</p>
+<p>Meanwhile electric lighting fixturesan even better way to upgrade the
+taste and comfort level of a homehave</p>
+<p>continued to be a declining industry. All that industry is trying to
+do is to design “better” products and to “sell</p>
+<p>hard.”</p>
+<p>There is a common belief abroad that it is new technology that
+creates sales and with them jobs and industries.</p>
+<p>But new technology is only a potential. It is marketing, and
+especially innovative marketing, that converts the</p>
+<p>potential into actuality. Only under acute shortage conditions do
+goods sell themselves. A cancer drug does not</p>
+<p>require much marketing; here we have an acute shortage in which not
+even “selling” would be needed if we</p>
+<p>only had the right knowledge and an effective product. But even a
+cancer drug would have to be in a form in</p>
+<p>which the medical profession could effectively use it.</p>
+<p>Wherever conditions do not resemble the extreme scarcity that
+prevails in cancer therapy, new technology</p>
+<p>needs, above all, effective marketing. It needs an understanding of
+the market and its dynamics. Indeed this is</p>
+<p>necessary to direct the technological efforts, as the examples above
+of the successful new products of Swedish</p>
+<p>technology show. It takes innovative marketing to create the new
+perception for the customer so that he can use</p>
+<p>the new to expand his horizon, to raise his expectations and
+aspirations, and to derive new satisfactions.</p>
+<p>Economic advance is not greater satisfaction of old needs and wants.
+It is new choice. It is the widening of the</p>
+<p>horizon of expectations and aspirations. This is largely a function
+of marketing which, therefore, is needed to</p>
+<p>make technological change economically productive, that is, result in
+the satisfaction of human needs</p>
+<p>and wants.</p>
+<p>The Innovative Organization</p>
+<p>Businessmen will have to learn to build and manage an innovative
+organization. They will have to learn to</p>
+<p>build and manage a human group that is capable of anticipating the
+new, capable of converting its vision into</p>
+<p>technology, products and process, and willing and able to accept the
+new.</p>
+<p>During the last half-century, we have learned, by and large, how to
+organize human energies for joint</p>
+<p>performance. We have learned, by and large, how to use organization
+to do efficiently what we already know</p>
+<p>how to do. This is a tremendous step forward, and one on which our
+present society rests. We now need to</p>
+<p>make possible organization that can innovate.</p>
+<p>There are large innovative organizations around.</p>
+<p>A good example are the Bell Laboratories of the American Telephone
+and</p>
+<p>Telegraph Company, which for almost fifty years have been a
+productive source of new technology in a wide</p>
+<p>variety of areas. Yet they are an integral part of a big, highly
+structured managerial organization which is,</p>
+<p>of necessity, primarily focused on doing efficiently what it already
+knows how to do.</p>
+<p>Bell Laboratories are an exception so far. Now such accomplishment
+will have to become common. We need</p>
+<p>the ability to innovate. We need to build this into an economy in
+which we have, as the nineteenth century did</p>
+<p>not have, large, permanent managerial organizations.</p>
+<p>This will require major organization changes. In the first place, as
+the success of Bell Laboratories makes clear,</p>
+<p>innovative organizations must be kept distinct from managerial
+organizations, which are responsible for</p>
+<p>exploiting what is already in existence. Such managerial
+organizations can modify, can extend, can improve,</p>
+<p>but they cannot truly innovate.</p>
+<p>More and more companies, have, for instance, learned that it is
+futile to expect the truly new to come out of the</p>
+<p>existing product divisions within the company. The new needs a
+separate “development” division which is</p>
+<p>responsible for it until it is no longer “new” but an established,
+going, successful business. This is also the</p>
+<p>lesson taught by the chemical company that has been most successful
+as an innovator, the du Pont Company in</p>
+<p>Wilmington, Delaware. Forty years ago it set up a separate
+“development department.”</p>
+<p>But perhaps even more important is that an innovative organization
+requires a different structure of the</p>
+<p>relationship between people. It requires a team organization rather
+than a command organization.</p>
+<p>And it requires flexibility in relationships. Yet there has to be
+discipline, there has to be authority, and there has</p>
+<p>to be someone who can make decisions. Team structure is largely
+unknown to classical organization</p>
+<p>theorythough a jazz combo or, for that matter, a surgical team in the
+operating theater exemplifies it.</p>
+<p>The innovative organization needs a new attitude on the part of the
+people on the top. In the managerial</p>
+<p>organization, the top people sit in judgment; in the innovative
+organization, it is their job to encourage ideas, no</p>
+<p>matter how unripe or crude. It is the job of the top people in the
+innovative organization to try to convert the</p>
+<p>largest possible number of ideas into serious proposals for
+effective, purposeful work. It is their job to say:</p>
+<p>“What would this idea have to be for it to be taken seriously?” It is
+not their job, as it is in the managerial</p>
+<p>organization, to say: “This is not a serious proposal.”</p>
+<p>No idea for the really new ever starts out as a realistic, serious,
+thought-through, worked-out proposal. It always</p>
+<p>starts out as a groping, a divining, a search. To be sure, nine out
+of ten of these “bright ideas” turn out to be</p>
+<p>nothing but epigrams. Of the small proportion left, the great
+majority also never gets anywhere. The mortality</p>
+<p>of “bright ideas” is as great as the mortality of frogs’ eggs; ideas
+are a part of nature, and nature is prodigal. But</p>
+<p>then there is never a shortage of ideas, just as there is no shortage
+of frogs’ eggs in the pond. One has to have a</p>
+<p>thousand to hatch one viable end result. One does not know in advance
+which one of the thousand will survive</p>
+<p>and grow to maturity.</p>
+<p>The innovative attitude requires willingness on the part of the
+people at the top to listen, to encourage, and to go</p>
+<p>to work themselves at converting crude guesses into understanding,
+the first glimpse into vision, and excitement</p>
+<p>into results. This is not, as so many people believe, “creativity.”
+Nor is it “disorganized.” It is a highly</p>
+<p>organized, disciplined, and systematic process. But it requires a
+different approach and different procedures</p>
+<p>from those of the well-managed organization.</p>
+<p>“Professional” management today sees itself often in the role of a
+judge who says “yes” or “no” to ideas as they</p>
+<p>come up. This leads, inevitably, to the situation described in the
+famous jingle which, legend has it, was found</p>
+<p>one day pinned to the organization chart on the bulletin board of the
+Unilever Company in London:</p>
+<p>Across this Tree From Root to Crown Ideas flow up</p>
+<p>And Vetoes down.</p>
+<p>A top management that believes its job is to sit in judgment will
+inevitably veto the new idea. It is always</p>
+<p>“impractical.” Only a top management that sees its central function
+as trying to convert into purposeful action</p>
+<p>the half-baked idea for something new will actually make its
+organizationwhether company, university,</p>
+<p>laboratory, or hospitalcapable of genuine innovation and
+self-renewal.</p>
+<p>One risk an innovative organization cannot afford is the risk of
+aiming too low. It takes as much ingenuity and</p>
+<p>work to do what we already do a little better, as it takes to do
+something entirely different. It takes as much</p>
+<p>work and effort to create one addition to the product line as it does
+to create a new business. In genuine</p>
+<p>innovation one cannot afford to come out with just another product.
+The work needed for it is too great for the</p>
+<p>possible resultsand the risk is exactly the same as that of aiming
+for a new business or perhaps even for a new</p>
+<p>industry. What distinguishes the truly productive scientist from the
+merely competent one is rarely knowledge</p>
+<p>or effort, let alone talent. The men who are truly productiveleaving
+out the few towering geniuses such as the</p>
+<p>Newtons or the Faradaysare men who focus their knowledge, their
+intelligence, and their efforts on a big, a</p>
+<p>truly worthwhile goal, men who set out to create something new.</p>
+<p>I have been reading for years the acceptance speeches of Nobel prize
+winners. Again and again one hears them</p>
+<p>say, “What started me on the work that led to this achievement was a
+chance remark by a teacher who said:</p>
+<p>‘Why don’t you try something where the results would really make a
+difference?’ ” The first question to ask in</p>
+<p>an innovative organization is: “Is this big enough so that we will
+have at least a new business, if not a new</p>
+<p>industry or a new technology if we succeed? If not, we cannot afford
+the risks.” This is a very different question</p>
+<p>from the ones asked in the managerial organization when it does
+“long- range planning” or allocates resources.</p>
+<p>There one tries to minimize the possible loss. In innovation one has
+to maximize the possible results.</p>
+<h2 id="december">3 DECEMBER</h2>
+<h3 id="the-new-entrepreneur">The New Entrepreneur</h3>
+<p>History moves in a spiral; one returns to the preceding position,</p>
+<p>but on a higher level, and by a corkscrew-like path.</p>
+<p>We are again entering an era in which emphasis will be on
+entrepre-</p>
+<p>neurship. However, it will not be an entrepreneurship of a century
+ago, that is,</p>
+<p>the ability of a single man to organize a business he himself</p>
+<p>could run, control, embrace. It will rather be the ability to create
+and direct an</p>
+<p>organization for the new. We need men and women who can build a
+new</p>
+<p>structure of entrepreneurship on the managerial foundations laid
+these last</p>
+<p>eighty years. History, it has often been observed, moves in a spiral;
+one</p>
+<p>returns to the preceding position, or to the preceding problem, but
+on a higher</p>
+<p>level, and by a corkscrew-like path. In this fashion we are going to
+return to</p>
+<p>entrepreneurship on a path that led out from a lower level, that of
+the single</p>
+<p>entrepreneur, to the manager, and now back, though upward, to</p>
+<p>entrepreneurship again. The businessperson will have to acquire a
+number of</p>
+<p>new abilities, all of them entrepreneurial in nature, but all of them
+to be</p>
+<p>exercised in and through a managerial organization.</p>
+<h3 id="action-point-1">ACTION POINT:</h3>
+<p>Establish an entrepreneurial culture in your organiza-tion.</p>
+<h4 id="the-age-of-discontinuity">The Age of Discontinuity</h4>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

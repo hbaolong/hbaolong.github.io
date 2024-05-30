@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="第三同读" />
+  <title>德鲁克日志</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">德鲁克日志</h1>
+<p class="author">第三同读</p>
+</header>
+<h2 id="透过金庸读懂德鲁克">透过金庸读懂德鲁克</h2>
+<p>郭靖武功和性格大成后，就来到了襄阳，带着他的爱人黄蓉，这时襄阳的领导人是吕文德。</p>
+<p>襄阳，自古兵家必争之地，地处湖北北部，汉水中游，有“南船北马，七省通衢”之称，战略位置十分</p>
+<p>险要，历来为州郡治所。</p>
+<p>所以，当郭靖看到铁木真要攻打南宋时，就带着黄蓉赶到了襄阳，协助襄阳的领导人吕文德共同守护</p>
+<p>襄阳。吕文德是一个贪图安逸的安抚使，每天除了安抚自己的姬妾外，对襄阳的安危根本就不在意。</p>
+<p>黄药师本来建议郭靖杀死吕文德自己取而代之，然后带领襄阳百姓死守。黄蓉觉得杀掉吕文德会引起</p>
+<p>百姓的骚乱，而且会引起朝廷的镇压。</p>
+<p>最后，黄蓉对吕文德威逼利诱，加上蒙古军兵临城下，吕文德终于同意把兵权的实际控制权给郭靖，</p>
+<p>自己做一个太平领导人，继续过花天酒地的日子。</p>
+<p>这时的朝廷，也就是南宋朝廷，对襄阳是管不了的。兵马和粮食都没法支援，襄阳实际上在孤军奋</p>
+<p>战。吕文德也是不抵抗的。朝廷的权威性已经吕文德的权威性在襄阳已经破产了。</p>
+<p>而且，朝廷是偏安的朝廷，也已经放弃了对很多土地的权力主张，至于百姓、民众、这些都顾不上</p>
+<p>了。吕文德也只是在当官而已，只是在找最后的机会作威作福，一旦敌人来了，唯有投降而已。</p>
+<p>对于对蒙古的抵抗，朝廷和吕文德都是没有必胜的信念的，甚至连抵抗的信念都没有。</p>
+<p>所以，了解蒙古大军的郭靖知道襄阳守不住，所以才会和吕文德商量共同守卫。</p>
+<p>郭靖为什么觉得自己能守住呢？</p>
+<p>其实，郭靖并不知奥。只是郭靖相信守住襄阳，大宋的百姓才可以在乱世中生活的好一些。百姓的疾</p>
+<p>苦，是郭靖心中最大的痛。面对襄阳能不能守住，能守多久这个问题是，郭靖的回答是：“鞠躬尽瘁死</p>
+<p>而后已。”</p>
+<p>郭靖的坚持，给了他道德上的权威，激发了襄阳的百姓对他的拥护
+，以及天下武林人士和普通百姓对</p>
+<p>他的敬重。</p>
+<p>德鲁克认为，一个缺乏道德权威、对监制关的信仰以及对理性行为正确的信念的组织是没有希望的。</p>
+<p>郭靖带着这些，来到了襄阳。</p>
+<p>军事实力的差距太大了，郭靖最终没有守住襄阳，</p>
+<p>郭靖以身殉襄阳。</p>
+<p>六年后左宰相陆秀夫背着南宋最后一个皇帝跳入冰冷的大海，南宋灭亡。</p>
+<p>道德权威，对价值观的信仰，以及对理性行为正确的信念。</p>
+<p>杨过曾问过郭靖：襄阳能否守得住？郭靖的回复是：鞠躬尽瘁死而后已。</p>
+<p>为国为民，侠之大者</p>
+<p>像丘吉尔这样的领导</p>
+<p>丘吉尔所给予的只是一些最基本的东西：道德权威，对价值观的信仰，以及对理性行为正确的信念。</p>
+<p>当世界处于危机的时候，牛鬼蛇神充斥政坛，即使是平庸者也可以获得不应得的关注。世界看起来已</p>
+<p>经没有机会了。</p>
+<p>这时，丘吉尔出现了。他提供了当时欧洲最需要的东西：道德权威，对价值观的信仰，以及对理性行</p>
+<p>为正确的信念。</p>
+<p>正是这些东西，让希特勒不在享受无敌的荣耀，让美国避免被纳粹的湮灭。让世界的进程走向了正常</p>
+<p>的轨道。</p>
+<p>最后的德鲁克给出了行动建议。</p>
+<p>13 APRIL</p>
+<p>Churchill the Leader</p>
+<p>rational：</p>
+<p>frenziedly：极其激动地；狂乱地</p>
+<p>pathetically ：可怜地；感伤地；悲哀地；情绪上地</p>
+<p>conspicuous：</p>
+<p>based on reason rather than emotions</p>
+<p>easy to see or notice; likely to attract attention</p>
+<p>mediocrities：</p>
+<p>If you refer to the mediocrity of something, you mean that it is of
+average quality but you think it should be better.</p>
+<p>What Churchill gave was moral authority, belief in values, and faith
+in the rightness of rational</p>
+<p>action.</p>
+<p>The last reality of the thirties, which The End of Economic Man
+clearly conveys, is the total absence</p>
+<p>of leadership.</p>
+<p>conveys：</p>
+<p>To convey information or feelings means to cause them to be known or
+understood by someone.</p>
+<p>The political stage was full of characters. Never before, it seems,
+had there been so many</p>
+<p>politicians, working so frenziedly.</p>
+<p>Quite a few of these politicians were decent men, some even very able
+ones. But excepting the</p>
+<p>twin Princes of Darkness, Adolf Hitler and Joseph Stalin, they were
+all pathetically small men; even</p>
+<p>mediocrities were conspicuous by their absence.</p>
+<p>“But,” today’s reader will protest, “there was Winston
+Churchill.”</p>
+<p>To be sure, Churchill’s emergence as the leader in Europe’s fight
+against the evil forces of</p>
+<p>totalitarianism was the crucial event. It was, to use a Churchillian
+phrase, “the hinge of fate.”</p>
+<p>totalitarianism：</p>
+<p>极权主义</p>
+<p>crucial：</p>
+<p>the hinge of fate:关键点</p>
+<p>Totalitarianism is the ideas, principles, and practices of
+totalitarian political systems.</p>
+<p>extremely important, because it will affect other things</p>
+<p>took over：接管</p>
+<p>Today’s reader is indeed likely to underrate Churchill’s
+importance.</p>
+<p>Until Churchill took over as leader of free peoples everywhere, after
+the retreat at Dunkirk and the</p>
+<p>fall of France, Hitler had moved with apparent infallibility.</p>
+<p>After Churchill, Hitler was “off” for good, never retaining his sense
+of timing or his uncanny ability</p>
+<p>to anticipate every opponent’s slightest move. The shrewd calculator
+of the thirties became the</p>
+<p>wild, uncon-trolled plunger of the forties. It is hard to realize
+today, sixty-five years after the event,</p>
+<p>that without Churchill the United States might have resigned itself
+to Nazi domination of Europe.</p>
+<p>What Churchill gave was precisely what Europe needed: moral
+authority, belief in values, and faith</p>
+<p>in the rightness of rational action.</p>
+<h3
+id="action-point-record-the-key-values-that-are-operative-in-your-organiza-tion.-compare-these-to">ACTION
+POINT: Record the key values that are operative in your organiza-tion.
+Compare these to</h3>
+<p>values espoused by your leaders. Recommend steps to bring espoused
+values in line with</p>
+<p>operating values to produce the right action.</p>
+<p>A Functioning Society</p>
+<h2 id="april">13 APRIL</h2>
+<h3 id="churchill-the-leader">Churchill the Leader</h3>
+<p>What Churchill gave was moral authority, belief in values, and faith
+in the</p>
+<p>rightness of rational action.</p>
+<p>The last reality of the thirties, which The End of Economic Man
+clearly</p>
+<p>conveys, is the total absence of leadership. The political stage was
+full of</p>
+<p>characters. Never before, it seems, had there been so many
+politicians,</p>
+<p>working so frenziedly. Quite a few of these politicians were decent
+men,</p>
+<p>some even very able ones. But excepting the twin Princes of Darkness,
+Adolf</p>
+<p>Hitler and Joseph Stalin, they were all pathetically small men;
+even</p>
+<p>mediocrities were conspicuous by their absence. “But,” today’s reader
+will</p>
+<p>protest, “there was Winston Churchill.” To be sure, Churchill’s
+emergence as</p>
+<p>the leader in Europe’s fight against the evil forces of
+totalitarianism was the</p>
+<p>crucial event. It was, to use a Churchillian phrase, “the hinge of
+fate.”</p>
+<p>Today’s reader is indeed likely to underrate Churchill’s
+importance.</p>
+<p>Until Churchill took over as leader of free peoples everywhere, after
+the</p>
+<p>re-treat at Dunkirk and the fall of France, Hitler had moved with
+apparent</p>
+<p>in-fallibility. After Churchill, Hitler was “off” for good, never
+retaining</p>
+<p>his sense of timing or his uncanny ability to anticipate every
+opponent’s</p>
+<p>slight-est move. The shrewd calculator of the thirties became the
+wild,</p>
+<p>uncon-trolled plunger of the forties. It is hard to realize today,
+sixty-five</p>
+<p>years after the event, that without Churchill the United States might
+have</p>
+<p>resigned it-self to Nazi domination of Europe. What Churchill gave
+was</p>
+<p>precisely what Europe needed: moral authority, belief in values, and
+faith</p>
+<p>in the rightness of rational action.</p>
+<h3 id="action-point">ACTION POINT:</h3>
+<p>Record the key values that are operative in your organiza-tion.</p>
+<p>Compare these to values espoused by your leaders. Recommend steps to
+bring</p>
+<p>espoused values in line with operating values to produce the right
+action.</p>
+<h4 id="a-functioning-society">A Functioning Society</h4>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

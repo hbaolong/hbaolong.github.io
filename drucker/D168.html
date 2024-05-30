@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="第三同读" />
+  <title>德鲁克日志</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">德鲁克日志</h1>
+<p class="author">第三同读</p>
+</header>
+<h2 id="透过金庸读懂德鲁克">透过金庸读懂德鲁克</h2>
+<p>前面我们提到，为了解决武当派因为修真而导致的养老问题，以及照顾因为工伤而导致失去工作能力</p>
+<p>的门人，张三丰决定成立养老基金来解决这个问题。可以通过不同的方式来筹集养老基金的资金，或</p>
+<p>自愿交纳工资的一部分，实力强劲的也可以直接捐赠银两到基金之中。</p>
+<p>昨天的投票，认为解决了武当派的养老问题得到解决的只占到了43%，说明仅仅成立养老基金这个方</p>
+<p>式貌似还不够，接下来还需要将工作进一步细化。例如，这笔钱收集上来以后，应该用什么式进行管</p>
+<p>理呢？谁又该担负起这个项目小组牵头人的责任呢？</p>
+<p>先说第一个问题。是存到钱庄之类的组织？还是在武当派找个合适的位置将这些财富存放？在我国古</p>
+<p>代，钱庄差不多到宋朝的时候，才开始出现。明朝之后得到了迅速发展，而明朝之后，钱庄已经是遍</p>
+<p>地开花的节奏了。此时正值兵荒马乱，江湖纷争之时，武当派养老基金可以酌情考虑采取相应的方</p>
+<p>式，找钱庄也必须找老字号。</p>
+<p>第二个问题，谁是这个项目小组牵头人的最佳人选？张三丰？还是武当七侠中的某一位？显然，退居</p>
+<p>二线、沉迷于技术创新的张三丰，是不适合的。这个职位当从武当七侠中进行遴选。</p>
+<p>在养老基金的投资人选择中，德鲁克给出了很明确的建议：资本市场的决策正在有效地从“企业家”转</p>
+<p>向“受托人”，从应该投资于未来的人转向必须遵循“谨慎的人规则”的人。这就意味着，该项目的牵头人</p>
+<p>在管理基金事务的时候，更应该遵循审慎原则。</p>
+<p>那么，武当七侠中谁更具备样的气质？老大宋远桥，老二俞莲舟，老三俞岱岩，老四张松溪，老五张</p>
+<p>翠山，老六殷梨亭，老七莫声谷。我们今天采用高考常用的一种方法：排除法。</p>
+<p>先说老六、老七，基本上可以pass掉，首先年纪最小，资历最浅，血气方刚的岁数，搞不好还在青春</p>
+<p>期，与“谨慎“的特质不搭；其次两人的性格，一个弱＋爱哭鼻子；一个楞，再过十年二十年也不会是</p>
+<p>好的人选。</p>
+<p>再看老五张翠山。张三丰在接班问题上一直悬而未决，唯独公开表示过要将衣钵传给老五，足见他对</p>
+<p>这位弟子的喜欢。再看金书中对老五的评价：文武全才，可谓最具潜质掌门人。然而，在基金项目牵</p>
+<p>头人这件事情上，张翠山反而不是最佳人选，他更适合去开创一番新天地，用现代的话说，属于“企业</p>
+<p>家”的范畴。可惜天妒英才，英年早逝。</p>
+<p>老二俞莲舟也是一位武术奇才，在七侠中，他的武功最高，在武侠世界，这是绝对的“硬核”，最终，</p>
+<p>掌门之位也的确传给了他。而作为一个数一数二门派的掌门人，是需要带领门派往前走的，需要具备</p>
+<p>开创精神，因此，也不是太适合养老基金的牵头人。</p>
+<p>老四张松溪可谓足智多谋之人，但是总感觉处事的时候多了一些小心思、小聪明在里边，这样的人也</p>
+<p>不适合做养老基金牵头人。</p>
+<p>老三俞岱岩，极富正义感，在公干回程的路上，遭遇屠龙刀事件，被人暗算，最终导致高位截瘫。从</p>
+<p>这个角度出发，老三行走江湖，风险防范意识还是有些薄弱，对于求稳健的养老基金牵头人这个职位</p>
+<p>还是差点意思。</p>
+<p>最后一个就是老大宋远桥了。相比起其他的几个师弟，宋远桥性格可以说是最稳重的，踏踏实实的练</p>
+<p>功，踏踏实实的生孩子，踏踏实实的成为一个中年人，只不过赶上一个“超长待机”的师傅，宋远桥不</p>
+<p>得不“储”了很久。在“储君”期间，宋远桥犯了不少小错误，最终还是接班当了一段时间的掌门。从稳健</p>
+<p>的角度出发，宋远桥反而是符合养老基金牵头人的角色的。当然，前提是他没有成为权力的奴隶。</p>
+<p>那么，武当七侠中，你认为谁最适合做养老基金牵头人？</p>
+<h2 id="百字摘要">百字摘要</h2>
+<h2 id="金庸案例">金庸案例</h2>
+<p>16 JUNE</p>
+<p>Pension-Fund Capitalism</p>
+<p>Capital market decisions are shifting from the people who are
+supposed to invest in the future to</p>
+<p>the people who have to follow the “prudent man rule.”</p>
+<p>The capital market decisions are effectively shifting from the
+“entrepreneurs” to the “trustees,”</p>
+<p>from the people who are supposed to invest in the future to the
+people who have to follow the</p>
+<p>“prudent man rule,” which means, in effect, investing in past
+performance.</p>
+<p>Here in lies a danger of starving the new, the young, the small, the
+growing business.</p>
+<p>But this is happening at a time when the need for new businesses is
+particularly urgent, whether</p>
+<p>they are based on new technology or engaged in converting social and
+economic needs into</p>
+<p>business opportunities.</p>
+<p>It requires quite different skills and different rules to invest in
+the old and existing as opposed to the</p>
+<p>new ventures.</p>
+<p>The person who is investing in what already exists is, in effect,
+trying to minimize risk.</p>
+<p>He invests in established trends and markets, in proven technology
+and management performance.</p>
+<p>The entrepreneurial investor must operate on the assumption that out
+of ten investments, seven</p>
+<p>will go sour and have to be liquidated with more or less a total
+loss.</p>
+<p>There is no way to judge in advance which of the ten investments in
+the young and the new will</p>
+<p>turn out failures and which will succeed.</p>
+<p>The entrepreneurial skill does not lie in “picking investments.” It
+lies in knowing what to abandon</p>
+<p>because it fails to pan out, and what to push and support with full
+force because it “looks right”</p>
+<p>despite some initial setbacks.(受托人的企业家的抉择）</p>
+<h3
+id="action-point-consider-directing-a-portion-of-your-pension-fund-assets-to-trustees-who-have">ACTION
+POINT: Consider directing a portion of your pension-fund assets to
+trustees who have</h3>
+<p>authority to invest in new ventures and who have had success doing so
+in the past.</p>
+<p>The Pension Fund Revolution</p>
+<h2 id="june">16 JUNE</h2>
+<h3 id="pension-fund-capitalism">Pension-Fund Capitalism</h3>
+<p>Capital market decisions are shifting from the people who are
+supposed to</p>
+<p>invest in the future to the people who have to follow the “prudent
+man</p>
+<p>rule.”</p>
+<p>The capital market decisions are effectively shifting from the
+“entrepre-</p>
+<p>neurs” to the “trustees,” from the people who are supposed to invest
+in the</p>
+<p>future to the people who have to follow the “prudent man rule,”
+which</p>
+<p>means, in effect, investing in past performance. Herein lies a danger
+of</p>
+<p>starving the new, the young, the small, the growing business. But
+this is</p>
+<p>happening at a time when the need for new businesses is particularly
+ur-</p>
+<p>gent, whether they are based on new technology or engaged in
+converting</p>
+<p>social and economic needs into business opportunities.</p>
+<p>It requires quite different skills and different rules to invest in
+the old</p>
+<p>and existing as opposed to the new ventures. The person who is
+investing</p>
+<p>in what already exists is, in effect, trying to minimize risk. He
+invests in</p>
+<p>estab-lished trends and markets, in proven technology and
+management</p>
+<p>perfor-mance. The entrepreneurial investor must operate on the</p>
+<p>assumption that out of ten investments, seven will go sour and have
+to be</p>
+<p>liquidated with more or less a total loss. There is no way to judge
+in</p>
+<p>advance which of the ten investments in the young and the new will
+turn</p>
+<p>out failures and which will succeed. The entrepreneurial skill does
+not lie</p>
+<p>in “picking invest-ments.” It lies in knowing what to abandon because
+it</p>
+<p>fails to pan out, and what to push and support with full force
+because it</p>
+<p>“looks right” despite some initial setbacks.</p>
+<h3 id="action-point">ACTION POINT:</h3>
+<p>Consider directing a portion of your pension-fund assets to</p>
+<p>trustees who have authority to invest in new ventures and who have
+had</p>
+<p>success doing so in the past.</p>
+<h4 id="the-pension-fund-revolution">The Pension Fund Revolution</h4>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

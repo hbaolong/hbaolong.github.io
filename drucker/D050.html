@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="第三同读" />
+  <title>德鲁克日志</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">德鲁克日志</h1>
+<p class="author">第三同读</p>
+</header>
+<h2 id="透过金庸读懂德鲁克">透过金庸读懂德鲁克</h2>
+<p>为什么说崇尚商业之美</p>
+<p>财经作家吴晓波有一句有名的话：崇尚商业之美。我一直觉得这句话有点问题，因为，在我们的文化</p>
+<p>中，商业是被鄙视的。</p>
+<p>在古代的排行中，士农工商，商业也是排在最后。所以，我们的文化一直是歧视商业的。虽然我不不</p>
+<p>歧视富有。</p>
+<p>而且，每个人也怕被别人说“市侩”。“市侩”指的是买卖的中间人，现在也被定义为唯利是图、庸俗可厌</p>
+<p>的人了。</p>
+<p>这些都说明我们对商业的厌恶。</p>
+<p>而吴晓波说要“崇尚商业之美”，这就说明了两个问题，第一，商业是有美的；第二，我们要崇尚这种</p>
+<p>美。</p>
+<p>为什么呢？</p>
+<p>首先，咱们说说商业的美在哪里。</p>
+<p>商业，也就是做生意，也就是通过服务、生产、交易等赚钱。德鲁克认为，商业有两个特征。</p>
+<p>一是，商业会随时放弃某个行为；另一个就是商业有绩效检测机制。</p>
+<p>先说第一个，商业会随时放弃某个行为。比如，你在一条路上卖煎饼果子，结果这条路上每天也没几</p>
+<p>个人，用不了几天，你就会放弃了。因为不赚钱呀。而只要你开始摆摊，每天都要准备一些面、鸡</p>
+<p>蛋、果子，卖不出去就会坏，就要扔。所以，商业随时都在准备放弃那些消耗成本而不赚钱的事情。</p>
+<p>那么，什么是商业的绩效检测机制呢？就是说，你的客户在放弃你的时候，头都不会回。</p>
+<p>我家门口有个小面馆，面馆里面只有4张桌子，夫妻两个开的，卖的是陕西的各种面：臊子面、干臊子</p>
+<p>等。偶尔的机会，我发现了这个面馆，他们的干臊子面太好吃了，我就经常去吃，偶尔路过也会走过</p>
+<p>去吃一碗。几乎成了习惯。</p>
+<p>有一天晚上，我回来比较晚，大约是10点多了。看着他家开着，我又走进去要了一碗干臊子面。结</p>
+<p>果，这个面完全变了。很明显，换了厨师。</p>
+<p>我付了钱，放下筷子就出来了，以后再也没去过。</p>
+<p>这就是商业的绩效检测机制，他们用户投票的。而且，用户都是用钱或者脚投票。这就保证了你的商</p>
+<p>业是非常高效的。</p>
+<p>在这两点的支撑下，商业其实是我们人生的一个快速体验店。</p>
+<p>我们总是要和别人接触的。总是要和别人打交道的。我们和父母打交道，我们和恋人打交道，我们和</p>
+<p>孩子们打交道，我们和朋友打交道，我们和邻居打交道。这些满足的是我们的情感需求。</p>
+<p>同时，我们也和很多商业机构打交道。我们和卖菜的打交道，我们和卖饭的打交道，我们和居委会打</p>
+<p>交道。他们为我们提供服务。我们能理解他们的服务么？我们会如何看待这些人为我们提供的服务</p>
+<p>呢？</p>
+<p>最后，加入我们自己做生意，自己做某个事，我们期待别人怎么对我呢？当我们进入商业领域时，我</p>
+<p>们应该如何去放弃某件事以及接受客户的检测呢？</p>
+<p>我想，我们会更加理解这个社会吧。</p>
+<p>我觉得，这应该就是所谓的商业之美吧。他是我们理解和认识这个社会的一个视角，同时也是我们和</p>
+<p>这个社会更加融洽的一个方式。</p>
+<p>所以，吴老师才说，让我们崇尚商业之美，去欣赏别人的美，创造自己的美。</p>
+<p>你做的商业是为了赚钱，</p>
+<h2 id="大纲">大纲</h2>
+<h2 id="百字摘要">百字摘要</h2>
+<h2 id="金庸案例">金庸案例</h2>
+<h2 id="时间消耗">时间消耗</h2>
+<h2 id="阅读理解">阅读理解：</h2>
+<h2 id="大纲-1">大纲：</h2>
+<h2 id="撰写">撰写：</h2>
+<h2 id="录音">录音</h2>
+<h2 id="一小时运动">一小时运动</h2>
+<h2 id="英文原文">英文原文</h2>
+<p>19 FEBRUARY</p>
+<p>Reprivatization</p>
+<p>Reprivatization：n. 国营改民营，发还私营</p>
+<p>The strongest argument for private enterprise is the function of
+loss.</p>
+<p>Reprivatization is a systematic policy of using the other,
+nongovernmental institutions of the</p>
+<p>society of organizations for the actual “doing,” that is, the
+performance, operation, execution of</p>
+<p>tasks that flowed to government because the original private
+institution of society, the family,</p>
+<p>could not discharge them.</p>
+<p>discharge：</p>
+<p>[ VN ] [ usually passive ] ~ sb (from sth) to give sb official
+permission to leave a place or job; to make sb leave a job</p>
+<p>准许（某人）离开；解雇</p>
+<p>What makes business especially appropriate for reprivatization is
+that, of all social institutions, it is</p>
+<p>predominately an organ of innovation.</p>
+<p>appropriate：</p>
+<p>美</p>
+<p>‑</p>
+<p>合适的；恰</p>
+<p>当的</p>
+<p>/əˈprəʊpriət/</p>
+<p>/əˈproʊ / ~ (for/to sth) suitable, acceptable or correct for the
+particular circumstances</p>
+<p>predominately： 占优势地；有影响力地；更大量地；占绝大多数地</p>
+<p>organ：</p>
+<ol start="14" type="a">
+<li></li>
+</ol>
+<p>preponderantly</p>
+<p>( formal ) an official organization that is part of a larger
+organization and has a special purpose</p>
+<p>（官方的）机构，机关</p>
+<p>All other institutions were originally created to prevent, or at
+least to slow down, change.</p>
+<p>They become innovators only by necessity and most reluctantly.</p>
+<dl>
+<dt>reluctantly：</dt>
+<dd>
+<p>(to do sth) hesitating before doing sth because you do not want to do
+it or because you are not sure that it is the</p>
+</dd>
+</dl>
+<p>right thing to do</p>
+<p>不情愿的；勉强的</p>
+<p>Business has two advantages where government has a major
+weakness.</p>
+<p>Business can abandon an activity.</p>
+<p>Indeed, it is forced to do so if it operates in a market.</p>
+<p>What’s more: of all institutions, business is the only one society
+will let disappear.</p>
+<p>The second strength of business: alone among all institutions, it has
+the test of performance.</p>
+<p>The consumer always asks: “And what will the product do for me
+tomorrow?” If the answer is</p>
+<p>“nothing,” he will see its manufacturer disappear without the
+slightest regret.</p>
+<p>And so will the investor.</p>
+<p>The strongest argument for “private enterprise” is not the function
+of profit.</p>
+<p>The strongest argument is the function of loss.</p>
+<p>Because of it business is the most adaptable and the most flexible of
+the institutions around.</p>
+<p>adaptable：</p>
+<p>有适应能力的；能适应的</p>
+<p>flexible：</p>
+<p>能适应新情况的；灵活的；可变动的</p>
+<p>( approving ) able to change or be changed in order to deal
+successfully with new situations</p>
+<p>( approving ) able to change to suit new conditions or situations</p>
+<h3 id="action-point">ACTION POINT:</h3>
+<p>First prisons, now wars are being manned by private companies.</p>
+<p>man：</p>
+<p>[ VN ] to work at a place or be in charge of a place or a machine; to
+supply people to work somewhere</p>
+<p>（机器等）；配备（人员）</p>
+<p>在…岗位上工作；操纵</p>
+<p>Make a list of which sectors will privatize next and determine how
+you can benefit.</p>
+<p>The Age of Discontinuity</p>
+<h2 id="february">19 FEBRUARY</h2>
+<h3 id="reprivatization">Reprivatization</h3>
+<p>The strongest argument for private enterprise is the function of
+loss.</p>
+<p>Reprivatization is a systematic policy of using the other,
+nongovern-</p>
+<p>mental institutions of the society of organizations for the actual
+“doing,” that</p>
+<p>is, the performance, operation, execution of tasks that flowed to
+government</p>
+<p>because the original private institution of society, the family,
+could not</p>
+<p>discharge them. What makes business especially appropriate for</p>
+<p>reprivatization is that, of all social institutions, it is
+predominately an organ of</p>
+<p>innovation. All other institutions were originally created to
+prevent, or at least</p>
+<p>to slow down, change. They become innovators only by necessity
+and</p>
+<p>most reluctantly.</p>
+<p>Business has two advantages where government has a major
+weakness.</p>
+<p>Business can abandon an activity. Indeed, it is forced to do so if it
+operates in</p>
+<p>a market. What’s more: of all institutions, business is the only one
+society</p>
+<p>will let disappear. The second strength of business: alone among all
+institu-</p>
+<p>tions, it has the test of performance. The consumer always asks: “And
+what</p>
+<p>will the product do for me tomorrow?” If the answer is “nothing,” he
+will see</p>
+<p>its manufacturer disappear without the slightest regret. And so will
+the</p>
+<p>investor. The strongest argument for “private enterprise” is not the
+function of</p>
+<p>profit. The strongest argument is the function of loss. Because of it
+busi-ness</p>
+<p>is the most adaptable and the most flexible of the institutions
+around.</p>
+<h3 id="action-point-1">ACTION POINT:</h3>
+<p>First prisons, now wars are being manned by private com-</p>
+<p>panies. Make a list of which sectors will privatize next and
+determine</p>
+<p>how you can benefit.</p>
+<h4 id="the-age-of-discontinuity">The Age of Discontinuity</h4>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="第三同读" />
+  <title>德鲁克日志</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">德鲁克日志</h1>
+<p class="author">第三同读</p>
+</header>
+<h2 id="透过金庸读懂德鲁克">透过金庸读懂德鲁克</h2>
+<p>什么样的人是英雄？</p>
+<p>小时候，喜欢看武打电影，看到那些武林高手在各种悬崖边上打斗，感觉那些人居然不怕，很是英</p>
+<p>雄。就很佩服那样的人。</p>
+<p>后来，长大了一些，发现自己是个懦夫，而且恐高，站到10层楼以上就不敢往下看了，更别提站在悬</p>
+<p>崖边了。</p>
+<p>再后来，我长大了，发现自己还是胆小，什么都怕，不敢大声说话，不敢公开演讲，被人欺负也不敢</p>
+<p>反抗，也不敢去和领导谈涨工资。</p>
+<p>所以，我这样的人，肯定不适合创业，
+因为他们说创业都要胆大，要有”把脑袋别在腰带上“的气魄。</p>
+<p>而我没有。</p>
+<p>偶尔，我会和一些股民聊天，他们与很多很有趣的理论，他们说，炒股就是”撑死胆大的，饿死胆小的</p>
+<p>“，所以，要敢于逆行。”赢了豪华游艇，属于下地干活“。</p>
+<p>有个股民说：”其实，我们股民玩的是‘火中取栗’”，我们不怕风险，只要有利润。事实上，我们的利润</p>
+<p>都来自风险，而且是巨大的风险。</p>
+<p>然后，又有人和我说：“人生哪里没有风险呢？喝凉水还能噎死呢，做啥没有风险呢？”
+所以我们要拥</p>
+<p>抱风险。</p>
+<p>而我，则是个风险厌恶型的，
+我几乎厌恶所有的风险，甚至是没面子的风险。所以，我总是不做什么</p>
+<p>事情。让自己风险降到最低。</p>
+<p>然后我想，企业家，是不是就是那些特别爱冒险的人呢？</p>
+<p>那云、马化腾、任正非，那些人是不是都是爱冒险的人呢？</p>
+<p>马云是不是冒险去创业了？任正非是不是40多岁，才冒着巨大的风险去开公司？</p>
+<p>或者说，古代那些将军，军事家，是不是都是嗜血好杀，经常置之死地而后生呢？</p>
+<p>好像是，好像又不是。</p>
+<p>其实，对于那些人来说创业才是最低风险的事情，当马云实在找不到工作时，他选择了创业，当马化</p>
+<p>腾的公司实在卖不出去的时候，他选择了坚持，当任正非在40多岁，已经无可失去时，他选择了创办</p>
+<p>华为。</p>
+<p>所以，所谓的创业者，他们只是选择了风险最小的事情，而不是相反。</p>
+<p>或许，某天，当我不得不创业时，当我不得不抛下脸面去公开演讲时，当我敲开老板的门去和他谈工</p>
+<p>资时，我只是选择了我当时风险最小的选择。</p>
+<h2 id="大纲">大纲</h2>
+<h2 id="百字摘要">百字摘要</h2>
+<h2 id="金庸案例">金庸案例</h2>
+<h2 id="时间消耗">时间消耗</h2>
+<h2 id="阅读理解">阅读理解：</h2>
+<h2 id="大纲-1">大纲：</h2>
+<h2 id="撰写">撰写：</h2>
+<h2 id="录音">录音</h2>
+<h2 id="一小时运动">一小时运动</h2>
+<h2 id="英文原文">英文原文</h2>
+<p>6 MARCH</p>
+<p>Innovation and Risk Taking</p>
+<p>Successful innovators are conservative.</p>
+<p>conservative：</p>
+<p>opposed to great or sudden social change; showing that you prefer
+traditional styles and values</p>
+<p>I once attended a university symposium on entrepreneurship at which a
+number of</p>
+<p>psychologists spoke.</p>
+<p>symposium：</p>
+<dl>
+<dt>保守的；守旧的</dt>
+<dd>
+<p>(on sth) a meeting at which experts have discussions about a
+particular subject; a small conference</p>
+</dd>
+</dl>
+<p>研讨会；小型讨论会</p>
+<p>专题讨论会；</p>
+<p>entrepreneurship：</p>
+<p>N-UNCOUNT Entrepreneurship is the state of being an entrepreneur, or
+the activities associated with being</p>
+<p>企业家(身份、行为); 企业家精神</p>
+<p>psychologists：N-COUNT A psychologist is a person who studies the
+human mind and tries to explain why people behave in the</p>
+<p>way that they do. 心理学家</p>
+<p>an entrepreneur.</p>
+<p>Although their papers disagreed on everything else, they all talked
+about an “entrepreneurial</p>
+<p>personality,” which was characterized by a “propensity for risk
+taking.”</p>
+<p>entrepreneurial ：</p>
+<p>具有创业素</p>
+<p>ADJ Entrepreneurial means having the qualities that are needed to
+succeed as an entrepreneur.</p>
+<p>质的</p>
+<p>personality：</p>
+<p>性；人格</p>
+<p>[ C U ] the various aspects of a person’s character that combine to
+make them different from other people</p>
+<p>propensity：</p>
+<dl>
+<dt>向；习性</dt>
+<dd>
+<p>(for sth) | ~ (for doing sth) | ~ (to do sth) ( formal ) a tendency
+to a particular kind of behaviour</p>
+</dd>
+</dl>
+<p>性格；个</p>
+<p>（行为方面的）倾</p>
+<p>A well-known and successful innovator and entrepreneur who had built
+a process-based innovation</p>
+<p>into a substantial worldwide business in the space of twenty-five
+years was then asked to</p>
+<p>comment.</p>
+<p>substantial ：</p>
+<p>大量的；价值巨大的；重大的</p>
+<p>comment：</p>
+<p>表达意见</p>
+<dl>
+<dt>large in amount, value or importance</dt>
+<dd>
+<p>(on/upon sth) to express an opinion about sth</p>
+</dd>
+</dl>
+<p>He said: “I find myself baffled by your papers. I think I know as
+many successful innovators and</p>
+<p>entrepreneurs as anyone, beginning with myself.</p>
+<p>baffled：</p>
+<p>使困惑</p>
+<p>V-T If something baffles you, you cannot understand it or explain
+it.</p>
+<p>I have never come across an ‘entrepreneurial personality.’</p>
+<p>The successful ones I know all have, however, one thing—and only one
+thing—in common: they are</p>
+<p>not ‘risk takers.’ They try to define the risks they have to take and
+to minimize them as much as</p>
+<p>possible.</p>
+<p>Otherwise none of us could have succeeded.”</p>
+<p>This jibes with my own experience.</p>
+<p>jibes：</p>
+<p>N-COUNT A jibe is a rude or insulting remark about someone that is
+intended to make them look foolish.</p>
+<p>嘲讽</p>
+<p>I, too, know a good many successful entrepreneurs.</p>
+<p>Not one of them has a “propensity for risk taking.”</p>
+<p>Most successful innovators in real life are colorless figures, and
+much more likely to spend hours</p>
+<p>on cash-flow projections than to dash off looking for “risks.”</p>
+<p>They are not “risk-focused”; they are “opportunity-focused.”</p>
+<h3 id="action-point">ACTION POINT:</h3>
+<p>Determine which of your ideas presents the least risk and the most
+opportunity and focus on them.</p>
+<p>Innovation and Entrepreneurship</p>
+<h2 id="march">6 MARCH</h2>
+<h3 id="innovation-and-risk-taking">Innovation and Risk Taking</h3>
+<p>Successful innovators are conservative.</p>
+<p>Ionce attended a university symposium on entrepreneurship at
+which</p>
+<p>Anumber of psychologists spoke. Although their papers disagreed
+on</p>
+<p>everything else, they all talked about an “entrepreneurial
+personality,” which</p>
+<p>was characterized by a “propensity for risk taking.” A well-known
+and</p>
+<p>successful innovator and entrepreneur who had built a
+process-based</p>
+<p>innovation into a substantial worldwide business in the space of
+twenty-five</p>
+<p>years was then asked to comment. He said: “I find myself baffled by
+your</p>
+<p>papers. I think I know as many successful innovators and
+entrepreneurs as</p>
+<p>anyone, beginning with myself. I have never come across an
+’entrepre-neurial</p>
+<p>personality.’ The successful ones I know all have, however, one
+thing—and</p>
+<p>only one thing—in common: they are not ‘risk takers.’ They try to
+define the</p>
+<p>risks they have to take and to minimize them as much as pos-</p>
+<p>sible. Otherwise none of us could have succeeded.”</p>
+<p>This jibes with my own experience. I, too, know a good many
+successful</p>
+<p>entrepreneurs. Not one of them has a “propensity for risk taking.”
+Most suc-</p>
+<p>cessful innovators in real life are colorless figures, and much more
+likely to</p>
+<p>spend hours on cash-flow projections than to dash off looking for
+“risks.”</p>
+<p>They are not “risk-focused”; they are “opportunity-focused.”</p>
+<h3 id="action-point-1">ACTION POINT:</h3>
+<p>Determine which of your ideas presents the least risk and</p>
+<p>the most opportunity and focus on them.</p>
+<h4 id="innovation-and-entrepreneurship">Innovation and
+Entrepreneurship</h4>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>
