@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="hbaolong@vip.qq.com" />
+  <title>论语之301-2025年4月2日-4．椭圆和双曲线的切线性质　相应的极值性质</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">论语之301-2025年4月2日-4．椭圆和双曲线的切线性质　相应的极值性质</h1>
+<p class="author">hbaolong@vip.qq.com</p>
+</header>
+<h4
+id="椭圆和双曲线的切线性质-相应的极值性质xxxxxxxx赫伦问题和某些重要的几何定理有着密切的关系我们已经证明过若r是l上使prrq为极小的点那么pr和rq与l成等角下面我们把这个极小总距离记作2a设p和q分别表示平面上任一点到p和q两点的距离我们考虑平面上所有使pq2a的点的轨迹这个轨迹是一个椭圆它以p和q为焦点并且过直线l上的r点另外l还必须在r点和椭圆相切如果l除r外还交椭圆于另一点r那么l有一段应在椭圆内部因为容易知道对于椭圆内部的点pq小于2a外部的点大于2a所以这段上的每一点的pq要小于2a又因为我们已知l上的点有pq2a因此l与椭圆另有交点是不可能的所以l必在r与椭圆相切但我们知道prrq与l的夹角是相等的因此我们附带的证明了一个重要的定理椭圆的切线与切点和焦点的两条连线成等角xxxxxxxx图181-椭圆的切线性质xxxxxxxx下面一个问题和上面的讨论密切有关给定一条直线l和它两侧的两点p和q见图182求l上的一点r使量pq即由pq到r的距离之差的绝对值为极大.我们将假定l不是pq的垂直平分线因为这时对l上的任意点r都使pq等于0问题没有意义要解决这个问题首先求p对l的反影点得到与q同一侧的点p对于l上任意点r我们有prprpqrq因为rq和p可以看作一个三角形的顶点所以量pqrprq决不会比pq大这是由于三角形两边之差不大于第三边的缘故如果rp和q都在一条直线上如图所示pq应等于pq所以所要求的点r是过p与q的直线和l的交点和前面的情况一样很容易知道rprq与l成等角因为三角形rpr和rpr是全等的xxxxxxxx图182-prqr极大值xxxxxxxx这个问题还和双曲线的切线性质有关正如上一问题和椭圆有关一样如果差的极大值prqr是2a我们可以考察平面上所有使pq为2a的点的轨迹这是以p和q为焦点通过r点的双曲线容易知道就双曲线两支之间的区域内的点来说pq的绝对值是小于2a的而对焦点所在的双曲线两侧的区域内的点来说pq的绝对值是大于2a的用与椭圆情形相同的论证可知l一定和双曲线在r点相切究竟l与两支中的哪一支相切要看p和q哪一点更接近l而定如果p较近p附近的那一支将与l相切同样对q也是如此见图183如果p和q与l的距离相等那么l与双曲线的任一支都不相切取而代之的情形是l成为双曲线的一个渐近线只要我们注意到在这种情况下前面的作图中因为直线pq将平行于l所以不会产生有限点r就会觉得这个结果是有道理的了xxxxxxxx图183-双曲线的切线性质xxxxxxxx和前面一样以上讨论已证明了如下的熟知的定理双曲线任一点的切线平分这个切点和双曲线两焦点连线所张成的角xxxxxxxx使人们有点奇怪的是如果p和q在l的同侧我们要解决的是一个极小问题而如果p和q在l的异侧却要考虑极大问题但是立刻可以看到这是很自然的在第一个问题里如果l向两端不论哪个方向无限延伸的话那么每一个距离p和q因而pq将无限制地增大因此无法求pq的极大值而只可能讨论极小问题第二种情形就大不相同了这里p和q在l的两侧在这里为了避免混淆我们把差pq它的负值qp以及绝对值pq区分开来对于绝对值可以有极大问题这种情形最好这样理解如果我们令r沿直线l运动并通过不同的位置r1r2r3于是必有一点使差pq是零这就是pq的垂直平分线与l的交点这个点就给出了绝对值pq的极小值但是在这个点的一边p比q大而在这个点的另一边p比q小因此量pq在这个点的一边是正的而在另一边则是负的所以在pq0的这个点既不是pq的极大值也不是pq的极小值可是使pq取得极大值的点实际上是pq的极值如果pq得到的是pq的极大值如果qp得到的是qp的极大值因而是pq的极小值pq的极大值或极小值能否求得要看两个给定点pq对直线l的位置而定xxxxxxxx我们已经知道如果pq与l等距离上述的极大问题是无解的因为那时图182中的直线pq将平行于l这相当于r无论沿l的哪个方向趋于无穷远时数量pq趋于一个极限值这个极限值等于pq在l上的垂直投影s的长度读者可以作为练习来证如果pq和l等距离那么pq总小于这个极限而不存在极大值这是因为对每一点r我们总能找到更远的点使pq更大但它仍然不等于sxxxxxxxx5到给定曲线的距离的极值xxxxxxxx首先我们来确定由定点p到给定曲线c的最短和最长距离为了简单起见我们假设c是每一点都有切线的简单闭曲线如图184所示这里在直观基础上承认了曲线的切线概念这个概念将在下一章进行分析答案是很简单的如果曲线c上的一点r使距离pr是极小值或极大值则必然使得直线pr垂直于c在r点的切线换句话说pr垂直于c证明如下以p为圆心并过r点的圆必与曲线相切因为如果r是具有最短距离的点c必然全部在圆外那么曲线不能在r点穿过圆而如果r是具有最长距离的点c必然全部在圆内曲线也不能在r点穿过这是由于下面明显的事实任意在圆内部的点到p的距离小于rp而如果点在圆的外部它到p的距离一定大于rp因此圆和c相接于r并在r有同一切线现在直线pr是圆的半径它垂直于圆在r点的切线所以必在r点垂直于曲线cxxxxxxxx图184-到曲线的极值距离xxxxxxxx附带指出这样一个闭曲线的直径即它最长的弦必然在它的两个端点垂直于c这个证明留给读者作练习在三维空间中有类似的命题和证明xxxxxxxx习题证明连接两个不相交的闭曲线的最短和最长线段在其端点处垂直于这两条曲线xxxxxxxx-第四小节中有关距离的和或差的问题现在可以作推广了代替直线l现在考虑一条每点都有切线的简单闭曲线c并且给出两个不在c上的点pq设p和q分别表示曲线c上任意点到p和q的距离我们打算在c上求出使和pq以及差pq具有极值的特定点为解决现在的问题用在c是直线时所用过的反射作图的简单方法就不行了但是我们可以用椭圆和双曲线的性质来解决现在的问题因为c是闭曲线不再是延伸到无穷远的直线所以极大和极小问题在这里都有意义这是因为我们把下面事实看作是当然的在一条曲线的任意有限曲线段上特别是在闭曲线上量pq和pq有最大值和最小值见7xxxxxxxx对于和pq的情形设r是c上使pq为极大值的点并且记2a为r点的pq的值考虑焦点在pq处的椭圆它是满足pq2a的点的轨迹这个椭圆在r必与c相切这个证明留给读者作练习但我们已知直线prqr在r处与椭圆成等角因为椭圆与c切于r所以直线pr和qr在r处与c也必成等角如果pq在r是极小值同样的方法可知prqr在r处与c成等角因此我们得到定理给定一条闭曲线c以及c同侧的两点p和q那么若r是c上使和pq取得最大值或最小值的点则直线pr和qr在r处与曲线c即与它的切线成等角xxxxxxxx图185-prqr的最大值和最小值xxxxxxxx图186-prqr的最小值xxxxxxxx如果p在c的内部而q在外部这个定理对pq的最大值也是成立的但对最小值不成立因为这时椭圆退化为一条直线了xxxxxxxx以双曲线的性质代替椭圆那么用完全类似的方法读者可以证明下面的定理给定闭曲线c以及c异侧的两点p和q若c上的点r是使pq取得最大值或最小值的点那么直线prqr与c成等角我们再一次强调闭曲线的问题和无限长的直线不同后一个问题要找的是绝对值pq的最大值而前一个问题中pq的最大值以及最小值是存在的xxxxxxxx-2-基本极值问题的一般原则xxxxxxxx">4．椭圆和双曲线的切线性质　相应的极值性质XXXXXXXX赫伦问题和某些重要的几何定理有着密切的关系．我们已经证明过，若R是L上使PR＋RQ为极小的点，那么PR和RQ与L成等角．下面我们把这个极小总距离记作2a．设p和q分别表示平面上任一点到P和Q两点的距离，我们考虑平面上所有使p＋q＝2a的点的轨迹．这个轨迹是一个椭圆，它以P和Q为焦点，并且过直线L上的R点．另外，L还必须在R点和椭圆相切．如果L除R外，还交椭圆于另一点R′，那么L有一段应在椭圆内部；因为容易知道，对于椭圆内部的点，p＋q小于2a，外部的点，大于2a，所以这段上的每一点的p＋q，要小于2a．又因为我们已知L上的点有p＋q≥2a，因此L与椭圆另有交点是不可能的．所以L必在R与椭圆相切．但我们知道，PR、RQ与L的夹角是相等的；因此我们附带的证明了一个重要的定理：椭圆的切线与切点和焦点的两条连线成等角．XXXXXXXX图181　椭圆的切线性质XXXXXXXX下面一个问题和上面的讨论密切有关：给定一条直线L和它两侧的两点P和Q（见图182），求L上的一点R，使量｜p－q｜即由P、Q到R的距离之差的绝对值为极大.（我们将假定L不是PQ的垂直平分线；因为这时对L上的任意点R都使p－q等于0，问题没有意义．）要解决这个问题，首先求P对L的反影点，得到与Q同一侧的点P′．对于L上任意点R′，我们有p＝R′P＝R′P′，q＝R′Q．因为R′，Q和P′可以看作一个三角形的顶点，所以量｜p－q｜＝｜R′P′－R′Q｜决不会比P′Q大，这是由于三角形两边之差不大于第三边的缘故．如果R′，P′和Q都在一条直线上，如图所示，｜p－q｜应等于P′Q，所以所要求的点R是过P′与Q的直线和L的交点．和前面的情况一样，很容易知道RP、RQ与L成等角，因为三角形RPR′和RP′R′是全等的．XXXXXXXX图182　｜PR－QR｜＝极大值XXXXXXXX这个问题还和双曲线的切线性质有关，正如上一问题和椭圆有关一样．如果差的极大值｜PR－QR｜是2a，我们可以考察平面上所有使｜p－q｜为2a的点的轨迹．这是以P和Q为焦点，通过R点的双曲线．容易知道，就双曲线两支之间的区域内的点来说，p－q的绝对值是小于2a的，而对焦点所在的双曲线两侧的区域内的点来说，p－q的绝对值是大于2a的．用与椭圆情形相同的论证，可知L一定和双曲线在R点相切．究竟L与两支中的哪一支相切，要看P和Q哪一点更接近L而定；如果P较近，P附近的那一支将与L相切，同样，对Q也是如此（见图183）．如果P和Q与L的距离相等，那么L与双曲线的任一支都不相切，取而代之的情形是L成为双曲线的一个渐近线．只要我们注意到在这种情况下，前面的作图中因为直线P′Q将平行于L，所以不会产生（有限）点R，就会觉得这个结果是有道理的了．XXXXXXXX图183　双曲线的切线性质XXXXXXXX和前面一样，以上讨论已证明了如下的熟知的定理：双曲线任一点的切线，平分这个切点和双曲线两焦点连线所张成的角．XXXXXXXX使人们有点奇怪的是，如果P和Q在L的同侧，我们要解决的是一个极小问题，而如果P和Q在L的异侧，却要考虑极大问题．但是立刻可以看到这是很自然的．在第一个问题里，如果L向两端（不论哪个方向）无限延伸的话，那么每一个距离p和q，因而p＋q，将无限制地增大．因此无法求p＋q的极大值，而只可能讨论极小问题．第二种情形就大不相同了，这里P和Q在L的两侧，在这里为了避免混淆，我们把差p－q，它的负值q－p，以及绝对值｜p－q｜区分开来；对于绝对值，可以有极大问题．这种情形最好这样理解：如果我们令R沿直线L运动，并通过不同的位置，R1，R2，R3，…．于是必有一点使差p－q是零．这就是P，Q的垂直平分线与L的交点．这个点就给出了绝对值｜p－q｜的极小值．但是，在这个点的一边，p比q大，而在这个点的另一边，p比q小；因此，量p－q在这个点的一边，是正的，而在另一边则是负的．所以在｜p－q｜＝0的这个点，既不是p－q的极大值也不是p－q的极小值．可是，使｜p－q｜取得极大值的点实际上是p－q的极值．如果p＞q，得到的是p－q的极大值；如果q＞p，得到的是q－p的极大值，因而是p－q的极小值．p－q的极大值或极小值能否求得，要看两个给定点P、Q对直线L的位置而定．XXXXXXXX我们已经知道，如果P，Q与L等距离，上述的极大问题是无解的，因为那时图182中的直线P′Q将平行于L．这相当于R无论沿L的哪个方向趋于无穷远时，数量｜p－q｜趋于一个极限值．这个极限值等于PQ在L上的垂直投影s的长度（读者可以作为练习来证）．如果P、Q和L等距离，那么｜p－q｜总小于这个极限，而不存在极大值，这是因为对每一点R，我们总能找到更远的点，使｜p－q｜更大，但它仍然不等于s．XXXXXXXX*5．到给定曲线的距离的极值XXXXXXXX首先，我们来确定由定点P到给定曲线C的最短和最长距离．为了简单起见，我们假设C是每一点都有切线的简单闭曲线，如图184所示（这里在直观基础上承认了曲线的切线概念，这个概念将在下一章进行分析）．答案是很简单的：如果曲线C上的一点R使距离PR是极小值或极大值，则必然使得直线PR垂直于C在R点的切线；换句话说，PR垂直于C．证明如下：以P为圆心并过R点的圆必与曲线相切．因为如果R是具有最短距离的点，C必然全部在圆外，那么曲线不能在R点穿过圆，而如果R是具有最长距离的点，C必然全部在圆内，曲线也不能在R点穿过（这是由于下面明显的事实：任意在圆内部的点，到P的距离小于RP，而如果点在圆的外部，它到P的距离一定大于RP）．因此圆和C相接于R并在R有同一切线．现在直线PR是圆的半径，它垂直于圆在R点的切线，所以必在R点垂直于曲线C．XXXXXXXX图184　到曲线的极值距离XXXXXXXX附带指出，这样一个闭曲线的直径，即它最长的弦，必然在它的两个端点垂直于C．这个证明留给读者作练习．在三维空间中有类似的命题和证明．XXXXXXXX习题：证明连接两个不相交的闭曲线的最短和最长线段在其端点处垂直于这两条曲线．XXXXXXXX##
+第四小节中有关距离的和或差的问题现在可以作推广了．代替直线L，现在考虑一条每点都有切线的简单闭曲线C，并且给出两个不在C上的点P、Q．设p和q分别表示曲线C上任意点到P和Q的距离，我们打算在C上求出使和p＋q以及差p－q具有极值的特定点．为解决现在的问题，用在C是直线时所用过的反射作图的简单方法就不行了．但是我们可以用椭圆和双曲线的性质来解决现在的问题．因为C是闭曲线，不再是延伸到无穷远的直线，所以极大和极小问题在这里都有意义．这是因为我们把下面事实看作是当然的：在一条曲线的任意有限曲线段上，特别是在闭曲线上，量p＋q和p－q有最大值和最小值（见§7）．XXXXXXXX对于和p＋q的情形，设R是C上使p＋q为极大值的点，并且记2a为R点的p＋q的值．考虑焦点在P、Q处的椭圆，它是满足p＋q＝2a的点的轨迹．这个椭圆在R必与C相切（这个证明留给读者作练习）．但我们已知直线PR、QR在R处与椭圆成等角；因为椭圆与C切于R，所以直线PR和QR在R处与C也必成等角，如果p＋q在R是极小值，同样的方法可知PR、QR在R处与C成等角．因此我们得到定理：给定一条闭曲线C，以及C同侧的两点P和Q；那么若R是C上使和p＋q取得最大值或最小值的点，则直线PR和QR在R处与曲线C（即与它的切线）成等角．XXXXXXXX图185　PR＋QR的最大值和最小值XXXXXXXX图186　PR－QR的最小值XXXXXXXX如果P在C的内部而Q在外部，这个定理对p＋q的最大值也是成立的，但对最小值不成立，因为这时椭圆退化为一条直线了．XXXXXXXX以双曲线的性质代替椭圆，那么用完全类似的方法，读者可以证明下面的定理：给定闭曲线C以及C异侧的两点P和Q；若C上的点R是使p－q取得最大值或最小值的点，那么直线PR、QR与C成等角．我们再一次强调，闭曲线的问题和无限长的直线不同，后一个问题要找的是绝对值｜p－q｜的最大值，而前一个问题中p－q的最大值（以及最小值）是存在的．XXXXXXXX###
+§2　基本极值问题的一般原则XXXXXXXX</h4>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

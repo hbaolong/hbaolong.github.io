@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="hbaolong@vip.qq.com" />
+  <title>论语之356-2025年5月27日-1．可微性</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">论语之356-2025年5月27日-1．可微性</h1>
+<p class="author">hbaolong@vip.qq.com</p>
+</header>
+<h4
+id="可微性xxxxxxxx我们已经把函数的导数概念与函数图像的切线这样的直观观念结合起来了由于函数的一般概念十分宽广所以为了逻辑上的完整性有必要摆脱对几何直观的依赖因为我们并不能担保在研究圆或椭圆这些简单曲线时出现的那些熟知的直观事实对于较复杂的图形也必然存在例如考虑图282的函数这个函数的图像有一棱角该函数是由方程xxxxxxxxyxxxxxxxxxx图282-yxxxxxxxxxx定义的其中x是x的绝对值即xxxxxxxxyxx2x当x0xxxxxxxxyxx0当x0xxxxxxxx另一个这样的例子是函数yx再一个是xxxxxxxxyxxx1x1xxxxxxxx这些函数的图像在某些点没有确定的切线或方向这就意味着这些函数在相应的那些x值上不存在导数xxxxxxxx图283-yxxxxxxxxx图284-yxxx1x1xxxxxxxx习题1作一函数fx使它的图像为正六边形的一半xxxxxxxx2函数xxxxxxxx的图像的棱角在什么地方fx的不连续点是怎样的xxxxxxxx作为另一个不可微的简单例子我们考虑函数xxxxxxxxyfxxsinxxxxxxxx这是函数sin见此处乘以因子x而得到的我们定义当x0时fx为0这个函数在x为正值时的图像见图285它是处处连续的图像在x0的邻域是无限振荡的当趋近于x0时这些波变得很小这些波的斜率由xxxxxxxx图285-yxsinxxxxxxxxfxsincosxxxxxxxx给出读者可作为练习来验证一下当x趋于0时这个斜率在无限递增的正负界之间振动对于x0我们可以按差商xxxxxxxx当h0时的极限来具体地求导数但当h0时这个差商在-1和1之间振动且不趋于任何极限因此函数在x0处是不可微的xxxxxxxx这些例子指出了这种问题的固有困难维尔斯特拉斯引人注目地指明了这一点他构造了一个其图像处处没有切线的连续函数显然可微性可以推导出连续性而上述的这个例子说明连续性不能推出可微性因为维尔斯特拉斯函数是连续的但处处不可微在实际问题中这样的问题是不会产生的除了一些孤立点外曲线将是光滑的不仅可微而且导数也是连续的那么为什么我们不简单地规定在我们研究的问题中不存在这些病态的现象呢在微积分中我们正是这样做的只研究可微函数在第8章中我们完成了很大一类函数的微分因而证明了它们的可微性xxxxxxxx因为函数的可微性在逻辑上不是理所当然的因此必须或者假定它或者证明它曲线的方向或说切线这个概念原来是导数概念的基础现在则是从导数的纯分析定义中导出来的如果函数yfx有导数即如果差商xxxxxxxx当h不论从哪一边趋于0时都有唯一的极限fx那么就说对应的曲线有斜率为fx的一条切线这里为了在逻辑上使人信服采取的方法与费马莱布尼茨和牛顿的朴素观点正好相反xxxxxxxx习题1证明连续函数x2sin在x0处有导数xxxxxxxx2证明函数arctan在x0处不连续xarctan在x0处连续但没有导数x2arctan在x0处有导数xxxxxxxx">1．可微性XXXXXXXX我们已经把函数的导数概念与函数图像的切线这样的直观观念结合起来了．由于函数的一般概念十分宽广，所以为了逻辑上的完整性，有必要摆脱对几何直观的依赖．因为我们并不能担保在研究圆或椭圆这些简单曲线时出现的那些熟知的直观事实对于较复杂的图形也必然存在．例如，考虑图282的函数，这个函数的图像有一棱角，该函数是由方程XXXXXXXXy＝x＋｜x｜XXXXXXXX图282　y＝x＋｜x｜XXXXXXXX定义的，其中｜x｜是x的绝对值，即XXXXXXXXy＝x＋x＝2x，当x≥0，XXXXXXXXy＝x－x＝0，当x＜0．XXXXXXXX另一个这样的例子是函数y＝｜x｜，再一个是XXXXXXXXy＝x＋｜x｜＋（x－1）＋｜x－1｜．XXXXXXXX这些函数的图像在某些点没有确定的切线或方向；这就意味着这些函数在相应的那些x值上不存在导数．XXXXXXXX图283　y＝｜x｜XXXXXXXX图284　y＝x＋｜x｜＋（x－1）＋｜x－1｜XXXXXXXX习题：1）作一函数f（x），使它的图像为正六边形的一半．XXXXXXXX2）函数XXXXXXXX的图像的棱角在什么地方？f′（x）的不连续点是怎样的？XXXXXXXX作为另一个不可微的简单例子，我们考虑函数XXXXXXXXy＝f（x）＝xsin，XXXXXXXX这是函数sin（见此处）乘以因子x而得到的；我们定义当x＝0时f（x）为0．这个函数在x为正值时的图像见图285，它是处处连续的．图像在x＝0的邻域是无限振荡的，当趋近于x＝0时，这些“波”变得很小．这些波的斜率由XXXXXXXX图285　y＝xsinXXXXXXXXf′（x）＝sin－cosXXXXXXXX给出（读者可作为练习来验证一下）；当x趋于0时，这个斜率在无限递增的正、负界之间振动．对于x＝0，我们可以按差商XXXXXXXX当h→0时的极限来具体地求导数．但当h→0时，这个差商在-1和+1之间振动，且不趋于任何极限，因此函数在x＝0处是不可微的．XXXXXXXX这些例子指出了这种问题的固有困难．维尔斯特拉斯引人注目地指明了这一点，他构造了一个其图像处处没有切线的连续函数．显然可微性可以推导出连续性，而上述的这个例子说明连续性不能推出可微性，因为维尔斯特拉斯函数是连续的但处处不可微．在实际问题中，这样的问题是不会产生的．除了一些孤立点外，曲线将是光滑的，不仅可微而且导数也是连续的．那么为什么我们不简单地规定在我们研究的问题中不存在这些“病态的”现象呢？在微积分中我们正是这样做的，只研究可微函数．在第8章中，我们完成了很大一类函数的微分，因而证明了它们的可微性．XXXXXXXX因为函数的可微性在逻辑上不是理所当然的，因此必须或者假定它或者证明它．曲线的方向或说切线，这个概念原来是导数概念的基础，现在则是从导数的纯分析定义中导出来的．如果函数y＝f（x）有导数，即如果差商XXXXXXXX当h不论从哪一边趋于0时，都有唯一的极限f′（x），那么就说对应的曲线有斜率为f′（x）的一条切线．这里为了在逻辑上使人信服，采取的方法与费马、莱布尼茨和牛顿的朴素观点正好相反．XXXXXXXX习题：1）证明连续函数x2sin在x＝0处有导数．XXXXXXXX2）证明函数arctan（）在x＝0处不连续，xarctan（）在x＝0处连续，但没有导数，x2arctan（）在x＝0处有导数．XXXXXXXX</h4>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

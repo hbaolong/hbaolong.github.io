@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="hbaolong@vip.qq.com" />
+  <title>论语之304-2025年4月5日-1．极值和驻点</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">论语之304-2025年4月5日-1．极值和驻点</h1>
+<p class="author">hbaolong@vip.qq.com</p>
+</header>
+<h4
+id="极值和驻点xxxxxxxx在前面的讨论中没有用到微分学的方法事实上我们的初等方法比起微积分来更为简单而直接就科学思维的法则来说尽管直接考虑问题的各自特征比只依靠一般方法要更好些但是每一个问题都应以能说明其所用的特殊方法的含义的一般原理为指导这就是微分学在极值问题上的真正作用追求一般化的近代研究只表示事情的一个方面因为数学的活力主要来自各个问题的特色及其方法xxxxxxxx在微分学的历史演变中有一些极大极小问题曾给它以很大影响极值和微分学的联系是这样引起的第八章我们将详细研究函数fx的导数fx及其几何意义简单地说导数fx是yfx在点xy处的切线的斜率从几何上看光滑曲线yfx在极大或极小值处的切线必是水平的也就是说其斜率必等于0这样fx的极值必具有条件fx0xxxxxxxx图191-函数的驻点xxxxxxxx为搞清fx等于零的定义让我们来考察图191中的曲线这里有五个点abcde曲线在这些点的切线都是水平的设fx在这些点的值分别是abcde在所画的区间内fx的极大值在d极小值在a虽然靠近d的那些点的fx的值要比b来得大但b却比b的邻域内其他所有点的fx值要大在这个意义下点b也是极大点由此我们称b为相对极大d表示绝对极大类似地c表示相对极小a表示绝对极小最后我们观察e在e点虽然fx0但fx既不是极大值也不是极小值由此可见fx等于零是光滑函数fx有极值的必要条件而不是充分条件换句话说任何一个极值不论是相对极值或绝对极值都有fx0但不是任何使fx0的点定有极值导数等于零的点不论它有极值还是没有都叫做驻点通过更精密的分析用比较复杂的以fx的高阶导数表示的条件可以完全显示出极大极小以及驻点的其他特征来xxxxxxxx">1．极值和驻点XXXXXXXX在前面的讨论中，没有用到微分学的方法．事实上，我们的初等方法比起微积分来更为简单而直接．就科学思维的法则来说，尽管直接考虑问题的各自特征比只依靠一般方法要更好些，但是每一个问题都应以能说明其所用的特殊方法的含义的一般原理为指导．这就是微分学在极值问题上的真正作用．追求一般化的近代研究只表示事情的一个方面，因为数学的活力主要来自各个问题的特色及其方法．XXXXXXXX在微分学的历史演变中，有一些极大、极小问题曾给它以很大影响．极值和微分学的联系是这样引起的．第八章我们将详细研究函数f（x）的导数f′（x）及其几何意义．简单地说，导数f′（x）是y＝f（x）在点（x，y）处的切线的斜率．从几何上看，光滑曲线y＝f（x）在极大或极小值处的切线必是水平的，也就是说，其斜率必等于0．这样，f（x）的极值必具有条件f′（x）＝0．XXXXXXXX图191　函数的驻点XXXXXXXX为搞清f′（x）等于零的定义，让我们来考察图191中的曲线．这里有五个点，A，B，C，D，E，曲线在这些点的切线都是水平的；设f（x）在这些点的值分别是a，b，c，d，e．在所画的区间内，f（x）的极大值在D，极小值在A．虽然靠近D的那些点的f（x）的值要比b来得大，但b却比B的邻域内其他所有点的f（x）值要大，在这个意义下，点B也是极大点．由此，我们称B为相对极大，D表示绝对极大，类似地，C表示相对极小，A表示绝对极小．最后，我们观察E，在E点虽然f′（x）＝0，但f（x）既不是极大值，也不是极小值．由此可见，f′（x）等于零是光滑函数f（x）有极值的必要条件，而不是充分条件；换句话说，任何一个极值，不论是相对极值或绝对极值，都有f′（x）＝0，但不是任何使f′（x）＝0的点定有极值．导数等于零的点，不论它有极值还是没有，都叫做驻点．通过更精密的分析，用比较复杂的以f（x）的高阶导数表示的条件，可以完全显示出极大、极小以及驻点的其他特征来．XXXXXXXX</h4>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

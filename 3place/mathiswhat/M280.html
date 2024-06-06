@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="hbaolong@vip.qq.com" />
+  <title>论语之280-2025年3月12日-3．欧拉数e</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">论语之280-2025年3月12日-3．欧拉数e</h1>
+<p class="author">hbaolong@vip.qq.com</p>
+</header>
+<h4
+id="欧拉数exxxxxxxx自从欧拉的无穷分析概要在1748年发表以来数e就和阿基米德数π一样在数学中有了确定的地位说明单调序列原理如何用来定义一个新实数e提供了一个极好的例子xxxxxxxx用缩写xxxxxxxxn1234nxxxxxxxx表示前n个整数的乘积我们来考察序列a1a2an其中xxxxxxxx因为an1是由an加上一个正的增量而来所以这些项an形成一个单调递增序列再者an的值是有上界的xxxxxxxx这是因为xxxxxxxx从而xxxxxxxx这里利用了此处给出的等比级数前n项的和的公式所以由单调序列原理当n趋于无穷时an必趋近一个极限这个极限我们就叫做e要表示eliman这个事实我们可以把e写为无穷级数xxxxxxxx这个尾部带有一串点的等式只是以下两句话的内容的另一个简单表示方法xxxxxxxx且ane当n时xxxxxxxx级数6可以把e计算到任意精确的程度例如6中直到包括的那些项的和到小数点后九位是xxxxxxxxσ2.71828183xxxxxxxx读者应该验证这个结果误差也就是这个值和e的真正值的差很容易估计出来关于差eσ我们有表示式xxxxxxxx这已小到不能影响σ的小数点后第八位数字了所以考虑到上面给出的这个值的最后一位数可能有误差那么精确到小数点后第八位数字我们得到e2.7182818xxxxxxxxe是无理数我们用反证法来证明先假设xxxxxxxxexxxxxxxx其中p和q是整数然后导出一个与假设矛盾的结果因为我们知道2e3e不能是整数所以q必然至少等于2现在级数6两端同乘以q23q得到xxxxxxxx左端显然是一个整数在右端带方括号的那项同样也是整数然而右端其余的项合起来是一个小于的正数因此不是整数这是因为对q2级数的项分别不超过等比级数xxxxxxxx的对应项而后者的和是xxxxxxxx所以7出现了一个矛盾左端的整数不能等于右端的数因为后一个数是一个整数与一个小于的正数的和不是一个整数xxxxxxxx">3．欧拉数eXXXXXXXX自从欧拉的“无穷分析概要”在1748年发表以来，数e就和阿基米德数π一样，在数学中有了确定的地位．说明单调序列原理如何用来定义一个新实数，e提供了一个极好的例子．XXXXXXXX用缩写XXXXXXXXn!＝1·2·3·4·…·nXXXXXXXX表示前n个整数的乘积，我们来考察序列a1，a2，an，…，其中XXXXXXXX因为an＋1是由an加上一个正的增量而来，所以这些项an形成一个单调递增序列．再者，an的值是有上界的：XXXXXXXX这是因为XXXXXXXX从而XXXXXXXX这里利用了此处给出的等比级数前n项的和的公式．所以由单调序列原理，当n趋于无穷时，an必趋近一个极限，这个极限我们就叫做e．要表示e＝liman这个事实，我们可以把e写为“无穷级数”XXXXXXXX这个尾部带有一串点的“等式”，只是以下两句话的内容的另一个简单表示方法：XXXXXXXX且an→e，当n→∞时．XXXXXXXX级数（6）可以把e计算到任意精确的程度．例如，（6）中直到包括的那些项的和（到小数点后九位）是XXXXXXXXΣ＝2.71828183…．XXXXXXXX（读者应该验证这个结果）“误差”，也就是这个值和e的真正值的差，很容易估计出来．关于差（e－Σ）我们有表示式XXXXXXXX这已小到不能影响Σ的小数点后第八位数字了．所以考虑到上面给出的这个值的最后一位数可能有误差，那么精确到小数点后第八位数字，我们得到e＝2.7182818．XXXXXXXX*e是无理数．我们用反证法来证明，先假设XXXXXXXXe＝，XXXXXXXX其中p和q是整数，然后导出一个与假设矛盾的结果．因为，我们知道2＜e＜3，e不能是整数，所以q必然至少等于2．现在级数（6）两端同乘以q!＝2·3…q，得到XXXXXXXX左端显然是一个整数．在右端，带方括号的那项同样也是整数．然而右端其余的项，合起来是一个小于的正数，因此不是整数．这是因为对q≥2，级数＋…的项分别不超过等比级数XXXXXXXX的对应项，而后者的和是XXXXXXXX所以（7）出现了一个矛盾：左端的整数不能等于右端的数；因为后一个数，是一个整数与一个小于的正数的和，不是一个整数．XXXXXXXX</h4>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="hbaolong@vip.qq.com" />
+  <title>论语之227-2025年1月18日-4．只用圆规如何二等分一线段及求圆心</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">论语之227-2025年1月18日-4．只用圆规如何二等分一线段及求圆心</h1>
+<p class="author">hbaolong@vip.qq.com</p>
+</header>
+<h4
+id="只用圆规如何二等分一线段及求圆心xxxxxxxx现在我们已经学会了只用圆规如何求出一给定点的反演点这样我们就能进行某些有趣的作图了例如考虑只用圆规求出两给定点ab之间的中点问题不可以划直线作法是这样的以b为圆心ab为半径画圆以a为起点ab为半径标出三段弧最后一点c将落在直线ab上且有abbc现在以a为圆心ab为半径画圆令c为c关于这个圆的反演点则xxxxxxxxacacab2xxxxxxxxac2abab2xxxxxxxx2acabxxxxxxxx因此c是所求的中点xxxxxxxx图44-求线段中点xxxxxxxx另一个用到反演点的圆规作图是设有某个其圆心未知但给定了圆周的圆求该圆的圆心我们在圆周上任取一点p以它为中心画一圆交给定圆于r和s以这两点为中心以rpsp为半径画二弧相交于点q和图41比较可以看出未知圆心q是q对于以p为圆心的圆的反演所以q只用圆规就能作出xxxxxxxx图45-求圆心xxxxxxxx-5-用其他工具作图-只用圆规的马歇罗尼作图xxxxxxxx1倍立方体的古典作图xxxxxxxx直到现在我们考虑的仅仅是只用圆规和直尺的几何作图问题如果允许用其他工具的话可能的作图种类自然就扩大了例如希腊人用如下方式解决倍立方体问题考虑如图46一个刚性的直角mzn和一个可移动的直角十字架bvwpq此外两个附加的边rs和tu允许在直角边上垂直滑动在这十字架上选取两个固定点e和g使得gba和bef为预先给定的长度适当移动十字架使e和g相应地位于nz和mz上再滑动tu和rs两个边我们就能使整个仪器成为这样的状态十字架的直杆bwbqbv通过矩形adez的顶点ade如果fa这样一种安排总是可能的我们立刻看到axxyyf这时如果把仪器调整得使f等于2a则有x32a3因此x将是这样一个立方体的边它的体积是以a为边的立方体的体积的二倍这就是倍立方体问题所要求的解xxxxxxxx图46-倍立方体的一个工具xxxxxxxx">4．只用圆规如何二等分一线段及求圆心XXXXXXXX现在我们已经学会了只用圆规如何求出一给定点的反演点，这样我们就能进行某些有趣的作图了．例如，考虑只用圆规求出两给定点A，B之间的中点问题（不可以划直线！）作法是这样的：以B为圆心，AB为半径画圆．以A为起点，AB为半径标出三段弧，最后一点C将落在直线AB上，且有AB＝BC．现在以A为圆心，AB为半径画圆．令C′为C关于这个圆的反演点，则XXXXXXXXAC′·AC＝AB2XXXXXXXXAC′·2AB＝AB2XXXXXXXX2AC′＝AB．XXXXXXXX因此C′是所求的中点．XXXXXXXX图44　求线段中点XXXXXXXX另一个用到反演点的圆规作图是，设有某个其圆心未知，但给定了圆周的圆，求该圆的圆心．我们在圆周上任取一点P，以它为中心画一圆交给定圆于R和S．以这两点为中心、以RP＝SP为半径画二弧相交于点Q．和图41比较，可以看出未知圆心Q′是Q对于以P为圆心的圆的反演．所以Q′只用圆规就能作出．XXXXXXXX图45　求圆心XXXXXXXX###
+§5　用其他工具作图　只用圆规的马歇罗尼作图XXXXXXXX*1．倍立方体的古典作图XXXXXXXX直到现在，我们考虑的仅仅是只用圆规和直尺的几何作图问题．如果允许用其他工具的话，可能的作图种类自然就扩大了．例如，希腊人用如下方式解决倍立方体问题．考虑（如图46）一个刚性的直角MZN和一个可移动的直角十字架B，VW，PQ．此外，两个附加的边RS和TU允许在直角边上垂直滑动．在这十字架上选取两个固定点E和G，使得GB＝a和BE＝f为预先给定的长度．适当移动十字架，使E和G相应地位于NZ和MZ上，再滑动TU和RS两个边，我们就能使整个仪器成为这样的状态，十字架的直杆BW，BQ，BV通过矩形ADEZ的顶点A，D，E．如果f＞a，这样一种安排总是可能的．我们立刻看到a∶x＝x∶y＝y∶f．这时如果把仪器调整得使f等于2a，则有x3＝2a3．因此x将是这样一个立方体的边，它的体积是以a为边的立方体的体积的二倍．这就是倍立方体问题所要求的解．XXXXXXXX图46　倍立方体的一个工具XXXXXXXX</h4>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

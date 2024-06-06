@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="hbaolong@vip.qq.com" />
+  <title>论语之299-2025年3月31日-2．赫伦定理　光线的极值性质</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">论语之299-2025年3月31日-2．赫伦定理　光线的极值性质</h1>
+<p class="author">hbaolong@vip.qq.com</p>
+</header>
+<h4
+id="赫伦定理-光线的极值性质xxxxxxxx给定一条直线l以及l同侧的两点p和q试问l上的哪一点r能使prrq是由p经l再到q的最短路径这就是赫伦的光线问题如果l是小溪的河岸有一个人要到l打一桶水从p尽可能快地走到q那么他要解决的恰好是这个问题为了解决这个问题我们把l当作一面镜子然后求出p在l中的反影点p这样就使l垂直平分pp直线pq与l的交点r就是所求的点对l上的其他任意点r要证明prrq小于prrq是很简单的因为prpr以及prpr所以xxxxxxxxprrqprrqpqxxxxxxxx并且prrqprrq但是prrq比pq大因为三角形两边之和大于第三边因此prrq比prrq大这就是所要证的在下面的讨论中我们假设p和q都不在直线l上xxxxxxxx由图177可以看出32并且21所以31换句话说r是使prqr与l成等角的点由此可见光线在l反射的时候由实验知入射角与反射角相等实际上要走由p经l到q的最短路径这和引言中所提过的一样xxxxxxxx图177-赫伦定理xxxxxxxx这个问题可以推广到包含若干条直线lm的情形上去例如假设有两条直线lm和两个点pq如图178所示试求由p经l然后经m最后到达q的最短路径设q是q对于m的反影点q是q对于l的反影点画pq交l于r画rq交m于s那么r和s就是所求的点它们使prrssq是由p经l再经m最后到q的最短路径这个事实的证明和前一个问题的证明很相似我们把它留给读者作练习如果l和m是两面镜子由p发出经l反射到m再经m反射到q的光线将和l交在r和m交在s因此光线仍然是最短路径xxxxxxxx图178-两镜面之间的反射xxxxxxxx人们或许要找出由p先经m再经l到q的最短路径这也给出一条路径prsq见图179确定它和确定前一条路径的方法类似第一条路径的长度可以大于等于或小于第二条路径xxxxxxxx图179xxxxxxxx习题证明如果o和r在直线pq的同一侧那么第一条路径的长度小于第二条路径又在什么条件下两条路径的长度相等xxxxxxxx">2．赫伦定理　光线的极值性质XXXXXXXX给定一条直线L，以及L同侧的两点P和Q，试问L上的哪一点R能使PR＋RQ是由P经L再到Q的最短路径？这就是赫伦的光线问题．（如果L是小溪的河岸，有一个人要到L打一桶水从P尽可能快地走到Q，那么他要解决的恰好是这个问题）．为了解决这个问题，我们把L当作一面镜子，然后求出P在L中的反影点P′，这样就使L垂直平分PP′，直线P′Q与L的交点R就是所求的点．对L上的其他任意点R′，要证明PR＋RQ小于PR′＋R′Q是很简单的．因为PR＝P′R，以及PR′＝P′R′，所以，XXXXXXXXPR＋RQ＝P′R＋RQ＝P′Q，XXXXXXXX并且PR′＋R′Q＝P′R′＋R′Q，但是P′R′＋R′Q比P′Q大（因为三角形两边之和大于第三边），因此，PR′＋R′Q比PR＋RQ大，这就是所要证的．在下面的讨论中我们假设P和Q都不在直线L上．XXXXXXXX由图177可以看出，∠3＝∠2，并且∠2＝∠1所以∠3＝∠1．换句话说，R是使PR、QR与L成等角的点．由此可见，光线在L反射的时候（由实验知，入射角与反射角相等），实际上要走由P经L到Q的最短路径．这和引言中所提过的一样．XXXXXXXX图177　赫伦定理XXXXXXXX这个问题可以推广到包含若干条直线L、M、…的情形上去．例如，假设有两条直线L、M和两个点P、Q，如图178所示，试求由P经L，然后经M，最后到达Q的最短路径．设Q′是Q对于M的反影点，Q″是Q′对于L的反影点．画PQ″交L于R，画RQ′交M于S；那么R和S就是所求的点，它们使PR＋RS＋SQ是由P经L，再经M，最后到Q的最短路径．这个事实的证明，和前一个问题的证明很相似，我们把它留给读者作练习．如果L和M是两面镜子，由P发出经L反射到M再经M反射到Q的光线，将和L交在R，和M交在S；因此，光线仍然是最短路径．XXXXXXXX图178　两镜面之间的反射XXXXXXXX人们或许要找出由P先经M，再经L，到Q的最短路径．这也给出一条路径PRSQ（见图179），确定它和确定前一条路径的方法类似．第一条路径的长度可以大于、等于或小于第二条路径．XXXXXXXX图179XXXXXXXX*习题：证明如果O和R在直线PQ的同一侧，那么第一条路径的长度小于第二条路径．又在什么条件下，两条路径的长度相等？XXXXXXXX</h4>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

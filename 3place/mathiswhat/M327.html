@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="hbaolong@vip.qq.com" />
+  <title>论语之327-2025年4月28日-4．球面上的测地线与极大－极小</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">论语之327-2025年4月28日-4．球面上的测地线与极大－极小</h1>
+<p class="author">hbaolong@vip.qq.com</p>
+</header>
+<h4
+id="球面上的测地线与极大极小xxxxxxxx在本章的引言中我们提到过求连接一个曲面上已知两点的最短弧的问题在初等几何中已经证明球面上的这些测地线是大圆上的一段弧设p和q是球面上的两点不是同一条直径上的两个端点并且c是过p和q的大圆上较短的那段弧那么现在问题是同一个大圆的较长的弧c有什么性质它当然不是最短曲线也不能是连接p和q曲线中的最长的曲线因为在p和q之间可以作出任意长度的曲线答案是c是一个极大极小问题的解设s是一个把p和q分隔在两侧的某一固定大圆上的点我们欲求球面上连接p和q又通过s的最短的曲线当然两条大圆弧上的短弧ps和qs组成的曲线就是这极小问题的解我们现在要找出s点的一个位置使最短距离psq变得尽可能地大答案是s必须使得psq就是过pq的大圆的较长弧c我们可以变更这个问题如下首先找由p经过球面上指定的n个点s1s2-sn到q的最短路径然后变动点s1s2sn的位置使这最短距离变得尽可能地大这样得到的解是联结p和q的大圆上的一条路径但是这条路径要缠绕球面而它恰巧经过p和q沿直径所对的另一对端点n次xxxxxxxx图239-球面上的测地线xxxxxxxx这个极大极小问题的例子是变分法中一类广泛问题中的一个典型问题这些问题用莫尔斯和其他人发展的方法已取得出色的成就xxxxxxxx-11-极小问题的实验解法-肥皂膜实验xxxxxxxx">4．球面上的测地线与极大－极小XXXXXXXX在本章的引言中，我们提到过求连接一个曲面上已知两点的最短弧的问题．在初等几何中已经证明，球面上的这些“测地线”是大圆上的一段弧．设P和Q是球面上的两点（不是同一条直径上的两个端点），并且c是过P和Q的大圆上较短的那段弧．那么现在问题是，同一个大圆的较长的弧c′有什么性质？它当然不是最短曲线，也不能是连接P和Q曲线中的最长的曲线，因为在P和Q之间可以作出任意长度的曲线．答案是，c′是一个极大——极小问题的解．设S是一个把P和Q分隔在两侧的某一固定大圆上的点；我们欲求球面上连接P和Q又通过S的最短的曲线．当然，两条大圆弧上的短弧PS和QS组成的曲线就是这极小问题的解．我们现在要找出S点的一个位置，使最短距离PSQ变得尽可能地大．答案是：S必须使得PSQ就是过PQ的大圆的较长弧c′．我们可以变更这个问题如下：首先找由P经过球面上指定的n个点S1，S2，…，　Sn到Q的最短路径，然后变动点S1，S2，…，Sn的位置，使这最短距离变得尽可能地大．这样得到的解是联结P和Q的大圆上的一条路径，但是这条路径要缠绕球面，而它恰巧经过P和Q沿直径所对的另一对端点n次．XXXXXXXX图239　球面上的测地线XXXXXXXX这个极大极小问题的例子，是变分法中一类广泛问题中的一个典型问题，这些问题用莫尔斯和其他人发展的方法已取得出色的成就．XXXXXXXX###
+§11　极小问题的实验解法　肥皂膜实验XXXXXXXX</h4>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

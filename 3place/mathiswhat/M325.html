@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="hbaolong@vip.qq.com" />
+  <title>论语之325-2025年4月26日-2．变分法　费马光学原理</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">论语之325-2025年4月26日-2．变分法　费马光学原理</h1>
+<p class="author">hbaolong@vip.qq.com</p>
+</header>
+<h4
+id="变分法-费马光学原理xxxxxxxx贝努利兄弟和其他人已经找到了解捷线问题的各种不同方法而我们现在介绍的是最原始的方法之一最初的这些方法是对特殊问题而采用的或多或少带有特殊性但这些方法没有保持很久欧拉和拉格朗日lagrange17361813发展出解这种极值问题这种极值问题中自变元不是一个或有限个数值变量而是整条曲线或函数甚至是一组函数的更一般的方法解这种问题的新方法叫变分法xxxxxxxx这里不可能叙述这个数学分支的技术细节或深入讨论各种特殊问题变分法在物理中应用很广很早以前人们就注意到自然现象常常呈现为某种类型的极大或极小形式如我们已看到的亚历山大时期的赫伦认识到光线对平面镜的反射可以用极小原理来描述在17世纪费马更进了一步他观察到光线的折射规律也可以借助极小原理来描述大家都知道光线由一均匀介质传播到另一介质时其路径要在交界处转折如图237从上面介质的p点出发到达下面介质r点的光线在上面介质中速度为v在下面介质中速度为w将按pqr的路径传播由斯内尔snell15911626发现的实验定律阐明组成路径的两条直线段pq和qr与法线的夹角αα由条件xxxxxxxx图237-光线的折射xxxxxxxx决定利用微积分费马证明了这路径使光线由p到r所需的时间最少也就是说其时间比光线沿任何其他的联线传播所用的时间都少这样赫伦反射定律在1600年后由一个类似的而且同样重要的折射律给以补充了xxxxxxxx费马把这个定律所说的关系推广到介质间的分界是弯曲的曲面的情况如像透镜中用到的球面对于球面透镜的情形这个关系仍然成立即光线实际走的路径所需要的时间比起光线在相同两点间走任何其他的路径所需的时间都要少最后费马考察了这样一种任意的光学系统在这种系统中光线的速度按一定的方式逐点变化就如同在大气层中那样他把连续的非均匀介质分割成许多薄层在每一层内光速近似不变因而设想每片薄层内光速不变这样从任一薄层到下一薄层他可以逐次应用他的原理使薄层趋于零他得到了普遍的几何光学的费马原理在非均匀介质中光线在两点间传播要沿着连接该两点的一切路径中费时最少的一条路径前进这个原理不仅是在理论上而且在几何光学的应用上都是很重要的把变分法应用到这个原理上的技巧提供了计算透镜系统的基础xxxxxxxx极小原理在物理的其他分支中也起着支配的作用人们观察到如果安置一个力学系统使它的位能极小那么这个系统就获得稳定平衡作为一个例子让我们考虑一条柔软的均匀的链子把它两端悬挂起来且只受重力的作用这时链所取的形状将使它的位能极小在这种情形下位能的大小由重心在某个固定轴上方的高度所决定悬挂的链子形成的曲线叫做悬链线它表面上像抛物线xxxxxxxx不仅平衡的那些规律而且一些运动的规律也是由极大极小原理决定的第一个对这个原理获得明确概念的人是欧拉而有着哲学和神秘倾向的抽象理论家们例如牟培尔特maupertuis16981759却不能把数学命题与上帝的意志是用最完美的一般原则控制物理现象这种模糊观念分离开来物理学的欧拉变分原理后来再次由爱尔兰数学家哈密尔顿w.-r.-hamilton18051865重新发现并加以推广它是力学光学电动力学中最有效的工具之一并且在工程中有许多应用在物理学的最新发展中相对论和量子论到处都有显示出变分法威力的例子xxxxxxxx">2．变分法　费马光学原理XXXXXXXX贝努利兄弟和其他人已经找到了解捷线问题的各种不同方法，而我们现在介绍的是最原始的方法之一．最初的这些方法是对特殊问题而采用的，或多或少带有特殊性．但这些方法没有保持很久，欧拉和拉格朗日（Lagrange，1736～1813）发展出解这种极值问题（这种极值问题中自变元不是一个或有限个数值变量，而是整条曲线或函数，甚至是一组函数）的更一般的方法．解这种问题的新方法叫变分法．XXXXXXXX这里不可能叙述这个数学分支的技术细节或深入讨论各种特殊问题．变分法在物理中应用很广．很早以前人们就注意到，自然现象常常呈现为某种类型的极大或极小形式．如我们已看到的，亚历山大时期的赫伦认识到，光线对平面镜的反射可以用极小原理来描述．在17世纪，费马更进了一步：他观察到，光线的折射规律也可以借助极小原理来描述．大家都知道，光线由一均匀介质传播到另一介质时，其路径要在交界处转折．如图237，从上面介质的P点出发到达下面介质R点的光线（在上面介质中速度为v，在下面介质中速度为w），将按PQR的路径传播．由斯内尔（Snell）（1591～1626）发现的实验定律，阐明组成路径的两条直线段PQ和QR与法线的夹角α、α′，由条件XXXXXXXX图237　光线的折射XXXXXXXX决定．利用微积分，费马证明了这路径使光线由P到R所需的时间最少，也就是说，其时间比光线沿任何其他的联线传播所用的时间都少．这样，赫伦反射定律在1600年后，由一个类似的、而且同样重要的折射律给以补充了．XXXXXXXX费马把这个定律所说的关系推广到介质间的分界是弯曲的曲面的情况，如像透镜中用到的球面．对于球面透镜的情形，这个关系仍然成立，即光线实际走的路径所需要的时间，比起光线在相同两点间走任何其他的路径所需的时间都要少．最后，费马考察了这样一种任意的光学系统，在这种系统中，光线的速度按一定的方式逐点变化，就如同在大气层中那样．他把连续的非均匀介质分割成许多薄层，在每一层内光速近似不变，因而设想每片薄层内光速不变．这样，从任一薄层到下一薄层，他可以逐次应用他的原理．使薄层趋于零，他得到了普遍的几何光学的费马原理：在非均匀介质中，光线在两点间传播要沿着连接该两点的一切路径中费时最少的一条路径前进．这个原理不仅是在理论上，而且在几何光学的应用上都是很重要的．把变分法应用到这个原理上的技巧，提供了计算透镜系统的基础．XXXXXXXX极小原理在物理的其他分支中也起着支配的作用．人们观察到，如果安置一个力学系统使它的“位能”极小，那么这个系统就获得稳定平衡．作为一个例子，让我们考虑一条柔软的均匀的链子，把它两端悬挂起来，且只受重力的作用，这时链所取的形状，将使它的位能极小．在这种情形下，位能的大小由重心（在某个固定轴上方）的高度所决定．悬挂的链子形成的曲线，叫做悬链线，它表面上像抛物线．XXXXXXXX不仅平衡的那些规律，而且一些运动的规律也是由极大、极小原理决定的．第一个对这个原理获得明确概念的人是欧拉，而有着哲学和神秘倾向的“抽象理论家”们，例如牟培尔特（Maupertuis，1698～1759），却不能把数学命题与“上帝的意志是用最完美的一般原则控制物理现象”这种模糊观念分离开来．物理学的欧拉变分原理，后来再次由爱尔兰数学家哈密尔顿（W.
+R.
+Hamilton，1805～1865）重新发现，并加以推广，它是力学、光学、电动力学中最有效的工具之一，并且在工程中有许多应用．在物理学的最新发展中——相对论和量子论——到处都有显示出变分法威力的例子．XXXXXXXX</h4>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

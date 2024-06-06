@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="hbaolong@vip.qq.com" />
+  <title>论语之287-2025年3月19日-3．维尔斯特拉斯极值定理</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">论语之287-2025年3月19日-3．维尔斯特拉斯极值定理</h1>
+<p class="author">hbaolong@vip.qq.com</p>
+</header>
+<h4
+id="维尔斯特拉斯极值定理xxxxxxxx关于连续函数另一个重要而直觉上可信的事实是由维尔斯特拉斯18151897建立的在使数学分析趋于更加严格方面他的贡献或许比任何人都大这个定理叙述如下如果函数在一个区间iaxb上连续包括区间的端点a和b那么在区间i内必然至少存在一点在这点fx取得最大值m而且有另一个点使fx取得最小值m说得直观些这就是连续函数afx的图像必然至少有一个最高点和一个最低点xxxxxxxx重要的是要了解到如果函数fx在i的端点不连续那么这个命题不一定正确例如函数xxxxxxxxfxxxxxxxxx在整个区间0x1内部是连续的但在此区间上fx却没有最大值一个不连续函数即使它是有界的也不一定有最大值或最小值例如在区间0x1上定义xxxxxxxxfxx-当x是无理数xxxxxxxxfx-当x是有理数xxxxxxxx考虑这个很不连续的函数fx这个函数取值总在0和1之间事实上如果选择x为充分接近0和1的无理数那么函数值可以任意接近于只要我们愿意0或1但是fx不能等于1或0因为对于有理数x有fx而对于无理数有fxx所以0和1都不能达到xxxxxxxx维尔斯特拉斯定理能用证明布尔查诺定理的同样方法证明我们把i分为两半且都是闭区间设为i和i我们集中考虑可以在其中找到fx的最大值的区间i除非在i内存在一点α使fα超过i内fx的一切值在后一种情形我们选取i被选取的区间叫作i1我们用分割i的同样方法分割i1得到一个区间i2如此继续下去这个过程将确定一个闭区间套序列i1i2in它包含一个点z我们将证明值fzm是fx在区间i上取得的最大值即在i内不能有一个点s使fsm假设有这样一个点s使fsm2ε其中ε是一个正数可能很小由于fx的连续性以z为心在z的附近可以标出一个小区间k使s在它的外面并且在k内使fx的值和fzm的差小于ε也就是在k内一定有fxmε但是当n充分大时in将进入k内而in是这样定义的in外部的x所对应的fx值不能超过in内的所有x对应的值因为s是在in的外面且fsmε而在k内因而在in内我们有fxmε于是引出了矛盾xxxxxxxx最小值m的存在性可以用同样的方法证明也可以直接利用刚才证明的结果因为fx的最小值是gx-fx的最大值xxxxxxxx用类似的方法可以证明二元或多元xy连续函数的维尔斯特拉斯定理代替带有端点的区间我们考察闭区域例如在xy-平面上的带有边界的矩形xxxxxxxx习题在布尔查诺和维尔斯特拉斯定理的证明中什么地方用到了fx在整个区间axb上而不是在区间axb或axb上有定义且是连续的假定xxxxxxxx布尔查诺和维尔斯特拉斯定理的证明有一个明显的非构造性的特点它们没有提供一个方法使得通过有限步骤能实际求出符合指定精确程度的函数零值点函数最大值点或最小值点证明的仅是我们所希望的值的存在性或者倒不如说证明了不存在是不合理的这是直觉主义者所反对的见此处另一个重要例子有些人甚至坚持这样的定理应当从数学中清除掉初学数学的人大可不必像批评家们那样把这些看得过于严重xxxxxxxx4有关序列的一个定理-紧致集xxxxxxxx设x1x2x3是任意一个全部都包含在闭区间iaxb内的无穷数列取值可以相同或不相同这个序列可能有极限也可能没有极限但在任何情况下我们总可以从这样的序列中通过删掉某些项而抽出一个以区间i内某个y为极限的无穷子序列y1y2y3来xxxxxxxx要证明这个定理我们用i的中点把i分为两个闭子区间i和ixxxxxxxxiaxxxxxxxxxixbxxxxxxxx这两个区间中至少有一个含有原序列的无穷多项xn我们称它为i1在i1内任选xn中的一项例如xn1称它为y1现在以同样的方法来处理i1因为在i1内有无穷多项xn那么在i1的两半中至少有一个有无穷多项称它为i2因此我们一定能在i2内找到nn1的项xn在这些项中任选一个叫它为y2这样进行下去我们能找到一个区间套序列i1i2i3和一个原序列的子序列y1y2y3使得对每个n都有yn在in内这个区间套最后退缩到i的一点y显然序列y1y2y3有极限y这就是所要证明的xxxxxxxx以上的讨论可以按照近代数学的典型方法进行推广让我们考察变化范围为s的变量x其中s是定义了某个距离概念的一般集s可以是平面的或空间的点集但这不是必须的例如s可以是平面上所有三角形组成的集如果x和y是两个三角形abc和abc分别是它们的顶点那么我们可以定义两个三角形的距离是这样的数xxxxxxxxdxyaabbccxxxxxxxx其中aa等表示点a和a之间的普通的距离只要在集s上有这样一个距离的概念我们就可以定义s的元素的序列x1x2x3趋于s内的极限元素x的概念这就是指当n时dxxn0如果从s的任意一个元素序列x1x2x3中总能抽出一个趋于某个s内的极限元素x的子序列来那么我们就说这个集s是紧致的在上一段我们已经证明闭区间axb在这个意义上是紧致的所以紧致集的概念可以认为是数轴上闭区间的推广注意整个数轴不是紧致的因为整数集12345即不趋于任何极限它的任意子序列也都没有极限不包含端点的开区间像0x1也不是紧致集因为序列或它的任一个子序列都趋向极限0而0不是这个开区间的点用同样的方法可以证明由正方形或矩形内部点组成的平面上的区域不是紧致的但是如果加上边界点就成为紧致的了还有顶点在一个已知圆的内部或圆周上的所有三角形组成的集是紧致的xxxxxxxx如果变量x的变域是在任一已定义有极限概念的集s上我们可以把连续性的概念推广到这种情形函数ufx其中u是实数如果对于以x为极限的任一元素序列x1x2x3对应的数列fx1fx2趋于极限fx那么就说该函数在元素x处是连续的也可以给一个对应的εδ定义对一个定义在任一紧致集上的一般连续函数很容易证明维尔斯特拉斯定理也成立xxxxxxxx如果ufx是定义在紧致集s上的任一连续函数那么在s中总有一个元素使fx取得最大值也有一个元素使fx取得最小值xxxxxxxx掌握住所涉及的一般概念证明便很简单但是我们将不进一步讨论这些了它在第七章中还要出现在那里维尔斯特拉斯的普遍定理在极大和极小值理论中是很重要的xxxxxxxx-6-布尔查诺定理的一些应用xxxxxxxx">3．维尔斯特拉斯极值定理XXXXXXXX关于连续函数另一个重要而直觉上可信的事实，是由维尔斯特拉斯（1815～1897）建立的，在使数学分析趋于更加严格方面，他的贡献或许比任何人都大．这个定理叙述如下：如果函数在一个区间I，a≤x≤b上连续（包括区间的端点a和b），那么在区间I内必然至少存在一点，在这点f（x）取得最大值M，而且有另一个点，使f（x）取得最小值m．说得直观些，这就是连续函数a＝f（x）的图像必然至少有一个最高点和一个最低点．XXXXXXXX重要的是要了解到：如果函数f（x）在I的端点不连续，那么这个命题不一定正确．例如，函数XXXXXXXXf（x）＝XXXXXXXX在整个区间0＜x≤1内部是连续的，但在此区间上f（x）却没有最大值．一个不连续函数（即使它是有界的）也不一定有最大值或最小值．例如，在区间0≤x≤1上，定义XXXXXXXXf（x）＝x　当x是无理数，XXXXXXXXf（x）＝　当x是有理数，XXXXXXXX考虑这个很不连续的函数f（x）．这个函数取值总在0和1之间．事实上，如果选择x为充分接近0和1的无理数，那么函数值可以任意接近于（只要我们愿意）0或1．但是，f（x）不能等于1或0，因为对于有理数x，有f（x）＝，而对于无理数，有f（x）＝x．所以0和1都不能达到．XXXXXXXX<em>维尔斯特拉斯定理能用证明布尔查诺定理的同样方法证明．我们把I分为两半，且都是闭区间，设为I′和I″．我们集中考虑可以在其中找到f（x）的最大值的区间I′，除非在I″内存在一点α，使f（α）超过I′内f（x）的一切值；在后一种情形我们选取I″．被选取的区间叫作I1．我们用分割I的同样方法分割I1，得到一个区间I2，如此继续下去．这个过程将确定一个闭区间套序列I1，I2，…，In…，它包含一个点z．我们将证明值f（z）＝M是f（x）在区间I上取得的最大值，即在I内不能有一个点s，使f（s）＞M．假设有这样一个点s，使f（s）＝M＋2ε，其中ε是一个正数（可能很小）．由于f（x）的连续性，以z为心，在z的附近可以标出一个小区间K，使s在它的外面，并且在K内使f（x）的值和f（z）＝M的差小于ε，也就是在K内一定有f（x）＜M＋ε．但是当n充分大时，In将进入K内，而In是这样定义的：In外部的x所对应的f（x）值不能超过In内的所有x对应的值．因为s是在In的外面，且f（s）＞M＋ε，而在K内，因而在In内，我们有f（x）＜M＋ε，于是引出了矛盾．XXXXXXXX最小值m的存在性可以用同样的方法证明，也可以直接利用刚才证明的结果，因为f（x）的最小值是g（x）＝-f（x）的最大值．XXXXXXXX用类似的方法可以证明二元或多元x，y，…连续函数的维尔斯特拉斯定理．代替带有端点的区间，我们考察闭区域，例如，在x，y-平面上的带有边界的矩形．XXXXXXXX习题：在布尔查诺和维尔斯特拉斯定理的证明中，什么地方用到了f（x）在整个区间a≤x≤b上（而不是在区间a＜x≤b或a＜x＜b上）有定义且是连续的假定？XXXXXXXX布尔查诺和维尔斯特拉斯定理的证明有一个明显的非构造性的特点．它们没有提供一个方法，使得通过有限步骤能实际求出符合指定精确程度的函数零值点、函数最大值点或最小值点．证明的仅是我们所希望的值的存在性，或者倒不如说，证明了不存在是不合理的．这是“直觉主义者”所反对的（见此处）另一个重要例子，有些人甚至坚持这样的定理应当从数学中清除掉．初学数学的人，大可不必像批评家们那样，把这些看得过于严重．XXXXXXXX</em>4．有关序列的一个定理　紧致集XXXXXXXX设x1，x2，x3，…是任意一个全部都包含在闭区间I，a≤x≤b内的无穷数列；取值可以相同或不相同．这个序列可能有极限也可能没有极限．但在任何情况下，我们总可以从这样的序列中，通过删掉某些项，而抽出一个以区间I内某个y为极限的无穷子序列y1，y2，y3，…来．XXXXXXXX要证明这个定理，我们用I的中点，把I分为两个闭子区间I′和I″：XXXXXXXXI′：a≤x≤，XXXXXXXXI″：≤x≤b．XXXXXXXX这两个区间中，至少有一个含有原序列的无穷多项xn，我们称它为I1．在I1内任选xn中的一项，例如xn1，称它为y1．现在以同样的方法来处理I1．因为在I1内有无穷多项xn，那么在I1的两半中至少有一个有无穷多项，称它为I2，因此我们一定能在I2内找到n＞n1的项xn，在这些项中任选一个叫它为y2．这样进行下去，我们能找到一个区间套序列I1，I2，I3，…，和一个原序列的子序列y1，y2，y3，…，使得对每个n，都有yn在In内．这个区间套最后退缩到I的一点y，显然序列y1，y2，y3，…有极限y．这就是所要证明的．XXXXXXXX以上的讨论，可以按照近代数学的典型方法进行推广．让我们考察变化范围为S的变量X，其中S是定义了某个“距离”概念的一般集．S可以是平面的或空间的点集，但这不是必须的，例如S可以是平面上所有三角形组成的集．如果X和Y是两个三角形，A，B，C和A′，B′，C′分别是它们的顶点，那么我们可以定义两个三角形的“距离”是这样的数XXXXXXXXd（x，y）＝AA′＋BB′＋CC′，XXXXXXXX其中AA′等表示点A和A′之间的普通的距离．只要在集S上有这样一个“距离”的概念，我们就可以定义S的元素的序列X1，X2，X3，…趋于（S内的）极限元素X的概念．这就是指当n→∞时，d（X，Xn）→0．如果从S的任意一个元素序列X1，X2，X3，…中，总能抽出一个趋于某个S内的极限元素X的子序列来，那么我们就说这个集S是紧致的．在上一段我们已经证明，闭区间a≤x≤b在这个意义上是紧致的．所以紧致集的概念可以认为是数轴上闭区间的推广．注意整个数轴不是紧致的，因为整数集1，2，3，4，5…即不趋于任何极限，它的任意子序列也都没有极限．不包含端点的开区间，像0＜x＜1也不是紧致集，因为序列，，，…或它的任一个子序列都趋向极限0，而0不是这个开区间的点．用同样的方法可以证明由正方形或矩形内部点组成的平面上的区域不是紧致的，但是如果加上边界点就成为紧致的了．还有，顶点在一个已知圆的内部或圆周上的所有三角形组成的集是紧致的．XXXXXXXX如果变量X的变域是在任一已定义有极限概念的集S上，我们可以把连续性的概念推广到这种情形．函数u＝F（X），其中u是实数，如果对于以X为极限的任一元素序列X1，X2，X3，…，对应的数列F（X1），F（X2），…趋于极限F（X），那么就说该函数在元素X处是连续的（也可以给一个对应的（ε，δ）定义）．对一个定义在任一紧致集上的一般连续函数很容易证明维尔斯特拉斯定理也成立：XXXXXXXX如果u＝F（X）是定义在紧致集S上的任一连续函数，那么在S中总有一个元素，使F（X）取得最大值，也有一个元素，使F（X）取得最小值．XXXXXXXX掌握住所涉及的一般概念，证明便很简单，但是我们将不进一步讨论这些了．它在第七章中还要出现，在那里，维尔斯特拉斯的普遍定理，在极大和极小值理论中是很重要的．XXXXXXXX###
+§6　布尔查诺定理的一些应用XXXXXXXX</h4>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

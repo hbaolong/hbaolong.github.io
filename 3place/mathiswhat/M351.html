@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="hbaolong@vip.qq.com" />
+  <title>论语之351-2025年5月22日-5．对数的无穷级数展开式　数值计算</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">论语之351-2025年5月22日-5．对数的无穷级数展开式　数值计算</h1>
+<p class="author">hbaolong@vip.qq.com</p>
+</header>
+<h4
+id="对数的无穷级数展开式-数值计算xxxxxxxx15式并不能作为对数的数值计算的基础对数函数有一个更适于数值计算的完全不同的且更为有用的表达式而且这个表达式在理论上也极为重要我们将利用此处求π的方法以及按照公式1给出的对数定义来求这个式子需要先作一个简单的准备我们不直接讨论lnx而是考虑xxxxxxxxyln1xxxxxxxxx这是由函数ylnz和z1x组成的复合函数我们有xxxxxxxx因而ln1x是的原函数并且根据基本定理可知由0到x的积分等于xxxxxxxxln1xln1ln1xxxxxxxxx用符号可表示为xxxxxxxx当然这个公式也可由把对数看作是面积的几何解释中直观地得到与此处作比较xxxxxxxx在公式16中对于1u-1像此处中一样我们可把它展为几何级数xxxxxxxx注意这里不是无穷级数而是带有余项为xxxxxxxx的有限级数把这个级数代入16我们可以利用有限项和的逐项积分法则因为us由0到x的积分是所以我们立即得到xxxxxxxx其中余项由xxxxxxxx给出现在我们将看到只要x选为大于-1但不超过1的数换句话说-1x1这里x1包括在内而x-1未包括那么tn当n递增时趋于零根据我们的假定在积分区间内u大于某一数-α这个数可以任意接近-1但至少要大于-1使得01α1u因此在0到x的区间中有xxxxxxxx于是xxxxxxxx或xxxxxxxx因为1α是固定的可见当n递增时上面右式趋于0从而由xxxxxxxx得到在-1x1上成立的无穷级数xxxxxxxx特别如果取x1我们得到一个有趣的结果xxxxxxxx这个式子与的级数在结构上相似xxxxxxxx公式18对于计算对数的数值没有多大的实际意义因为它的范围即1x仅在0与2之间它的收敛又是如此之慢以至要获得一个适当的精确程度的结果必须包含很多项一个更为便利的表达式可以由下面的方法得到在18中用-x代替x则xxxxxxxx从18中减去20并且利用xxxxxxxx的关系我们得到xxxxxxxx这个级数不仅收敛得快得多而且现在左端可表示为一个正数z的对数因为z总有一个在-1与1间的解x例如我们要计算ln3的值可令x则xxxxxxxx只取前六项取到我们求得xxxxxxxxln31.0986xxxxxxxx它精确到5位数xxxxxxxx-7-微分方程xxxxxxxx">5．对数的无穷级数展开式　数值计算XXXXXXXX（15）式并不能作为对数的数值计算的基础．对数函数有一个更适于数值计算的完全不同的且更为有用的表达式．而且这个表达式在理论上也极为重要．我们将利用此处求π的方法以及按照公式（1）给出的对数定义来求这个式子．需要先作一个简单的准备．我们不直接讨论lnx，而是考虑XXXXXXXXy＝ln（1＋x），XXXXXXXX这是由函数y＝lnz和z＝1＋x组成的复合函数．我们有XXXXXXXX因而ln（1＋x）是的原函数，并且根据基本定理，可知由0到x的积分等于XXXXXXXXln（1＋x）－ln1＝ln（1＋x），XXXXXXXX用符号可表示为XXXXXXXX（当然，这个公式也可由把对数看作是面积的几何解释中直观地得到，与此处作比较．）XXXXXXXX在公式（16）中，对于（1＋u）-1，像此处中一样，我们可把它展为几何级数，XXXXXXXX注意，这里不是无穷级数，而是带有余项为XXXXXXXX的有限级数．把这个级数代入（16），我们可以利用有限项和的逐项积分法则．因为us由0到x的积分是，所以我们立即得到XXXXXXXX其中余项由XXXXXXXX给出．现在我们将看到，只要x选为大于-1但不超过+1的数，换句话说，-1＜x≤1，这里x＝+1包括在内而x＝-1未包括，那么Tn当n递增时趋于零．根据我们的假定，在积分区间内，u大于某一数-α，这个数可以任意接近-1，但至少要大于-1，使得0＜1－α＜1＋u．因此在0到x的区间中有XXXXXXXX于是XXXXXXXX或XXXXXXXX因为1－α是固定的，可见当n递增时上面右式趋于0，从而由XXXXXXXX得到在-1＜x≤1上成立的无穷级数XXXXXXXX特别，如果取x＝1我们得到一个有趣的结果XXXXXXXX这个式子与的级数在结构上相似．XXXXXXXX公式（18）对于计算对数的数值没有多大的实际意义，因为它的范围，即1＋x仅在0与2之间，它的收敛又是如此之慢，以至要获得一个适当的精确程度的结果必须包含很多项．一个更为便利的表达式可以由下面的方法得到．在（18）中，用-x代替x，则XXXXXXXX从（18）中减去（20）并且利用XXXXXXXX的关系，我们得到XXXXXXXX这个级数不仅收敛得快得多，而且现在左端可表示为一个正数z的对数，因为＝z总有一个在-1与+1间的解x．例如，我们要计算ln3的值，可令x＝，则XXXXXXXX只取前六项，取到，我们求得XXXXXXXXln3＝1.0986，XXXXXXXX它精确到5位数．XXXXXXXX###
+§7　微分方程XXXXXXXX</h4>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

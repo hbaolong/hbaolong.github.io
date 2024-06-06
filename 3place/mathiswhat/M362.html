@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="hbaolong@vip.qq.com" />
+  <title>论语之362-2025年6月2日-2．欧拉公式　cosx＋isinx＝eix</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">论语之362-2025年6月2日-2．欧拉公式　cosx＋isinx＝eix</h1>
+<p class="author">hbaolong@vip.qq.com</p>
+</header>
+<h4
+id="欧拉公式-cosxisinxeixxxxxxxxx欧拉的形式主义的方法中最使人赞叹的结果之一是在复数范围内正弦和余弦函数与指数函数之间的紧密联系应该预先指出欧拉的证明以及我们随后的讨论严格说来都是没有意义的它是典型的18世纪的形式处理方法xxxxxxxx让我们从第二章已经证明的棣莫弗公式开始xxxxxxxxcosnφisinnφcosφisinφnxxxxxxxx在此我们代入φ得到公式xxxxxxxx现在如果x是给定的那么当n很大时虽不同于xxxxxxxxcos01xxxxxxxx但它们相差很小并且因为xxxxxxxx1当0时xxxxxxxx见此处我们看到是渐近等于的因此我们可以得到一个看来合理的极限公式xxxxxxxx把这个方程的右端和公式此处xxxxxxxx当n时xxxxxxxx比较我们有xxxxxxxx这就是欧拉的结果xxxxxxxx从ez的展开式出发我们用另一种形式主义的方法可以得到同样的结果把zix这里x是实数代入xxxxxxxx中如果我们留意i的逐次幂是i-1-i1并且是周期性的那么合并实部和虚部得xxxxxxxx此式右端与cosx及sinx的级数比较我们再一次得到欧拉公式这样的推理决不是关系式15的严格证明我们的第二个论证所以有问题是因为ez的展开式是在z是实数的假定下导出的因此作代换zix需要说明其合理性同样地第一个论证的成立被下述的事实破坏了即公式xxxxxxxx当n时xxxxxxxx只是对z为实数的情况而言xxxxxxxx为了使欧拉公式从仅仅是形式上成立变为严格的数学真理需要发展复变函数理论这个理论是十九世纪伟大数学成就之一还有其他许多问题都促进了这个意义深远的发展例如我们已看到函数的幂级数展开式在不同的x的区间收敛为什么某些展式总是收敛即对一切的x都收敛而另外一些展式对x1就失去意义呢xxxxxxxx例如考虑此处等比级数4它对x1是收敛的当x1时这等式的左边是完全有意义的它取值xxxxxxxx然而右边级数的状态很奇怪成为xxxxxxxx1111xxxxxxxx这个级数不收敛因为它的部分和在1和0间摆动这说明即使函数本身没有显出任何无规律性也能产生一个发散级数当然函数当x-1时变为无穷由于容易说明一个幂级数在xa0是收敛的则在-axa时总是收敛的所以我们似乎可以因为在x-1处的不连续性而为其展式的怪异现象找到一个解释然而函数也可展为级数xxxxxxxx1x2x4x6xxxxxxxx这只要在4中用x2代替x就行了这个级数当x1时也是收敛的而当x1时它又变成发散级数xxxxxxxx1111xxxxxxxx并且当x1时它爆炸性地发散但函数本身到处都很正规xxxxxxxx实际上这种现象的完善的解释只有当函数被看作是自变量的复数值时同时也看作实数值才是可能的例如级数当xi时必是发散的因为这时分数的分母变为0由此推出级数对于所有满足xi1的x必然也发散因为可以证明如果对任意这样一个x收敛的话则对xi它也收敛这个早期微积分中完全被忽视的级数收敛性问题是开创复变函数理论的主要原因之一xxxxxxxx">2．欧拉公式　cosx＋isinx＝eixXXXXXXXX欧拉的形式主义的方法中最使人赞叹的结果之一，是在复数范围内正弦和余弦函数与指数函数之间的紧密联系．应该预先指出，欧拉的“证明”以及我们随后的讨论，严格说来都是没有意义的；它是典型的18世纪的形式处理方法．XXXXXXXX让我们从第二章已经证明的棣莫弗公式开始XXXXXXXX（cosnφ＋isinnφ）＝（cosφ＋isinφ）n．XXXXXXXX在此，我们代入φ＝，得到公式XXXXXXXX现在如果x是给定的，那么当n很大时，虽不同于XXXXXXXXcos0＝1，XXXXXXXX但它们相差很小；并且因为XXXXXXXX→1，当→0时，XXXXXXXX（见此处）我们看到是渐近等于的．因此我们可以得到一个看来合理的极限公式XXXXXXXX把这个方程的右端和公式（此处）XXXXXXXX，当n→∞时XXXXXXXX比较，我们有XXXXXXXX这就是欧拉的结果．XXXXXXXX从ez的展开式出发，我们用另一种形式主义的方法可以得到同样的结果．把z＝ix（这里x是实数）代入XXXXXXXX中，如果我们留意i的逐次幂是i，-1，-i，1，并且是周期性的，那么合并实部和虚部，得XXXXXXXX此式右端与cosx及sinx的级数比较，我们再一次得到欧拉公式．这样的推理决不是关系式（15′）的严格证明．我们的第二个论证所以有问题是因为ez的展开式是在z是实数的假定下导出的；因此作代换z＝ix需要说明其合理性．同样地，第一个论证的成立被下述的事实破坏了，即公式XXXXXXXX，当n→∞时XXXXXXXX只是对z为实数的情况而言．XXXXXXXX为了使欧拉公式从仅仅是形式上成立变为严格的数学真理，需要发展复变函数理论．这个理论是十九世纪伟大数学成就之一．还有其他许多问题都促进了这个意义深远的发展．例如，我们已看到函数的幂级数展开式在不同的x的区间收敛．为什么某些展式总是收敛，即对一切的x都收敛，而另外一些展式对｜x｜＞1就失去意义呢？XXXXXXXX例如，考虑此处等比级数（4），它对｜x｜＜1是收敛的．当x＝1时，这等式的左边是完全有意义的，它取值XXXXXXXX然而右边级数的状态很奇怪，成为XXXXXXXX1－1＋1－1＋…，XXXXXXXX这个级数不收敛，因为它的部分和在1和0间摆动．这说明即使函数本身没有显出任何无规律性，也能产生一个发散级数．当然，函数当x→-1时变为无穷．由于容易说明一个幂级数在x＝a＞0是收敛的，则在-a＜x＜a时总是收敛的，所以我们似乎可以因为在x＝-1处的不连续性而为其展式的怪异现象找到一个“解释”．然而函数也可展为级数XXXXXXXX＝1－x2＋x4－x6＋…，XXXXXXXX这只要在（4）中用x2代替x就行了．这个级数当｜x｜＜1时也是收敛的，而当x＝1时，它又变成发散级数XXXXXXXX1－1＋1－1＋…，XXXXXXXX并且当｜x｜&gt;1时，它爆炸性地发散，但函数本身到处都很正规．XXXXXXXX实际上这种现象的完善的解释只有当函数被看作是自变量的复数值时（同时也看作实数值）才是可能的．例如，级数当x＝i时必是发散的，因为这时分数的分母变为0．由此推出级数对于所有满足｜x｜&gt;｜i｜＝1的x必然也发散，因为可以证明如果对任意这样一个x收敛的话，则对x＝i它也收敛．这个早期微积分中完全被忽视的级数收敛性问题，是开创复变函数理论的主要原因之一．XXXXXXXX</h4>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

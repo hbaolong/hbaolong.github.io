@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="hbaolong@vip.qq.com" />
+  <title>论语之198-2024年12月20日-3．极限　无穷等比级数</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">论语之198-2024年12月20日-3．极限　无穷等比级数</h1>
+<p class="author">hbaolong@vip.qq.com</p>
+</header>
+<h4
+id="极限-无穷等比级数xxxxxxxx如我们在上一小节所看到的那样有时会出现由一系列有理数sn来逼近某个有理数s的情形这里假定指标n连续取所有的值123例如s则s10.3s20.33s30.333等等作为另一个例子让我们把单位区间二等分把第二个子区间再二等分再把其中的第二个二等分如此下去直到最小的区间长为2-n这里n可选得任意大例如n100n100000或者我们所希望的任意数这时我们把所有这些区间除了最后一个以外都加起来我们得到总的长度等于xxxxxxxx我们看到sn和1的差为当n无限增大时这个差变得任意小或者说趋向于零但是下述的说法是没有意义的如果n是无穷的话这差是零因为无穷只意味着无穷尽的过程而不是一个实际的量我们这样来描述sn的动态当n趋向于无穷时和sn趋向于极限1并且记作xxxxxxxx在等式右边我们得到一个无穷级数这等式决不意味着我们真的一定要加无限多项它只是下述事实的一个简记有限项的和sn当n趋于无穷时决不是无穷其极限为1等式4带有一个不完全的符号这不过是如下确切陈述在数学上的一个简写xxxxxxxx1当n趋于无穷时xxxxxxxx用更简单而一目了然的形式可以写作xxxxxxxx作为极限的另外一个例子我们可以考虑一个数q的幂如果-1q1例如q或q-则q的逐次幂xxxxxxxxqq2q3q4qnxxxxxxxx当n增大时将趋于零如果q是负的qn的符号将是正负交替而qn将从两边交错地趋于零因而如果q则q2q3q4而如果q-则q2q3-q4我们说当n趋于无穷时qn的极限为零或用符号表示为xxxxxxxx顺便说一下如果q1或q-1则qn不趋于零其数值无限增大而没有极限xxxxxxxx为了严格证明论断7我们从此处已经证明的不等式出发那里说到了1pn1np对任意正整数n和p-1成立如果q是0和1之间的任一固定数例如q我们有q这里p0因此xxxxxxxx或见此处法则4xxxxxxxx因此qn介于0和之间由于p是固定的而后者当n增大时趋向于零从而显然qn0如果q是负的我们有q这时0和变成和其他推理都不变xxxxxxxx我们现在考虑等比级数xxxxxxxxq的情形上面已讨论过了如此处所示我们可以把sn表示为简单清楚的形式如果用q乘sn我们得到xxxxxxxx从8中减去8a我们看到除了1和qn1外所有其他的项全消去了由此得到xxxxxxxx1qsn1qn1xxxxxxxx或者除一下变成xxxxxxxx若让n增大极限概念就起作用了我们已经看到qn1qqn当-1q1时是趋于零的于是我们得到极限关系xxxxxxxx若写成无穷等比级数就变成xxxxxxxx例如xxxxxxxx与等式4是一致的同样地xxxxxxxx所以0.999991类似地有限十进位小数0.2374和无限十进位小数0.23739999999表示同一个数xxxxxxxx在第六章我们将以近代的严格精神对极限概念再作一般的讨论xxxxxxxx习题1如果q1证明1qq2q3q4xxxxxxxx2序列a1a2a3的极限是什么这里an提示写出形如1的表达式注意第二项趋于零xxxxxxxx3当n时的极限是什么提示写成形如的表达式xxxxxxxx4证明对q1有12q3q24q3提示用此处习题3的结果xxxxxxxx5无穷级数12q3q24q3的极限是什么xxxxxxxx6和的极限各是什么提示用此处此处此处的结果xxxxxxxx">3．极限　无穷等比级数XXXXXXXX如我们在上一小节所看到的那样，有时会出现由一系列有理数sn来逼近某个有理数s的情形，这里假定指标n连续取所有的值1，2，3，…．例如s＝，则s1＝0.3，s2＝0.33，s3＝0.333，等等．作为另一个例子，让我们把单位区间二等分，把第二个子区间再二等分，再把其中的第二个二等分，如此下去直到最小的区间长为2-n，这里n可选得任意大，例如n＝100，n＝100000或者我们所希望的任意数．这时我们把所有这些区间，除了最后一个以外，都加起来，我们得到总的长度等于XXXXXXXX我们看到sn和1的差为，当n无限增大时，这个差变得任意小或者说“趋向于零”．但是，下述的说法是没有意义的：如果n是无穷的话，这差是零．因为无穷只意味着无穷尽的过程，而不是一个实际的量．我们这样来描述sn的动态，当n趋向于无穷时，和sn趋向于极限1．并且记作XXXXXXXX在等式右边我们得到一个无穷级数．这“等式”决不意味着我们真的一定要加无限多项；它只是下述事实的一个简记：有限项的和sn，当n趋于无穷时（决不是无穷），其极限为1．等式（4）带有一个不完全的符号“＋…”，这不过是如下确切陈述在数学上的一个简写：XXXXXXXX1＝当n趋于无穷时，XXXXXXXX用更简单而一目了然的形式可以写作XXXXXXXX作为极限的另外一个例子，我们可以考虑一个数q的幂．如果-1＜q＜1，例如q＝或q＝-，则q的逐次幂XXXXXXXXq，q2，q3，q4，…，qn，…，XXXXXXXX当n增大时，将趋于零．如果q是负的，qn的符号将是正负交替，而qn将从两边交错地趋于零．因而如果q＝，则q2＝，q3＝，q4＝，…，而如果q＝-，则q2＝，q3＝-，q4＝，…．我们说当n趋于无穷时，qn的极限为零．或用符号表示为XXXXXXXX（顺便说一下，如果q＞1或q＜-1，则qn不趋于零，其数值无限增大而没有极限．）XXXXXXXX为了严格证明论断（7），我们从此处已经证明的不等式出发，那里说到了（1＋p）n≥1＋np对任意正整数n和p＞-1成立．如果q是0和1之间的任一固定数，例如q＝，我们有q＝，这里p＞0．因此XXXXXXXX或（见此处法则4）XXXXXXXX因此qn介于0和之间，由于p是固定的，而后者当n增大时趋向于零，从而显然qn→0．如果q是负的，我们有q＝，这时0和变成和，其他推理都不变．XXXXXXXX我们现在考虑等比级数XXXXXXXX（q＝的情形，上面已讨论过了）．如此处所示，我们可以把sn表示为简单清楚的形式．如果用q乘sn，我们得到XXXXXXXX从（8）中减去（8a），我们看到除了1和qn＋1外，所有其他的项全消去了．由此得到XXXXXXXX（1－q）sn＝1－qn＋1，XXXXXXXX或者除一下变成XXXXXXXX若让n增大，极限概念就起作用了．我们已经看到，qn＋1＝q·qn，当-1＜q＜1时是趋于零的．于是我们得到极限关系：XXXXXXXX若写成无穷等比级数，就变成XXXXXXXX例如XXXXXXXX与等式（4）是一致的．同样地，XXXXXXXX所以0.99999…＝1．类似地，有限十进位小数0.2374和无限十进位小数0.23739999999…表示同一个数．XXXXXXXX在第六章，我们将以近代的严格精神对极限概念再作一般的讨论．XXXXXXXX习题：1）如果｜q｜＜1，证明1－q＋q2－q3＋q4＝…＝．XXXXXXXX2）序列a1，a2，a3，…的极限是什么？这里an＝．（提示：写出形如＝1－的表达式，注意第二项趋于零．）XXXXXXXX3）当n→∞时，的极限是什么？［提示：写成形如的表达式．］XXXXXXXX4）证明对｜q｜＜1，有1＋2q＋3q2＋4q3＋…＝．（提示：用此处习题3的结果．）XXXXXXXX5）无穷级数1－2q＋3q2－4q3＋…的极限是什么？XXXXXXXX6），和的极限各是什么？（提示：用此处、此处、此处的结果．）XXXXXXXX</h4>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

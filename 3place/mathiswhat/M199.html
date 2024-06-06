@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="hbaolong@vip.qq.com" />
+  <title>论语之199-2024年12月21日-4．有理数和循环小数</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">论语之199-2024年12月21日-4．有理数和循环小数</h1>
+<p class="author">hbaolong@vip.qq.com</p>
+</header>
+<h4
+id="有理数和循环小数xxxxxxxx如果有理数不是有限十进位小数那么通过不断地作除法能表示为一个无限的十进位小数在这过程中每次必然有一个非零的余数否则这十进位小数是有限的在除的过程中出现的所有不同余数将是1和q1之间的整数所以最多只能有q1个不同的余数值这意味着最多除q次某个余数k将第二次出现但由此随后而来的所有余数将按照余数k第一次出现后它们出现的同样次序重复这说明任何有理数的十进位小数表示式是循环的开始出现有限个数码随后同样的一个数码或一组数码将无限次地再现例如0.1666666660.1428571428570.090909090.110909090.122222222等等那些能表示为有限小数的有理数也可以认为是一个循环小数它在有限个数码之后只是无限次地重复着数0我们顺便指出有一些循环小数在循环部分的前面有一个非循环的部分xxxxxxxx反之可以看出所有循环小数都是有理数例如取无限循环小数xxxxxxxxp0.3322222xxxxxxxx我们有p10-32110-110-2括号中的表达式是一个无穷等比级数xxxxxxxx因此p210-3xxxxxxxx对一般情形的证明在实质上是一样的但要求更一般的记号在一般的循环小数xxxxxxxxp0a1a2a3amb1b2bnb1b2bnb1b2bnxxxxxxxx中我们令0b1b2bnb使b表示这小数的循环部分于是p变成xxxxxxxxp0.a1a2am10-mb110-n10-2n10-3nxxxxxxxx括号中的表达式是q10-n的无穷等比级数按上一小节等式10它的和是因此xxxxxxxx习题1把分数表示为十进位小数并确定其循环部分xxxxxxxx2数142857有如下性质用数23456中的任一个去乘它所得的积只是它的数码的一个重新排列试用的十进位小数展式来解释这性质xxxxxxxx3把习题1中的有理数表示为以5712为基底的小数xxxxxxxx4把表示为一个二进位数xxxxxxxx5把0.11212121写成一个分数如果它是以3或5为基底的小数求出这符号的值xxxxxxxx">4．有理数和循环小数XXXXXXXX如果有理数不是有限十进位小数，那么通过不断地作除法能表示为一个无限的十进位小数．在这过程中每次必然有一个非零的余数，否则这十进位小数是有限的．在除的过程中出现的所有不同余数将是1和q－1之间的整数，所以最多只能有q－1个不同的余数值，这意味着，最多除q次，某个余数k将第二次出现．但由此随后而来的所有余数，将按照余数k第一次出现后它们出现的同样次序重复．这说明任何有理数的十进位小数表示式是循环的；开始出现有限个数码，随后同样的一个数码或一组数码将无限次地再现．例如，＝0.166666666…；＝0.142857142857…；＝0.09090909…；＝0.11090909…；＝0.122222222…；等等．（那些能表示为有限小数的有理数，也可以认为是一个循环小数，它在有限个数码之后，只是无限次地重复着数0．）我们顺便指出，有一些循环小数，在循环部分的前面有一个非循环的部分．XXXXXXXX反之可以看出，所有循环小数都是有理数．例如，取无限循环小数XXXXXXXXp＝0.3322222…，XXXXXXXX我们有p＝＋10-3·2·（1＋10-1＋10-2＋…）．括号中的表达式是一个无穷等比级数XXXXXXXX因此p＝＋2·10-3·＝＝＝．XXXXXXXX对一般情形的证明在实质上是一样的，但要求更一般的记号．在一般的循环小数XXXXXXXXp＝0．a1a2a3…amb1b2…bnb1b2…bnb1b2…bn…XXXXXXXX中，我们令0．b1b2…bn＝B，使B表示这小数的循环部分．于是p变成XXXXXXXXp＝0.a1a2…am＋10-mB（1＋10-n＋10-2n＋10-3n＋…），XXXXXXXX括号中的表达式是q＝10-n的无穷等比级数，按上一小节等式（10），它的和是，因此XXXXXXXX习题：1）把分数，，，，，表示为十进位小数并确定其循环部分．XXXXXXXX*2）数142857有如下性质：用数2，3，4，5，6中的任一个去乘它，所得的积只是它的数码的一个重新排列．试用的十进位小数展式来解释这性质．XXXXXXXX3）把习题1）中的有理数表示为以5，7，12为基底的“小数”．XXXXXXXX4）把表示为一个二进位数．XXXXXXXX5）把0.11212121…写成一个分数．如果它是以3或5为基底的小数，求出这符号的值．XXXXXXXX</h4>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

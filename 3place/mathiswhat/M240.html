@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="hbaolong@vip.qq.com" />
+  <title>论语之240-2025年1月31日-1．定义和不变性的证明</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">论语之240-2025年1月31日-1．定义和不变性的证明</h1>
+<p class="author">hbaolong@vip.qq.com</p>
+</header>
+<h4
+id="定义和不变性的证明xxxxxxxx正如线段长度是度量几何的关键一样射影几何也有一个基本的概念利用这个概念图形的所有各种射影性质都可以被表示出来xxxxxxxx如果三个点abc在一条直线上一个射影一般说来将不仅改变距离ab和ac而且也将改变比值实际上一条直线l上的任意三个点abc通过连续作两次射影总能与另一条直线l上的任意三个点abc相对应为此我们可以以c为中心转动直线l使之达到平行于l的位置l见图74通过一个与c和c连线平行的投影我们可以把l射影到l确定三点abcc连接aa和bb的二直线交于点o把它作为第二次射影的中心这两个射影实现了我们所要的结果5xxxxxxxx图74xxxxxxxx如同我们刚才看到的在一条直线上凡只涉及三个点的量在射影下都是要改变的但是如果在一条直线上我们有四个点abcd并把它们射影到另一直线上的abcd则这时有某个量称为这四个点的交比在射影下不变这是射影几何具有决定意义的发现直线上四个点的这一数学性质在射影下保持不变从而在这直线的任何象中都可以找到交比既不是长度也不是两个长度的比值而是两个这种比值的比如果我们考虑比值和则它们的比值xxxxxxxx定义为四个有序点abcd的交比xxxxxxxx我们现在说明四个点交比在射影下是不变的即如果abcd和abcd是两条直线上与一射影相关的对应点则xxxxxxxx我们可用初等的方法来证明我们知道一个三角形的面积等于底乘高的一半或等于两边及其夹角的正弦的乘积的一半在图75中我们有xxxxxxxx图75-中心投影下交比的不变性xxxxxxxxoca的面积hcaoaocsincoaxxxxxxxxocb的面积hcbobocsincobxxxxxxxxoda的面积hdaoaodsindoaxxxxxxxxodb的面积hdbobodsindobxxxxxxxx得出xxxxxxxx因此abcd的交比仅仅依赖于o点与abcd的连线所成的角由于对从o射影abcd而得到的任意四个点abcd来说这些角都是相同的所以在射影下交比保持不变xxxxxxxx由相似三角形的初等性质可知在平行投影下仍不改变四个点的交比证明留给读者作练习xxxxxxxx至今我们把直线l上的四个点abcd的交比理解为取正值的长度的比对定义作如下修改会更方便一些我们选择l的一个方向为正向规定沿这方向测量的长度是正的而沿相反方向测量的长度是负的则有序点abcd的交比定义为xxxxxxxx图76-平行投影下交比的不变性xxxxxxxx图77-交比的符号xxxxxxxx这里量cacbdadb理解为带有特定的符号由于改变l的正方向只是改变这比的每一项符号所以abcd这值将不依赖于方向的选择容易看到abcd是负还是正根据ab这一对点是否被cd这一对点分开而定由于这分开的性质在射影下是不变的所以带符号的交比abcd也是不变的如果我们在l上选一固定点o作为原点且把l上每一点到o点的有向距离当作它的坐标x设abcd的坐标相应为x1x2x3x4则xxxxxxxx如果abcd-1即-则c和d以相同的比例在线段ab的内外分开在这种情况下我们说c和d调和分割线段ab并说cd关于ab对是调和共轭的如果abcd1则点c和d或a和b重合xxxxxxxx图78-用坐标描述交比xxxxxxxx应当记住abcd取的次序是交比abcd定义中的一个不可少的部分例如若abcdλ则交比bacd是而acbd1λ这些读者很容易验证四个点abcd能用432124种不同方式排次序每一种都给出其交比的值这些排列中有一些将和原来排列abcd有相同的交比例如abcdbadc对这些点的24种不同排列仅有六个不同的交比即xxxxxxxx这个证明留给读者作为练习这六个量一般是不同的但其中两个可以相等例如当λ-1时的调和分割情形就是如此xxxxxxxx我们也可以把四条共面即在同一平面上且共点的直线1234的交比定义为这些直线与另一条在同一平面上的直线交成的四个交点的交比这第五条直线的位置是无所谓的因为在射影下这交比是不变的与这等价的定义是xxxxxxxx取正号或负号按一对直线是否被其他直线分开而定在这公式中例如13的意思是指直线1和直线3之间的夹角最后我们可以定义四个共轴平面空间中四个平面交于一条直线l即它们的轴的交比如果一条直线交这些平面于四个点则不论这条线的位置如何这些点总有同样的交比这个事实的证明留给读者作练习因此我们可以指定这个值为这四个平面的交比与此等价地我们可以把四个共轴平面的交比定义为它们与第五个平面相交而得到的四条直线的交比见图79xxxxxxxx图79-共轴平面的交比xxxxxxxx四个平面的交比的概念自然引起了这样的问题能否定义三维空间到它自身的射影变换用定义中心投影的方法不能直接从二维推广到三维但可以证明一平面到它自身的每一连续变换其中点与点直线与直线以一一对应的方式相联系时它是一射影变换这定理使我们对三维射影变换作如下的定义空间中的射影变换是一个使直线保持不变的一一对应的连续变换可以证明这样的变换使交比保持不变xxxxxxxx对上面所讲的我们再作一些补充假设在一直线上有三个不同的点abc其坐标为x1x2x3我们要找出第四个点d使交比abcdλ这里λ是预先给定的对λ-1的特殊情形问题归结为作第四个调和点其详细作法见下一节一般地说这问题有一个解且仅有一个解因为如果x是所求的点d的坐标则方程xxxxxxxx恰好有一个解如果x1x2x3是给定的我们命k来简化方程2则我们求出这方程的解为x例如如果三个点abc是等距离的其坐标依次为x10x2dx32d则k2而xxxxxxxxx如果我们从两个不同的中心o和o出发把同一条直线l射影到两个不同的直线ll上则我们在l和l上的点之间得到一个对应pp并在l和l上的点之间得到一个对应pp这样就确立了l的点和l的点之间的一个对应pp它有这样的性质l上任意四个点abcd和l上对应的点abcd有相同的交比在两条直线的点之间任意一个具有这种性质的一一对应不论它是如何确定的都称为射影对应xxxxxxxx图80-两条直线上的点的射影对应xxxxxxxx习题1证明给定二直线以及它们的点之间的一个射影对应我们能用平行移动的办法把一条直线移到这样一个位置使这给定的射影对应可由一个简单的投影得到提示使这两条直线的某一对对应点重合xxxxxxxx2在上面结果的基础上说明如果二直线l和l的点能从任意投影中心通过有限次的一连串投影投影到中间直线而表示出来则仅用两个投影就能得到同样的结果xxxxxxxx">1．定义和不变性的证明XXXXXXXX正如线段长度是度量几何的关键一样，射影几何也有一个基本的概念，利用这个概念，图形的所有各种射影性质都可以被表示出来．XXXXXXXX如果三个点A，B，C在一条直线上，一个射影一般说来将不仅改变距离AB和AC，而且也将改变比值．实际上，一条直线l上的任意三个点A，B，C，通过连续作两次射影，总能与另一条直线l′上的任意三个点A′，B′，C′相对应．为此，我们可以以C′为中心转动直线l′，使之达到平行于l的位置l″（见图74）．通过一个与C′和C连线平行的投影，我们可以把l射影到l″，确定三点A″，B″，C″（＝C′）．连接A′，A″和B′，B″的二直线交于点O，把它作为第二次射影的中心．这两个射影实现了我们所要的结果〔5〕．XXXXXXXX图74XXXXXXXX如同我们刚才看到的，在一条直线上，凡只涉及三个点的量，在射影下都是要改变的．但是，如果在一条直线上我们有四个点A，B，C，D，并把它们射影到另一直线上的A′，B′，C′，D′，则这时有某个量——称为这四个点的交比——在射影下不变．这是射影几何具有决定意义的发现．直线上四个点的这一数学性质在射影下保持不变，从而在这直线的任何象中都可以找到．交比既不是长度，也不是两个长度的比值，而是两个这种比值的比：如果我们考虑比值和，则它们的比值XXXXXXXX定义为四个有序点A，B，C，D的交比．XXXXXXXX我们现在说明四个点交比在射影下是不变的，即如果A，B，C，D和A′，B′，C′，D′是两条直线上与一射影相关的对应点，则XXXXXXXX我们可用初等的方法来证明．我们知道一个三角形的面积等于底乘高的一半，或等于两边及其夹角的正弦的乘积的一半．在图75中，我们有XXXXXXXX图75　中心投影下，交比的不变性XXXXXXXXOCA的面积＝h·CA＝OA·OC·sin∠COA，XXXXXXXXOCB的面积＝h·CB＝OB·OC·sin∠COB，XXXXXXXXODA的面积＝h·DA＝OA·OD·sin∠DOA，XXXXXXXXODB的面积＝h·DB＝OB·OD·sin∠DOB．XXXXXXXX得出XXXXXXXX因此A，B，C，D的交比仅仅依赖于O点与A，B，C，D的连线所成的角．由于对从O射影A，B，C，D而得到的任意四个点A′，B′，C′，D′来说这些角都是相同的，所以在射影下交比保持不变．XXXXXXXX由相似三角形的初等性质可知，在平行投影下仍不改变四个点的交比．证明留给读者作练习．XXXXXXXX至今我们把直线l上的四个点A，B，C，D的交比理解为取正值的长度的比．对定义作如下修改会更方便一些．我们选择l的一个方向为正向，规定沿这方向测量的长度是正的，而沿相反方向测量的长度是负的，则有序点A，B，C，D的交比定义为XXXXXXXX图76　平行投影下，交比的不变性XXXXXXXX图77　交比的符号XXXXXXXX这里量CA，CB，DA，DB理解为带有特定的符号．由于改变l的正方向，只是改变这比的每一项符号，所以（ABCD）这值将不依赖于方向的选择．容易看到，（ABCD）是负还是正，根据A，B这一对点是否被C，D这一对点分开而定．由于这分开的性质在射影下是不变的，所以带符号的交比（ABCD）也是不变的．如果我们在l上选一固定点O作为原点，且把l上每一点到O点的有向距离当作它的坐标x，设A，B，C，D的坐标相应为x1，x2，x3，x4，则XXXXXXXX如果（ABCD）＝-1，即＝-，则C和D以相同的比例在线段AB的内外分开．在这种情况下，我们说C和D调和分割线段AB，并说C，D（关于A，B对）是调和共轭的．如果（ABCD）＝1，则点C和D（或A和B）重合．XXXXXXXX图78　用坐标描述交比XXXXXXXX应当记住，A，B，C，D取的次序是交比（ABCD）定义中的一个不可少的部分．例如，若（ABCD）＝λ，则交比（BACD）是，而（ACBD）＝1－λ，这些读者很容易验证．四个点A，B，C，D能用4·3·2·1＝24种不同方式排次序，每一种都给出其交比的值．这些排列中有一些将和原来排列A，B，C，D有相同的交比，例如（ABCD）＝（BADC）．对这些点的24种不同排列，仅有六个不同的交比，即XXXXXXXX这个证明留给读者作为练习．这六个量一般是不同的，但其中两个可以相等，例如当λ＝-1时的调和分割情形就是如此．XXXXXXXX我们也可以把四条共面（即在同一平面上）且共点的直线1，2，3，4的交比定义为：这些直线与另一条在同一平面上的直线交成的四个交点的交比．这第五条直线的位置是无所谓的，因为在射影下这交比是不变的．与这等价的定义是XXXXXXXX取正号或负号按一对直线是否被其他直线分开而定（在这公式中，例如（1，3）的意思是指直线1和直线3之间的夹角）．最后，我们可以定义四个共轴平面（空间中四个平面交于一条直线l，即它们的轴）的交比．如果一条直线交这些平面于四个点，则不论这条线的位置如何，这些点总有同样的交比（这个事实的证明留给读者作练习）．因此我们可以指定这个值为这四个平面的交比．与此等价地，我们可以把四个共轴平面的交比定义为：它们与第五个平面相交而得到的四条直线的交比（见图79）．XXXXXXXX图79　共轴平面的交比XXXXXXXX四个平面的交比的概念，自然引起了这样的问题：能否定义三维空间到它自身的射影变换．用定义中心投影的方法，不能直接从二维推广到三维．但可以证明，一平面到它自身的每一连续变换，其中点与点，直线与直线以一一对应的方式相联系时，它是一射影变换．这定理使我们对三维射影变换作如下的定义：空间中的射影变换是一个使直线保持不变的一一对应的连续变换．可以证明这样的变换使交比保持不变．XXXXXXXX对上面所讲的我们再作一些补充．假设在一直线上有三个不同的点A，B，C，其坐标为x1，x2，x3．我们要找出第四个点D，使交比（ABCD）＝λ，这里λ是预先给定的．（对λ＝-1的特殊情形，问题归结为作第四个调和点，其详细作法见下一节．）一般地说，这问题有一个解且仅有一个解；因为如果x是所求的点D的坐标，则方程XXXXXXXX恰好有一个解．如果x1，x2，x3是给定的，我们命＝k来简化方程（2），则我们求出这方程的解为x＝．例如，如果三个点A，B，C是等距离的，其坐标依次为x1＝0，x2＝d，x3＝2d，则k＝＝2，而x＝．XXXXXXXX如果我们从两个不同的中心O′和O″出发，把同一条直线l射影到两个不同的直线l′，l″上，则我们在l和l′上的点之间得到一个对应P↔︎P′并在l和l″上的点之间得到一个对应P↔︎P″．这样就确立了l′的点和l″的点之间的一个对应P′↔︎P″．它有这样的性质：l′上任意四个点A′，B′，C′，D′和l″上对应的点A″，B″，C″，D″有相同的交比．在两条直线的点之间，任意一个具有这种性质的一一对应，不论它是如何确定的，都称为射影对应．XXXXXXXX图80　两条直线上的点的射影对应XXXXXXXX习题：1）证明：给定二直线以及它们的点之间的一个射影对应，我们能用平行移动的办法把一条直线移到这样一个位置：使这给定的射影对应可由一个简单的投影得到（提示：使这两条直线的某一对对应点重合）．XXXXXXXX2）在上面结果的基础上，说明如果二直线l和l′的点能从任意投影中心通过有限次的一连串投影，投影到中间直线而表示出来，则仅用两个投影就能得到同样的结果．XXXXXXXX</h4>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="hbaolong@vip.qq.com" />
+  <title>论语之272-2025年3月4日-2．多边形的若当曲线定理</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">论语之272-2025年3月4日-2．多边形的若当曲线定理</h1>
+<p class="author">hbaolong@vip.qq.com</p>
+</header>
+<h4
+id="多边形的若当曲线定理xxxxxxxx若当曲线定理断言任一简单闭曲线c把平面上不属于c的点分为两个不同的区域没有公共点它们以c作为公共边界我们将对c是封闭多边形p的情形给出这定理的一个证明xxxxxxxx我们要说明平面上不属于p的点可分成a和b两类使得同一类的任意两点能用不与p相交的折线相连而连接a的点与b的点的任一通路必定和p相交a类的点形成多边形的外部而b为内部xxxxxxxx作为证明的开始我们在平面上选取一固定方向它和p的任意边都不平行由于p只有有限多个边这样的选择总是可能的现在我们定义a类和b类如下xxxxxxxx如果过p点沿这个固定方向的射线和p的交点有偶数个0246则p属于a如果过p点沿这固定方向的射线和p的交点有奇数个135则p属于bxxxxxxxx如果射线交于p的顶点当顶点处p的两个边位于射线的同侧这样的顶点我们不算作交点若这两个边位于射线的两侧则这种顶点算作交点两个点p和q如果它们属于同一类a或b称它们有相同的奇偶性xxxxxxxx图148-计算交点的个数xxxxxxxx首先我们注意任意一个与p没有交点的直线段它上面的所有点都有相同的奇偶性因为沿着这样的线段而运动的点p的奇偶性只有当经过p而与该固定方向同向的射线通过p的一个顶点时才会有变化然而按上面的规定不论是哪一种情况它的奇偶性实际上都不会有变化由此可知如果用折线把a的任一点p1和b的一点p2连接起来则这条通路必定和p相交因为不然的话这条通路上的所有点特别是p1和p2将有相同的奇偶性进一步我们能说明同一类a或b的任意两点能用一条不与p相交的折线连接起来把这两点记为p和q如果连接p和q的直线段pq不和p相交它就是所要求的通路如果它和p相交设p是这线段和p的第一个交点而q是最后一个交点图149作一条通路以p为起点沿着线段pp而行然后恰在p之前转向而沿着p走直到p回到pq的q上如果我们能证明这条通路在q和q之间与pq相交而不是在p和q之间和pq相交那么这条通路可以沿着qq延长到q而不和p相交显然任意两个彼此充分接近然而位于p的某个线段两侧的点r和s必定有不同的奇偶性因为过r的射线将比过s的射线多一个与p的交点因此我们看到当沿着线段pq横过q点时奇偶性是有变化的又因为p和q从而虚线通路上的每一个点有相同的奇偶性由此可知虚线通路在q和q之间和pq相交xxxxxxxx图149xxxxxxxx这就完成了对多边形p的若当曲线定理的证明现在p的外部可以和a类等同起来因为如果我们沿着任一射线朝着上述固定方向而行我们将达到这样一点这个点之外再没有与p的交点了从而所有这样的点的奇偶性是0因此属于a这样一来剩下的p的内部就与b等同了不论这简单闭多边形p如何扭转只要画一射线然后数一下它与p的交点个数我们总能确定平面上一给定点p究竟是属于p的内部还是外部如果交点个数是奇数的话则点p在p的内部倘若不在某一处穿过p它是跑不出来的如果个数是偶数则点p在p的外部试就图128验证这一点xxxxxxxx也可以用下述方式对多边形证明若当曲线定理我们用不通过点p0的任意闭曲线c来定义点p0的阶这是指连接p0和这曲线上一动点p当p在曲线上走一回时箭头p0p旋转的整圈数设xxxxxxxxa不在p上对p是偶数阶的所有点p0xxxxxxxxb不在p上对p是奇数阶的所有点p0xxxxxxxx则这样定义的a和b相应地形成p的外部和内部作为一个练习请详细证明之xxxxxxxx3代数基本定理xxxxxxxx代数基本定理是说如果xxxxxxxx其中n1且anan2a0为任意复数则存在一个复数α使fα0换句话说在复数域中每一个多项式有一个根在此处我们从这个结论得出fz能分解成n个线性因子xxxxxxxxfzzα1zα2zαnxxxxxxxx其中α1α2αn是fz的零点引人注目的是利用证明布劳威尔不动点定理时所用过的有关拓扑特性能够证明这个定理xxxxxxxx读者回顾一下复数就是符号xyi这里x和y是实数而i具有性质i2-1复数xyi可以用平面上的点来表示它关于直角坐标轴的坐标是x和y如果我们在这平面上引进极坐标取原点和x轴的正方向为相应的顶点和极轴我们可以写出xxxxxxxxzxyircosθisinθxxxxxxxx其中r从棣莫弗公式得知xxxxxxxxznrncosnθisinnθxxxxxxxx见此处因此如果我们让z描出以原点为中心r为半径的一个圆则当z沿着圆周运行一圈时zn将沿着半径为rn的圆运行整n周我们再回顾一下z的模r记为z给出了z到o的距离而且如果zxyi则zz是z和z之间的距离有了这些准备之后我们可以着手证明这个定理了xxxxxxxx我们假设多项式1没有根从而对任意复数z有xxxxxxxxfz0xxxxxxxx在这假设的基础上如果现在令z在xy平面上任意描出一条闭曲线则fz将描出一条闭曲线γ它决不会经过原点图150因此我们可以对任意闭曲线c定义原点o关于函数fz的阶数就是说当z沿着c运行一周时连接o点和作为fz的轨迹的曲线γ上的点作成的箭头转过的圈数我们取以o为中心以t为半径的圆作为曲线c并且定义函数φt为o关于fz的阶数它是对以o为圆心以t为半径的这个圆而言的显然φ00因为半径为0的圆是一个点而且曲线γ蜕化为点f00在下一小段中我们将表明φtn对充分大的t成立但是阶数φt连续地依赖于t因为fz是z的连续函数于是我们导出一个矛盾因为函数φt只能取整数值它不能连续地从0过渡到nxxxxxxxx图150-代数基本定理的证明xxxxxxxx以下只须说明对充分大的t有φtn我们考察一个半径zt的圆t取得足够大使得xxxxxxxxt1且ta0a1an1xxxxxxxx则我们有不等式xxxxxxxx由于左端的表达式是zn和fz两个点之间的距离而右端最后一个表达式是zn到原点的距离我们看到只要z在以原点为中心t为半径的圆上连接fz和zn两点的直线段就不可能通过原点于是我们可以把fz所描述的曲线连续地变形为zn所描述的曲线而不经过原点这只要把每个点fz沿着连接它和zn的线段压缩就行了由于原点的阶数是连续变化的并且假定在这变形中只能取整数值因此对这两条曲线来说阶数必须相等由于zn的阶数为n所以fz的阶数也必须是n证明完毕xxxxxxxx注释xxxxxxxx1在这里并不是对平面是二维的这个论断按照我们的定义给出了一个严格的证明因为这里假定了我们已知圆周是1维的而且平面不是0维和1维的但是对这些事实以及更高维中的类似情况是能够给予证明的这些证明表明一般点集的维的定义和简单集合的维数的通常用法是不矛盾的xxxxxxxx-第6章-函数和极限xxxxxxxx引言xxxxxxxx近代数学的主体主要围绕着函数和极限的概念这一章我们将系统地分析这些概念像xxxxxxxxx22x3xxxxxxxx这样一个式子在x的值未给定以前它没有确定的数值我们把这个式子的值称为x的值的函数并写为xxxxxxxxx22x3fxxxxxxxxx例如当x2时有222235也就是f25同样直接把任意的整数分数无理数甚至复数代入x我们可以求出相应的fx的值xxxxxxxx小于n的素数的个数是整数n的一个函数πn虽然我们不知道计算πn的代数式但当n的值给定时πn的值随着就确定下来三角形的面积是它三边长度的函数这个面积随着边长的变动而变动但当这些边长固定下来以后它的值就是完全确定的一个平面如果经过一个射影或拓扑变换那么平面上一个点变换后的坐标依赖于这个点原来的坐标也就是该点原来坐标的函数只要若干个量之间有一定的物理关系就会出现函数的概念封闭在汽缸中的气体的体积是活塞上的压强及温度的函数气球上所观测到的大气压强是海拔高度的函数所有的周期现象潮汐的运动弦的振动从炽热灯丝发射出的光波都可以借助于简单的三角函数sinx和cosx来表示xxxxxxxx在莱布尼茨16461716他最先使用函数这个词以及18世纪的许多数学家看来函数关系的概念多少是指存在着表示这些关系的正确性质的数学式子对于数学及物理上的需要来说这种观念已证明是太狭窄了经过了一个漫长的时期函数概念以及和它密切相关的极限概念才得以明确和一般化在这一章里我们将对此加以说明xxxxxxxx-1-变量和函数xxxxxxxx">2．多边形的若当曲线定理XXXXXXXX若当曲线定理断言：任一简单闭曲线C把平面上不属于C的点分为两个不同的区域（没有公共点），它们以C作为公共边界．我们将对C是封闭多边形P的情形，给出这定理的一个证明．XXXXXXXX我们要说明平面上不属于P的点可分成A和B两类，使得同一类的任意两点能用不与P相交的折线相连，而连接A的点与B的点的任一通路必定和P相交．A类的点形成多边形的“外部”，而B为“内部”．XXXXXXXX作为证明的开始，我们在平面上选取一固定方向，它和P的任意边都不平行．由于P只有有限多个边，这样的选择总是可能的．现在我们定义A类和B类如下：XXXXXXXX如果过p点沿这个固定方向的射线和P的交点有偶数个0，2，4，6，…，则p属于A．如果过p点沿这固定方向的射线和P的交点有奇数个1，3，5，…，则p属于B．XXXXXXXX如果射线交于P的顶点，当顶点处P的两个边位于射线的同侧，这样的顶点我们不算作交点；若这两个边位于射线的两侧，则这种顶点算作交点．两个点p和q，如果它们属于同一类，A或B，称它们有相同的“奇偶性”．XXXXXXXX图148　计算交点的个数XXXXXXXX首先我们注意，任意一个与P没有交点的直线段，它上面的所有点都有相同的“奇偶性”．因为沿着这样的线段而运动的点p的“奇偶性”，只有当经过p而与该固定方向同向的射线通过P的一个顶点时才会有变化，然而按上面的规定，不论是哪一种情况，它的“奇偶性”实际上都不会有变化．由此可知，如果用折线把A的任一点p1和B的一点p2连接起来，则这条通路必定和P相交．因为不然的话，这条通路上的所有点，特别是p1和p2，将有相同的“奇偶性”．进一步我们能说明，同一类（A或B）的任意两点能用一条不与P相交的折线连接起来．把这两点记为p和q，如果连接p和q的直线段pq不和P相交，它就是所要求的通路．如果它和P相交，设p′是这线段和P的第一个交点，而q′是最后一个交点（图149）．作一条通路以p为起点沿着线段pp′而行，然后恰在p′之前转向而沿着P走，直到P回到pq的q′上．如果我们能证明这条通路在q′和q之间与pq相交，而不是在p′和q′之间和pq相交，那么这条通路可以沿着q′q延长到q而不和P相交．显然，任意两个彼此充分接近，然而位于P的某个线段两侧的点r和s，必定有不同的“奇偶性”，因为过r的射线将比过s的射线多一个与P的交点．因此我们看到当沿着线段pq横过q′点时，“奇偶性”是有变化的．又因为p和q（从而虚线通路上的每一个点）有相同的“奇偶性”，由此可知虚线通路在q′和q之间和pq相交．XXXXXXXX图149XXXXXXXX这就完成了对多边形P的若当曲线定理的证明．现在P的“外部”可以和A类等同起来，因为如果我们沿着任一射线朝着上述固定方向而行，我们将达到这样一点，这个点之外再没有与P的交点了，从而所有这样的点的“奇偶性”是0，因此属于A．这样一来，剩下的P的“内部”就与B等同了．不论这简单闭多边形P如何扭转，只要画一射线，然后数一下它与P的交点个数，我们总能确定平面上一给定点p究竟是属于P的内部还是外部．如果交点个数是奇数的话，则点p在P的内部，倘若不在某一处穿过P它是跑不出来的．如果个数是偶数，则点p在P的外部（试就图128验证这一点）．XXXXXXXX*也可以用下述方式对多边形证明若当曲线定理：我们用不通过点p0的任意闭曲线C来定义点p0的阶，这是指，连接p0和这曲线上一动点p，当p在曲线上走一回时，箭头p0p旋转的整圈数．设XXXXXXXXA＝不在P上，对P是偶数阶的所有点p0，XXXXXXXXB＝不在P上，对P是奇数阶的所有点p0．XXXXXXXX则这样定义的A和B相应地形成P的外部和内部．作为一个练习，请详细证明之．XXXXXXXX**3．代数基本定理XXXXXXXX“代数基本定理”是说，如果XXXXXXXX其中n≥1，且an－，an－2，…，a0为任意复数，则存在一个复数α，使f（α）＝0．换句话说，在复数域中每一个多项式有一个根［在此处，我们从这个结论得出f（z）能分解成n个线性因子：XXXXXXXXf（z）＝（z－α1）（z－α2）…（z－αn），XXXXXXXX其中α1，α2，…，αn是f（z）的零点］．引人注目的是，利用证明布劳威尔不动点定理时所用过的有关拓扑特性，能够证明这个定理．XXXXXXXX读者回顾一下，复数就是符号x＋yi，这里x和y是实数，而i具有性质i2＝-1．复数x＋yi可以用平面上的点来表示，它关于直角坐标轴的坐标是x和y．如果我们在这平面上引进极坐标，取原点和x轴的正方向为相应的顶点和极轴，我们可以写出XXXXXXXXz＝x＋yi＝r（cosθ＋isinθ），XXXXXXXX其中r＝．从棣莫弗公式得知XXXXXXXXzn＝rn（cosnθ＋isinnθ）．XXXXXXXX（见此处）因此，如果我们让z描出以原点为中心、r为半径的一个圆，则当z沿着圆周运行一圈时，zn将沿着半径为rn的圆运行整n周．我们再回顾一下，z的模r（记为｜z｜）给出了z到O的距离，而且如果z′＝x′＋y′i，则｜z－z′｜是z和z′之间的距离．有了这些准备之后，我们可以着手证明这个定理了．XXXXXXXX我们假设多项式（1）没有根，从而对任意复数z，有XXXXXXXXf（z）≠0．XXXXXXXX在这假设的基础上，如果现在令z在x，y平面上任意描出一条闭曲线，则f（z）将描出一条闭曲线Γ，它决不会经过原点（图150）．因此我们可以对任意闭曲线C定义原点O关于函数f（z）的阶数，就是说，当z沿着C运行一周时，连接O点和（作为f（z）的轨迹的）曲线Γ上的点作成的箭头转过的圈数．我们取以O为中心、以t为半径的圆作为曲线C，并且定义函数φ（t）为O关于f（z）的阶数，它是对以O为圆心、以t为半径的这个圆而言的．显然φ（0）＝0，因为半径为0的圆是一个点，而且曲线Γ蜕化为点f（0）≠0．在下一小段中我们将表明φ（t）＝n对充分大的t成立．但是阶数φ（t）连续地依赖于t，因为f（z）是z的连续函数．于是我们导出一个矛盾，因为函数φ（t）只能取整数值，它不能连续地从0过渡到n．XXXXXXXX图150　代数基本定理的证明XXXXXXXX以下只须说明对充分大的t有φ（t）＝n．我们考察一个半径｜z｜＝t的圆，t取得足够大，使得XXXXXXXXt＞1且t＞｜a0｜＋｜a1｜＋…＋｜an－1｜，XXXXXXXX则我们有不等式XXXXXXXX由于左端的表达式是zn和f（z）两个点之间的距离，而右端最后一个表达式是zn到原点的距离．我们看到只要z在以原点为中心，t为半径的圆上，连接f（z）和zn两点的直线段就不可能通过原点．于是我们可以把f（z）所描述的曲线连续地变形为zn所描述的曲线而不经过原点，这只要把每个点f（z）沿着连接它和zn的线段压缩就行了．由于原点的阶数是连续变化的，并且假定在这变形中只能取整数值，因此对这两条曲线来说，阶数必须相等．由于zn的阶数为n，所以f（z）的阶数也必须是n．证明完毕．XXXXXXXX注释XXXXXXXX〔1〕在这里，并不是对平面是二维的这个论断，按照我们的定义给出了一个严格的证明．因为这里假定了我们已知圆周是1维的，而且平面不是0维和1维的．但是，对这些事实以及更高维中的类似情况是能够给予证明的．这些证明表明，一般点集的维的定义和简单集合的维数的通常用法是不矛盾的．XXXXXXXX##
+第6章　函数和极限XXXXXXXX引言XXXXXXXX近代数学的主体，主要围绕着函数和极限的概念．这一章我们将系统地分析这些概念．像XXXXXXXXx2＋2x－3XXXXXXXX这样一个式子，在x的值未给定以前，它没有确定的数值．我们把这个式子的值称为x的值的函数，并写为XXXXXXXXx2＋2x－3＝f（x）．XXXXXXXX例如，当x＝2时，有22＋2×2－3＝5，也就是f（2）＝5．同样，直接把任意的整数、分数、无理数甚至复数代入x，我们可以求出相应的f（x）的值．XXXXXXXX小于n的素数的个数是整数n的一个函数π（n）．虽然，我们不知道计算π（n）的代数式，但当n的值给定时，π（n）的值随着就确定下来．三角形的面积是它三边长度的函数；这个面积随着边长的变动而变动，但当这些边长固定下来以后，它的值就是完全确定的．一个平面如果经过一个射影或拓扑变换，那么平面上一个点变换后的坐标，依赖于这个点原来的坐标，也就是该点原来坐标的函数．只要若干个量之间有一定的物理关系，就会出现函数的概念．封闭在汽缸中的气体的体积，是活塞上的压强及温度的函数．气球上所观测到的大气压强是海拔高度的函数．所有的周期现象——潮汐的运动，弦的振动，从炽热灯丝发射出的光波——都可以借助于简单的三角函数sinx和cosx来表示．XXXXXXXX在莱布尼茨（1646～1716）（他最先使用函数这个词）以及18世纪的许多数学家看来，函数关系的概念多少是指存在着表示这些关系的正确性质的数学式子．对于数学及物理上的需要来说，这种观念已证明是太狭窄了．经过了一个漫长的时期，函数概念以及和它密切相关的极限概念才得以明确和一般化．在这一章里，我们将对此加以说明．XXXXXXXX###
+§1　变量和函数XXXXXXXX</h4>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

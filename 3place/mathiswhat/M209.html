@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="hbaolong@vip.qq.com" />
+  <title>论语之209-2024年12月31日-2．复数的几何解释</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">论语之209-2024年12月31日-2．复数的几何解释</h1>
+<p class="author">hbaolong@vip.qq.com</p>
+</header>
+<h4
+id="复数的几何解释xxxxxxxx为了解所有的二次和三次方程早在16世纪数学家就不得不引进负数的平方根的表达式但是他们对解释这些表达式的确切意义感到困惑不安怀着迷信的敬畏感来看待它们虚数这个词说明了这个表达式曾被认为是有某些虚构和不实际的东西终于在十九世纪初当这些数的重要性在许多数学分支中已变得明显时复数运算有了一个简单的几何解释这消除了人们对复数的合理性的长期疑虑当然从近代的观点来看并不是一定要有这样的解释复数形式计算的合理性可以由加法和乘法的形式定义直接推出但是大约同时由维赛尔wessel17451818阿尔纲argand17681822和高斯给出的这个几何解释使得这些运算从直观的角度来看似乎更为自然这也是使复数在数学和物理中得到应用的极为重要的原因xxxxxxxx这个几何解释就是把复数zxyi简单地用平面上带有直角坐标xy的点来代表z的实部是它的x坐标虚部是它的y坐标因而在复数和数平面上的点之间确立了一个对应就像2在直线即数轴上的点和实数之间建立对应一样数平面x轴上的点对应于实数zx0i而y轴上的点对应于纯虚数z0yi若xxxxxxxxzxyixxxxxxxx为任一复数则称复数xxxxxxxx为z的共轭在数平面上用点z关于x轴的镜面反射来表示如果我们用ρ表示从原点到点z的距离则由勾股定理得知xxxxxxxxρ2x2y2xyixyixxxxxxxx实数ρ称为z的模记作xxxxxxxxρzxxxxxxxx如果z在实轴上它的模就是它通常的绝对值模1的复数在以原点为圆心1为半径的单位圆上xxxxxxxx若z0则z0这是因为z的定义就是z到原点的距离再则两个复数的乘积的模等于它们模的乘积xxxxxxxxz1z2z1z2xxxxxxxx这将由此处要证明的一个更为一般的定理推出xxxxxxxx习题1从两个复数z1x1y1iz2x2y2i的乘积定义直接证明上述定理xxxxxxxx2从两个实数的乘积等于0必须而且只须有一个因子是0这个事实出发对复数证明相应的定理提示用刚才叙述过的两个定理xxxxxxxx由z1x1y1i和z2x2y2i二复数相加的定义我们有xxxxxxxxz1z2x1x2y1y2ixxxxxxxx因此在数平面上点z1z2可以表示为以oz1z2为三个顶点的平行四边形的第四个顶点两个复数的和的这个简单几何结构在许多应用中非常重要由此我们可以推出一个重要结论两个复数的和的模不超过它们模的和和此处比较xxxxxxxxz1z2z1z2xxxxxxxx这是由三角形的任一边长不超过其他二边长之和这个事实推出来的xxxxxxxx习题何时等式z1z2z1z2成立xxxxxxxxx轴的正向和oz直线间的交角称为z的辐角记为φ图22的模和z的模相等xxxxxxxx图22-复数的几何表示点z的直角坐标为xyxxxxxxxx但是的辐角是z的辐角的负值xxxxxxxx图23-复数加法的平行四边形法则xxxxxxxx当然z的辐角不是唯一确定的因为一个角加上或减去360的任一整数倍不影响它的终边的位置因此xxxxxxxxφφ360φ720φ1080xxxxxxxxφ360φ720φ1080xxxxxxxx在图上都表示同样的角借助模ρ和辐角φ复数z可写成xxxxxxxx的形式因为按照正弦和余弦的定义见此处有xxxxxxxxxρcosφyρsinφxxxxxxxx例如对ziρ1φ90有i1cos90isin90对z1iρφ45有1icos45isin45对z1iρφ-45有1icos-45isin-45对z-1iρ2φ120有-1i2cos120isin120读者应该代入三角函数的值来核实这些命题xxxxxxxx当两个复数相乘时三角表达式8有很大好处如果xxxxxxxxzρcosφisinφxxxxxxxx而xxxxxxxxzρcosφisinφxxxxxxxx则xxxxxxxxzzρρcosφcosφsinφsinφicosφsinφsinφcosφxxxxxxxx现在用正弦和余弦的基本加法定理xxxxxxxxcosφcosφsinφsinφcosφφxxxxxxxxcosφsinφsinφcosφsinφφxxxxxxxx有xxxxxxxx这是模为ρρ辐角为φφ的复数的三角表示式换句话说两个复数相乘就是把它们的模相乘而把它们的辐角相加图24因此我们看到复数的乘法有时是通过旋转来实现的为确切起见我们把从原点指向点z的有向线段称为向量z则ρz是它的长度设z是单位圆上的一个数则有ρ1这时用z乘z就是简单地把向量z旋转一个角φ如果ρ1则在旋转之后向量的长度要乘以ρ读者可以用z1i旋转90z2-i沿相反方向旋转90z31iz41i去乘各种数来说明这个事实xxxxxxxx图24-两个复数相乘辐角相加模相乘xxxxxxxx当zz时公式9有一个特别重要的结果因为这时我们有xxxxxxxxz2ρ2cos2φisin2φxxxxxxxx再用z去乘这个结果我们得到xxxxxxxxz3ρ3cos3φisin3φxxxxxxxx照此一直进行下去得xxxxxxxx其中n为任意整数特别如果z是单位圆上的点即ρ1我们得到为英国数学家棣莫弗a.-de-moivre16671754所发现的公式xxxxxxxx这个公式是初等数学中最引人注目并且最有用的关系式可以举个例子来说明这一点我们可以对n3应用这个公式且按二项式公式xxxxxxxxuv3u33u2v3uv2v3xxxxxxxx把左边展开得到关系式xxxxxxxxcos3φisin3φcos3φ3cosφsin2φi3cos2φsinφsin3φxxxxxxxx两个复数之间的这样一个等式相当于实数之间的一对等式因为当两个复数相等时实部和虚部必须同时分别相等因此我们有xxxxxxxxcos3φcos3φ3cosφsin2φxxxxxxxxsin3φ3cos2φsinφsin3φxxxxxxxx利用关系式xxxxxxxxcos2φsin2φ1xxxxxxxx最后我们得到xxxxxxxx对任意n容易得到用sinφ和cosφ的幂分别表示sinnφ和cosnφ的类似公式xxxxxxxx习题1找出sin4φ和cos4φ的相应公式xxxxxxxx2证明对单位圆上的点zcosφisinφ有cosφisinφxxxxxxxx3不经过计算而证明的模总是1xxxxxxxx4设z1z2是二复数证明z1z2的辐角等于由z2到z1的向量与实轴的夹角xxxxxxxx5在点z1z2z3做成的三角形中标明复数的辐角xxxxxxxx6证明有相同辐角的两个复数的比是实数xxxxxxxx7证明对四个复数z1z2z3z4来说如果和有相同的辐角则这四个数同在一个圆上或一条直线上反之亦然xxxxxxxx8证明四个点z1z2z3z4同在一个圆上或一条直线上必须而且只须xxxxxxxx是实数xxxxxxxx">2．复数的几何解释XXXXXXXX为了解所有的二次和三次方程，早在16世纪数学家就不得不引进负数的平方根的表达式．但是他们对解释这些表达式的确切意义感到困惑不安，怀着迷信的敬畏感来看待它们．“虚数”这个词说明了这个表达式曾被认为是有某些虚构和不实际的东西．终于在十九世纪初，当这些数的重要性在许多数学分支中已变得明显时，复数运算有了一个简单的几何解释．这消除了人们对复数的合理性的长期疑虑．当然，从近代的观点来看并不是一定要有这样的解释．复数形式计算的合理性，可以由加法和乘法的形式定义直接推出．但是，大约同时由维赛尔（Wessel，1745～1818）、阿尔纲（Argand，1768～1822）和高斯给出的这个几何解释，使得这些运算从直观的角度来看似乎更为自然，这也是使复数在数学和物理中得到应用的极为重要的原因．XXXXXXXX这个几何解释就是把复数z＝x＋yi简单地用平面上带有直角坐标x，y的点来代表．z的实部是它的x坐标，虚部是它的y坐标．因而在复数和“数平面”上的点之间确立了一个对应，就像§2在直线，即数轴上的点和实数之间建立对应一样．数平面x轴上的点对应于实数z＝x＋0i，而y轴上的点对应于纯虚数z＝0＋yi．若XXXXXXXXz＝x＋yiXXXXXXXX为任一复数，则称复数XXXXXXXX为z的共轭．在数平面上用点z关于x轴的镜面反射来表示．如果我们用ρ表示从原点到点z的距离，则由勾股定理得知XXXXXXXXρ2＝x2＋y2＝（x＋yi）（x－yi）＝XXXXXXXX实数ρ＝称为z的模，记作XXXXXXXXρ＝｜z｜．XXXXXXXX如果z在实轴上，它的模就是它通常的绝对值．模1的复数在以原点为圆心，1为半径的“单位圆”上．XXXXXXXX若｜z｜＝0，则z＝0．这是因为｜z｜的定义就是z到原点的距离．再则，两个复数的乘积的模等于它们模的乘积：XXXXXXXX｜z1·z2｜＝｜z1｜·｜z2｜．XXXXXXXX这将由此处要证明的一个更为一般的定理推出．XXXXXXXX习题：1）从两个复数z1＝x1＋y1i，z2＝x2＋y2i的乘积定义直接证明上述定理．XXXXXXXX2）从两个实数的乘积等于0必须而且只须有一个因子是0这个事实出发，对复数证明相应的定理（提示：用刚才叙述过的两个定理）．XXXXXXXX由z1＝x1＋y1i和z2＝x2＋y2i二复数相加的定义，我们有XXXXXXXXz1＋z2＝（x1＋x2）＋（y1＋y2）i．XXXXXXXX因此在数平面上点z1＋z2可以表示为以O，z1，z2为三个顶点的平行四边形的第四个顶点．两个复数的和的这个简单几何结构在许多应用中非常重要．由此我们可以推出一个重要结论：两个复数的和的模不超过它们模的和（和此处比较）：XXXXXXXX｜z1＋z2｜≤｜z1｜＋｜z2｜．XXXXXXXX这是由三角形的任一边长不超过其他二边长之和这个事实推出来的．XXXXXXXX习题：何时等式｜z1＋z2｜＝｜z1｜＋｜z2｜成立？XXXXXXXXx轴的正向和Oz直线间的交角称为z的辐角，记为φ（图22）．的模和z的模相等，XXXXXXXX图22　复数的几何表示点z的直角坐标为x，yXXXXXXXX但是的辐角是z的辐角的负值，XXXXXXXX图23　复数加法的平行四边形法则XXXXXXXX当然z的辐角不是唯一确定的，因为一个角加上或减去360°的任一整数倍，不影响它的终边的位置．因此XXXXXXXXφ，φ＋360°，φ＋720°，φ＋1080°，…，XXXXXXXXφ－360°，φ－720°，φ－1080°，…，XXXXXXXX在图上都表示同样的角．借助模ρ和辐角φ，复数z可写成XXXXXXXX的形式，因为按照正弦和余弦的定义（见此处）有XXXXXXXXx＝ρcosφ，y＝ρsinφ．XXXXXXXX例如，对z＝i，ρ＝1，φ＝90°，有i＝1（cos90°＋isin90°）；对z＝1＋i，ρ＝，φ＝45°，有1＋i＝（cos45°＋isin45°）；对z＝1－i，ρ＝，φ＝-45°，有1－i＝［cos（-45°）＋isin（-45°）］；对z＝-1＋i，ρ＝2，φ＝120°，有-1＋i＝2（cos120°＋isin120°）．读者应该代入三角函数的值来核实这些命题．XXXXXXXX当两个复数相乘时，三角表达式（8）有很大好处．如果XXXXXXXXz＝ρ（cosφ＋isinφ），XXXXXXXX而XXXXXXXXz′＝ρ′（cosφ′＋isinφ′），XXXXXXXX则XXXXXXXXz·z′＝ρρ′［（cosφcosφ′－sinφsinφ′）＋i（cosφsinφ′＋sinφcosφ′）］．XXXXXXXX现在用正弦和余弦的基本加法定理：XXXXXXXXcosφcosφ′－sinφsinφ′＝cos（φ＋φ′），XXXXXXXXcosφsinφ′＋sinφcosφ′＝sin（φ＋φ′），XXXXXXXX有XXXXXXXX这是模为ρρ′，辐角为φ＋φ′的复数的三角表示式．换句话说，两个复数相乘，就是把它们的模相乘而把它们的辐角相加（图24）．因此我们看到复数的乘法有时是通过旋转来实现的．为确切起见，我们把从原点指向点z的有向线段称为向量z，则ρ＝｜z｜是它的长度．设z′是单位圆上的一个数，则有ρ′＝1．这时用z′乘z就是简单地把向量z旋转一个角φ′．如果ρ′≠1，则在旋转之后，向量的长度要乘以ρ′．读者可以用z1＝i（旋转90°），z2＝-i（沿相反方向旋转90°），z3＝1＋i，z4＝1－i去乘各种数来说明这个事实．XXXXXXXX图24　两个复数相乘，辐角相加，模相乘XXXXXXXX当z＝z′时，公式（9）有一个特别重要的结果，因为这时我们有XXXXXXXXz2＝ρ2（cos2φ＋isin2φ）．XXXXXXXX再用z去乘这个结果，我们得到XXXXXXXXz3＝ρ3（cos3φ＋isin3φ）．XXXXXXXX照此一直进行下去得XXXXXXXX其中n为任意整数．特别如果z是单位圆上的点，即ρ＝1，我们得到为英国数学家棣莫弗（A.
+De
+Moivre，1667～1754）所发现的公式：XXXXXXXX这个公式是初等数学中最引人注目并且最有用的关系式．可以举个例子来说明这一点．我们可以对n＝3应用这个公式，且按二项式公式XXXXXXXX（u＋v）3＝u3＋3u2v＋3uv2＋v3，XXXXXXXX把左边展开，得到关系式XXXXXXXXcos3φ＋isin3φ＝cos3φ－3cosφsin2φ＋i（3cos2φsinφ－sin3φ）．XXXXXXXX两个复数之间的这样一个等式相当于实数之间的一对等式．因为当两个复数相等时，实部和虚部必须同时分别相等．因此我们有XXXXXXXXcos3φ＝cos3φ－3cosφsin2φ，XXXXXXXXsin3φ＝3cos2φsinφ－sin3φ．XXXXXXXX利用关系式XXXXXXXXcos2φ＋sin2φ＝1，XXXXXXXX最后我们得到XXXXXXXX对任意n容易得到用sinφ和cosφ的幂分别表示sinnφ和cosnφ的类似公式．XXXXXXXX习题：1）找出sin4φ和cos4φ的相应公式．XXXXXXXX2）证明对单位圆上的点z＝cosφ＋isinφ，有＝cosφ－isinφ．XXXXXXXX3）不经过计算而证明的模总是1．XXXXXXXX4）设z1，z2是二复数，证明z1－z2的辐角等于由z2到z1的向量与实轴的夹角．XXXXXXXX5）在点z1，z2，z3做成的三角形中，标明复数的辐角．XXXXXXXX6）证明有相同辐角的两个复数的比是实数．XXXXXXXX7）证明：对四个复数z1，z2，z3，z4来说，如果和有相同的辐角，则这四个数同在一个圆上或一条直线上．反之亦然．XXXXXXXX8）证明四个点z1，z2，z3，z4同在一个圆上或一条直线上必须而且只须XXXXXXXX是实数．XXXXXXXX</h4>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

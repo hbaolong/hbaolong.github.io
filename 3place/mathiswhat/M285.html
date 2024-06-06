@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="hbaolong@vip.qq.com" />
+  <title>论语之285-2025年3月17日-4．当x→∞时的极限</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">论语之285-2025年3月17日-4．当x→∞时的极限</h1>
+<p class="author">hbaolong@vip.qq.com</p>
+</header>
+<h4
+id="当x时的极限xxxxxxxx如果变量x充分大那么函数xxxxxxxxfxxxxxxxxx变为任意小或趋于0事实上这个函数当x增加时的性态实质上与序列当n增加时的性态相同我们给出一个一般的定义如果对于不论多么小的正数ε都能找到一个正数k依赖于ε只要xk就有xxxxxxxxfxaεxxxxxxxx那么就说当x趋于无穷大时函数fx有极限a记作xxxxxxxxfxa-当x时xxxxxxxx比较此处相应的定义xxxxxxxx在函数fx的情形对它a0读者可立即验证选取k就行了xxxxxxxx习题1说明先前的定义xxxxxxxxfxa当x时xxxxxxxx相当于xxxxxxxxfxa当0时xxxxxxxx证明以下各极限关系成立xxxxxxxx21当x时31当x时xxxxxxxx40当x时50当x时xxxxxxxx60当x时7没有极限当x时xxxxxxxx8定义fx当x时并举一例xxxxxxxx在函数fx的情形和序列an的情形之间有一点不同在序列情形n只能增加趋于无穷大但对于函数我们可以让x按正的方向或负的方向趋于无穷大如果只想讨论当x取很大的正值时的fx的趋势我们用条件xk代替条件xk就可以了而当x取很大的负值时我们用条件x-k我们分别用符号x和x-表示这两个单边趋于无穷的情形xxxxxxxx-4-连续性的精确定义xxxxxxxx在1第五小节我们叙述过函数的连续性的判别准则如下如果x趋于x1时函数fx趋近于fx1以fx1为极限那么就说函数fx在点xx1是连续的如果我们分析这个定义我们知道它由两个不同的要求组成xxxxxxxxa当x趋于x1时fx的极限a必须存在xxxxxxxxb这个极限a必须等于值fx1xxxxxxxx如果在此处的极限定义中我们令afx1那么连续性的条件取如下的形式如果对于任意不论多么小的正数ε总能找到一个正数δ依赖于ε使得对满足不等式xxxxxxxxxx1δxxxxxxxx的所有x都有xxxxxxxxfxfx1εxxxxxxxx那么就说函数fx在xx1是连续的极限定义中含有的限制xx1在这里是不必要的因为不等式xxxxxxxxfxfx1εxxxxxxxx自然是满足的xxxxxxxx作为一个例子让我们检验函数fxx3在点x10的连续性我们有xxxxxxxxfx030xxxxxxxx现在任意指定正值ε例如ε那么必须证明当x限制在充分接近x10时对应的fx的值和0的差不大于即在和之间立即可以看到如果我们限制x和x10的差小于δ那么它就不会超过这个界限因为如果x那么xxxxxxxxfxx3xxxxxxxx按照同样的方法我们可以用ε10-410-5或任何需要的界限来代替xxxxxxxxεxxxxxxxxδ将总能满足要求因为如果xxxxxxxxx那么fxx3εxxxxxxxx以连续的εδ定义为基础用类似的方法能证明所有的多项式有理函数和三角函数是连续的但要除去那些能使函数变为无穷的x的个别值xxxxxxxx借助函数ufx的图像连续性的定义可以用如下的几何方式表示出来选择任意正数ε并画两条高度分别为fx1εfx1ε且与x轴平行的直线那么必然可以找到一个正数δ使得位于以x为中心宽度为2δ的竖直带域内的那部分图像也同样包含在以fx1为中心宽度为2ε的水平带域内图170表明函数在x1连续而图171表明函数在x1不连续在后一种情形不论以x1为中心的竖直带域取得多窄带内总含有一部分图像在对应于所选的ε的水平带域之外xxxxxxxx图170-在xx1连续的函数xxxxxxxx图171-在xx1不连续的函数xxxxxxxx如果我断言已知函数ufx在值xx1处是连续的就是说我准备和你一起履行如下的约定你可以选择任意正数ε小到你所要的程度但必须是固定的那么我一定能找到一个正数δ使得当xx1δ时有fxfx1ε我不是一开始先提出数δ来满足你后来任意选择的ε我所选择的δ依赖于你所选择的ε如果你能找到一个ε使我不能提出一个适当的δ那么就和我的断言矛盾了因此为了证明对一个函数ufx的任何具体情形都能履行我的约定通常需要构造一个明显的正函数xxxxxxxxδφεxxxxxxxx它对每个正数ε都有定义用它我能证明当xx1δ时总有fxfx1ε对函数ufxx3在值x10的情形函数δφε就是δxxxxxxxx习题1证明sinxcosx是连续函数xxxxxxxx2证明和是连续的xxxxxxxx现在很清楚连续性的εδ定义与我们所能看到的有关函数的事实是一致的近代科学判别一个概念是否有用或者一个现象是否在科学上存在其标准要看能否观测它至少在原理上或能否转化为可观测的事实就这一方面来说连续性的定义是和近代科学的一般原理相一致的xxxxxxxx-5-有关连续函数的两个基本定理xxxxxxxx">4．当x→∞时的极限XXXXXXXX如果变量x充分大，那么函数XXXXXXXXf（x）＝XXXXXXXX变为任意小，或“趋于0”．事实上，这个函数当x增加时的性态，实质上与序列当n增加时的性态相同．我们给出一个一般的定义：如果对于不论多么小的正数ε，都能找到一个正数K（依赖于ε），只要｜x｜＞K，就有XXXXXXXX｜f（x）－a｜＜ε，XXXXXXXX那么就说当x趋于无穷大时函数f（x）有极限a，记作XXXXXXXXf（x）→a　当x→∞时．XXXXXXXX（比较此处相应的定义．）XXXXXXXX在函数f（x）＝的情形（对它a＝0），读者可立即验证，选取K＝就行了．XXXXXXXX习题：1）说明先前的定义XXXXXXXXf（x）→a，当x→∞时XXXXXXXX相当于XXXXXXXXf（x）→a，当→0时．XXXXXXXX证明以下各极限关系成立XXXXXXXX2）→1，当x→∞时．3）→1，当x→∞时．XXXXXXXX4）→0，当x→∞时．5）→0，当x→∞时．XXXXXXXX6）→0，当x→∞时．7）没有极限，当x→∞时．XXXXXXXX8）定义：“f（x）→∞，当x→∞时”，并举一例．XXXXXXXX在函数f（x）的情形和序列an的情形之间有一点不同．在序列情形，n只能增加，趋于无穷大．但对于函数，我们可以让x按正的方向或负的方向趋于无穷大．如果只想讨论当x取很大的正值时的f（x）的趋势，我们用条件x＞K代替条件｜x｜＞K就可以了，而当x取很大的负值时，我们用条件x＜-K．我们分别用符号x→+∞和x→-∞表示这两个“单边”趋于无穷的情形．XXXXXXXX###
+§4　连续性的精确定义XXXXXXXX在§1第五小节我们叙述过函数的连续性的判别准则如下：“如果x趋于x1时，函数f（x）趋近于f（x1），以f（x1）为极限，那么就说函数f（x）在点x＝x1是连续的．”如果我们分析这个定义，我们知道它由两个不同的要求组成：XXXXXXXXa．当x趋于x1时，f（x）的极限a必须存在．XXXXXXXXb．这个极限a必须等于值f（x1）．XXXXXXXX如果在此处的极限定义中，我们令a＝f（x1），那么连续性的条件取如下的形式：如果对于任意不论多么小的正数ε，总能找到一个正数δ（依赖于ε），使得对满足不等式XXXXXXXX｜x－x1｜＜δXXXXXXXX的所有x都有XXXXXXXX｜f（x）－f（x1）｜＜ε，XXXXXXXX那么就说函数f（x）在x＝x1是连续的．（极限定义中含有的限制x≠x1在这里是不必要的，因为不等式XXXXXXXX｜f（x）－f（x1）｜＜εXXXXXXXX自然是满足的．）XXXXXXXX作为一个例子，让我们检验函数f（x）＝x3在点x1＝0的连续性．我们有XXXXXXXXf（x）＝03＝0．XXXXXXXX现在任意指定正值ε，例如ε＝．那么必须证明当x限制在充分接近x1＝0时，对应的f（x）的值和0的差不大于，即在和之间．立即可以看到，如果我们限制x和x1＝0的差小于δ＝＝，那么它就不会超过这个界限；因为如果｜x｜＜，那么XXXXXXXX｜f（x）｜＝｜x3｜＜．XXXXXXXX按照同样的方法我们可以用ε＝10-4，10-5或任何需要的界限来代替XXXXXXXXε＝；XXXXXXXXδ＝将总能满足要求，因为如果XXXXXXXX｜x｜＜，那么｜f（x）｜＝｜x3｜＜ε．XXXXXXXX以连续的（ε，δ）定义为基础，用类似的方法能证明所有的多项式，有理函数和三角函数是连续的，但要除去那些能使函数变为无穷的x的个别值．XXXXXXXX借助函数u＝f（x）的图像，连续性的定义可以用如下的几何方式表示出来．选择任意正数ε，并画两条高度分别为f（x1）－ε、f（x1）＋ε且与x轴平行的直线．那么必然可以找到一个正数δ，使得位于以x为中心宽度为2δ的竖直带域内的那部分图像，也同样包含在以f（x1）为中心宽度为2ε的水平带域内．图170表明函数在x1连续，而图171表明函数在x1不连续．在后一种情形，不论以x1为中心的竖直带域取得多窄，带内总含有一部分图像在对应于所选的ε的水平带域之外．XXXXXXXX图170　在x＝x1连续的函数XXXXXXXX图171　在x＝x1不连续的函数XXXXXXXX如果我断言，已知函数u＝f（x）在值x＝x1处是连续的，就是说我准备和你一起履行如下的约定．你可以选择任意正数ε，小到你所要的程度，但必须是固定的．那么我一定能找到一个正数δ，使得当｜x－x1｜＜δ时，有｜f（x）－f（x1）｜＜ε．我不是一开始先提出数δ，来满足你后来任意选择的ε，我所选择的δ依赖于你所选择的ε．如果你能找到一个ε使我不能提出一个适当的δ，那么就和我的断言矛盾了．因此为了证明对一个函数u＝f（x）的任何具体情形都能履行我的约定，通常需要构造一个明显的正函数XXXXXXXXδ＝φ（ε），XXXXXXXX它对每个正数ε都有定义，用它我能证明当｜x－x1｜＜δ时，总有｜f（x）－f（x1）｜＜ε．对函数u＝f（x）＝x3在值x1＝0的情形，函数δ＝φ（ε）就是δ＝．XXXXXXXX习题：1）证明sinx，cosx是连续函数．XXXXXXXX2）证明和是连续的．XXXXXXXX现在很清楚，连续性的（ε，δ）定义，与我们所能看到的有关函数的事实是一致的．近代科学判别一个概念是否有用，或者一个现象是否在“科学上存在”，其标准要看能否观测它（至少在原理上），或能否转化为可观测的事实．就这一方面来说，连续性的定义是和近代科学的一般原理相一致的．XXXXXXXX###
+§5　有关连续函数的两个基本定理XXXXXXXX</h4>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="hbaolong@vip.qq.com" />
+  <title>论语之238-2025年1月29日-1．射影变换群</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">论语之238-2025年1月29日-1．射影变换群</h1>
+<p class="author">hbaolong@vip.qq.com</p>
+</header>
+<h4
+id="射影变换群xxxxxxxx我们首先定义射影变换类或群1假设我们在空间有两个平面π和π彼此不一定平行这时我们可以从不在π和π上的一个给定中心o出发实现π到π上的一个中心投影定义π上每一点p的像是π上的点p这一对点p和p位于经过o的同一直线上我们也可以作一个平行投影这时投影线全是平行的用同样的方式通过以π上一点o为中心的中心投影或通过平行投影我们能定义出平面π上的直线l到π上另一条直线l的投影xxxxxxxx图70-从一点投影xxxxxxxx用中心投影或平行投影或用一系列有限次这样的投影把一个图形变成另一个图形的任何变换称为射影变换2平面或直线的射影几何是由这样一些几何命题组成的对这些命题中所涉及的图形进行任意的射影变换都不影响这些命题相反所有那些关于图形度量性质的命题它们只在刚体运动类下不变我们称它为度量几何xxxxxxxx图71-平行投影xxxxxxxx某些射影性质能立刻被人认识一个点当然投影成一个点而且一条直线被投影成一条直线因为如果π上一直线l投影到平面π则π和通过o和l的平面将交于直线l3如果点a和直线l是关联的4则经过任何射影相应的点a和直线l仍是关联的因此点和直线的关联在射影群下是不变的从此事实可以得出许多简单然而重要的结果如果三个或更多个点共线即与某一条直线关联则它们的像也是共线的同样如果平面π上三条或更多条直线是共点的即与某个点关联则它们的像也是共点的直线这些简单性质关联共线共点是射影性质即在射影下保持不变的性质长度和角度以及这些度量的比值在射影时一般是改变的等腰三角形或等边三角形可以射影成一个各边不等的三角形因此虽然三角形是射影几何的一个概念但等边三角形却不然它只属于度量几何xxxxxxxx">1．射影变换群XXXXXXXX我们首先定义射影变换类或“群”〔1〕．假设我们在空间有两个平面π和π′（彼此不一定平行）．这时我们可以从不在π和π′上的一个给定中心O出发，实现π到π′上的一个中心投影：定义π上每一点P的像是π′上的点P′，这一对点P和P′位于经过O的同一直线上．我们也可以作一个平行投影，这时，投影线全是平行的．用同样的方式，通过以π上一点O为中心的中心投影或通过平行投影，我们能定义出平面π上的直线l到π上另一条直线l′的投影．XXXXXXXX图70　从一点投影XXXXXXXX用中心投影或平行投影，或用一系列有限次这样的投影，把一个图形变成另一个图形的任何变换称为射影变换〔2〕．平面或直线的射影几何是由这样一些几何命题组成的：对这些命题中所涉及的图形进行任意的射影变换都不影响这些命题．相反，所有那些关于图形度量性质的命题（它们只在刚体运动类下不变），我们称它为度量几何．XXXXXXXX图71　平行投影XXXXXXXX某些射影性质能立刻被人认识．一个点当然投影成一个点．而且一条直线被投影成一条直线，因为如果π上一直线l投影到平面π′，则π′和通过O和l的平面将交于直线l′〔3〕．如果点A和直线l是关联的〔4〕，则经过任何射影，相应的点A′和直线l′仍是关联的．因此点和直线的关联在射影群下是不变的．从此事实可以得出许多简单然而重要的结果．如果三个或更多个点共线，即与某一条直线关联，则它们的像也是共线的．同样，如果平面π上三条或更多条直线是共点的，即与某个点关联，则它们的像也是共点的直线．这些简单性质——关联、共线、共点——是射影性质（即在射影下保持不变的性质）．长度和角度以及这些度量的比值，在射影时一般是改变的．等腰三角形或等边三角形可以射影成一个各边不等的三角形．因此，虽然“三角形”是射影几何的一个概念，但“等边三角形”却不然，它只属于度量几何．XXXXXXXX</h4>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

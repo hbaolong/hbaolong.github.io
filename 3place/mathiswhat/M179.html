@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="hbaolong@vip.qq.com" />
+  <title>论语之179-2024年12月1日-3．非十进位制中的计算</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">论语之179-2024年12月1日-3．非十进位制中的计算</h1>
+<p class="author">hbaolong@vip.qq.com</p>
+</header>
+<h4
+id="非十进位制中的计算xxxxxxxx以十为基底的用法要回溯到世界文明的初期而且毋庸置疑这是由于人们用十个手指进行计算的缘故但是在许多语言中从数目字上来看显示出曾用过其他基底的遗迹特别是十二和二十在英文和德文中11和12就不是按照十进位的原则把数码和十teens组合在一起的在语言上它们与十完全无关在法文中20和80的写法是廿vingt和四廿quatre-vingt这可能由于某种目的曾用过一个以20为基底的系统在丹麦文中70的写法是halvfirsindstyve这意思是从三倍二十到四倍二十的某个中间值巴比伦的天文学家有过一种记数系统其中部分是六十进位的以六十为基底可以认为这和我们习惯上把一小时和一度角分为六十分有关xxxxxxxx在非十进位制中算术规则仍不变但必须用不同的加法表和乘法表来计算由于我们习惯于十进位制并且已把数的语言与十进位制紧密连在一起了因此在一开始时我们可能会感到有点别扭让我们试试在七进位制中作一乘法在进行之前最好写下我们必须用的表xxxxxxxx现在让我们用24乘265在这里数的符号是七进位制中的符号在十进位制中这相当于18乘145乘法规则和十进位制中的情形一样我们开始用4乘5由乘法表知得26xxxxxxxx我们在个位处写下6并把2进到前一位然后我们求出4633和33235我们写下5然后继续以这种方式进行直到全部乘完把1456和5630加起来在个位上我们得606在七位的地方我们有5311再写下1并把1记到第四十九位上在那我们有16414最后的结果便是2652410416xxxxxxxx为了核对这个结果我们可以在十进位制中乘同样的数10416七进位制在十进位制中可以这样写找7的幂一直到第四位724973343742401因此10416240144976这是十进位制中的值通过把这些数加起来我们就知道在七进位制中的10416等于十进位制中的2610现在在十进位制中我们用18乘145其结果也是2610所以上述计算是对的xxxxxxxx习题1作出二十进位制中的加法表乘法表并作一些同样类型的练习xxxxxxxx2以571112为基底的进位制中表示30和133xxxxxxxx3在这些进位制中符号11111和21212是什么数xxxxxxxx4对以51113为基底的进位制建立加法表和乘法表xxxxxxxx从理论观点来看在所有可能的基底中最小的基底是以2为基底的进位制在二进位制中只有数码0和1其他任何数都用一行01来表示加法表和乘法表仅由规则101和111组成显然这系统也有它的不方便处即为了表示一个很小的数却需要用很长的一行表达式这样七十九可表为126025024123122121在二进位制中被写成1001111xxxxxxxx为了说明二进位制中乘法的简单性我们用十进位制中5乘7它们相应的表示是101和111只要记住在该系统中1110我们就有xxxxxxxx这是35它的确应该是这个数xxxxxxxx莱布尼茨w.-leibniz16461716是他那个时代最伟大的思想家之一他十分欣赏二进位制用拉普拉斯laplace的话来说莱布尼茨在他的二进位算术中看到了宇宙创始的原象他想象1表示上帝而0表示虚无上帝从虚无中创造出所有实物恰如在他的数学系统中用1和0表示了所有的数xxxxxxxx习题考虑以a为基底表示整数的问题为了在这个系统中叫出一个数的名字我们需要对数字01a1和a的各幂次aa2a3给出数字的名称对a2315若给零到一千的数字起名字需要多少个不同的数字的名称哪一种基底要求的数字名称最少例如a10我们需要对十个数字给出名称再加上101001000这三个一共有13个例如a20我们需要对二十个数字给出名称再加上20400一共22个对a100我们需要100个数字再加上一个xxxxxxxx2-数系的无限性-数学归纳法xxxxxxxx">3．非十进位制中的计算XXXXXXXX以十为基底的用法要回溯到世界文明的初期，而且毋庸置疑这是由于人们用十个手指进行计算的缘故．但是在许多语言中，从数目字上来看，显示出曾用过其他基底的遗迹，特别是十二和二十．在英文和德文中，11和12就不是按照十进位的原则把数码和“十”（teens）组合在一起的，在语言上它们与十完全无关．在法文中20和80的写法是“廿”（vingt）和“四－廿”（quatre-vingt），这可能由于某种目的曾用过一个以20为基底的系统．在丹麦文中70的写法是“halvfirsindstyve”，这意思是从三倍二十到四倍二十的某个中间值．巴比伦的天文学家有过一种记数系统，其中部分是六十进位的（以六十为基底），可以认为这和我们习惯上把一小时和一度角分为六十分有关．XXXXXXXX在非十进位制中，算术规则仍不变，但必须用不同的加法表和乘法表来计算．由于我们习惯于十进位制并且已把数的语言与十进位制紧密连在一起了，因此在一开始时，我们可能会感到有点别扭．让我们试试在七进位制中作一乘法．在进行之前最好写下我们必须用的表：XXXXXXXX现在，让我们用24乘265，在这里数的符号是七进位制中的符号（在十进位制中，这相当于18乘145）．乘法规则和十进位制中的情形一样．我们开始用4乘5，由乘法表知，得26．XXXXXXXX我们在个位处写下6并把2“进”到前一位，然后我们求出4·6＝33，和33＋2＝35，我们写下5然后继续以这种方式进行直到全部乘完．把1456和5630加起来，在个位上我们得6＋0＝6，在七位的地方我们有5＋3＝11，再写下1并把1记到第四十九位上，在那我们有1＋6＋4＝14．最后的结果便是265·24＝10416．XXXXXXXX为了核对这个结果，我们可以在十进位制中乘同样的数．10416（七进位制）在十进位制中可以这样写：找7的幂一直到第四位，72＝49，73＝343，74＝2401．因此10416＝2401＋4·49＋7＋6，这是十进位制中的值．通过把这些数加起来，我们就知道在七进位制中的10416等于十进位制中的2610．现在在十进位制中我们用18乘145，其结果也是2610，所以上述计算是对的．XXXXXXXX习题：1）作出二十进位制中的加法表、乘法表，并作一些同样类型的练习．XXXXXXXX2）以5、7、11、12为基底的进位制中，表示“30”和“133”．XXXXXXXX3）在这些进位制中，符号11111和21212是什么数？XXXXXXXX4）对以5、11、13为基底的进位制建立加法表和乘法表．XXXXXXXX从理论观点来看，在所有可能的基底中最小的基底是以2为基底的进位制．在二进位制中，只有数码0和1，其他任何数都用一行0、1来表示．加法表和乘法表仅由规则1＋0＝1和1·1＝1组成．显然，这系统也有它的不方便处：即，为了表示一个很小的数却需要用很长的一行表达式．这样，七十九（可表为1·26＋0·25＋0·24＋1·23＋1·22＋1·2＋1）在二进位制中被写成1001111．XXXXXXXX为了说明二进位制中乘法的简单性，我们用十进位制中5乘7，它们相应的表示是101和111．只要记住在该系统中1＋1＝10，我们就有XXXXXXXX这是35，它的确应该是这个数．XXXXXXXX莱布尼茨（W.
+Leibniz）（1646～1716）是他那个时代最伟大的思想家之一，他十分欣赏二进位制．用拉普拉斯（Laplace）的话来说：“莱布尼茨在他的二进位算术中看到了宇宙创始的原象．他想象1表示上帝，而0表示虚无，上帝从虚无中创造出所有实物，恰如在他的数学系统中用1和0表示了所有的数．”XXXXXXXX习题：考虑以a为基底表示整数的问题．为了在这个系统中叫出一个数的名字，我们需要对数字0，1，…，a－1和a的各幂次：a，a2，a3，…给出数字的名称．对a＝2，3，…，15，若给零到一千的数字起名字，需要多少个不同的数字的名称？哪一种基底要求的数字名称最少？（例如a＝10，我们需要对十个数字给出名称，再加上10，100，1000这三个，一共有13个；例如，a＝20，我们需要对二十个数字给出名称，再加上20，400，一共22个，对a＝100，我们需要100个数字再加上一个．）XXXXXXXX*§2　数系的无限性　数学归纳法XXXXXXXX</h4>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

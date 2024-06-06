@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="hbaolong@vip.qq.com" />
+  <title>论语之297-2025年3月29日-4．不连续函数当作连续函数的极限</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">论语之297-2025年3月29日-4．不连续函数当作连续函数的极限</h1>
+<p class="author">hbaolong@vip.qq.com</p>
+</header>
+<h4
+id="不连续函数当作连续函数的极限xxxxxxxx我们可以考察这样一种序列an的极限其中an不是固定数而是依赖于变量x的函数anfnx如果当n时这个序列收敛那么它的极限也是x的函数xxxxxxxxfxlimfnxxxxxxxxx这种把函数fx当作另一些函数的极限的表示方法在把高等函数fx化为初等函数fnx时常常是有用的xxxxxxxx特别在用显式表示不连续函数时就很有用例如让我们考察序列fnx当x1时我们有x2n1因此对每个n有xxxxxxxxfnxxxxxxxxx从而xxxxxxxxfnxxxxxxxxx当x1我们有x2n0因此fnx1而当x1我们有x2n因此fnx0总的概括为xxxxxxxx这里不连续函数fx被表示为一列连续的有理函数的极限了xxxxxxxx另一个有趣的有类似特点的例子由序列xxxxxxxx给出当x0时fnx的值都是零因此xxxxxxxxf0limfn00xxxxxxxx当x0时表达式xxxxxxxx是正的且小于1利用等比级数的结果可以保证当n时fnx是收敛的它的极限即无穷等比级数的和是xxxxxxxx等于1x2这样我们看出当x0时fnx趋于函数fx1x2而当x0时fx0这个函数在x0有一个可去的不连续点xxxxxxxx5极限的叠代求法xxxxxxxx有的序列的项常常是以这样的方式得到的由an得到an1和由an1得到an的法则是一样的按同样的法则无限次的重复作下去可从一个已知的首项开始产生一个序列这种情形我们叫作叠代求法xxxxxxxx例如序列xxxxxxxx1xxxxxxxx有这样一个形成的法则第一次以后的每一项都是1加上前一项后的平方根这样公式xxxxxxxxa11-an1xxxxxxxx确定了整个序列让我们求它的极限显然对n1有an1并且an是单调增加序列因为xxxxxxxx所以只要anan1就有an1an但我们知道xxxxxxxxa2a110xxxxxxxx因此利用数学归纳法可知对所有n都有an1an即序列是单调增加的再者它是有界的因为由前面的结果我们有xxxxxxxx由单调序列原理知当n时ana其中a是1与2之间的某个数我们易知这个a是二次方程x21x的正根因为当n时方程1an成为a21a解这个方程我们求得正根是xxxxxxxxaxxxxxxxx这样我们可以用一个叠代过程解这个二次方程只要叠代过程继续足够长它就能够以任意接近的程度给出根的值xxxxxxxx用类似的方法通过叠代法可以解很多其他的代数方程例如我们可以把三次方程x33x10改写为如下形式xxxxxxxxxxxxxxxxx我们现在任意选择a1的值例如a10并且定义xxxxxxxxan1xxxxxxxx得到序列xxxxxxxxa20.3333a30.3461xxxxxxxxa40.3472xxxxxxxx等等可以证明这种方式得到的序列an收敛于极限xxxxxxxxa0.3473xxxxxxxx这就是给定的这个三次方程的一个解像这样的叠代法在纯数学和应用数学中都很重要在纯数学中它能给出存在性的证明而在应用数学中它对许多类型问题的求解提供了近似方法xxxxxxxx习题当n时xxxxxxxx1证明0xxxxxxxx提示把差改写为如下形式xxxxxxxx2求的极限xxxxxxxx3求的极限xxxxxxxx4求的极限xxxxxxxx5证明的极限是1xxxxxxxx6如果ab0的极限是什么xxxxxxxx7如果abc0的极限是什么xxxxxxxx8如果abc0的极限是什么xxxxxxxx9我们在以后将见到见此处e那么xxxxxxxx是什么xxxxxxxx-2-连续性的例题xxxxxxxx为了对函数的连续性作严格的证明需要对此处的定义作确切的验证有时这是一个很冗长的手续然而幸运的是我们在第八章中将见到连续性是可微性的必然结果因为以后我们将对所有的初等函数系统地证明其可微性所以我们可以按通常的进程省去连续性的乏味的证明但为进一步解释一般定义我们将再分析一个例子函数xxxxxxxxfxxxxxxxxx我们可以限制x在一个固定区间xm内其中m是任意选择的一个数写下xxxxxxxx对xmx1m我们有xxxxxxxxfx1fxxx1xx1xx12mxxxxxxxx因此很清楚只要x1xδ左端的差将小于任意正数εxxxxxxxx应当指出我们所作的估计是很宽裕的对于x和x1的较大的值读者很容易看到取一个更大的δ就行了xxxxxxxx-第7章-极大与极小xxxxxxxx引言xxxxxxxx直线段是它的端点间的最短连线球面上大圆的一段弧是球面上连接两点的最短曲线在所有等长的平面闭曲线中圆所包围的面积最大在所有等面积的闭曲面中球面所包围的体积最大xxxxxxxx这一类的极大与极小性质希腊人已经发现了不过他们常常只是提到这些结果而并未真正证明过希腊的一个最有意义的发现要归功于公元一世纪亚历山大的科学家赫伦heron人们很早就知道由点p发出的一条光线碰到平面镜l上的点r会朝q点的方向射去使得pr和qr对此镜面成等角赫伦发现如果r是镜面上任意其他的一点那么距离prrq必大于距离prrq我们目前要证明的定理就是光线所走的实际路径prq是由p经镜面再到q的所有可能路径中的最短路径这一发现可以看作是几何光学理论的萌芽xxxxxxxx很自然地数学家对这一类的问题将会感到兴趣在日常生活中常常会发生极大与极小最好与最坏的问题很多重要的实际问题都是以这种形式表现出来的例如小船应怎样造形才能使其在水中遇到的阻力最小数量一定的材料作成怎样的圆柱形容器才能获得最大容积xxxxxxxx从17世纪以来极值的一般理论极大与极小已成为科学上系统的完整的原理之一费马微分法的第一步就是希望能用一般的方法研究极大和极小问题17世纪以后由于变分法的发明使这些方法的范围大大扩展了同时逐渐了解到自然界的物理规律很适于用极小原理来表示这个极小原理提供了一个很自然的方法使我们差不多能完全解决各种特殊问题近代数学最显著的成就之一就是平稳值理论这是极值概念的一种推广它把分析和拓扑结合在一起了不过我们要讨论的全部内容都是很初等的xxxxxxxx-1-初等几何中的问题xxxxxxxx">4．不连续函数当作连续函数的极限XXXXXXXX我们可以考察这样一种序列an的极限，其中an不是固定数，而是依赖于变量x的函数：an＝fn（x）．如果当n→∞时，这个序列收敛，那么它的极限也是x的函数，XXXXXXXXf（x）＝limfn（x）．XXXXXXXX这种把函数f（x）当作另一些函数的极限的表示方法，在把“高等”函数f（x）化为初等函数fn（x）时，常常是有用的．XXXXXXXX特别，在用显式表示不连续函数时就很有用．例如，让我们考察序列fn（x）＝．当｜x｜＝1时，我们有x2n＝1，因此对每个n，有XXXXXXXXfn（x）＝，XXXXXXXX从而XXXXXXXXfn（x）→．XXXXXXXX当｜x｜＜1，我们有x2n→0，因此fn（x）→1；而当｜x｜＞1，我们有x2n→∞，因此fn（x）→0．总的概括为XXXXXXXX这里，不连续函数f（x）被表示为一列连续的有理函数的极限了．XXXXXXXX另一个有趣的有类似特点的例子由序列XXXXXXXX给出．当x＝0时，fn（x）的值都是零，因此XXXXXXXXf（0）＝limfn（0）＝0．XXXXXXXX当x≠0时，表达式XXXXXXXX是正的且小于1；利用等比级数的结果可以保证当n→∞时fn（x）是收敛的．它的极限，即无穷等比级数的和，是XXXXXXXX等于1＋x2．这样我们看出，当x≠0时，fn（x）趋于函数f（x）＝1＋x2，而当x＝0时，f（x）＝0．这个函数在x＝0有一个可去的不连续点．XXXXXXXX*5．极限的叠代求法XXXXXXXX有的序列的项常常是以这样的方式得到的：由an得到an＋1和由an－1得到an的法则是一样的；按同样的法则，无限次的重复作下去，可从一个已知的首项开始，产生一个序列．这种情形我们叫作“叠代”求法．XXXXXXXX例如，序列XXXXXXXX1，，，，…，XXXXXXXX有这样一个形成的法则，第一次以后的每一项，都是1加上前一项后的平方根．这样，公式XXXXXXXXa1＝1　an＋1＝XXXXXXXX确定了整个序列．让我们求它的极限，显然对n＞1，有an＞1，并且an是单调增加序列，因为XXXXXXXX所以只要an＞an－1，就有an＋1＞an．但我们知道XXXXXXXXa2－a1＝－1＞0，XXXXXXXX因此利用数学归纳法，可知对所有n，都有an＋1＞an，即序列是单调增加的．再者，它是有界的，因为由前面的结果我们有XXXXXXXX由单调序列原理，知当n→∞时，an→a，其中a是1与2之间的某个数．我们易知这个a是二次方程，x2＝1＋x的正根．因为当n→∞时，方程＝1＋an成为a2＝1＋a．解这个方程，我们求得正根是XXXXXXXXa＝．XXXXXXXX这样我们可以用一个叠代过程解这个二次方程，只要叠代过程继续足够长，它就能够以任意接近的程度给出根的值．XXXXXXXX用类似的方法，通过叠代法可以解很多其他的代数方程．例如，我们可以把三次方程x3－3x＋1＝0改写为如下形式XXXXXXXXx＝．XXXXXXXX我们现在任意选择a1的值例如a1＝0，并且定义XXXXXXXXan＋1＝．XXXXXXXX得到序列XXXXXXXXa2＝＝0.3333…，a3＝＝0.3461…，XXXXXXXXa4＝＝0.3472…，XXXXXXXX等等．可以证明这种方式得到的序列an收敛于极限XXXXXXXXa＝0.3473…，XXXXXXXX这就是给定的这个三次方程的一个解．像这样的叠代法在纯数学和应用数学中都很重要，在纯数学中，它能给出“存在性的证明”，而在应用数学中，它对许多类型问题的求解提供了近似方法．XXXXXXXX习题：当n→∞时，XXXXXXXX1）证明－→0．XXXXXXXX［提示：把差改写为如下形式］．XXXXXXXX2）求的极限．XXXXXXXX3）求的极限．XXXXXXXX4）求的极限．XXXXXXXX5）证明的极限是1．XXXXXXXX6）如果a＞b＞0，的极限是什么？XXXXXXXX7）如果a＞b＞c＞0，的极限是什么？XXXXXXXX8）如果a＞b＞c＞0，的极限是什么？XXXXXXXX9）我们在以后将见到（见此处）e＝，那么XXXXXXXX是什么？XXXXXXXX###
+§2　连续性的例题XXXXXXXX为了对函数的连续性作严格的证明需要对此处的定义作确切的验证．有时这是一个很冗长的手续，然而幸运的是（我们在第八章中将见到），连续性是可微性的必然结果．因为以后我们将对所有的初等函数系统地证明其可微性，所以我们可以按通常的进程省去连续性的乏味的证明．但为进一步解释一般定义，我们将再分析一个例子，函数XXXXXXXXf（x）＝．XXXXXXXX我们可以限制x在一个固定区间｜x｜≤M内，其中M是任意选择的一个数．写下XXXXXXXX对｜x｜≤M，｜x1｜≤M，我们有XXXXXXXX｜f（x1）－f（x）｜≤｜x－x1｜｜x＋x1｜≤｜x－x1｜·2M．XXXXXXXX因此，很清楚，只要｜x1－x｜＜δ＝，左端的差将小于任意正数ε．XXXXXXXX应当指出，我们所作的估计是很宽裕的．对于x和x1的较大的值，读者很容易看到取一个更大的δ就行了．XXXXXXXX##
+第7章　极大与极小XXXXXXXX引言XXXXXXXX直线段是它的端点间的最短连线．球面上大圆的一段弧是球面上连接两点的最短曲线．在所有等长的平面闭曲线中，圆所包围的面积最大，在所有等面积的闭曲面中，球面所包围的体积最大．XXXXXXXX这一类的极大与极小性质，希腊人已经发现了，不过他们常常只是提到这些结果，而并未真正证明过．希腊的一个最有意义的发现，要归功于公元一世纪亚历山大的科学家赫伦（Heron）．人们很早就知道，由点P发出的一条光线，碰到平面镜L上的点R，会朝Q点的方向射去，使得PR和QR对此镜面成等角．赫伦发现，如果R′是镜面上任意其他的一点，那么距离PR′＋R′Q必大于距离PR＋RQ．我们目前要证明的定理就是：光线所走的实际路径PRQ，是由P经镜面再到Q的所有可能路径中的最短路径．这一发现可以看作是几何光学理论的萌芽．XXXXXXXX很自然地，数学家对这一类的问题将会感到兴趣．在日常生活中，常常会发生极大与极小、“最好”与“最坏”的问题．很多重要的实际问题都是以这种形式表现出来的．例如：小船应怎样造形，才能使其在水中遇到的阻力最小？数量一定的材料作成怎样的圆柱形容器才能获得最大容积？XXXXXXXX从17世纪以来，极值的一般理论——极大与极小——已成为科学上系统的完整的原理之一．费马微分法的第一步就是希望能用一般的方法研究极大和极小问题．17世纪以后，由于“变分法”的发明，使这些方法的范围大大扩展了，同时逐渐了解到自然界的物理规律很适于用极小原理来表示；这个极小原理提供了一个很自然的方法，使我们差不多能完全解决各种特殊问题．近代数学最显著的成就之一就是平稳值理论，——这是极值概念的一种推广，它把分析和拓扑结合在一起了．不过我们要讨论的全部内容都是很初等的．XXXXXXXX###
+§1　初等几何中的问题XXXXXXXX</h4>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

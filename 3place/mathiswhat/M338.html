@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="hbaolong@vip.qq.com" />
+  <title>论语之338-2025年5月9日-2．导数看作是一极限</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">论语之338-2025年5月9日-2．导数看作是一极限</h1>
+<p class="author">hbaolong@vip.qq.com</p>
+</header>
+<h4
+id="导数看作是一极限xxxxxxxx曲线yfx在点pxy的斜率若只考虑点p处的曲线是不能计算出来的实际上如同计算曲线下的面积那样计算曲线斜率也必须用一个极限过程这个极限过程是微分学的基础我们取曲线上点p邻近的另外一点p1它的坐标是x1y1连接p和p1得一直线记为t1它是曲线的割线当p1趋近于p时这割线就近似于点p的切线自x轴到t1的夹角称为α1现在如果令x1趋于x那么p1将沿曲线向p移动而且割线t1将逼近极限位置曲线在p点的切线t如果α表示自x轴到t的角那么当x1x时1便有xxxxxxxx图268-导数看作是一极限xxxxxxxxy1yp1pt1t及α1αxxxxxxxx这个切线是割线的极限同时切线的斜率是割线斜率的极限xxxxxxxx虽然切线t本身的斜率没有明显的表达式但是割线t1的斜率由下面的公式给出xxxxxxxxt1的斜率xxxxxxxx或者如果我们再次用符号δ记作求差的运算xxxxxxxxt1的斜率xxxxxxxx割线t1的斜率是一个差商函数值的差δy除以自变量的差δx所以xxxxxxxxt的斜率t1的斜率的极限limlimxxxxxxxx这里是对x1x即δxx1x0时计算极限曲线的切线t的斜率是当δxx1x趋于零时差商δyδx的极限xxxxxxxx原来的函数fx给出了曲线yfx在x处的高度现在我们可以考察曲线在坐标为xyfx的变动点p处的斜率把它看作是x的一个新的函数记作fx并且叫作函数fx的导数求导数的极限过程叫作对fx微分这个过程是按照一个确定法则由给定的函数fx得到另一个函数fx的一个运算恰像按一定的法则给定一个函数fx是指由变量x的任何值得到fx的值的情形一样xxxxxxxxfx是曲线yfx在点x的高度xxxxxxxxfx是曲线yfx在点x的斜率xxxxxxxx微分这个词来源于fx是差fx1fx除以差x1x的极限这个事实xxxxxxxx另一个常用的记法是xxxxxxxxfxdfxxxxxxxxx这个d是的导数的简写莱布尼茨对yfx的导数用另一种不同的记法xxxxxxxx或xxxxxxxx这些记法指出了导数是差商xxxxxxxx或xxxxxxxx的极限这个特性这一点我们将在4讨论xxxxxxxx当x的值增加时我们来描述曲线yfx的变化这时在一个点有正的导数即fx0就表示该点曲线上升y增加负的导数fx0就表示曲线下降而fx0就表示曲线在x处是水平方向在极大或极小处斜率必然是零图269因此对于x解方程xxxxxxxxfx0xxxxxxxx图269-导数的符号xxxxxxxx可以找到极大和极小的位置这便是费马首先提出的方法xxxxxxxx">2．导数看作是一极限XXXXXXXX曲线y＝f（x）在点P（x，y）的斜率，若只考虑点P处的曲线，是不能计算出来的．实际上，如同计算曲线下的面积那样，计算曲线斜率也必须用一个极限过程．这个极限过程是微分学的基础．我们取曲线上点P邻近的另外一点P1，它的坐标是x1，y1．连接P和P1，得一直线，记为t1，它是曲线的割线．当P1趋近于P时，这割线就近似于点P的切线．自x轴到t1的夹角，称为α1．现在如果令x1趋于x，那么P1将沿曲线向P移动，而且割线t1将逼近极限位置——曲线在P点的切线t．如果α表示自x轴到t的角，那么，当x1→x时〔1〕，便有XXXXXXXX图268　导数看作是一极限XXXXXXXXy1→y，P1→P，t1→t，及α1→α．XXXXXXXX这个切线是割线的极限，同时切线的斜率是割线斜率的极限．XXXXXXXX虽然切线t本身的斜率没有明显的表达式，但是割线t1的斜率由下面的公式给出XXXXXXXXt1的斜率＝＝．XXXXXXXX或者，如果我们再次用符号Δ记作求差的运算，XXXXXXXXt1的斜率＝＝．XXXXXXXX割线t1的斜率是一个“差商”——函数值的差Δy，除以自变量的差Δx．所以XXXXXXXXt的斜率＝t1的斜率的极限＝lim＝lim，XXXXXXXX这里是对x1→x，即Δx＝x1－x→0时计算极限．曲线的切线t的斜率是当Δx＝x1－x趋于零时差商Δy／Δx的极限．XXXXXXXX原来的函数f（x），给出了曲线y＝f（x）在x处的高度．现在我们可以考察曲线在坐标为x，y（＝f（x））的变动点P处的斜率，把它看作是x的一个新的函数，记作f′（x），并且叫作函数f（x）的导数．求导数的极限过程叫作对f（x）微分．这个过程是按照一个确定法则，由给定的函数f（x）得到另一个函数f′（x）的一个运算，恰像按一定的法则给定一个函数f（x），是指由变量x的任何值得到f（x）的值的情形一样：XXXXXXXXf（x）是曲线y＝f（x）在点x的高度，XXXXXXXXf′（x）是曲线y＝f（x）在点x的斜率．XXXXXXXX“微分”这个词，来源于f′（x）是差f（x1）－f（x）除以差x1－x的极限这个事实：XXXXXXXX另一个常用的记法是XXXXXXXXf′（x）＝Df（x），XXXXXXXX这个D是“……的导数”的简写；莱布尼茨对y＝f（x）的导数用另一种不同的记法：XXXXXXXX或，XXXXXXXX这些记法指出了导数是差商XXXXXXXX或XXXXXXXX的极限这个特性，这一点我们将在§4讨论．XXXXXXXX当x的值增加时，我们来描述曲线y＝f（x）的变化．这时，在一个点有正的导数，即f′（x）&gt;0，就表示该点曲线上升（y增加），负的导数，f′（x）＜0，就表示曲线下降，而f′（x）＝0，就表示曲线在x处是水平方向．在极大或极小处，斜率必然是零（图269）．因此，对于x，解方程XXXXXXXXf′（x）＝0，XXXXXXXX图269　导数的符号XXXXXXXX可以找到极大和极小的位置，这便是费马首先提出的方法．XXXXXXXX</h4>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

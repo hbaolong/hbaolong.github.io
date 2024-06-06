@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="hbaolong@vip.qq.com" />
+  <title>论语之180-2024年12月2日-1．数学归纳法原理</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">论语之180-2024年12月2日-1．数学归纳法原理</h1>
+<p class="author">hbaolong@vip.qq.com</p>
+</header>
+<h4
+id="数学归纳法原理xxxxxxxx自然数序列1234是没有止尽的因为在任何自然数n后我们还可以写出下一个自然数n1为了表达自然数序列的这个性质我们说有无穷多个自然数自然数序列是数学上无限性的一个最简单最自然的例子而数学上的无限性在近代数学中起着重要的作用这本书的许多地方我们将必须处理包含无穷多个数学对象的集合例如直线上的所有点的集合平面上的所有三角形的集合等自然数的无限序列是无限集中最简单的例子xxxxxxxx从n到n1这一步接一步的程序产生了数的无限序列也构成数学推理的一个最基本的类型即数学归纳法的基础在自然科学中经验归纳法是从对某个现象的一系列特殊的观测出发直到表达成这现象每次发生时都服从的一般规律这个规律的可信程度要依赖于观测的次数和证实的次数这种归纳推理通常是完全令人信服的预言明天太阳将从东方升起这就是完全肯定的事但这种命题的特点和用严格逻辑或数学推理来证明定理是不一样的xxxxxxxx数学归纳法是以一种很不同的方式来证明无穷序列情形都是正确的第一个第二个第三个一直下去概不例外的数学定理让我们用a表示一个有关任意自然数n的命题例如a可以是这样的命题一个n2边的凸多边形的内角和是n倍180或a是这样一个命题在平面上划n条直线不可能把平面分成多于2n个部分为了证明这样一个对每一个自然数n都成立的定理只对n的前10个前100个甚至前1000个值来证明是不够的这种做法相当于经验归纳法与此相反我们必须用一个严格数学的非经验的推理方法这种推理方法的特点我们下面用对命题a和a的证明来说明对于命题a我们知道n1时这个多边形是三角形由初等几何知其内角和是1180对一个四边形n2我们划一条对角线把四边形分为两个三角形立刻看出四边形的内角和等于这两个三角形内角的和由此得1801802180接着是n3五边形的情形我们可把它分成一个三角形和一个四边形由于刚才已证明了四边形的内角和是2180而三角形的内角和是180因此对于五边形我们则得到3180显然依此类推可逐次地证明n4n5等等情形而且每一个命题都能以同样的方式由前一个命题推出所以一般的定理a对于所有n都成立xxxxxxxx类似地我们也能证明命题a当n1时其命题显然是对的因为一条直线可把平面分成两部分现在加上第二条直线除非新的直线平行于第一条否则上述的每一部分都被分成新的两部分无论哪一种情形对n2我们所分的部分都不多于422部分现在加上第三条线上述区域的每一个或者分成两部分或者没被分割因此总的部分不多于22223证实这种情况正确之后我们可以用同样的方式继续证明下一个情形就这样一直无限地进行下去xxxxxxxx上面讨论的基本思想是为了证明一个对所有n成立的定理a我们连续地证明一系列特殊情形a1a2之所以能这样做主要是基于a存在一个一般方法它表明如果任意一命题ar是正确的则下一个命题ar1也是正确的b第一个命题a1已知是正确的这两个条件它们对证明所有命题a1a2a3都正确是足够了正如亚里士多德aristotel的基本逻辑规则那样对数学来说它是基本的逻辑原则我们把它叙述为xxxxxxxx假设我们希望证明整个一系列无穷多个数学命题xxxxxxxxa1a2a3xxxxxxxx它们合起来成为一般命题a假设a通过某些数学论证证明了如果r是任意正整数且如果命题ar已知是真的则可推出命题ar1也真b第一个命题a1已知是真的那么序列的所有命题必然都是真的从而a得证xxxxxxxx就像接受简单的普通逻辑规则那样我们将毫不犹豫地接受它并把这作为数学推理的一个基本原则因为这时我们能够证明任意命题an是正确的这从给定的论断ba1是真的开始然后重复地运用论断a依次地证明a2a3a4等等为真一直到我们得到命题an为止因此数学归纳法依赖于这样一个事实任意一个自然数r都有一个后继的自然数r1而且我们所求的自然数n可以从1开始经过这样的有限步骤而达到xxxxxxxx通常在用数学归纳法原理时并不明确地叙述出来或者只是简单地用等等一直这样下去这类的话来说明这在初等数学中是常见的但在比较细致的证明中必须要明确地用归纳法讨论我们将给出一些简单但又不是很显然的例子xxxxxxxx">1．数学归纳法原理XXXXXXXX自然数序列1，2，3，4，…是没有止尽的，因为在任何自然数n后，我们还可以写出下一个自然数n＋1．为了表达自然数序列的这个性质，我们说，有无穷多个自然数．自然数序列是数学上无限性的一个最简单最自然的例子，而数学上的无限性在近代数学中起着重要的作用．这本书的许多地方我们将必须处理包含无穷多个数学对象的集合，例如直线上的所有点的集合，平面上的所有三角形的集合等．自然数的无限序列是无限集中最简单的例子．XXXXXXXX从n到n＋1，这一步接一步的程序产生了数的无限序列，也构成数学推理的一个最基本的类型（即数学归纳法）的基础．在自然科学中，“经验归纳法”是从对某个现象的一系列特殊的观测出发，直到表达成这现象每次发生时都服从的一般规律．这个规律的可信程度要依赖于观测的次数和证实的次数．这种归纳推理通常是完全令人信服的：预言明天太阳将从东方升起，这就是完全肯定的事．但这种命题的特点和用严格逻辑或数学推理来证明定理是不一样的．XXXXXXXX数学归纳法是以一种很不同的方式来证明无穷序列情形都是正确的（第一个、第二个、第三个，一直下去概不例外）的数学定理．让我们用A表示一个有关任意自然数n的命题．例如A可以是这样的命题：“一个n＋2边的凸多边形的内角和是n倍180°．”或A′是这样一个命题：“在平面上划n条直线不可能把平面分成多于2n个部分．”为了证明这样一个对每一个自然数n都成立的定理，只对n的前10个、前100个甚至前1000个值来证明是不够的．这种做法相当于经验归纳法．与此相反，我们必须用一个严格数学的、非经验的推理方法．这种推理方法的特点我们下面用对命题A和A′的证明来说明．对于命题A，我们知道，n＝1时，这个多边形是三角形，由初等几何知，其内角和是1·180°．对一个四边形，n＝2，我们划一条对角线把四边形分为两个三角形，立刻看出四边形的内角和等于这两个三角形内角的和，由此得180°＋180°＝2·180°．接着是n＝3（五边形）的情形，我们可把它分成一个三角形和一个四边形，由于刚才已证明了四边形的内角和是2·180°，而三角形的内角和是180°．因此对于五边形，我们则得到3·180°．显然，依此类推，可逐次地证明n＝4，n＝5，等等情形．而且，每一个命题都能以同样的方式由前一个命题推出，所以一般的定理A对于所有n都成立．XXXXXXXX类似地，我们也能证明命题A′．当n＝1时，其命题显然是对的，因为一条直线可把平面分成两部分．现在加上第二条直线，除非新的直线平行于第一条，否则上述的每一部分都被分成新的两部分．无论哪一种情形，对n＝2，我们所分的部分都不多于4＝22部分．现在加上第三条线，上述区域的每一个或者分成两部分，或者没被分割．因此总的部分不多于22·2＝23．证实这种情况正确之后，我们可以用同样的方式继续证明下一个情形，就这样一直无限地进行下去．XXXXXXXX上面讨论的基本思想是：为了证明一个对所有n成立的定理A，我们连续地证明一系列特殊情形A1，A2，…．之所以能这样做，主要是基于：a）存在一个一般方法，它表明：如果任意一命题Ar是正确的，则下一个命题Ar＋1也是正确的；b）第一个命题A1已知是正确的．这两个条件（它们对证明所有命题A1，A2，A3，…都正确，是足够了．）正如亚里士多德（Aristotel）的基本逻辑规则那样，对数学来说，它是基本的逻辑原则．我们把它叙述为：XXXXXXXX假设我们希望证明整个一系列无穷多个数学命题XXXXXXXXA1，A2，A3，…，XXXXXXXX（它们合起来成为一般命题A）．假设a）通过某些数学论证证明了：如果r是任意正整数，且如果命题Ar已知是真的，则可推出命题Ar＋1也真；b）第一个命题A1已知是真的．那么，序列的所有命题必然都是真的，从而A得证．XXXXXXXX就像接受简单的普通逻辑规则那样，我们将毫不犹豫地接受它，并把这作为数学推理的一个基本原则．因为这时我们能够证明任意命题An是正确的．这从给定的论断b）（A1是真的）开始，然后重复地运用论断a）依次地证明A2，A3，A4等等为真，一直到我们得到命题An为止．因此数学归纳法依赖于这样一个事实：任意一个自然数r都有一个后继的自然数r＋1，而且我们所求的自然数n可以从1开始经过这样的有限步骤而达到．XXXXXXXX通常在用数学归纳法原理时，并不明确地叙述出来，或者只是简单地用“等等”，“一直这样下去”这类的话来说明．这在初等数学中是常见的．但在比较细致的证明中，必须要明确地用归纳法讨论．我们将给出一些简单但又不是很显然的例子．XXXXXXXX</h4>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

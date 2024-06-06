@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="hbaolong@vip.qq.com" />
+  <title>论语之188-2024年12月10日-3．二次剩余</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">论语之188-2024年12月10日-3．二次剩余</h1>
+<p class="author">hbaolong@vip.qq.com</p>
+</header>
+<h4
+id="二次剩余xxxxxxxx参看一下关于费马定理的例子我们发现不仅总有ap11mod-p而且如果p是不等于2的素数即p是奇数有p2p1的形式对某些a有apap121mod-p这事实引起一系列有趣的研讨我们可以把这定理写为下述形式xxxxxxxxap11a2p1ap1ap10mod-pxxxxxxxx由于一个乘积被p整除仅当它有一个因子被p整除才成这立刻说明或者ap1或者ap1必须被p整除所以对任一素数p2和任一不被p整除的数axxxxxxxx或有ap121或有ap12-1mod-pxxxxxxxx近代数论刚一出现数学家就很感兴趣地去寻找什么样的数a使第一种情形成立什么样的数a使第二种情形成立假设a与某个数x的平方是模p同余的即xxxxxxxxax2mod-pxxxxxxxx则ap12xp1而它按照费马定理是模p同余于1的一个数a如果不是p的倍数且模p同余于某个数的平方则称a为p的二次剩余而一个不是p的倍数的数b不同余于任何数的平方称它为p的非二次剩余我们刚才看到每一个p的二次剩余a满足同余式ap121mod-p不难证明对每一个非二次剩余b我们有同余式bp12-1mod-p更进一步我们现在将表明在数123p1中恰有p12个二次剩余和p12个非二次剩余xxxxxxxx虽然通过直接计算搜集了那么多的试验数据但是最初发现二次剩余与非二次剩余分布所服从的一般规律是不容易的这些剩余的第一个深刻性质是勒让德17521833发现的而后被高斯称为二次互反律这规律是有关两个不同素数p和q的它断言如果乘积是偶数则q是p的二次剩余必须而且只须p是q的二次剩余在乘积是奇数时这情形相反p是q的剩余必须而且只须q是p的非剩余年轻的高斯的成就之一就是给出了这个著名定理的第一个严格证明而这个定理很长时间曾是对数学家的一个挑战高斯的第一个证明决不是简单的而且即使到今天虽然已发表了大量的不同的证明互反律也不是容易确立的它的真正的意义直到最近在代数数论发展以后才显示出来xxxxxxxx作为说明二次剩余分布的一个例子让我们取p7这时由于xxxxxxxx020121224322xxxxxxxx422524621xxxxxxxx全是模7而且由于后面的平方重复这个序列所以7的二次剩余是与124同余的数而非剩余是和356同余的在一般情形下p的二次剩余组成了和1222p12同余的数但它们又是成对同余的因为xxxxxxxxx2px2mod-p例如2252mod-7xxxxxxxx这因为px2p22pxx2x2mod-p因此数12p1中有一半是p的二次剩余另一半是非二次剩余xxxxxxxx为了说明二次互反律让我们取p5q11由于1112mod-511是二次剩余mod-5由于乘积是偶数互反律告诉我们5是二次剩余mod-11为了证实这点我们注意542mod-11另一方面如果p7q11这时乘积是奇数实际上11是二次剩余mod-7因为1122mod-7而7是非二次剩余mod-11xxxxxxxx习题1623613mod-2323是不是二次剩余mod-13xxxxxxxx2我们已看到x2px2mod-p说明这是数122232p12中间仅有的同余关系xxxxxxxx-3-毕达哥拉斯数和费马大定理xxxxxxxx在数论中有一个涉及毕达哥拉斯pythagoras定理2的有趣问题希腊人早就知道边长为345的三角形是直角三角形这产生了一个一般的问题还有哪些直角三角形它的各边长是某个单位长的整数倍数在代数上勾股定理用方程xxxxxxxx表示这里ab是直角三角形的直角边边长而c是斜边的边长因此找出所有各边长是整数的直角三角形的问题等价于求出方程1的所有正整数解abc任何这样的三个数称为毕达哥拉斯三元数xxxxxxxx找出所有的毕达哥拉斯三元数的问题是很简单的如果abc是毕达哥拉斯三元数即a2b2c2我们记acxbcy则x和y是使x2y21的有理数这时我们有y21x1x或y1x1xy这等式的两边都等于一个共同的值t它可以表示为两个整数的比uv现在我们可以记yt1x和1xty或xxxxxxxxtxy-txty1xxxxxxxx解这联立方程我们有xxxxxxxx对xy和t作代换我们得到xxxxxxxx因此对某个有理数比例因子r有xxxxxxxx这说明如果abc是毕达哥拉斯三元数则abc相应地和v2u22uvu2v2成比例反过来容易看到由2定义的任意三个数abc是毕达哥拉斯三元数因为由2我们有xxxxxxxx所以a2b2c2xxxxxxxx对这结果可以作一些简化对任意毕达哥拉斯三元数abc任给正整数s我们可以得到无穷多个其他的毕达哥拉斯三元数sasbsc例如从345我们得到681091215等等这样的三元数没有本质的不同因为它们对应着相似的直角三角形因此我们将定义一个素的毕达哥拉斯三元数即没有公因子的毕达哥拉斯数abc立刻能看出对任意vu的正整数v和u如果u和v没有公因子且不同时是奇数则公式xxxxxxxx产生了全部的素毕达哥拉斯三元数xxxxxxxx习题证明最后的命题xxxxxxxx作为素毕达哥拉斯三元数的例子我们有v2u1345v3u251213v4u372425v10u751140149等等xxxxxxxx关于毕达哥拉斯数的结果自然地会引起这样一个问题究竟有没有自然数abc能满足a3b3c3或a4b4c4或更一般地对一给定的正整数指数n2究竟方程xxxxxxxx能否有正整数解abc费马曾以一种令人吃惊的方式给出一个回答费马研究了古代数论家丢番都的著作他习惯于在丢番都的手稿的空白边缘加上注解在那里他叙述了许多定理并不因没有给出证明而感到不安所有这些以后都被证明了但有一个重大的例外关于毕达哥拉斯数的评注费马写道对任意的n2方程3在自然数中是不可解的但他写道纸的空白边缘太少不能把他所发现的这个美妙证明写下来了xxxxxxxx从他那时代以来尽管一些最伟大的数学家曾为之努力人们却一直不能证明费马的一般命题是真的还是假的实际上对许多n值这个定理已被证明了特别是对所有n619但不是对所有的n虽然反例至今也没出现这定理本身在数学上并不那么重要但由于试图证明它却在数论中引出了许多重要的发现这问题在数学领域之外也引起了很多兴趣有一部分原因是第一个解决这问题的人可从受委托的哥廷根皇家科学院处得十万马克的奖金直到第一次世界大战后德国的通货膨胀才使这笔奖金成为一堆废纸在此以前每年有大量错误的解被送到受托人那里即使一些严肃的数学家有时也会被他们自己搞糊涂写出了或发表了某些证明这些证明后来都由于被人发现了某些明显的错误而失败虽然在报纸上常有报道说这问题已被某个迄今仍无名的天才解决了但由于马克的贬值一般人对这个问题的兴趣就不那么大了xxxxxxxx-4-欧几里得辗转相除法xxxxxxxx">3．二次剩余XXXXXXXX参看一下关于费马定理的例子，我们发现不仅总有ap－1≡1（mod
+p），而且（如果p是不等于2的素数，即p是奇数，有p＝2p′＋1的形式）对某些a有ap′＝a（p－1）／2≡1（mod
+p）．这事实引起一系列有趣的研讨．我们可以把这定理写为下述形式：XXXXXXXXap－1－1＝a2p′－1＝（ap′－1）（ap′＋1）≡0（mod
+p）．XXXXXXXX由于一个乘积被p整除，仅当它有一个因子被p整除才成，这立刻说明或者ap′－1或者ap′＋1必须被p整除．所以对任一素数p＞2和任一不被p整除的数a，XXXXXXXX或有a（p－1）／2≡1或有a（p－1）／2≡-1（mod
+p）．XXXXXXXX近代数论刚一出现，数学家就很感兴趣地去寻找什么样的数a使第一种情形成立，什么样的数a使第二种情形成立．假设a与某个数x的平方是模p同余的，即XXXXXXXXa≡x2（mod
+p），XXXXXXXX则a（p－1）／2≡xp－1，而它按照费马定理是模p同余于1的．一个数a，如果不是p的倍数且模p同余于某个数的平方，则称a为p的二次剩余．而一个不是p的倍数的数b，不同余于任何数的平方，称它为p的非二次剩余．我们刚才看到每一个p的二次剩余a满足同余式a（p－1）／2≡1（mod
+p）．不难证明对每一个非二次剩余b，我们有同余式b（p－1）／2≡-1（mod
+p），更进一步，我们现在将表明在数1，2，3，…，p－1中恰有（p－1）／2个二次剩余和（p－1）／2个非二次剩余．XXXXXXXX虽然通过直接计算搜集了那么多的试验数据，但是最初发现二次剩余与非二次剩余分布所服从的一般规律是不容易的．这些剩余的第一个深刻性质是勒让德（1752～1833）发现的，而后被高斯称为二次互反律．这规律是有关两个不同素数p和q的，它断言：如果乘积是偶数，则q是p的二次剩余必须而且只须p是q的二次剩余．在乘积是奇数时，这情形相反，p是q的剩余必须而且只须q是p的非剩余．年轻的高斯的成就之一就是给出了这个著名定理的第一个严格证明，而这个定理很长时间曾是对数学家的一个挑战．高斯的第一个证明决不是简单的，而且即使到今天虽然已发表了大量的不同的证明，互反律也不是容易确立的．它的真正的意义，直到最近，在代数数论发展以后才显示出来．XXXXXXXX作为说明二次剩余分布的一个例子，让我们取p＝7，这时由于XXXXXXXX02≡0，12≡1，22≡4，32≡2，XXXXXXXX42≡2，52≡4，62≡1．XXXXXXXX（全是模7）而且由于后面的平方重复这个序列，所以7的二次剩余是与1，2，4同余的数，而非剩余是和3，5，6同余的．在一般情形下，p的二次剩余组成了和12，22，…，（p－1）2同余的数，但它们又是成对同余的，因为XXXXXXXXx2≡（p－x）2（mod
+p）（例如22≡52（mod 7）），XXXXXXXX这因为（p－x）2＝p2－2px＋x2≡x2（mod
+p）．因此数1，2，…，p－1中有一半是p的二次剩余，另一半是非二次剩余．XXXXXXXX为了说明二次互反律，让我们取p＝5，q＝11．由于11≡12（mod
+5），11是二次剩余（mod
+5）；由于乘积是偶数，互反律告诉我们5是二次剩余（mod
+11）．为了证实这点，我们注意5≡42（mod
+11）．另一方面，如果p＝7，q＝11．这时乘积是奇数，实际上11是二次剩余（mod
+7）［因为11≡22（mod 7）］，而7是非二次剩余（mod
+11）．XXXXXXXX习题：1）62＝36≡13（mod 23），23是不是二次剩余（mod
+13）？XXXXXXXX2）我们已看到x2≡（p－x）2（mod
+p）．说明这是数12，22，32，…，（p－1）2中间仅有的同余关系．XXXXXXXX###
+§3　毕达哥拉斯数和费马大定理XXXXXXXX在数论中有一个涉及毕达哥拉斯（Pythagoras）定理〔2〕的有趣问题．希腊人早就知道边长为3，4，5的三角形是直角三角形．这产生了一个一般的问题：还有哪些直角三角形，它的各边长是某个单位长的整数倍数？在代数上勾股定理用方程XXXXXXXX表示，这里a，b是直角三角形的直角边边长，而c是斜边的边长．因此找出所有各边长是整数的直角三角形的问题，等价于求出方程（1）的所有正整数解（a，b，c）．任何这样的三个数称为毕达哥拉斯三元数．XXXXXXXX找出所有的毕达哥拉斯三元数的问题是很简单的．如果a，b，c是毕达哥拉斯三元数，即a2＋b2＝c2，我们记a／c＝x，b／c＝y，则x和y是使x2＋y2＝1的有理数．这时我们有y2＝（1－x）（1＋x）或y／（1＋x）＝（1－x）／y．这等式的两边都等于一个共同的值t，它可以表示为两个整数的比u／v．现在我们可以记y＝t（1＋x）和（1－x）＝ty或XXXXXXXXtx－y＝-t，x＋ty＝1．XXXXXXXX解这联立方程我们有XXXXXXXX对x，y和t作代换，我们得到XXXXXXXX因此对某个（有理数）比例因子r，有XXXXXXXX这说明如果（a，b，c）是毕达哥拉斯三元数，则a，b，c相应地和v2－u2，2uv，u2＋v2成比例．反过来容易看到，由（2）定义的任意三个数（a，b，c）是毕达哥拉斯三元数，因为由（2）我们有XXXXXXXX所以a2＋b2＝c2．XXXXXXXX对这结果可以作一些简化．对任意毕达哥拉斯三元数（a，b，c），任给正整数s，我们可以得到无穷多个其他的毕达哥拉斯三元数（sa，sb，sc）．例如从（3，4，5）我们得到（6，8，10），（9，12，15），等等．这样的三元数没有本质的不同，因为它们对应着相似的直角三角形．因此我们将定义一个素的毕达哥拉斯三元数，即没有公因子的毕达哥拉斯数a，b，c．立刻能看出：对任意v＞u的正整数v和u，如果u和v没有公因子且不同时是奇数，则公式XXXXXXXX产生了全部的素毕达哥拉斯三元数．XXXXXXXX习题：证明最后的命题．XXXXXXXX作为素毕达哥拉斯三元数的例子，我们有v＝2，u＝1：（3，4，5），v＝3，u＝2：（5，12，13），v＝4，u＝3：（7，24，25），…，v＝10，u＝7：（51，140，149），等等．XXXXXXXX关于毕达哥拉斯数的结果，自然地会引起这样一个问题：究竟有没有自然数a，b，c能满足a3＋b3＝c3或a4＋b4＝c4，或更一般地，对一给定的正整数指数n＞2，究竟方程XXXXXXXX能否有正整数解a，b，c．费马曾以一种令人吃惊的方式给出一个回答．费马研究了古代数论家丢番都的著作，他习惯于在丢番都的手稿的空白边缘加上注解．在那里，他叙述了许多定理，并不因没有给出证明而感到不安．所有这些以后都被证明了，但有一个重大的例外．关于毕达哥拉斯数的评注，费马写道，对任意的n＞2，方程（3）在自然数中是不可解的．但他写道，纸的空白边缘太少，不能把他所发现的这个美妙证明写下来了．XXXXXXXX从他那时代以来，尽管一些最伟大的数学家曾为之努力，人们却一直不能证明费马的一般命题是真的，还是假的．实际上对许多n值这个定理已被证明了，特别是对所有n＜619．但不是对所有的n，虽然反例至今也没出现．这定理本身在数学上并不那么重要，但由于试图证明它却在数论中引出了许多重要的发现．这问题在数学领域之外也引起了很多兴趣，有一部分原因是，第一个解决这问题的人可从受委托的哥廷根皇家科学院处得十万马克的奖金．直到第一次世界大战后，德国的通货膨胀才使这笔奖金成为一堆废纸．在此以前，每年有大量错误的“解”被送到受托人那里．即使一些严肃的数学家有时也会被他们自己搞糊涂，写出了或发表了某些证明，这些证明后来都由于被人发现了某些明显的错误而失败．虽然，在报纸上常有报道说这问题已被某个迄今仍无名的天才解决了，但由于马克的贬值，一般人对这个问题的兴趣就不那么大了．XXXXXXXX###
+§4　欧几里得辗转相除法XXXXXXXX</h4>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

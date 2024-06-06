@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="hbaolong@vip.qq.com" />
+  <title>论语之278-2025年3月10日-1．序列an的极限</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">论语之278-2025年3月10日-1．序列an的极限</h1>
+<p class="author">hbaolong@vip.qq.com</p>
+</header>
+<h4
+id="序列an的极限xxxxxxxx如1中已看到的连续函数的描述是建立在极限概念基础上的直到现在为止我们都或多或少地是以直观形式来利用这个概念的在这一节以及下几节我们将对极限概念作比较系统地考察由于序列比连续变量的函数简单我们就从序列开始讲起xxxxxxxx在第二章我们遇到过数列并且讨论了当n无限增加或趋于无穷大时它的极限例如第n项是an1n的序列xxxxxxxx当n增加时极限是0xxxxxxxx让我们设法确切地说明这是什么意思如果我们顺着序列越走越远那么序列的项变得越来越小第100项以后的一切项都小于11001000项以后的一切项都小于11000等等没有一项真正等于0但是如果我们在序列1中走得足够远就能保证序列的每一项和0之间的差小到我们所愿意的程度xxxxxxxx这个解释的唯一困难是上面黑体字的意思不十分清楚怎样远才是足够远多么小才是小到我们所愿意的程度如果我们能给这些词句以确切的意义那么也就能给极限关系或2以确切的意义xxxxxxxx几何解释会有助于使情况搞得更清楚些如果用数轴上的点表示序列1的项我们看到序列的项聚集在点0周围让我们在数轴上任意选择一个以点0为心整个宽度为2ε的区间i在点0的每一边区间的宽度都为ε如果选择ε10那么当然序列所有的项an1n都在区间i内部如果选择ε110那么序列最前面几项在区间i外部而从a11起的所有项xxxxxxxx将在i内部即使我们选择ε11000也只是序列的前一千项不在区间i内部而从a1001起所有无穷多项xxxxxxxxa1001a1002a1003xxxxxxxx将在i内部显然对任意的正数ε这个推理都成立只要选定了一个正的ε不管它可能多么小我们随即能够找到一个如此大的整数n使得xxxxxxxxεxxxxxxxx从而序列中所有使nn的项an都在i内部而只能有有限项a1a2an1在i外部要点是首先随意选择ε决定区i的宽度然后可以找到一个适当的整数n首先选定一个数ε然后找出一个适当的n的这个手续对于不管多么小的正数ε都是可行的并且给出了以下命题的确切意义只要在序列1中走得足够远那么序列1的所有项与0的差就小到我们所愿意的程度xxxxxxxx总结一下设ε是任意一个正数那么我们能找到一个整数n使得序列1中nn的所有项an都落在以点0为心宽度为2ε的区间内这就是极限关系式2的精确意义xxxxxxxx在这个例子的基础上现在我们准备给出实数a1a2a3的序列有极限a的说法的确切定义我们让a含在数轴上一个区间i的内部如果区间很小那么某些数an可能在区间外部但是只要n变得足够大也就是大于或等于某个整数n时那么所有nn的那些数an都必须在区间i内当然如果区间i选得很小整数n可能必须取得很大但如果序列是以a为它的极限那么不管区间i是多么小这样的一个整数n必然存在xxxxxxxx序列an有极限a这个事实用符号xxxxxxxxlimana-当n时1xxxxxxxx表示或简写为xxxxxxxxana-当n时xxxxxxxx读作an趋于a或收敛于a序列an收敛于a的定义可以更简要地阐述如下如果对于不管多么小的任意正数ε总可以找到一个整数n依赖于ε使得对于所有的xxxxxxxxnnxxxxxxxx有xxxxxxxx那么就说当n趋于无穷大时序列a1a2a3有极限axxxxxxxx这是序列极限概念的一个抽象的叙述初次遇到它时暂时不理解是不足为怪的遗憾的是某些课本的作者故弄玄虚他们不作充分的准备而只是把这个定义直接向读者列出好像作些解释就有损于数学家的身份似的xxxxxxxx这个定义可以看作两个人a和b之间的一个竞赛a提出的要求是an趋近于常量a其精确程度应比选取的界限εε1高b对这要求的答复是指出存在一个确定的整数nn1使元素an1以后的所有元素an满足ε1精度的要求然后a可以提得更精确提出一个新的更小的界限εε2b通过找出一个可能是更大的整数nn2再次答复这要求如果不管a提出的界限多么小b都能满足a的要求那么我们就用ana表示这情况xxxxxxxx在掌握这个极限的精确定义时有一定的心理上的困难我们直观上觉得极限是一个动态的观念即极限是一个运动过程的结果我们顺着整数列123n运动然后观察序列an的变动情况我们觉得ana的趋近过程应该能观察得到但是这个自然的想法是不能作出明白清楚的数学表达的要获得精确的定义我们必须把步骤的次序颠倒过来不是先看自变量n然后再看因变量an而是必须以这样的考虑为基础我们必须怎样做才能具体检验ana是否正确在这样的做法中我们必须首先在a的邻近选择一个任意小的界限然后决定因变量n取得足够大是否能满足这个条件再后对词句任意小的界限和足够大的n以ε和n的符号名称从而引出极限的精确定义xxxxxxxx作为另一个例子我们考察序列xxxxxxxxxxxxxxxx其中an我说liman1如果你选择一个以点1为心ε的区间那么我选择n10就能满足你的要求3因为只要n10就有xxxxxxxx如果你用ε提高你的要求那么我可以选择n1000来满足它类似地对于任意正数ε不管你选择得是多么小事实上我只需要选择大过的任意整数n就可以了指定关于数a的任意小的界限ε然后证明如果序列走到足够远时an的所有项都是在以a为心宽度为2ε的区间内的这个过程是limana这个事实的详细描述xxxxxxxx如果序列a1a2a3的各个数用十进位无限小数表示那么limana的意义是对于任意一个正整数m倘若n选择得足够大即大于或等于某个值n依赖于m则an的前m个数码和定数a的十进位无限小数展开式的前m个数码一致这就是相当于选取ε为10-m形式xxxxxxxx表示极限概念还有另一个很有启示性的方法如果limana并且如果有一个含有a的区间i那么不管i可能如何小对n大于或等于某个整数n的项an都在i内即序列至多有前面的有限项即n1项xxxxxxxxa1a2an1xxxxxxxx是在i的外部如果i很小n可能很大1千亿甚至一万亿等但序列仍然只是有限项在i外部而剩下的无穷多项在i内部xxxxxxxx如果无穷序列只有有限多项不管有多么多不具有某种性质我们就说无穷序列几乎全部的项具有某种性质例如几乎全部的正整数大于1000000000000利用这个术语limana相当于下述说法如果i是任意以a为中心的区间那么几乎全部的an在i内部xxxxxxxx我们在这里顺便指出不必要求序列所有的项an都不同可以允许某些项或无穷多项甚至所有的项都等于极限值a例如序列a10a20an0是一个合法的序列显然它的极限是0xxxxxxxx有极限a的一个序列an称为收敛的没有极限的序列an称为发散的xxxxxxxx习题证明xxxxxxxx1序列an极限为0.提示an小于且大于0xxxxxxxx2序列an极限为0提示an在0与之间xxxxxxxx3序列1234和振动序列xxxxxxxx121212xxxxxxxx-11-11-1即an-1nxxxxxxxx和1111xxxxxxxx都没有极限xxxxxxxx如果序列an的数值变得很大最后an大过事先指定的任意一个数k那么我们称an趋于无穷大记为liman或an例如n2以及2n因为不认为是数这种叙述也许和以前不十分一致但却是很有用的一个趋于无穷大的序列仍称为是发散的xxxxxxxx习题证明序列an趋于无穷大同样对xxxxxxxxananxxxxxxxx以及xxxxxxxxanxxxxxxxx加以证明xxxxxxxx初学者在思想上有时会陷入这样一个错误认为当n时的极限可以简单地在an的表示式中代入n就行了例如因为0所以0但是符号不是一个数用它作出表示式是不合法的把序列的极限想象成当n时an的最终或最后的项的想法是不得极限的要领并且使结果变得模糊不清xxxxxxxx">1．序列an的极限XXXXXXXX如§1中已看到的，连续函数的描述是建立在极限概念基础上的．直到现在为止，我们都或多或少地是以直观形式来利用这个概念的．在这一节以及下几节，我们将对极限概念作比较系统地考察．由于序列比连续变量的函数简单，我们就从序列开始讲起．XXXXXXXX在第二章，我们遇到过数列，并且讨论了当n无限增加或“趋于无穷大”时它的极限．例如，第n项是an＝1／n的序列XXXXXXXX当n增加时极限是0：XXXXXXXX让我们设法确切地说明这是什么意思．如果我们顺着序列越走越远，那么序列的项变得越来越小．第100项以后的一切项都小于1／100，1000项以后的一切项都小于1／1000，等等．没有一项真正等于0，但是如果我们在序列（1）中走得足够远，就能保证序列的每一项和0之间的差，小到我们所愿意的程度．XXXXXXXX这个解释的唯一困难是，上面黑体字的意思不十分清楚．怎样远才是“足够远”，多么小才是“小到我们所愿意的程度”？如果我们能给这些词句以确切的意义，那么也就能给极限关系或（2）以确切的意义．XXXXXXXX几何解释会有助于使情况搞得更清楚些．如果用数轴上的点表示序列（1）的项，我们看到序列的项聚集在点0周围．让我们在数轴上任意选择一个以点0为心，整个宽度为2ε的区间I，在点0的每一边，区间的宽度都为ε．如果选择ε＝10，那么，当然序列所有的项an＝1／n都在区间I内部．如果选择ε＝1／10，那么序列最前面几项在区间I外部，而从a11起的所有项XXXXXXXX将在I内部．即使我们选择ε＝1／1000，也只是序列的前一千项不在区间I内部，而从a1001起所有无穷多项，XXXXXXXXa1001，a1002，a1003，…XXXXXXXX将在I内部．显然，对任意的正数ε，这个推理都成立：只要选定了一个正的ε，不管它可能多么小，我们随即能够找到一个如此大的整数N，使得XXXXXXXX＜ε．XXXXXXXX从而序列中所有使n≥N的项an都在I内部，而只能有有限项a1，a2，…，aN－1在I外部．要点是：首先随意选择ε，决定区I的宽度，然后可以找到一个适当的整数N．首先选定一个数ε，然后找出一个适当的N的这个手续，对于不管多么小的正数ε都是可行的，并且给出了以下命题的确切意义：只要在序列（1）中走得足够远，那么序列（1）的所有项与0的差就小到我们所愿意的程度．XXXXXXXX总结一下：设ε是任意一个正数，那么我们能找到一个整数N，使得序列（1）中n≥N的所有项an都落在以点0为心、宽度为2ε的区间内．这就是极限关系式（2）的精确意义．XXXXXXXX在这个例子的基础上，现在我们准备给出“实数a1，a2，a3，…的序列有极限a”的说法的确切定义．我们让a含在数轴上一个区间I的内部，如果区间很小，那么某些数an可能在区间外部，但是只要n变得足够大，也就是大于或等于某个整数N时，那么所有n≥N的那些数an都必须在区间I内．当然，如果区间I选得很小，整数N可能必须取得很大，但如果序列是以a为它的极限，那么不管区间I是多么小，这样的一个整数N必然存在．XXXXXXXX序列an有极限a这个事实，用符号XXXXXXXXliman＝a　当n→∞时〔1〕XXXXXXXX表示，或简写为XXXXXXXXan→a　当n→∞时，XXXXXXXX（读作：an趋于a或收敛于a）序列an收敛于a的定义可以更简要地阐述如下：如果对于不管多么小的任意正数ε，总可以找到一个整数N（依赖于ε），使得对于所有的XXXXXXXXn≥N，XXXXXXXX有XXXXXXXX那么就说，当n趋于无穷大时序列a1，a2，a3，…有极限a．XXXXXXXX这是序列极限概念的一个抽象的叙述．初次遇到它时暂时不理解是不足为怪的．遗憾的是某些课本的作者故弄玄虚，他们不作充分的准备，而只是把这个定义直接向读者列出，好像作些解释就有损于数学家的身份似的．XXXXXXXX这个定义可以看作两个人A和B之间的一个竞赛．A提出的要求是an趋近于常量a，其精确程度应比选取的界限ε＝ε1高；B对这要求的答复是，指出存在一个确定的整数N＝N1，使元素aN1以后的所有元素an满足ε1精度的要求．然后A可以提得更精确，提出一个新的更小的界限ε＝ε2．B通过找出一个（可能是更大的）整数N＝N2，再次答复这要求．如果不管A提出的界限多么小，B都能满足A的要求，那么我们就用an→a表示这情况．XXXXXXXX在掌握这个极限的精确定义时，有一定的心理上的困难．我们直观上觉得极限是一个“动态”的观念，即极限是一个“运动”过程的结果：我们顺着整数列1，2，3，…，n，…运动，然后观察序列an的变动情况．我们觉得an→a的趋近过程应该能观察得到．但是，这个“自然”的想法是不能作出明白清楚的数学表达的．要获得精确的定义，我们必须把步骤的次序颠倒过来．不是先看自变量n，然后再看因变量an，而是必须以这样的考虑为基础：我们必须怎样做，才能具体检验an→a是否正确．在这样的做法中，我们必须首先在a的邻近选择一个任意小的界限，然后决定因变量n取得足够大是否能满足这个条件．再后，对词句“任意小的界限”和“足够大的n”以ε和N的符号名称，从而引出极限的精确定义．XXXXXXXX作为另一个例子，我们考察序列XXXXXXXX，，，，…，，…，XXXXXXXX其中an＝．我说：liman＝1．如果你选择一个以点1为心，ε＝的区间，那么我选择N＝10，就能满足你的要求（3），因为只要n≥10，就有XXXXXXXX如果你用ε＝提高你的要求，那么我可以选择N＝1000来满足它；类似地，对于任意正数ε，不管你选择得是多么小，事实上，我只需要选择大过的任意整数N就可以了．指定关于数a的任意小的界限ε，然后证明如果序列走到足够远时，an的所有项都是在以a为心，宽度为2ε的区间内的这个过程，是liman＝a这个事实的详细描述．XXXXXXXX如果序列a1，a2，a3，…的各个数用十进位无限小数表示，那么liman＝a的意义是：对于任意一个正整数m，倘若n选择得足够大，即大于或等于某个值N（依赖于m），则an的前m个数码，和定数a的十进位无限小数展开式的前m个数码一致．这就是相当于选取ε为10-m形式．XXXXXXXX表示极限概念还有另一个很有启示性的方法．如果liman＝a，并且如果有一个含有a的区间I，那么不管I可能如何小，对n大于或等于某个整数N的项an，都在I内，即序列至多有前面的有限项，即N－1项，XXXXXXXXa1，a2，…，aN－1XXXXXXXX是在I的外部．如果I很小，N可能很大，1千亿甚至一万亿等；但序列仍然只是有限项在I外部，而剩下的无穷多项在I内部．XXXXXXXX如果无穷序列只有有限多项（不管有多么多）不具有某种性质，我们就说无穷序列“几乎全部”的项具有某种性质．例如“几乎全部”的正整数大于1000000000000．利用这个术语，liman＝a相当于下述说法：如果I是任意以a为中心的区间，那么“几乎全部”的an在I内部．XXXXXXXX我们在这里顺便指出：不必要求序列所有的项an都不同，可以允许某些项或无穷多项，甚至所有的项都等于极限值a．例如，序列a1＝0，a2＝0，…，an＝0，…是一个合法的序列，显然，它的极限是0．XXXXXXXX有极限a的一个序列an称为收敛的，没有极限的序列an称为发散的．XXXXXXXX习题：证明：XXXXXXXX1）序列an＝极限为0.（提示：an＝小于且大于0．）XXXXXXXX2）序列an＝极限为0．（提示：an＝在0与之间．）XXXXXXXX3）序列1，2，3，4，…和振动序列XXXXXXXX1，2，1，2，1，2，…，XXXXXXXX-1，1，-1，1，-1，…（即an＝（-1）n），XXXXXXXX和1，，1，，1，，1，，…XXXXXXXX都没有极限．XXXXXXXX如果序列an的数值变得很大，最后an大过事先指定的任意一个数K，那么我们称an趋于无穷大，记为liman＝∞，或an→∞．例如，n2→∞以及2n→∞．因为∞不认为是数，这种叙述也许和以前不十分一致，但却是很有用的．一个趋于无穷大的序列仍称为是发散的．XXXXXXXX习题：证明序列an＝趋于无穷大；同样对XXXXXXXXan＝，an＝XXXXXXXX以及XXXXXXXXan＝XXXXXXXX加以证明．XXXXXXXX初学者在思想上有时会陷入这样一个错误，认为当n→∞时的极限，可以简单地在an的表示式中代入n＝∞就行了．例如，因为“＝0”，所以→0．但是符号∞不是一个数，用它作出表示式是不合法的．把序列的极限想象成当n＝∞时，an的“最终”或“最后”的项的想法，是不得极限的要领，并且使结果变得模糊不清．XXXXXXXX</h4>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

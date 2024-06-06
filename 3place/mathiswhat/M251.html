@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="hbaolong@vip.qq.com" />
+  <title>论语之251-2025年2月11日-1．二次曲线的初等度量几何</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">论语之251-2025年2月11日-1．二次曲线的初等度量几何</h1>
+<p class="author">hbaolong@vip.qq.com</p>
+</header>
+<h4
+id="二次曲线的初等度量几何xxxxxxxx直到现在我们仅仅涉及点直线平面和由它们所组成的图形如果射影几何除了研究这样的直线图形以外再没有别的那它就不怎么会令人感兴趣了从根本上说来一个重要的事实是射影几何所研究的不限于直线图形而是包括圆锥曲线的整个领域以及它们在高维空间中的推广圆锥曲线椭圆双曲线和抛物线的阿波罗尼斯度量处理是古代伟大的数学成就之一圆锥曲线对纯数学和应用数学的重要性例如行星及氢原子中电子的轨道是圆锥曲线是怎么估计也不过分的有点奇怪的是关于圆锥曲线的古典希腊理论至今仍然是数学教程中不可缺少的部分然而希腊几何决不是已经到顶两千年后圆锥曲线的重要射影性质被发现了尽管这些性质简单而优美但是学院式的惰性却一直阻碍着把它们引进高中课程xxxxxxxx首先我们回忆一下圆锥曲线的度量的定义这种定义有好几种在初等几何中可以看到它们是等价的常见的一种是涉及焦点的一个椭圆定义为平面上这样的点p的几何轨迹它到两个固定点f1f2即焦点的距离r1r2之和是一常量如果两个焦点重合图形是一个圆双曲线定义为平面上这样的点p的轨迹对它来说差r1r2的绝对值是一固定常量抛物线定义为这样的点p的几何轨迹它到一固定点f的距离r等于到一给定直线l的距离xxxxxxxx用解析几何的语言来说这些曲线都能用坐标xy的二次方程来表示反之不难证明用任意一个二次方程xxxxxxxxax2by2cxydxeyf0xxxxxxxx解析地定义的任何曲线或是这三种圆锥曲线之一或是一条直线或是一对直线或是一个点或是虚的要证明这个事实通常是引进一个新的适当的坐标系这在任何解析几何课本中都能找到xxxxxxxx圆锥曲线的这些定义本质上是度量的因为它们用到了距离的概念但是还有另一种定义它确立了圆锥曲线在射影几何中的地位圆锥曲线是一个圆在平面上的投影如果我们从一点o投影一个圆c则投影线将成为一对无限的锥面这锥面与平面π的交线是c的投影这交线是一椭圆或双曲线将根据这平面和这锥面一叶或两叶相截而定当π平行于过o的一条直线时出现了抛物线这种中间情形见图94xxxxxxxx图94-圆锥曲线xxxxxxxx这射影的锥面并不一定是正圆锥即顶点o不一定在通过圆心垂直于圆面c的直线上它也可以是斜的在所有这些情形中我们将不加证明地在这里承认以下事实锥面与一平面的交线是其方程为二次的曲线反之每一个二次曲线可从一个圆通过这样一个射影来得到这就是把二次曲线称为圆锥曲线的原因xxxxxxxx当平面仅与正圆锥的一叶相交时我们断言交线e是一椭圆可以证明e满足上述用焦点给出的那种通常用的椭圆定义有一个简明而优美的证法是比利时数学家丹德林g.-p.-dandelin在1822年给出的这个证明是在引进两个球s1和s2的基础上进行的图95它们和π分别相切于点f1和f2并且相应地沿着两个平行的圆k1k2和圆锥相接触我们把e上任意点p和f1f2连接起来并画出从p到圆锥顶点o的连线这条线整个地落在圆锥的表面上且依次交k1和k2于点q1和q2现在pf1和pq1是从p到s1的两条切线所以xxxxxxxxpf1pq1xxxxxxxx图95-丹德林的球xxxxxxxx类似地有xxxxxxxxpf2pq2xxxxxxxx把这两个等式加起来我们得到xxxxxxxxpf1pf2pq1pq2xxxxxxxx但是pq1pq2q1q2恰好是平行圆k1和k2之间沿着圆锥表面的距离因此它与e上点p的选择无关这最后一个等式xxxxxxxxpf1pf2常数xxxxxxxx对e的所有点p成立这正是用焦点作的椭圆定义因此e是一椭圆f1f2是它的焦点xxxxxxxx习题若平面截割圆锥的两叶则交线是双曲线试在这圆锥的每一叶都作一个球以证明这个事实xxxxxxxx">1．二次曲线的初等度量几何XXXXXXXX直到现在，我们仅仅涉及点、直线、平面和由它们所组成的图形．如果射影几何除了研究这样的“直线”图形以外再没有别的，那它就不怎么会令人感兴趣了．从根本上说来，一个重要的事实是，射影几何所研究的不限于直线图形，而是包括圆锥曲线的整个领域以及它们在高维空间中的推广．圆锥曲线——椭圆、双曲线和抛物线——的阿波罗尼斯度量处理，是古代伟大的数学成就之一．圆锥曲线对纯数学和应用数学的重要性（例如行星及氢原子中电子的轨道是圆锥曲线）是怎么估计也不过分的．有点奇怪的是，关于圆锥曲线的古典希腊理论至今仍然是数学教程中不可缺少的部分．然而希腊几何决不是已经到顶，两千年后，圆锥曲线的重要射影性质被发现了．尽管这些性质简单而优美，但是学院式的惰性却一直阻碍着把它们引进高中课程．XXXXXXXX首先我们回忆一下圆锥曲线的度量的定义．这种定义有好几种，在初等几何中可以看到它们是等价的．常见的一种是涉及焦点的．一个椭圆定义为平面上这样的点P的几何轨迹：它到两个固定点F1，F2（即焦点）的距离r1，r2之和是一常量（如果两个焦点重合，图形是一个圆）．双曲线定义为平面上这样的点P的轨迹：对它来说，差r1－r2的绝对值是一固定常量．抛物线定义为这样的点P的几何轨迹：它到一固定点F的距离r等于到一给定直线l的距离．XXXXXXXX用解析几何的语言来说，这些曲线都能用坐标x，y的二次方程来表示．反之，不难证明，用任意一个二次方程XXXXXXXXax2＋by2＋cxy＋dx＋ey＋f＝0XXXXXXXX解析地定义的任何曲线，或是这三种圆锥曲线之一，或是一条直线，或是一对直线，或是一个点，或是虚的．要证明这个事实，通常是引进一个新的适当的坐标系，这在任何解析几何课本中都能找到．XXXXXXXX圆锥曲线的这些定义本质上是度量的，因为它们用到了距离的概念．但是还有另一种定义，它确立了圆锥曲线在射影几何中的地位；圆锥曲线是一个圆在平面上的投影．如果我们从一点O投影一个圆C，则投影线将成为一对无限的锥面，这锥面与平面π的交线是C的投影．这交线是一椭圆或双曲线，将根据这平面和这锥面一叶或两叶相截而定．当π平行于过O的一条直线时，出现了抛物线这种中间情形（见图94）．XXXXXXXX图94　圆锥曲线XXXXXXXX这射影的锥面并不一定是正圆锥，即顶点O不一定在通过圆心垂直于圆面C的直线上．它也可以是斜的．在所有这些情形中，我们将不加证明地在这里承认以下事实：锥面与一平面的交线是其方程为二次的曲线；反之，每一个二次曲线可从一个圆通过这样一个射影来得到．这就是把二次曲线称为圆锥曲线的原因．XXXXXXXX当平面仅与正圆锥的一叶相交时，我们断言交线E是一椭圆．可以证明E满足上述用焦点给出的那种通常用的椭圆定义．有一个简明而优美的证法是比利时数学家丹德林（G.
+P.
+Dandelin）在1822年给出的．这个证明是在引进两个球S1和S2的基础上进行的（图95），它们和π分别相切于点F1和F2，并且相应地沿着两个平行的圆K1，K2和圆锥相接触．我们把E上任意点P和F1，F2连接起来，并画出从P到圆锥顶点O的连线．这条线整个地落在圆锥的表面上，且依次交K1和K2于点Q1和Q2．现在PF1和PQ1是从P到S1的两条切线，所以XXXXXXXXPF1＝PQ1．XXXXXXXX图95　丹德林的球XXXXXXXX类似地，有XXXXXXXXPF2＝PQ2．XXXXXXXX把这两个等式加起来，我们得到XXXXXXXXPF1＋PF2＝PQ1＋PQ2．XXXXXXXX但是PQ1＋PQ2＝Q1Q2恰好是平行圆K1和K2之间沿着圆锥表面的距离．因此它与E上点P的选择无关．这最后一个等式XXXXXXXXPF1＋PF2＝常数XXXXXXXX对E的所有点P成立，这正是用焦点作的椭圆定义．因此E是一椭圆，F1，F2是它的焦点．XXXXXXXX习题：若平面截割圆锥的两叶，则交线是双曲线．试在这圆锥的每一叶都作一个球以证明这个事实．XXXXXXXX</h4>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

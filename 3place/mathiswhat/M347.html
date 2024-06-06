@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="hbaolong@vip.qq.com" />
+  <title>论语之347-2025年5月18日-1．对数的定义和性质　欧拉数e</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">论语之347-2025年5月18日-1．对数的定义和性质　欧拉数e</h1>
+<p class="author">hbaolong@vip.qq.com</p>
+</header>
+<h4
+id="对数的定义和性质-欧拉数exxxxxxxx我们把对数或更特殊的自然对数fxlnx它和以10为底的常用对数的关系将在第二小节说明定义为曲线y下面由u1到ux之间的面积数量上相当于积分xxxxxxxx见此处图5变量x可以是任意正数但是不包括0因为u趋向于0时被积函数趋于无穷xxxxxxxx研究函数fx是很自然的因为我们知道除了n-1之外任意的幂xn的原函数是同一类型的函数当n-1时分母n1变为零从而此处的公式4失去意义这样我们可以期望或的积分会引出一种新型的有趣的函数xxxxxxxx虽然我们把1作为函数lnx的定义但在推导出它的性质并找到它的数值计算的方法之前我们是不知道这个函数的我们以面积和积分的一般概念作出发点在此基础上建立像1这样的一些定义然后推导出所定义的对象的性质只是在最后才得到用以数值计算的明显表达式这是现代很典型的研究方法xxxxxxxxlnx的第一个重要性质是5的基本定理的直接推论由这个定理得到等式xxxxxxxx由2可见导数总是正的于是肯定了这样的事实当x按递增方向变化时函数lnx是单调递增的xxxxxxxx对数的主要性质可由公式xxxxxxxx表示这个公式在对数实际应用于数值计算时的重要性是众所周知的直观上把3个量lnalnb和lnab看作三个面积就可以得到公式3但是我们宁愿用典型的微积分的推理方法来得到它与函数fxlnx一起我们考察第二个函数xxxxxxxxkxlnaxlnwfwxxxxxxxx其中wfxaxa为任一正的常数运用3的法则e微分kxkxfwfx由2且因为fxa得xxxxxxxx因而kx与fx有相同的导数根据此处我们有xxxxxxxxlnaxkxfxcxxxxxxxx其中c是与x的特定值无关的常数只要把特定的数1代入x就可以确定常数c由定义1可知xxxxxxxxf1ln10xxxxxxxx这是由于所定义的积分在x1时上下限相等因而有xxxxxxxxk1lna1lnaln1ccxxxxxxxx由此得clna所以对任何x有公式xxxxxxxx令xb便得到我们所希望的公式3xxxxxxxx特别对于ax现在可依次得到xxxxxxxx等式4说明当x的值递增时lnx的值趋于无穷因为对数是单调递增函数我们有例如xxxxxxxxln2nnln2xxxxxxxx当n趋于无穷时它也趋于无穷我们进而有xxxxxxxx由此xxxxxxxx最后对于任何有理数r有xxxxxxxx因为令xru我们有xxxxxxxx由此xxxxxxxx因为lnx是x的单调连续函数当x1时值为0并且x增大时趋于无穷这样必然存在一个大于1的数当x取此值时lnx1xxxxxxxx按照欧拉的作法我们称这个数为e以后将看到与此处的定义等价这样e由方程xxxxxxxx定义我们根据e必然存在这一内在性质引进了数e下面我们即将作进一步的分析以便得到以任意精确程度趋于数e的明显公式xxxxxxxx">1．对数的定义和性质　欧拉数eXXXXXXXX我们把对数，或更特殊的“自然对数”F（x）＝lnx（它和以10为底的常用对数的关系将在第二小节说明）定义为曲线y＝下面由u＝1到u＝x之间的面积，数量上相当于积分XXXXXXXX（见此处图5）．变量x可以是任意正数，但是不包括0，因为u趋向于0时，被积函数趋于无穷．XXXXXXXX研究函数F（x）是很自然的．因为我们知道，除了n＝-1之外，任意的幂xn的原函数是同一类型的函数．当n＝-1时，分母n＋1变为零，从而此处的公式（4）失去意义．这样我们可以期望或的积分会引出一种新型的有趣的函数．XXXXXXXX虽然我们把（1）作为函数lnx的定义，但在推导出它的性质，并找到它的数值计算的方法之前，我们是不“知道”这个函数的．我们以面积和积分的一般概念作出发点，在此基础上建立像（1）这样的一些定义，然后推导出所定义的对象的性质，只是在最后，才得到用以数值计算的明显表达式，这是现代很典型的研究方法．XXXXXXXXlnx的第一个重要性质，是§5的基本定理的直接推论．由这个定理得到等式XXXXXXXX由（2）可见导数总是正的，于是肯定了这样的事实，当x按递增方向变化时函数lnx是单调递增的．XXXXXXXX对数的主要性质，可由公式XXXXXXXX表示．这个公式在对数实际应用于数值计算时的重要性，是众所周知的．直观上，把3个量lna，lnb和ln（ab）看作三个面积，就可以得到公式（3）．但是我们宁愿用典型的微积分的推理方法来得到它：与函数F（x）＝lnx一起，我们考察第二个函数XXXXXXXXK（x）＝ln（ax）＝lnw＝F（w），XXXXXXXX其中w＝f（x）＝ax，a为任一正的常数．运用§3的法则（e），微分K（x）：K′（x）＝F′（w）f′（x）．由（2），且因为f′（x）＝a，得XXXXXXXX因而K（x）与F（x）有相同的导数．根据此处，我们有XXXXXXXXln（ax）＝K（x）＝F（x）＋C，XXXXXXXX其中C是与x的特定值无关的常数．只要把特定的数1代入x，就可以确定常数C．由定义（1）可知XXXXXXXXF（1）＝ln1＝0，XXXXXXXX这是由于所定义的积分，在x＝1时上、下限相等．因而有XXXXXXXXK（1）＝ln（a·1）＝lna＝ln1＋C＝C，XXXXXXXX由此得C＝lna，所以对任何x，有公式XXXXXXXX令x＝b，便得到我们所希望的公式（3）．XXXXXXXX特别（对于a＝x），现在可依次得到XXXXXXXX等式（4）说明当x的值递增时，lnx的值趋于无穷．因为对数是单调递增函数，我们有，例如，XXXXXXXXln（2n）＝nln2，XXXXXXXX当n趋于无穷时，它也趋于无穷．我们进而有XXXXXXXX由此XXXXXXXX最后，对于任何有理数r＝，有XXXXXXXX因为，令xr＝u，我们有XXXXXXXX由此XXXXXXXX因为lnx是x的单调连续函数，当x＝1时值为0，并且x增大时趋于无穷，这样必然存在一个大于1的数，当x取此值时lnx＝1．XXXXXXXX按照欧拉的作法，我们称这个数为e（以后将看到与此处的定义等价）．这样，e由方程XXXXXXXX定义．我们根据e必然存在这一内在性质引进了数e．下面我们即将作进一步的分析，以便得到以任意精确程度趋于数e的明显公式．XXXXXXXX</h4>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="hbaolong@vip.qq.com" />
+  <title>论语之350-2025年5月21日-4．用极限表示e，ex和lnx的表达式</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">论语之350-2025年5月21日-4．用极限表示e，ex和lnx的表达式</h1>
+<p class="author">hbaolong@vip.qq.com</p>
+</header>
+<h4
+id="用极限表示eex和lnx的表达式xxxxxxxx我们将利用指数和对数的微分公式来求这些函数的明显表达式因为函数lnx的导数是由导数的定义我们得到关系式xxxxxxxx当x1x时xxxxxxxx如果我们令x1xh并且令h历经序列xxxxxxxxhxxxxxxxx而趋于零那么应用对数的法则得到xxxxxxxx令z并且再一次利用对数的法则得到xxxxxxxx当n时xxxxxxxx利用指数函数则当n时xxxxxxxx这就是用简单极限定义指数函数的著名公式特别当z1时我们有xxxxxxxx并且当z-1时xxxxxxxx由这些式子立即导致无穷级数形式的展式由二项式定理我们求得xxxxxxxx或xxxxxxxx在完成当n取极限的过程中以上每一项中的都可以用0代换这一点可以使人信服并且也不难证明它是完全合理的细节从略这就得到了著名的ex的无穷级数展式xxxxxxxx作为特例e的级数为xxxxxxxx这证明是与此处所定义的数完全相同当x-1时我们得到级数xxxxxxxx这个级数只需很少几项就能给出一个极好的近似值而如果级数从第n项截断后所产生的总误差是小于第n1项的数值的xxxxxxxx利用指数函数的微分公式我们可以得到一个有趣的对数的表达式当h趋于0时我们有xxxxxxxx因为这个极限是ey在y0处的导数值并且等于e01在这个式子中我们用代替h其中z是一个任意的数而n取遍正整数序列于是得到xxxxxxxx或xxxxxxxx令zlnx或ezx因为当n时xxxxxxxx我们最后得到当n时xxxxxxxx这个式子把对数表示成两个因子的乘积的极限其中一个因子趋于0而另一个趋于无穷xxxxxxxx习题现在我们已掌握了一大类函数其中包括指数函数和对数函数并且应用的途径也增多了xxxxxxxx微分1xlnx12lnlnx345e-x26eex是ez和zex的复合函数7xx提示xxexlnx8lntanx9lnsinxlncosx10xxxxxxxx求11xe-x12x2e-x13xe-ax的极大和极小xxxxxxxx14求曲线yxe-ax当a变动时的极大点的轨迹xxxxxxxx15证明e-x2的所有逐阶导数其形式都是e-x2和x的多项式的乘积xxxxxxxx16证明的n阶导数其形式是和一个2n2次多项式的乘积xxxxxxxx17对数微分法利用对数的基本性质有时能以简单的方式来求乘积的微分对形如xxxxxxxxpxf1xf2xfnxxxxxxxxx的乘积我们有xxxxxxxxdlnpxdlnf1xdlnf2xdlnfnxxxxxxxxx从而由复合函数微分法则有xxxxxxxx利用这个公式微分xxxxxxxxaxx1x2xnbxe-ax2xxxxxxxx">4．用极限表示e，ex和lnx的表达式XXXXXXXX我们将利用指数和对数的微分公式来求这些函数的明显表达式．因为函数lnx的导数是，由导数的定义我们得到关系式XXXXXXXX，当x1→x时．XXXXXXXX如果我们令x1＝x＋h，并且令h历经序列XXXXXXXXh＝，，，…，，…XXXXXXXX而趋于零，那么应用对数的法则，得到XXXXXXXX令z＝，并且再一次利用对数的法则，得到XXXXXXXX，当n→∞时，XXXXXXXX利用指数函数，则当n→∞时，XXXXXXXX这就是用简单极限定义指数函数的著名公式．特别，当z＝1时，我们有XXXXXXXX并且当z＝-1时，XXXXXXXX由这些式子立即导致无穷级数形式的展式．由二项式定理我们求得XXXXXXXX或XXXXXXXX在完成当n→∞取极限的过程中，以上每一项中的都可以用0代换，这一点可以使人信服并且也不难证明它是完全合理的（细节从略）．这就得到了著名的ex的无穷级数展式XXXXXXXX作为特例，e的级数为XXXXXXXX这证明是与此处所定义的数完全相同．当x＝-1时，我们得到级数XXXXXXXX这个级数只需很少几项就能给出一个极好的近似值，而如果级数从第n项截断后所产生的总误差是小于第（n＋1）项的数值的．XXXXXXXX利用指数函数的微分公式我们可以得到一个有趣的对数的表达式．当h趋于0时，我们有XXXXXXXX因为这个极限是ey在y＝0处的导数值，并且等于e0＝1．在这个式子中，我们用代替h，其中z是一个任意的数而n取遍正整数序列．于是得到XXXXXXXX或XXXXXXXX令z＝lnx或ez＝x，因为当n→∞时，XXXXXXXX我们最后得到，当n→∞时，XXXXXXXX这个式子把对数表示成两个因子的乘积的极限，其中一个因子趋于0，而另一个趋于无穷．XXXXXXXX习题：现在我们已掌握了一大类函数，其中包括指数函数和对数函数，并且应用的途径也增多了．XXXXXXXX微分：1）x（lnx－1），2）ln（lnx），3），4），5）e-x2，6）eex（是ez和z＝ex的复合函数），7）xx（提示：xx＝exlnx），8）lntanx，9）lnsinx；lncosx，10）．XXXXXXXX求11）xe-x，12）x2e-x，13）xe-ax的极大和极小．XXXXXXXX<em>14）求曲线y＝xe-ax当a变动时的极大点的轨迹．XXXXXXXX15）证明e-x2的所有逐阶导数，其形式都是e-x2和x的多项式的乘积．XXXXXXXX</em>16）证明的n阶导数，其形式是和一个2n－2次多项式的乘积．XXXXXXXX*17）对数微分法．利用对数的基本性质，有时能以简单的方式来求乘积的微分．对形如XXXXXXXXP（x）＝f1（x）f2（x）…fn（x）XXXXXXXX的乘积，我们有XXXXXXXXD（lnP（x））＝D（lnf1（x））＋D（lnf2（x））＋…＋D（lnfn（x）），XXXXXXXX从而由复合函数微分法则，有XXXXXXXX利用这个公式微分XXXXXXXXa）x（x＋1）（x＋2）…（x＋n），b）xe-ax2．XXXXXXXX</h4>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

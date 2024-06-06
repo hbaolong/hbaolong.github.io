@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="hbaolong@vip.qq.com" />
+  <title>论语之252-2025年2月12日-2．二次曲线的射影性质</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">论语之252-2025年2月12日-2．二次曲线的射影性质</h1>
+<p class="author">hbaolong@vip.qq.com</p>
+</header>
+<h4
+id="二次曲线的射影性质xxxxxxxx在上节叙述的事实的基础上我们将采用这样一个尝试性的定义圆锥曲线是圆在平面上的投影这个定义比通常用焦点的定义更多地保留了射影几何的精神因为后者完全依赖于距离这度量概念但是即使我们现在的这个定义也没有完全避免这个缺陷因为圆也是度量几何的一个概念下面我们将给出圆锥曲线的一个纯粹射影定义xxxxxxxx由于我们已经接受了一个圆锥曲线只是一个圆的射影这样的定义词conic圆锥曲线的意思是指圆的射影类见此处中的任一曲线由此可知圆在射影下不变的任何性质也将为任意二次曲线所具备现在圆有一个众所周知的度量性质一给定圆弧所对的每个圆周角相等在图96中弧ab所对着的角aob是和o的位置无关的如果考虑圆上四个点abcd而不是圆上两个点ab的话这个事实就和交比这个射影概念有关了连接这四个点和圆上第五个点o的四条直线abcd将有交比abcd它只依赖于弧cacbdadb所对着的圆周角如果我们把abcd和圆上另一点o连接起来我们得到四条直线abcd从刚才提到的圆的性质可知这两组四条直线是相合的7因此它们具有相同的交比abcdabcd现在如果我们把圆射影成任意二次曲线k我们将得到k上的四个点仍记为abcd还有另外两个点oo以及两组四条直线abcd和abcd这两组四条直线不一定相合因为相等的角经过射影一般是不会相等的但是由于交比在射影下是不变的等式abcdabcd仍然成立这就引出一个基本定理把圆锥曲线k上任意四点abcd和k上第五个点o用直线abcd连接起来交比ab-cd与k上点o的位置无关图97xxxxxxxx图96-圆上的交比xxxxxxxx图97-椭圆上的交比xxxxxxxx这确实是惊人的结果我们已经知道在一直线上任取的四个点与平面上任何第五个点o的交比是一样的这个关于交比的定理是射影几何的一个基本事实现在我们知道这个事实对二次曲线上的四个点同样是成立的但有一个重要的限制这第五个点不能在平面上任意移动但仍然可以在给定的二次曲线上自由移动xxxxxxxx不难证明这个结果的逆命题如果一曲线k上有两点oo使得k上任意四点abcd从o和o出发有同样的交比则k是二次曲线因此abcd和k上任意第三点o有同样的交比在这里我们就不讲这个证明了xxxxxxxx二次曲线的这些射影性质启发我们对这些曲线的作图采用一种一般的方法我们称平面上过给定点o的所有直线为一线束现在考虑通过在二次曲线k上选定的两点o和o的线束在o的线束和o的线束之间我们可以建立这样的一一对应对o的一直线a和o的一直线a只要a和a交于二次曲线k上一点a就把它们配为一对这时o的线束中任意四条直线abcd和o中四条相应的直线abcd将有相同的交比在二线束之间任意一个具有这种性质的一一对应称为射影对应这个定义显然是在此处给出的两条直线上点与点之间的射影对应的对偶定义存在着射影对应的线束我们称为是射影相关的根据这个定义我们现在可以断言二次曲线k是两族射影相关的线束的相应直线的交点的轨迹这个定理为二次曲线的纯粹射影定义提供了基础二次曲线是两族射影相关的线束中相应直线交点的轨迹8可以试图以这个定义为起点去发展二次曲线的理论但是在这里我们只限于作一些说明xxxxxxxx图98-射影相关束的作图预备xxxxxxxx射影相关的线束可以这样得到从两个不同的中心o和o射影一直线l上的所有点p在这些射影线束中使得交于l上的直线a和a彼此对应则这两族线束是射影相关的现在取线束o把它像刚体似地移动到任一位置o则所得的线束o将和o射影相关而且二线束之间的任何射影对应都可以这样得到这个事实是和此处习题1相对偶的事实如果线束o和o是相合的我们得到一个圆如果角相等但符号相反这二次曲线是等边双曲线见图99xxxxxxxx图99-由射影产生的圆和等边双曲线xxxxxxxx注意二次曲线的这个定义可以产生一条直线的轨迹如图98在这种情形直线oo对应它本身它的所有点都被认为属于这轨迹因此这二次曲线退化成一对直线它们与下列事实相符一个圆锥存在着由两条直线组成的截线由通过顶点的平面与它相截而得到xxxxxxxx习题1用射影线束画椭圆双曲线和抛物线要求读者极力通过这样的作图来作试验它将大大有助于读者的理解xxxxxxxx2已知五个点ooabc位于一未知的二次曲线k上求作过o的一条给定直线d和k的交点d提示考虑由oaoboc给出的过o射线abc和类似地过o的射线abc过o画射线d且过o作射线d使abcdabcd则d和d的交点必然是k上的一点xxxxxxxx">2．二次曲线的射影性质XXXXXXXX在上节叙述的事实的基础上，我们将采用这样一个尝试性的定义：圆锥曲线是圆在平面上的投影．这个定义比通常用焦点的定义更多地保留了射影几何的精神，因为后者完全依赖于距离这度量概念．但是，即使我们现在的这个定义也没有完全避免这个缺陷，因为“圆”也是度量几何的一个概念．下面我们将给出圆锥曲线的一个纯粹射影定义．XXXXXXXX由于我们已经接受了一个圆锥曲线只是一个圆的射影这样的定义［词“conic”（圆锥曲线）的意思是指圆的射影类（见此处）中的任一曲线］，由此可知，圆在射影下不变的任何性质，也将为任意二次曲线所具备．现在圆有一个众所周知的（度量）性质：一给定圆弧所对的每个圆周角相等．在图96中弧AB所对着的角AOB是和O的位置无关的．如果考虑圆上四个点A，B，C，D，而不是圆上两个点A，B的话，这个事实就和交比这个射影概念有关了．连接这四个点和圆上第五个点O的四条直线a，b，c，d将有交比（abcd），它只依赖于弧CA，CB，DA，DB所对着的圆周角．如果我们把A，B，C，D和圆上另一点O′连接起来，我们得到四条直线a′，b′，c′，d′．从刚才提到的圆的性质可知，这两组四条直线是“相合的”〔7〕．因此它们具有相同的交比：（a′b′c′d′）＝（abcd）．现在如果我们把圆射影成任意二次曲线K，我们将得到K上的四个点，仍记为A，B，C，D，还有另外两个点O，O′，以及两组四条直线a，b，c，d和a′，b′，c′，d′．这两组四条直线不一定相合，因为相等的角经过射影一般是不会相等的．但是由于交比在射影下是不变的，等式（abcd）＝（a′b′c′d′）仍然成立．这就引出一个基本定理：把圆锥曲线K上任意四点A，B，C，D和K上第五个点O用直线a，b，c，d连接起来，交比（ab
+cd）与K上点O的位置无关（图97）．XXXXXXXX图96　圆上的交比XXXXXXXX图97　椭圆上的交比XXXXXXXX这确实是惊人的结果．我们已经知道在一直线上任取的四个点与平面上任何第五个点O的交比是一样的．这个关于交比的定理是射影几何的一个基本事实．现在我们知道，这个事实对二次曲线上的四个点同样是成立的，但有一个重要的限制：这第五个点不能在平面上任意移动，但仍然可以在给定的二次曲线上自由移动．XXXXXXXX不难证明这个结果的逆命题：如果一曲线K上有两点O，O′，使得K上任意四点A，B，C，D从O和O′出发有同样的交比，则K是二次曲线（因此A，B，C，D和K上任意第三点O″有同样的交比）．在这里我们就不讲这个证明了．XXXXXXXX二次曲线的这些射影性质，启发我们对这些曲线的作图采用一种一般的方法．我们称平面上过给定点O的所有直线为一线束．现在考虑通过在二次曲线K上选定的两点O和O′的线束．在O的线束和O′的线束之间我们可以建立这样的一一对应：对O的一直线a和O′的一直线a′，只要a和a′交于二次曲线K上一点A，就把它们配为一对．这时O的线束中任意四条直线a，b，c，d和O′中四条相应的直线a′，b′，c′，d′将有相同的交比．在二线束之间，任意一个具有这种性质的一一对应称为射影对应（这个定义显然是在此处给出的两条直线上点与点之间的射影对应的对偶定义）．存在着射影对应的线束我们称为是射影相关的．根据这个定义我们现在可以断言：二次曲线K是两族射影相关的线束的相应直线的交点的轨迹．这个定理为二次曲线的纯粹射影定义提供了基础：二次曲线是两族射影相关的线束中相应直线交点的轨迹〔8〕．可以试图以这个定义为起点去发展二次曲线的理论，但是在这里我们只限于作一些说明．XXXXXXXX图98　射影相关束的作图预备XXXXXXXX射影相关的线束可以这样得到：从两个不同的中心O和O″射影一直线l上的所有点P，在这些射影线束中使得交于l上的直线a和a″彼此对应，则这两族线束是射影相关的．现在取线束O″，把它像刚体似地移动到任一位置O′，则所得的线束O′将和O射影相关．而且二线束之间的任何射影对应都可以这样得到（这个事实是和此处习题1相对偶的事实）．如果线束O和O′是相合的，我们得到一个圆．如果角相等，但符号相反，这二次曲线是等边双曲线（见图99）．XXXXXXXX图99　由射影产生的圆和等边双曲线XXXXXXXX注意二次曲线的这个定义可以产生一条直线的轨迹，如图98．在这种情形，直线OO″对应它本身，它的所有点都被认为属于这轨迹．因此这二次曲线退化成一对直线，它们与下列事实相符：一个圆锥存在着由两条直线组成的截线（由通过顶点的平面与它相截而得到）．XXXXXXXX习题：1）用射影线束画椭圆、双曲线和抛物线（要求读者极力通过这样的作图来作试验，它将大大有助于读者的理解）．XXXXXXXX2）已知五个点O，O′，A，B，C位于一未知的二次曲线K上，求作过O的一条给定直线d和K的交点D（提示：考虑由OA，OB，OC给出的过O射线a，b，c，和类似地过O′的射线a′，b′，c′，过O画射线d，且过O′作射线d′，使（abcd）＝（a′b′c′d′），则d和d′的交点必然是K上的一点）．XXXXXXXX</h4>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

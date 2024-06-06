@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="hbaolong@vip.qq.com" />
+  <title>论语之305-2025年4月6日-2．多元函数的极大和极小　鞍点</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">论语之305-2025年4月6日-2．多元函数的极大和极小　鞍点</h1>
+<p class="author">hbaolong@vip.qq.com</p>
+</header>
+<h4
+id="多元函数的极大和极小-鞍点xxxxxxxx有一些极值问题是不能用一元函数fx来表述的其中最简单的情形就是求二元函数zfxy的极值xxxxxxxx我们可以把fxy解释成一个曲面在xy平面上的高度z比方说我们可以把它解释成像一座山那样fxy的极大对应山顶极小对应谷底或湖底在这两种情形下只要曲面是光滑的其切平面就是水平的但除了山顶和谷底外还有另外的点其切平面也是水平的这就是两山峰中间的隘口对应的点让我们更详细的考察这些点考察如图192所示的两座山a和b的山脊以及山脊异侧的两点c和d假设我们希望由c走到d首先让我们考察过c和d的平面截此曲面而得到那些由c到d的路径每一条这样的路径都有一个最高点若改变截平面的位置路径也就随之改变这些路径中有一条路径其最高点在所有路径的最高点中是最低的这条路径的最高点e是山的一个隘口数学上叫做鞍点显然e既不是极大值也不是极小值因为我们可随意在e的邻近的地方找到比e高以及比e低的点刚才我们把路径限制在平面内去掉这个限制我们可以同样的去考虑任意路径鞍点的性质仍是相同的xxxxxxxx图192-山的隘口xxxxxxxx类似地如果我们要由山顶a到山顶b那么任意一条特殊的路径都有一个最低点如果我们仍只考虑截平面那么存在一条ab路径其最低点在所有路径的最低点中是最高的这条路径的极小值处仍是上面所找到的e点这样鞍点e具有最高极小或最低极大的性质也就是一个极大极小值或极小极大值在e处的切平面是水平的因为e是ab的极小点那么ab在e点的切线一定是水平的类似的因为e是cd的极大点cd在e处的切线也必是水平的所以由这些切线所确定的切平面也是水平的这样我们找到了有水平切平面的三种不同类型的点极大点极小点和鞍点相应这些点我们有fxy的不同类型的平稳值xxxxxxxx表示函数fxy的另一个方法是画等值线就像地图中用以表示高度的等高线一样见此处等值线是xy-平面内使函数具有一定值的曲线这样这些等值线与曲线族fxyc是一样的平面上任一寻常点恰有一条等值线通过极大点或极小点是由很多的闭等值线围绕着而在鞍点则有若干条等值线在此交叉图193的等值线表示了图192的图像这里明显看出e的极大极小性质联结a和b且不经过e的任意一条路径必须通过fxyfe的区域而图192的路径aeb在e点为极小同样可以看出fxy在e点的值是所有联结cd路径中的最小的极大xxxxxxxx图193-相应的等高线地图xxxxxxxx">2．多元函数的极大和极小　鞍点XXXXXXXX有一些极值问题是不能用一元函数f（x）来表述的．其中最简单的情形就是求二元函数z＝f（x，y）的极值．XXXXXXXX我们可以把f（x，y）解释成一个曲面在xy平面上的高度z．比方说我们可以把它解释成像一座山那样．f（x，y）的极大对应山顶；极小对应谷底或湖底．在这两种情形下，只要曲面是光滑的，其切平面就是水平的．但除了山顶和谷底外；还有另外的点，其切平面也是水平的：这就是两山峰中间的隘口对应的点．让我们更详细的考察这些点．考察如图192所示的两座山A和B的山脊以及山脊异侧的两点C和D，假设我们希望由C走到D．首先让我们考察过C和D的平面截此曲面而得到那些由C到D的路径．每一条这样的路径都有一个最高点．若改变截平面的位置，路径也就随之改变．这些路径中有一条路径，其最高点在所有路径的最高点中是最低的．这条路径的最高点E是山的一个隘口，数学上叫做鞍点．显然，E既不是极大值也不是极小值，因为我们可随意在E的邻近的地方找到比E高以及比E低的点．刚才我们把路径限制在平面内，去掉这个限制我们可以同样的去考虑任意路径，鞍点的性质仍是相同的．XXXXXXXX图192　山的隘口XXXXXXXX类似地，如果我们要由山顶A到山顶B，那么任意一条特殊的路径都有一个最低点；如果我们仍只考虑截平面，那么存在一条AB路径，其最低点在所有路径的最低点中是最高的．这条路径的极小值处仍是上面所找到的E点．这样，鞍点E具有最高极小或最低极大的性质；也就是一个极大极小值或极小极大值．在E处的切平面是水平的；因为E是AB的极小点，那么AB在E点的切线一定是水平的，类似的，因为E是CD的极大点，CD在E处的切线也必是水平的．所以由这些切线所确定的切平面也是水平的．这样，我们找到了有水平切平面的三种不同类型的点：极大点，极小点和鞍点，相应这些点，我们有f（x，y）的不同类型的平稳值．XXXXXXXX表示函数f（x，y）的另一个方法是画等值线，就像地图中用以表示高度的等高线一样（见此处）．等值线是x，y-平面内使函数具有一定值的曲线；这样，这些等值线与曲线族f（x，y）＝c是一样的，平面上任一寻常点恰有一条等值线通过，极大点或极小点是由很多的闭等值线围绕着，而在鞍点则有若干条等值线在此交叉．图193的等值线表示了图192的图像，这里明显看出E的极大－极小性质：联结A和B且不经过E的任意一条路径，必须通过f（x，y）＜f（E）的区域，而图192的路径AEB在E点为极小．同样可以看出，f（x，y）在E点的值是所有联结C，D路径中的最小的极大．XXXXXXXX图193　相应的等高线地图XXXXXXXX</h4>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

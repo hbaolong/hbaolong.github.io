@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="hbaolong@vip.qq.com" />
+  <title>论语之337-2025年5月8日-1．把导数看作是斜率</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">论语之337-2025年5月8日-1．把导数看作是斜率</h1>
+<p class="author">hbaolong@vip.qq.com</p>
+</header>
+<h4
+id="把导数看作是斜率xxxxxxxx虽然积分概念早在古代就已经打下基础但微积分的另一个基本概念导数则是在17世纪才由费马及其他人建立起来的由于牛顿和莱布尼茨发现了这两个表面上是相反的概念之间的内在联系从而使数学科学开始了空前的发展xxxxxxxx费马对确定函数yfx的极大与极小的问题很感兴趣在函数的图像中极大对应一个峰顶它比相邻的其他一切点都高而极小对应谷底它比相邻的其他一切点都低在此处图191b点是极大值c点是极小值为了刻划极大点和极小点的特征很自然的要用曲线的切线概念我们假定图像没有尖角或其他奇点并且曲线在每一点的方向都由切线给出在极大和极小点图像yfx的切线必然平行于x轴因为否则曲线在这些点必定上升或下降这个说明使我们产生如下的想法要在图像yfx的任意一点一般的考察曲线的切线方向xxxxxxxx要刻画xy-平面上一条直线的方向习惯上都是给出它的斜率所谓斜率是指从x轴的正方向到直线之间的夹角α的正切如果取直线l上的任一点p然后继续往右到点r再上升或下降到直线上的点q那么l的斜率tanα线长pr取为正的而rq可能是正的也可能是负的这要看r到q是向上还是往下而定这样如果我们沿直线从左到右那么斜率给出的是沿水平方向每经过单位长度直线上升或下降的值在图267第一条直线的斜率是23而第二条直线的斜率是-1xxxxxxxx图267-直线的斜率xxxxxxxx至于曲线在点p的斜率指的是曲线在点p的切线的斜率只要我们把曲线的切线当作是一个直观给出的数学观念那么剩下的问题就是找出计算斜率的方法我们暂时接受这个看法而把其中涉及的问题的严密分析留待本章后面的补充中去解决xxxxxxxx">1．把导数看作是斜率XXXXXXXX虽然积分概念早在古代就已经打下基础，但微积分的另一个基本概念——导数，则是在17世纪才由费马及其他人建立起来的．由于牛顿和莱布尼茨发现了这两个表面上是相反的概念之间的内在联系，从而使数学科学开始了空前的发展．XXXXXXXX费马对确定函数y＝f（x）的极大与极小的问题很感兴趣．在函数的图像中，极大对应一个峰顶，它比相邻的其他一切点都高，而极小对应谷底，它比相邻的其他一切点都低．在此处图191，B点是极大值，C点是极小值．为了刻划极大点和极小点的特征，很自然的要用曲线的切线概念．我们假定图像没有尖角或其他奇点，并且曲线在每一点的方向，都由切线给出．在极大和极小点，图像y＝f（x）的切线必然平行于x轴，因为否则曲线在这些点必定上升或下降．这个说明，使我们产生如下的想法：要在图像y＝f（x）的任意一点，一般的考察曲线的切线方向．XXXXXXXX要刻画x，y-平面上一条直线的方向，习惯上都是给出它的斜率．所谓斜率，是指从x轴的正方向到直线之间的夹角α的正切．如果取直线L上的任一点P，然后继续往右到点R，再上升或下降到直线上的点Q；那么L的斜率＝tanα＝．线长PR取为正的，而RQ可能是正的，也可能是负的，这要看R到Q是向上还是往下而定．这样，如果我们沿直线从左到右，那么斜率给出的是沿水平方向每经过单位长度，直线上升或下降的值．在图267第一条直线的斜率是2／3，而第二条直线的斜率是-1．XXXXXXXX图267　直线的斜率XXXXXXXX至于曲线在点P的斜率，指的是曲线在点P的切线的斜率．只要我们把曲线的切线，当作是一个直观给出的数学观念，那么剩下的问题就是找出计算斜率的方法．我们暂时接受这个看法，而把其中涉及的问题的严密分析，留待本章后面的补充中去解决．XXXXXXXX</h4>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

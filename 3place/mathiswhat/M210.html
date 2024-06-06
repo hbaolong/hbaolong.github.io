@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="hbaolong@vip.qq.com" />
+  <title>论语之210-2025年1月1日-3．棣莫弗公式和单位根</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">论语之210-2025年1月1日-3．棣莫弗公式和单位根</h1>
+<p class="author">hbaolong@vip.qq.com</p>
+</header>
+<h4
+id="棣莫弗公式和单位根xxxxxxxx一个数a的n次方根是一个使得bna的数b特别是数1有两个平方根1和-1因为12-121数1只有一个实的立方根1但它却有四个四次方根实数1和-1虚数i和-i这些事实使我们想到在复数域中可能还有1的两个立方根从而合起来共有三个从棣莫弗公式立刻可以说明确实如此xxxxxxxx我们将看到在复数域中1恰有n个不同的n次方根它们可以用单位圆的一个内接正n边形的顶点来表示z1是其中之一这从图25几乎立刻就看清楚了画的是n12的情形多边形的第一个顶点是1下一个是xxxxxxxx图25-1的12次方根xxxxxxxx因为它的辐角必须是周角360的n分之一再下一个顶点是ααα2因为把向量α旋转角我们就得到它再下一个是α3等等第n步后我们最终回到顶点1即我们有xxxxxxxxαn1xxxxxxxx这也可以由公式11导出因为xxxxxxxx可见α1α是方程xn1的一个根对下一个顶点α2同样为真这一点由xxxxxxxxα2nα2nαn2121xxxxxxxx或由棣莫弗公式xxxxxxxx可以看出用同样的方法我们看到所有这n个数xxxxxxxx1αα2α3αn1xxxxxxxx都是1的n次方根这指数序列再往后或利用负指数都不会产生新的根因为α-1αn1而αn1αn1αnα1αα等等从而只是简单重复以前的值可以说明没有其他的n次方根这一点留给读者做练习xxxxxxxx如果n是偶数则n边形有一个顶点在点-1处这同-1是1的n次方根这个代数事实相符xxxxxxxx1的n次方根所满足的方程xxxxxxxx是n次的但它容易化为一个n1次的方程我们利用代数公式xxxxxxxx由于两个数的积为零必须而且只须其中一个数是零所以14的左边为零仅当右边两个因子中有一个为零即或者x1或者等式xxxxxxxx成立这时这个方程必然为αα2αn1这些根所满足它称为分圆圆的分割方程例如1的三次复根xxxxxxxxαcos120isin120-1ixxxxxxxxα2cos240isin240-1ixxxxxxxx是方程xxxxxxxxx2x10xxxxxxxx的根读者通过直接代入容易看出这一点同样地1的五次方根除1本身外都满足方程xxxxxxxx为了作一个正五边形我们必须解这个四次方程通过简单的代数方法可以把它化为量ωx的二次方程我们用x2去除16而且将各项重新排列得xxxxxxxx由于x22我们得到方程xxxxxxxxω2ω10xxxxxxxx由第一小节公式7得知这方程有根xxxxxxxxω1ω2xxxxxxxx因此1的五次复根是下列两个二次方程的根xxxxxxxxxω1或x210xxxxxxxxxω2或x210xxxxxxxx读者利用上面已经用过的公式可以解出它们xxxxxxxx习题1求1的六次方根xxxxxxxx2求1i11xxxxxxxx3求出的所有不同值xxxxxxxx4计算i7i-7xxxxxxxx4代数基本定理xxxxxxxx不仅每一个形如ax2bxc0或形如xn10的方程在复数域中是可解的而且下述事实也成立每一个带有实或复系数的任意n次代数方程xxxxxxxx在复数域中有解对三次四次方程来说这个结论是在十六世纪由塔尔塔利亚tartaglia卡尔坦cardan和其他一些人得出的他们用本质上类似于二次方程的求解公式虽然远为复杂来解这样的方程对于五次和更高次的一般方程进行了几乎二百年的深入研究然而用同样方法求解的所有努力都失败了年轻的高斯在他的博士论文中1799年成功地给出了解的存在的第一个完整的证明时这是一个巨大的成就尽管把用有理算式和根式来表示小于五次的方程的解的经典公式加以推广的问题在当时仍然没有得到解答见此处xxxxxxxx高斯的定理断言对于任何一个形如17的代数方程其中n是一正整数而这些a是任意实数或复数至少存在一复数αcdi使xxxxxxxxfα0xxxxxxxx数α称为方程17的一个根在此处将给出这个定理的一个证明现在假定它成立则我们能够证明人所共知的代数基本定理称它为复数系的基本定理更为合适每一个n次多项式xxxxxxxx可以恰好分解为n个因式的乘积xxxxxxxx其中α1α2α3αn是复数是方程fx0的根我们举一个例子来说明这个定理多项式x41可以分解为xxxxxxxxfxx1xixix1xxxxxxxx这些α是方程fx0的根这一点从因式分解19来看是显然的因为对xαrfx的一个因子等于零从而fx本身等于零xxxxxxxx在某些情形一个n次多项式fx的因子xα1xα2不是各各不同的例如xxxxxxxxfxx22x1x1x1xxxxxxxx只有一个根x1它算作两次或者说是二重的在任何情况下一个n次多项式的不同因子不能多于n个而相应的方程的根不能多于n个xxxxxxxx为证明因式分解定理我们再次用代数等式xxxxxxxx对α1来说它就是等比级数公式由于我们假定高斯定理是对的我们可以假设αα1是方程17的一个根所以有xxxxxxxx从fx中减去它并将各项重新排列我们得到等式xxxxxxxx现在由20我们能从21的每一项中提出因子xα1使得每一项剩下的因子的次数都降一次因此将各项重新排列我们得到xxxxxxxxfxxα1gxxxxxxxxx这里gx是n1次多项式xxxxxxxxgxxn1bn2xn2b1xb0xxxxxxxx对我们的目的来说完全无需计算系数bk现在我们可以对gx施以同样的办法根据高斯定理存在方程gx0的一个根α2使得xxxxxxxxgxxα2hxxxxxxxxx这里hx是一个n2次多项式用同样的方式一共进行n1次当然这句话仅仅是用数学归纳法进行论证的代用语我们最后得到完全的分解xxxxxxxx从22得知不仅复数α1α2αn是方程17的根而且它再没有其他的根因为如果y是方程17的一个根则由22有xxxxxxxxfyyα1yα2yαn0xxxxxxxx我们从此处已经看到复数的乘积等于零必须而且只须其中一个因子等于零因此必有一个因子yαr等于零即y必须等于αr这正是要证明的xxxxxxxx6-代数数和超越数xxxxxxxx">3．棣莫弗公式和单位根XXXXXXXX一个数a的n次方根是一个使得bn＝a的数b．特别是数1有两个平方根1和-1，因为12＝（-1）2＝1．数1只有一个实的立方根1，但它却有四个四次方根，实数1和-1，虚数i和-i．这些事实使我们想到，在复数域中可能还有1的两个立方根，从而合起来共有三个．从棣莫弗公式立刻可以说明确实如此．XXXXXXXX我们将看到在复数域中，1恰有n个不同的n次方根，它们可以用单位圆的一个内接正n边形的顶点来表示，z＝1是其中之一．这从图25几乎立刻就看清楚了（画的是n＝12的情形）．多边形的第一个顶点是1．下一个是XXXXXXXX图25　1的12次方根XXXXXXXX因为它的辐角必须是周角360°的n分之一．再下一个顶点是α·α＝α2，因为把向量α旋转角，我们就得到它．再下一个是α3，等等．第n步后，我们最终回到顶点1，即我们有XXXXXXXXαn＝1．XXXXXXXX这也可以由公式（11）导出，因为XXXXXXXX可见α1＝α是方程xn＝1的一个根．对下一个顶点α2＝＋，同样为真，这一点由XXXXXXXX（α2）n＝α2n＝（αn）2＝12＝1，XXXXXXXX或由棣莫弗公式XXXXXXXX可以看出．用同样的方法，我们看到所有这n个数XXXXXXXX1，α，α2，α3，…，αn－1XXXXXXXX都是1的n次方根．这指数序列再往后，或利用负指数，都不会产生新的根．因为α-1＝＝＝αn－1，而αn＝1，αn＋1＝αn·α＝1·α＝α，等等，从而只是简单重复以前的值．可以说明没有其他的n次方根，这一点留给读者做练习．XXXXXXXX如果n是偶数，则n边形有一个顶点在点-1处，这同-1是1的n次方根这个代数事实相符．XXXXXXXX1的n次方根所满足的方程XXXXXXXX是n次的，但它容易化为一个（n－1）次的方程．我们利用代数公式XXXXXXXX由于两个数的积为零必须而且只须其中一个数是零，所以（14）的左边为零仅当右边两个因子中有一个为零，即或者x＝1，或者等式XXXXXXXX成立．这时这个方程必然为α，α2，…，αn－1这些根所满足，它称为分圆（圆的分割）方程．例如1的三次复根XXXXXXXXα＝cos120°＋isin120°＝（-1＋i），XXXXXXXXα2＝cos240°＋isin240°＝（-1－i），XXXXXXXX是方程XXXXXXXXx2＋x＋1＝0XXXXXXXX的根，读者通过直接代入容易看出这一点．同样地，1的五次方根，除1本身外，都满足方程XXXXXXXX为了作一个正五边形，我们必须解这个四次方程．通过简单的代数方法，可以把它化为量ω＝x＋的二次方程．我们用x2去除（16）而且将各项重新排列，得XXXXXXXX由于＝x2＋＋2，我们得到方程XXXXXXXXω2＋ω－1＝0．XXXXXXXX由第一小节公式（7）得知，这方程有根XXXXXXXXω1＝，ω2＝．XXXXXXXX因此，1的五次复根是下列两个二次方程的根，XXXXXXXXx＋＝ω1或x2＋＋1＝0，XXXXXXXXx＋＝ω2或x2＋＋1＝0．XXXXXXXX读者利用上面已经用过的公式可以解出它们．XXXXXXXX习题：1）求1的六次方根．XXXXXXXX2）求（1＋i）11．XXXXXXXX3）求出，，，的所有不同值．XXXXXXXX4）计算（i7－i-7）．XXXXXXXX<em>4．代数基本定理XXXXXXXX不仅每一个形如ax2＋bx＋c＝0或形如xn－1＝0的方程在复数域中是可解的，而且下述事实也成立：每一个带有实或复系数的任意n次代数方程XXXXXXXX在复数域中有解．对三次、四次方程来说，这个结论是在十六世纪由塔尔塔利亚（Tartaglia）、卡尔坦（Cardan）和其他一些人得出的，他们用本质上类似于二次方程的求解公式（虽然远为复杂）来解这样的方程．对于五次和更高次的一般方程，进行了几乎二百年的深入研究，然而用同样方法求解的所有努力都失败了．年轻的高斯在他的博士论文中（1799年）成功地给出了解的存在的第一个完整的证明时，这是一个巨大的成就，尽管把用有理算式和根式来表示小于五次的方程的解的经典公式加以推广的问题，在当时仍然没有得到解答（见此处）．XXXXXXXX高斯的定理断言，对于任何一个形如（17）的代数方程，其中n是一正整数，而这些a是任意实数或复数，至少存在一复数α＝c＋di，使XXXXXXXXf（α）＝0．XXXXXXXX数α称为方程（17）的一个根．在此处将给出这个定理的一个证明．现在假定它成立，则我们能够证明人所共知的代数基本定理（称它为复数系的基本定理更为合适）：每一个n次多项式XXXXXXXX可以恰好分解为n个因式的乘积XXXXXXXX其中α1，α2，α3，…，αn是复数，是方程f（x）＝0的根．我们举一个例子来说明这个定理，多项式x4－1可以分解为XXXXXXXXf（x）＝（x－1）（x－i）（x＋i）（x＋1）．XXXXXXXX这些α是方程f（x）＝0的根，这一点从因式分解（19）来看是显然的，因为对x＝αr，f（x）的一个因子等于零，从而f（x）本身等于零．XXXXXXXX在某些情形，一个n次多项式f（x）的因子（x－α1），（x－α2），…不是各各不同的，例如XXXXXXXXf（x）＝x2－2x＋1＝（x－1）（x－1），XXXXXXXX只有一个根x＝1，它“算作两次”或者说是“二重的”．在任何情况下，一个n次多项式的不同因子不能多于n个，而相应的方程的根不能多于n个．XXXXXXXX为证明因式分解定理，我们再次用代数等式XXXXXXXX对α＝1来说，它就是等比级数公式．由于我们假定高斯定理是对的，我们可以假设α＝α1是方程（17）的一个根，所以有XXXXXXXX从f（x）中减去它并将各项重新排列，我们得到等式：XXXXXXXX现在，由（20），我们能从（21）的每一项中提出因子（x－α1），使得每一项剩下的因子的次数都降一次．因此，将各项重新排列，我们得到XXXXXXXXf（x）＝（x－α1）g（x），XXXXXXXX这里g（x）是n－1次多项式，XXXXXXXXg（x）＝xn－1＋bn－2xn－2＋…＋b1x＋b0．XXXXXXXX（对我们的目的来说，完全无需计算系数bk．）现在我们可以对g（x）施以同样的办法，根据高斯定理，存在方程g（x）＝0的一个根α2，使得XXXXXXXXg（x）＝（x－α2）h（x），XXXXXXXX这里h（x）是一个n－2次多项式．用同样的方式一共进行n－1次（当然这句话仅仅是用数学归纳法进行论证的代用语），我们最后得到完全的分解XXXXXXXX从（22）得知，不仅复数α1，α2，…，αn是方程（17）的根，而且它再没有其他的根，因为如果y是方程（17）的一个根，则由（22）有XXXXXXXXf（y）＝（y－α1）（y－α2）…（y－αn）＝0．XXXXXXXX我们从此处已经看到，复数的乘积等于零必须而且只须其中一个因子等于零．因此必有一个因子（y－αr）等于零，即y必须等于αr，这正是要证明的．XXXXXXXX</em>§6　代数数和超越数XXXXXXXX</h4>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

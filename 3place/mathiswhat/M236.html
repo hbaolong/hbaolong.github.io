@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="hbaolong@vip.qq.com" />
+  <title>论语之236-2025年1月27日-1．几何性质的分类　变换下的不变性</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">论语之236-2025年1月27日-1．几何性质的分类　变换下的不变性</h1>
+<p class="author">hbaolong@vip.qq.com</p>
+</header>
+<h4
+id="几何性质的分类-变换下的不变性xxxxxxxx几何学所讨论的是平面和空间图形的性质这些性质形形色色名目繁多以至有必要用某些分类的办法把这丰富的知识条理化例如人们可以根据推导定理时所用的方法引进一种分类从这观点出发把它分为综合的和解析的两种方法前一个是经典的欧几里得公理方法其内容是建立在纯粹几何的基础上与代数以及数的连续统的观念无关而且定理是借助逻辑推理从称为公理或公设的一组初始命题导出的第二个方法是在引进数值坐标的基础上应用了代数的技巧这个方法给数学科学带来了一个深刻的变化其结果把几何分析和代数统一成了一个有机的系统xxxxxxxx在这一章按照内容来分类要比按照方法来分类更重要这里分类是基于定理本身的特性而不管其证明的方法如何在初等平面几何中人们把用长度和角的概念来处理的图形全等的定理与仅用角的概念来处理的图形相似的定理区分开来但这个区分并不重要因为长度和角度是如此紧密地联系着的以至硬把它们分开来显得有些牵强有关这类联系的研究形成了三角学这门学科的大部分如果不考虑这一点我们可以说初等几何是关于量值长度角度及面积的理论从这个观点来看两个图形如果它们是全等的即如果从一个图形可以通过刚体运动的办法得到另一个图形并且在此刚体运动中只有位置的改变而没有量值的变化我们就说它们是等价的现在产生了一个问题量值的概念以及与此有关的全等和相似概念对于几何来说是不是最本质的或者说几何图形是否还具有更深刻的甚至在比刚体运动更剧烈的变换下也保持不变的性质我们将会看到情况确实如此xxxxxxxx图69-圆的压缩xxxxxxxx假设我们在一个矩形的软木块上画一个圆和两条互相垂直的直径如图69如果我们把这块软木放在一个老虎钳的钳口中把它压缩成原来宽度的一半则这个圆将变成一个椭圆两个直径所夹成的角将不再是直角圆周上的点到中心的距离相等这个圆所具有的性质在椭圆上也不复成立了这样一来似乎原来图形的所有几何性质经过压缩后都被破坏了其实不然例如中心平分直径这一命题对圆和椭圆都是成立的在这里当原来图形经过一个在量值方面的剧烈变化后我们仍然得到一个保持不变的性质这个观察使我们想到可以把几何图形的定理依此加以分类图形经过均匀压缩其定理是否仍然成立更一般地对任何确定的一类图形进行变换例如刚体运动压缩圆的反演等等我们可以问在这类变换下图形的什么性质将保持不变研究这些性质的全体定理将是与这类变换相关联的几何这种按照变换的方式把几何分为不同分支的思想是克莱茵f.-klein18491925在1872年所作的一个有名的讲演厄兰格erlanger纲领中提出的从那时以来它极大地影响着几何的思想xxxxxxxx在第五章我们将发现一个很惊人的事实几何图形的某些性质有如此深刻的不变性即使图形受到非常剧烈的形变这些性质仍然保留下来画在一块橡皮上的图形当这橡皮以任意方式被拉长或压缩时其图形仍然保持原来的某些特性但在这一章中我们只研究如下一些性质它们只是在一类特定变换下保持不变或者说具有不变性这类变换介于以下二者之间一方是受到严格限制的刚体运动另一方是最普通的任意变换这就是射影变换类xxxxxxxx">1．几何性质的分类　变换下的不变性XXXXXXXX几何学所讨论的是平面和空间图形的性质．这些性质形形色色、名目繁多，以至有必要用某些分类的办法把这丰富的知识条理化．例如，人们可以根据推导定理时所用的方法引进一种分类．从这观点出发，把它分为“综合”的和“解析”的两种方法．前一个是经典的欧几里得公理方法，其内容是建立在纯粹几何的基础上，与代数以及数的连续统的观念无关，而且定理是借助逻辑推理从称为公理或公设的一组初始命题导出的．第二个方法是在引进数值坐标的基础上，应用了代数的技巧．这个方法给数学科学带来了一个深刻的变化，其结果把几何、分析和代数统一成了一个有机的系统．XXXXXXXX在这一章按照内容来分类要比按照方法来分类更重要．这里，分类是基于定理本身的特性而不管其证明的方法如何．在初等平面几何中，人们把（用长度和角的概念来处理的）图形全等的定理与（仅用角的概念来处理的）图形相似的定理区分开来．但这个区分并不重要，因为长度和角度是如此紧密地联系着的，以至硬把它们分开来显得有些牵强．（有关这类联系的研究，形成了三角学这门学科的大部分．）如果不考虑这一点，我们可以说初等几何是关于量值——长度、角度及面积——的理论．从这个观点来看，两个图形如果它们是全等的，即如果从一个图形可以通过刚体运动的办法得到另一个图形，并且在此刚体运动中，只有位置的改变而没有量值的变化，我们就说它们是等价的．现在产生了一个问题：量值的概念以及与此有关的全等和相似概念，对于几何来说是不是最本质的，或者说，几何图形是否还具有更深刻的、甚至在比刚体运动更剧烈的变换下也保持不变的性质．我们将会看到，情况确实如此．XXXXXXXX图69　圆的压缩XXXXXXXX假设我们在一个矩形的软木块上画一个圆和两条互相垂直的直径，如图69．如果我们把这块软木放在一个老虎钳的钳口中，把它压缩成原来宽度的一半，则这个圆将变成一个椭圆，两个直径所夹成的角将不再是直角，圆周上的点到中心的距离相等这个圆所具有的性质，在椭圆上也不复成立了．这样一来，似乎原来图形的所有几何性质经过压缩后都被破坏了．其实不然，例如“中心平分直径”这一命题对圆和椭圆都是成立的．在这里，当原来图形经过一个在量值方面的剧烈变化后，我们仍然得到一个保持不变的性质．这个观察使我们想到，可以把几何图形的定理依此加以分类：图形经过均匀压缩，其定理是否仍然成立．更一般地，对任何确定的一类图形进行变换（例如刚体运动、压缩、圆的反演等等），我们可以问，在这类变换下，图形的什么性质将保持不变．研究这些性质的全体定理将是与这类变换相关联的几何．这种按照变换的方式把几何分为不同分支的思想，是克莱茵（F.
+Klein，1849～1925）在1872年所作的一个有名的讲演（厄兰格（Erlanger）纲领）中提出的．从那时以来，它极大地影响着几何的思想．XXXXXXXX在第五章我们将发现一个很惊人的事实：几何图形的某些性质有如此深刻的不变性，即使图形受到非常剧烈的形变，这些性质仍然保留下来；画在一块橡皮上的图形，当这橡皮以任意方式被拉长或压缩时，其图形仍然保持原来的某些特性．但在这一章中，我们只研究如下一些性质，它们只是在一类特定变换下保持不变，或者说具有“不变性”；这类变换介于以下二者之间：一方是受到严格限制的刚体运动，另一方是最普通的任意变换．这就是“射影变换”类．XXXXXXXX</h4>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

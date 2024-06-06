@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="hbaolong@vip.qq.com" />
+  <title>论语之191-2024年12月13日-3．欧拉函数φ　再谈费马定理</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">论语之191-2024年12月13日-3．欧拉函数φ　再谈费马定理</h1>
+<p class="author">hbaolong@vip.qq.com</p>
+</header>
+<h4
+id="欧拉函数φ-再谈费马定理xxxxxxxx两个整数a和b如果它们的最大公因子是1xxxxxxxxab1xxxxxxxx则称它们是互素的例如24和35是互素的而12和18不是如果a和b是互素的则可以选择正的或负的整数k和l使xxxxxxxxkalb1xxxxxxxx这一点从此处所讲的ab的性质即知xxxxxxxx习题证明定理如果一整数r整除乘积ab且与a互素则r必整除b提示如果r是与a互素的我们能求出整数k和l使xxxxxxxxkrla1xxxxxxxx这等式两边用b乘这定理把此处的引理作为它的一个特殊情况因为一个素数p与一整数a互素必须而且只须p不整除axxxxxxxx对任意正整数n命φn表示在1到n中与n互素的整数的个数这首先由欧拉引进的函数φn是一个很重要的数论函数对n的前几个值φn的值是容易算出来的xxxxxxxxφ11-因为1是和1互素的xxxxxxxxφ21-因为1是和2互素的xxxxxxxxφ32-因为1和2是和3互素的xxxxxxxxφ42-因为1和3是和4互素的xxxxxxxxφ54-因为1234是和5互素的xxxxxxxxφ62-因为15是和6互素的xxxxxxxxφ76-因为123456是和7互素的xxxxxxxxφ84-因为1357是和8互素的xxxxxxxxφ96-因为124578是和9互素的xxxxxxxxφ104-因为1379是和10互素的xxxxxxxx等等xxxxxxxx我们看到如果p是素数φpp1因为一个素数除了它自身和1外没有其他因子因此它和所有整数123p1互素如果n是一合数它的素数分解为xxxxxxxx这里pi表示不同的素数每一个有某个幂则xxxxxxxx例如由于12223则xxxxxxxx而它确实是这个值这个证明是很初等的但在这里我们把它略去了xxxxxxxx习题用欧拉函数φ推广此处上的费马定理这个一般性的定理是如果n是任一整数且a是与n互素的则xxxxxxxxaφn1mod-nxxxxxxxx">3．欧拉函数φ　再谈费马定理XXXXXXXX两个整数a和b，如果它们的最大公因子是1：XXXXXXXX（a，b）＝1，XXXXXXXX则称它们是互素的．例如，24和35是互素的，而12和18不是．如果a和b是互素的，则可以选择正的或负的整数k和l，使XXXXXXXXka＋lb＝1．XXXXXXXX这一点从此处所讲的（a，b）的性质即知．XXXXXXXX习题：证明定理：如果一整数r整除乘积ab且与a互素，则r必整除b（提示：如果r是与a互素的，我们能求出整数k和l，使XXXXXXXXkr＋la＝1，XXXXXXXX这等式两边用b乘）．这定理把此处的引理作为它的一个特殊情况，因为一个素数p与一整数a互素必须而且只须p不整除a．XXXXXXXX对任意正整数n，命φ（n）表示在1到n中与n互素的整数的个数．这首先由欧拉引进的函数φ（n）是一个很重要的“数论函数”．对n的前几个值，φ（n）的值是容易算出来的：XXXXXXXXφ（1）＝1　因为1是和1互素的，XXXXXXXXφ（2）＝1　因为1是和2互素的，XXXXXXXXφ（3）＝2　因为1和2是和3互素的，XXXXXXXXφ（4）＝2　因为1和3是和4互素的，XXXXXXXXφ（5）＝4　因为1，2，3，4是和5互素的，XXXXXXXXφ（6）＝2　因为1，5是和6互素的，XXXXXXXXφ（7）＝6　因为1，2，3，4，5，6是和7互素的，XXXXXXXXφ（8）＝4　因为1，3，5，7是和8互素的，XXXXXXXXφ（9）＝6　因为1，2，4，5，7，8是和9互素的，XXXXXXXXφ（10）＝4　因为1，3，7，9是和10互素的，XXXXXXXX等等．XXXXXXXX我们看到如果p是素数，φ（p）＝p－1；因为一个素数除了它自身和1外没有其他因子，因此它和所有整数1，2，3，…，p－1互素．如果n是一合数，它的素数分解为XXXXXXXX这里pi表示不同的素数，每一个有某个幂，则XXXXXXXX例如，由于12＝22·3，则XXXXXXXX而它确实是这个值．这个证明是很初等的，但在这里我们把它略去了．XXXXXXXX习题：用欧拉函数φ，推广此处上的费马定理．这个一般性的定理是：如果n是任一整数且a是与n互素的，则XXXXXXXXaφ（n）≡1（mod　n）．XXXXXXXX</h4>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="hbaolong@vip.qq.com" />
+  <title>论语之335-2025年5月6日-4．积分举例　xr的积分</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">论语之335-2025年5月6日-4．积分举例　xr的积分</h1>
+<p class="author">hbaolong@vip.qq.com</p>
+</header>
+<h4
+id="积分举例-xr的积分xxxxxxxx直到现在为止我们关于积分的讨论还只是理论性的一个困难的问题是究竟有没有组成和式sn的一般范式然后对于具体情况通过实际取极限得到结果当然对于适合于求积分的特定函数就要增加一些推理两千年前阿基米德在计算抛物线弓形的面积时所用的极巧妙的方法就是我们现在称为函数fxx2的积分在17世纪近代微积分的先驱者成功的解决了如xn那样的简单函数的积分问题但用的仍是特殊的技巧只是在有了许多由这些特殊情形获得的经验之后才有了一个解决一般积分问题的微积分的系统方法并且使可以解决的个别问题的范围大大扩大在本节我们将讨论几个属于早期微积分阶段的有启发性的特例并且没有别的例子能比它们更好地说明积分是一个极限过程xxxxxxxxa我们从一个极简单的例子开始设yfx是常数例如fx2那么显然积分可以理解成一个面积就是2ba因为矩形的面积等于底乘高我们把这个结果和用极限定义的积分6作比较如果我们对于5中所有的j值都用fxj2代入则对任意的n有xxxxxxxx因为xxxxxxxxb几乎同样简单的一个例子是fxx的积分这里是梯形的面积图263由初等几何这个面积等于xxxxxxxx图263-梯形的面积xxxxxxxx这个结果再次和定积分的定义6一致这一点不利用几何图形通过实际取极限就可看出如果把fxx代入5那么和式sn成为xxxxxxxx图264-抛物线下的面积xxxxxxxx利用此处等差级数123n的公式1可得xxxxxxxx因为xxxxxxxxδxxxxxxxxx所以xxxxxxxx令n趋于无穷那么最后一项趋于零求得xxxxxxxx这与把面积看作是积分的几何解释一致xxxxxxxxc稍繁些的例子是函数fxx2的积分阿基米德用几何方法解决了与此相当的求抛物线yx2的弓形面积的问题我们将在定义6a的基础上进行分析为了简化计算我们把积分下限a取作零因而δxbn由于xjjδx且fxjj2δx2可以得到sn的表达式xxxxxxxx现在可以具体地计算这个极限利用此处建立的公式xxxxxxxx并且作代换δxbn我们得到xxxxxxxx作了这个初步变形后取极限就是很容易的事了因为当n无限增加时1n趋于零这样简单地得到极限xxxxxxxx因而得到结果xxxxxxxx将这个结果应用于从0到a的面积则有xxxxxxxx这两个面积相减得到xxxxxxxx习题利用此处公式5用同样的方法证明xxxxxxxx利用从1到n的整数的k次幂的和1k2knk的一般公式可以得到下面的结果对任意正整数k有xxxxxxxx不按这个方法进行利用前面的说明即可以用不等距的分点来计算积分可以得到更简单甚至更一般的结果我们将证明公式7不仅对任意正整数k成立而且对任意正或负的有理数xxxxxxxxkxxxxxxxx也成立这里u是正整数而v是正或负的整数应排除k-1的情形因为这时公式7没意义我们还假定0abxxxxxxxx为了得到公式7我们按等比级数来选择分点x0ax1x2xnb由此组成sn令xxxxxxxxq则qnxxxxxxxx我们规定x0ax1aqx2aq2xnaqnb利用这个技巧我们将看到取极限变得十分容易因为fxjakqjk而且δxjxj1xjaqj1aqj所以矩形和sn是xxxxxxxxsnakaqaakqkaq2aqakq2kaq3aq2xxxxxxxxakqn1kaqnaqn1xxxxxxxx因为每一项都有因子akaqa所以xxxxxxxxsnak1q11qk1q2k1qn1k1xxxxxxxx用t代换qk1我们看到花括号中的表达式是等比级数xxxxxxxx1tt2tn1xxxxxxxx它的和如此处所证明的是但xxxxxxxx因此xxxxxxxx这里xxxxxxxx以上是当n为固定数时的情形现在我们令n增加以确定n的极限当n增加时n次根q趋于1见此处因而n的分子分母同时趋于零这是必须注意的地方先假定k是正整数那么可以用q1去除得到见此处nqkqk1q1今若n增加q趋于1因此q2q3qk都趋于1故n趋于k1于是显示了sn趋于这就是我们要证明的xxxxxxxx习题证明对于任意有理数k-1有同样的极限公式nk1因而公式7仍然成立按照我们的范例首先给出负整数k的证明然后如果xxxxxxxxk记q1vsxxxxxxxx则xxxxxxxx如果n增加s和q同时趋于1因而右端两个比值分别趋于uv和v这就再次得到n的极限为xxxxxxxx在5中我们将看到这个冗长而不太自然的讨论可以用微积分中更简单而有效的方法代替xxxxxxxx习题1当k-2-23-3时逐个验证xk的积分xxxxxxxx2求下列积分值xxxxxxxxabcdexxxxxxxx3求下列积分值xxxxxxxxabxxxxxxxxcdxxxxxxxx提示考察积分号下的函数图像注意它们关于x0的对称性并且把积分解释成面积xxxxxxxx4利用代换δxh和此处的公式求sinx和cosx从0到b的积分xxxxxxxx5将区间等分并令公式6a中的xxxxxxxxvjxjxj1xxxxxxxx求fxx和fxx2从0到b的积分xxxxxxxx6利用公式7和δx相等时的积分定义证明极限关系式xxxxxxxx提示令δx并且证明这个极限等于xxxxxxxx7证明当n时xxxxxxxx提示改写这个和使得它的极限是一个积分xxxxxxxx8计算边界由抛物线yax2的弧p1p2和弦p1p2组成的抛物线弓形的面积并用两个点的坐标x1和x2表示出来xxxxxxxx">4．积分举例　xr的积分XXXXXXXX直到现在为止我们关于积分的讨论还只是理论性的．一个困难的问题是究竟有没有组成和式Sn的一般范式，然后对于具体情况通过实际取极限得到结果．当然，对于适合于求积分的特定函数就要增加一些推理．两千年前，阿基米德在计算抛物线弓形的面积时，所用的极巧妙的方法，就是我们现在称为函数f（x）＝x2的积分；在17世纪，近代微积分的先驱者成功的解决了如xn那样的简单函数的积分问题，但用的仍是特殊的技巧．只是在有了许多由这些特殊情形获得的经验之后，才有了一个解决一般积分问题的微积分的系统方法，并且使可以解决的个别问题的范围大大扩大．在本节我们将讨论几个属于“早期微积分”阶段的有启发性的特例．并且没有别的例子能比它们更好地说明积分是一个极限过程．XXXXXXXXa）我们从一个极简单的例子开始．设y＝f（x）是常数，例如f（x）＝2，那么显然积分可以理解成一个面积，就是2（b－a），因为矩形的面积等于底乘高．我们把这个结果和用极限定义的积分（6）作比较．如果我们对于（5）中所有的j值都用f（xj）＝2代入，则对任意的n有XXXXXXXX因为XXXXXXXXb）几乎同样简单的一个例子是f（x）＝x的积分．这里是梯形的面积（图263）．由初等几何，这个面积等于XXXXXXXX图263　梯形的面积XXXXXXXX这个结果再次和定积分的定义（6）一致，这一点，不利用几何图形，通过实际取极限就可看出：如果把f（x）＝x代入（5），那么和式Sn成为XXXXXXXX图264　抛物线下的面积XXXXXXXX利用此处等差级数1＋2＋3＋…＋n的公式（1）可得XXXXXXXX因为XXXXXXXXΔx＝，XXXXXXXX所以XXXXXXXX令n趋于无穷，那么最后一项趋于零，求得XXXXXXXX这与把面积看作是积分的几何解释一致．XXXXXXXXc）稍繁些的例子是函数f（x）＝x2的积分．阿基米德用几何方法解决了与此相当的求抛物线y＝x2的弓形面积的问题．我们将在定义（6a）的基础上进行分析．为了简化计算，我们把积分“下限”a取作零；因而Δx＝b／n．由于xj＝jΔx，且f（xj）＝j2（Δx）2，可以得到Sn的表达式XXXXXXXX现在，可以具体地计算这个极限．利用此处建立的公式XXXXXXXX并且作代换Δx＝b／n，我们得到XXXXXXXX作了这个初步变形后，取极限就是很容易的事了．因为当n无限增加时，1／n趋于零．这样简单地得到极限XXXXXXXX因而得到结果XXXXXXXX将这个结果应用于从0到a的面积，则有XXXXXXXX这两个面积相减，得到XXXXXXXX习题：利用此处公式（5），用同样的方法证明XXXXXXXX利用从1到n的整数的k次幂的和1k＋2k＋…＋nk的一般公式，可以得到下面的结果：对任意正整数k，有XXXXXXXX<em>不按这个方法进行，利用前面的说明（即，可以用不等距的分点来计算积分），可以得到更简单甚至更一般的结果．我们将证明公式（7）不仅对任意正整数k成立，而且对任意正或负的有理数XXXXXXXXk＝XXXXXXXX也成立，这里u是正整数而v是正或负的整数．应排除k＝-1的情形，因为这时公式（7）没意义．我们还假定0＜a＜b．XXXXXXXX为了得到公式（7），我们按等比级数来选择分点x0＝a，x1，x2，…，xn＝b，由此组成Sn．令XXXXXXXX＝q，则＝qn．XXXXXXXX我们规定x0＝a，x1＝aq，x2＝aq2，…，xn＝aqn＝b．利用这个技巧，我们将看到取极限变得十分容易．因为f（xj）＝＝akqjk，而且Δxj＝xj＋1－xj＝aqj＋1－aqj，所以“矩形和”Sn是XXXXXXXXSn＝ak（aq－a）＋akqk（aq2－aq）＋akq2k（aq3－aq2）＋…XXXXXXXX＋akq（n－1）k（aqn－aqn－1）．XXXXXXXX因为每一项都有因子ak（aq－a），所以XXXXXXXXSn＝ak＋1（q－1）｛1＋qk＋1＋q2（k＋1）＋…＋q（n－1）（k＋1）｝．XXXXXXXX用t代换qk＋1，我们看到花括号中的表达式是等比级数XXXXXXXX1＋t＋t2＋…＋tn－1，XXXXXXXX它的和如此处所证明的是．但XXXXXXXX因此XXXXXXXX这里XXXXXXXX以上是当n为固定数时的情形．现在我们令n增加，以确定N的极限．当n增加时，n次根＝q趋于1（见此处），因而N的分子分母同时趋于零，这是必须注意的地方．先假定k是正整数，那么可以用q－1去除，得到（见此处）N＝qk＋qk－1＋…＋q＋1．今若n增加，q趋于1，因此q2，q3，…，qk都趋于1，故N趋于k＋1，于是显示了Sn趋于．这就是我们要证明的．XXXXXXXX习题：证明对于任意有理数k≠-1有同样的极限公式N→k＋1，因而公式（7）仍然成立．按照我们的范例，首先给出负整数k的证明．然后如果XXXXXXXXk＝，记q1／v＝s，XXXXXXXX则XXXXXXXX如果n增加，s和q同时趋于1，因而右端两个比值分别趋于u＋v和v，这就再次得到N的极限为XXXXXXXX在§5中我们将看到，这个冗长而不太自然的讨论可以用微积分中更简单而有效的方法代替．XXXXXXXX习题：1）当k＝，-，2，-2，3，-3时，逐个验证xk的积分．XXXXXXXX2）求下列积分值：XXXXXXXXa）；b）；c）；d）；e）．XXXXXXXX3）求下列积分值：XXXXXXXXa）；b）；XXXXXXXXc）；d）．XXXXXXXX（提示：考察积分号下的函数图像，注意它们关于x＝0的对称性，并且把积分解释成面积．）XXXXXXXX</em>4）利用代换Δx＝h和此处的公式，求sinx和cosx从0到b的积分．XXXXXXXX5）将区间等分，并令公式（6a）中的XXXXXXXXvj＝（xj＋xj＋1），XXXXXXXX求f（x）＝x和f（x）＝x2从0到b的积分．XXXXXXXX<em>6）利用公式（7）和Δx相等时的积分定义，证明极限关系式XXXXXXXX（提示：令＝Δx，并且证明这个极限等于．）XXXXXXXX</em>7）证明当n→∞时，XXXXXXXX（提示：改写这个和，使得它的极限是一个积分．）XXXXXXXX8）计算边界由抛物线y＝ax2的弧P1P2和弦P1P2组成的抛物线弓形的面积，并用两个点的坐标x1和x2表示出来．XXXXXXXX</h4>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

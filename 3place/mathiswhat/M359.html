@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="hbaolong@vip.qq.com" />
+  <title>论语之359-2025年5月30日-1．指数函数和x的幂</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">论语之359-2025年5月30日-1．指数函数和x的幂</h1>
+<p class="author">hbaolong@vip.qq.com</p>
+</header>
+<h4
+id="指数函数和x的幂xxxxxxxx在数学中我们经常遇到趋于无穷的序列an有时我们需要把这个序列与另一个比它快一些然而也是趋于无穷的序列bn进行比较为了把这个概念规定的确切些我们作比值如果n无限增加时比值分子分母同时趋于无穷趋于零就说bn较an更快地趋于无穷或者说bn有一个比an更高的数量级例如序列bnn2比序列ann更快地趋于无穷而后者又比cn快因为xxxxxxxx显然只要sr0ns就比nr更快地趋于无穷因为这时xxxxxxxx如果比趋于异于零的有限常数c我们就说这两个序列an和bn以同样的速率趋于无穷或说有同样的数量级例如ann2与bn2n2n有同样的数量级因为xxxxxxxx人们可能以为把n的幂当作尺码可以对趋于无穷的任一序列an度量出它趋于无穷的各种级别要做到这一点我们必须找到一个适当的幂ns使它与an有同一数量级即让趋于一异于零的有限常数令人惊奇的是这并不是总能办到的因为不论s选择得多么大指数函数an其中a1例如en都比任何的ns更快地趋于无穷而不论s是多么小的正指数lnn比任何的ns都更慢地趋于无穷换句话说当n时我们有关系式xxxxxxxx与xxxxxxxx其中指数s不一定是整数它可以是任意一个固定的正数xxxxxxxx为证明1我们首先把命题加以简化办法是取这个比的s次方根如果这个根趋于0那么原来的比式也趋于0因此我们只需证明当n增加时xxxxxxxx令b因为a假定大于1那么b和也大于1我们可以记xxxxxxxx其中q是正的现在用此处的不等式6xxxxxxxx所以xxxxxxxx且xxxxxxxx因为后面的量当n增加时趋于0命题得证xxxxxxxx事实上关系式xxxxxxxx当x取遍任一序列x1x2而趋于无穷时都成立而序列xi无须与正整数序列123重合因为如果xxxxxxxxn1xnxxxxxxxx那么xxxxxxxx这个说明可以用来证明2令xlnn且esa则exn且nsesx关系式2中的比式变为xxxxxxxx这就是3当s1时的特殊情形xxxxxxxx习题1证明当x时函数lnlnx较lnx更慢地趋于无穷xxxxxxxx2的导数是证明对于足够大的x这个导数是渐近等价于第一项的即当x时它们的比趋于1xxxxxxxx">1．指数函数和x的幂XXXXXXXX在数学中我们经常遇到趋于无穷的序列an．有时我们需要把这个序列与另一个比它“快”一些然而也是趋于无穷的序列bn进行比较．为了把这个概念规定的确切些，我们作比值，如果n无限增加时，比值（分子、分母同时趋于无穷）趋于零，就说bn较an更快地趋于无穷，或者说bn有一个比an更高的数量级．例如，序列bn＝n2比序列an＝n更快地趋于无穷，而后者又比cn＝快，因为XXXXXXXX显然，只要s&gt;r&gt;0，ns就比nr更快地趋于无穷，因为这时XXXXXXXX如果比趋于异于零的有限常数c，我们就说这两个序列an和bn以同样的速率趋于无穷，或说有同样的数量级．例如an＝n2与bn＝2n2＋n有同样的数量级，因为XXXXXXXX人们可能以为，把n的幂当作尺码，可以对趋于无穷的任一序列an度量出它趋于无穷的各种级别．要做到这一点，我们必须找到一个适当的幂ns，使它与an有同一数量级，即让趋于一异于零的有限常数．令人惊奇的是，这并不是总能办到的．因为不论s选择得多么大，指数函数an，其中a＞1，例如en，都比任何的ns更快地趋于无穷，而不论s是多么小的正指数，lnn比任何的ns都更慢地趋于无穷，换句话说，当n→∞时，我们有关系式XXXXXXXX与XXXXXXXX其中指数s不一定是整数，它可以是任意一个固定的正数．XXXXXXXX为证明（1），我们首先把命题加以简化，办法是取这个比的s次方根．如果这个根趋于0，那么原来的比式也趋于0，因此我们只需证明当n增加时XXXXXXXX令b＝；因为a假定大于1，那么b和也大于1．我们可以记XXXXXXXX其中q是正的．现在用此处的不等式（6）XXXXXXXX所以XXXXXXXX且XXXXXXXX因为后面的量当n增加时趋于0，命题得证．XXXXXXXX事实上，关系式XXXXXXXX当x取遍任一序列x1，x2，…而趋于无穷时都成立，而序列xi无须与正整数序列1，2，3，…重合．因为如果XXXXXXXXn－1≤x≤n，XXXXXXXX那么XXXXXXXX这个说明可以用来证明（2）．令x＝lnn，且es＝a，则ex＝n且ns＝（es）x，关系式（2）中的比式变为XXXXXXXX这就是（3）当s＝1时的特殊情形．XXXXXXXX习题：1）证明当x→∞时函数lnlnx较lnx更慢地趋于无穷．XXXXXXXX2）的导数是．证明对于足够大的x，这个导数是“渐近”等价于第一项的，即当x→∞时，它们的比趋于1．XXXXXXXX</h4>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="hbaolong@vip.qq.com" />
+  <title>论语之178-2024年11月30日-2．整数的表示</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">论语之178-2024年11月30日-2．整数的表示</h1>
+<p class="author">hbaolong@vip.qq.com</p>
+</header>
+<h4
+id="整数的表示xxxxxxxx我们必须仔细地把一个整数和用来表示它的符号5v区分开来在十进位制中01239这十个数码符号是用来表示零和前九个正整数的一个较大的正整数例如三百七十二可表示为xxxxxxxx30070231027102xxxxxxxx的形式而这在十进位制中用符号372表示这里重要的是数码符号372的意义依赖于它们在个位十位百位的位置有了这个位置记法我们用十个数码符号的各种组合就可以表示出任何整数表示一个整数的一般规则可以用xxxxxxxxza103b102c10dxxxxxxxx来说明这里数码abcd是从零到九的整数这时我们用缩写符号xxxxxxxxabcdxxxxxxxx来表示整数z我们注意到系数dcba是整数z连续被10除后的余数例如xxxxxxxx上面对z给出的这种特殊表达式仅能表示小于一万的正整数因为再大的正整数要求用五个或五个以上的数码符号来表示如果z是在一万到十万之间的一个整数我们可以用xxxxxxxxza104b103c102d10exxxxxxxx的形式来表示并且用符号abcde来记它对十万到百万之间的整数以及更大的数类似的表达式都成立如果用一个简单的公式能完整概括地表述这些结果那将是十分有用的我们可以这样作对不同的系数edc我们用一个带有不同下标的字母a即a0a1a2a3来表示十的幂不论有多大都可以这样来表示即记这最高次幂为10n而不是上面例子中的103或104这里n理解为是一个任意的正整数这时在十进位制中表示一个正整数z的一般方法是把z表示为xxxxxxxx1xxxxxxxxzan10nan110n1a110a0xxxxxxxx而且用符号xxxxxxxxanan1an2a1a0xxxxxxxx来记它与上面的特殊情况一样我们看到数字a0a1a2an是z连续被10除后所得到的一系列余数xxxxxxxx在十进位系统中数十是单独选出作为基底的一般人可能没认识到并不一定非得选取十不可任何大于一的正整数都可用来作基底例如可以用一个七进位系统基底是7在这样的一个系统中一个正整数可以表示为xxxxxxxx2xxxxxxxxbn7nbn17n1b17b0xxxxxxxx这些b是从零到六的数码这时这个正整数用xxxxxxxxbnbn1b1b0xxxxxxxx来表示因此一百零九在七进位系统中用符号214表示其意义是xxxxxxxx214272174xxxxxxxx作为一个练习读者可以证明从以十为基底变成任何其他基底b的一般规则是用b连续除以十为基底的整数z所得的余数将是在以b为基底的系统中的数码例如xxxxxxxx109十进位制214七进位制xxxxxxxx很自然地会问究竟选择哪一个基底最合适我们从下面会看到太小的基底有它不方便之处而一个大的基底要求记住许多数码符号和有一个更大的乘法表有人曾鼓动过用十二作基底因为十二能被二三四和六整除这样涉及除法和分数时常能简化为了写出任一以十二为基底十二进位系统的正整数我们要求对十和十一采用两个新的数码符号让我们用α表示十用β表示十一这样在十二进位制中十二将写成10而二十二将是1α二十三将是1β一百三十一是αβxxxxxxxx位置记法的发明应归功于苏马连人或巴比伦人后来为印度人所发展这个发明对人类文明有巨大的意义早期的数字系统是建立在纯粹的加法规则上的例如在罗马人的符号表示中xxxxxxxxсⅹⅷ壹百拾伍壹壹壹xxxxxxxx埃及希伯来和希腊的数字系统也是处在同样的水平上在任何纯粹的加法记法中有一个不方便之处就是当数变大时需要越来越多的新符号当然早期的科学家并没有被我们现代的天文数字或原子数字所困扰但是古代系统例如罗马系统的一个主要缺点是数的计算十分困难以至于除了最简单的问题外只有专家才能掌握这与现在通用的即印度的位置记法是很不同的位置记法是中世纪由意大利商人他们是从穆斯林那里学会的引进欧洲的位置记法有一个很方便的性质所有的数不论多大或多小都能用一小组不同的数码符号来表示在十进位制中就是阿拉伯数字0129而且其更重要的优点就是容易计算用位置记法所表示的数其计算规则可以用这些数码的加法表和乘法表的形式来表示而且一旦记住便可永远运用自如古代的计算技巧一度只限于少数专家所掌握而现在则是小学里的课程了像这样科学进步对日常生活有如此深刻的影响并带来极大的方便的例子还不是很多的xxxxxxxx">2．整数的表示XXXXXXXX我们必须仔细地把一个整数和用来表示它的符号5，V，…区分开来．在十进位制中，0，1，2，3，…，9，这十个数码符号是用来表示零和前九个正整数的．一个较大的正整数，例如“三百七十二”可表示为XXXXXXXX300＋70＋2＝3·102＋7·10＋2XXXXXXXX的形式，而这在十进位制中用符号372表示．这里重要的是，数码符号3，7，2的意义依赖于它们在个位、十位、百位的位置．有了这个“位置记法”，我们用十个数码符号的各种组合就可以表示出任何整数．表示一个整数的一般规则可以用XXXXXXXXz＝a·103＋b·102＋c·10＋dXXXXXXXX来说明．这里数码a，b，c，d是从零到九的整数．这时，我们用缩写符号XXXXXXXXabcdXXXXXXXX来表示整数z．我们注意到系数d，c，b，a是整数z连续被10除后的余数，例如XXXXXXXX上面对z给出的这种特殊表达式，仅能表示小于一万的正整数，因为再大的正整数，要求用五个或五个以上的数码符号来表示．如果z是在一万到十万之间的一个整数，我们可以用XXXXXXXXz＝a·104＋b·103＋c·102＋d·10＋eXXXXXXXX的形式来表示，并且用符号abcde来记它．对十万到百万之间的整数以及更大的数，类似的表达式都成立．如果用一个简单的公式能完整概括地表述这些结果，那将是十分有用的．我们可以这样作：对不同的系数e，d，c，…我们用一个带有不同“下标”的字母a，即a0，a1，a2，a3，…来表示，十的幂不论有多大，都可以这样来表示，即记这最高次幂为10n，而不是上面例子中的103或104，这里n理解为是一个任意的正整数．这时，在十进位制中表示一个正整数z的一般方法是，把z表示为XXXXXXXX（1）XXXXXXXXz＝an·10n＋an－1·10n－1＋…＋a1·10＋a0，XXXXXXXX而且用符号XXXXXXXXanan－1an－2…a1a0XXXXXXXX来记它．与上面的特殊情况一样，我们看到数字a0，a1，a2，…，an是z连续被10除后所得到的一系列余数．XXXXXXXX在十进位系统中，数十，是单独选出作为基底的．一般人可能没认识到，并不一定非得选取十不可，任何大于一的正整数都可用来作基底．例如，可以用一个七进位系统（基底是7）．在这样的一个系统中，一个正整数可以表示为XXXXXXXX（2）XXXXXXXXbn·7n＋bn－1·7n－1＋…＋b1·7＋b0，XXXXXXXX这些b是从零到六的数码．这时这个正整数用XXXXXXXXbnbn－1…b1b0XXXXXXXX来表示．因此“一百零九”在七进位系统中用符号214表示，其意义是XXXXXXXX214＝2·72＋1·7＋4．XXXXXXXX作为一个练习，读者可以证明：从以十为基底变成任何其他基底B的一般规则是，用B连续除以十为基底的整数z，所得的余数将是在以B为基底的系统中的数码，例如XXXXXXXX109（十进位制）＝214（七进位制）．XXXXXXXX很自然地会问，究竟选择哪一个基底最合适．我们从下面会看到，太小的基底有它不方便之处，而一个大的基底要求记住许多数码符号和有一个更大的乘法表．有人曾鼓动过用十二作基底，因为十二能被二、三、四和六整除，这样，涉及除法和分数时，常能简化．为了写出任一以十二为基底（十二进位系统）的正整数，我们要求对十和十一采用两个新的数码符号，让我们用α表示十，用β表示十一．这样在十二进位制中，“十二”将写成10，而“二十二”将是1α，“二十三”将是1β，“一百三十一”是αβ．XXXXXXXX位置记法的发明应归功于苏马连人或巴比伦人，后来为印度人所发展．这个发明对人类文明有巨大的意义．早期的数字系统是建立在纯粹的加法规则上的．例如在罗马人的符号表示中，XXXXXXXXСⅩⅧ＝壹百＋拾＋伍＋壹＋壹＋壹．XXXXXXXX埃及、希伯来和希腊的数字系统也是处在同样的水平上．在任何纯粹的加法记法中，有一个不方便之处，就是当数变大时需要越来越多的新符号．当然早期的科学家并没有被我们现代的天文数字或原子数字所困扰．但是古代系统（例如罗马系统）的一个主要缺点是，数的计算十分困难以至于除了最简单的问题外，只有专家才能掌握．这与现在通用的（即印度的）位置记法是很不同的．位置记法是中世纪由意大利商人（他们是从穆斯林那里学会的）引进欧洲的．位置记法有一个很方便的性质：所有的数，不论多大或多小，都能用一小组不同的数码符号来表示（在十进位制中就是“阿拉伯数字”0，1，2，…，9）．而且其更重要的优点就是容易计算．用位置记法所表示的数，其计算规则可以用这些数码的加法表和乘法表的形式来表示，而且一旦记住，便可永远运用自如．古代的计算技巧一度只限于少数专家所掌握，而现在则是小学里的课程了．像这样科学进步对日常生活有如此深刻的影响，并带来极大的方便的例子还不是很多的．XXXXXXXX</h4>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

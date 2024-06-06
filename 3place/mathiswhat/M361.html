@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="hbaolong@vip.qq.com" />
+  <title>论语之361-2025年6月1日-1．函数的无穷级数</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">论语之361-2025年6月1日-1．函数的无穷级数</h1>
+<p class="author">hbaolong@vip.qq.com</p>
+</header>
+<h4
+id="函数的无穷级数xxxxxxxx正如我们早已阐述过的把一个量s表示成一个无穷级数xxxxxxxx只是下述说法的一个较方便的记法并没有别的新东西即当n增加时s是有限部分和序列xxxxxxxxs1s2s3xxxxxxxx的极限其中的sn为xxxxxxxx因此等式1就相当于极限关系当n时xxxxxxxx这里的sn是由2定义的当极限3存在时我们就说级数1收敛于值s而如果极限3不存在就说这个级数发散xxxxxxxx例如级数xxxxxxxx1xxxxxxxx收敛于值而级数xxxxxxxx1xxxxxxxx收敛于值ln2另一方面级数xxxxxxxx1111xxxxxxxx是发散的因为部分和交替变为0与1而级数xxxxxxxx1111xxxxxxxx发散是因为部分和趋于无穷xxxxxxxx我们曾经遇到过这样的级数它的项bi为xxxxxxxxbicixixxxxxxxx是x的函数其中ci是常数因子这样的级数叫作幂级数它表示以多项式出现的部分和xxxxxxxxsnc0c1xc2x2cnxnxxxxxxxx的极限加上常数项c0需要对记法2作一个非实质性的改变因此一个函数fx的幂级数展开式xxxxxxxxfxc0c1xc2x2xxxxxxxx就是用最简单的函数即多项式近似表示fx的一种方法总结并补充前面的结果我们列出以下的幂级数展开式xxxxxxxx我们还要加上以下重要的展开式xxxxxxxx这两个级数是公式此处xxxxxxxx的简单推论我们从不等式xxxxxxxxcosx1xxxxxxxx开始两端都由0到x积分这里x是任意确定的正数我们求得见此处公式13xxxxxxxxsinxxxxxxxxxx再次积分得xxxxxxxx1cosxxxxxxxxx也就是xxxxxxxxcosx1xxxxxxxx再积分我们得到xxxxxxxx按此方式无限进行下去就可得到两组不等式xxxxxxxx现在当n时0为了证明这一点我们选取一固定的整数m使并且记c对于任意整数nm令nmr那么xxxxxxxx且当n时r因而cr0由此可知xxxxxxxx因为这两个级数的各项交错变号且绝对值是递减的至少对于x1是如此可知这两个级数无论从哪一项截断其误差就绝对值来说都不超过被舍去部分的第一项xxxxxxxx说明这些级数可以用来计算正弦余弦函数表例sin1是多少1是弧度因而xxxxxxxx截断后的误差不超过即小于0.00000000002因此sin10.0174524064精确到小数点后10位数xxxxxxxx最后我们不加证明地叙述一下二项式级数xxxxxxxx其中是二项式系数xxxxxxxx如果an是正整数那么我们有1且若sn11中的所有系数都等于零从而我们就回到普通二项式定理的有限公式初等二项式定理可以从正整指数n扩展为任意正的负的有理的或无理的指数a这是牛顿早年作出的伟大发现之一当a不是正整数时11右边就成为无穷级数它对-1x1成立当x1时级数11发散这时等号失去意义xxxxxxxx特别是把a代入11我们得到展开式xxxxxxxx像18世纪其他的数学家一样牛顿对他的公式并没有给出一个真正的证明这种无穷级数的收敛性以及这些无穷级数能成立的范围直到19世纪才有了一个令人满意的分析xxxxxxxx习题写出和的幂级数xxxxxxxx展式411都是泰勒b.-taylor16851731一般公式的特殊情形泰勒公式的目的是对很大一类的函数寻求用函数f及其导数来表示系数ci的规律从而把其中任意一个fx展成幂级数xxxxxxxx这里不可能阐述和建立泰勒公式成立的条件也无法证明泰勒公式但下面大体合理的考虑可以解释有关数学事实之间的相互联系xxxxxxxx我们事先假定展开式13成立再假定fx可微fx可微等等即认为各阶导数xxxxxxxxfxfxfnxxxxxxxxx实际都存在最后就像有限多项式似的我们假定无穷幂级数可以逐项微分在这些假定下我们可以根据fx在x0的邻域的状态来确定系数cn首先以x0代入13我们得到xxxxxxxxc0f0xxxxxxxx因为级数13中含有x的项都消失了现在我们微分13得到xxxxxxxx再代入x0但这次是代入13中而不是13我们得到xxxxxxxxc1f0xxxxxxxx由微分13我们得到xxxxxxxx把x0代入13中求得xxxxxxxx2c2f0xxxxxxxx类似地微分13且代入x0有xxxxxxxx这样连续地作下去我们得到一般公式xxxxxxxx其中fn0是fx的n阶导数在x0时的值这个结果就是泰勒级数xxxxxxxx作为微分的练习读者可以验证在411的各个级数中泰勒级数的系数公式都是成立的xxxxxxxx">1．函数的无穷级数XXXXXXXX正如我们早已阐述过的，把一个量s表示成一个无穷级数XXXXXXXX只是下述说法的一个较方便的记法，并没有别的新东西，即当n增加时，s是有限“部分和”序列XXXXXXXXs1，s2，s3，…XXXXXXXX的极限，其中的sn为XXXXXXXX因此等式（1）就相当于极限关系，当n→∞时，XXXXXXXX这里的sn是由（2）定义的．当极限（3）存在时，我们就说级数（1）收敛于值s，而如果极限（3）不存在，就说这个级数发散．XXXXXXXX例如，级数XXXXXXXX1－＋－＋…XXXXXXXX收敛于值，而级数XXXXXXXX1－＋－＋…XXXXXXXX收敛于值ln2．另一方面，级数XXXXXXXX1－1＋1－1＋…XXXXXXXX是发散的（因为部分和交替变为0与1）．而级数XXXXXXXX1＋1＋1＋1＋…XXXXXXXX发散是因为部分和趋于无穷．XXXXXXXX我们曾经遇到过这样的级数，它的项bi为XXXXXXXXbi＝cixi，XXXXXXXX是x的函数，其中ci是常数因子．这样的级数叫作幂级数，它表示以多项式出现的部分和XXXXXXXXSn＝c0＋c1x＋c2x2＋…＋cnxnXXXXXXXX的极限（加上常数项c0，需要对记法（2）作一个非实质性的改变）．因此一个函数f（x）的幂级数展开式XXXXXXXXf（x）＝c0＋c1x＋c2x2＋…XXXXXXXX就是用最简单的函数即多项式近似表示f（x）的一种方法．总结并补充前面的结果，我们列出以下的幂级数展开式：XXXXXXXX我们还要加上以下重要的展开式：XXXXXXXX这两个级数是公式（此处）XXXXXXXX的简单推论．我们从不等式XXXXXXXXcosx≤1XXXXXXXX开始，两端都由0到x积分，这里x是任意确定的正数．我们求得（见此处公式（13））XXXXXXXXsinx≤x；XXXXXXXX再次积分，得XXXXXXXX1－cosx≤，XXXXXXXX也就是XXXXXXXXcosx≥1－．XXXXXXXX再积分，我们得到XXXXXXXX按此方式无限进行下去，就可得到两组不等式XXXXXXXX现在当n→∞时，→0．为了证明这一点，我们选取一固定的整数m，使＜，并且记c＝．对于任意整数n＞m，令n＝m＋r，那么XXXXXXXX且当n→∞时，r→∞，因而c（）r→0．由此可知XXXXXXXX因为这两个级数的各项交错变号且绝对值是递减的（至少对于｜x｜≤1是如此），可知这两个级数无论从哪一项截断，其误差就绝对值来说都不超过被舍去部分的第一项．XXXXXXXX说明：这些级数可以用来计算正弦、余弦函数表．例：sin1°是多少？1°是弧度；因而XXXXXXXX截断后的误差不超过，即小于0.00000000002．因此sin1°＝0.0174524064，精确到小数点后10位数．XXXXXXXX最后，我们不加证明地叙述一下“二项式级数”XXXXXXXX其中是“二项式系数”XXXXXXXX如果a＝n是正整数，那么我们有＝1，且若s&gt;n，（11）中的所有系数都等于零，从而我们就回到普通二项式定理的有限公式．初等二项式定理可以从正整指数n扩展为任意正的、负的、有理的或无理的指数a，这是牛顿早年作出的伟大发现之一．当a不是正整数时，（11）右边就成为无穷级数，它对-1＜x＜1成立．当｜x｜＞1时，级数（11）发散，这时等号失去意义．XXXXXXXX特别是，把a＝代入（11），我们得到展开式XXXXXXXX像18世纪其他的数学家一样，牛顿对他的公式并没有给出一个真正的证明．这种无穷级数的收敛性以及这些无穷级数能成立的范围，直到19世纪才有了一个令人满意的分析．XXXXXXXX习题：写出和的幂级数．XXXXXXXX展式（4）～（11）都是泰勒（B.
+Taylor）（1685～1731）一般公式的特殊情形．泰勒公式的目的，是对很大一类的函数，寻求用函数f及其导数来表示系数ci的规律，从而把其中任意一个f（x）展成幂级数XXXXXXXX这里不可能阐述和建立泰勒公式成立的条件，也无法证明泰勒公式．但下面大体合理的考虑可以解释有关数学事实之间的相互联系．XXXXXXXX我们事先假定展开式（13）成立，再假定f（x）可微，f′（x）可微，等等，即认为各阶导数XXXXXXXXf′（x），f″（x），…，f（n）（x），…XXXXXXXX实际都存在．最后，就像有限多项式似的，我们假定无穷幂级数可以逐项微分．在这些假定下，我们可以根据f（x）在x＝0的邻域的状态来确定系数cn．首先以x＝0代入（13），我们得到XXXXXXXXc0＝f（0），XXXXXXXX因为级数（13）中含有x的项都消失了．现在我们微分（13），得到XXXXXXXX再代入x＝0，但这次是代入（13′）中而不是（13），我们得到XXXXXXXXc1＝f′（0）．XXXXXXXX由微分（13′），我们得到XXXXXXXX把x＝0代入（13″）中，求得XXXXXXXX2!c2＝f″（0）．XXXXXXXX类似地，微分（13″）且代入x＝0，有XXXXXXXX这样连续地作下去，我们得到一般公式XXXXXXXX其中f（n）（0）是f（x）的n阶导数在x＝0时的值．这个结果就是泰勒级数XXXXXXXX作为微分的练习，读者可以验证，在（4）～（11）的各个级数中，泰勒级数的系数公式都是成立的．XXXXXXXX</h4>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

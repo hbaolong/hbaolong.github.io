@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="hbaolong@vip.qq.com" />
+  <title>论语之275-2025年3月7日-3．函数的图像　反函数</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">论语之275-2025年3月7日-3．函数的图像　反函数</h1>
+<p class="author">hbaolong@vip.qq.com</p>
+</header>
+<h4
+id="函数的图像-反函数xxxxxxxx函数的性态常可用几何图像清楚地显示出来如果xu是关于平面上直角坐标系的坐标那么线性函数xxxxxxxxuaxbxxxxxxxx可以由直线表示二次函数xxxxxxxxuax2bxcxxxxxxxx可以由抛物线表示函数xxxxxxxxuxxxxxxxx由双曲线表示等等由定义可知任何函数ufx的图像是由平面内其坐标xu满足关系ufx的所有的点组成的函数sinxcosxtanx表示成图151和图152中的曲线这些图像能很清楚地显示出当x变化时函数值是如何增加和减少的xxxxxxxx图151-sinx和cosx的图像xxxxxxxx图152-utanxxxxxxxxx下面是引入新函数的一个重要方法由一个已知函数fx开始我们对于x可以试解方程ufx使x作为u的一个函数出现xxxxxxxxxguxxxxxxxx这时gu称为函数fx的反函数只有函数ufx定义了一个由x的变域到u的变域上的一一对应也就是由不等式x1x2总可得到不等式fx1fx2的情形由这个过程导出的结果才是唯一的因为只有这时每个u才对应唯一确定的x以前举过的x表示平面上任一个三角形而ufx是它的周长的例子在这里很能说明问题显然从三角形的集s到正实数集t的映射不是一一的因为可以有无穷多个不同的三角形它们的周长相等因此在这种情形下由关系式ufx不能确定一个唯一的反函数另一方面函数m2n其中n的变动范围是整数集sm的范围是偶数集t在两个集之间是一一对应的所以反函数nm2是唯一确定的函数xxxxxxxxux3xxxxxxxx是另一个一一对应的例子当x在整个实数集上变动时u也同样地在整个实数集上变动取每个值一次且仅一次这唯一确定的反函数是xxxxxxxx图153-ux3xxxxxxxx在函数xxxxxxxxux2xxxxxxxx的情形不能唯一地决定一个反函数因为xxxxxxxxux2-x2xxxxxxxxu的每一个正值有两个原像但是按习惯我们定义符号是指u的正平方根所以只要我们限定x和u都是正值那么反函数xxxxxxxxxxxxxxxxx存在xxxxxxxx对于一元函数ufx只要由它的图像就可一望而知其唯一的反函数是否存在只有当u的每一个值仅和x的一个值对应时反函数才是唯一确定的从图像上来说这就是平行于x-轴的直线与图像最多只交于一点如果函数ufx是单调的即当x增加时函数值一直增加或者一直减少那么就一定是这种情形例如如果ufx递增那么对于x1x2总有u1fx1u2fx2因此对于已知的u值至多有一个x值使ufx这时反函数是唯一确定的原来图像绕虚线旋转180图154正好得到反函数xgu的图像这时x轴和u轴的位置互换图像的新位置就把x描画为u的函数在图像的原来位置上图中u看成是水平x-轴以上的高度而旋转以后的图像图中x看成是水平的u-轴以上的高度xxxxxxxx图154-反函数xxxxxxxx上一段的讨论可以用函数xxxxxxxxutanxxxxxxxxx的情况作说明这个函数当-π2xπ2时是单调的图152当x增加时u的值从-一直增加到因此反函数xxxxxxxxxguxxxxxxxx对所有的u值有定义这个函数记为tan-1u或arctanu例如arctan1π4因为tanπ41它的图像如图155所示xxxxxxxx图155-xarctanuxxxxxxxx">3．函数的图像　反函数XXXXXXXX函数的性态，常可用几何图像清楚地显示出来．如果x、u是关于平面上直角坐标系的坐标，那么线性函数XXXXXXXXu＝ax＋bXXXXXXXX可以由直线表示；二次函数XXXXXXXXu＝ax2＋bx＋cXXXXXXXX可以由抛物线表示；函数XXXXXXXXu＝XXXXXXXX由双曲线表示；等等．由定义可知，任何函数u＝f（x）的图像，是由平面内其坐标x，u满足关系u＝f（x）的所有的点组成的．函数sinx，cosx，tanx表示成图151和图152中的曲线．这些图像能很清楚地显示出，当x变化时函数值是如何增加和减少的．XXXXXXXX图151　sinx和cosx的图像XXXXXXXX图152　u＝tanxXXXXXXXX下面是引入新函数的一个重要方法．由一个已知函数F（X）开始，我们对于X可以试解方程U＝F（X），使X作为U的一个函数出现：XXXXXXXXX＝G（U）．XXXXXXXX这时G（U）称为函数F（X）的反函数．只有函数U＝F（X）定义了一个由X的变域到U的变域上的一一对应，也就是由不等式X1≠X2，总可得到不等式F（x1）≠F（x2）的情形，由这个过程导出的结果才是唯一的，因为只有这时每个U才对应唯一确定的X．以前举过的X表示平面上任一个三角形，而U＝F（X）是它的周长的例子，在这里很能说明问题．显然，从三角形的集S到正实数集T的映射不是一一的，因为可以有无穷多个不同的三角形，它们的周长相等．因此，在这种情形下，由关系式U＝F（X）不能确定一个唯一的反函数．另一方面，函数m＝2n，其中n的变动范围是整数集S，m的范围是偶数集T，在两个集之间是一一对应的，所以反函数n＝m／2是唯一确定的．函数XXXXXXXXu＝x3XXXXXXXX是另一个一一对应的例子．当x在整个实数集上变动时，u也同样地在整个实数集上变动，取每个值一次且仅一次．这唯一确定的反函数是XXXXXXXX图153　u＝x3XXXXXXXX在函数XXXXXXXXu＝x2XXXXXXXX的情形，不能唯一地决定一个反函数．因为XXXXXXXXu＝x2＝（-x）2，XXXXXXXXu的每一个正值有两个原像．但是，按习惯，我们定义符号是指u的正平方根，所以只要我们限定x和u都是正值，那么反函数XXXXXXXXx＝XXXXXXXX存在．XXXXXXXX对于一元函数u＝f（x），只要由它的图像，就可一望而知其唯一的反函数是否存在．只有当u的每一个值仅和x的一个值对应时，反函数才是唯一确定的．从图像上来说，这就是平行于x-轴的直线与图像最多只交于一点．如果函数u＝f（x）是单调的（即当x增加时，函数值一直增加或者一直减少），那么就一定是这种情形．例如，如果u＝f（x）递增，那么对于x1＜x2，总有u1＝f（x1）＜u2＝f（x2）．因此，对于已知的u值，至多有一个x值使u＝f（x），这时反函数是唯一确定的．原来图像绕虚线旋转180°（图154），正好得到反函数x＝g（u）的图像，这时x轴和u轴的位置互换．图像的新位置就把x描画为u的函数．在图像的原来位置上，图中u看成是水平x-轴以上的高度，而旋转以后的图像，图中x看成是水平的u-轴以上的高度．XXXXXXXX图154　反函数XXXXXXXX上一段的讨论，可以用函数XXXXXXXXu＝tanxXXXXXXXX的情况作说明．这个函数当-π／2＜x＜π／2时是单调的（图152）．当x增加时，u的值从-∞一直增加到+∞，因此反函数XXXXXXXXx＝g（u）XXXXXXXX对所有的u值有定义．这个函数记为tan-1u或arctanu．例如arctan（1）＝π／4，因为tanπ／4＝1，它的图像如图155所示．XXXXXXXX图155　x＝arctanuXXXXXXXX</h4>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

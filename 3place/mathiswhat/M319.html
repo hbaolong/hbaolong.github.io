@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="hbaolong@vip.qq.com" />
+  <title>论语之319-2025年4月20日-3．最小二乘法</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">论语之319-2025年4月20日-3．最小二乘法</h1>
+<p class="author">hbaolong@vip.qq.com</p>
+</header>
+<h4
+id="最小二乘法xxxxxxxxn个数x1xn在本小节中不需要假定都是正的的算术平均有一个重要的极小性质假设u是一个未知量我们需要用某种测量仪器尽可能精确地测定它为了这个目的我们测量n次由于各种实验误差这n个读数可能略有不同设为x1xn这时问题发生了u取什么值才最可信习惯上是采用算术平均m为u的真值或最佳值若要真正地去证明这个真实我们必须要先对概率论加以详细研究但是我们至少能够指出m具有极小性质从而是一种合理的选择令u是测量中的任一个可能数值那么差ux1uxn是这个值和不同读数间的偏差这些偏差可能一部分是正的一部分是负的自然的想法是就某种意义说使总偏差最小的值为u的最佳值按高斯的想法习惯上把偏差的平方uxi2不是偏差本身作为不精确性的适当的度量并且在u的所有可能值中选取使偏差平方和xxxxxxxxux12ux22uxn2xxxxxxxx尽可能小的u作为最佳值这个u的最佳值恰好是算术平均m正是这个事实构成了高斯重要的最小二乘法的出发点我们可以用一个巧妙的方法来证明加着重点的命题把uxi写成xxxxxxxxuximxiumxxxxxxxx于是有xxxxxxxx现在对所有i12n把这些等式加起来最后一项加起来的结果是2umnmx1xn由m的定义知道它是零最后我们有xxxxxxxx这就说明xxxxxxxx并且等号只有当um时才成立这恰是我们所要证明的xxxxxxxx在比较复杂的情况当要在相差很少的不相容的测量值中确定比较合理的结果时最小二乘法就以这个结果为其指导原则例如假定我们测得一条理论直线上的n个点坐标为xiyi并且假设这些测得的点不正好在一条直线上我们怎样画一条直线使它最适合于n个观测点呢前面的结果提示我们应按如下的步骤用同样合理的变量来代替这步骤也是对的设yaxb表示这直线方程那么问题就是求系数a和b这条直线沿y方向到点xiyi的距离是xxxxxxxxyiaxibyiaxibxxxxxxxx其正负号要由点是在直线上方或下方而定因此这个距离的平方是yiaxib2而这个方法仅仅就是确定ab使表达式xxxxxxxxy1ax1b2ynaxnb2xxxxxxxx取最小值这里我们有一个含两个未知量a和b的极小问题这个解的详细讨论虽然很简单但这里从略xxxxxxxx-7-极值的存在性-狄里赫莱原理xxxxxxxx">3．最小二乘法XXXXXXXXn个数x1，…，xn（在本小节中不需要假定都是正的）的算术平均有一个重要的极小性质．假设u是一个未知量，我们需要用某种测量仪器尽可能精确地测定它．为了这个目的，我们测量n次，由于各种实验误差，这n个读数可能略有不同，设为x1，…，xn，这时问题发生了：u取什么值才最可信？习惯上是采用算术平均m＝为u的“真”值或“最佳”值．若要真正地去证明这个真实，我们必须要先对概率论加以详细研究．但是，我们至少能够指出m具有极小性质，从而是一种合理的选择．令u是测量中的任一个可能数值．那么差u－x1，…，u－xn是这个值和不同读数间的偏差．这些偏差可能一部分是正的，一部分是负的，自然的想法是，就某种意义说使总偏差最小的值为u的最佳值．按高斯的想法，习惯上把偏差的平方（u－xi）2（不是偏差本身）作为不精确性的适当的度量，并且在u的所有可能值中，选取使偏差平方和XXXXXXXX（u－x1）2＋（u－x2）2＋…＋（u－xn）2XXXXXXXX尽可能小的u作为最佳值．这个u的最佳值恰好是算术平均m，正是这个事实构成了高斯重要的“最小二乘法”的出发点．我们可以用一个巧妙的方法来证明加着重点的命题．把u－xi写成XXXXXXXX（u－xi）＝（m－xi）＋（u－m），XXXXXXXX于是有XXXXXXXX现在对所有i＝1，2，…，n把这些等式加起来．最后一项加起来的结果是2（u－m）（nm－x1－…－xn），由m的定义，知道它是零．最后我们有XXXXXXXX这就说明XXXXXXXX并且等号只有当u＝m时才成立，这恰是我们所要证明的．XXXXXXXX在比较复杂的情况，当要在相差很少的不相容的测量值中确定比较合理的结果时，最小二乘法就以这个结果为其指导原则．例如，假定我们测得一条理论直线上的n个点，坐标为xi，yi，并且假设这些测得的点不正好在一条直线上．我们怎样画一条直线使它最适合于n个观测点呢？前面的结果提示我们应按如下的步骤（用同样合理的变量来代替，这步骤也是对的）．设y＝ax＋b表示这直线方程，那么问题就是求系数a和b．这条直线沿y方向到点xi，yi的距离是XXXXXXXXyi－（axi＋b）＝yi－axi－b，XXXXXXXX其正负号要由点是在直线上方或下方而定．因此这个距离的平方是（yi－axi－b）2，而这个方法仅仅就是确定a，b，使表达式XXXXXXXX（y1－ax1－b）2＋…＋（yn－axn－b）2XXXXXXXX取最小值．这里我们有一个含两个未知量a和b的极小问题．这个解的详细讨论虽然很简单，但这里从略．XXXXXXXX###
+§7　极值的存在性　狄里赫莱原理XXXXXXXX</h4>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

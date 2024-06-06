@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="hbaolong@vip.qq.com" />
+  <title>论语之342-2025年5月13日-7．二阶导数的几何意义</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">论语之342-2025年5月13日-7．二阶导数的几何意义</h1>
+<p class="author">hbaolong@vip.qq.com</p>
+</header>
+<h4
+id="二阶导数的几何意义xxxxxxxx二阶导数在分析和几何中都是重要的因为表示曲线yfx的斜率fx的变化率的fx给出了曲线弯曲程度的表示方法如果fx在一个区间是正的那么fx的变化率是正的一个函数的变化率是正的是指函数值随x的增加而增加因此fx0是指当x增加时斜率fx增加于是在fx是正的地方函数变陡峭而在fx是负的地方函数变平缓此时就说曲线是凸的图270xxxxxxxx图270xxxxxxxx同样道理如果fx0那么曲线yfx是向下凹的图271xxxxxxxx图271xxxxxxxx抛物线yfxx2是处处凸的因为fx2总是正的而对于曲线yfxx3当x0时是凸的而当x0时是凹的图153由fx6x读者很易证明这些顺便指出当x0时我们有xxxxxxxxfx3x20xxxxxxxx但不是极大和极小同时fx0这个点称为拐点这个点的切线在这个例子中是x轴与曲线相交xxxxxxxx如果s表示沿曲线的弧长而α是沿曲线的斜角那么αhs是s的函数当沿曲线移动时αhs将变化变化率hs叫作曲线在弧长是s的那个点的曲率我们不加证明而写下由曲线yfx的一阶和二阶导数表示的曲率κ的公式xxxxxxxx">7．二阶导数的几何意义XXXXXXXX二阶导数在分析和几何中都是重要的，因为表示（曲线y＝f（x）的斜率）f′（x）的变化率的f″（x），给出了曲线弯曲程度的表示方法．如果f″（x）在一个区间是正的，那么f′（x）的变化率是正的．一个函数的变化率是正的是指函数值随x的增加而增加．因此，f″（x）＞0是指当x增加时斜率f′（x）增加，于是在f′（x）是正的地方函数变陡峭，而在f′（x）是负的地方函数变平缓，此时就说曲线是凸的（图270）．XXXXXXXX图270XXXXXXXX同样道理，如果f″（x）＜0，那么曲线y＝f（x）是向下凹的（图271）．XXXXXXXX图271XXXXXXXX抛物线y＝f（x）＝x2是处处凸的，因为f″（x）＝2总是正的．而对于曲线y＝f（x）＝x3，当x＞0时是凸的，而当x＜0时是凹的（图153），由f″（x）＝6x，读者很易证明这些．顺便指出，当x＝0时，我们有XXXXXXXXf′（x）＝3x2＝0，XXXXXXXX（但不是极大和极小！）同时f″（x）＝0．这个点称为拐点．这个点的切线（在这个例子中是x轴）与曲线相交．XXXXXXXX如果s表示沿曲线的弧长，而α是沿曲线的斜角，那么α＝h（s）是s的函数．当沿曲线移动时，α＝h（s）将变化．变化率h′（s）叫作曲线在弧长是s的那个点的曲率．我们不加证明而写下由曲线y＝f（x）的一阶和二阶导数表示的曲率κ的公式：XXXXXXXX</h4>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

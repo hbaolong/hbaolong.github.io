@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="hbaolong@vip.qq.com" />
+  <title>论语之345-2025年5月16日-2．初步应用　xr，cosx，sinx，arctanx的积分</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">论语之345-2025年5月16日-2．初步应用　xr，cosx，sinx，arctanx的积分</h1>
+<p class="author">hbaolong@vip.qq.com</p>
+</header>
+<h4
+id="初步应用-xrcosxsinxarctanx的积分xxxxxxxx关于基本定理的应用范围这里还不可能给出一个完整的概念但是从下面的解释中我们可以得到一些启示在力学物理学或纯数学遇到的问题中经常需要求一个定积分的值直接由和的极限求积分往往是困难的但另一方面正如在3中所见到的作各种微分运算则比较容易并且在这个领域内积累了丰富的知识把每个微分公式反过来看都可以给出fx的一个原函数gx借助公式3就可用来计算fx在任意两点之间的积分了xxxxxxxx例如要求x2或x3或xn的积分现在的方法要比1中的简单得多由xn的微分公式我们知道xn的导数是nxn1所以xxxxxxxx的导数是xxxxxxxx因而是函数fxxn的一个原函数因此立即有xxxxxxxx比起直接由和的极限来求积分的繁难手续来这个过程要简单得多xxxxxxxx更一般地我们在3中已经得到对于任意有理数s不论是正的或是负的函数xs都有导数sxs1因此对xxxxxxxxsr1xxxxxxxx函数xxxxxxxx有导数fxgxxr我们假定r-1即s0因而是xr的一个原函数或不定积分而且有假定ab为正且r-1xxxxxxxx在4中我们假定被积函数xr在积分区间上有定义且连续即若r0要除去x0因此在这里要假定a和b是正的xxxxxxxx若gx-cosx有gxsinx因而xxxxxxxx同样由于若gxsinx有gxcosx得xxxxxxxx由反正切的微分公式darctanx可以得到一个特别有趣的结果由这个公式可知函数arctanx是函数的一个原函数并且由公式3得到结果xxxxxxxx现在我们有arctan00因为使正切值为0的角度的值是0因而得出xxxxxxxx对于特殊的b1arctanb等于因为对应于正切值为1的角度是45或弧度这样我们便得到一个值得注意的公式xxxxxxxx图276-y下边由0到1的面积是xxxxxxxx这表明在函数xxxxxxxx的图像下边由x0到x1的面积等于半径为1的圆面积的xxxxxxxx">2．初步应用　xr，cosx，sinx，arctanx的积分XXXXXXXX关于基本定理的应用范围，这里还不可能给出一个完整的概念，但是从下面的解释中我们可以得到一些启示．在力学、物理学或纯数学遇到的问题中，经常需要求一个定积分的值．直接由和的极限求积分往往是困难的．但另一方面，正如在§3中所见到的，作各种微分运算则比较容易，并且在这个领域内积累了丰富的知识．把每个微分公式反过来看，都可以给出f（x）的一个原函数G（x）．借助公式（3），就可用来计算f（x）在任意两点之间的积分了．XXXXXXXX例如，要求x2或x3或xn的积分，现在的方法要比§1中的简单得多．由xn的微分公式，我们知道xn的导数是nxn－1，所以XXXXXXXX的导数是XXXXXXXX因而是函数f（x）＝xn的一个原函数，因此立即有XXXXXXXX比起直接由和的极限来求积分的繁难手续来，这个过程要简单得多．XXXXXXXX更一般地，我们在§3中已经得到，对于任意有理数s，不论是正的或是负的，函数xs都有导数sxs－1，因此，对XXXXXXXXs＝r＋1，XXXXXXXX函数XXXXXXXX有导数f（x）＝G′（x）＝xr（我们假定r≠-1，即s≠0）．因而是xr的一个原函数或“不定积分”，而且有（假定a，b为正，且r≠-1）XXXXXXXX在（4）中，我们假定，被积函数xr在积分区间上有定义且连续，即若r＜0要除去x＝0．因此在这里要假定a和b是正的．XXXXXXXX若G（x）＝-cosx，有G′（x）＝sinx．因而XXXXXXXX同样，由于若G（x）＝sinx有G′（x）＝cosx，得XXXXXXXX由反正切的微分公式Darctanx＝，可以得到一个特别有趣的结果．由这个公式可知函数arctanx是函数的一个原函数，并且由公式（3）得到结果XXXXXXXX现在我们有arctan0＝0，因为使正切值为0的角度的值是0．因而得出XXXXXXXX对于特殊的b＝1，arctanb等于，因为对应于正切值为1的角度是45°，或弧度．这样我们便得到一个值得注意的公式XXXXXXXX图276　y＝下边由0到1的面积是XXXXXXXX这表明在函数XXXXXXXX的图像下边，由x＝0到x＝1的面积等于半径为1的圆面积的．XXXXXXXX</h4>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

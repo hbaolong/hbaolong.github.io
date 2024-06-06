@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="hbaolong@vip.qq.com" />
+  <title>论语之183-2024年12月5日-4．前n项平方和</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">论语之183-2024年12月5日-4．前n项平方和</h1>
+<p class="author">hbaolong@vip.qq.com</p>
+</header>
+<h4
+id="前n项平方和xxxxxxxx数学归纳法的另一个有趣的应用是关于前n项平方和通过直接试验可以发现至少在n不大时有xxxxxxxx人们猜想这个重要公式可能对所有正整数n都成立为了证明这点我们再一次用数学归纳法原理我们先看如果命题an在这里是等式4对nr时的情形是正确的即xxxxxxxx然后在这等式两边加上r12我们得到xxxxxxxx这情形正好就是命题ar1因为把4中的n用r1代入就得到它为了完成证明我们只须说明命题a1成立而这时等式xxxxxxxx显然成立因此等式4对每个n都成立xxxxxxxx对于更高次的整数幂的和1k2k3knk这里k是任意一个正整数都可以求出类似的公式作为一个练习读者可以用数学归纳法证明xxxxxxxx应该指出的是一旦公式5写出来后用数学归纳法证明这公式就足够了但这证明却没有表明这个公式最初是怎么产生的为什么表达式nn122被人正确地猜到是前n项立方和的表达式而不是nn132或19n241n242或任何其他曾经被考虑过的无限多个相似类型的表达式一个定理的证明在于应用某些简单逻辑规则但这样一个事实并没有揭示数学中的创造性的成分而创造性在于对被考察的各种可能性作一选择假设5的来源问题属于一个没有一般规律可循的领域其中起作用的是经验类比和直观但是一旦叙述出正确的假设用数学归纳法就常可提供证明由于这样一种证明方法并没有给出发现过程的线索把它称为验证似乎更为合适xxxxxxxx5一个重要的不等式xxxxxxxx在下一章我们将发现不等式xxxxxxxx的用途这里是对p-1的任意数和任意正整数n成立为了一般性起见我们允许p是大于-1的任何数因而预先在这使用了负数和非整数对一般情形的证明与p是正整数情形时的证明是完全一样的我们仍用数学归纳法xxxxxxxxa如果1pr1rp成立则在这不等式的两边乘上正数1p我们得到xxxxxxxx1pr11rpprp2xxxxxxxx去掉正项rp2只能加强这个不等式所以xxxxxxxx1pr11r1pxxxxxxxx表明不等式6对下一个正整数r1也成立b1p11p是显然成立的这完全证明了6对每个n都成立数p-1这个限制是不可少的如果p-1则1p是负的这时在a中的论证是不对的因为不等式的两边用一负数乘不等号要倒过来例如如果我们用-1乘不等式32的两边仍写成-3-2就是错误的xxxxxxxx6二项式定理xxxxxxxx给二项式的n次幂abn以一个明确表达式常常是重要的通过直接的计算我们有xxxxxxxx对n1ab1abxxxxxxxx对n2xxxxxxxx对n3xxxxxxxx等等在等等这词的背后有什么一般规律呢让我们检查一下ab2计算的过程由于ab2abab我们用a乘ab的每一项然后用b乘ab的每一项再加起来就得到了ab2的表达式计算ab3abab2是同样的程序我们可以用同样的方式继续计算ab4ab5等等一直进行下去abn的表达式是这样得到的用a去乘前面对abn1得到的表达式同样地用b去乘它再加起来这引出下面的图它立刻表明了abn的展开式中系数形成的一般规律我们构造一个数的三角形阵列从ab的系数开始如下面图的第一行并使得这三角形的每一个数是上一排中它的两边的两个数的和这个阵列叫作巴斯嘉pascal三角形2xxxxxxxx这三角形中的第n行是abn展开式的系数它是按a的递减的幂和b的递增的幂排列的例如xxxxxxxxab7a77a6b21a5b235a4b335a3b421a2b57ab6b7xxxxxxxx我们用一个简单的下标和上标记法3让xxxxxxxx表示巴斯嘉三角形的第n排的数这时abn的一般公式可写成xxxxxxxx按照巴斯嘉三角形形成的规律我们有xxxxxxxx作为一个练习有经验的读者可以利用这个关系和这一事实用数学归纳法证明xxxxxxxx对任意正整数n符号n读作n的阶乘表示前n个正整数的乘积n123n为了方便起见规定01这样式9对i0和in时均成立系数为这种公式的二项式展开式称为二项式定理见此处xxxxxxxx习题用数学归纳法证明xxxxxxxx1xxxxxxxx2xxxxxxxx312q3q2nqn1xxxxxxxx41q1q21q41q2nxxxxxxxx求出下列等比级数的和xxxxxxxx5xxxxxxxx6xxxxxxxx7xxxxxxxx用公式4和5证明xxxxxxxx812322n12xxxxxxxx913332n13n122n24n1xxxxxxxx10用数学归纳法直接证明这同样的结果xxxxxxxx7再谈数学归纳法xxxxxxxx数学归纳法原理可以推广为如果给定一系列命题asas1as2这里s是某个正整数且如果xxxxxxxxa对每个rs的值ar为真时能推出ar1也为真xxxxxxxxbas已知是真的xxxxxxxx则所有命题asas1as2是真的就是说对所有的nsan成立很清楚这里是把序列123换成了类似的序列ss1s2并运用了建立普通数学归纳法时所用的同一推理用这形式的归纳法我们可以加强此处的不等式即把等号的可能性去掉我们说对任意p0且大于-1和任意n2的整数有xxxxxxxx这道证明题留给读者xxxxxxxx与数学归纳法原理紧密相关的是最小自然数原理它表明任何一个非空正整数集c有最小元素一个集合如果没有元素就是空集例如所有由直线形成的圆的集合或使nn成立的整数n的集合在叙述这个原理时我们显然应当排除这种空集集合c可以是有限的例如12345这个集也可以是无限的例如全体偶数集246810任何一个非空正整数集c至少包含一个自然数记它为n则整数123n中属于c的数必有一个最小的它将是c中的最小整数xxxxxxxx要认识这个原理的意义唯一的办法就是注意它不适用于非自然数的数集c例如正分数集1没有最小元素xxxxxxxx从逻辑的观点来说注意到下面一点是很有趣的即可以用最小自然数原理把数学归纳法当作一个定理来证明对此让我们考虑任意一系列命题a1a2a3使得xxxxxxxxa对任一正整数rar为真时能推出ar1也为真xxxxxxxxb已知a1为真xxxxxxxx我们将表明这些a中有一个不为真这一假设是不对的因为只要这些a中有一个不为真则使得an不为真的全体正整数集c就是不空的按最小自然数原理c包含一最小整数p由b知p必须1因此ap不为真但ap1为真这与a矛盾xxxxxxxx必须再一次强调数学归纳法原理与自然科学中的经验归纳是大不相同的在任意有限多个情形中不管它有多大证实一个一般规律不能算作对这个规律提供了一个严格数学意义下的证明即使当时还不知道有例外的情形这样一个规律仍然只是一个相当合理的假说有待于以后的试验结果来验证在数学上一个规律或一个定理只有当它能表示为某些已被认为是正确的假设的逻辑的必然结果时才算是被证明了在数学命题中有许多这样的例子这些命题到现在为止在所考虑的每一个特殊情形都被证实了但至今仍未证明它普遍地成立此处就有一个例子一个人通过许多例子观察到一个定理是真的他可能感到在一般情形下它也是对的随后他可以试图用数学归纳法来证明它如果成功这定理就证明是正确的如果失败了这个定理可能是正确的也可能是错误的并可能在某一天有人会用其他方法把它证明或否定xxxxxxxx在用数学归纳法时我们必须经常确保条件a和b是真正被满足的忽略了这个先决条件可以引出像下面这样的荒谬结果这里请读者自己找出错误来我们将证明任意两个正整数相等例如510xxxxxxxx首先给出一个定义如果a和b是两个不等的正整数我们定义maxab是ab中较大的一个如果ab我们令maxabab例如max35max535而max444现在让an是这样的命题如果ab是使maxabn的任意两个正整数则abxxxxxxxxa假设ar成立设ab是任意两个使得maxabr1的正整数考虑两个整数xxxxxxxxαa1xxxxxxxxβb1xxxxxxxx则maxαβr又由于我们假设ar成立因此αβ由此知ab因此ar1成立xxxxxxxxba1显然成立因为如果maxab1则由于ab假设是正整数所以都必须等于1因此按数学归纳法an对任意的n成立xxxxxxxx现在如果a和b是两个不管什么样的正整数用r表示maxab由于已证明了对任意的nan是成立的特别ar是成立的因此abxxxxxxxx注释xxxxxxxx1本书中的自然数不包括0和现代的自然数定义略有不同译注xxxxxxxx2在我国宋代杨辉详解九章算法中载有此图叫开方作法本源图这是中国算学的一项杰出贡献比巴斯嘉至少早500年译注xxxxxxxx3本书中的在我国的中学课本中记为译注xxxxxxxx-第1章补充-数论xxxxxxxx引言xxxxxxxx自然数虽然逐渐失去了它和宗教迷信及神秘主义的联系但是数学家对它的兴趣丝毫也没有减退欧几里得约公元前300年大概是对数论作了最初贡献的人他的出名是由于在他的原本中有一部分内容构成了中学课程几何学的基础虽然他的几何学的大部分内容只不过是前人工作的一个总结亚历山大城的一个早期的代数学家丢番都diophantus约公元275年留下了他关于数论的著作费马p.-fermat16011665土伦的一个法官他那时代最伟大的数学家之一是近代数论的开创者欧拉euler17071783最多产的数学家在他的研究中有相当多的是数论方面的工作在数学杂志上很出名的勒让德legendre狄里赫莱dirichlet黎曼riemann也可以列入这个名单中高斯gauss17771855是近代第一流的数学家在数学的许多不同分支都有他的贡献据说他用下面的话表示他对数论的看法数学是科学的皇后而数论是数学的皇后xxxxxxxx-1-素数xxxxxxxx">4．前n项平方和XXXXXXXX数学归纳法的另一个有趣的应用是关于前n项平方和．通过直接试验可以发现，至少在n不大时有XXXXXXXX人们猜想这个重要公式可能对所有正整数n都成立．为了证明这点，我们再一次用数学归纳法原理．我们先看如果命题An（在这里是等式（4））对n＝r时的情形是正确的，即XXXXXXXX然后在这等式两边加上（r＋1）2，我们得到XXXXXXXX这情形正好就是命题Ar＋1，因为把（4）中的n用r＋1代入就得到它．为了完成证明，我们只须说明命题A1成立，而这时等式XXXXXXXX显然成立．因此等式（4）对每个n都成立．XXXXXXXX对于更高次的整数幂的和，1k＋2k＋3k＋…＋nk，这里k是任意一个正整数，都可以求出类似的公式．作为一个练习，读者可以用数学归纳法证明XXXXXXXX应该指出的是，一旦公式（5）写出来后，用数学归纳法证明这公式就足够了，但这证明却没有表明这个公式最初是怎么产生的．为什么表达式［n（n＋1）／2］2被人正确地猜到是前n项立方和的表达式，而不是［n（n＋1）／3］2或（19n2－41n＋24）／2或任何其他曾经被考虑过的无限多个相似类型的表达式．一个定理的证明在于应用某些简单逻辑规则，但这样一个事实并没有揭示数学中的创造性的成分，而创造性在于对被考察的各种可能性作一选择．假设（5）的来源问题，属于一个没有一般规律可循的领域．其中起作用的是经验、类比和直观．但是一旦叙述出正确的假设，用数学归纳法就常可提供证明．由于这样一种证明方法并没有给出发现过程的线索，把它称为验证似乎更为合适．XXXXXXXX<em>5．一个重要的不等式XXXXXXXX在下一章我们将发现不等式XXXXXXXX的用途，这里是对p＞-1的任意数和任意正整数n成立（为了一般性起见，我们允许p是大于-1的任何数，因而预先在这使用了负数和非整数．对一般情形的证明与p是正整数情形时的证明是完全一样的）．我们仍用数学归纳法．XXXXXXXXa）如果（1＋p）r≥1＋rp成立，则在这不等式的两边乘上正数1＋p，我们得到XXXXXXXX（1＋p）r＋1≥1＋rp＋p＋rp2，XXXXXXXX去掉正项rp2只能加强这个不等式，所以XXXXXXXX（1＋p）r＋1≥1＋（r＋1）p．XXXXXXXX表明不等式（6）对下一个正整数r＋1也成立．b）（1＋p）1≥1＋p是显然成立的．这完全证明了（6）对每个n都成立．数p＞-1这个限制是不可少的．如果p＜-1，则1＋p是负的．这时在a）中的论证是不对的，因为不等式的两边用一负数乘，不等号要倒过来（例如，如果我们用-1乘不等式3＞2的两边，仍写成-3＞-2就是错误的）．XXXXXXXX</em>6．二项式定理XXXXXXXX给二项式的n次幂（a＋b）n以一个明确表达式常常是重要的．通过直接的计算，我们有XXXXXXXX对n＝1，（a＋b）1＝a＋b，XXXXXXXX对n＝2，XXXXXXXX对n＝3，XXXXXXXX等等．在“等等”这词的背后有什么一般规律呢？让我们检查一下（a＋b）2计算的过程．由于（a＋b）2＝（a＋b）（a＋b），我们用a乘a＋b的每一项，然后用b乘a＋b的每一项，再加起来就得到了（a＋b）2的表达式．计算（a＋b）3＝（a＋b）（a＋b）2是同样的程序．我们可以用同样的方式继续计算（a＋b）4，（a＋b）5等等一直进行下去．（a＋b）n的表达式是这样得到的：用a去乘前面对（a＋b）n－1得到的表达式，同样地用b去乘它，再加起来．这引出下面的图．它立刻表明了（a＋b）n的展开式中系数形成的一般规律．我们构造一个数的三角形阵列，从a＋b的系数开始（如下面图的第一行），并使得这三角形的每一个数是上一排中它的两边的两个数的和．这个阵列叫作巴斯嘉（Pascal）三角形〔2〕．XXXXXXXX这三角形中的第n行是（a＋b）n展开式的系数，它是按a的递减的幂和b的递增的幂排列的．例如XXXXXXXX（a＋b）7＝a7＋7a6b＋21a5b2＋35a4b3＋35a3b4＋21a2b5＋7ab6＋b7．XXXXXXXX我们用一个简单的下标和上标记法〔3〕，让XXXXXXXX表示巴斯嘉三角形的第n排的数．这时（a＋b）n的一般公式可写成XXXXXXXX按照巴斯嘉三角形形成的规律，我们有XXXXXXXX作为一个练习，有经验的读者可以利用这个关系和这一事实，用数学归纳法证明XXXXXXXX［对任意正整数n，符号n!（读作“n的阶乘”）表示前n个正整数的乘积：n!＝1·2·3…n．为了方便起见，规定0!＝1．这样式（9）对i＝0和i＝n时均成立．］系数为这种公式的二项式展开式，称为二项式定理（见此处）．XXXXXXXX习题：用数学归纳法证明：XXXXXXXX1）XXXXXXXX2）XXXXXXXX<em>3）1＋2q＋3q2＋…＋nqn－1＝．XXXXXXXX</em>4）（1＋q）（1＋q2）（1＋q4）…（1＋q2n）＝．XXXXXXXX求出下列等比级数的和：XXXXXXXX5）XXXXXXXX6）XXXXXXXX7）XXXXXXXX用公式（4）和（5）证明：XXXXXXXX<em>8）12＋32＋…＋（2n＋1）2＝．XXXXXXXX</em>9）13＋33＋…＋（2n＋1）3＝（n＋1）2（2n2＋4n＋1）．XXXXXXXX10）用数学归纳法直接证明这同样的结果．XXXXXXXX*7．再谈数学归纳法XXXXXXXX数学归纳法原理可以推广为：“如果给定一系列命题As，As＋1，As＋2，…，这里s是某个正整数，且如果XXXXXXXXa）对每个r≥s的值，Ar为真时能推出Ar＋1也为真；XXXXXXXXb）As已知是真的，XXXXXXXX则所有命题As，As＋1，As＋2，…是真的．就是说，对所有的n≥s，An成立．”很清楚，这里是把序列1，2，3，…换成了类似的序列s，s＋1，s＋2，…，并运用了建立普通数学归纳法时所用的同一推理．用这形式的归纳法我们可以加强此处的不等式，即把等号“＝”的可能性去掉．我们说，对任意p≠0且大于-1和任意n≥2的整数，有XXXXXXXX这道证明题留给读者．XXXXXXXX与数学归纳法原理紧密相关的是“最小自然数原理”，它表明：任何一个非空正整数集C有最小元素．一个集合如果没有元素，就是空集．例如，所有由直线形成的圆的集合，或使n＞n成立的整数n的集合．在叙述这个原理时，我们显然应当排除这种空集．集合C可以是有限的，例如1，2，3，4，5这个集，也可以是无限的，例如全体偶数集2，4，6，8，10，…．任何一个非空正整数集C至少包含一个自然数，记它为n，则整数1，2，3，…，n中，属于C的数必有一个最小的，它将是C中的最小整数．XXXXXXXX要认识这个原理的意义，唯一的办法就是，注意它不适用于非自然数的数集C．例如正分数集1，，，，…没有最小元素．XXXXXXXX从逻辑的观点来说，注意到下面一点是很有趣的，即可以用最小自然数原理把数学归纳法当作一个定理来证明．对此让我们考虑任意一系列命题A1，A2，A3，…，使得XXXXXXXXa）对任一正整数r，Ar为真时能推出Ar＋1也为真；XXXXXXXXb）已知A1为真．XXXXXXXX我们将表明：“这些A中有一个不为真”这一假设是不对的．因为只要这些A中有一个不为真，则使得An不为真的全体正整数集C就是不空的．按最小自然数原理，C包含一最小整数p，由b）知p必须＞1．因此Ap不为真，但Ap－1为真．这与a）矛盾XXXXXXXX必须再一次强调数学归纳法原理与自然科学中的经验归纳是大不相同的．在任意有限多个情形中（不管它有多大），证实一个一般规律，不能算作对这个规律提供了一个严格数学意义下的证明，即使当时还不知道有例外的情形．这样一个规律仍然只是一个相当合理的假说，有待于以后的试验结果来验证．在数学上，一个规律或一个定理，只有当它能表示为某些已被认为是正确的假设的逻辑的必然结果时，才算是被证明了．在数学命题中有许多这样的例子：这些命题到现在为止，在所考虑的每一个特殊情形都被证实了，但至今仍未证明它普遍地成立（此处就有一个例子）．一个人通过许多例子观察到一个定理是真的，他可能感到在一般情形下它也是对的，随后他可以试图用数学归纳法来证明它，如果成功，这定理就证明是正确的；如果失败了，这个定理可能是正确的，也可能是错误的；并可能在某一天有人会用其他方法把它证明或否定．XXXXXXXX在用数学归纳法时，我们必须经常确保条件a）和b）是真正被满足的．忽略了这个先决条件可以引出像下面这样的荒谬结果．这里请读者自己找出错误来．我们将“证明”任意两个正整数相等，例如5＝10．XXXXXXXX首先给出一个定义：如果a和b是两个不等的正整数，我们定义max（a，b）是a，b中较大的一个．如果a＝b，我们令max（a，b）＝a＝b．例如max（3，5）＝max（5，3）＝5，而max（4，4）＝4．现在让An是这样的命题：“如果a，b是使max（a，b）＝n的任意两个正整数，则a＝b．”XXXXXXXXa）假设Ar成立；设a，b是任意两个使得max（a，b）＝r＋1的正整数．考虑两个整数XXXXXXXXα＝a－1，XXXXXXXXβ＝b－1，XXXXXXXX则max（α，β）＝r，又由于我们假设Ar成立，因此α＝β，由此知a＝b．因此Ar＋1成立．XXXXXXXXb）A1显然成立．因为如果max（a，b）＝1，则由于a，b假设是正整数，所以都必须等于1．因此按数学归纳法，An对任意的n成立．XXXXXXXX现在如果a和b是两个不管什么样的正整数，用r表示max（a，b），由于已证明了对任意的n，An是成立的，特别Ar是成立的，因此a＝b．XXXXXXXX注释XXXXXXXX〔1〕本书中的自然数不包括0，和现代的自然数定义略有不同．——译注XXXXXXXX〔2〕在我国宋代杨辉《详解（九章）算法》中载有此图，叫“开方作法本源”图，这是中国算学的一项杰出贡献，比巴斯嘉至少早500年．——译注XXXXXXXX〔3〕本书中的在我国的中学课本中记为．——译注XXXXXXXX##
+第1章补充　数论XXXXXXXX引言XXXXXXXX自然数虽然逐渐失去了它和宗教迷信及神秘主义的联系，但是数学家对它的兴趣丝毫也没有减退．欧几里得（约公元前300年）大概是对数论作了最初贡献的人（他的出名是由于在他的《原本》中有一部分内容构成了中学课程几何学的基础，虽然他的几何学的大部分内容只不过是前人工作的一个总结）．亚历山大城的一个早期的代数学家丢番都（Diophantus）（约公元275年），留下了他关于数论的著作．费马（P.
+Fermat）（1601～1665），土伦的一个法官，他那时代最伟大的数学家之一，是近代数论的开创者．欧拉（Euler）（1707～1783），最多产的数学家，在他的研究中有相当多的是数论方面的工作．在数学杂志上很出名的勒让德（Legendre），狄里赫莱（Dirichlet）、黎曼（Riemann）也可以列入这个名单中．高斯（Gauss）（1777～1855），是近代第一流的数学家，在数学的许多不同分支都有他的贡献；据说他用下面的话表示他对数论的看法：“数学是科学的皇后，而数论是数学的皇后．”XXXXXXXX###
+§1　素数XXXXXXXX</h4>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

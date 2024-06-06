@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="hbaolong@vip.qq.com" />
+  <title>论语之197-2024年12月19日-2．十进位小数　无限小数</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">论语之197-2024年12月19日-2．十进位小数　无限小数</h1>
+<p class="author">hbaolong@vip.qq.com</p>
+</header>
+<h4
+id="十进位小数-无限小数xxxxxxxx要在数轴上确立一个处处稠密的点集我们无需用全体有理数例如只考虑下面这些数就够了把每一个单位区间分为10然后1001000等等个相等的线段这样得到的点对应着十进位小数例如它对应的点位于第一个单位区间长为10-1的第二个子区间内是长为10-2的第三个子子区间的端点a-n表示一个十进位小数如果在小数点之后有n个数码可以写成xxxxxxxxfza110-1a210-2a310-3an10-nxxxxxxxx这里z是一整数而这些a是表示十分之一百分之一等等的数码0129在十进位数系中数f简记为z.a1a2a3an我们立刻可以看到这些十进位小数能写成一个普通形式的分数其中q10n例如f1.314如果p和q有公因子这十进位小数可以写成分母是10n的某个因子的分数另一方面当不可约分数的分母不是10的某个幂的因子时这分数不能表示为十进位小数例如0.004但是不能写成n位十进位小数这里n为任意的有限数因为形如xxxxxxxx的等式意味着xxxxxxxx10n3bxxxxxxxx而这是荒谬的因为3不是10的任意次幂的因子xxxxxxxx现在让我们在数轴上任意选取一个不对应于十进位小数的点p例如有理点或无理点于是在划分单位区间为十等分等等的过程中p始终不会作为子区间的一个端点但是p能够以我们所希望的任意精确度包含在越来越小的十进位划分的区间中这近似过程可以描述如下xxxxxxxx假设p在第一个单位区间我们把这区间分为十等分每个长为10-1并且发现例如p在第三个这样的区间内这时我们能说p在十进位小数0.2和0.3之间我们把0.2到0.3这区间分为十等分每个长为10-2例如发现p在第四个这样的区间内再把它划分我们发现p在第一个长为10-3的区间内现在我们能说p在0.230和0.231之间这过程能无限地继续进行下去而引出一个无穷的数码序列a1a2a3an它有下述性质不论我们取多么大的n点p总在区间in中这in的左端点是十进位小数0a1a2a3an1an它的右端点是0a1a2a3an1an1in的长度是10-n如果我们不断选取n1234我们看到这些区间i1i2i3中的每一个包含在前一个之中而它们的长度为10-110-210-3趋向于零我们说点p包含在一串十进位区间的区间套中例如p点为有理数时所有数码a1a2a3都等于3p包含在每一个这样的区间in内in由0.33333到0.33334即大于0.33333而小于0.33334这里数码的个数可以任意多我们这样来表述这个事实n个数码的十进位小数0.33333当n增大时趋向于写成xxxxxxxx0.333xxxxxxxx后面这些点表示这十进位小数无限伸展xxxxxxxx在上一小节中定义的无理数也引出一个无限伸展的十进位小数但在这里决定这序列中数码的值的规律却不明显事实上我们不知道有什么明确的公式能够决定这一串数尽管我们希望要多少位数码都可以计算出来xxxxxxxx作为一个一般的定义我们说如果对每个n点p都是在以za1a2a3an为端点且长为10-n的区间内则p不能用任何有限的n个数码的十进位小数表示而表示为无限十进位小数z.a1a2a3xxxxxxxx以此方式在数轴上的所有点和所有有限及无限十进位小数之间建立了一个对应我们提出一个推测性的定义一个数是一个有限或者无限十进位小数那些不表示有理数的无限小数称为无理数xxxxxxxx直到19世纪中叶这些思想才作为有理数和无理数系统数的连续统的一个令人满意的解释被人们所接受17世纪以来数学的巨大进展特别是解析几何和微积分的发展是以数系的概念作为基础而得以进行下去的但是在批判地重新检查这些原则并巩固成果时越来越感到对无理数的概念要作更精确的分析为了说明数的连续统的近代理论作为一个预备我们将以多多少少直观的形式讨论极限的基本概念xxxxxxxx习题计算和至少精确到10-2xxxxxxxx">2．十进位小数　无限小数XXXXXXXX要在数轴上确立一个处处稠密的点集，我们无需用全体有理数；例如只考虑下面这些数就够了：把每一个单位区间分为10，然后100，1000等等个相等的线段，这样得到的点对应着“十进位小数”．例如．它对应的点位于第一个单位区间长为10-1的第二个子区间内，是长为10-2的第三个“子子”区间的端点．（a-n表示）．一个十进位小数，如果在小数点之后有n个数码，可以写成XXXXXXXXf＝z＋a110-1＋a210-2＋a310-3＋…＋an10-n，XXXXXXXX这里z是一整数，而这些a是表示十分之一、百分之一等等的数码——0，1，2，…，9．在十进位数系中数f简记为z.a1a2a3…an．我们立刻可以看到，这些十进位小数能写成一个普通形式的分数，其中q＝10n．例如f＝1.314＝．如果p和q有公因子，这十进位小数可以写成分母是10n的某个因子的分数．另一方面，当不可约分数的分母不是10的某个幂的因子时，这分数不能表示为十进位小数，例如，＝0.004，但是不能写成n位十进位小数（这里n为任意的有限数）．因为形如XXXXXXXX的等式意味着XXXXXXXX10n＝3b，XXXXXXXX而这是荒谬的，因为3不是10的任意次幂的因子．XXXXXXXX现在，让我们在数轴上任意选取一个不对应于十进位小数的点P，例如，有理点或无理点．于是，在划分单位区间为十等分等等的过程中，P始终不会作为子区间的一个端点．但是，P能够以我们所希望的任意精确度包含在越来越小的十进位划分的区间中．这近似过程可以描述如下．XXXXXXXX假设P在第一个单位区间．我们把这区间分为十等分，每个长为10-1，并且发现，例如，P在第三个这样的区间内．这时我们能说P在十进位小数0.2和0.3之间．我们把0.2到0.3这区间分为十等分，每个长为10-2，例如，发现P在第四个这样的区间内．再把它划分，我们发现P在第一个长为10-3的区间内，现在我们能说P在0.230和0.231之间．这过程能无限地继续进行下去，而引出一个无穷的数码序列a1，a2，a3，…，an，…，它有下述性质：不论我们取多么大的n，点P总在区间In中，这In的左端点是十进位小数0．a1a2a3…an－1an，它的右端点是0．a1a2a3…an－1（an＋1），In的长度是10-n．如果我们不断选取n＝1，2，3，4，…，我们看到这些区间I1，I2，I3，…中的每一个包含在前一个之中，而它们的长度为10-1，10-2，10-3，…，趋向于零．我们说点P包含在一串十进位区间的区间套中．例如，P点为有理数时，所有数码a1，a2，a3，…都等于3，P包含在每一个这样的区间In内：In由0.333…33到0.333…34，即大于0.333…33而小于0.333…34，这里数码的个数可以任意多．我们这样来表述这个事实，n个数码的十进位小数0.333…33，当n增大时，“趋向于”，写成XXXXXXXX＝0.333…，XXXXXXXX后面这些点表示这十进位小数“无限”伸展．XXXXXXXX在上一小节中定义的无理数，也引出一个无限伸展的十进位小数，但在这里，决定这序列中数码的值的规律却不明显．事实上，我们不知道有什么明确的公式能够决定这一串数，尽管我们希望要多少位数码都可以计算出来：XXXXXXXX作为一个一般的定义，我们说，如果对每个n，点P都是在以z．a1a2a3…an为端点且长为10-n的区间内，则P不能用任何有限的n个数码的十进位小数表示，而表示为无限十进位小数z.a1a2a3…．XXXXXXXX以此方式，在数轴上的所有点和所有有限及无限十进位小数之间建立了一个对应．我们提出一个推测性的定义：一个“数”是一个有限或者无限十进位小数．那些不表示有理数的无限小数称为无理数．XXXXXXXX直到19世纪中叶，这些思想才作为有理数和无理数系统——数的连续统——的一个令人满意的解释被人们所接受．17世纪以来数学的巨大进展，特别是解析几何和微积分的发展，是以数系的概念作为基础而得以进行下去的．但是，在批判地重新检查这些原则并巩固成果时，越来越感到对无理数的概念要作更精确的分析．为了说明数的连续统的近代理论，作为一个预备，我们将以多多少少直观的形式，讨论极限的基本概念．XXXXXXXX习题：计算和，至少精确到10-2．XXXXXXXX</h4>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

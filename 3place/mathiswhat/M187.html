@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="hbaolong@vip.qq.com" />
+  <title>论语之187-2024年12月9日-2．费马定理</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">论语之187-2024年12月9日-2．费马定理</h1>
+<p class="author">hbaolong@vip.qq.com</p>
+</header>
+<h4
+id="费马定理xxxxxxxx在17世纪近代数论的奠基者费马发现了一个十分重要的定理如果p是任意一个不能整除整数a的素数则xxxxxxxxap11mod-pxxxxxxxx这意味着a的p1次幂被p除后余1xxxxxxxx用我们前面的一些计算可以验证这个定理例如我们已看到过1061mod-71021mod-3和10101mod-11同样地我们可以表明2121mod-13以及5101mod-11为了验证后面这两个同余式我们不必去实际计算这么高阶的幂因为我们可以利用同余式乘法性质带来的好处xxxxxxxx为了证明费马定理我们考虑a的倍数xxxxxxxxm1am22am33amp1p1axxxxxxxx这些整数中任意两个都不能模p同余否则存在某一对整数rs满足1rsp1使p成为msmrsra的一个因子但由规律7知这是不可能的因为sr是小于p的所以p不是sr的因子而由假设p又不是a的因子同样地这些数中没有一个能和0同余因此数m1m2mp1如果将其次序重新排列必须相应地同余于数123p1故得出xxxxxxxx或者为了简单起见我们记123p1为k则xxxxxxxxkap110mod-pxxxxxxxx但因为k的因子没有能被p整除的所以k不能被p整除因而由规律7ap11必须被p整除即xxxxxxxxap110mod-pxxxxxxxx这就是费马定理xxxxxxxx让我们再来核对这定理取p23而a5这时我们有所有的模都是235225445816-751649352012522241如果a4而不是5所有的模仍取23我们得到42-743-28-544-203489411-4514221xxxxxxxx在上面a4p23的例子中我们从另一方面看到不仅a的p1次幂同余于1而且还可以有一个更小的幂同余于1最小的这样的幂在这里是11是p1的一个因子这命题总是真的见下面习题3xxxxxxxx习题1用类似的计算表明281mod-1738-1mod-17314-1mod-29214-1mod-294141mod-295141mod-29xxxxxxxx2对p57111723用不同的a值来核对费马定理xxxxxxxx3证明一个一般的定理使ae1mod-p的最小正整数e必须是p1的一个因子提示用e除p1得到xxxxxxxxp1kerxxxxxxxx这里0re并且用ap1ae1mod-p这一事实xxxxxxxx">2．费马定理XXXXXXXX在17世纪，近代数论的奠基者费马，发现了一个十分重要的定理：如果p是任意一个不能整除整数a的素数，则XXXXXXXXap－1≡1（mod
+p）．XXXXXXXX这意味着a的（p－1）次幂被p除后余1．XXXXXXXX用我们前面的一些计算可以验证这个定理；例如我们已看到过106≡1（mod
+7），102≡1（mod 3）和1010≡1（mod 11）．同样地，我们可以表明212≡1（mod
+13）以及510≡1（mod
+11）．为了验证后面这两个同余式，我们不必去实际计算这么高阶的幂，因为我们可以利用同余式乘法性质带来的好处：XXXXXXXX为了证明费马定理，我们考虑a的倍数：XXXXXXXXm1＝a，m2＝2a，m3＝3a，…，mp－1＝（p－1）a．XXXXXXXX这些整数中任意两个都不能模p同余，否则存在某一对整数r，s，满足1≤r＜s≤（p－1），使p成为ms－mr＝（s－r）a的一个因子．但由规律7）知这是不可能的，因为s－r是小于p的，所以p不是s－r的因子，而由假设p又不是a的因子．同样地，这些数中没有一个能和0同余．因此数m1，m2，…，mp－1（如果将其次序重新排列）必须相应地同余于数1，2，3，…，p－1．故得出XXXXXXXX或者，为了简单起见我们记1·2·3…（p－1）为K，则XXXXXXXXK（ap－1－1）≡0（mod
+p）．XXXXXXXX但因为K的因子没有能被p整除的，所以K不能被p整除，因而由规律7），ap－1－1必须被p整除，即XXXXXXXXap－1－1≡0（mod
+p）．XXXXXXXX这就是费马定理．XXXXXXXX让我们再来核对这定理：取p＝23而a＝5．这时我们有（所有的模都是23）52≡2，54≡4，58≡16≡-7，516≡49≡3，520≡12，522≡24≡1．如果a＝4而不是5，所有的模仍取23，我们得到42≡-7，43≡-28≡-5，44≡-20≡3，48≡9，411≡-45≡1，422≡1．XXXXXXXX在上面a＝4，p＝23的例子中，我们从另一方面看到不仅a的（p－1）次幂同余于1，而且还可以有一个更小的幂同余于1．最小的这样的幂（在这里是11）是（p－1）的一个因子，这命题总是真的（见下面习题3）．XXXXXXXX习题：1）用类似的计算表明：28≡1（mod
+17）；38≡-1（mod 17）；314≡-1（mod 29）；214≡-1（mod 29）；414≡1（mod
+29）；514≡1（mod
+29）．XXXXXXXX2）对p＝5，7，11，17，23，用不同的a值来核对费马定理．XXXXXXXX3）证明一个一般的定理：使ae≡1（mod
+p）的最小正整数e必须是p－1的一个因子（提示：用e除p－1得到XXXXXXXXp－1＝ke＋r，XXXXXXXX这里0≤r＜e，并且用ap－1≡ae≡1（mod
+p）这一事实）．XXXXXXXX</h4>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

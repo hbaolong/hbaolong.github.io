@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="hbaolong@vip.qq.com" />
+  <title>论语之279-2025年3月11日-2．单调序列</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">论语之279-2025年3月11日-2．单调序列</h1>
+<p class="author">hbaolong@vip.qq.com</p>
+</header>
+<h4
+id="单调序列xxxxxxxx在此处的一般定义中没有要求收敛序列a1a2a3以某种特殊的方式趋于它的极限a序列的最简单的类型是所谓的单调序列这样的序列如xxxxxxxxxxxxxxxx这个序列的每一项都大于前面的项因为xxxxxxxx对anan1这样的序列称为单调增加的同样anan1的序列如1称为单调减少的这样的序列只能由一边趋近它的极限与此相反存在振动的序列如序列-1-这个序列是从两边趋近它的极限0见此处图11xxxxxxxx单调序列的特性是特别容易确定的这样一个序列可以没有极限且完全散开如序列xxxxxxxx1234xxxxxxxx其中ann或序列xxxxxxxx23571113xxxxxxxx其中an是第n个素数pn在这种情形下序列趋于无穷大但是如果单调增加序列的项保持有界即如果每一项都小于一个预先知道的上界b那么在直观上很清楚序列必趋于某个极限a这个a小于或至多等于b我们把这一点表述为单调序列原理任何一个有上界的单调增加序列必收敛于一个极限对于任何一个有下界的单调减少序列类似的命题也成立值得注意的是极限a的值不需要预先给定也不需要预先知道定理所说的是在规定的条件下极限必存在当然这个定理的成立有赖于引进无理数否则就不一定总是对的如在第二章已经见到的任意一个无理数如是单调增加有界的有理十进位小数序列的极限这序列是将某个无穷小数截取前有限位数而得到的有理十进位小数所构成的xxxxxxxx图166-单调有界序列xxxxxxxx虽然单调序列原理直观上显然是对的但给出一个近代形式的严格证明仍是有益的为了做到这一点我们必须说明这个原理是实数和极限定义的逻辑结论xxxxxxxx假设数a1a2a3组成一个单调增加有界序列我们能把这个序列的各项表示成十进位无限小数xxxxxxxxa1a1.p1p2p3xxxxxxxxa2a2.q1q2q3xxxxxxxxa3a3.r1r2r3xxxxxxxxxxxxxxxx其中ai是整数而piqi等等是从0到9的数码现在从上往下考察整数a1a2a3组成的那列因为序列a1a2a3是有界的这些整数不能无限增大又因为这序列是单调增加的那么整数序列a1a2a3在达到极大值后将保持不变称这个极大值为a并假设它在第n0行达到现在从上往下考察第二列p1q1r1不过只需把注意力集中在第n0行和以后的行上如果x1是n0行后出现在这列的最大数码我们假定出现在n1行其中n1nc那么x1在它初次出现以后将一直不变这是因为如果这个列的数码在这以后任意一个时刻减少了那么序列a1a2a3就不单调增加了其次我们考察第三列的数码p2q2r2同样的讨论表明在某个整数n2n1后第三列的数码总等于某个数码x2如果重复这个过程于第4列第5列我们得到数码x3x4x5和相应的整数n3n4n5很容易看出数xxxxxxxxaa.x1x2x3x4xxxxxxxx是序列a1a2a3的极限因为如果ε选择为10-m那么对所有的nnman的整数部分和小数点后的前m个数字与a的是一样的因此差aan不能超过10-m因为对于不论多么小的任意正数ε通过选取足够大的m都能做到这一点因而证明了定理xxxxxxxx利用第二章给出的实数的任何一种定义例如由区间套或戴特金分割的定义都能证明这个定理这样的证明在绝大多数高等微积分课本中都能找到xxxxxxxx在第二章里可以用单调序列原理来定义两个正的十进位无限小数xxxxxxxxaa.a1a2a3xxxxxxxxbb.b1b2b3xxxxxxxx的和以及乘积对这两个表示式用通常的办法即从右端终点开始运算不能进行加法和乘法运算因为它们不存在这样的终点例如读者可以试加两个无穷小数0.3333和0.989898但是如果截取a和b的前n个数码把像平常那样进行加法得到的十进位有限小数设为xn那么序列x1x2x3将是单调增加的并且有界例如取界为整数ab2因此这个序列有极限并且可以定义xxxxxxxxablimxnxxxxxxxx用类似的步骤也可以定义乘积ab用普通的算术法则可以把这些定义推广到a和b是正的或负的所有情形xxxxxxxx习题按这个方法证明上面所说的两个无穷小数的和是实数xxxxxxxx1.323232xxxxxxxx在数学中极限概念的重要性在于这样一个事实很多数只能由极限来定义常常是单调有界序列的极限这就是为什么有理数域在这样的域中极限可能不存在对数学的需要来说是太狭窄了的缘故xxxxxxxx">2．单调序列XXXXXXXX在此处的一般定义中，没有要求收敛序列a1，a2，a3，…以某种特殊的方式趋于它的极限a．序列的最简单的类型是所谓的单调序列．这样的序列如XXXXXXXX，，，…，，…，XXXXXXXX这个序列的每一项都大于前面的项．因为XXXXXXXX对an＜an＋1这样的序列，称为单调增加的．同样，an＞an＋1的序列，如1，，，…，称为单调减少的．这样的序列只能由一边趋近它的极限．与此相反，存在振动的序列，如序列-1，+，-，+，…，这个序列是从两边趋近它的极限0（见此处图11）．XXXXXXXX单调序列的特性是特别容易确定的．这样一个序列可以没有极限，且完全散开，如序列XXXXXXXX1，2，3，4，…，XXXXXXXX其中an＝n，或序列XXXXXXXX2，3，5，7，11，13，…，XXXXXXXX其中an是第n个素数pn．在这种情形下序列趋于无穷大．但是，如果单调增加序列的项保持有界——即如果每一项都小于一个预先知道的上界B——那么在直观上很清楚，序列必趋于某个极限a，这个a小于或至多等于B．我们把这一点表述为单调序列原理：任何一个有上界的单调增加序列必收敛于一个极限（对于任何一个有下界的单调减少序列，类似的命题也成立）．值得注意的是极限a的值不需要预先给定，也不需要预先知道；定理所说的是，在规定的条件下极限必存在．当然，这个定理的成立有赖于引进无理数，否则，就不一定总是对的．如在第二章已经见到的，任意一个无理数（如），是单调增加有界的有理十进位小数序列的极限，这序列是将某个无穷小数截取前有限位数而得到的有理十进位小数所构成的．XXXXXXXX图166　单调有界序列XXXXXXXX*虽然单调序列原理直观上显然是对的，但给出一个近代形式的严格证明仍是有益的．为了做到这一点，我们必须说明，这个原理是实数和极限定义的逻辑结论．XXXXXXXX假设数a1，a2，a3，…组成一个单调增加有界序列．我们能把这个序列的各项表示成十进位无限小数XXXXXXXXa1＝A1.p1p2p3…，XXXXXXXXa2＝A2.q1q2q3…，XXXXXXXXa3＝A3.r1r2r3…，XXXXXXXX……XXXXXXXX其中Ai是整数而pi，qi，等等是从0到9的数码．现在从上往下考察整数A1，A2，A3，…组成的那列．因为序列a1，a2，a3，…是有界的，这些整数不能无限增大，又因为这序列是单调增加的，那么整数序列A1，A2，A3，…在达到极大值后将保持不变．称这个极大值为A，并假设它在第N0行达到．现在从上往下考察第二列p1，q1，r1，…．不过只需把注意力集中在第N0行和以后的行上．如果x1是N0行后出现在这列的最大数码，我们假定出现在N1行，其中N1≥Nc．那么x1在它初次出现以后将一直不变．这是因为如果这个列的数码，在这以后任意一个时刻减少了，那么序列a1，a2，a3，…就不单调增加了．其次我们考察第三列的数码p2，q2，r2，…．同样的讨论表明，在某个整数N2≥N1后第三列的数码总等于某个数码x2．如果重复这个过程于第4列，第5列…，我们得到数码x3，x4，x5，…和相应的整数N3，N4，N5，…．很容易看出，数XXXXXXXXa＝A′.x1x2x3x4…XXXXXXXX是序列a1，a2，a3，…的极限．因为如果ε选择为≥10-m，那么对所有的n＞Nm，an的整数部分和小数点后的前m个数字与a的是一样的，因此，差｜a－an｜不能超过10-m．因为对于不论多么小的任意正数ε，通过选取足够大的m都能做到这一点，因而证明了定理．XXXXXXXX利用第二章给出的实数的任何一种定义，例如，由区间套或戴特金分割的定义，都能证明这个定理．这样的证明在绝大多数高等微积分课本中都能找到．XXXXXXXX在第二章里，可以用单调序列原理来定义两个正的十进位无限小数XXXXXXXXa＝A.a1a2a3…，XXXXXXXXb＝B.b1b2b3…XXXXXXXX的和以及乘积．对这两个表示式用通常的办法——即从右端终点开始运算——不能进行加法和乘法运算，因为它们不存在这样的终点（例如，读者可以试加两个无穷小数0.3333…和0.989898…）．但是如果截取a和b的前n个数码，把像平常那样进行加法得到的十进位有限小数设为xn，那么序列x1，x2，x3，…将是单调增加的并且有界（例如取界为整数A＋B＋2）．因此这个序列有极限，并且可以定义XXXXXXXXa＋b＝limxn．XXXXXXXX用类似的步骤也可以定义乘积a·b．用普通的算术法则，可以把这些定义推广到a和b是正的或负的所有情形．XXXXXXXX习题：按这个方法，证明上面所说的两个无穷小数的和是实数XXXXXXXX1.323232…＝．XXXXXXXX在数学中极限概念的重要性在于这样一个事实：很多数只能由极限来定义——常常是单调有界序列的极限．这就是为什么有理数域（在这样的域中极限可能不存在）对数学的需要来说是太狭窄了的缘故．XXXXXXXX</h4>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

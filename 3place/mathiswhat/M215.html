@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="hbaolong@vip.qq.com" />
+  <title>论语之215-2025年1月6日-1．域的构作和开平方根</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">论语之215-2025年1月6日-1．域的构作和开平方根</h1>
+<p class="author">hbaolong@vip.qq.com</p>
+</header>
+<h4
+id="域的构作和开平方根xxxxxxxx为了建立我们的一般思想我们从检验一些古典作图开始要理解得更深刻关键在于把几何问题翻译成代数语言任何一个几何作图问题都是这种类型的给定某些线段如abc求一个或多个其他线段xy任何一个问题总可以用这种方式来表述虽然初看起来表面上与此很不相同我们所求的线段可以是一个要作图的三角形的边圆的半径某个点的直角坐标例如见此处等为简单起见我们假设只需求作一个线段x于是几何作图就归结为解一个代数问题首先我们必须找出所求的量x和给定的量abc之间的关系方程其次我们必须解这方程来求未知量x最后我们必须确定通过相应于用圆规和直尺来作图的代数过程能否得到这个问题的解解析几何的原理就是在引进实数连续统的基础上用实数刻划几何对象的量的特征它为整个理论提供了基础xxxxxxxx首先我们来看相应于初等几何作图的一些最简单的代数运算如果给定两个长为a和b的线段用一个给定单位线段来测量很容易作出ababra这里r是任意的有理数和abxxxxxxxx为了作出ab图27我们画一条直线在上面用圆规标出距离oaaabb则obab类似地对ab我们标出oaaabb但这次ab和oa方向相反则obab为了画3a我们简单地作加法aaa同样我们能作出pa这里p是任意一个正整数我们用下述办法画图28在一直线上标出oaa过o任意作第二条直线在这直线上我们标出任一线段occ再作od3cxxxxxxxx图27-ab和ab的作图xxxxxxxx图28-的作图xxxxxxxx连接a和d且过c画一直线平行于ad交oa于b三角形obc和三角形oad相似因此有即ob用同样的方法我们能画出这里q是任一正整数将此作法施于线段pa我们就能作出ra这里r为任意一个有理数xxxxxxxx为了作图29我们在任意一个角o的两边上标出obboaa且在ob上标出od1过d作一平行于ab的直线交oa于c则oc长为图30表明了ab的作法其中ad是过a平行于bc的线xxxxxxxx图29-的作图xxxxxxxx图30-ab的作图xxxxxxxx由这些考虑得知有理代数过程已知量的加减乘除能用几何作图来实现从长度为实数abc的任意给定线段出发连续应用这些简单作图我们能作出用abc的有理式即重复地应用加减乘除来表示的任意量由abc以这种方式得到的所有量构成了一个叫做数域的集合使得这集合中两个或多个数经过任意的有理运算后仍然是这个集合中的一个数我们回顾一下有理数实数复数都是一个域对于现在这种情形我们称这个域是由给定的数abc构成的xxxxxxxx有决定性意义的新作图方法是求平方根它使我们超出了刚才得到的域如果给定一个线段a则只用圆规和直尺能作出在直线上我们标出oaa和ab1图31我们以线段ob为直径画一圆而且过a作ob的垂线交这个圆于c利用初等几何的定理即半圆的圆周角是直角我们得知三角形obc在c点是一直角因此ocaabc直角三角形oac和cab相似设xac我们有xxxxxxxx图31-的作图xxxxxxxx">1．域的构作和开平方根XXXXXXXX为了建立我们的一般思想，我们从检验一些古典作图开始．要理解得更深刻，关键在于把几何问题“翻译”成代数语言．任何一个几何作图问题都是这种类型的：给定某些线段如a，b，c，…，求一个或多个其他线段x，y，…．任何一个问题总可以用这种方式来表述，虽然初看起来表面上与此很不相同．我们所求的线段可以是，一个要作图的三角形的边、圆的半径、某个点的直角坐标（例如见此处）等．为简单起见，我们假设只需求作一个线段x．于是几何作图就归结为解一个代数问题：首先，我们必须找出所求的量x和给定的量a，b，c，…之间的关系（方程）；其次，我们必须解这方程来求未知量x；最后，我们必须确定，通过相应于用圆规和直尺来作图的代数过程能否得到这个问题的解．解析几何的原理就是在引进实数连续统的基础上，用实数刻划几何对象的量的特征．它为整个理论提供了基础．XXXXXXXX首先，我们来看相应于初等几何作图的一些最简单的代数运算．如果给定两个长为a和b的线段（用一个给定“单位”线段来测量），很容易作出a＋b，a－b，ra（这里r是任意的有理数），和ab．XXXXXXXX为了作出a＋b（图27），我们画一条直线，在上面用圆规标出距离OA＝a，AB＝b，则OB＝a＋b．类似地对a－b，我们标出OA＝a，AB＝b，但这次AB和OA方向相反，则OB＝a－b．为了画3a，我们简单地作加法a＋a＋a．同样，我们能作出pa，这里p是任意一个正整数．我们用下述办法画（图28），在一直线上标出OA＝a，过O任意作第二条直线，在这直线上我们标出任一线段OC＝c，再作OD＝3c．XXXXXXXX图27　a＋b和a－b的作图XXXXXXXX图28　的作图XXXXXXXX连接A和D且过C画一直线平行于AD，交OA于B．三角形OBC和三角形OAD相似，因此有＝＝＝，即OB＝．用同样的方法我们能画出，这里q是任一正整数．将此作法施于线段pa，我们就能作出ra，这里r＝为任意一个有理数．XXXXXXXX为了作（图29），我们在任意一个角O的两边上标出OB＝b，OA＝a，且在OB上标出OD＝1，过D作一平行于AB的直线交OA于C，则OC长为．图30表明了ab的作法，其中AD是过A平行于BC的线．XXXXXXXX图29　的作图XXXXXXXX图30　ab的作图XXXXXXXX由这些考虑得知，“有理”代数过程——已知量的加、减、乘、除——能用几何作图来实现．从长度为实数a，b，c，…的任意给定线段出发，连续应用这些简单作图，我们能作出用a，b，c，…的有理式（即重复地应用加、减、乘、除）来表示的任意量．由a，b，c，…以这种方式得到的所有量构成了一个叫做数域的集合，使得这集合中两个或多个数经过任意的有理运算后仍然是这个集合中的一个数．我们回顾一下，有理数，实数，复数都是一个域．对于现在这种情形，我们称这个域是由给定的数a，b，c，…构成的．XXXXXXXX有决定性意义的新作图方法是求平方根，它使我们超出了刚才得到的域．如果给定一个线段a，则只用圆规和直尺能作出．在直线上我们标出OA＝a和AB＝1（图31）．我们以线段OB为直径画一圆，而且过A作OB的垂线交这个圆于C．利用初等几何的定理，即半圆的圆周角是直角，我们得知，三角形OBC在C点是一直角．因此∠OCA＝∠ABC，直角三角形OAC和CAB相似．设x＝AC，我们有XXXXXXXX图31　的作图XXXXXXXX</h4>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

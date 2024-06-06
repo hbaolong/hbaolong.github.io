@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="hbaolong@vip.qq.com" />
+  <title>论语之203-2024年12月25日-2．有理数的可数性和连续统的不可数性</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">论语之203-2024年12月25日-2．有理数的可数性和连续统的不可数性</h1>
+<p class="author">hbaolong@vip.qq.com</p>
+</header>
+<h4
+id="有理数的可数性和连续统的不可数性xxxxxxxx康托在分析无限性时他最初的发现之一是有理数集它包含整数集这个无限子集因而它本身是无限集是和整数集等势的稠密的有理数集与疏散的它的整数子集的元素一样多初看起来这似乎是很奇怪的确实人们不能按大小次序来排列正有理数对正整数能这样做不能说a是第一个有理数b是挨着它的那个比它大的有理数等等因为任意两个给定的有理数之间有无穷多个有理数因而没有挨着它的那一个但是正如康托看到的那样抛开按序相连的两个元素之间的量的关系就可以像整数那样将全体有理数排列成一行r1r2r3r4在这序列中将有第一个有理数第二个第三个等等而且每个有理数恰好出现一次一个集合如果其元素能像整数那样排列成一个序列就称这个集合是可数的通过展示这样的可数性康托表明有理数是和整数集等势的因为对应xxxxxxxx是一对一的现在我们来描述把有理数排列起来的一个方式xxxxxxxx每一个有理数都能写成的形式这里a和b是整数而且所有这些数能布置成这样的阵势使在第a列第b行例如把放在下面表中的第3列第4行所有的有理数现在可以按照下面的设计排列在刚刚规定的布阵中我们画一条连续的折线通过这布阵中所有的数从1开始我们沿水平方向到右边的下一个位置得到2这是序列中的第二个数然后沿对角线向左下边到第一列所占的位置上然后垂直地向下到的位置上再沿对角线向上直到第一行的3通过4再沿对角线向下到这样进行下去如图19所示xxxxxxxx图19-有理数的可列性xxxxxxxx沿着这折线走我们得到一个序列12345其中的有理数按照它们在折线中出现的次序排列在这序列中现在我们消去所有a和b有公因子的数使得每一个有理数r以最简单的方式恰好出现一次因而我们得到一个序列12345其中每一个正有理数出现一次而且只出现一次这说明全体正有理数是可数的根据有理数和直线上有理点一一对应这个事实我们同时证明了直线上正有理点集是可数的xxxxxxxx习题1说明全体正整数和负整数是可数的全体正有理数和负有理数是可数的xxxxxxxx2如果s和t是可数集说明集st见此处是可数的说明对三个四个或任意n个集的并集有同样的结果最后说明由可数个可数集组成的集同样是可数的xxxxxxxx由于有理数已表明是可数的人们可能猜想任何无限集都是可数的而且这就是无限分析的最终结果可是情况远非如此康托有一个极有意义的发现全体实数集有理数和无理数是不可数的换句话说全体实数与整数或有理数相比有一个根本的不同可以说它是更高一级类型的无限关于这个事实康托用反证法天才地给出了一个证明它是许多数学论证的典范该证明大略如下首先我们作一个尝试性的假设所有实数真的排列成了一个序列然后我们找出一个数它不包含在这假定的可数集里面这样就引出了矛盾因为既然假设所有实数都包括在这个可数集里面那么即使有一个数遗漏了这个假设也必然是不成立的由于实数是可数的这个假设不成立反过来康托的关于实数集是不可数的命题就是真的xxxxxxxx为了做到这一点我们假设全体实数是可数的并且已经把它们排列成一个无限十进位小数的表xxxxxxxx其中这些n表示整数部分小写的字母表示小数点后的数码我们假设这个十进位小数序列包含了所有实数现在证明中最根本的一点是通过对角线过程构造一个新的数而我们能说明它不包含在这个序列中为此我们首先选取一个数码a不同于a1也不等于0和9以避免像0.9991.000这种等式可能造成的含糊不清然后选取一个数码b不同于b2也不等于0和9同样地c不等于c3等等例如我们可以简单地选取a1除非a11在a11时我们选a2按照这个表类似地选出所有数码bcde现在考虑无限十进位小数xxxxxxxxz0.abcdexxxxxxxx这新的数z肯定不同于上表中的任何一个数它不等于第一个因为小数点后的第一个数码与之不同它不能等于第二个因为第二个数码与之不同一般地它不能和表中的第n个数相同因为第n个数码与之不同这说明我们按序排列的十进位小数表不包含所有的实数因此实数集是不可数的xxxxxxxx读者也许认为数的连续统不可数其原因在于直线是无限延伸的这个事实而有限线段将只包含可数个无限多的点但事实并非如此因为容易证明整个数的连续统等势于任意有限线段例如从0到1而不包括端点的线段我们所要求的一一对应可以这样来得到在和处把线段折弯再从一点投影如图20所示由此得知即使数轴上的有限线段也包含了不可数无限多的点xxxxxxxx图20-一折线段上的点和整个直线上的点之间的一一对应xxxxxxxx习题说明数轴上的任意区间ab等势于任意其他区间cdxxxxxxxx关于数的连续统的不可数性有另一个可能是更为直观的证明值得在此讲一讲由我们刚才的证明可以知道只要把我们的注意力限制在0和1之间的点集就够了其证明仍然是反证法我们假设直线上0到1之间的所有点能排成序列xxxxxxxx我们把标号a1的点用一个长为的区间盖住标号a2的点用一个长为的区间盖住如此下去如果0和1之间所有点都包含在序列1中则这单位区间将完全被长为的子区间可能互相重叠序列完全盖住其中有些区间超出了这个单位区间这一事实并不影响我们的证明这些区间长度的总和由等比级数xxxxxxxx图21-两条不等长的线段上的点的一一对应xxxxxxxx给出因此从序列1包含了0到1的所有实数这个假定出发我们推出用一系列总长为的区间可以覆盖住长度为1的整个区间这在直观上是荒谬的我们将把这个矛盾看成是证明虽然从逻辑的角度来看还需要更充分的分析xxxxxxxx上面这段推理可以在近代的测度理论中建立一个很重要的定理用一个长为的更小的区间来代替上面的区间这里ε是任意小的正数我们看到直线上任一可数点集能包含在总长为的一系列区间中由于ε是任意的能随意地小用测度论的术语我们说可数点集有零测度xxxxxxxx练习用正方形的面积代替区间的长度证明对平面上的可数点集上述结果同样成立xxxxxxxx">2．有理数的可数性和连续统的不可数性XXXXXXXX康托在分析无限性时，他最初的发现之一是：有理数集（它包含整数集这个无限子集，因而它本身是无限集）是和整数集等势的．稠密的有理数集与疏散的它的整数子集的元素一样多，初看起来这似乎是很奇怪的．确实，人们不能按大小次序来排列正有理数（对正整数能这样做），不能说a是第一个有理数，b是挨着它的那个比它大的有理数，等等，因为任意两个给定的有理数之间有无穷多个有理数，因而没有“挨着它的”那一个．但是，正如康托看到的那样，抛开按序相连的两个元素之间的量的关系，就可以像整数那样将全体有理数排列成一行r1，r2，r3，r4，…．在这序列中将有第一个有理数，第二个，第三个等等，而且每个有理数恰好出现一次．一个集合，如果其元素能像整数那样排列成一个序列，就称这个集合是可数的．通过展示这样的可数性，康托表明，有理数是和整数集等势的，因为对应XXXXXXXX是一对一的．现在我们来描述把有理数排列起来的一个方式．XXXXXXXX每一个有理数都能写成的形式，这里a和b是整数．而且所有这些数能布置成这样的阵势，使在第a列第b行．例如把放在下面表中的第3列第4行．所有的有理数现在可以按照下面的设计排列：在刚刚规定的布阵中，我们画一条连续的折线通过这布阵中所有的数．从1开始我们沿水平方向到右边的下一个位置，得到2，这是序列中的第二个数，然后沿对角线向左下边到第一列所占的位置上，然后垂直地向下到的位置上，再沿对角线向上，直到第一行的3，通过4再沿对角线向下到，这样进行下去，如图19所示．XXXXXXXX图19　有理数的可列性XXXXXXXX沿着这折线走，我们得到一个序列1，2，，，，3，4，，，，，，，，5，…，其中的有理数按照它们在折线中出现的次序排列．在这序列中，现在我们消去所有a和b有公因子的数，使得每一个有理数r以最简单的方式恰好出现一次．因而我们得到一个序列1，2，，，3，4，，，，，5，…，其中每一个正有理数出现一次而且只出现一次．这说明全体正有理数是可数的．根据有理数和直线上有理点一一对应这个事实，我们同时证明了直线上正有理点集是可数的．XXXXXXXX习题：1）说明全体正整数和负整数是可数的，全体正有理数和负有理数是可数的．XXXXXXXX2）如果S和T是可数集，说明集S＋T（见此处）是可数的．说明对三个、四个或任意n个集的并集有同样的结果．最后说明由可数个可数集组成的集同样是可数的．XXXXXXXX由于有理数已表明是可数的，人们可能猜想任何无限集都是可数的，而且这就是无限分析的最终结果．可是情况远非如此．康托有一个极有意义的发现：全体实数集（有理数和无理数）是不可数的．换句话说，全体实数与整数或有理数相比有一个根本的不同，可以说，它是更高一级类型的无限．关于这个事实康托用反证法天才地给出了一个证明，它是许多数学论证的典范．该证明大略如下．首先，我们作一个尝试性的假设：所有实数真的排列成了一个序列．然后，我们找出一个数，它不包含在这假定的可数集里面．这样就引出了矛盾，因为既然假设所有实数都包括在这个可数集里面，那么，即使有一个数遗漏了，这个假设也必然是不成立的．由于实数是可数的这个假设不成立，反过来，康托的关于实数集是不可数的命题就是真的．XXXXXXXX为了做到这一点，我们假设全体实数是可数的并且已经把它们排列成一个无限十进位小数的表：XXXXXXXX其中这些N表示整数部分，小写的字母表示小数点后的数码．我们假设这个十进位小数序列包含了所有实数．现在，证明中最根本的一点是，通过“对角线过程”构造一个新的数，而我们能说明它不包含在这个序列中．为此，我们首先选取一个数码a不同于a1，也不等于0和9（以避免像0.999…＝1.000…这种等式可能造成的含糊不清），然后选取一个数码b不同于b2，也不等于0和9，同样地，c不等于c3，等等．（例如，我们可以简单地选取a＝1，除非a1＝1，在a1＝1时，我们选a＝2．按照这个表，类似地选出所有数码b，c，d，e，…．）现在考虑无限十进位小数XXXXXXXXz＝0.abcde…，XXXXXXXX这新的数z肯定不同于上表中的任何一个数；它不等于第一个，因为小数点后的第一个数码与之不同；它不能等于第二个，因为第二个数码与之不同；一般地，它不能和表中的第n个数相同，因为第n个数码与之不同．这说明我们按序排列的十进位小数表不包含所有的实数．因此实数集是不可数的．XXXXXXXX读者也许认为，数的连续统不可数，其原因在于直线是无限延伸的这个事实，而有限线段将只包含可数个无限多的点．但事实并非如此，因为容易证明整个数的连续统等势于任意有限线段，例如从0到1而不包括端点的线段．我们所要求的一一对应可以这样来得到：在和处把线段折弯，再从一点投影，如图20所示．由此得知，即使数轴上的有限线段也包含了不可数无限多的点．XXXXXXXX图20　一折线段上的点和整个直线上的点之间的一一对应XXXXXXXX习题：说明数轴上的任意区间［A，B］等势于任意其他区间［C，D］．XXXXXXXX关于数的连续统的不可数性，有另一个可能是更为直观的证明值得在此讲一讲．由我们刚才的证明可以知道，只要把我们的注意力限制在0和1之间的点集就够了．其证明仍然是反证法．我们假设直线上0到1之间的所有点能排成序列XXXXXXXX我们把标号a1的点用一个长为的区间盖住，标号a2的点用一个长为的区间盖住，如此下去．如果0和1之间所有点都包含在序列（1）中，则这单位区间将完全被长为，，…的子区间（可能互相重叠）序列完全盖住．（其中有些区间超出了这个单位区间，这一事实并不影响我们的证明．）这些区间长度的总和由等比级数XXXXXXXX图21　两条不等长的线段上的点的一一对应XXXXXXXX给出．因此从序列（1）包含了0到1的所有实数这个假定出发，我们推出用一系列总长为的区间可以覆盖住长度为1的整个区间．这在直观上是荒谬的．我们将把这个矛盾看成是证明，虽然从逻辑的角度来看，还需要更充分的分析．XXXXXXXX上面这段推理可以在近代的“测度”理论中建立一个很重要的定理．用一个长为的更小的区间来代替上面的区间，这里ε是任意小的正数．我们看到直线上任一可数点集能包含在总长为的一系列区间中，由于ε是任意的，能随意地小．用测度论的术语，我们说可数点集有零测度．XXXXXXXX练习：用正方形的面积代替区间的长度，证明对平面上的可数点集上述结果同样成立．XXXXXXXX</h4>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="hbaolong@vip.qq.com" />
+  <title>论语之286-2025年3月18日-1．布尔查诺定理</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">论语之286-2025年3月18日-1．布尔查诺定理</h1>
+<p class="author">hbaolong@vip.qq.com</p>
+</header>
+<h4
+id="布尔查诺定理xxxxxxxxb布尔查诺b.-bolzano17811848一个受经院哲学教育的天主教牧师是最早把严格的近代概念引入数学分析中的人之一他的重要著作无穷的悖论在1850年出版从这里人们首次认识到许多有关连续函数的表面上很明显的命题如果想得到普遍利用就必须加以证明而且是能够证明的下面关于一元连续函数的定理是一个例子xxxxxxxx如果一元连续函数在连续的闭区间axb上对x的某个值它是正的而对另一个值它是负的那么必定有x的某个中间值使函数值为零这样若当x由a变到b时fx是连续的且fa0fb0那么在a和b之间存在x的一个值αaαb使fα0xxxxxxxx布尔查诺定理完全符合连续曲线的直观观念即如果一条连续曲线要由x轴下面的一个点到x轴上面的一个点那么这条连续曲线必然在某一处穿过x轴对于不连续函数这就不一定正确如此处图157xxxxxxxx2布尔查诺定理的证明xxxxxxxx这里将给出这个定理的严格证明我们可以像高斯和另外一些伟大的数学家那样不加证明地接受和利用这个事实我们的目的是把这个定理化为实数系本身的基本性质特别是化为有关区间套的戴特金康托公理此处为此我们考察函数fx的定义区间iaxb然后取中点x1平分这个区间如果在这个中点我们发现fx10那么就无需再证明了如果fx10那么fx1必或大于零或小于零无论哪一种情形在i的两半中有一个仍有下述的性质fx在它的两个端点符号相反我们称这个区间为i1继续这个过程平分i1那么或者在i1的中点fx0或者我们可以选择一个区间i2它是i1的一半在这个区间的两个端点fx的符号相反重复这过程或者在有限次平分区间后求得一点x使fx0或者得到一个区间套序列i1i2i3在后一种情形戴特金康托公理保证在i内有一点α属于所有这些区间我们将断定fα0由于这个点α的存在就证明了定理xxxxxxxx图172-布尔查诺定理xxxxxxxx直到现在为止还没有用到连续性的假定现在要用一点间接推理以确定我们的结论我们通过反设并引出矛盾来证明fα0假定fα0例如fα2ε0因为fx是连续的我们能找到可能很小一个以α为中点长为2δ的区间j使得fx在区间j上的所有值与fα的差都小于ε因为fα2ε所以我们能保证区间j内处处都有fxε也就是在j内fx0但是区间j是固定的又因为in是收缩趋于0的所以如果n充分大小区间in必然落到j内这就产生了矛盾因为由选择in的方法知道函数fx在每个区间in的两个端点符号相反那么fx在区间j内的某些点必是负值这样由fα0的不合理与fα0的不合理用同样的方法证明就证明了fα0xxxxxxxx">1．布尔查诺定理XXXXXXXXB·布尔查诺（B.
+Bolzano）（1781～1848），一个受经院哲学教育的天主教牧师，是最早把严格的近代概念引入数学分析中的人之一．他的重要著作“无穷的悖论”在1850年出版．从这里人们首次认识到，许多有关连续函数的表面上很明显的命题，如果想得到普遍利用，就必须加以证明，而且是能够证明的．下面关于一元连续函数的定理是一个例子．XXXXXXXX如果一元连续函数在连续的闭区间a≤x≤b上，对x的某个值它是正的，而对另一个值它是负的，那么必定有x的某个中间值使函数值为零．这样，若当x由a变到b时f（x）是连续的，且f（a）＜0，f（b）＞0，那么在a和b之间存在x的一个值α，a＜α＜b，使f（α）＝0．XXXXXXXX布尔查诺定理完全符合连续曲线的直观观念，即如果一条连续曲线要由x轴下面的一个点，到x轴上面的一个点，那么这条连续曲线必然在某一处穿过x轴．对于不连续函数这就不一定正确，如此处图157．XXXXXXXX*2．布尔查诺定理的证明XXXXXXXX这里将给出这个定理的严格证明（我们可以像高斯和另外一些伟大的数学家那样，不加证明地接受和利用这个事实）．我们的目的是把这个定理化为实数系本身的基本性质．特别是化为有关区间套的戴特金－康托公理（此处）．为此，我们考察函数f（x）的定义区间I，a≤x≤b，然后取中点x1＝，平分这个区间．如果在这个中点我们发现f（x1）＝0，那么就无需再证明了．如果f（x1）≠0，那么f（x1）必或大于零或小于零．无论哪一种情形，在I的两半中有一个仍有下述的性质：f（x）在它的两个端点符号相反，我们称这个区间为I1．继续这个过程，平分I1；那么或者在I1的中点，f（x）＝0；或者我们可以选择一个区间I2，它是I1的一半，在这个区间的两个端点，f（x）的符号相反．重复这过程，或者在有限次平分区间后求得一点x，使f（x）＝0，或者得到一个区间套序列I1，I2，I3，…．在后一种情形，戴特金－康托公理保证在I内有一点α属于所有这些区间．我们将断定f（α）＝0，由于这个点α的存在就证明了定理．XXXXXXXX图172　布尔查诺定理XXXXXXXX直到现在为止还没有用到连续性的假定．现在要用一点间接推理，以确定我们的结论．我们通过反设并引出矛盾来证明f（α）＝0．假定f（α）≠0，例如f（α）＝2ε＞0．因为f（x）是连续的，我们能找到（可能很小）一个以α为中点，长为2δ的区间J，使得f（x）在区间J上的所有值与f（α）的差都小于ε．因为f（α）＝2ε，所以我们能保证区间J内处处都有f（x）＞ε，也就是在J内f（x）＞0．但是区间J是固定的，又因为In是收缩趋于0的，所以如果n充分大，小区间In必然落到J内．这就产生了矛盾；因为由选择In的方法知道，函数f（x）在每个区间In的两个端点符号相反，那么f（x）在区间J内的某些点必是负值．这样，由f（α）＞0的不合理与f（α）＜0的不合理（用同样的方法证明），就证明了f（α）＝0．XXXXXXXX</h4>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

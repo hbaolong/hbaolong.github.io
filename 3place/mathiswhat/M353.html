@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="hbaolong@vip.qq.com" />
+  <title>论语之353-2025年5月24日-2．指数函数的微分方程　放射性元素的蜕变　增长率　复利</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">论语之353-2025年5月24日-2．指数函数的微分方程　放射性元素的蜕变　增长率　复利</h1>
+<p class="author">hbaolong@vip.qq.com</p>
+</header>
+<h4
+id="指数函数的微分方程-放射性元素的蜕变-增长率-复利xxxxxxxx微分方程xxxxxxxx有一个解是指数函数uex因为指数函数的导数是它自身更一般地函数ucexc是任一常数是1的解类似地函数xxxxxxxxck为任意两个常数是微分方程xxxxxxxx的一个解xxxxxxxx反之任何满足方程3的函数ufx必是cekx的形式因为如果xhu是ufx的反函数那么根据反函数求导法则有xxxxxxxx但是的一个原函数所以xxxxxxxx其中b是某个常数因此xxxxxxxxlnukxbkxxxxxxxx即xxxxxxxxuekxe-bkxxxxxxxx令e-bk这是一个常数等于c则xxxxxxxxucekxxxxxxxxx此即所证xxxxxxxx微分方程3的重大意义在于它刻画了下述类型的物理过程在这类物理过程中某种物质的量u是时间t的函数xxxxxxxxuftxxxxxxxx并且量u在每一瞬时的变化率与该瞬时的u的数值成比例在这种情况下在瞬时t的变化率xxxxxxxx等于ku其中k是常数如果u递增则k为正如果u递减则k为负无论是哪种情况u都满足微分方程3因此xxxxxxxxucektxxxxxxxx如果我们知道了t0时的量u0那么常数c就被确定了令t0就必然得到了这个量xxxxxxxxu0ce0cxxxxxxxx所以xxxxxxxx注意我们是由已知u的变化率开始然后导出了规律4它给出u在任意时刻t的实际的量这恰好是求函数的导数的逆问题xxxxxxxx图279-指数衰变uu0ektk0xxxxxxxx放射性蜕变是一个典型的例子设uft是某放射性物质在t时的量假设该物质的每一质点在给定时刻都以一定的概率蜕变并且别的这种质点的状况并不影响这个概率那么蜕变中的u在给定时刻的变化率与u成比例即与该时刻的总量成比例因此u满足3其中k是负常数这个k反映了衰变过程的速度的大小因此xxxxxxxxuu0ektxxxxxxxx由此可知u在两个相等的时间间隔内蜕变掉的量的比值是相同的因为如果u1是在t1时的量而u2是随后某个时刻t2时的量那么xxxxxxxx它只依赖于t2t1若要求一定量的物质在衰变得只剩原来的一半所需的时间我们只须求这样的st2t1使得xxxxxxxx由此我们得到xxxxxxxx对于任何放射性物质s的值都称为半衰期并且s或类似的值如使的r可以由实验确定对于镭半衰期大约是1550年且xxxxxxxx由此知uu0e-0.0000447txxxxxxxx复利问题可作为增长规律近似于指数的一个例子已知货币的数量为u0元年利息是3一年后的货币量将是xxxxxxxxu1u010.03xxxxxxxx两年后它将是xxxxxxxxu2u110.03u010.032xxxxxxxxt年后将是xxxxxxxx现在如果利息不是以年为复算间隔而是以月或一年的几分之一为复算间隔的话那么t年后的货币量将是xxxxxxxx如果n取得很大使利息以每天甚至每小时复算则当n趋于无穷时根据6方括弧中的量趋于e0.03而t年后的量将是xxxxxxxx这相当于复利的连续过程我们也可以计算出按3的复利达到原来资本的2倍所需的时间s我们有xxxxxxxx即s23.10xxxxxxxx这样大约在23年后货币可增长为原来的2倍xxxxxxxx我们可以用一个简单的方法来导出公式7而不必像上述那样一步步地推导然后再取极限我们说资本的增长率u是与u成正比的比例因子k0.03即xxxxxxxxuku其中k0.3xxxxxxxx于是由一般的结果4中可得出公式7xxxxxxxx">2．指数函数的微分方程　放射性元素的蜕变　增长率　复利XXXXXXXX微分方程XXXXXXXX有一个解是指数函数u＝ex，因为指数函数的导数是它自身．更一般地，函数u＝cex（c是任一常数）是（1）的解．类似地，函数XXXXXXXX（c，k为任意两个常数）是微分方程XXXXXXXX的一个解．XXXXXXXX反之，任何满足方程（3）的函数u＝f（x）必是cekx的形式．因为如果x＝h（u）是u＝f（x）的反函数，那么根据反函数求导法则有XXXXXXXX但是的一个原函数，所以XXXXXXXX其中b是某个常数．因此XXXXXXXXlnu＝kx－bk，XXXXXXXX即XXXXXXXXu＝ekx·e-bk．XXXXXXXX令e-bk（这是一个常数）等于c，则XXXXXXXXu＝cekx，XXXXXXXX此即所证．XXXXXXXX微分方程（3）的重大意义在于它刻画了下述类型的物理过程，在这类物理过程中，某种物质的量u是时间t的函数XXXXXXXXu＝f（t），XXXXXXXX并且量u在每一瞬时的变化率与该瞬时的u的数值成比例．在这种情况下，在瞬时t的变化率XXXXXXXX等于ku，其中k是常数；如果u递增，则k为正，如果u递减，则k为负，无论是哪种情况，u都满足微分方程（3），因此XXXXXXXXu＝cekt．XXXXXXXX如果我们知道了t＝0时的量u0，那么常数c就被确定了．令t＝0，就必然得到了这个量XXXXXXXXu0＝ce0＝c，XXXXXXXX所以XXXXXXXX注意，我们是由已知u的变化率开始，然后导出了规律（4），它给出u在任意时刻t的实际的量．这恰好是求函数的导数的逆问题．XXXXXXXX图279　指数衰变u＝u0ekt，k＜0XXXXXXXX放射性蜕变是一个典型的例子．设u＝f（t）是某放射性物质在t时的量：假设该物质的每一质点在给定时刻都以一定的概率蜕变，并且别的这种质点的状况并不影响这个概率，那么蜕变中的u在给定时刻的变化率与u成比例，即与该时刻的总量成比例．因此u满足（3），其中k是负常数，这个k反映了衰变过程的速度的大小，因此XXXXXXXXu＝u0ekt．XXXXXXXX由此可知，u在两个相等的时间间隔内蜕变掉的量的比值是相同的．因为如果u1是在t1时的量，而u2是随后某个时刻t2时的量，那么XXXXXXXX它只依赖于t2－t1．若要求一定量的物质在衰变得只剩原来的一半所需的时间，我们只须求这样的s＝t2－t1，使得XXXXXXXX由此我们得到XXXXXXXX对于任何放射性物质，s的值都称为半衰期，并且s或类似的值（如使的r）可以由实验确定．对于镭，半衰期大约是1550年，且XXXXXXXX由此知，u＝u0e-0.0000447t．XXXXXXXX复利问题可作为增长规律近似于指数的一个例子．已知货币的数量为u0元，年利息是3％．一年后的货币量将是XXXXXXXXu1＝u0（1＋0.03），XXXXXXXX两年后它将是XXXXXXXXu2＝u1（1＋0.03）＝u0（1＋0.03）2，XXXXXXXXt年后将是XXXXXXXX现在如果利息不是以年为复算间隔，而是以月或一年的几分之一为复算间隔的话，那么t年后的货币量将是XXXXXXXX如果n取得很大，使利息以每天甚至每小时复算，则当n趋于无穷时，根据§6，方括弧中的量趋于e0.03，而t年后的量将是XXXXXXXX这相当于复利的连续过程．我们也可以计算出按3％的复利达到原来资本的2倍所需的时间s．我们有XXXXXXXX，即s＝＝23.10．XXXXXXXX这样大约在23年后货币可增长为原来的2倍．XXXXXXXX我们可以用一个简单的方法来导出公式（7），而不必像上述那样一步步地推导然后再取极限．我们说资本的增长率u′是与u成正比的，比例因子k＝0.03，即XXXXXXXXu′＝ku，其中k＝0.3．XXXXXXXX于是由一般的结果（4）中可得出公式（7）．XXXXXXXX</h4>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

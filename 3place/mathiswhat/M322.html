@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="hbaolong@vip.qq.com" />
+  <title>论语之322-2025年4月23日-3．初等极值问题</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">论语之322-2025年4月23日-3．初等极值问题</h1>
+<p class="author">hbaolong@vip.qq.com</p>
+</header>
+<h4
+id="初等极值问题xxxxxxxx在初等问题研究中只需要对解的存在性问题所包含的基本概念作认真的分析就可以了在第六章5中讨论过紧致集的一般概念定义在紧致集上的连续函数总可以在集合内的某处取得最大值与最小值在以前讨论过的每一个初等问题中进行比较的值都可以被看作是在某个区域上定义的一元或多元函数的值而这个区域或者是紧致集或者能很容易地使它成为紧致集而不使问题有实质的变化在这种情形可以保证最大值与最小值的存在例如在施泰纳问题中所考察的量是三个距离之和它是连续地依赖于动点的位置的由于动点的区域是整个平面我们若用一个大圆把图形围起来并限制这点只在圆的内部和边界上的话对问题的解不会有什么影响因为只要动点离这三个给定点足够远那么它到这些点的距离的和一定会超过abac而abac是原函数中的一个容许值所以如果点限制在大圆域上有一个最小值那么没有这个限制时也一定是这个最小值但很容易知道由圆以及它的内点组成的区域是紧致集因此施泰纳问题的最小值是存在的xxxxxxxx自变量的变域是紧致集这个假设的重要性可以由下面的例子看出给定两条闭曲线c1和c2在c1和c2上总分别存在距离最近的两点p1和p2以及距离最远的两点q1和q2因为c1上的一点a1和c2上的一点a2之间的距离是一个紧致集上的连续函数而这个紧致集是由所考察的有序点对a1a2组成的但是如果两条曲线是无界的即可以伸展到无限远的话那么问题就可能没有解在图224所示的情形下这两条曲线之间既没有最长距离也没有最短距离距离的下界是零上界是无穷两者都不能达到在某些情形最小值存在而最大值不存在在双曲线的两支之间此处图17只能利用a与a得到最短距离而相距最远的两个点显然是不存在的xxxxxxxx图224-相互间不存在最长和最短距离的两条曲线xxxxxxxx我们可以人为地限制自变量的变域从而解释这种性质上的差异选取任意一个正数r并只讨论把x限制在xr的情形那么以上两个问题都存在最大值和最小值在第一个问题中用这种方法限制边界保证了最长和最短距离的存在但两个都是在边界上取得的如果r增加极值点仍然在边界上取得因此随着r的增加这些极值点将趋于无穷而消失在第二个问题中极小的距离在内点获得不管r怎样增加距离极小的两点保持不变xxxxxxxx">3．初等极值问题XXXXXXXX在初等问题研究中，只需要对解的存在性问题所包含的基本概念作认真的分析就可以了．在第六章§5中讨论过紧致集的一般概念；定义在紧致集上的连续函数，总可以在集合内的某处取得最大值与最小值．在以前讨论过的每一个初等问题中，进行比较的值都可以被看作是在某个区域上定义的一元或多元函数的值，而这个区域或者是紧致集，或者能很容易地使它成为紧致集而不使问题有实质的变化．在这种情形，可以保证最大值与最小值的存在．例如，在施泰纳问题中，所考察的量是三个距离之和，它是连续地依赖于动点的位置的．由于动点的区域是整个平面，我们若用一个大圆把图形围起来，并限制这点只在圆的内部和边界上的话，对问题的解不会有什么影响．因为只要动点离这三个给定点足够远，那么它到这些点的距离的和一定会超过AB＋AC，而AB＋AC是原函数中的一个容许值．所以如果点限制在大圆域上有一个最小值，那么没有这个限制时，也一定是这个最小值．但很容易知道，由圆以及它的内点组成的区域是紧致集；因此施泰纳问题的最小值是存在的．XXXXXXXX自变量的变域是紧致集这个假设的重要性，可以由下面的例子看出．给定两条闭曲线C1和C2，在C1和C2上，总分别存在距离最近的两点P1和P2，以及距离最远的两点Q1和Q2．因为C1上的一点A1和C2上的一点A2之间的距离是一个紧致集上的连续函数，而这个紧致集是由所考察的有序点对A1，A2组成的．但是，如果两条曲线是无界的，即可以伸展到无限远的话，那么问题就可能没有解．在图224所示的情形下，这两条曲线之间既没有最长距离也没有最短距离．距离的下界是零，上界是无穷，两者都不能达到．在某些情形，最小值存在而最大值不存在．在双曲线的两支之间（此处图17），只能利用A与A′得到最短距离，而相距最远的两个点显然是不存在的．XXXXXXXX图224　相互间不存在最长和最短距离的两条曲线XXXXXXXX我们可以人为地限制自变量的变域，从而解释这种性质上的差异．选取任意一个正数R，并只讨论把x限制在｜x｜≤R的情形．那么以上两个问题都存在最大值和最小值．在第一个问题中，用这种方法限制边界，保证了最长和最短距离的存在，但两个都是在边界上取得的．如果R增加，极值点仍然在边界上取得．因此，随着R的增加，这些极值点将趋于无穷而消失．在第二个问题中，极小的距离在内点获得，不管R怎样增加，距离极小的两点保持不变．XXXXXXXX</h4>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

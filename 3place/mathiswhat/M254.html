@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="hbaolong@vip.qq.com" />
+  <title>论语之254-2025年2月14日-4．关于二次曲线的巴斯嘉和布利安桑的一般定理</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">论语之254-2025年2月14日-4．关于二次曲线的巴斯嘉和布利安桑的一般定理</h1>
+<p class="author">hbaolong@vip.qq.com</p>
+</header>
+<h4
+id="关于二次曲线的巴斯嘉和布利安桑的一般定理xxxxxxxx对二次曲线来说对偶原理的一个最好的解释是巴斯嘉的一般定理和布利安桑的一般定理之间的关系前者是在1640年发现的而后者直到1806年才发现其中一个是另一个的直接推论因为任何一个只涉及二次曲线直线和点的定理如果换成它的对偶命题必然仍然成立xxxxxxxx-5中在同一名字下叙述的定理是下述更一般的定理的退化情形xxxxxxxx巴斯嘉定理内接于二次曲线的六边形的相对的边交于三个共线的点上xxxxxxxx布利安桑定理外切于二次曲线的六边形连接相对顶点的三条对角线共点xxxxxxxx显而易见两个定理都具有射影的特性如果把它们叙述如下它们的对偶性质将变得很明显xxxxxxxx巴斯嘉定理在一个二次曲线上给定六个点123456用直线122334455661依次连接这些点分别标出12与4523与5634与61的交点则这三个交点在同一直线上xxxxxxxx图105-巴斯嘉的一般图形说明两种情形xxxxxxxx一个六边形是123456xxxxxxxx一个六边形是135264xxxxxxxx布利安桑定理在一个二次曲线上给定六条切线123456切线依次相交于点122334455661分别画出连接12与4523与5634与61的直线则这三条直线相交于一点xxxxxxxx图106-布利安桑的一般图形仍说明两种情形xxxxxxxx用类似于退化情形时所用的特殊方法能对此给予证明为了证明巴斯嘉定理设abcdef是二次曲线k的内接六边形的顶点通过射影我们能使ab平行于ed且fa平行于cd得到如图107的图形为了便于表示这六边形作成与自身相交但并不一定要这样作巴斯嘉定理的结论现在简化为cb平行于fe换句话说六边形相对的边所在的直线与无穷远直线相交为了证明这一点让我们考虑点fabd我们知道它们是从k的任意其他点例如从c或e出发用具有常数交比k的射线投影而得来的从c射影这些点则射影线交直线af于四点fay其交比为k因此yfyak见此处现在如果同样的点从e投影到直线ba我们得到xxxxxxxx图107-巴斯嘉定理的证明xxxxxxxxkxabbxbaxxxxxxxx从而我们有xxxxxxxxbxbayfyaxxxxxxxx它表明yb和fx平行巴斯嘉定理证毕xxxxxxxx布利安桑定理或从对偶原理推出或直接从上述证明的对偶推理得出读者将发现详细地作出这个证明是一个很好的练习xxxxxxxx">4．关于二次曲线的巴斯嘉和布利安桑的一般定理XXXXXXXX对二次曲线来说，对偶原理的一个最好的解释是，巴斯嘉的一般定理和布利安桑的一般定理之间的关系．前者是在1640年发现的，而后者直到1806年才发现．其中一个是另一个的直接推论，因为任何一个只涉及二次曲线、直线和点的定理，如果换成它的对偶命题必然仍然成立．XXXXXXXX###
+§5中在同一名字下叙述的定理是下述更一般的定理的退化情形：XXXXXXXX巴斯嘉定理：内接于二次曲线的六边形的相对的边交于三个共线的点上．XXXXXXXX布利安桑定理：外切于二次曲线的六边形连接相对顶点的三条对角线共点．XXXXXXXX显而易见，两个定理都具有射影的特性．如果把它们叙述如下，它们的对偶性质将变得很明显：XXXXXXXX巴斯嘉定理：在一个二次曲线上，给定六个点1，2，3，4，5，6．用直线（1，2），（2，3），（3，4），（4，5），（5，6），（6，1）依次连接这些点．分别标出（1，2）与（4，5），（2，3）与（5，6），（3，4）与（6，1）的交点，则这三个交点在同一直线上．XXXXXXXX图105　巴斯嘉的一般图形说明两种情形：XXXXXXXX一个六边形是1，2，3，4，5，6．XXXXXXXX一个六边形是1，3，5，2，6，4．XXXXXXXX布利安桑定理：在一个二次曲线上，给定六条切线1，2，3，4，5，6．切线依次相交于点（1，2），（2，3），（3，4），（4，5），（5，6），（6，1）．分别画出连接（1，2）与（4，5），（2，3）与（5，6），（3，4）与（6，1）的直线，则这三条直线相交于一点．XXXXXXXX图106　布利安桑的一般图形（仍说明两种情形）XXXXXXXX用类似于退化情形时所用的特殊方法能对此给予证明．为了证明巴斯嘉定理，设A，B，C，D，E，F是二次曲线K的内接六边形的顶点．通过射影，我们能使AB平行于ED且FA平行于CD，得到如图107的图形（为了便于表示，这六边形作成与自身相交，但并不一定要这样作）．巴斯嘉定理的结论现在简化为：CB平行于FE，换句话说，六边形相对的边所在的直线与无穷远直线相交．为了证明这一点，让我们考虑点F，A，B，D．我们知道，它们是从K的任意其他点，例如，从C或E出发，用具有常数交比k的射线投影而得来的．从C射影这些点，则射影线交直线AF于四点F，A，Y，∞，其交比为k．因此，YF∶YA＝k（见此处）．现在，如果同样的点从E投影到直线BA，我们得到XXXXXXXX图107　巴斯嘉定理的证明XXXXXXXXk＝（XAB∞）＝BX∶BA，XXXXXXXX从而我们有XXXXXXXXBX∶BA＝YF∶YA．XXXXXXXX它表明YB和FX平行．巴斯嘉定理证毕．XXXXXXXX布利安桑定理，或从对偶原理推出，或直接从上述证明的对偶推理得出．读者将发现，详细地作出这个证明是一个很好的练习．XXXXXXXX</h4>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

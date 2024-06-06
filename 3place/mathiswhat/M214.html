@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="hbaolong@vip.qq.com" />
+  <title>论语之214-2025年1月5日-3．在概率论中的一个应用</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">论语之214-2025年1月5日-3．在概率论中的一个应用</h1>
+<p class="author">hbaolong@vip.qq.com</p>
+</header>
+<h4
+id="在概率论中的一个应用xxxxxxxx集合代数可以很好地用来描述概率论我们只考虑最简单的情形设想一个有有限个可能结果的试验所有的结果都假定是等可能的例如试验可以是从一付洗好了的52张牌中随机地抽出一张如果用i表示由试验的可能结果组成的集合而a表示i的任意子集则试验结果属于子集a的概率定义为比值xxxxxxxx如果用符号na表示任意集合a的元素个数则这个定义可以写成xxxxxxxx的形式在我们的例子中如果a表示红桃花色的子集则na13ni52paxxxxxxxx当某些集合的概率为已知而要求其他集合的概率时就要用集合代数的思想来作概率的计算例如若papb和pab的值为已知我们能算出概率pabxxxxxxxx这证明很简单我们有nabnanbnab因为a和b的公共元素即ab的元素在和nanb中算了两遍因此必须从中减去nab才能得到nab的正确值用ni除这等式的每一项我们得到等式2xxxxxxxx当我们考虑三个子集abc时得到一个更有趣的公式从2我们有xxxxxxxx从上一小节的12我们知道abcacbc因此xxxxxxxx把pabc的值代入上面等式而pab的值由2给出我们得到所希望的公式xxxxxxxx作为一个例子我们考虑如下试验三个数码123以随机的次序写下来至少有一个数码出现在它本来的位置上的概率是多少用a表示使数码1出现在第一个位置上的所有写法b表示数码2出现在第二个位置上的所有写法c表示数码3出现在第三个位置上的所有写法于是我们要计算pabc显然xxxxxxxxpapbpcxxxxxxxx因为当一个数码在它本来的位置上时其余的数码有两种可能的次序而三个数码的所有可能排列是3216种再则xxxxxxxxpabpacpbcxxxxxxxxpabcxxxxxxxx因为以上每种情况只能以一种方式出现由3得出xxxxxxxx习题求pabcd的相应公式并应用于四个数码的情形相应的概率为0.6250xxxxxxxx关于n个子集的并的一般公式是xxxxxxxx这里符号表示在集a1a2an中每次取一个二个三个n1个的所有可能组合的和这公式可以用数学归纳法导出正如我们由2推出3一样由4容易看出如果n个数码123n以随机次序写出至少有一个数码在它本来的位置上的概率是xxxxxxxx这里最后一项取加号或减号取决于n是奇数还是偶数特别对n5概率为xxxxxxxx在第八章我们将看到当n趋于无穷时表达式xxxxxxxx趋于极限这十进位小数的前五位是0.36788由此由5pn1sn得知n趋于无穷时xxxxxxxx-第3章-几何作图-数域的代数xxxxxxxx引言xxxxxxxx在几何学中作图问题是人们喜欢的一个课题只用圆规和直尺就可以完成许多作图问题例如读者记得中学时学过的二等分一线段或一个角过一点作一给定直线的垂线作圆内接正六边形等等在所有这些问题中直尺仅仅当作一直边一个画直线的工具而不能用以测量或标示距离只限于用圆规和直尺的传统要回溯到古代虽然希腊人自己毫不犹豫地使用其他工具xxxxxxxx经典作图问题中最有名的一个是所谓阿波罗尼斯apollonious约公元前200年的切圆问题这个问题是在平面上给定任意三个圆求作和这三个圆相切的第四个圆另外还允许在这些给定的圆中有一个或几个退化为一个点或一条直线相应于半径为零或无穷大的圆例如可以求作一个圆过一给定点和给定的两条直线相切这些特殊情形是比较容易处理的而一般问题考虑起来就有些困难xxxxxxxx在所有作图问题中最有趣的大概是用圆规和直尺作一个正n边形对n的某些值例如n3456其解法在古代就知道了而且现在它们成了中学几何的一个重要部分已经证明正七边形n7的作图是不可能的另外还有三个经典希腊问题人们一直徒劳地寻求它们的解这是指三等分任意一给定角倍立方体即求一立方体的边长使它的体积二倍于一边长给定的立方体的体积化圆为方即求作一正方形使它与一给定圆有相同的面积在所有这些问题中只允许用圆规和直尺xxxxxxxx历时若干世纪人们毫无所获地寻求着这些问题的解法后来逐渐怀疑这些问题可能根本就不可解这种不可解问题在数学上引起了一个极重要而有价值的发展数学家面临着这样的挑战怎样才能证明某种问题是不可解的xxxxxxxx在代数中解五次和更高次方程的问题引出了这种新的思想方法在16世纪数学家就已经知道三次和四次代数方程能用一个类似于解二次方程的初等方法来解所有这些方法都有下述共同特点方程的解或根可以写成一个代数表达式这个代数表达式是由方程的系数通过一系列运算而得到的其中每一个运算或是有理运算加减乘除或是开平方根立方根四次方根我们说直到四次的代数方程都能用根式来解利用更高次的方根把这种做法推广到五次和更高次的方程中去这似乎是再自然不过的了但是所有这样的尝试都失败了甚至18世纪一些杰出的数学家也欺骗了他们自己自以为找到了这样的解法直到19世纪初意大利的茹菲尼ruffini17621822和挪威的天才阿贝尔n.-abel18021829才表明了一个在当时很革命的想法他们证明了不可能利用根式的方法解一般n次代数方程人们必须理解清楚问题并不是任意n次代数方程是否有根这个事实在1799年首先为高斯在他的博士论文中所证明所以关于一个方程的根的存在性问题是无可怀疑的尤其因为这些根的值能用适当的办法以任意精确度计算出来方程的数值解法的技巧当然是十分重要的而且有了很高的发展但是阿贝尔和茹菲尼所说的问题完全是另一个问题只用有理运算和根式运算是否能够求解由于要求彻底搞清这个问题促成了由茹菲尼阿贝尔和伽罗华galois18111832开创的近世代数和群论的重大发展xxxxxxxx在代数的这个研究方向中证明某个几何作图为不可能的问题是其中最简单的例子之一在这一章我们利用代数的概念能够证明只用圆规和直尺三等分角作正七边形和倍立方体是不可能的化圆为方是一个处理起来更加困难的问题见此处我们的着眼点将不再是某些作图为不可能这样的反面问题而是正面的问题怎样才能完全刻划出所有可作图的问题的特性我们回答了这个问题之后说明上述问题不属于这个范围就容易了xxxxxxxx高斯在17岁时发现了正p边形p为素数可作图的条件当时只对p3和p5知道其作图的方法高斯发现正p边形可作图必须而且只须p是一素费马数xxxxxxxxp22n1xxxxxxxx前几个费马数是351725765537见此处年轻的高斯被他自己的发现所激动以至于立刻放弃了他打算成为哲学家的念头而决心献身于数学和它的应用他经常以特别自豪的心情回顾他这第一个伟大的功绩在他死后在哥廷根为他树立了一个铜像铜像的底座是正十七边形的以此来象征他的荣誉那是再合适不过的了xxxxxxxx处理几何作图时我们不应当忘记问题并不是要求以一定的精确度实际把图画出来而是从理论上说明只用圆规和直尺假设我们的这些仪器完全准确能否找出画图的方法来高斯所证明的是他的作图从原理上讲是能够实现的他的理论没有涉及实际作图的最简便的方式以及如何简化与削减所需要的步骤的方法这是一个理论上不太重要的问题从实际的观点来看任何一个作图方法其效果都不如用好的半圆仪那样令人满意由于没有能够正确理解几何作图问题的理论特点又顽固地拒绝接受那些已经很好确立的科学事实使得一些人无休止地一味去寻找三等分角和倍立方体的方法对他们当中那些能理解初等数学的人来说学习这一章是有益的xxxxxxxx必须再次强调我们的几何作图概念在某种意义下似乎是人为的圆规和直尺肯定是作图的最简单的工具但是在几何中从来就没有只限于用这些仪器希腊数学家很早以前就认识到如果比如允许用直角三角板的话某些问题例如倍立方体问题是能够解决的同样也容易造出圆规以外的仪器用以画椭圆双曲线和更复杂的曲线从而大大扩充了可作图的图形的范围但在下几节中我们将坚持只许用圆规和直尺仍采用这种标准的几何作图观念xxxxxxxx-第1部分-不可能性的证明和代数xxxxxxxx-1-基本几何作图xxxxxxxx">3．在概率论中的一个应用XXXXXXXX集合代数可以很好地用来描述概率论．我们只考虑最简单的情形，设想一个有有限个可能结果的试验，所有的结果都假定是“等可能”的．例如，试验可以是从一付洗好了的52张牌中随机地抽出一张．如果用I表示由试验的可能结果组成的集合，而A表示I的任意子集，则试验结果属于子集A的概率定义为比值XXXXXXXX如果用符号n（A）表示任意集合A的元素个数，则这个定义可以写成XXXXXXXX的形式．在我们的例子中，如果A表示红桃花色的子集，则n（A）＝13，n（I）＝52，p（A）＝＝．XXXXXXXX当某些集合的概率为已知，而要求其他集合的概率时，就要用集合代数的思想来作概率的计算．例如，若p（A），p（B）和p（AB）的值为已知，我们能算出概率p（A＋B），XXXXXXXX这证明很简单，我们有n（A＋B）＝n（A）＋n（B）－n（AB），因为A和B的公共元素，即AB的元素，在和n（A）＋n（B）中算了两遍，因此必须从中减去n（AB）才能得到n（A＋B）的正确值．用n（I）除这等式的每一项，我们得到等式（2）．XXXXXXXX当我们考虑三个子集A，B，C时，得到一个更有趣的公式．从（2）我们有XXXXXXXX从上一小节的12），我们知道（A＋B）C＝AC＋BC．因此XXXXXXXX把p［（A＋B）C］的值代入上面等式，而p（A＋B）的值由2）给出，我们得到所希望的公式XXXXXXXX作为一个例子，我们考虑如下试验．三个数码1，2，3，以随机的次序写下来，至少有一个数码出现在它本来的位置上的概率是多少？用A表示使数码1出现在第一个位置上的所有写法，B表示数码2出现在第二个位置上的所有写法，C表示数码3出现在第三个位置上的所有写法．于是我们要计算p（A＋B＋C）．显然，XXXXXXXXp（A）＝p（B）＝p（C）＝＝，XXXXXXXX因为当一个数码在它本来的位置上时，其余的数码有两种可能的次序，而三个数码的所有可能排列是3·2·1＝6种．再则XXXXXXXXp（AB）＝p（AC）＝p（BC）＝，XXXXXXXXp（ABC）＝，XXXXXXXX因为以上每种情况只能以一种方式出现，由（3）得出XXXXXXXX习题：求p（A＋B＋C＋D）的相应公式并应用于四个数码的情形．相应的概率为＝0.6250．XXXXXXXX关于n个子集的并的一般公式是XXXXXXXX这里符号，，，…，表示在集A1，A2，…，An中每次取一个，二个，三个，…，（n－1）个的所有可能组合的和．这公式可以用数学归纳法导出，正如我们由（2）推出（3）一样．由（4）容易看出，如果n个数码1，2，3，…，n以随机次序写出，至少有一个数码在它本来的位置上的概率是XXXXXXXX这里最后一项取加号或减号取决于n是奇数还是偶数．特别对n＝5，概率为XXXXXXXX在第八章我们将看到，当n趋于无穷时，表达式XXXXXXXX趋于极限，这十进位小数的前五位是0.36788．由此由（5）pn＝1－Sn得知，n趋于无穷时，XXXXXXXX##
+第3章　几何作图　数域的代数XXXXXXXX引言XXXXXXXX在几何学中，作图问题是人们喜欢的一个课题．只用圆规和直尺就可以完成许多作图问题，例如，读者记得中学时学过的，二等分一线段或一个角，过一点作一给定直线的垂线，作圆内接正六边形，等等．在所有这些问题中，直尺仅仅当作一直边，一个画直线的工具，而不能用以测量或标示距离．只限于用圆规和直尺的传统要回溯到古代，虽然希腊人自己毫不犹豫地使用其他工具．XXXXXXXX经典作图问题中，最有名的一个是所谓阿波罗尼斯（Apollonious，约公元前200年）的切圆问题．这个问题是，在平面上给定任意三个圆，求作和这三个圆相切的第四个圆．另外还允许在这些给定的圆中，有一个或几个退化为一个点或一条直线（相应于半径为零或“无穷大”的“圆”）．例如，可以求作一个圆过一给定点和给定的两条直线相切．这些特殊情形是比较容易处理的，而一般问题考虑起来就有些困难．XXXXXXXX在所有作图问题中，最有趣的大概是用圆规和直尺作一个正n边形．对n的某些值，例如n＝3，4，5，6，其解法在古代就知道了，而且现在它们成了中学几何的一个重要部分．已经证明正七边形（n＝7）的作图是不可能的．另外还有三个经典希腊问题，人们一直徒劳地寻求它们的解，这是指：三等分任意一给定角，倍立方体（即求一立方体的边长，使它的体积二倍于一边长给定的立方体的体积），化圆为方（即求作一正方形，使它与一给定圆有相同的面积）．在所有这些问题中，只允许用圆规和直尺．XXXXXXXX历时若干世纪，人们毫无所获地寻求着这些问题的解法，后来逐渐怀疑这些问题可能根本就不可解．这种不可解问题，在数学上引起了一个极重要而有价值的发展．数学家面临着这样的挑战：怎样才能证明某种问题是不可解的？XXXXXXXX在代数中，解五次和更高次方程的问题引出了这种新的思想方法．在16世纪，数学家就已经知道三次和四次代数方程能用一个类似于解二次方程的初等方法来解．所有这些方法都有下述共同特点：方程的解或“根”，可以写成一个代数表达式，这个代数表达式是由方程的系数通过一系列运算而得到的，其中每一个运算，或是有理运算——加、减、乘、除——或是开平方根、立方根、四次方根．我们说直到四次的代数方程都能“用根式”来解．利用更高次的方根，把这种做法推广到五次和更高次的方程中去，这似乎是再自然不过的了．但是，所有这样的尝试都失败了．甚至18世纪一些杰出的数学家也欺骗了他们自己，自以为找到了这样的解法．直到19世纪初，意大利的茹菲尼（Ruffini，1762～1822）和挪威的天才阿贝尔（N.
+Abel，1802～1829）才表明了一个在当时很革命的想法，他们证明了不可能利用根式的方法解一般n次代数方程．人们必须理解清楚，问题并不是任意n次代数方程是否有根．这个事实在1799年首先为高斯在他的博士论文中所证明．所以关于一个方程的根的存在性问题是无可怀疑的，尤其因为这些根的值能用适当的办法以任意精确度计算出来．方程的数值解法的技巧当然是十分重要的，而且有了很高的发展．但是，阿贝尔和茹菲尼所说的问题完全是另一个问题：只用有理运算和根式运算是否能够求解？由于要求彻底搞清这个问题，促成了由茹菲尼、阿贝尔和伽罗华（Galois，1811～1832）开创的近世代数和群论的重大发展．XXXXXXXX在代数的这个研究方向中，证明某个几何作图为不可能的问题是其中最简单的例子之一．在这一章，我们利用代数的概念能够证明，只用圆规和直尺三等分角、作正七边形和倍立方体是不可能的（化圆为方是一个处理起来更加困难的问题，见此处）．我们的着眼点将不再是某些作图为不可能这样的反面问题，而是正面的问题：怎样才能完全刻划出所有可作图的问题的特性？我们回答了这个问题之后，说明上述问题不属于这个范围就容易了．XXXXXXXX高斯在17岁时发现了正p边形（p为素数）可作图的条件．当时只对p＝3和p＝5知道其作图的方法．高斯发现正p边形可作图必须而且只须p是一素“费马数”XXXXXXXXp＝22n＋1．XXXXXXXX前几个费马数是3，5，17，257，65537（见此处）．年轻的高斯被他自己的发现所激动，以至于立刻放弃了他打算成为哲学家的念头，而决心献身于数学和它的应用．他经常以特别自豪的心情回顾他这第一个伟大的功绩．在他死后，在哥廷根为他树立了一个铜像，铜像的底座是正十七边形的，以此来象征他的荣誉那是再合适不过的了．XXXXXXXX处理几何作图时，我们不应当忘记，问题并不是要求以一定的精确度实际把图画出来，而是从理论上说明只用圆规和直尺（假设我们的这些仪器完全准确）能否找出画图的方法来．高斯所证明的是，他的作图从原理上讲是能够实现的．他的理论没有涉及实际作图的最简便的方式，以及如何简化与削减所需要的步骤的方法．这是一个理论上不太重要的问题．从实际的观点来看，任何一个作图方法，其效果都不如用好的半圆仪那样令人满意．由于没有能够正确理解几何作图问题的理论特点，又顽固地拒绝接受那些已经很好确立的科学事实，使得一些人无休止地一味去寻找三等分角和倍立方体的方法．对他们当中那些能理解初等数学的人来说，学习这一章是有益的．XXXXXXXX必须再次强调，我们的几何作图概念在某种意义下似乎是人为的．圆规和直尺肯定是作图的最简单的工具，但是在几何中从来就没有只限于用这些仪器．希腊数学家很早以前就认识到，如果，比如允许用直角三角板的话，某些问题——例如倍立方体问题——是能够解决的．同样也容易造出圆规以外的仪器，用以画椭圆、双曲线和更复杂的曲线，从而大大扩充了可作图的图形的范围．但在下几节中，我们将坚持只许用圆规和直尺，仍采用这种标准的几何作图观念．XXXXXXXX##
+第1部分　不可能性的证明和代数XXXXXXXX### §1　基本几何作图XXXXXXXX</h4>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

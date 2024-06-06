@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="hbaolong@vip.qq.com" />
+  <title>论语之341-2025年5月12日-6．导数和速度　二阶导数和加速度</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">论语之341-2025年5月12日-6．导数和速度　二阶导数和加速度</h1>
+<p class="author">hbaolong@vip.qq.com</p>
+</header>
+<h4
+id="导数和速度-二阶导数和加速度xxxxxxxx上面对导数的讨论是和函数图像的几何观念相联系的但是导数概念的意义决不只是求曲线切线的斜率的问题自然科学中更重要的问题是计算随时间t而变化的某个量ft的变化率牛顿正是从这个方面研究了微分学的牛顿特别分析了速度的现象他把时间和动点的位置都看成是变量并把它们称为流量xxxxxxxx如果一个质点沿直线例如沿x轴运动那么这个运动可用一个函数xft完全描述出来它给出任何时间t时这个质点的位置x一个沿x轴以常速度b运动的匀速运动由线性函数xabt表示其中a是质点在t0时的坐标xxxxxxxx平面上的质点运动由两个函数xxxxxxxxxftygtxxxxxxxx描述这两个坐标都被表示成时间的函数特别匀速运动对应一对线性函数xxxxxxxxxabtycdtxxxxxxxx其中b和d是常速度的两个分量而a和c是质点在t0那个瞬时的坐标质点的运动路径是方程为xxxxxxxxxadycb0xxxxxxxx的直线这个方程是从上面两个关系式中消去t后得到的xxxxxxxx如果质点只受重力作用而在铅垂的xy-平面上运动那么由初等物理学知道运动由两个方程xxxxxxxxxabtycdtgt2xxxxxxxx表示其中abcd是依赖于质点初始位置的常数而g是在重力作用下的加速度如果时间单位是秒而距离单位是米那么它近似等于9.82这个质点运动的轨迹可以从两个方程中消去t得到它是抛物线xxxxxxxx其中b0否则它是竖直轴的一部分xxxxxxxx如果一个质点限制在平面上一条给定的曲线上运动如火车沿铁轨运动那么它的运动可由弧的长度s来描述这个弧长是从某个固定的初始点p0开始沿曲线一直度量到质点在时间t的位置p而得到的它是t的函数sft例如在单位圆x2y21上函数sct表示一个速度为c沿圆周的匀速旋转xxxxxxxx习题绘出下列各式表示的平面运动的轨迹xxxxxxxx1xsintycost2xsin2tysin3txxxxxxxx3xsin2ty2sin3txxxxxxxx4在上面所述的抛物线运动中假定当t0时质点在原点且b0d0求轨迹最高点的坐标求轨迹第二次与x轴相交的时间t和x值xxxxxxxx牛顿最初的目的是要确定变速运动的速度为简单起见假定我们考察的质点运动是由函数xft给定的直线运动如果是匀速运动那么这个速度可按以下方法求得取时间的两个值t和t1对应的位置是值xft和x1ft1然后作商xxxxxxxx便得到速度例如t的单位是小时x的单位是里那么若t1t1x1x就是1小时经过的里数而v就是每小时若干里的速度运动的速度是常数的说法就是简单的指对所有的t和t1差商xxxxxxxx都是一样的但是当运动是非均匀的时候例如对于速度随下落而增加的自由落体运动商3就不能给出在瞬时t的速度它只是从t到t1的时间间隔内的平均速度为了得到恰好在瞬时t的速度必须求平均速度当t1趋于t时的极限这样照牛顿的方法我们定义xxxxxxxx换句话说瞬时速度是距离对于时间的导数或距离对于时间的瞬时变化率区别于由公式3给出的平均变化率xxxxxxxx速度本身的变化率称为加速度简单地说就是导数的导数通常记作ft或称作ft的二阶导数xxxxxxxx伽利略galileo观察到经过时间t自由落体经过的铅直距离x由公式xxxxxxxx给出其中g是重力加速度是一个常数将5式微分可得落体在时间t的速度为xxxxxxxx而且加速度是xxxxxxxxaftgxxxxxxxx它是常数xxxxxxxx假设需求落体在下落后2秒时的速度在从t2到t2.1的时间间隔内的平均速度是xxxxxxxx在6式中代入t2求得2秒末的瞬时速度是xxxxxxxxv19.6xxxxxxxx习题落体在从t2到t2.01的时间间隔内的平均速度是多少从t2到t2.001呢xxxxxxxx对于平面运动两个函数xft和ygt的导数ft和gt定义为速度的分量沿固定曲线运动的速度由函数sft的导数定义这里s是弧的长度xxxxxxxx">6．导数和速度　二阶导数和加速度XXXXXXXX上面对导数的讨论，是和函数图像的几何观念相联系的．但是，导数概念的意义决不只是求曲线切线的斜率的问题．自然科学中，更重要的问题是计算随时间t而变化的某个量f（t）的变化率．牛顿正是从这个方面研究了微分学的．牛顿特别分析了速度的现象，他把时间和动点的位置都看成是变量，并把它们称为“流量”．XXXXXXXX如果一个质点沿直线（例如沿x轴）运动，那么这个运动可用一个函数x＝f（t）完全描述出来，它给出任何时间t时这个质点的位置x．一个沿x轴以常速度b运动的“匀速运动”由线性函数x＝a＋bt表示，其中a是质点在t＝0时的坐标．XXXXXXXX平面上的质点运动由两个函数XXXXXXXXx＝f（t），y＝g（t）XXXXXXXX描述，这两个坐标都被表示成时间的函数．特别，匀速运动对应一对线性函数：XXXXXXXXx＝a＋bt，y＝c＋dt，XXXXXXXX其中b和d是常速度的两个“分量”，而a和c是质点在t＝0那个瞬时的坐标．质点的运动路径是方程为XXXXXXXX（x－a）d－（y－c）b＝0XXXXXXXX的直线，这个方程是从上面两个关系式中消去t后得到的．XXXXXXXX如果质点只受重力作用而在铅垂的x，y-平面上运动，那么，由初等物理学知道，运动由两个方程XXXXXXXXx＝a＋bt，y＝c＋dt－gt2XXXXXXXX表示，其中a，b，c，d是依赖于质点初始位置的常数，而g是在重力作用下的加速度，如果时间单位是秒而距离单位是米，那么它近似等于9.8〔2〕．这个质点运动的轨迹，可以从两个方程中消去t得到，它是抛物线XXXXXXXX其中b≠0，否则它是竖直轴的一部分．XXXXXXXX如果一个质点限制在平面上一条给定的曲线上运动（如火车沿铁轨运动）；那么它的运动可由弧的长度s来描述，这个弧长是从某个固定的初始点P0开始，沿曲线一直度量到质点在时间t的位置P而得到的，它是t的函数s＝f（t）．例如在单位圆x2＋y2＝1上，函数s＝ct表示一个速度为c沿圆周的匀速旋转．XXXXXXXX习题：*绘出下列各式表示的平面运动的轨迹．XXXXXXXX1）x＝sint，y＝cost；2）x＝sin2t，y＝sin3t；XXXXXXXX3）x＝sin2t，y＝2sin3t；XXXXXXXX4）在上面所述的抛物线运动中，假定当t＝0时质点在原点，且b&gt;0，d&gt;0，求轨迹最高点的坐标．求轨迹第二次与x轴相交的时间t和x值．XXXXXXXX牛顿最初的目的是要确定变速运动的速度．为简单起见，假定我们考察的质点运动是由函数x＝f（t）给定的直线运动．如果是匀速运动，那么这个速度可按以下方法求得：取时间的两个值t和t1，对应的位置是值x＝f（t）和x1＝f（t1），然后作商XXXXXXXX便得到速度．例如t的单位是小时，x的单位是里，那么，若t1－t＝1，x1－x就是1小时经过的里数，而v就是每小时若干里的速度．运动的速度是常数的说法，就是简单的指对所有的t和t1，差商XXXXXXXX都是一样的．但是，当运动是非均匀的时候，例如对于速度随下落而增加的自由落体运动，商（3）就不能给出在瞬时t的速度，它只是从t到t1的时间间隔内的平均速度．为了得到恰好在瞬时t的速度，必须求平均速度当t1趋于t时的极限．这样，照牛顿的方法，我们定义XXXXXXXX换句话说，瞬时速度是距离对于时间的导数，或距离对于时间的“瞬时变化率”（区别于由公式（3）给出的平均变化率）．XXXXXXXX速度本身的变化率称为加速度．简单地说，就是导数的导数，通常记作f″（t），或称作f（t）的二阶导数．XXXXXXXX伽利略（Galileo）观察到，经过时间t，自由落体经过的铅直距离x由公式XXXXXXXX给出，其中g是重力加速度，是一个常数．将（5）式微分，可得落体在时间t的速度为XXXXXXXX而且加速度是XXXXXXXXa＝f″（t）＝g，XXXXXXXX它是常数．XXXXXXXX假设需求落体在下落后2秒时的速度．在从t＝2到t＝2.1的时间间隔内的平均速度是XXXXXXXX在（6）式中代入t＝2，求得2秒末的瞬时速度是XXXXXXXXv＝19.6．XXXXXXXX习题：落体在从t＝2到t＝2.01的时间间隔内的平均速度是多少？从t＝2到t＝2.001呢？XXXXXXXX对于平面运动，两个函数x＝f（t）和y＝g（t）的导数f′（t）和g′（t）定义为速度的分量．沿固定曲线运动的速度由函数s＝f（t）的导数定义，这里s是弧的长度．XXXXXXXX</h4>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>
