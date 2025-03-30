@@ -167,6 +167,70 @@
       vertical-align: middle;
     }
     .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+    /* CSS for syntax highlighting */
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      {   }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+    code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+    code span.at { color: #7d9029; } /* Attribute */
+    code span.bn { color: #40a070; } /* BaseN */
+    code span.bu { color: #008000; } /* BuiltIn */
+    code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #4070a0; } /* Char */
+    code span.cn { color: #880000; } /* Constant */
+    code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+    code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+    code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+    code span.dt { color: #902000; } /* DataType */
+    code span.dv { color: #40a070; } /* DecVal */
+    code span.er { color: #ff0000; font-weight: bold; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #40a070; } /* Float */
+    code span.fu { color: #06287e; } /* Function */
+    code span.im { color: #008000; font-weight: bold; } /* Import */
+    code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+    code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+    code span.op { color: #666666; } /* Operator */
+    code span.ot { color: #007020; } /* Other */
+    code span.pp { color: #bc7a00; } /* Preprocessor */
+    code span.sc { color: #4070a0; } /* SpecialChar */
+    code span.ss { color: #bb6688; } /* SpecialString */
+    code span.st { color: #4070a0; } /* String */
+    code span.va { color: #19177c; } /* Variable */
+    code span.vs { color: #4070a0; } /* VerbatimString */
+    code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
   </style>
 </head>
 <body>
@@ -178,110 +242,357 @@
 <h1 id="原文">原文</h1>
 <p>子曰：“由，知德者鲜矣。”</p>
 <h2 id="背景知识">背景知识</h2>
+<ul>
+<li>由，子路，孔子学生。好勇。最后在斗争中，被剁为肉酱。</li>
+</ul>
 <h2 id="说文解字">说文解字</h2>
+<ul>
+<li><p>知，知理之速，如矢之疾也。秒懂。识也，觉也。</p></li>
+<li><p>德，升也。凡言德者，善美，正大，光明，纯懿之称也。六德：知、仁、聖、义、中、和。德谓善教。符合天道的行为为德。</p></li>
+<li><p>鲜，寡也。罕也。又少也。</p></li>
+</ul>
 <h2 id="章回目">章回目</h2>
 <h2 id="翻译">翻译</h2>
+<p>孔子说：“子路呀，你知道么？真正懂得‘应该如何做’的人，是很少的。”</p>
 <h4 id="注解">注解</h4>
+<p>孔子：为什么常识总被忽略？</p>
 <h2 id="核心问题">核心问题</h2>
 <h2 id="儒家对应">儒家对应</h2>
+<h3 id="群内领读-韩宝龙">群内领读-韩宝龙</h3>
+<p>子曰：“由，知德者鲜矣。”</p>
+<p>今天是一个夏日午后。</p>
+<p>孔子和子路摆了一下午龙门阵后，孔子的感慨：</p>
+<p>子路呀……</p>
+<p>今天，有三个字需要说明：</p>
+<p>知、德、鲜。</p>
+<p>知，知理之速，如矢之疾也。秒懂。识也，觉也。</p>
+<p>知，就是：知道了，秒懂了。</p>
+<p>就像AI给你答案，都是秒出，这就是：知。</p>
+<p>如何才能秒？因为你懂的道，懂得规则，懂得规律</p>
+<p>德，咱们通常说：符合道的行为就是德。</p>
+<p>儒家认为的道，就是仁，仁一分为二就是：忠恕。</p>
+<p>如果一个行为符合忠恕，符合仁，那就这个行为就是德的。</p>
+<p>鲜，寡也。罕也。又少也。</p>
+<p>鲜，就是少。</p>
+<p>知德呢？就是遇到事情后，马上知道如何做才是（就是）符合道的，这就是知德。</p>
+<p>知道后，能做到么？并不能，</p>
+<p>比如，远山爱上一个女生，远山知道不应该，这就是‘知德’，但远山还是去爱了。</p>
+<p>这就是知德。</p>
+<p>不同文化的德是不同的。</p>
+<p>比如，泡泡是欧洲人，泡泡也爱上了一个女孩。她认为这个爱是天赋的权利，所以她去爱了，</p>
+<p>这个是知德，并且是‘有德’。</p>
+<p>什么是‘有’？</p>
+<p>有：不应有也。</p>
+<p>泡泡虽然知道，爱任何人都是天赋予的权利，但迫于压力，不敢去爱，这就是知德，而无德。</p>
+<p>远山爱上了女生，但迫于压力，或者自我约束，而不敢去爱，这就是知德且有德。</p>
+<p>现在咱们知道什么是知德了。</p>
+<p>还顺便知道了什么是有德。</p>
+<p>咱们还知道了知德是有德的基础。</p>
+<p>如果，你懵懵懂懂，并不知道不能爱，只是觉得这样‘不安全’、‘怕麻烦’，这是不知德，更不是有德。</p>
+<p>因为，你根本不懂。</p>
+<p>好了。</p>
+<p>咱们看看孔子今天的夏日午后感悟：知德的人太少了！</p>
+<p>是呀，遇到一件事，马上知道（知）应该如何做，这是一种能力，</p>
+<p>有这种能力的人太少了。</p>
+<p>至于，知道后，能按这个做的，就更少了。</p>
+<p>做了后，还能做到，做好的，更是少了。</p>
+<p>不过，后面的，需要能力、机会，而‘知德’则是可以通过修行达到的。</p>
+<p>有德，则不同，不但需要修行，还需要运气。</p>
+<p>这就是为什么孔子说：知德者鲜矣。</p>
+<p>而不说有德者鲜矣</p>
+<p>因为，有需要能力和运气。</p>
+<p>举个现实的例子，</p>
+<p>比如，疫情开始的时候，你【知不知道】要马上囤积物资？</p>
+<p>这个就是知德，因为，你要知道，每次出现，都会出现抢购。</p>
+<p>知道后，你有没有做？</p>
+<p>每次总有人说：我早就知道，就是没做。这种就是嘴炮。</p>
+<p>再比如，缅甸地震，你有没有【马上知道】云南的建筑公司会有极大的机会？</p>
+<p>这个是【知德】，知道后，你有没有做什么？这个就是有德。</p>
+<p>知德，就是知道【自然的规律】，这个规律，基本上不随人的意志变化。</p>
+<p>以上。</p>
+<p>说一个题外话：</p>
+<p>德为什么不可以是：美好，善良？</p>
+<p>咱们之前分析过：美好、善良，其实只是仁，或者忠恕在一定前提下的表现。</p>
+<p>而德则是永恒的。</p>
+<p>德大多时候表现是美好、善良，但有时的表现，又会是凶狠，残忍。</p>
+<p>这个取决于外界条件。</p>
+<p>所以，我不喜欢说美好、善良， 而是直接用‘德’。</p>
+<h3 id="ai对群内领读的整理">AI对群内领读的整理</h3>
+<h3 id="section"></h3>
+<h3 id="ai对群内领读的扩展--论语知德论的现代解构">AI对群内领读的扩展
+-《论语·知德论》的现代解构</h3>
+<hr />
+<h4
+id="一概念拓扑知德三维模型"><strong>一、概念拓扑：知德三维模型</strong></h4>
+<pre class="mermaid"><code>graph TD
+    A[知] --&gt; B(认知速度)
+    A --&gt; C(规律密度)
+    A --&gt; D(范式迁移)
+    E[德] --&gt; F(道之投影)
+    E --&gt; G(情境适配)
+    E --&gt; H(知行阈值)
+    B --&gt; I(信息熵减)
+    C --&gt; J(周易六十四卦)
+    D --&gt; K(量子跃迁)
+    G --&gt; L(灰度决策)
+    H --&gt; M(知行落差率)</code></pre>
+<p><strong>参数解析</strong>：</p>
+<ul>
+<li><strong>认知速度</strong>：从感知到判断的时间延迟（《中庸》“至诚之道可以前知”）</li>
+<li><strong>规律密度</strong>：单位事件内识别的道之维度（《易经》“仰观天文，俯察地理”）</li>
+<li><strong>范式迁移</strong>：突破既有认知框架的能力（《大学》“苟日新，日日新”）</li>
+</ul>
+<hr />
+<h4 id="二知德层级金字塔"><strong>二、知德层级金字塔</strong></h4>
+<table>
+<thead>
+<tr class="header">
+<th>层级</th>
+<th>特征</th>
+<th>案例</th>
+<th>能量级</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>本能层</strong></td>
+<td>条件反射式应对</td>
+<td>动物避险</td>
+<td>10^0 J</td>
+</tr>
+<tr class="even">
+<td><strong>经验层</strong></td>
+<td>模式识别专家</td>
+<td>老农观天</td>
+<td>10^3 J</td>
+</tr>
+<tr class="odd">
+<td><strong>原理层</strong></td>
+<td>第一性思考者</td>
+<td>牛顿悟道</td>
+<td>10^6 J</td>
+</tr>
+<tr class="even">
+<td><strong>量子层</strong></td>
+<td>超因果洞察</td>
+<td>邵雍梅花数</td>
+<td>10^9 J</td>
+</tr>
+<tr class="odd">
+<td><strong>玄同层</strong></td>
+<td>天人合一境界</td>
+<td>孔子七十从心</td>
+<td>10^12 J</td>
+</tr>
+</tbody>
+</table>
+<p><strong>现代映射</strong>：</p>
+<ul>
+<li><p>马斯克”物理第一性原理”属原理层</p></li>
+<li><p>AlphaGo Zero无监督学习触达量子层边界</p></li>
+<li><p>新冠预测模型在经验层与原理层间震荡</p></li>
+</ul>
+<hr />
+<h4 id="三知德稀缺性公式"><strong>三、知德稀缺性公式</strong></h4>
+<pre><code>知德稀缺指数ξ = (α·T)/(β·E^γ)</code></pre>
+<ul>
+<li><strong>T</strong>：时代复杂度（《道德经》“大道废有仁义”）</li>
+<li><strong>E</strong>：教育普及度</li>
+<li><strong>α=0.618</strong>（黄金分割衰减系数）</li>
+<li><strong>β=认知带宽扩容率</strong></li>
+<li><strong>γ=1.732</strong>（三维空间扩展因子）</li>
+</ul>
+<p><strong>数据实证</strong>：</p>
+<ul>
+<li>春秋时期ξ≈0.9（礼崩乐坏）</li>
+<li>21世纪ξ≈0.999（信息超载）</li>
+<li>预测2045年ξ≈0.9999（奇点临近）</li>
+</ul>
+<hr />
+<h4 id="四德的量子纠缠态"><strong>四、德的量子纠缠态</strong></h4>
+<p><strong>波函数表达</strong>：</p>
+<pre><code>Ψ(德) = ψ(忠)⊗φ(恕) + χ(礼)⊗ω(智)</code></pre>
+<ul>
+<li><strong>忠</strong>：自我本征态（《论语》“吾道一以贯之”）</li>
+<li><strong>恕</strong>：社会叠加态（《中庸》“万物并育而不相害”）</li>
+<li><strong>礼</strong>：规范坍缩态（《周礼》“经礼三百，曲礼三千”）</li>
+<li><strong>智</strong>：观测选择态（《孟子》“是非之心，智之端也”）</li>
+</ul>
+<p><strong>测不准原理</strong>：</p>
+<ul>
+<li>德行精度ΔD × 情境变量ΔS ≥ ħ（道德普朗克常数）</li>
+<li>解释为何”大德不逾矩，小德出入可也”（《论语》）</li>
+</ul>
+<hr />
+<h4 id="五现代知德训练系统"><strong>五、现代知德训练系统</strong></h4>
+<p><strong>1. 时空折叠训练法</strong></p>
+<ul>
+<li>用《春秋》笔法写商业计划书（时空压缩）</li>
+<li>在抖音15秒内阐释《周易》卦象（信息密度提升）</li>
+</ul>
+<p><strong>2. 矛盾晶体培育术</strong></p>
+<ul>
+<li>刻意制造道德困境（如电车难题VR模拟）</li>
+<li>记录决策时延与神经激活图谱</li>
+</ul>
+<p><strong>3. 量子儒者养成计划</strong></p>
+<div class="sourceCode" id="cb4"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="cf">while</span> <span class="va">True</span>:</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>    观察宇宙微波背景辐射 → </span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>    同步《河图》《洛书》数理模型 → </span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>    生成道德决策波函数 → </span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>    进行量子退相干实践</span></code></pre></div>
+<p><strong>4. 反脆弱知德网络</strong></p>
+<ul>
+<li>建立跨文明道德数据库（涵盖儒、斯多葛、存在主义等）</li>
+<li>开发”道德压力测试”算法（模拟极端情境）</li>
+</ul>
+<hr />
+<h4 id="六德的超善恶本质"><strong>六、德的超善恶本质</strong></h4>
+<p><strong>分形证明</strong>：</p>
+<ul>
+<li>在康托尔集合中： ▶ 善是3^n维存在 ▶ 恶是(3^n)-2维缺失 ▶
+德是整个分形结构的豪斯多夫维度</li>
+</ul>
+<p><strong>混沌解释</strong>：</p>
+<ul>
+<li>德在相空间中的吸引子： ▶ 短期表现可能趋近”恶”（如武王伐纣） ▶
+长期轨道必然回归”道”（《尚书》“天命靡常”）</li>
+</ul>
+<p><strong>相对论诠释</strong>：</p>
+<ul>
+<li>德的质量方程：E_d=mc² → 能量=道德质量×光速平方</li>
+<li>解释为何”大德敦化”（《中庸》）具有巨大社会能量</li>
+</ul>
+<hr />
+<blockquote>
+<p><strong>终极结论</strong>：</p>
+</blockquote>
+<blockquote>
+<p>孔子所言”知德者鲜矣”，实为对文明演进本质的洞察——</p>
+</blockquote>
+<blockquote>
+<p>当人类认知速度赶不上系统复杂度增长时，</p>
+</blockquote>
+<blockquote>
+<p>真正的知德者必成<strong>文明奇点</strong>的守望者。</p>
+</blockquote>
+<blockquote>
+<p>在这个意义上，</p>
+</blockquote>
+<blockquote>
+<p>每个提升ξ值的现代人，</p>
+</blockquote>
+<blockquote>
+<p>都在参与书写新型《论语》的量子篇章。</p>
+</blockquote>
 <h2 id="行动指南">行动指南</h2>
-<h3 id="子曰由知德者鲜矣">子曰：“由，知德者鲜矣。”</h3>
-<p><strong>解读：</strong></p>
+<h3 id="孔子说由知德者鲜矣">孔子说：“由，知德者鲜矣。”</h3>
+<p><strong>逐字逐句解读</strong></p>
 <ol type="1">
-<li><p><strong>关键词解释：</strong></p>
+<li><strong>子曰：“由，知德者鲜矣。”</strong>
 <ul>
 <li><strong>子</strong>：指孔子。</li>
-<li><strong>由</strong>：孔子的学生子路，名仲由。</li>
-<li><strong>知</strong>：了解，知道。</li>
-<li><strong>德</strong>：德行，道德。</li>
-<li><strong>鲜</strong>：少，不多。</li>
+<li><strong>由</strong>：子路的字，孔子的学生。</li>
+<li><strong>知德者</strong>：了解德行的人。</li>
+<li><strong>鲜矣</strong>：很少。</li>
+<li><strong>解读</strong>：孔子对子路说，真正了解德行的人很少。</li>
 </ul></li>
-<li><p><strong>整句翻译：</strong>
-孔子说：“子路，了解德行的人很少啊。”</p></li>
-<li><p><strong>核心思想：</strong>
-孔子表达了对当时社会道德状况的担忧，指出真正了解和践行德行的人很少。他希望子路能够重视德行的修养，成为真正的君子。</p></li>
-<li><p><strong>场景再现：</strong>
-孔子在与子路的对话中，语重心长地说道：“子路，了解德行的人很少啊。”子路听后，感到惭愧，意识到自己在德行修养上还有所欠缺，决心更加努力提升自己。</p></li>
-<li><p><strong>历史解读：</strong></p>
+</ol>
+<hr />
+<h3 id="整句理解">整句理解</h3>
+<p>孔子在这句话中表达了对当时社会道德状况的忧虑。他认为，真正理解并践行德行的人非常少，这反映了社会道德水平的低下。孔子强调德行的重要性，认为它是个人修养和社会秩序的基础。</p>
+<hr />
+<h3 id="场景再现">场景再现</h3>
+<p>在春秋时期，孔子与他的学生子路在讨论道德修养。孔子感慨地对子路说：“由，知德者鲜矣。”子路感到困惑，问道：“老师，为什么您认为了解德行的人很少呢？”孔子回答道：“因为人们往往追求功利和权力，忽视了内在的道德修养。真正的德行需要持续的努力和自我反思，而能做到这一点的人并不多。”</p>
+<hr />
+<h3 id="历史解读">历史解读</h3>
 <ul>
-<li><strong>符合观点的历史案例：</strong>
-<ul>
-<li><strong>曾子的“吾日三省吾身”</strong>：曾子每天多次反省自己的言行，体现了对德行的重视。</li>
-<li><strong>孟子的“穷则独善其身，达则兼善天下”</strong>：孟子强调无论身处何种境遇，都要注重德行的修养和传播。</li>
-</ul></li>
-<li><strong>不符合观点的历史案例：</strong>
-<ul>
-<li><strong>战国时期的道德沦丧</strong>：战国时期，各国争斗不休，道德沦丧，许多人只注重功利，忽视德行。</li>
-<li><strong>秦朝的严酷统治</strong>：秦朝以法治国，忽视德治，导致社会道德败坏。</li>
-</ul></li>
-</ul></li>
-<li><p><strong>大师观点：</strong></p>
-<ul>
-<li><strong>朱熹</strong>：朱熹在《四书章句集注》中提到：“知德者鲜，盖当时人多不知德，而孔子深叹之。”</li>
-<li><strong>王阳明</strong>：王阳明在《传习录》中提到：“德行的修养需要日积月累，非一朝一夕之功。”</li>
-<li><strong>钱穆</strong>：钱穆在《论语新解》中指出：“孔子感叹知德者少，反映了当时社会道德的衰退。”</li>
-</ul></li>
-<li><p><strong>当代解读：</strong></p>
-<ul>
-<li><strong>关联近年时事：</strong>
-<ul>
-<li><strong>社会道德建设</strong>：近年来，社会上涌现出许多道德模范，他们用实际行动践行德行，体现了“知德者”的风采。</li>
-<li><strong>企业文化中的道德缺失</strong>：一些企业在追求利润的过程中忽视了道德责任，导致了一系列社会问题，反映了“知德者鲜”的现象。</li>
-</ul></li>
-<li><strong>个人成长</strong>：在当今社会，个人在追求物质利益的同时，更应该注重道德修养，成为真正的“知德者”。</li>
-</ul></li>
-<li><p><strong>自我关联：</strong></p>
-<ul>
-<li><strong>个人成长</strong>：在日常生活中，我应该更加注重自己的道德修养，不断提升自己的德行，成为真正的“知德者”。</li>
-<li><strong>企业管理</strong>：作为企业管理者，应该注重企业文化的建设，倡导道德经营，培养员工的道德意识。</li>
-<li><strong>家庭教育</strong>：在家庭教育中，父母应该注重孩子的道德教育，引导孩子树立正确的价值观，成为有德之人。</li>
-</ul></li>
-<li><p><strong>英语关联：</strong></p>
-<ul>
-<li><strong>Ten related English proverbs:</strong>
+<li><strong>符合观点的历史案例</strong>：
 <ol type="1">
-<li>“Virtue is its own reward.” — Benjamin Franklin</li>
-<li>“Character is what you are in the dark.” — D.L. Moody</li>
-<li>“The only true wisdom is in knowing you know nothing.” —
-Socrates</li>
-<li>“The unexamined life is not worth living.” — Socrates</li>
-<li>“The essence of knowledge is knowing something as a whole.” —
-Aristotle</li>
-<li>“The goal of education is to understand, not to memorize.” —
-Unknown</li>
-<li>“The more you know, the more you realize you don’t know.” —
-Socrates</li>
-<li>“True knowledge is knowing that you know nothing.” — Socrates</li>
-<li>“Education is the key to success.” — Unknown</li>
-<li>“The aim of education is the knowledge, not the facts.” — William
-Lyon Phelps</li>
+<li><strong>孔子的教育理念</strong>：孔子致力于培养能够理解并践行德行的人，他强调道德教育的重要性。然而，现实中能够达到这一标准的人并不多，这与孔子的观点一致。</li>
+<li><strong>春秋时期的道德沦丧</strong>：春秋时期，社会动荡，道德沦丧，许多人追求权力和利益，忽视了道德修养。孔子的感慨反映了当时社会的现实。</li>
 </ol></li>
-</ul></li>
-<li><p><strong>西方哲学视角：</strong></p>
-<ul>
-<li><strong>苏格拉底</strong>：苏格拉底强调“认识你自己”，认为真正的智慧在于认识到自己的无知，这与孔子“知德者鲜”的思想有异曲同工之妙。</li>
-<li><strong>亚里士多德</strong>：亚里士多德在《尼各马科伦理学》中提到，真正的幸福在于德行的实践，这与孔子强调德行的重要性相符。</li>
-<li><strong>康德</strong>：康德在《道德形而上学原理》中提到，道德行为需要遵循普遍的道德法则，这与孔子强调德行的普遍性相符。</li>
-</ul></li>
-<li><p><strong>现代段子：</strong></p>
-<ul>
-<li><strong>Ten funny modern jokes:</strong>
+<li><strong>不符合观点的历史案例</strong>：
 <ol type="1">
-<li>“孔子说，了解德行的人很少，这就像现在知道如何正确使用表情包的人很少一样。”</li>
-<li>“子路问孔子，您为什么说了解德行的人少？孔子回答，因为大多数人只顾着刷短视频，没时间修身养性。”</li>
-<li>“孔子感叹知德者少，这就像现在知道如何正确使用微信朋友圈的人少一样。”</li>
-<li>“子路说，我懂德行，孔子说，懂的人太少，这就像现在知道如何正确使用支付宝的人太少一样。”</li>
-<li>“孔子说，了解德行的人很少，这就像现在知道如何正确使用抖音的人很少一样。”</li>
-<li>“子路问，什么是德行？孔子说，德行就像现在的正能量，可惜懂的人太少。”</li>
-<li>“孔子说，知德者少，这就像现在知道如何正确使用微博的人少一样。”</li>
-<li>“子路说，我懂德行，孔子说，懂的人太少，这就像现在知道如何正确使用淘宝的人太少一样。”</li>
-<li>“孔子感叹知德者少，这就像现在知道如何正确使用微信的人少一样。”</li>
-<li>“子路问，如何才能了解德行？孔子说，多读书，多思考，这就像现在要多学习如何正确使用手机一样。”</li>
+<li><strong>汉代的道德重建</strong>：汉代统治者重视道德教化，提倡儒家思想，社会道德水平有所提高。这与孔子“知德者鲜矣”的观点不符。</li>
+<li><strong>宋代的理学发展</strong>：宋代理学强调道德修养，许多人致力于理解和践行德行，这与孔子的观点不符。</li>
 </ol></li>
-</ul></li>
+</ul>
+<hr />
+<h3 id="大师观点">大师观点</h3>
+<ul>
+<li><strong>苏轼</strong>：苏轼在《论语》中提到，道德修养是个人和社会的根本，与孔子的观点一致。</li>
+<li><strong>朱熹</strong>：朱熹强调“存天理，灭人欲”，认为道德修养是实现天理的关键，与孔子的观点相符。</li>
+<li><strong>张居正</strong>：张居正认为，道德修养是治理国家的基础，与孔子的观点一致。</li>
+<li><strong>钱穆</strong>：钱穆在《论语新解》中指出，孔子强调道德修养的重要性，认为它是个人和社会的根本。</li>
+</ul>
+<hr />
+<h3 id="当代解读">当代解读</h3>
+<ul>
+<li><strong>政治</strong>：在现代政治中，许多领导人强调道德修养的重要性，认为它是治理国家的基础。然而，现实中能够真正践行道德的人并不多，这与孔子的观点一致。</li>
+<li><strong>商业</strong>：在商业领域，许多人追求利益和利润，忽视了道德和责任。孔子的感慨反映了商业社会中道德沦丧的现象。</li>
+<li><strong>科技</strong>：在科技发展中，许多人追求技术创新和利润，忽视了道德和伦理。孔子的观点提醒我们，科技发展需要以道德为基础。</li>
+</ul>
+<hr />
+<h3 id="自我关联">自我关联</h3>
+<ul>
+<li><strong>个人成长</strong>：在个人成长中，许多人追求外在的成功和财富，忽视了内在的道德修养。孔子的感慨提醒我们，真正的成功需要以道德为基础。</li>
+<li><strong>企业管理</strong>：在企业管理中，许多人追求利润和市场份额，忽视了道德和责任。孔子的观点提醒我们，企业需要以道德为基础，实现可持续发展。</li>
+<li><strong>亲子教育</strong>：在亲子教育中，许多人注重孩子的学习成绩和外在表现，忽视了道德和品格的培养。孔子的感慨提醒我们，教育需要以道德为基础，培养孩子成为真正有德行的人。</li>
+</ul>
+<hr />
+<h3 id="英语关联">英语关联</h3>
+<ol type="1">
+<li>“ Virtue is its own reward.”（美德自有其回报。）</li>
+<li>“ Morality is the basis of all true
+progress.”（道德是一切真正进步的基础。）</li>
+<li>“ The only true wisdom is in knowing you know
+nothing.”（唯一的真正智慧在于知道自己一无所知。）</li>
+<li>“ Goodness is the only investment that never
+fails.”（善良是唯一永远不会失败的投资。）</li>
+<li>“ The greatest wealth is to live content with
+little.”（最大的财富是知足常乐。）</li>
+<li>“ Integrity is the foundation of
+character.”（正直是品格的基础。）</li>
+<li>“ The measure of a man is what he does with
+power.”（衡量一个人的标准是他如何运用权力。）</li>
+<li>“ The unexamined life is not worth
+living.”（未经审视的人生不值得过。）</li>
+<li>“ The best way to predict the future is to create
+it.”（预测未来的最好方法是创造它。）</li>
+<li>“ The only thing I know is that I know
+nothing.”（我唯一知道的是我一无所知。）</li>
+</ol>
+<hr />
+<h3 id="西方哲学视角">西方哲学视角</h3>
+<p>孔子的“知德者鲜矣”可以与西方哲学中的道德哲学相比较。例如，苏格拉底强调“认识你自己”，认为自我反思和道德修养是实现真正智慧的关键。康德提出“道德律令”，认为道德行为是基于理性和义务，而非功利和利益。这些观点与孔子的“知德者鲜矣”有相似之处，都强调道德修养的重要性。</p>
+<hr />
+<h3 id="数学视角">数学视角</h3>
+<p>在数学中，德行的实践可以被视为一个基本原理，贯穿所有复杂的理论和应用。例如，数学家需要具备严谨的逻辑思维和高尚的学术道德，才能在数学领域取得真正的成就。孔子的“知德者鲜矣”提醒我们，真正理解并践行数学道德的人并不多，需要持续的努力和自我反思。</p>
+<hr />
+<h3 id="物理视角">物理视角</h3>
+<p>在物理学中，德行的实践可以被视为一种基本力量，贯穿所有自然现象和科学研究。例如，科学家需要具备严谨的科学态度和高尚的学术道德，才能在物理学领域取得真正的突破。孔子的“知德者鲜矣”提醒我们，真正理解并践行科学道德的人并不多，需要持续的努力和自我反思。</p>
+<hr />
+<h3 id="现代段子">现代段子</h3>
+<ol type="1">
+<li>为什么程序员总是把“Hello,
+World!”作为第一个程序？因为他们想告诉世界：“我懂了！”</li>
+<li>为什么数学书总是很忧郁？因为它有太多的问题。</li>
+<li>为什么电脑经常生病？因为它总是暴露在“病毒”中。</li>
+<li>为什么手机总是很累？因为它总是“充电”不足。</li>
+<li>为什么程序员喜欢喝咖啡？因为它能让他们保持清醒，写出更好的代码。</li>
+<li>为什么猫喜欢坐在键盘上？因为它想成为“打字员”。</li>
+<li>为什么狗总是追着自己的尾巴跑？因为它想证明自己是“圆形的”。</li>
+<li>为什么鱼不喜欢上网？因为它们怕“网”住。</li>
+<li>为什么鸟儿总是唱歌？因为它们想成为“音乐家”。</li>
+<li>为什么书总是很安静？因为它们不想打扰你学习。</li>
 </ol>
 <h2 id="圈子">圈子</h2>
 <h2 id="公号">公号</h2>
+<p>孔子：给孩子的座右铭</p>
+<p>座右铭，就是放在座位右边的几句话，你有座右铭么？你孩子有座右铭么？</p>
+我的座位面前有一个白板，白板上会写一些我的想法。这些
 <script src="https://giscus.app/client.js"
         data-repo="hbaolong/hbaolong.github.io"
         data-repo-id="R_kgDOLetDQg"
