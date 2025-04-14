@@ -167,6 +167,70 @@
       vertical-align: middle;
     }
     .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+    /* CSS for syntax highlighting */
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      {   }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+    code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+    code span.at { color: #7d9029; } /* Attribute */
+    code span.bn { color: #40a070; } /* BaseN */
+    code span.bu { color: #008000; } /* BuiltIn */
+    code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #4070a0; } /* Char */
+    code span.cn { color: #880000; } /* Constant */
+    code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+    code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+    code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+    code span.dt { color: #902000; } /* DataType */
+    code span.dv { color: #40a070; } /* DecVal */
+    code span.er { color: #ff0000; font-weight: bold; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #40a070; } /* Float */
+    code span.fu { color: #06287e; } /* Function */
+    code span.im { color: #008000; font-weight: bold; } /* Import */
+    code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+    code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+    code span.op { color: #666666; } /* Operator */
+    code span.ot { color: #007020; } /* Other */
+    code span.pp { color: #bc7a00; } /* Preprocessor */
+    code span.sc { color: #4070a0; } /* SpecialChar */
+    code span.ss { color: #bb6688; } /* SpecialString */
+    code span.st { color: #4070a0; } /* String */
+    code span.va { color: #19177c; } /* Variable */
+    code span.vs { color: #4070a0; } /* VerbatimString */
+    code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
   </style>
 </head>
 <body>
@@ -178,15 +242,391 @@
 <h1 id="原文">原文</h1>
 <p>子曰：“直哉史鱼！邦有道如矢，邦无道如矢。君子哉蘧伯玉！邦有道则仕，邦无道则可卷而怀之。”</p>
 <h2 id="背景知识">背景知识</h2>
+<ul>
+<li><p>史鱼，春秋时卫国（都于濮阳西南）大夫。名佗，字子鱼，也称史鳅。</p></li>
+<li><p>吴国的延陵季子经过卫国时，赞史鱼为卫国君子、柱石之臣。</p></li>
+<li><p>卫灵三十八年（公元前497年），卫国的公叔子曾设家宴招待灵公，告诫他说：“子富而君贫，必将遭祸。免祸的办法，只有富而不骄，谨守臣道。”</p></li>
+<li><p>他多次向卫灵公推荐蘧伯玉。临死嘱家人不要“治丧正室”，以劝戒卫灵公进贤（蘧伯玉）去佞(弥子瑕)。史称“尸谏”。</p></li>
+<li><p>蘧瑗（qú
+yuàn）（约前585年—前484年以后），姬姓，蘧氏，名瑗，字伯玉，卫国（长垣市孟岗镇伯玉村人）人。春秋时期卫国大臣，大夫蘧无咎之子。</p></li>
+<li><p>卫献公初即已入仕，在献公中期已为卫国举世皆知的贤大夫，一生侍奉卫献公、卫殇公、卫灵公三代国君，主张以德治国，执政者以自己的模范行为去感化、教育、影响人民，体恤民生，“无为而治”的开创者。病卒于任上，谥号为成。</p></li>
+<li><p>作为孔子的朋友，奉祀于孔庙东庑第一位，后世追封内黄侯。</p></li>
+</ul>
 <h2 id="说文解字">说文解字</h2>
+<ul>
+<li><p>直，正见也。正直为正。正曲为直。</p></li>
+<li><p>邦，国也。大曰邦，小曰国。</p></li>
+<li><p>道，所行道也。理也。这里代指自然法则。</p></li>
+<li><p>矢，弓弩矢也。誓也，言出如箭，所以誓。</p></li>
+<li><p>君子，指的是懂得天道的人，这里的天道，孔子特指仁。</p></li>
+<li><p>仕，仕宦也。仕于公曰臣，仕于家曰仆。</p></li>
+<li><p>卷，可舒卷者曰卷。</p></li>
+<li><p>怀，怀，念思也。念思者，归也。来也。藏也。</p></li>
+</ul>
 <h2 id="章回目">章回目</h2>
 <h2 id="翻译">翻译</h2>
+<p>孔子说：“史鱼真是个直人呀，国家有道的时候，他嗖地就冲上来了；国家无道的时候，他还是嗖地就冲上来了。”</p>
+<p>又说：“蘧伯玉真是个君子呀，国家有道的时候，他就出来做官；国家无道的时候，他就悄咪咪把自己藏起来了。”</p>
 <h4 id="注解">注解</h4>
+<p>孔子：骂‘国家’的是些什么人？</p>
+<p>每天都有人在网上骂‘国家’，当然，这个‘骂’也应该加个引号。因为，我这些想说的‘骂’是那种指出‘错误之处’的人。</p>
+<p>那么，’骂’国家的是些什么人呢？</p>
+<p>假设有一个人叫做张三，他发现了‘国家’有一些做的非常不好的行为。他应该如何做？</p>
+<ol type="1">
+<li><p>他直接指出，并且要求管理部门修改</p></li>
+<li><p>他大声喊出，让更多的老百姓听到，从而给管理部门压力</p></li>
+<li><p>他离开这个国家</p></li>
+</ol>
+<p>如果是你，你会如何选？</p>
+<p>其实，1和2是可以合并的，因为，很多时候，你的直接指出并没有用处，所以，大声喊出和直接指出是一样的行为。</p>
+<p>如果你指出后，’国家’并没听到，或者听到了，但不改，怎么办？</p>
+<p>你会如何做？</p>
+<ol type="1">
+<li><p>继续扩大声音，让更多人参与，给管理者更大的压力</p></li>
+<li><p>离开这个国家</p></li>
+</ol>
+<p>’国家’可能还是没听到，毕竟‘国家’很大，个人的声音就像沙漠里一粒沙子的喊叫，是听不到的，你会如何做呢？</p>
+<ol type="1">
+<li><p>继续扩大声音，让更多更多的人知道，给管理者更大的压力</p></li>
+<li><p>离开这个国家</p></li>
+</ol>
+<p>事实上，对于普通人来说，离开这个国家‘逝将去汝，适彼乐土’是很难的。</p>
+<p>大部分人只能是呼喊，呐喊。或者被听到，或者被更大的声音淹没。</p>
+<p>如果你是张三，你一直的选择是1，那么，恭喜你，你是一个‘直人’。</p>
+<p>如果你是张三，你一开始，或者几次后，你选择了2，那么，恭喜你，你是一位‘君子’。</p>
+<p>不论是‘直人’还是‘君子’，都是一种选择，而这种选择，是需要资格的。</p>
+<p>更多的，既不是直人，也不是君子，只是人机。</p>
 <h2 id="核心问题">核心问题</h2>
+<h3 id="群领读-韩宝龙">群领读-韩宝龙</h3>
+<p>子曰：</p>
+<p>“直哉史鱼！邦有道如矢，邦无道如矢。</p>
+<p>君子哉蘧伯玉！邦有道则仕，邦无道则可卷而怀之。”</p>
+<p>今天的关键字是：直 VS 君子</p>
+<p>直，正见也。正直为正。正曲为直。</p>
+<p>君子，指的是懂得天道的人，这里的天道，孔子特指仁。</p>
+<p>直，正曲为直。也就是：看到不顺的，我就要去修正它。</p>
+<p>这就是直。</p>
+<p>比如，也就是俗话说的：眼里容不得沙子。</p>
+<p>君子呢？就要聪明的多le .</p>
+<p>懂天道，懂忠恕，</p>
+<p>现在要举两个例子了，一个是直的例子：史鱼，一个是君子的例子蘧伯玉。</p>
+<p>史鱼如何呢？邦有道如矢，邦无道如矢。</p>
+<p>就是说：国家在正常轨道上，他嗖地就冲上去干了；国家偏离轨道了，他也是嗖地冲上去干。</p>
+<p>他只知道干，从来没有想过放弃。</p>
+<p>这就是直人。</p>
+<p>比如，海瑞就是直人。</p>
+<p>直人眼中，只有规则。</p>
+<p>蘧伯玉呢？君子哉蘧伯玉！邦有道则仕，邦无道则可卷而怀之。</p>
+<p>蘧伯玉就不同了，国家有道的时候，他就出来做事；当国家偏离了轨道，他无能为力了，他就藏起来，保护好自己。</p>
+<p>这个的典型代表就是王安石。</p>
+<p>当神宗坚定地支持他的时候，他就努力干；后来，他发现神宗的支持不坚定了，他就撂挑子不干了。这就是王安石的君子之处。</p>
+<p>那么，直人和君子，哪个更好呢？</p>
+<p>直人心里，少了一些自己；君子心里，少了一些他人。</p>
+<p>所以，我中午说，在直人心中，忠恕三七开；在君子心中，忠恕七三开。</p>
+<p>在国家、民族、群体遭受灾难的时候，需要直人？还是君子？</p>
+<p>肯定需要直人，但直人又不能太多。</p>
+<p>也需要君子，因为，不能干的，躲开，腾出地方开，这也是贡献。</p>
+<p>所以，直人、君子，都是需要的。</p>
+<p>刚才说的是直人和君子的不同之处，那么，他们有什么共同之处呢？</p>
+<p>对，他们的共同之处，就是：他们都能识别邦有道或者无道。</p>
+<p>也就是，他们都是聪明的人。</p>
+<p>至于普通人，你做不了直人，也做不了君子，因为你智商不够。</p>
+<p>而且，直人和君子，国家在正常运行时，是看不出来的。</p>
+<p>所以，当你发现身边涌现出很多‘直人’或者‘君子’行为的时候，你就要知道‘XX民族到了最危险的时刻’。</p>
+<p>那么，你会选择做一个直人？还是君子？</p>
+<p>以上。</p>
+<h2 id="群领读排版-ai">群领读排版-AI</h2>
+<h3 id="子曰">子曰：</h3>
+<blockquote>
+<p>「直哉史鱼！邦有道如矢，邦无道如矢。</p>
+</blockquote>
+<blockquote>
+<p>君子哉蘧伯玉！邦有道则仕，邦无道则可卷而怀之。」</p>
+</blockquote>
+<hr />
+<h3 id="今日关键字直-vs-君子"><strong>今日关键字</strong>：<strong>直 VS
+君子</strong></h3>
+<ol type="1">
+<li><p><strong>直，正见也</strong></p>
+<ul>
+<li>正直为正，正曲为直。</li>
+<li>即：<strong>看到不顺的，就要去修正它</strong>（如俗话「眼里容不得沙子」）。</li>
+</ul></li>
+<li><p><strong>君子，指懂天道（仁）之人</strong></p>
+<ul>
+<li>知进退，明忠恕。</li>
+</ul></li>
+</ol>
+<hr />
+<h3 id="例证对比"><strong>例证对比</strong></h3>
+<table>
+<colgroup>
+<col style="width: 47%" />
+<col style="width: 52%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th><strong>直人代表：史鱼</strong></th>
+<th><strong>君子代表：蘧伯玉</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>邦有道如矢，邦无道如矢。<br>（无论国家是否清明，皆直言如箭）</td>
+<td>邦有道则仕，邦无道卷而怀之。<br>（顺势而为，逆势则隐）</td>
+</tr>
+<tr class="even">
+<td><strong>典型：海瑞</strong><br>眼中唯规则，无惧生死</td>
+<td><strong>典型：王安石</strong><br>神宗支持则干，动摇则退</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="直人与君子的辩证"><strong>直人与君子的辩证</strong></h3>
+<ol type="1">
+<li><p><strong>差异</strong></p>
+<ul>
+<li>直人心中<strong>少自我</strong>（忠恕三七开），君子心中<strong>少他人</strong>（忠恕七三开）。</li>
+</ul></li>
+<li><p><strong>共性</strong></p>
+<ul>
+<li>皆能<strong>识邦有道/无道</strong>（需智慧）。</li>
+</ul></li>
+<li><p><strong>时代选择</strong></p>
+<ul>
+<li><strong>危难时需直人</strong>（但不可多），<strong>亦需君子</strong>（退避亦是贡献）。</li>
+</ul></li>
+</ol>
+<hr />
+<h3 id="启示"><strong>启示</strong></h3>
+<ul>
+<li><p>普通人难为直人或君子（因智不足）；</p></li>
+<li><p>直人/君子涌现时，常暗示「民族至危」；</p></li>
+<li><p><strong>你选做直人，还是君子？</strong></p></li>
+</ul>
+<h3 id="群领读扩展-ai--思想解析记录">群领读扩展-AI- 思想解析记录</h3>
+<h4 id="一核心概念对比表">一、核心概念对比表</h4>
+<table>
+<colgroup>
+<col style="width: 14%" />
+<col style="width: 43%" />
+<col style="width: 42%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>维度</th>
+<th>直人（史鱼型）</th>
+<th>君子（蘧伯玉型）</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>行为模式</strong></td>
+<td>邦有道如矢，邦无道如矢（始终如一）</td>
+<td>邦有道则仕，邦无道卷而怀之（审时度势）</td>
+</tr>
+<tr class="even">
+<td><strong>价值取向</strong></td>
+<td>规则至上（正曲为直）</td>
+<td>天道智慧（穷则独善其身）</td>
+</tr>
+<tr class="odd">
+<td><strong>历史案例</strong></td>
+<td>海瑞（明朝直臣）</td>
+<td>张良（汉初功成身退）</td>
+</tr>
+<tr class="even">
+<td><strong>忠恕比例</strong></td>
+<td>忠70%：恕30%（刚性原则）</td>
+<td>忠30%：恕70%（柔性智慧）</td>
+</tr>
+<tr class="odd">
+<td><strong>风险系数</strong></td>
+<td>高（易遭政治清算）</td>
+<td>低（保全实力）</td>
+</tr>
+<tr class="even">
+<td><strong>现代映射</strong></td>
+<td>司法体系中的刚性法条派</td>
+<td>政策制定中的渐进改革派</td>
+</tr>
+</tbody>
+</table>
+<h4 id="二行为决策模型">二、行为决策模型</h4>
+<pre class="mermaid"><code>graph TD
+    环境判断 --&gt;|邦有道| 行动选择
+    环境判断 --&gt;|邦无道| 行动选择
+    行动选择 --&gt; 直人模式[刚性执行]
+    行动选择 --&gt; 君子模式[柔性调整]
+    直人模式 --&gt; 结果A[推动制度变革]
+    君子模式 --&gt; 结果B[保持变革火种]</code></pre>
+<h4 id="三历史辩证关系">三、历史辩证关系</h4>
+<ol type="1">
+<li><p><strong>互补机制</strong></p>
+<ul>
+<li>直人创造变革势能（如商鞅变法）</li>
+<li>君子维系变革延续（如萧规曹随）</li>
+<li>典型案例：万历新政（张居正为直人，申时行继任为君子）</li>
+</ul></li>
+<li><p><strong>转化条件</strong></p>
+<table>
+<thead>
+<tr class="header">
+<th>转化类型</th>
+<th>触发机制</th>
+<th>历史案例</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>直人→君子</td>
+<td>政治挫折教育</td>
+<td>范仲淹”庆历新政”后作《岳阳楼记》</td>
+</tr>
+<tr class="even">
+<td>君子→直人</td>
+<td>危机倒逼机制</td>
+<td>王夫之明亡后著《读通鉴论》</td>
+</tr>
+</tbody>
+</table></li>
+<li><p><strong>现代组织中的比例平衡</strong></p>
+<div class="sourceCode" id="cb2"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> 团队构成(环境指数):</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> 环境指数 <span class="op">&gt;</span> <span class="fl">0.7</span>:  <span class="co"># 有序环境</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> 直人:君子 <span class="op">=</span> <span class="dv">3</span>:<span class="dv">7</span>  <span class="co"># 维持性结构</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span>:               <span class="co"># 危机环境</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> 直人:君子 <span class="op">=</span> <span class="dv">7</span>:<span class="dv">3</span>  <span class="co"># 变革性结构</span></span></code></pre></div></li>
+</ol>
+<h4 id="四现代治理启示">四、现代治理启示</h4>
+<ol type="1">
+<li><p><strong>风险社会中的双模应对</strong></p>
+<ul>
+<li>刚性机制：疫情防控中的”动态清零”政策（直人思维）</li>
+<li>柔性机制：经济复苏中的”精准滴灌”策略（君子智慧）</li>
+</ul></li>
+<li><p><strong>科技伦理的双重维度</strong></p>
+<table>
+<colgroup>
+<col style="width: 17%" />
+<col style="width: 40%" />
+<col style="width: 42%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>领域</th>
+<th>直人维度</th>
+<th>君子维度</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>人工智能</td>
+<td>算法透明性原则</td>
+<td>技术人文关怀</td>
+</tr>
+<tr class="even">
+<td>基因编辑</td>
+<td>科研伦理审查</td>
+<td>社会接受度评估</td>
+</tr>
+<tr class="odd">
+<td>元宇宙</td>
+<td>数据安全标准</td>
+<td>虚拟身份伦理</td>
+</tr>
+</tbody>
+</table></li>
+<li><p><strong>领导力发展光谱</strong></p>
+<pre class="mermaid"><code>flowchart LR
+    基层管理者 --&gt;|直人特质| 中层干部
+    中层干部 --&gt;|君子智慧| 高层决策者
+    高层决策者 --&gt;|直人+君子| 变革型领袖</code></pre></li>
+</ol>
+<h4 id="五争议辨析">五、争议辨析</h4>
+<ol type="1">
+<li><p><strong>智商决定论再审视</strong></p>
+<ul>
+<li>原观点：普通人难为直人/君子因”智商不够”</li>
+<li>修正视角：
+<ul>
+<li>环境认知能力=经验积累(50%)+教育水平(30%)+政治敏感(20%)</li>
+<li>现代公民可通过”数字治理平台”提升环境判断力</li>
+</ul></li>
+</ul></li>
+<li><p><strong>王安石定位争议</strong></p>
+<ul>
+<li>矛盾点：变法派vs保守派的传统划分</li>
+<li>新解构：
+<ul>
+<li>变法初期：直人模式（“天变不足畏”改革魄力）</li>
+<li>变法后期：君子模式（奏请外放江宁府）</li>
+<li>体现政治人物行为模式的动态转换</li>
+</ul></li>
+</ul></li>
+</ol>
+<h4 id="六文明演进启示">六、文明演进启示</h4>
+<ol type="1">
+<li><p><strong>东西方治理范式对比</strong></p>
+<table>
+<thead>
+<tr class="header">
+<th>文明类型</th>
+<th>直人传统</th>
+<th>君子传统</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>中华文明</td>
+<td>御史台制度</td>
+<td>隐士文化</td>
+</tr>
+<tr class="even">
+<td>西方文明</td>
+<td>罗马保民官</td>
+<td>文艺复兴廷臣</td>
+</tr>
+<tr class="odd">
+<td>现代文明</td>
+<td>宪法法院</td>
+<td>旋转门机制</td>
+</tr>
+</tbody>
+</table></li>
+<li><p><strong>数字时代的演化趋势</strong></p>
+<ul>
+<li>直人机制算法化：区块链智能合约（刚性执行）</li>
+<li>君子智慧AI化：伦理决策支持系统（情境判断）</li>
+<li>新型矛盾：代码刚性vs伦理弹性的治理悖论</li>
+</ul></li>
+</ol>
+<blockquote>
+<p><strong>结语</strong>：</p>
+</blockquote>
+<blockquote>
+<p>孔子揭示的”直人-君子”二元结构，实为文明存续的阴阳机制。在数字文明时代，这种张力演变为”算法刚性”与”人文弹性”的永恒博弈。未来治理智慧在于构建”刚柔相济”的智能系统：既保持区块链式的规则刚性，又具备深度学习的情境适应力。史鱼的”如矢”精神将编码为不可篡改的智能合约，蘧伯玉的”卷怀”智慧则训练成神经网络的弹性决策——这或许就是古典治理智慧在硅基文明中的数字永生。</p>
+</blockquote>
 <h2 id="儒家对应">儒家对应</h2>
 <h2 id="行动指南">行动指南</h2>
 <h2 id="圈子">圈子</h2>
 <h2 id="公号">公号</h2>
+<p>孔子：聪明孩子的两种不同行为</p>
+<p>我经常在想，遇到问题后，是那种勇于争取的人聪明？还是知道绕过去的人聪明？</p>
+<p>比如，下雨了，是那个在雨中奔跑回家的孩子聪明？还是找一个避雨处等雨停的孩子聪明？</p>
+<p>被老师欺负，是那个和老师正面硬钢的孩子聪明？还是那个学会柔性处理的孩子聪明？</p>
+<p>对于成年人，遇见不合理的现象，是那个勇于争取合法权利的人聪明？还是那个忍辱求生的人聪明？</p>
+<p>敌人来了，是和敌人拼命的人聪明？还是躲开敌人，找个伤不到自己的地方藏起来的人聪明？</p>
+<p>在今天之前，我是没有答案的。</p>
+<p>从今天开始，我有了答案：都聪明。</p>
+<p>他们是不同的聪明。</p>
+<p>或者说，他们是两种不同的人：直人 VS 君子。</p>
+<p>直人，是那种对于不合理、不合法的事情会勇于干涉的人。这个社会因为有了他们而可以持续地改善。</p>
+<p>君子，是那种知道如何让事情更平滑的人，他们会巧妙地避开对自己的伤害，并且减弱对群体的伤害。这个社会因为有了他们而变得更加丝滑。</p>
+<p>直人和君子，是聪明人的两种选择。一种选择通过抗争来改变这个社会，一种选择通过避让来避免对自己和这个社会的伤害。</p>
+<p>他们都是聪明的人，这也是他们的性格。</p>
+<p>你的孩子是直人还是君子？还是懵懂的人？</p>
+你自己是直人还是君子？还是懵懂的人？
 <script src="https://giscus.app/client.js"
         data-repo="hbaolong/hbaolong.github.io"
         data-repo-id="R_kgDOLetDQg"
