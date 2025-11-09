@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="hbaolong@vip.qq.com" />
+  <title>香农传:第11章 密码学研究</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">香农传:第11章 密码学研究</h1>
+<p class="author">hbaolong@vip.qq.com</p>
+</header>
+<center>
+<a href="/3place/xnz">返回首页</a> <a
+href="/3place/xnz/mingju.html">本书名句</a> <a
+href="/3place/xnz/memo.html">本书注解</a> <a
+href="/3place/xnz/index_rich.html">丰富目录</a> <a
+href="/3place/xnz/index_readcal.html">同读日历</a> <a
+href="/3place/xnz/index_timeline.html">时间线</a> <a
+href="/3place/xnz/index_books.html">引用书籍</a> <a
+href="/3place/xnz/index_words.html">使用字频</a>
+<div id="wx_pic" style="margin:0 auto;display:none;">
+<img src='/img/logo.png'/>
+</div>
+</center>
+<h4 id="第11章-密码学研究">第11章 密码学研究</h4>
+<p>密码学是战争的白噪声：它无处不在，但只有最潜心钻研的人，才能学会它。它是战争武器中被理解得最少的元素。不同于核武器的可见性和对物理学强大威力的展示，密码学分析家的产物无法言说、神秘晦涩，在一代人乃至更长的时间里，它们都被当作高度机密。</p>
+<p>在战争最开始的时候，如何发送和接收加密信息，以及破译敌方信息，吸引了数学、科学以及信息处理领域中最尖端人才的注意。为了破译密码而催生的技术是战争最大的成就之一。对破译密码的需求激起了信息处理的变革，一系列电脑代号，ENIGMA，ENIAC，MANIAC，TUNNY，BOMBE，COLOSSUS，SIGSALY等，就是最好的证明。这场变革由神秘的情报局主持。</p>
+<p>但是，人们通常不会这样讲述破译密码的故事。电影和神话相结合，将密码破译者打造成了足智多谋的孤狼，在孤独中潦草地书写密码。但正如科林·伯克在《这不全是魔法》（It
+Wasn’t All
+Magic）一本美国安全局密码史的著作中，所描述的那样：“将密码破译员描述成孤胆英雄，既不真实也毫无用处，密码分析和技术的胜利并不是如此容易……真实的密码破译员一直以来，都努力地从堆积如山的原始数据中发现玄机，弄懂其中的奥秘。”由于密码机构的秘密发展，他们的大多数文件也都是机密的，伯克的密码史著作于1994年完成，直到2013年才被解密，所以当时公众对密码分析员的真实工作不甚了解，而且现在仍然如此。</p>
+<p>但是它一直存在，战争总是伴随着这种枯燥的嗡嗡声：通过人工或者使用机器将密码破译、编制，解密数不胜数的对话，将大量数据和文本分类。正如一则著名而悲惨的事件所表明的那样，信号情报之战既是一场编制密码的战争，又是一场破译密码的战争。在1941年12月7日早上，部队参谋长乔治·马歇尔有重要信息要传达给位于太平洋的指挥部：日本决定不再通过政治对话解决与美国的争端；它有可能发动战争。可是如何传达信息？一直以来，美国高级军事和政治领导人所使用的唯一的信息传达系统，都被认为是不够安全的。因此，他选择了相对较慢的无线电报来传递信息。不幸的是，当信息到达的时候，日本对珍珠港的袭击已经结束。几乎被毁灭的太平洋舰队给美国的密码编译员敲响了警钟。</p>
+<p>同样，轴心国也曾派出最顶端的人才，采用最先进的技术尝试拦截和破译敌方对话。第三帝国国外情报局局长瓦尔特·施伦堡，在战争末期详细地描述了一次成功的对敌方信息的拦截和破译：</p>
+<p>早在1944年，我们在荷兰的德方大型监听站窃听并破译了罗斯福和丘吉尔的电话谈话，利用这次谈话，我们直击要害。尽管谈话被加扰，但我们采用了一系列复杂装置，成功地译出了密码。谈话持续了将近5分钟，谈话暴露了英国正在加强的军事活动，从而证实了英国即将入侵德国，而在此之前已有大量相关报道。如果这两位政治家知道谈话正被敌人偷听，那么罗斯福肯定不会这样结束与丘吉尔的通话：“好的，我们会尽全力的。现在，我要钓鱼去了。”</p>
+<p>————</p>
+<p>密码学既涉及软件问题，也涉及硬件问题。从原则上讲，任何东西都可以充当“软件”。众所周知的例子是，第二次世界大战期间，约有500名纳瓦霍印第安人被雇用来传递加密信息，因为他们的本族语言非常复杂，轴心国对此极不熟悉，因此他们得以躲避追踪。这就是密码学的精髓——用一系列字母或单词的替代物或标志来表示另一种字母或单词（或语言）。通过技术手段增加替代物的复杂程度可以增加密码的难度。先进的密码硬件使“二战”时期密码的复杂程度以指数级增长。例如，他们使每个字母都有不同的密码，不同的加密方式，从而使得整条信息更难被破译。</p>
+<p>贝尔实验室加入密码战斗的原因是：国家需要强大的计算能力，以便更有效地编制信息，更迅速地破译敌方信息。“X项目”（Project
+X）于1940年冬发起，是当时最具野心的语言加扰系统，随着美国加入战争，该项目更具紧迫性。X项目，又称SIGSALY（绿色大黄蜂）系统，包括“约40个机架真空管，它们为重约45吨的电子设备供电，占地2500平方英尺[1]，需要30000瓦特的动力。”据估计，1943年，该系统的预算为5000000美元，相关工作人员达到30人。由于该系统的内部逻辑高度保密，直到1976年美国才向公众披露相关专利。人们通过该系统监听加密信息，很像在聆听“里姆斯基·科萨科夫令人叹为观止的小提琴演奏曲《野蜂飞舞》”。有人批评该系统输出的信息奇怪难懂，而SIGSALY的一名工程师威廉姆·班尼特随即回应道：“从安全角度考虑，我们接受这种失真。”</p>
+<p>从某种意义上来讲，SIGSALY系统是对20世纪中期的计算机巨大的讽刺：它体积庞大，占据整个房间，需要不分昼夜地开着空调来降温，耗费大量电力，但输出信息寥寥无几。（这是一则众所周知的笑话：“工作人员时常说起该系统糟糕的转换率：要得到1毫瓦的信息需要输入30千瓦的电力，并且信息的质量很差。”）但从另一方面来讲，这些都不重要。安德鲁·霍奇斯在传记《艾伦·图灵传》中提到了一个显而易见的原因：“它在运转，这是最重要的。有了它，加密信息才得以首次跨越大西洋。”</p>
+<p>————</p>
+<p>SIGSALY的核心技术是声码器。它的创始人荷马·达德利后来被认为是工程天才，但他差点儿没当成工程师。他曾经立志当一名教师，还为此做了一些尝试，教过5~8年级的学生，后来又教过高中生。尽管以他的智慧管理课堂纪律并非难事，但他未能掌握其要领。像以前和此后的老师一样，达德利发现对于一名教师来说，真正的挑战是让青春期前的学生们维持课堂秩序，而他难以胜任这项工作。所以他放弃了教学，转而加入西方电气公司的技术部学习电子工程，西方电气公司就是贝尔实验室的前身。这是一份更好的职业选择：40年里，他致力于电话制造和语音合成，申请了37项专利。</p>
+<p>那时的他完全不知道他最重大的成就会产生全球性的影响。达德利做出了一个假设，即人类的嗓音能够被机器模仿——从根本上来说，人声如果只是空气中的振动，就完全可以被机械模仿。为了验证假设，他制造了两个机器装置：一个用于对语音电子编码（被称为声音编码器，简称声码器），另一个用于保存程序、输出机器合成的语音（被称为“语音合成器”或“声控演示器”）。语音合成器在1939年世界博览会上初次亮相便引起了轰动，范内瓦·布什当时也在场，他这样回忆道：</p>
+<p>近期的世博会展出了一个叫语音合成器的机器。一个女孩敲击按键，机器发出了可辨识的语音，整个过程的任何节点都没有人类的声带参与；这些按键将电子产生的振动合成语音，然后传到扬声器。贝尔实验室有一个反向机器，叫声码器，不过是使用麦克风而不是扬声器收集声音。对着麦克风讲话，相应的键就会移动。</p>
+<p>达德利的发明后来被应用于军事领域。在将人声编码为数据方面，声码器成为SIGSALY的工程师的完美工具。密码编写程序的一大挑战，是信息中新引入的每个字母或单词都可能被敌人追踪；换言之，要传递的信息越少越好。由于声码器能够消耗尽可能少的能量来编码和重现元音与辅音，因此它大大减少了人声中的信息冗余，能够减少所需传递的信息量。换言之，只需编码必要信息，其余的则不需要，这减少了其他可能被敌方破译的信息量。如今我们有近乎无限的带宽，似乎难以理解上述一切，但在20世纪40年代这是至关重要的事情。如何冒最低的风险交流最多的信息是战时最紧急、最复杂的难题。尽管需要保密，贝尔实验室在当时还是赢得了许多奖项，其中包括1946年的“最佳信号处理技术奖”（Best
+Signal Processing Technology）。由于SIGSALY
+在当时还属于机密，颁奖礼上相关的到场者只听到了评委们评价SIGSALY
+至关重要。A. B.
+克拉克是贝尔实验室重要的一员，也是当时国家安全局的研发主管，他借助加密电话发表了获奖感言。</p>
+<p>————</p>
+<p>有近30名员工致力于SIGSALY
+项目的各项工作，香农的工作是检验算法以保证信息的安全匹配，以及在接收端重现信息。由于SIGSALY属于绝密，所以尽管香农是项目组的成员，但他并未被告知捣鼓这些数据的目的。不过，在那里工作为他打开了通往新世界的大门，使他接触到编码语音、信息传输和密码学。当时，这些事只可能发生在贝尔实验室。正如香农所观察到的：“只有极少数实验室有用来加密的语音编码设备。”</p>
+<p>香农后来意识到密码学是“一门非常实际的学科，即密码专家该如何工作以及该做些什么”。这意味着当脱离了SIGSALY
+项目后再研究加密技术时，香农写的东西更多的是面向“研究密码学的数学家或哲学家”，而不是面向亲身实践的密码编写员，所以相关实践者对此不太感兴趣。他自己也承认，自己的密码论文“不像我期待的那样……密码专家的反响并不热烈，虽然他们当中也有些人感兴趣”。</p>
+<p>后来的作者可能会承认，香农以密码学为主题的论文“有一种，在我所能做的众多事情中，我能够为战争事业贡献什么的感觉”。正如在香农生活的其他方面，他在密码学领域最重要的研究为许多领域的关键概念奠定了精密严格的理论基础。在战争期间，香农接触到的日常密码工作看似重要，但它的主要目的是服务于一篇发表于1945年9月1日（即日本签署投降协议的前一天）的机密文件。这篇论文名为《密码学的数学理论——案例20878》，包含了香农后来研究的重要思想基础，也首次提出了密码学中的一个关键概念——“一次性密码”。</p>
+<p>一次性密码系统是贝尔实验室声码器的概念基础，虽然这一声码器最早设计于1882年。它要求消息在编码前已有解码钥匙，解码钥匙需加密，它是一组与消息大小一致的完全随机的符号，且密匙只能使用一次。在跨越了大半个世纪之后，克劳德·香农证明在这些严格（通常是不切实际的）条件下所构建的代码是无法破解的，这至少在理论上证明了，密码系统中的完全保密是可能的。敌方即便拥有无限计算的能力，也永远无法破解建立在此基础上的代码。</p>
+<p>香农在密码学方面的研究被情报机构秘密发表，发表的载体也是秘密的，甚至连作者本人都不会被告知自己的著作得以收录。关于这群人，香农可能会这么说：“你可以说他们不是一群健谈的人，但他们是世界上最神秘的人。打个比方，你甚至很难找出谁是这个国家最重要的密码学专家。”5年内，这篇论文不能被更广泛的读者接触到。最终，这项工作真正的重要性不在于创造无法破解的密码，而在于那些尚不成熟的见解如何重新体现在香农革命性的信息论的核心之中：“它是一系列伟大的想法，循环反复地产生价值。”</p>
+<p>[1] 1平方英尺=0.092903平方米。——编者注</p>
+<h6 id="阅读日期-2025年11月20日-2025年11月20日-共-1-天">阅读日期：
+2025年11月20日-2025年11月20日 共： 1 天</h6>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

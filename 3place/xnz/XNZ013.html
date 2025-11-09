@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="hbaolong@vip.qq.com" />
+  <title>香农传:第12章 与图灵的友谊</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">香农传:第12章 与图灵的友谊</h1>
+<p class="author">hbaolong@vip.qq.com</p>
+</header>
+<center>
+<a href="/3place/xnz">返回首页</a> <a
+href="/3place/xnz/mingju.html">本书名句</a> <a
+href="/3place/xnz/memo.html">本书注解</a> <a
+href="/3place/xnz/index_rich.html">丰富目录</a> <a
+href="/3place/xnz/index_readcal.html">同读日历</a> <a
+href="/3place/xnz/index_timeline.html">时间线</a> <a
+href="/3place/xnz/index_books.html">引用书籍</a> <a
+href="/3place/xnz/index_words.html">使用字频</a>
+<div id="wx_pic" style="margin:0 auto;display:none;">
+<img src='/img/logo.png'/>
+</div>
+</center>
+<h4 id="第12章-与图灵的友谊">第12章 与图灵的友谊</h4>
+<p>香农在密码学方面的研究还有另一层深远的意义，那就是将自己与数字时代的另一位巨人——图灵联系了起来。1942年，图灵跟随英国政府发起的军事密码项目访问团来到美国。那时的他已经声名远播。在上小学时，他就在数学方面展现出了惊人的天赋，远远超过了同龄人；16岁的他已经掌握了爱因斯坦的理论；23岁时，他就被推选为剑桥大学国王学院的一员。1936年，他设计出图灵机，这一里程碑式的思想实验为现代电脑的发明打下了理论基础。</p>
+<p>除此之外，图灵还开始破解密码。他在这方面取得的成就使他成为世界上有重大历史意义的人物之一。是密码学将他带到了美国，认识了美国的同行，见到了那里的军事领袖，检测了美国机械的质量和安全性。他的工作从常规项目扩展到了SIGSALY上。如果英国领导人在接收端接听信息，那么图灵博士将不得不保证信息不会被破解。</p>
+<p>项目的保密性，图灵和香农两人的声望，加上战时的气氛，使两人的会面带有一丝神秘的气氛。但实际上，他们的交往从不遮遮掩掩。图灵的传记中这样记载，安德鲁·霍奇斯、香农和图灵每天在众目睽睽下见面，在贝尔实验室简朴的自助餐厅一起喝茶。图灵有些羡慕香农，因为他的事业具有多面性：“他（图灵）在这里见到的这个人可以称得上是学术、哲学工程师。倘若英国的系统允许，艾伦可能想成为像他那样的人。”对于香农来说，图灵高质量的想法令他赞叹不已。“我认为图灵有伟大的思想，他非常了不起。”香农后来这样说。</p>
+<p>他们的谈话没有被记录下来，但是我们都知道他们所回避的话题。“我们一点儿也没谈到密码学……我认为在这方面我们一个字都没有交流过。”香农解释说。当被问及是否知道图灵的工作内容时，香农说自己只了解了大概：“肯定不知道具体细节。我知道或者能够猜测到他在做哪些工作……但我不了解恩尼格玛密码机……我不知道它是什么，也不知道他是一个重要角色。”采访者进一步追问，香农对密码学满怀激情、经验丰富，他为什么没有进一步探索图灵机。香农的回答言简意赅：“在战争时期人们不会问很多问题。”</p>
+<p>香农和图灵声称互不关注对方的工作，这在某种程度上像两个密码破译员在机智地掩盖有关他们关系的痕迹。但这又完全合理，因为这两个人都不想让对方感到不适或被迫妥协。他们两个人的工作都是绝密的，接触到的信息即使不是只能用眼睛看的，也是仅限少数人知道的。所以他们在工作之余，一起喝茶或吃点心时，只聊工作之外的事也就不足为奇了。</p>
+<p>另一个原因是，美国是否愿意与英国分享信息还是一个未知数。即使像图灵这样有地位和声望的人，想要获得美国的入境许可，也并不容易。令人意想不到的是，图灵到达美国后被官方扣留了：“我在11月12日星期五那天到达纽约，但被移民局扣留在了埃利斯岛上，因为我没有带相关的命令或证件来证明我与英国外交部的关系，他们非常傲慢无礼。”</p>
+<p>在这之前的几个月里，图灵申请加入贝尔实验室，被美国上将雷克斯·明克勒拒绝了。尽管最终他的申请得到通过，但这只是一个开始，图灵开始了与贝尔实验室和美国安全机构的持久战。图灵写道：</p>
+<p>我仅仅想打个电话向贝尔实验室的波特报告一些情况，但这显然完全行不通……因为之前签的同意书规定，除了还原项目，我不能查看任何事物，但我错误地将语义理解为我在那里只能通过语音的方式接触保密文件……（我）立刻抗议这项禁止英国人参观语音加扰项目的规定。之后，黑斯廷斯上尉介入调查，并向科尔顿上将施加压力。从目前来看，情况不错。</p>
+<p>与美方起冲突的不止图灵一个人，令人沮丧的原因也不局限于移民偏见和清除安全隐患。尽管签署《租借法案》（Lend-Lease
+Act）之后，英美盟军在战争中联合抗敌，但是在密码问题上他们时有分歧。</p>
+<p>由于竞争系统、方式和个性不同，英美两国长久以来都对对方持怀疑态度。他们耗尽耐心，且自我膨胀。在某种程度上，英美之间的冲突是因为两国的战争机制有本质差别，以及他们之间的“不完全联盟”。在扩大军事用品的工业生产方面，无论是在规模上还是速度上，英国都赶不上美国。图灵直观地感受到了这些，在某种程度上，与图灵对美国人脑力的敬佩有限相反的是，图灵对美国人体力的尊重。例如，在参观过海军部队之后，他这样写道：“当谈论到与密码相关的事情时，美国人的话很不可信，对此我现在深信不疑。但是我认为，他们的密码装置值得好好利用。”</p>
+<p>这种不信任是相互的。比如，当英国人对密码破解取得成就时，他们对美国人也是保密的。图灵也不清楚哪些信息可以对美国人讲，哪些不能说。由于图灵已经给美国人留下了傲慢无礼、令人不快的印象，所以在任务不明朗、不确定的情况下，他不愿意逢迎美国人。况且，他也不是天生的外交官，所以他不擅长处理这类问题。</p>
+<p>————</p>
+<p>但是，在某种程度上，英美双方的互不信任，以及香农与图灵彼此需要对工作进行保密，反而使他们俩可以畅所欲言。如果两人可以自由地谈论密码问题，那么两人之间的友谊会更加深厚。即使在战争之前，图灵和香农也有着类似的兴趣爱好，两人也都在钻研同类型的前沿问题。据香农回忆，在一起喝茶聊天时，“我们会谈一些数学方面的话题”。值得注意的是，两人已经有了思维机器这类想法，用香农的话来说就是，“创造能思考的电脑，以及可以用电脑做些什么，等等”。他还说：</p>
+<p>我和图灵面临相同的困扰，因此，常常会谈论这些问题。他那时候已经开始写那篇很有名的关于图灵机的论文了。那时还不叫图灵机，这是后来人们对它的叫法。我们常常花费很长时间讨论一些概念，探讨人类的大脑中有什么。比如，大脑是如何构建的，是如何工作的，计算机能做什么，人类能不能用电脑完成大脑的工作，等等。我还跟他说过几次我对信息论的看法，他很感兴趣。</p>
+<p>早期两人深陷于电脑计算的前景中，两人无比着迷于弈棋机的创造。1977年，香农接受了弗赖伊德里克–威廉·哈格迈尔的采访，在采访中他说：</p>
+<p>1942年……可以说，计算机刚刚出现。宾夕法尼亚大学有几台电子数值积分计算机（ENIAC），那是最早的计算机……现在看来，它们运算速度慢、外形笨重、体积有几个房间那么大，计算功能和现在10美元一个的小型计算器差不多。但在那时我们知道，如果能使计算机的价格更低廉、运作的时间更长，比如连续工作10分钟以上，计算机就有无限潜力。这令我们激动不已。</p>
+<p>那时我们拥有梦想，图灵和我曾探讨用计算机完全模拟人脑的可能性。我们想知道能否真正使计算机模拟人脑，甚至比人脑更先进。那时候可能看起来更容易实现，我们都认为在不远的将来，10年或15年后它就能实现。但事实上，已经过去30年了，它也没有实现。</p>
+<p>香农骨子里是一个喜欢安静的人。他很少参加科学界的活动，密友就更稀少了。认识他的人，如许多闻名世界的科学家、数学家和思想家，都认为香农时常像一个局外人，即使在和杰出人士共同出席会议的时候，他也不会主动交谈。他从不追随名人参会，只应邀参加过少数会议。还有除电话外，他不喜欢其他任何联络方式。所有这些都是为了说明，除了他和图灵交谈的内容本身，他和图灵之间热切的关系同样意义非凡。在贝尔实验室的短短几个月里，香农能赢得图灵的信任和友情，这充分说明两人对对方都评价颇高。用香农的话来说，图灵是“一个让人印象十分深刻的人”。图灵还曾邀请香农到家里做客，这对喜欢独处的两个人来说都是一件稀罕事。</p>
+<p>回到英国之后，图灵和香农在“二战”后见了最后一次面。1950年，香农去伦敦参加会议，并抽时间去拜访了图灵，还参观了他的实验室。香农回忆道：</p>
+<p>图灵的实验室位于曼彻斯特大学，在去实验室的路上……他想制作一台用来下象棋的计算机……我对此同样十分感兴趣，那时他已经在编程了。他的实验室里有一间办公室，楼下放着一台计算机，它就是现代计算机的雏形。</p>
+<p>两人谈论了图灵在编程上所做的工作，尽管10年过去了，香农依然记得图灵的一项发明：</p>
+<p>我问他在干什么，他说在研究如何更好地得到电脑的反馈，以便了解电脑内部正在发生什么。那时他已经发明了这个神奇的指令。那些天，他们一直在研究各种指令，想从中找到最合适的一个。</p>
+<p>我问他，这个神奇的指令是什么？他说，这个指令就是给“警笛”（hooter）添加一个脉冲，给它安一个脉搏。我来解释一下，“hooter”在英国指的是警笛，添加脉冲意味着掌握了它的脉搏。</p>
+<p>这个疯狂的指令好在哪里？可以这么说，如果将指令添加到某回路中，那么执行指令时会产生脉冲，你能听到的频率就等同于指令在回路中流转的时间。依此类推，你可以将指令放到更大的回路中。你能听到这一切，全是“嘘嘘嘘嘘嘘嘘”（boo
+boo boo boo boo
+boo）的声音。按照图灵的说法，你很快能听懂这些声音，然后能知道回路中是否发生拖延或其他问题，而且能了解其运行情况，这些在以前都是无从知晓的。</p>
+<p>总的来说，这是一次愉快的拜访，是信息时代的两个开创者在战后的重聚，这也是他们最后一次见面。4年后，图灵被指控犯有“严重猥亵罪”（当时人们认为同性恋是一种犯罪），并死于氰化物中毒。他的死亡被定性为自杀，尽管至今这仍存在争议。</p>
+<h6 id="阅读日期-2025年11月21日-2025年11月21日-共-1-天">阅读日期：
+2025年11月21日-2025年11月21日 共： 1 天</h6>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="hbaolong@vip.qq.com" />
+  <title>牛顿传:</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">牛顿传:</h1>
+<p class="author">hbaolong@vip.qq.com</p>
+</header>
+<center>
+<a href="/3place/ndz">返回首页</a> <a
+href="/3place/ndz/mingju.html">本书名句</a> <a
+href="/3place/ndz/memo.html">本书注解</a> <a
+href="/3place/ndz/index_rich.html">丰富目录</a> <a
+href="/3place/ndz/index_readcal.html">同读日历</a> <a
+href="/3place/ndz/index_timeline.html">时间线</a> <a
+href="/3place/ndz/index_books.html">引用书籍</a> <a
+href="/3place/ndz/index_words.html">使用字频</a>
+<div id="wx_pic" style="margin:0 auto;display:none;">
+<img src='/img/logo.png'/>
+</div>
+</center>
+<p>序言</p>
+<p>真相出现</p>
+<p>“虚假的事物可以被随意想象，唯有真实的事物才能被理解。”牛顿，这位伟大的智者，如今可以和另一个谎称找到了“点金石”的牛顿并立共存。虽然共存后的形象略为逊色，但他仍然是受人景仰的巨人。“我们在解释一个奇迹的时候，不必害怕奇迹失踪。”</p>
+<p>这个奇异的精灵，为撒旦所惑，他自以为用超凡的智慧，必可窃得上帝及这大自然的全部秘密。他是哥白尼和浮士德这二者的结合。</p>
+<p>——凯恩斯[1]</p>
+<p>一份在历史上最具影响力的人物名单——“100位伟人”[2]显示，艾萨克·牛顿排名第二，仅居于穆罕默德之后，而位于耶稣基督之前。牛顿之所以获得这项殊荣，是因为他对科学无可比拟的贡献。他创建的许多原理帮助我们塑造了现代世界的模型，因此他受到了世人的无限景仰。</p>
+<p>然而，牛顿并非如历史一向记述的那样是个人格无瑕的人，他的形象受到了他的“信徒”以及一代代崇拜他的传记学者的保护。他们为他拟造了一些不太准确甚至是虚构的故事，其程度比历史上任何科学家都有过之而无不及。到20世纪30年代，真正的牛顿才从迷雾中逐渐显现，被置于光亮之下接受分析与批评。自那时起，令人不可思议的谎言才被一一戳破，一些原本期望可长久流传的神话逐渐被揭穿：牛顿不再是超凡脱俗的全能者，也不再是未受污染的天才，更不是人格纯洁的科学真理的探究者。</p>
+<p>为圣人立传</p>
+<p>如书写圣人传一般记载牛顿事迹的行为，从牛顿去世那年就开始了。第一位替牛顿写传记的是英国人威廉·斯蒂克利，他是一位德鲁伊教派[3]学者兼希腊神话学家，他于18世纪20年代写成了《艾萨克·牛顿爵士生平怀思录》，这是对他英雄的一生所做的虔诚叙述。牛顿去世前的最后10年里，斯蒂克利与他过从甚密，这本《艾萨克·牛顿爵士生平怀思录》是以斯蒂克利切身体验的第一手资料为基础写成的，[4]故而是十分重要的一部牛顿传记。但是，他和许多其后为牛顿立传的人一样，因过度崇拜牛顿而有失公允，他们看到的牛顿是一个近乎神祇、完美无缺，且几乎不朽的圣人。</p>
+<p>另一本重要著作，是布鲁斯特爵士写就的于1855年出版的《牛顿爵士的生平、著作及发现之怀思》。这是继斯蒂克利作品之后最有价值的一部牛顿传记，它对世人了解牛顿有很大的贡献，只可惜作者也缺乏客观性，使该书大为失色。布鲁斯特和那些崇拜者一样，对牛顿十分虔敬，凡是遇到与心目中牛顿的形象不相符的证据，他都故意漠视，而坚决强调牛顿的成就及其为后世子孙所做的贡献，且仅在这方面竭力着墨，完全不质疑这位伟大的科学家在他漫长的一生中，表现出来的许多复杂、矛盾的行为。</p>
+<p>牛顿的成就毫无疑问是伟大的，他确实是位了不起的天才。就如他那最负盛名的著作《自然哲学的数学原理》（以下简称《原理》）一样——尽管描述的是极度繁复和琐碎的宇宙作用力，其所依据的却是简明易懂的事实。而牛顿那曲折难解的性格，也比正统的科学史家描述的更复杂。</p>
+<p>就本质而言，牛顿是一个偏于隐闭的人，他情愿退缩到一个角落，与整个世界隔离。他曾在很长的一段时期里不接触外界的日常事务，工作的场所要么是大学的个人研究室，要么是学校旁边自己的住所兼实验室。他都是单独做研究和实验的。牛顿从小就不喜欢做一个墨守成规的人——在各方面都是如此。他逃避家中世代相传的淳朴的乡村生活；在大学里，他自行设下独居的藩篱，拒绝接受教会颁定的守则，并订阅阿里乌教派（此教派的教义一贯反对三位一体论，被正统基督教视为异端）的刊物。在当时的宗教社会里，如果牛顿的这种信仰为外人所知，那么他在达成一生的丰功伟绩之前，可能就已被彻底毁灭了。</p>
+<p>另外，最严重的一点在于，他还是个为学术界所不容的炼金术士。</p>
+<p>炼金之秘</p>
+<p>当传记学家审视牛顿的生平，为他撰写传记的时候，牛顿已经不在人世，因此他们没有必要替他隐瞒宗教倾向。可是，使那些早期传记学家如鲠在喉的，是牛顿图书室中的浩瀚藏书，以及他遗留下来的大量文稿与札记，其中有许多令人难以置信的资料。这些都清楚地显示出，尽管他是历史上最受尊敬的一位科学家、一位创立科学方法的楷模，但他一生花费在炼金术上的精力，远远超过探究纯科学的心力。这些资料也确切证实了，牛顿的一生中都没有几个知己发觉他的秘密，大家不知道他竟然用了那么多时间去研究《圣经》中的年代和预言，寻觅自然界中的魔术。更有甚者，他竟试图探索炼金术的秘密——灵中之灵。</p>
+<p>早期为牛顿立传的人觉得迥然相反的两种性格不可能共存于一体，于是，在发现任何会玷污牛顿人格、令他们感到困扰的资料时，他们不得不加以掩饰，将其当作某种特殊怪癖或是一时的神经错乱。布鲁斯特以“不过是笨人与庸人的消遣”来形容人们广泛搜集的牛顿与炼金术有关的文献。[5]</p>
+<p>到1936年，牛顿的真实面貌才渐渐显露出来：他是个时常精神紧张、焦虑不安、怪异冲动的人。那一年，有一批关于牛顿的文件在苏富比拍卖行被拍卖，那是之前大约50年，由剑桥大学接受的捐赠，它们被认为是“不具科学价值”的收藏品。彼时，它们被杰出的经济学大师兼研究牛顿的学者凯恩斯在拍卖会中购得（10年之后，凯恩斯在弥留之际，又将其遗赠给剑桥大学国王学院）。</p>
+<p>凯恩斯在研读了关于牛顿的这批秘密文件（被那些写圣人传的牛顿立传者忽略的手稿、札记、论文等）之后，于1942年在英国皇家学会发表演说，将历史上最著名和最崇高的科学家，描绘成一个完全不同于以往，并且极受争议的形象。</p>
+<p>从18世纪以来，牛顿一向被认为是第一个也是最伟大的近代科学家，是一个理性主义者，他教导我们做出冷静的思考和无偏颇的推理。可是我现在要说，我不如此认为，我不认为任何人在看完那一箱文件之后，还会把他看作那样一位道德高尚的伟人。那一箱文件是牛顿于1696年离开剑桥大学时，特意收拾起来带走的，虽然部分已经散失，但最后还留下一些辗转到我们手上。牛顿并非理性时代的第一人，但他却是最后一个魔术师、最后一个巴比伦人和苏美尔人。他是最后一个伟大的智者，他和那些近1万年前就开始构建我们知识遗产的人一样，用相同的目光在可见、可知的世界中搜索。牛顿生于1642年圣诞节，他是个遗腹子，是使马基人[6]心悦诚服的最后一个神童。[7]</p>
+<p>很显然，凯恩斯被他发现的资料迷惑了。不过，对我们大家而言，这是件幸运的事，因为这是个已然可以接受这类发现的时代。凯恩斯的发现引出了关于牛顿的两个问题：第一，如果这位近代力学理论的创建者，曾花费大量时间从事炼金术的试验，那么是否还隐藏着另外一些鲜为人知的东西呢？第二，牛顿研究炼金术的过程，是否已经影响了他在纯科学上的成就？</p>
+<p>第一个问题比较容易回答。牛顿难以与人相处是早已闻名的：孩童时期的家庭变故使他在情感上受到了无法弥补的伤害，他在成年后与许多同辈科学家发生争执也是广为人知的事。在众人眼中，他是个极度自负的人。但是，在凯恩斯公开讨论自己的发现之前，传记学家们几乎从来不提这方面的史实。1936年是一个分界点，在那之前，大多数的牛顿传记都是依赖斯蒂克利的见识的，只有少数传记学家勇于质疑旧权威，向更深处挖掘。</p>
+<p>用陆续被挖掘出来的材料为牛顿画像，画出来的形象不一定完美，但真实的人生本来便如此，并不都是完美的。况且，这位重新被人挖掘出来的、形象清晰的牛顿，才是真实的牛顿。我们应该骄傲地接受这样的一个人，接受他独特的才华与天分，也接受他怪异的行径与失败。与牛顿同时代的雷恩爵士[8]说过：“我们在解释一个奇迹的时候，不必害怕奇迹失踪。”[9]</p>
+<p>眼前的图片渐渐拼凑成形，我们看到的是一个追求知识的天才，他想要了解他所碰到的一切事物：对于生活中迷惑他的每一件事，无论好坏，他都会产生一股冲劲儿去探究出道理来。这种极度的渴求致使他自我伤害、精神崩溃，达到近乎疯狂的状态。如此不分青红皂白地追逐新知，或许是由于他涉猎占星术之类的巫术和迷信。不过，从无边无际、众说纷纭的探讨和摸索里，他也改变了我们生存的这个世界。</p>
+<p>凯恩斯文件引出的第二个问题就难以探究了，即牛顿作为炼金术士的修习功夫，对他的科学研究是否有所裨益。这是凯恩斯主观的认定，而这个疑问可能永远也无法被完全解开。</p>
+<p>牛顿的两面性</p>
+<p>事实上，并非人们对这个问题不予认真研究，而是由于在牛顿留下的文件中，有关炼金术的资料竟超过了100万字，况且，其中还有许多是他用自创的符号暗语、拉丁文和手写的小字记载下来的，解读这些资料本身就已经十分困难了。有些学者花费了60年的光阴从事这项工作，如今仍在进行中。已故的美国学者多布斯译解了大量此类资料，并且进行了相当详细的分析。她将牛顿的炼金试验汇集起来，写成两本学术著作：《牛顿炼金术的基础》《天才的两张面孔：炼金术在牛顿思想中所扮演的角色》。[10]另外有一些人也开始分析牛顿所搜集的许多与《圣经》预言相关的著作，并探究牛顿对从占星术到数字算命等各种迷信所持的想法。[11]但是，对阅读这些资料的一般人而言，17世纪炼金术士的心路历程确实有令人难以理解之处，他们的精神状态有许多层次，这对20世纪后期乃至以后的人而言未免陌生，设身处地去体会是极为困难的事。</p>
+<p>在随后的篇章中，我将会讨论炼金术对牛顿的科学研究产生的正反两方面的影响。然而，就我个人而言，结论可不是含糊的。基于手边的证据，我认为牛顿从炼金术的研究中，获得了关键性的启示，从而发现了足以改变世界的科学成就。因此，牛顿在炼金术上的修习，必然与他科学的分析思维有所关联。</p>
+<p>牛顿说过：“虚假的事物可以被随意想象，唯有真实的事物才能被理解。”[12]想象与认识之间有一片灰色地带，它有时成为传记学家自然的藏身之所。然而，随着神话逐渐被破解，被掩盖已久的真相陆续出现，这片灰色地带就变得越来越狭小。牛顿，这位伟大的智者、“现代科学之父”及先驱，如今可以和另一个神秘的、情绪性的、妄想的，甚至谎称自己找到了“点金石”的牛顿并立共存，虽然这让他的形象略为逊色，但他仍然是受人景仰的巨人。[13]</p>
+<p>[1] 此文收录于Maynard Keynes, “Newton the Man”, in Royal Society.
+Newton Tercentenary Celebrations (Cambridge: Cambridge University Press,
+1947)，p.27–34。</p>
+<p>[2] Michael Hart, The 100 (London: Simon ＆ Schuster, 1993).</p>
+<p>[3]
+德鲁伊教派，指高卢、不列颠和爱尔兰的古代凯尔特人的宗教教团。当代研究原始宗教的学者把德鲁伊教派划分为欧亚大陆之术士哲人类别。——译者注</p>
+<p>[4] 斯蒂克利的著作一直到1936年才完全出版，ed. A. Hastings White
+(London：Taylor ＆ Francis)。它的原稿现由英国皇家学会保管。</p>
+<p>[5] David Brewster, Memoirs of The Life, Writings, and Discoveries of
+Sir Isaac Newton, Vol.2 (Edinburgh, 1855)．p. 371–6.</p>
+<p>[6] 马基人为古波斯的神职人士。——译者注</p>
+<p>[7] Keynes, “Newton the Man”, p. 27–34.</p>
+<p>[8]
+雷恩爵士，英国著名建筑师、几何学家。设计包括圣保罗大教堂在内的53座教堂。——译者注</p>
+<p>[9] Christopher Wren, Parentalia (London, 1700), p. 201.</p>
+<p>[10]
+《牛顿炼金术的基础》（1975），《天才的两张面孔：炼金术在牛顿思想中所扮演的角色》（1991）。</p>
+<p>[11] 特别参考David Castillejo，The Expanding Force in Newton’s
+Cosmos: “As Shown in his Unpublished Papers” (Madrid：Ediciones de Artey
+Bibliofilia，1981) and T. G. Cowling，Isaac Newton and Astrology：The
+Eighteenth Selig Brodetsky Memorial Lecture (Leeds：Leeds University
+Press，1977)。</p>
+<p>[12] Isaac Newton. Sir Isaac Newton’s Theological Manuscripts,
+ed. HMcLachlan(Liverpool: Liverpool University Press, 1950), p. 17.</p>
+<p>[13]
+Alchemy一词，字典上的意思有“炼金术”，也有“炼丹术”，两者并立。我原翻作“炼丹术”，乃因再三斟酌，觉得“炼金”所表现的意义与“冶金”相近，在中文看来没有什么“邪门”的味道，而alchemy则是西方的邪术，通常不被社会接受，这也是牛顿一生极力隐瞒的事。虽然西方操此术者主要是冀求黄金（因此才有人称之为炼金），但亦包含求长生不老药的法术。此法术来自东方，以修炼膜拜为主，能够炼成什么全看修行者的意愿。西欧人从阿拉伯人处学得此术后，改成以致富为目的，以炼成黄金为主，而由于亚里士多德有气、火、水、土四元素之说，也相信物质可以转变，故修炼的人之中有很多是哲学家。可是依照这本书所述，他们要找的“点金石”，最上品者是红色的颗粒，那就和中国的仙丹类同。东方重修行，用细火慢慢炼；西方重功利，以猛火急攻。从这本书所提及牛顿修习的密术看来，应是指炼金术，因此全书统一采用“炼金术”代替“炼丹术”。我以为无妨，但还是在此提醒读者“炼丹”与“炼金”两者之历史缘由，以及一般人观念上的混淆。——译者注</p>
+<h6 id="阅读日期-2025年11月09日-2025年11月09日-共-1-天">阅读日期：
+2025年11月09日-2025年11月09日 共： 1 天</h6>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

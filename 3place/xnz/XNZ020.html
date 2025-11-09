@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="hbaolong@vip.qq.com" />
+  <title>香农传:第19章 维纳的控制论</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">香农传:第19章 维纳的控制论</h1>
+<p class="author">hbaolong@vip.qq.com</p>
+</header>
+<center>
+<a href="/3place/xnz">返回首页</a> <a
+href="/3place/xnz/mingju.html">本书名句</a> <a
+href="/3place/xnz/memo.html">本书注解</a> <a
+href="/3place/xnz/index_rich.html">丰富目录</a> <a
+href="/3place/xnz/index_readcal.html">同读日历</a> <a
+href="/3place/xnz/index_timeline.html">时间线</a> <a
+href="/3place/xnz/index_books.html">引用书籍</a> <a
+href="/3place/xnz/index_words.html">使用字频</a>
+<div id="wx_pic" style="margin:0 auto;display:none;">
+<img src='/img/logo.png'/>
+</div>
+</center>
+<h4 id="第19章-维纳的控制论">第19章 维纳的控制论</h4>
+<p>一名作家认为，诺伯特·维纳是“美国的约翰·冯·诺依曼”，这种夸张的说法并不为过。</p>
+<p>诺伯特·维纳出生于美国密苏里州的哥伦比亚，父母是犹太人，他的父亲一心一意地致力于将年幼的儿子塑造为一名天才。里奥·维纳拥有一家独特的个人图书馆，他还拥有独特的想法，在家中培养小诺伯特直至9岁。“我有充分的自由沉浸在父亲种类繁多、涉猎广泛的书籍之中。”诺伯特写道，“在某时期，我父亲对科学的兴趣涵盖了大部分能够想象到的研究对象。”</p>
+<p>但是里奥的训练也是严厉的，甚至是残酷的，他剥夺了儿子正常的童年生活。在他的自传《昔日神童：我的童年与青年时代》里的一篇文章中，维纳回忆了他父亲的指示：</p>
+<p>他会以一种简单的、对话式的口吻开始讨论，直到我犯第一个数学错误。然后那个温柔而又慈爱的父亲就会变成一名铁血复仇者……父亲大怒，我则泣不成声，我的母亲会尽己所能地保护我，但是她总是抗不过父亲。</p>
+<p>有一次，医生要求小诺伯特停止阅读，因为他的视力已经再也不能承受额外的压力了。而里奥却决定，他的儿子哪怕不能阅读，也可以通过背诵的方式继续。即使医生的担心也不能阻止小诺伯特下定了决心的父亲，里奥自己会将内容讲授出来，而小诺伯特则需要记住每个单词和每种思想。</p>
+<p>从纯粹的专业角度来说，高压式的教育带来了回报。维纳11岁的时候已经读完了高中课程。3年之后，在他14岁的时候，维纳获得了塔夫茨大学的数学学位。从那之后，他在哈佛大学学习动物学，又在康纳尔大学学习哲学，最后回到哈佛大学拿到了数学逻辑学博士学位。那一年，他年仅17岁。他进入了数学的精英阶层，而他父亲期望儿子能实现的那种生活，也由此开始了。</p>
+<p>尽管他在学术上获得了成功，但童年时的阴影仍清晰可见。作为一名年纪稍大一些的孩子，他身边的人比他年纪大得多，因而他遭受了冷酷无情的嘲笑与愚弄，这导致了伴随他终身的强烈的尴尬。他的样貌也使他容易成为被嘲笑的对象：他留着大胡子，戴眼镜，近视眼，皮肤红润，走路像鸭子一样，有着典型的刻板迂腐的学者形象。保罗·萨缪尔森沉思道：“从任何角度来看，诺伯特·维纳都很另类。”汉斯·弗赖登塔尔回忆道：</p>
+<p>从样貌和行为上来看，诺伯特·维纳都是一个怪诞的人，矮胖，而且近视，非常极端地杂糅了上述以及许多其他特质。他说话的语气充满了炫耀和蛮横。他是一名糟糕的听众……他会说很多语言，但哪一种都不好理解。他是一位出了名的糟糕讲师。</p>
+<p>关于他的逸事遍布其他数学家的回忆之中，而且所有这些几乎都是人们背着维纳所写的第一手资料。有一则故事是这样的，维纳自以为到了家，笨拙地摸索出钥匙，却发现打不开门。他转向街道上玩耍的孩子们问道：“你们能告诉我维纳家住在哪里吗？”一个小女孩回答道：“爸爸，跟我走。妈妈派我来告诉你我们的新家在哪里。”</p>
+<p>————</p>
+<p>他对这一领域的贡献是广泛而深入的：量子力学、布朗运动、控制论、随机过程、谐波分析。他涉猎了几乎所有数学世界的领域。1948年，他的简历上已经布满了闪闪发光的奖项和荣誉。维纳的合作伙伴与联系人名单也同样引人注目：范内瓦·布什、G.
+H.哈代、伯特兰·罗素、保罗·莱维、库尔特·哥德尔……和克劳德·香农。</p>
+<p>在麻省理工学院，香农选修了维纳的傅立叶分析课程。半个世纪之后，回想起他的研究生阶段，香农回忆维纳是“当我还是年轻学生时的偶像”。维纳在他1956年的回忆录中写道：香农似乎并没有对维纳表达过类似的印象，“在香农就读（于麻省理工学院）时期，他和我的接触相对较少”。尽管如此，他又补充道：“从那以后，我们两个在不同的方向上平行发展，我们之间的科学联系大大拓宽、深化了。”</p>
+<p>维纳是年长香农22岁的前辈，这也揭示了香农思想的先进程度以及他的研究的重要性。早在1945年，维纳就曾紧张于他们之中的哪一位会在信息论的竞赛中赢得声誉。他们的正式竞争始于1946年。</p>
+<p>随着故事的发展，维纳对信息论所做的贡献的纲要手稿差点儿被人们遗忘了。维纳将这份手稿委托给一名研究生：沃尔特·皮茨，他将它放在由纽约中央车站到波士顿的一件行李之中。而皮茨忘了取回行李，当意识到这个错误后，他请求两位朋友去取这件行李。但他们忽视或者忘记了这个请求。直到5个月之后，手稿才被找到。它被贴上了“无人认领财产”的标签，被遗忘在寄放处。</p>
+<p>维纳怒火中烧，这也是能够被理解的。他在给皮茨的信中写道：“发生了这样的事情，你的职业发展将与我再无关系。”他向一名行政人员抱怨这是“男孩子完全不负责任的行为”；他也向另一名教授说道：丢失了包裹，使他“错失了在某些重要工作上的优先机会”。他愤怒地说：“我的一名竞争者，贝尔美国电话电报公司的香农在我之前就发表了论文。”维纳的偏执并非没有由来，那个时候，香农已经在1947年哈佛大学和哥伦比亚大学的研讨会上汇报了他的研究细节。1947年4月，维纳和香农站在了同一个舞台上，这促使维纳写信给同事说：“这个贝尔人完全接受了我关于统计和通信工程的论文。”</p>
+<p>————</p>
+<p>维纳的贡献被记录在内容涉猎广泛的《控制论》一书中，它与香农的论文同年发表。如果说香农1948年的研究相对来说并未广为人知（至少起初是这样的），那么维纳控制论的概念则从一发表便立刻引起了公众强烈的兴趣。“控制论”这个词是他从希腊语中的“舵手”一词中衍生出来的，它包含了“包括机器和动物在内的全部领域的控制和通信理论”。作为一本畅销书，这本书成功地俘获了非技术类读者。对这本书的溢美之词滔滔不绝，几乎达到了大部分作者终身追求的程度。约翰·普拉特在为《纽约时报》写的《一年书单，充实一生》中评论道：“《控制论》是20世纪最具影响力的书之一，被誉为‘开创性之作’，其重要性堪比伽利略、马尔萨斯、卢梭和穆勒的作品。”格雷戈里·贝特森是维纳最热心的支持者之一，他称控制论为“人类在过去的2000年里智慧之树结出的最大硕果”。</p>
+<p>维纳找到了一个十分令他满意的词语，称控制论是这一时代的“万用理论”。没有什么比维纳和香农对待宣传的态度而更令两者显得不同了。“从某种意义上讲，维纳做了很多努力推广控制论这一模糊的概念，它吸引了世界范围公众的关注，”斯坦福大学的托马斯·凯莱斯如是说，“但香农完全不是这样的个性。维纳喜欢向大众宣传，而香农一点儿也不在意。”</p>
+<p>《控制论》的成功在数学家的小圈子中引起了一场优先权的辩论，他们想弄明白维纳或者香农在信息论上谁能居功。这也引起了一场争论，即维纳是否知道信息论意味着什么，因为在他的书中关于信息作为统计量的章节只占很小的一部分。</p>
+<p>就成果本身而言，香农1948年的论文承认了维纳的思想，因为后者影响了他对通信的统计特征的观点。而随着对这一领域关注的增多，香农意识到，他在一些重要的方面与维纳并不相同。首先，香农坚持认为含义与信息的传输毫无关联，而这一点非常重要；而在维纳看来，信息是包含含义的。但是，他们的成果中最显著的差异可能在于对编码的分析，以及它能保护信息传输免受噪声干扰的能力，关于这一点，维纳并没有提及。受训练和兴趣的影响，香农作为一名工程师，以工程师的方式攻克了噪声的难题，他的《有噪离散信道的基础理论》正是通过编码使现代信息技术成为可能的起点。这是维纳的研究中所欠缺的关键部分，似乎这也是香农的支持者对维纳以信息论邀功嗤之以鼻的原因。正如后来的信息论专家塞尔吉奥·贝尔杜所说的：“实际上，并没有证据表明维纳掌握了信息论的核心，即编码理论操作意义的概念。”</p>
+<p>————</p>
+<p>然而，20世纪五六十年代，香农和维纳都更谨慎。两人都没有争论对方的观点，虽然他们常常参与同一个会议，在同样的期刊上发表文章，却并没有出现两者公然相互攻击的情况。但是到20世纪80年代，香农似乎得出了维纳并没有完全理解他的研究的结论：“当我与诺伯特交谈的时候，如在50年代，我感到他一直不明白我在说什么。”在另一次采访中，香农则更直率：“我不认为维纳与信息论有什么关系。他对我的观点并没有产生重要的影响，虽然我一度借鉴了他的用语。”鉴于香农一贯缺乏对这类交锋的兴趣，那些声明是很有说服力的。但在大多数情况下，他总是将争取声誉的行为留待他人。</p>
+<p>相比于数学界长期存在争议的一般情况，比如戈特弗里德·莱布尼茨和艾萨克·牛顿关于微积分归属权的斗争，或者昂利·庞加莱和伯特兰·罗素对数学推理本质的争辩，遗憾的是，香农与维纳之间的竞争并没有像传记作家所期待的那样蔚为壮观，但这仍是香农故事中重要的一刻。香农给人的印象是一名无忧无虑的学者，是一名对自身的智力和声誉有着足够的自信，从而可以将他人的意见撇在一边的人。维纳的观点和贡献确实重要，但这不是因为香农担心谁能够或者谁不能够赢得声望。香农更关心的是他们的争论对信息论本身的实质影响，而非宣称信息论“所有权”的机会。说到底，声誉并没有精确性重要。</p>
+<h6 id="阅读日期-2025年11月28日-2025年11月28日-共-1-天">阅读日期：
+2025年11月28日-2025年11月28日 共： 1 天</h6>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>
