@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="hbaolong@vip.qq.com" />
+  <title>无规则游戏:第三部分　喀布尔的规则</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">无规则游戏:第三部分　喀布尔的规则</h1>
+<p class="author">hbaolong@vip.qq.com</p>
+</header>
+<center>
+<a href="/3place/wgzyx">返回首页</a> <a
+href="/3place/wgzyx/mingju.html">本书名句</a> <a
+href="/3place/wgzyx/memo.html">本书注解</a> <a
+href="/3place/wgzyx/index_rich.html">丰富目录</a> <a
+href="/3place/wgzyx/index_readcal.html">同读日历</a> <a
+href="/3place/wgzyx/index_timeline.html">时间线</a> <a
+href="/3place/wgzyx/index_books.html">引用书籍</a> <a
+href="/3place/wgzyx/index_words.html">使用字频</a>
+<div id="wx_pic" style="margin:0 auto;display:none;">
+<img src='/img/logo.png'/>
+</div>
+</center>
+<h4 id="第三部分-喀布尔的规则">第三部分　喀布尔的规则</h4>
+<p>阿卜杜尔·拉赫曼统治阿富汗长达21年。事实证明，这段时期是阿富汗历史的转折点。他确定了这个国家的疆界，更重要的是，他与英国人达成了一项协议，阻止外部势力进入，阿富汗得到了喘息的空间。他开始着手建立一个完全由他直接控制、以喀布尔为权力中心的国家。然后，他创造了另一个阿富汗，与旧有的那个阿富汗形成了对立。埃米尔领导下的阿富汗，是一个由城市、省、区、省长、市长、监察员、官僚、技术人员、行政人员、国家供养的神职人员、庞大的间谍系统和国家军队组成的矩阵。在这张大网下，古老的阿富汗继续生存和呼吸，农民和封建领主、部落首领和乡村教士、游牧部族及部落酋长、自治的乡村和部落游击队组成了一个有机网络。</p>
+<p>新旧世界壁垒分明，并走向分化。首都的精英阶层拥有和外界接触的机会，并因此吸收了不少新鲜玩意：思想、梦想和时尚。不少人甚至雄心大发，既然西方如此强大，阿富汗为何不采纳他们的新技术、新科学和新思想，从而也能享受西方社会的繁荣、富强、舒适和便利呢？</p>
+<p>但另一个阿富汗，那个封建领主、部落首领和保守神职人员的农村世界，抵制了这种拉力。他们没有开眼看过世界，自然不可能接受他者的文化。他们对于英国人及其文化万分警惕，小心翼翼地接受了旧的价值观，享受着独自实践自己方式的奢侈。就这样，阿富汗内部开始了一场拔河角力。一头是喀布尔，另一头则是那个旧的阿富汗。双方都竭尽全力，想把国家拉上自己的轨道，形势时有逆转。阿曼努拉的改革，标志着一个令人震惊的极端转变。然而，巴洽·萨考带来的反击十分强劲，混乱过去，国家满目疮痍。即便秩序恢复，新王朝的工作已被切断，新的统治者也面临巨大的问题：阿富汗社会的矛盾仍然没有解决。西方列强仍然虎视眈眈，统治阶级仍然渴望将这个国家推向现代世界。如果他们重视的事情发生任何改变，那个旧的阿富汗仍有可能揭竿而起。引导国家走过困难重重的坎坷道路，成为接下来半个世纪阿富汗统治者的基本任务，而这促进了喀布尔的统治。</p>
+<h6 id="阅读日期-2025年12月10日-2025年12月10日-共-1-天">阅读日期：
+2025年12月10日-2025年12月10日 共： 1 天</h6>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>
