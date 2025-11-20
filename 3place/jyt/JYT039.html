@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="hbaolong@vip.qq.com" />
+  <title>金与铁:第十章　贪婪与阴谋</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">金与铁:第十章　贪婪与阴谋</h1>
+<p class="author">hbaolong@vip.qq.com</p>
+</header>
+<center>
+<a href="/3place/jyt">返回首页</a> <a
+href="/3place/jyt/mingju.html">本书名句</a> <a
+href="/3place/jyt/memo.html">本书注解</a> <a
+href="/3place/jyt/index_rich.html">丰富目录</a> <a
+href="/3place/jyt/index_readcal.html">同读日历</a> <a
+href="/3place/jyt/index_timeline.html">时间线</a> <a
+href="/3place/jyt/index_books.html">引用书籍</a> <a
+href="/3place/jyt/index_words.html">使用字频</a>
+<div id="wx_pic" style="margin:0 auto;display:none;">
+<img src='/img/logo.png'/>
+</div>
+</center>
+<h4 id="第十章-贪婪与阴谋">第十章　贪婪与阴谋</h4>
+<p>1．关于节俭和贵族生活总体状况的少数优秀描述之一，见约阿西姆·冯·迪索，《过渡中的贵族：一位批判性贵族成员来自城中和庄园宅邸的报告》（斯图加特，1961年），第24页[Joachim
+von Dissow，Adel imÜbergang.Ein kritischer Standesgenosse berichtet aus
+Residenzen und Gutshäusern（Stuttgart，1961），p.24]。</p>
+<p>2．莱昂内尔·特里林，《诚与真》（马萨诸塞州，剑桥，1972年），第37页[Lionel
+Trilling，Sincerity and
+Authenticity（Cambridge，Mass.，1972），p.37]。</p>
+<p>3．马克斯·韦伯，《政治作品集》（慕尼黑，1921年），第14页[Max
+Weber，Gesammelte Politische Schriften（Munich，1921），p.14]。</p>
+<p>4．我在《德国的土地精英》（German Landed
+Elites）进一步展开该主题，收录于大卫·斯普林编，《欧洲的土地精英》（巴尔的摩，约翰·霍普金斯大学出版社）[European
+Landed Elites，ed.by David Spring（Baltimore，Johns Hopkins University
+Press）]。另见汉斯·罗森贝格（Hans Rosenberg）的重要论文，“Die
+Pseudodemokratisierung，”in
+H.-U.Wehler，ed.，Sozialgeschichte，pp.287–308。</p>
+<p>5．Dissow，Adel，p.25.</p>
+<p>6．查尔斯·狄更斯，《我们共同的朋友》（纽约，1960年），第134页[Charles
+Dickens，Our Mutual Friend（New York，1960），p.134]。</p>
+<p>7．Thomas Mann，Buddenbrooks，p.49.</p>
+<p>8．特奥多尔·冯塔纳，《致格奥尔格·弗里德兰德的信》，库尔特·施莱内特编（海德堡，1954年），第2页[Theodor
+Fontane，Briefe an Georg Friedlaender，ed.by Kurt
+Schreinert（Heidelberg，1954），p.2]。</p>
+<p>9．最简单的例子见同上，第305页；以及彭里斯的霍华士勋爵，《人生剧场，1863–1905》（伦敦，1935年），第一卷，第84页[Lord
+Howarth of Penrith，Theatre of
+Life，1863–1905，Vol.I（London，1935），p.84]。</p>
+<p>10．Lucius，Bismarck，pp.21，56；另见A.O.Meyer，Bismarck，pp.485–505passim。</p>
+<p>11．GW，XIV2，85.</p>
+<p>12．Kardorff，Kardorff，p.114.</p>
+<p>13．Lucius，Bismarck，p.78；GW，XV，343–355；格哈德·里特，《普鲁士保守派与俾斯麦的德意志政策，1858–1871》（海德堡，1913年），特别见第361–378页[Gerhard
+Ritter，Die preussischen Konservativen und Bismarcks deutsche
+Politik1858–1871（Heidelberg，1913），esp.pp.361–78]。</p>
+<p>14．Lucius，Bismarck，p.111；另见Heyderhoff，Im Ring各处。</p>
+<p>15．Kardorff，Kardorff，p.112.</p>
+<p>16．Heyderhoff，Im Ring，p22.</p>
+<p>17．Lucius，Bismarck，p.28.</p>
+<p>18．Holstein Papers，II，64–65，228.</p>
+<p>19．Denkwürdigkeiten…Hohenlohe，II，120.</p>
+<p>20．哈茨菲尔特致布莱希罗德，1878年4月15日，BA；另见Lerchenfeld-Koefering透彻的评论，Erinnerungen，pp.229–233。</p>
+<p>21．汉斯·戈德施密特（Hans
+Goldschmidt）的《俾斯麦外交斗争中的合作者》（Mitarbeiter Bismarcks im
+aussenpolitischen
+Kampf）一文提供关于其亲随的大量信息，但忽视不愉快的气氛。《普鲁士年鉴》，1934年第235期，第29–48、125–156页[Preussische
+Jahrbücher，235（1934），29–48and125–56]。</p>
+<p>22．瓦尔特·布斯曼编，《国务秘书赫伯特·冯·俾斯麦伯爵：政治私信集》（哥廷根，1964年），第15页[Walter
+Bussmann，ed.，Staatssekretär Graf Herbert von Bismarck.Aus seiner
+politischen Privatkorrespondenz（Göttingen，1964），p.15]。</p>
+<p>23．Hans Goldschmidt，“Mitarbeiter Bismarcks，”p.30.</p>
+<p>24．Bussmann，Herbert von Bismarck，p.71.</p>
+<p>25．Holstein Papers，II，103.</p>
+<p>26．同上，p.131。</p>
+<p>27．安东·蒙茨伯爵，《大使的所忆所想》，卡尔·弗里德里希·诺瓦克和弗里德里希·蒂姆编（柏林，1932年），第50页[Graf
+Anton Monts，Erinnerungen und Gedanken des Botschafters，ed.by Karl
+Friedrich Nowak and Friedrich Thimme（Berlin，1932），p.50]。</p>
+<p>28．Vierhaus，Spitzemberg，p.17.</p>
+<p>29．Bussmann，Herbert von Bismarck，p.71.</p>
+<p>30．同上，pp.71–73。</p>
+<p>31．最佳相关描述见乔治·肯特，《阿尼姆与俾斯麦》（牛津，1968年）[George
+O.Kent，Arnim and
+Bismarck（Oxford，1968）]；另见，诺曼·里奇，《荷尔斯泰因与阿尼姆事件》，刊于《近代史期刊》，1956年第28期，第35–54页[Norman
+Rich，“Holstein and the Arnim
+Affair，”JMH，28（1956），35–54]；Bussmann，Herbert von
+Bismarck，pp.15–17。利用布莱希罗德和俾斯麦档案，我获得比肯特的描述更多的信息。</p>
+<p>32．GW，XIV2，844.</p>
+<p>33．Kent，Arnim，p.83；Rich，“Holstein，”p.42.</p>
+<p>34．兰茨贝格致布莱希罗德，1874年3月5、11日，BA。</p>
+<p>35．Kent，Arnim，p.97.</p>
+<p>36．布莱希罗德致俾斯麦，1872年7月10日，BA。</p>
+<p>37．Kent，Arnim，p.98；诺曼·里奇，《弗里德里希·冯·荷尔斯泰因：俾斯麦与威廉二世时期的政策与外交》（两卷本，剑桥，1965年），第一卷，第77–78页[Norman
+Rich，Friedrich von Holstein：Politics and Diplomacy in the Era of
+Bismarck and Wilhelm
+II（2vols.，Cambridge，1965），I，77–78]；Bussmann，Herbert von
+Bismarck，pp.73–75；Morsey，Reichsverwaltung，p.122；海因里希·施皮罗，《鲁道夫·林道》（柏林，1909年），第7页[Heinrich
+Spiero，Rudolf
+Lindau（Berlin，1909），p.7]；另见埃伯哈德·瑙约克斯的精彩论文，《鲁道夫·林道与俾斯麦对外新闻政策的新定位，1871–1878》，刊于《历史期刊》，1972年第215期，特别是第299–318页[Eberhard
+Naujoks，“Rudolf Lindau und die Neuorientierung der Auswärtigen
+Pressepolitik
+Bismarcks（1871–1878），”HZ，215（1972），esp.pp.299–318]。</p>
+<p>38．布莱希罗德致俾斯麦，1873年10月13日，GFO：II
+B.10，卷五。魏尔纳·波尔斯（Werner
+Pöls）忽视这封信，未能看清兰茨贝格与布莱希罗德通信的全貌。布莱希罗德在其中扮演的角色比波尔斯想象的更大。见《布莱希罗德与阿尼姆事件》，刊于《历史期刊》，1968年第211期，第65–76页[“Bleichröder
+und die Arnim-Affäre，”HZ，211（1968），65–76]。</p>
+<p>39．兰茨贝格致布莱希罗德，1875年4月12日；未具日期，可能是1875年11月20日；1880年11月19日，BA。</p>
+<p>40．同上，1873年2月3日。</p>
+<p>41．让·布维耶，《罗斯柴尔德家族》（巴黎，1960年），第184–186页[Jean
+Bouvier，Les Rothschilds（Paris，1960），pp.184–86]。</p>
+<p>42．Holstein Papers，III，33.</p>
+<p>43．兰茨贝格致布莱希罗德，1873年10月10日，BA；另见布莱希罗德致俾斯麦，1873年10月13日，GFO：II
+B.10，卷五。</p>
+<p>44．GW，XV，346.</p>
+<p>45．保罗，克纳普隆德编，《柏林大使馆来信：英国驻柏林代表和外相格兰维尔勋爵私人通信选，1871–1874，1880–1885》（华盛顿，1944年），第91页[Paul
+Knaplund，ed.，Letters from the Berlin Embassy：Selections from the
+Private Correspondence of British Representatives at Berlin and Foreign
+Secretary Lord
+Granville，1871–1874，1880–1885（Washington，1944），p.91]。</p>
+<p>46．兰茨贝格致布莱希罗德，1874年1月14日，BA。</p>
+<p>47．Kent，Arnim，p.vi.</p>
+<p>48．兰茨贝格致布莱希罗德，1874年3月4日，BA。</p>
+<p>49．同上，1874年3月5、11日。</p>
+<p>50．布莱希罗德致俾斯麦，1874年3月6日，SA。</p>
+<p>51．兰茨贝格致布莱希罗德，未具日期，可能是1874年3月初，BA。</p>
+<p>52．兰茨贝格致布莱希罗德，1874年4月29日，BA。</p>
+<p>53．同上，1874年4月14日。</p>
+<p>54．兰茨贝格致布莱希罗德，1874年5月12日，原信见BA，副本见俾斯麦档案中的布莱希罗德文件，归于致赫伯特的信，FA。</p>
+<p>55．兰茨贝格致布莱希罗德，1874年5月20日，BA。</p>
+<p>56．Lucius，Bismarck，pp.65–66.</p>
+<p>57．兰茨贝格致布莱希罗德，1874年5月20日，BA。</p>
+<p>58．同上，1874年5月27日。</p>
+<p>59．布莱希罗德致俾斯麦，1874年7月2、27日，SA。</p>
+<p>60．Kent，Arnim，pp.144–153.</p>
+<p>61．同上。</p>
+<p>62．布莱希罗德致俾斯麦，1874年10月4日，SA。</p>
+<p>63．兰茨贝格致布莱希罗德，1874年10月6日，BA。《阿尼姆审判》（柏林，1874年），第25–26页[Der
+Arnim’sche Prozess（Berlin，1874），pp.25–26]。</p>
+<p>64．Kent，Arnim，pp.160–161；保利（Pauly）致俾斯麦，1874年12月8日；Der
+Arnim’sche Prozess，p.217。</p>
+<p>65．彪罗致威廉一世，1874年12月26日，DZA：梅泽堡：民事内阁，89H
+VI，卷3b，冯·阿尼姆。</p>
+<p>66．布莱希罗德致俾斯麦，1874年12月15日，FA；布莱希罗德告诉俾斯麦，兰茨贝格将返回巴黎，除非首相想见他。俾斯麦在信上批注道：“L博士，今晚9点。”</p>
+<p>67．Denkwürdigkeiten…Hohenlohe，II，141.英译本令人遗憾。</p>
+<p>68．Lerchenfeld-Koefering，Erinnerungen，p.82.</p>
+<p>69．Kent，Arnim，p.172.</p>
+<p>70．兰茨贝格致布莱希罗德，1875年3月12日、6月18日，BA。</p>
+<p>71．同上，1875年10月24日。</p>
+<p>72．施瓦巴赫致布莱希罗德，1876年6月6日，BA。</p>
+<p>73．兰茨贝格致布莱希罗德，未具日期，可能是1874年3月，BA；Denkwürdigkeiten……Hohenlohe，II，120。</p>
+<p>74．兰茨贝格致布莱希罗德，1874年5月27日；Denkwürdigkeiten……Hohenlohe，II，123。</p>
+<p>75．兰茨贝格致布莱希罗德，1875年11月20日，BA。</p>
+<p>76．关于对荷尔斯泰因角色的最佳评价，见Rich，“Holstein”。</p>
+<p>77．兰茨贝格致布莱希罗德，1876年4月21日，BA；另见Rich，Holstein，I，162–173。</p>
+<p>78．未具日期的信，1890年后，BA。</p>
+<p>79．《议会下院商谈速记报告》，1873年2月7日，第二卷，第940页。另见拉斯克早前的演讲，同上，1873年1月14日，第一卷，第521–547页。</p>
+<p>80．布莱希罗德致俾斯麦，1873年2月7日，FA。</p>
+<p>81．沃尔夫冈·萨伊勒，《赫尔曼·瓦格纳和他与俾斯麦的关系》（图宾根，1958年），第114–122页[Wolfgang
+Saile，Hermann Wagener und sein Verhältnis zu
+Bismarck（Tübingen，1958），pp.114–22]；Ritter，Preussischen
+Konservativen，p.370。</p>
+<p>82．Kardorff，Kardorff，p.96.</p>
+<p>83．GW，XIV2，828.</p>
+<p>84．赫尔曼·瓦格纳，《经历：1848年到1866年以及1873年至今我的回忆》（两卷合订本，柏林，1884年），第二卷，第58页[Hermann
+Wagener，Erlebtes：Meine Memoiren aus der Zeit von1848bis1866und
+von1873bis jetzt（2vols.in
+one；Berlin，1884），II，58]；Saile，Wagener，pp.122–124。</p>
+<p>85．Lucius，Bismarck，p.116.</p>
+<p>86．约翰娜·冯·俾斯麦致布莱希罗德，1876年11月23日，BA。</p>
+<p>87．瓦格纳致布莱希罗德，1876年12月6日，BA。</p>
+<p>88．同上，1876年12月4日，1877年2月13、28日。</p>
+<p>89．同上，1880年6月24日；Saile，Wagener，p.120。</p>
+<p>90．Morsey，Reichsverwaltung，p.248.</p>
+<p>91．Lerchenfeld-Koefering，Erinnerungen，p.120.</p>
+<p>92．Hatzfeldt Briefe，p.256.</p>
+<p>93．Rich，Holstein，I，9–10.</p>
+<p>94．Hatzfeldt Briefe，p.275.</p>
+<p>95．同上，p.310。哈茨菲尔特以四个点结束这封信。</p>
+<p>96．布莱希罗德致哈茨菲尔特，1871年11月23日，HN。巴德内恩多夫（Bad
+Nenndorf）的格哈德·埃贝尔博士（Dr.Gerhard
+Ebel）曾编辑过哈茨菲尔特的政治通信，我们交流了哈茨菲尔特和布莱希罗德的信。关于劳拉舍的成立，另见Glagau粗俗但内容丰富的Börsen-und
+Gründungs-Schwindel，pp.200–201。</p>
+<p>97．哈茨菲尔特致布莱希罗德，1871年11月13日，BA。</p>
+<p>98．布莱希罗德致哈茨菲尔特，1872年1月29日，HN；Glagau，Börsen-und
+Gründungs-Schwindel，pp.200–201。</p>
+<p>99．哈茨菲尔特致布莱希罗德，1872年2月9日，BA。</p>
+<p>100．Kardorff，Kardorff，p.96.</p>
+<p>101．布莱希罗德致哈茨菲尔特，1872年1月18日，HN；哈茨菲尔特致布莱希罗德，1872年1月5、10日和7月12日，1873年1月1日，BA。</p>
+<p>102．布莱希罗德致哈茨菲尔特，1873年8月9日，HN。</p>
+<p>103．同上，1873年3月22、24日和4月5日。</p>
+<p>104．同上，1875年2月28日、3月6日。</p>
+<p>105．同上，1875年3月6日。</p>
+<p>106．哈茨菲尔特致布莱希罗德，1875年3月13日，BA。</p>
+<p>107．布莱希罗德致哈茨菲尔特，1876年3月21日，HN。</p>
+<p>108．哈茨菲尔特致布莱希罗德，1876年9月13日，1877年9月24日，HN。</p>
+<p>109．哈茨菲尔特致布莱希罗德，1878年3月4日，BA。</p>
+<p>110．同上，1878年5月15日。</p>
+<p>111．另见荷尔斯泰因对哈茨菲尔特驻节马德里的溢美之词，Holstein
+Papers，I，193；布莱希罗德致赫伯特·冯·俾斯麦，1878年4月28日，FA。</p>
+<p>112．赫伯特·冯·俾斯麦致布莱希罗德，1878年4月29日，BA。</p>
+<p>113．Holstein Papers，III，44.</p>
+<p>114．布莱希罗德致俾斯麦，1879年1月30日，SA。</p>
+<p>115．Denkwürdigkeiten…Hohenlohe，II，278–279.</p>
+<p>116．布莱希罗德致赫伯特·冯·俾斯麦，1879年10月31日，FA。</p>
+<p>117．赫伯特·冯·俾斯麦致布莱希罗德，1879年11月2日，BA。</p>
+<p>118．Bussmann，Herbert von
+Bismarck，pp.96–97；赫尔穆特·罗格，《荷尔斯泰因与霍亨洛厄》（斯图加特，1957年），第149–150页[Helmuth
+Rogge，Holstein und Hohenlohe（Stuttgart，1957），pp.149–50]。</p>
+<p>119．荷尔斯泰因致布莱希罗德，1880年1月1日（不确定），BA。</p>
+<p>120．布莱希罗德致俾斯麦，1880年8月1日，FA；赫伯特·冯·俾斯麦致布莱希罗德，1880年8月2日，BA；布莱希罗德致赫伯特·冯·俾斯麦，1880年8月19日，FA。</p>
+<p>121．赫伯特·冯·俾斯麦致兰曹，1880年8月31日，SA；Rogge，Holstein，pp.89，149–150；Bussmann，Herbert
+von
+Bismarck，pp.95–96；兰曹致外交部，1880年11月10日和11日；GFO：I.A.A.a.50adh.secr.，第三卷。</p>
+<p>122．Rogge，Holstein，pp.104–105；德国《周一报》（Montagsblatt），1880年2月2日，FA；Holstein
+Papers，II，31。</p>
+<p>123．《泰晤士报》，1885年10月15日。</p>
+<p>124．Morsey，Reichsverwaltung，pp.119–120.</p>
+<p>125．莫里茨·布施，《俾斯麦：人生的秘密篇章》（三卷本，伦敦，1898年），第三卷，第67、73–74页[Moritz
+Busch，Bismarck：Some Secret Pages of His
+History（3vols.；London，1898），III，67，73–4]。另参见哈约·霍尔波恩编，《约瑟夫·玛利亚·冯·拉多维茨大使生平记录与回忆》（两卷本，莱比锡，1925年），第二卷：《1878–1890》，第204页[Hajo
+Holborn，ed.，Aufzeichnungen und Erinnerungen aus dem Leben des
+Botschafters Joseph Maria von
+Radowitz，2vols.（Leipzig，1925），II，1878–1890，p.204]。</p>
+<p>126．Bussmann，Herbert von Bismarck，pp.139–41.</p>
+<p>127．《泰晤士报》，1885年10月16日。</p>
+<p>128．布莱希罗德致哈茨菲尔特，1885年11月21日，HN；哈茨菲尔特致布莱希罗德，1885年10月7日，BA。</p>
+<p>129．布莱希罗德致哈茨菲尔特，1882年8月5日，HN。</p>
+<p>130．Bussmann，Herbert von Bismarck，p.142.</p>
+<p>131．哈茨菲尔特致布莱希罗德，1885年11月5日，BA。</p>
+<p>132．同上，1889年9月17、27日和10月11日；Bussmann，Herbert von
+Bismarck，p.546。</p>
+<p>133．布莱希罗德致哈茨菲尔特，1888年3月2日和4月7、9日，HN；哈茨菲尔特致布莱希罗德，1889年1月30日，BA。</p>
+<p>134．伯克内廷参事（Hofrath
+Bork）致布莱希罗德，1878年7月26日，BA。</p>
+<p>135．佩彭谢伯爵致布莱希罗德，1878年12月6、13日，BA。</p>
+<p>136．赫尔曼·冯·埃卡德斯泰因男爵，《生平与政治回忆》（莱比锡，1919年），第一卷，第35–40页[Freiherr
+Hermann von Eckardstein，Lebenserinnerungen und Politische
+Denkwürdigkeiten（Leipzig，1919），I，35–40]。</p>
+<p>137．威廉二世，《我的早年》（伦敦，1926年），第89页[William II，My
+Early Life（London，1926），p.89]。</p>
+<p>138．哈里·凯斯勒伯爵，《面容与时间：回忆录》（柏林，1962年），第79–80页[Graf
+Harry Kessler，Gesichter und
+Zeiten.Erinnerungen（Berlin，1962），pp.79–80]。</p>
+<p>139．莱恩多夫致布莱希罗德，1875年11月23日，1878年11月8、19日，1879年7月15日，1880年10月10日，1885年3月31日，BA。</p>
+<p>140．同上，1877年7月21日，1880年5月5日，1881年11月29日。</p>
+<p>141．威廉一世致布莱希罗德，1884年7月6日，BA。我没能找到神秘的加布里埃拉·德·卡斯基（Gabrielle
+de Karsky）的信息—信上署名为de Karski。她在华沙有家，可能是波兰人。</p>
+<p>142．关于对拉齐威尔的爱，见埃尔里希·马克斯，《威廉一世皇帝》（第八版，慕尼黑和莱比锡，1918年），第29–34页[Erich
+Marcks，Kaiser Wilhelm I（8th printing，Munich and
+Leipzig，1918），pp.29–34]；另见Kessler，Gesichter，pp.45–46。</p>
+<p>143．Holstein Papers，III，128.</p>
+<p>144．布莱希罗德致威廉一世，1884年8月18日，附威廉一世致布莱希罗德的便条，1884年8月19日；威廉一世致布莱希罗德，1884年8月20日，BA；库蒙特（Coumont）致布莱希罗德，1884年10月4日，BA。</p>
+<p>145．加布里埃拉·德·卡斯基致布莱希罗德，2月11日（无年份，可能是1885年），BA。</p>
+<p>146．同上，9月5日（无年份，可能是1885年）。</p>
+<p>147．同上，12月28日（无年份，可能是1885年）。</p>
+<p>148．威廉一世致布莱希罗德，1886年8月27日，BA。</p>
+<p>149．赫伯特·冯·俾斯麦致布莱希罗德，1876年9月19日，BA。</p>
+<p>150．《菲利普·奥伊伦堡—赫特菲尔德亲王五十年回忆录》（柏林，1923年），第95页[Aus50Jahren.Erinnerungen
+des Fürsten Philipp zu
+Eulenburg-Hertefeld（Berlin，1923），p.95]。奥伊伦堡是当时赫伯特最亲密的心腹，他的记录是我们手头最可靠的资料。另见路易斯·斯奈德，《赫伯特·冯·俾斯麦婚姻事件的政治影响，1881–1892》，刊于《近代史期刊》，1964年第36期，第155–169页[Louis
+Snyder，“Political Implications of Herbert von Bismarck’s Marital
+Affairs，1881，1892，”JMH，36（1964），155–69]。</p>
+<p>151．Aus50Jahren，p.93.</p>
+<p>152．同上，pp.102，105。</p>
+<p>153．布莱希罗德致俾斯麦，1881年4月13日，FA。</p>
+<p>154．BA.</p>
+<p>155．布莱希罗德致赫伯特·冯·俾斯麦，1881年7月5日；赫伯特·冯·俾斯麦致布莱希罗德，1881年7月6日；布莱希罗德致赫伯特·冯·俾斯麦，1881年7月8日，BA。</p>
+<p>156．波蒂谢遗稿，科布伦茨联邦档案。感谢约翰·洛尔博士提供材料。</p>
+<p>157．卡多夫致布莱希罗德，1881年6月20日，BA。</p>
+<p>158．赫伯特·冯·俾斯麦致威廉·冯·俾斯麦，1882年8月9日，FA。感谢Bussmann所编的《国务秘书赫伯特·冯·俾斯麦伯爵：政治私信集》的助理编辑克劳斯—彼得·霍伊普科博士提供材料。</p>
+<p>159．Holstein Papers，III，104–5.</p>
+<p>160．兰曹致赫伯特·冯·俾斯麦，1882年8月11日，FA。感谢霍伊普科博士。</p>
+<p>161．比如，兰曹致赫伯特·冯·俾斯麦，1882年8月11日。感谢霍伊普科博士。</p>
+<p>162．Holstein Papers，II，57.</p>
+<p>163．同上，p.277。</p>
+<p>164．布莱希罗德致俾斯麦，1882年5月24日和8月3、9日，SA；威廉·冯·俾斯麦致布莱希罗德，1882年6月7、8日，BA。</p>
+<p>165．布赫尔致布莱希罗德，1872年11月16日，BA。</p>
+<p>166．俾斯麦致布莱希罗德，1882年7月17日，BA。</p>
+<p>167．布莱希罗德之俾斯麦，1882年8月3、7和9日，SA；另见GW，XIV2，950。</p>
+<p>168．赫伯特·冯·俾斯麦致威廉·冯·俾斯麦，1882年8月9日；兰曹致赫伯特·冯俾斯麦，1882年10月7日，霍伊普科博士提供；Bussmann，Herbert
+von Bismarck，p.210。</p>
+<p>169．GP，VI，355.</p>
+<h6 id="阅读日期-2025年12月28日-2025年12月28日-共-1-天">阅读日期：
+2025年12月28日-2025年12月28日 共： 1 天</h6>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>
