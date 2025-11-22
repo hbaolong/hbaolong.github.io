@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="hbaolong@vip.qq.com" />
+  <title>电影字幕翻译EN:4.3.3　Testing the Corpus by Sample Data</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">电影字幕翻译EN:4.3.3　Testing the Corpus by Sample
+Data</h1>
+<p class="author">hbaolong@vip.qq.com</p>
+</header>
+<center>
+<a href="/3place/dyzmfyen">返回首页</a> <a
+href="/3place/dyzmfyen/mingju.html">本书名句</a> <a
+href="/3place/dyzmfyen/memo.html">本书注解</a> <a
+href="/3place/dyzmfyen/index_rich.html">丰富目录</a> <a
+href="/3place/dyzmfyen/index_readcal.html">同读日历</a> <a
+href="/3place/dyzmfyen/index_timeline.html">时间线</a> <a
+href="/3place/dyzmfyen/index_books.html">引用书籍</a> <a
+href="/3place/dyzmfyen/index_words.html">使用字频</a>
+<div id="wx_pic" style="margin:0 auto;display:none;">
+<img src='/img/logo.png'/>
+</div>
+</center>
+<h4 id="testing-the-corpus-by-sample-data">4.3.3　Testing the Corpus by
+Sample Data</h4>
+<ol type="a">
+<li>Testing the First Hypothesis</li>
+</ol>
+<p>I firstly applied one film as a sample.According to the sample
+data,it is evident that Chinese expressions are generally longer than
+English expressions,as indicated in the Screenshot below:</p>
+<p>Screenshot 6</p>
+<p>Once 60 pairs of bilingual subtitles are collected from the plain
+text of the sample film’s screenplay,it is possible to work out the
+difference in the number of words between each subtitle pair by using
+the calculating function within Microsoft Excel.As a result,among those
+extracted sixty pairs,the maximum value is 11 words and the minimum
+value is minus four.Therefore,the average value of difference in the 60
+pairs is about 2.69 (see the amber-framed column and the blue circled
+parts in the following screenshot).</p>
+<p>Screenshot 7</p>
+<p>According to these statistics,it transpires that E-C subtitlers may
+pay the most attention to the difference in length between English and
+Chinese when investigating the quality of subtitling.Since the practice
+of Chinese expression is different from that of English,ensuring that
+the Chinese subtitles meet the mechanical requirement for film subtitles
+ought to be the primary concern for subtitlers,Translation
+strategies,then,may provide effective assistance in order for the
+translation to be contained within a reasonable length.</p>
+<p>In the second step,about 38% (270 out of 704,not counting repeated
+occurrences) of the sample subtitles or about 62% (37 out of 60; see the
+next Screenshot in below) of the subtitles (including repetitions) are
+translated by using different translation strategies.If the application
+of these strategies has meant that translated subtitles have been
+critical in making the film accessible to the majority of the potential
+audience,mostly young people,this can be demonstrated by using another
+empirical method — the questionnaire — in which the respondents are
+university undergraduates between the ages of 22 and 24.</p>
+<p>Screenshot 8</p>
+<p>In the course of employing this strategy,I have found that some types
+of traditional Chinese expression (such as idioms,archaisms and
+proverbs) and topical expressions (such as those referring to popular
+and Internet-based culture) frequently appeared in the subtitling of
+these films.By conducting the questionnaire,it is possible to confirm
+the extent of the popularity of these expressions.</p>
+<p>In the previous chapter,four of Gottlieb’s subtitling strategies were
+mainly found to be applicable to the translation of E-C.These strategies
+are paraphrase,transfer,transcription and condensation.In deploying
+these strategies,with the exception of condensation,translators need to
+pay more attention to the selection of target expressions to be used if
+the length of translated subtitles is to be reasonable.Achieving
+reasonable length is critical if the target subtitles are to be readable
+by audiences in the “real” world.</p>
+<p>In order to investigate whether the above findings indicate
+translation universality,I needed to collect a larger amount of data to
+verify her assumptions.Other findings may also appear after collecting
+and analysing all data in the self-built parallel corpus.</p>
+<ol start="2" type="a">
+<li>Testing the Second and the Third Hypotheses</li>
+</ol>
+<p>As indicated in the previous section,there are two other research
+hypotheses involved: that effective translation is contingent on the use
+of traditional Chinese expressions within the translated subtitles,and
+that effective translation is contingent on the use of popular
+expressions within the translated subtitles.The corpus will help me to
+collect these two kinds of expression.Another software package known as
+paraconc will test the frequency of the use of these kinds of culturally
+loaded expressions and highlight the main issues concerning current
+data,such as the inappropriate,unjustified and inadequate use of these
+expressions.Then,with the help of the corpus’ data results,I can discuss
+suitable translation strategies for strengthening the expression of
+current data.</p>
+<p>I firstly align all the bilingual subtitles,and marks out the
+translated subtitles which involve the use of traditional expressions as
+well as popular expressions.Then by using paraconc,the frequency of the
+use of these two types of expressions will be calculated
+immediately.</p>
+<p>Screenshot 9</p>
+<p>Screenshot 10</p>
+<h6 id="阅读日期-2026年01月24日-2026年01月24日-共-1-天">阅读日期：
+2026年01月24日-2026年01月24日 共： 1 天</h6>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

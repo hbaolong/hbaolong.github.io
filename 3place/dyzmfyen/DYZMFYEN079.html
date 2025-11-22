@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="hbaolong@vip.qq.com" />
+  <title>电影字幕翻译EN:5.3.1　Data Analysis</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">电影字幕翻译EN:5.3.1　Data Analysis</h1>
+<p class="author">hbaolong@vip.qq.com</p>
+</header>
+<center>
+<a href="/3place/dyzmfyen">返回首页</a> <a
+href="/3place/dyzmfyen/mingju.html">本书名句</a> <a
+href="/3place/dyzmfyen/memo.html">本书注解</a> <a
+href="/3place/dyzmfyen/index_rich.html">丰富目录</a> <a
+href="/3place/dyzmfyen/index_readcal.html">同读日历</a> <a
+href="/3place/dyzmfyen/index_timeline.html">时间线</a> <a
+href="/3place/dyzmfyen/index_books.html">引用书籍</a> <a
+href="/3place/dyzmfyen/index_words.html">使用字频</a>
+<div id="wx_pic" style="margin:0 auto;display:none;">
+<img src='/img/logo.png'/>
+</div>
+</center>
+<h4 id="data-analysis">5.3.1　Data Analysis</h4>
+<p>The 15 pairs of bilingual subtitles in this film are composed of the
+first part of the questionnaire; see Part I below:</p>
+<p>Result of Part I</p>
+<p>Related to the first hypothesis,the above content can be plain data
+as well.From the numbers of words labelled in each pair,it is obvious
+that all of the 15 Chinese translated subtitles are greater in length
+than the corresponding English text.Within these 15 pairs of subtitles,I
+found that two pairs of released Chinese translated subtitles can be
+improved and become shorter than the current given ones.The following
+discussion on each of these pairs of subtitles illustrates a better way
+of translating these subtitles.</p>
+<p>For the first pair:</p>
+<p>Outrage in Egypt tonight as it was discovered that the Great Pyramid
+of Giza had been stolen.(17 words) (Original subtitle)</p>
+<p>今晚埃及爆出特大新闻——吉萨金字塔被人偷了。（19 characters）（Released
+translation）</p>
+<p>(Back translation: Tonight,Egypt announced huge news — someone has
+stolen the Great Pyramid of Giza.)</p>
+<p>Observations： Option C gives respondents a chance to recommend their
+own translation.One respondent gave his translation thus：
+“吉萨金字塔发现被盗！愤怒席卷埃及！（更符合新闻语言）（It was found that
+the Great Pyramid of Giza was stolen！ Outrage all over the
+Egypt！）（More like news language）”.As the respondent，himself
+labelled his translation as being more akin to news
+language，therefore，this translation accords with the background of
+this subtitle： this subtitle appears on the screen when it was
+reporting the news.I agree this translation is better than the released
+one because the respondent separated the original subtitle into two
+short sentences，using the passive voice and an exclamation mark in the
+first sentence in order to imitate a journalist’s voice and tone for
+emphasizing the news as being appalling to the whole country.The
+translation of the second short sentence was also finished with an
+exclamation mark in order to strengthen the emphasis.The use of media
+phrasing makes the translation brief and even shorter than the released
+one.Therefore，the translation from this respondent is innovative on
+account of its use of incisive media phrasing.</p>
+<p>For the other subtitle in Question 7,the original text has 10
+words,while the corresponding original text has 13 words.Although,in
+line with the previous review about the ideal length of a single-line
+subtitle,10 original words and 13 translated words are ideal,I still
+think there is a better way to translate this subtitle,which not only
+makes the translated subtitle shorter than the current length but also
+makes the language more appropriate.</p>
+<p>They’re saying he makes all other villains look lame.(10 words)
+(Original subtitle)</p>
+<p>他们都说跟他相比，其他坏蛋都算是太菜了。（22 characters）（Released
+translation）</p>
+<p>(Back translation: They all said,compared with him,other badass are
+rookies.)</p>
+<p>Observations： There are three expansions and one popular expression
+in the given translated subtitle.The word “都” is an emphasis in order
+to show the speaker’s “admiration” to “him”，that is，Vector，the main
+protagonist of the film.The background information is that Vector has
+stolen a pyramid，which shocked the whole world，with people regarding
+him as the number one thief in the world，while other criminals are much
+more inferior to him.Then the subtitler translated the following
+sentence pattern separately by using a comma to divide the subtitle into
+two parts： the first pattern “跟他相比” （compared with him） and the
+second pattern “其他坏蛋”in the translation； the purpose here in
+separating these two patterns was to complete the expression in
+Chinese.However，I also considered “他让其他所有坏蛋都显得很菜” （he
+makes all other villains look lame）.This translation has nine
+characters，which is shorter than the given one and can be considered as
+a more applicable translation.Therefore，the given translation with
+expansion is not necessary in this case.</p>
+<p>In the second part of the questionnaire，there are five multiple
+choice questions.The second question asks about the length of translated
+subtitles： “Do you think the length of Chinese translated subtitles is
+readable？” A high number of respondents，90 out of 97 （93%），agreed
+that the length of the official subtitling was readable，5% agreed
+partly and only 2% of respondents said they could not read the
+subtitling in time.This was a significant result because the majority of
+students showed their capacity to read the Chinese subtitles at an
+adequate speed，assisted by their aural comprehension skills in
+English.For some reason，a minority of students said that they sometimes
+felt it was difficult to follow the subtitling，with 2% of the others
+feeling that it was hard to keep up in time.The reasons may vary： some
+students’ listening skills in English may not be developed enough to
+follow the soundtrack in the film’s original language，others’ reading
+speed may not be fast enough，and some of them may simply be unable to
+keep up with the subtitling because of poor eyesight.However，this
+result generally reflects the practical English level of this group of
+respondents.According to the requirement to the graduates in English
+majors in university level of education background，Chinese Education
+Bureau requests their English vocabulary to be more than 8，000 words
+[《英语专业四、八级词汇表》Vocabulary of Test for English Majors （TEM）
+Band 4 and Band 8] and their reading speed to be more than 120 words per
+minute （Ye Changqing 2016： 36）.As each frame in a film averagely
+takes 2-3 seconds，the average reading speed of English original
+subtitles of these respondents is theoretically 4-6 words，and as the
+data of Despicable Me 1 shows，its average length of English original
+subtitles is 7.13 words，I think the result of this question is
+reasonable.Moreover，in the selected 15 films，Madagascar 1 has the
+greatest length in English original subtitles as 7.63 words； I consider
+that the majority of respondents and the similar level of other Chinese
+audiences may be able to get adequate information not only the Chinese
+translated subtitles but also the English original subtitles among the
+selected films.In other words，their comprehension of the selected films
+will be generally successful.</p>
+<p>The main finding of this section is that people from a young age
+group generally find that the current lengths of subtitles in Chinese
+are appropriate and readable in the timeframe allowed.The inference from
+the 7% (5% +2%) who have difficulty in following the subtitles in
+Chinese is that subtitling companies should continue to ensure that
+subtitles are concise and do not extend them beyond their current
+standard lengths.</p>
+<p>Then Part 3 of the questionnaire is an open-ended question: “In your
+opinion,what have been the main problems and weaknesses that have
+emerged in the subtitles of recently released animation films?” I
+collated and categorized the main elements or the keywords from the 97
+participants’ responses,as shown in the following table:</p>
+<p>Table 4</p>
+<p>In order to see each proportion of the six influencing factors,I
+generated the above form to a bar chart in Excel:</p>
+<p>Figure 3</p>
+<p>As the above charts show,six main elements or keywords were found in
+the 97 correctly completed questionnaires.These were: cultural barriers;
+the speed of the original subtitles — fast; the different ways of
+thinking in English and Chinese; proper nouns; translation quality;
+and,the story of the film.Amongst these elements,different ways of
+thinking in English and Chinese is also a kind of cultural
+barriers.“Proper nouns” and “the story of the film” also require the
+audience to possess a certain level of cultural knowledge.Therefore,we
+can see that 46% of respondents directly reported that the main problem
+in the current crop of animation films concerns cultural barriers.To
+eliminate this kind of obstacle,the subtitlers need to add extra
+information or explanations to help the audience.However,in
+practice,with the limited time that a viewer has for reading film
+subtitles,subtitles that are overlong will not be readable.In the
+earlier evaluation of the lengths of two versions of subtitles and the
+length difference between the two tested languages in this current
+research,the researcher recommends that the number of characters within
+a Chinese translated subtitle should be within 23 characters,and that
+the average value of difference between the two language subtitles
+should be around 2.33.Indeed,64% of the 97 respondents specifically felt
+that the problem is about different ways of thinking in English and
+Chinese.As the largest one of the six factors that were cited by the
+respondents,it means this factor is the main factor to consider during
+the process of subtitling.From the perspective of translation
+studies,the most effective and best quality translations are those that
+convey original English thoughts and concepts into the Chinese target
+culture.In this process,translators and subtitlers even need to rewrite
+aspects of the original work and this makes the language proficiency and
+cultural awareness of a translator an important requirement.</p>
+<p>Apart from these issues relating to cultural difference,“the speed of
+the original subtitles” was a notable problem for 43% of
+respondents.From a teaching perspective,this is significant because the
+respondents were in the senior year of an English major programme.</p>
+<p>Therefore,the discovery that nearly half of them think that the speed
+of the subtitles,prepared for commercial animated films by professional
+subtitling companies,is too fast suggests that their aural comprehension
+skills in English are not sufficient to assist them in following the
+subtitles in Chinese.This is the logical inference,bearing in mind their
+responses to the second question of Section 2,where 90% of the
+respondents felt that the length of the official subtitles in Chinese
+was appropriate.On the one hand,it might be argued that more needs to be
+done to improve the language skills of students of English at all
+levels,because it is well documented that the speed of subtitles,as well
+as dubbing,is consistent with authentic verbal communication in real
+life.Animated films in English are appropriate learning materials for
+these students to foster their professional abilities and language
+skills,and the comprehension problems alluded to by an elite group of
+language students at a Chinese university shed light on the scale of the
+initiatives that will be required to improve the foreign language skills
+of the population as a whole.Lastly,the element of “translation quality”
+should also include the criterion concerning the ideal length as one of
+the standards when one comments on the quality of the translated
+subtitles.</p>
+<p>Generally,for the subtitles with cultural elements,the cultural
+barriers should be overcome by the subtitlers.A useful method is to give
+much more in terms of explanations; however,the degree to which cultural
+information in subtitling is enlarged is a key challenge for
+subtitlers.They have to consider the readable length of the subtitle
+and,at the same time,make their translation acceptable to the target
+culture.Given that nearly half of the respondents had difficulty with
+“the speed of the original subtitles”,this confirms that most of them
+prefer to read Chinese translated subtitles,with 90% responding to
+Question 2 in Part 2 that they find the current length of the released
+translated subtitles acceptable.However,considering that they are young
+adult people with a higher level of education in China,I think that the
+current length may have more possibilities to be improved.In other
+words,if the expression in the translated subtitles is studied more
+carefully,the length may be shortened or the characters changed to
+involve more simplified spellings,thereby enabling an audience with a
+wider range of education levels to have better understand the translated
+subtitles.The “different ways of thinking in English and Chinese” is
+another factor that may also influence the length difference between
+these two versions of subtitles because of the different customs in
+terms of expressions.For example,in terms of formal expressions,the
+Chinese approach to a noun phrase is “attribute+noun”,while the English
+form of expression is normally “the+noun+of+noun”.Lastly,“translation
+quality” is a general concept,which indicates whether the translation is
+acceptable or not.Typically,the levels of acceptance may involve one of
+the following: 1) if an average audience can make sense of the
+translated subtitles,they will agree that the translation quality of the
+subtitles is good; 2) an audience with a good educational background in
+English,e.g.,young people who are college students,will read the
+translated subtitles and,if they find them to be understandable and
+accurate,they will think the translation quality of subtitles is
+good.The length of the translated subtitle is,of course,included in this
+general idea.In other words,the length of the translated subtitles is an
+important criterion when creating translated subtitles.</p>
+<p>The following section will examine the factors that determine whether
+translated subtitles are of an acceptable length.</p>
+<h6 id="阅读日期-2026年02月08日-2026年02月08日-共-1-天">阅读日期：
+2026年02月08日-2026年02月08日 共： 1 天</h6>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

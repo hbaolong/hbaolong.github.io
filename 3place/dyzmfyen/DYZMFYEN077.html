@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="hbaolong@vip.qq.com" />
+  <title>电影字幕翻译EN:5.2　Data Analysis on Corpus</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">电影字幕翻译EN:5.2　Data Analysis on Corpus</h1>
+<p class="author">hbaolong@vip.qq.com</p>
+</header>
+<center>
+<a href="/3place/dyzmfyen">返回首页</a> <a
+href="/3place/dyzmfyen/mingju.html">本书名句</a> <a
+href="/3place/dyzmfyen/memo.html">本书注解</a> <a
+href="/3place/dyzmfyen/index_rich.html">丰富目录</a> <a
+href="/3place/dyzmfyen/index_readcal.html">同读日历</a> <a
+href="/3place/dyzmfyen/index_timeline.html">时间线</a> <a
+href="/3place/dyzmfyen/index_books.html">引用书籍</a> <a
+href="/3place/dyzmfyen/index_words.html">使用字频</a>
+<div id="wx_pic" style="margin:0 auto;display:none;">
+<img src='/img/logo.png'/>
+</div>
+</center>
+<h4 id="data-analysis-on-corpus">5.2　Data Analysis on Corpus</h4>
+<p>In the following stage,I need to collect data using UltraEdit and
+analyse the data by using the calculating function of Microsoft Excel,as
+the main means of her corpus,in order to evaluate the average length of
+each of the subtitles (both of English and Chinese) in the 15 films,as
+well as the average length difference between the Chinese translated
+subtitles and their corresponding English original text in order to
+establish whether the first of my hypotheses is positive or not.</p>
+<p>In the last chapter,it was discussed that in the sample data,there
+were sixty pairs extracted in a sample,the maximum value being 11 words
+and the minimum value being -4 (minus four).Therefore,the average value
+of difference in the 60 pairs was about 2.69.Then in this stage of the
+research,I expanded the research objectives to all the subtitle pairs in
+the 15 selected films.The total number of the pairs is 19,081,and
+according to the comparison of these pairs,I obtained a relatively more
+objective result than the “2.69” words difference from the sample 60
+pairs.Her investigation procedure is as follows:Regarding the use of
+Microsoft Excel,I firstly tested the length difference between two
+language-versioned subtitles,as indicated in the Screenshot below:</p>
+<p>Screenshot 11</p>
+<p>(Subtitle pairs from The Croods,2013)</p>
+<p>The subtitle pairs in each of the 15 films are collected into 15
+separate Excel spreadsheets.As the above example shows,the first column
+in light grey represents the set of Chinese translated subtitles; they
+are ordered automatically by Excel,while the serials number shows the
+total number of the translated subtitles.The second column in dark grey
+shows the set of corresponding English original subtitles in this
+film.Next to this is the character/word number for each single line of
+subtitling.The colours show the corresponding relations.</p>
+<p>Microsoft Excel helped me to calculate the numbers of these bilingual
+subtitles as well as to work out the average value of English original
+subtitles and that of their corresponding Chinese translated
+subtitles,and then it obtained the average value of difference between
+these two languages.By comparing the number of English words in each
+part of the original text with the number of Chinese words in each
+target subtitle on the spreadsheet,it is evident that Chinese
+expressions are generally longer than English expressions; see the
+following chart:In order to show the data result more clearly,I used the
+generating function of Excel:</p>
+<p>Screenshot 12</p>
+<p>(Subtitle pairs from The Croods,2013)</p>
+<p>Figure 2</p>
+<p>The line graph is more explicit than the Excel form: the dark grey
+line represents the number of characters in the Chinese translated
+subtitles of the 20 subtitles,the maximum number is about 23 characters
+in Chinese,and the minimum value is 1,but in most cases of these twenty
+pairs,when I worked out the centre shaft,the average length of the
+Chinese subtitles is about 12 (11.79) numbers; however,the English
+subtitles were characterized by a maximum value of around 15 and a
+minimum value of 1 as the black line illustrates,and its centre shaft
+runs through the number of 8 (8.32).It is a similar result to that shown
+by the sample data in the last chapter.With the same way showed as the
+above,I put all the bilingual subtitles of each film into one Microsoft
+Excel,then by analysing all the date of 15 selected films,I found that
+the Chinese translated subtitles are averagely longer than the English
+original subtitles in these 15 selected films.</p>
+<p>This result shows the effectiveness of her first hypothesis: the
+lengths of Chinese translated subtitles are,on average,greater than
+those of their corresponding English original subtitles.</p>
+<p>Table 3</p>
+<p>In the earlier section of this chapter,I introduced advice given to
+her by theorists and practitioners about the ideal length of a
+singleline subtitle in Chinese as well as in English.The standard length
+of a single-line Chinese subtitle should be about 15 characters,while an
+English subtitle should be within 40 characters or 15 words.The corpus
+collection and analysis helped me to evaluate the chosen data,with the
+result that the data are able to meet the above standards.Hence,this
+strongly suggests that the official translated subtitles provided for
+the released films are broadly effective.What is more,the result also
+indicates that the subtitlers of the above released translated films are
+aware of appropriate lengths for subtitles in their translation work,and
+shows that the language and dialogue used in English animation films are
+mainly brief and simple.From the above chart,the largest average value
+for a single-line Chinese subtitle is to be found in Madagascar 1,with
+11 characters,compared with the above-mentioned standard length in
+Chinese of 13-23 characters per line).In other words,as the average
+length is less than 13 characters for all the selected films,their
+Chinese translated subtitles can be said to be of acceptable length.As
+long as audiences have completed primary education (acquiring a
+vocabulary of 2,500 words or so),such subtitles will not pose a problem
+to them.As shown in the last column in the above chart,the Chinese
+translated subtitles are generally greater in length than the original
+dialogue in English.Among the selected animation films,the average
+length difference between the translated Chinese subtitles and their
+corresponding original texts range from 1.63 to 3.82 characters/words.In
+Rio 1,the average length difference is 1.63,which shows that the
+translated Chinese subtitles in this film have a similar length to the
+original English subtitles.In the later data analysis chapter on the use
+of traditional expressions and popular expressions,I found that one
+reason is that the high-frequency use of these typical expressions (the
+use of traditional expressions is 4.51%,which is higher than for most of
+the selected films,while the use of popular expressions is 33.14%,which
+is also higher than for the rest of the selected films) makes the
+average length difference small (I will explain this phenomenon in
+detail in the next two chapters).For example:</p>
+<p>① Everyone here is on fire.5 (Original subtitle)</p>
+<p>万物热情如火。6 （Released translation）（involves in the use of
+idiom which is underlined）</p>
+<p>Everything has high enthusiasm.(Back translation)</p>
+<p>② and we’re not big on travel.7 (Original subtitle)</p>
+<p>也不爱出远门。6 （Released translation）</p>
+<p>And do not like on travel.(Back translation)</p>
+<p>However,in Frozen,the average difference is 3.82.When evaluating the
+translated subtitles and their corresponding original English texts,I
+found that the highest average length difference in this film’s subtitle
+translations could be determined by the presence of two songs in the
+film subtitles: Frozen Heart and Let It Go.In order to explain the lines
+of the songs,as well as to reflect the rhyme of the translated
+lyrics,the subtitler used the strategy of expansion,meaning that the
+total number of characters in the translated Chinese version is much
+bigger than for the other selected films.For example:</p>
+<p>① Born of cold and winter air,6 (Original subtitle)</p>
+<p>它来自寒冷的冬天。8（Released translation）</p>
+<p>it comes from cold winter,(Back translation)</p>
+<p>② and mountain rain combining.4 (Original subtitle)</p>
+<p>裹挟着山中的雨滴。8 （Released translation）</p>
+<p>covered with rain drops from mountain (Back translation)</p>
+<p>In general,this result proves that my first hypothesis in this study
+is positive.</p>
+<p>Furthermore,in the process of calculating the figures,I also recorded
+the following subtitle translation phenomena:</p>
+<ol type="1">
+<li>In Turbo,there are two overlong subtitles with over 30 characters in
+the Chinese version; they provide expositional information about the
+story and the racing car competition.</li>
+</ol>
+<p>As for the first phenomenon,I concluded that,in original English
+language films,English as the source language is not a very wellknown
+language among the target Chinese audience.It is necessary,then,to add
+several brief pieces of background information to help the audience
+understand more about the characters and plots.However,if the length is
+too long,the subtitles will effectively become unreadable.As analysed
+before,the acceptable and readable length of a single-line Chinese
+subtitle should be within 25 (as the maximum) characters; a single-line
+subtitle with 31 characters will not be fully readable by ordinary
+people in practice.Hence,the translation in the following two subtitles
+in Turbo is less likely to be successful:</p>
+<p>Translated
+subtitle：让我们回到印第安纳波利斯500英里大赛的角逐现场（世界三大汽车赛事之一，简称印第500）。（37
+characters）</p>
+<p>Original subtitle: And we’re back at the final stretch of the
+Indianapolis 500.</p>
+<p>Observations: In the translated subtitle,the subtitler added a
+bracket to explain the background information of the film’s setting.This
+is important information; however,in order to meet the requirement of
+mechanical limits of producing film subtitles,the translated subtitle
+could be shorter as follows:</p>
+<p>1）让我们回到这世界三大汽车赛之一的印第500比赛现场！（23
+characters）</p>
+<p>(Back translation: And we’re back at one of the world’s three biggest
+car competitions — the Indianapolis 500.)</p>
+<p>2）让我们回到世界汽车大赛之印第500英里赛的现场！（21 characters）</p>
+<p>(Back translation: And we’re back at the world’s famous car
+competition — the Indianapolis 500.)</p>
+<p>For the first recommended translation,I directly rewrote the original
+text,but provided the audience with full information about the
+classification and the abbreviated name of the cars competition.This
+avoids the repetitive nature of the expression used in the released
+translated subtitle.As the length of the alternative translation is
+shortened to 23 characters,this falls within the allowable length
+according to the related subtitle theories and the recommendations of
+professional subtitlers.</p>
+<p>For the second recommended translation,I carried out one more
+abbreviation to the original text,compared with the given released
+translation.</p>
+<ol start="2" type="1">
+<li>In Rio 1,the average number of Chinese characters in a single line
+is eight,which is one character less than the average number in a
+subtitle in English.This is the only result that is different from the
+other data results from the other 14 films.</li>
+</ol>
+<p>Regarding this phenomenon,compared with the overlong subtitles in
+Turbo,the occasional use of 24 characters in a single-line subtitle is
+acceptable; however,the use of specialized terms will likely be an
+obstacle preventing comprehension among some sections of the
+audience,such as young primary students or others who lack specialized
+knowledge; for example,terms such as “nitrous oxide”
+(Turbo),“Odontophorus gujanensis” (Rio 2) and “oil pressure” (Cars
+2).</p>
+<ol start="3" type="1">
+<li>In The Smurfs 1,the majority of conversations occur among several
+characters,compared with two-character dialogue; therefore,the
+translation of the subtitles in these sequences is potentially more
+difficult and complex.</li>
+</ol>
+<p>Concerning this third phenomenon，when group conversations occur in
+subtitle translation，the subtitlers have to pay close attention to the
+length of the translated subtitles，for on the one hand，the translated
+subtitles should match each of the speakers appearing in the frame
+synchronously，while on the other hand，specific ways to make each
+speaker’s words or expressions different from each other could help the
+audience to follow the original story and multi-character dialogue more
+easily.Therefore，in the translation of these subtitles，the subtitlers
+can use a variety of translated expressions to make each character’s
+speech more personalized.For example，in The Smurfs film
+series，different smurfs have different personalities and their names
+are given with reference to their various personalities，such as
+Clumsy，Vanity and Smooth.In the released translation，these names are
+translated in terms of equivalent meaning，while the form of expression
+meets the custom by which Chinese parents give their children
+nicknames，that is，by using reiteratives of “笨笨” （Clumsy） “靓靓”
+（Vanity） and “滑滑” （Smooth）.Then，in order to show their different
+personalities，the subtitlers translated their words in terms of the
+respective features.For example，when translating the words for
+Clumsy，simple and funny expressions were used； however，when
+translating the words for Smooth，smart expressions were employed.</p>
+<ol start="4" type="1">
+<li>In Cars 1 and 2 and Turbo,a common difficulty in the translation is
+the high frequency of using mechanical terms related to autos.</li>
+</ol>
+<p>Generally,the translated Chinese versions of these terms are longer
+than the original expressions.Moreover,for some less familiar terms,the
+subtitler had to add a short explanation to them in a bracket after
+these terms.This makes the translated subtitles even longer than their
+supposed length.For example:</p>
+<p>Translated
+subtitle：柠檬？（对缺陷品汽车的统称）—是啊，那些天生就带缺陷的汽车，总是这里坏那里坏的。</p>
+<p>Original subtitle: Lemon? — Yeah.Cars that don’t ever work right.</p>
+<p>Observations: In the translated subtitle,the subtitler explained that
+“lemon” does not refer here to the original meaning of the fruit,but it
+is a mechanical term related to autos; it refers to the defective
+cars.Similarly,in The Smurfs 2,there is a subtitle which has 24
+characters in the line because it involves the translation of some
+specialized terms:</p>
+<p>Translated
+subtitle：这是一个有机的、无麸质、富含抗氧化剂的阿萨伊浆果蛋糕。</p>
+<p>Original subtitle: This is an organic,gluten-free,antioxidantrich
+acai berry cake.</p>
+<p>In the translated subtitle，there are four expressions that are the
+translation of specialized words.Because the released translation
+completely translated the original subtitle by using equivalence to
+render the four original attributes，this translation is considered as a
+faithful translation.Moreover，although the length is longer than the
+average length of the whole number of translated subtitles in this
+film，24 characters in this line is within the limitation of 25
+characters per line.However，as regards this specific subtitle，the
+researcher thinks another translation might be acceptable as
+well：这是一个纯天然、很健康的阿萨伊浆果蛋糕。（18 characters）（Back
+translation： This is a pure nature，very healthy acai berry cake）.</p>
+<p>In my translation,I avoid the translation of the first three
+specialized terms of nutritional science.In fact,the basic information
+to be conveyed to the common audience in this subtitle is that this is a
+healthy fruit cake,because this type of story is a fairy tale,not a
+scientific report.Considering the practical function of this subtitle,it
+is not necessary to translate it in a scientific way.Therefore,the
+advantages of the recommended translation are: a) to offer the audience
+a general explanation of the features of acai berry cake; b) to shorten
+the length of the released translation.However,in some places,if
+cultural differences exist,the extra information becomes necessary.Take
+the following from The Smurfs 2,for instance:</p>
+<p>① Translated subtitle：那是蓝蓝吗？—他可真大呀。</p>
+<p>Original subtitle: Is that Blue? — He’s huge.</p>
+<p>西方传说：小孩子都是由鹳鸟送到父母那里的，蓝精灵也是被鹳鸟带到村庄去的。
+（Extra information）</p>
+<p>② Translated subtitle：哪个鹳如果被他骑着肯定要累死了。Original
+subtitle： I wouldn’t want to be the stork that brought that guy.</p>
+<p>Observations: Between subtitle pairs ① and ②,the subtitler added one
+line of extra information to explain a Western tale,namely,that children
+are delivered to their parents by storks,as are Smurfs.This added
+information is necessary,because in order to understand the next
+subtitle,②,the target audience should know the background story about
+the storks.</p>
+<p>However,fortunately,the above phenomena seldom appeared in the films
+under examination,and consequently,the rarity of these phenomena does
+not affect the overall quality of the translated film subtitles.But the
+film subtitlers should note the differences in length between English
+and Chinese expression.They can check their translation work by
+referencing the average value of difference between the subtitles’
+lengths in the two versions.According to Table 2,subtitles which have
+more than 3 characters’ difference could be considered too brief in
+translated Chinese to explain or transfer the meaning of the original
+English subtitles completely; consequently,the audience would not
+understand the meaning of the subtitle because of the loss of necessary
+information.</p>
+<p>For the other subtitles which have less than 3 characters’
+difference,which may constitute a very long subtitle in the Chinese
+translated version,even though the longer subtitle may offer more
+detailed information to the audience,because of the space and time
+limits in watching film subtitles,these translations become far less
+readable.</p>
+<p>As a result,intercultural communication between the audience and the
+film cannot successfully happen.Only one exception can make the second
+phenomenon workable; this is when translation course teachers use the
+films as a teaching resource.They will need to use “the slow play” and
+“pause” buttons frequently in their teaching to give students enough
+time to finish reading the information in the subtitles.In this case,the
+detailed explanations in the subtitles become part of a more
+substantial,successful knowledge transfer.</p>
+<p>To sum up,the readable length for a film subtitle is an important
+technical concern in the process of making films.In the translation
+between English and Chinese,the characteristics of Chinese characters
+mean that translated Chinese subtitles mainly need more space,but not
+necessarily more words than the original English ones.From a visual
+sense,Chinese subtitles look longer and require more time to be read;
+therefore,the subtitlers should be aware of this difference when
+pursuing the creation of readable Chinese subtitles in their translation
+work.One suggestion could be that,when subtitlers meet some long
+subtitles,they can use Chinese idioms or use the translation strategies
+of transcription,transfer,condensation,paraphrase to shorten the length
+of their translated subtitles.The use of Chinese idioms in the
+translation of E-C subtitles can effectively condense the length of the
+translated subtitle,compared with the corresponding literal
+translation.The use of transcription and transfer for proper nouns can
+also effectively shorten the length of the translated subtitles.For
+example:</p>
+<p>① Yeah,it’s all about swagger.You got to puff out that chest!</p>
+<p>帅气最重要，你要抬头挺胸！ 11 （Released translation involves in the
+use of one new word and one idiom）</p>
+<p>The most important is to be cool.You need rise your head and chest
+out.(Back translation)</p>
+<p>对，要很张扬的样子。你得挺起你的胸脯！16 （Direct translation）</p>
+<p>Yeah,it’s all about swagger.You got to puff out that chest! (Back
+translation)</p>
+<p>② So,Dr.Monteiro…(Original subtitle)</p>
+<p>所以，蒙特罗博士…… 7 （Released translation）</p>
+<p>So,Dr.Monteiro…(Back translation)</p>
+<p>所以，Monteiro博士…… 5 （Suggested translation with the strategy of
+transfer to the original English name of the character）</p>
+<p>So,Dr.Monteiro…(Back translation)</p>
+<p>(Rio 1,2011)</p>
+<p>I will discuss the effectiveness of these strategies with more
+detailed examples in the next two chapters.</p>
+<h6 id="阅读日期-2026年02月06日-2026年02月06日-共-1-天">阅读日期：
+2026年02月06日-2026年02月06日 共： 1 天</h6>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

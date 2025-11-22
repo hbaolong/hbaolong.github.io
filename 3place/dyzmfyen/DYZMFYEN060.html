@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="hbaolong@vip.qq.com" />
+  <title>电影字幕翻译EN:4.2.2　Constructing a Parallel Corpus</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">电影字幕翻译EN:4.2.2　Constructing a Parallel
+Corpus</h1>
+<p class="author">hbaolong@vip.qq.com</p>
+</header>
+<center>
+<a href="/3place/dyzmfyen">返回首页</a> <a
+href="/3place/dyzmfyen/mingju.html">本书名句</a> <a
+href="/3place/dyzmfyen/memo.html">本书注解</a> <a
+href="/3place/dyzmfyen/index_rich.html">丰富目录</a> <a
+href="/3place/dyzmfyen/index_readcal.html">同读日历</a> <a
+href="/3place/dyzmfyen/index_timeline.html">时间线</a> <a
+href="/3place/dyzmfyen/index_books.html">引用书籍</a> <a
+href="/3place/dyzmfyen/index_words.html">使用字频</a>
+<div id="wx_pic" style="margin:0 auto;display:none;">
+<img src='/img/logo.png'/>
+</div>
+</center>
+<h4 id="constructing-a-parallel-corpus">4.2.2　Constructing a Parallel
+Corpus</h4>
+<p>The corpus requires special apparatus (such as computer
+terminals,computer programmes or bespoke software) that need to be
+described as a part of the strategy for conducting research (ibid:
+82).In this research,I have chosen three software packages to evaluate
+these hypotheses: namely,UltraEdit,Microsoft Excel and ParaConc to work
+out the specific research results.</p>
+<p>Screenshot 1</p>
+<p>UltraEdit’s text editing features make editing lists and columns an
+intuitive experience,not the exercise in tedium it used to be.With
+features like multi-caret editing,column/block editing and
+multiselect,it is a simple text editor when I want it to be and a
+multi-cursor power editor when you need it to be.Since UltraEdit can
+identify all kinds of subtitle files,it is suitable for this
+research.The use of this software is simple: when you drag any kind of
+the above-mentioned type of subtitle file to the UltraEdit,the bilingual
+subtitle pairs appear with automatically labelled serial numbers.Then I
+only need simple arithmetic skills to obtain the total number of
+subtitle pairs in a film.What is more,when I select and click on a
+particular line of subtitle,UltraEdit can tell the numbers of words in
+this specific line.Since the first hypothesis in this research is about
+the testing of the length difference between the translated subtitles
+and their corresponding original subtitles,UltraEdit can help to work
+out each line of subtitle first,then put these data into Microsoft
+Excel,such that the result of length difference can be calculated by a
+manual set-up format such as “A-B=X”.</p>
+<p>Meanwhile,Microsoft Excel is arguably the most suitable tool for
+collating statistics amongst commonly used computer software.In order to
+assemble all the language data from the selected 15 films,Excel will
+naturally be the appropriate option for this activity.Moreover,its
+feature of “properties” helped me tailor Excel to meet her own specific
+requirements in the collation of statistics.For example,in order to
+calculate the length difference between the original English text and
+the subtitles translated into Chinese,I am able to create “remark I”
+with the name of “the length difference” in one additional column and
+use the preset formula as “sub (A,B)” (sub is one of the preset
+functions in Excel) to get the desired result.A more detailed
+description of the use of Excel in the collection of data in the corpus
+of this study is given in the following section of this
+chapter.Inevitably,since the research is concerned with E-C
+subtitling,the main limitations and appropriate translation strategies
+consequently become the key investigating objectives.According to the
+classification of the main types of corpora in translation studies,a
+parallel corpus that compares the original text with the translated
+subtitles is the most suitable.Therefore,Microsoft Excel and UltraEdit
+can help me to test the first hypothesis about the length difference as
+well as being a preparation to the next step of testing the second and
+third hypotheses about the use of culturally loaded expressions in
+Chinese translated subtitles.</p>
+<p>Lastly,the software of ParaConc is “a bilingual or multilingual
+concordancer that can be used in contrastive analyses,language
+learning,and translation studies/training” (http://www.paraconc.com/).In
+this research,I plan to test the frequency of the use of traditional
+expressions as well as the frequency of the use of popular expressions
+in the E-C animation films’ subtitle translation.The results of these
+frequencies can help me to identify my second and third hypotheses
+concerning whether the use of these two types of expressions can make
+the translated subtitles of English animation films more attractive
+among Chinese audiences and among young people in particular.</p>
+<p>After identifying the most suitable software to build up the specific
+corpus for this research,the detailed application procedures are as
+follows:</p>
+<ol type="a">
+<li>Chosen Linguistic Data</li>
+</ol>
+<p>The chosen texts constitute the first element in a corpus.In this
+study,15 English language texts and their corresponding Chinese language
+subtitles are brought together in a parallel corpus as the linguistic
+data.These data are classified respectively in terms of the types of
+traditional expressions and popular expressions.</p>
+<ol start="2" type="a">
+<li>Collecting Data</li>
+</ol>
+<p>Before establishing the corpus,with the recommendation by Huang,I had
+the chance to talk with two scholars,Liang and Xu,during a summer course
+I attended in 2014.These two scholars are wellknown professionals in the
+field of corpus study in China.</p>
+<p>In the course of the conversation about how to construct a suitable
+corpus for this specific study,they offered a great deal of useful
+advice that enabled the researcher to build up her corpus in a
+purposeful and focused way.The main elements of this advice were as
+follows: firstly,they encouraged the researcher to seek practical input
+from the Shanghai Translated Film Studio,the official company for
+translating exported films in China; secondly,they recommended naming
+this specific corpus as a “self-built parallel corpus for a special
+purpose”,in view of the usage and scale of the corpus; thirdly,in the
+next phase of the research work,they encouraged the researcher to
+continue inputting more data into the corpus in order to obtain more
+effective and objective data results; lastly,they recommended
+transforming the data results into value measurements with a practical
+application to help real-world subtitlers produce subtitles of a more
+effective and reliable quality.</p>
+<p>Given that the research objective is animation film subtitles,most of
+the raw linguistic data are spoken language rather than written
+language.Therefore,the source of these raw language materials is the
+films’ dialogues.Yang and Tang (2014: 174) advised to download all the
+relevant materials from the Sheshou website.This website is free of
+charge and offers bilingual subtitles (English and Chinese) of almost
+all the animated films released in China in the last 15 years or
+so.Therefore,the first raw materials for this research were the
+downloaded text-based film dialogues.When I inputted the names of the
+films on the website,specifying “E-C bilingual subtitles” as the key
+search request,she obtained two main subtitle categories from this
+website.One category was originally in PDF or CAJ format,while the other
+was in SSA or SRT format.In the search of the 15 selected film
+subtitles,most of them are in SRT format; I needed to transfer this
+format into plain text versions.Then,the previously introduced UltraEdit
+helps to open each type of the mentioned format of subtitle documents as
+the following example shows:</p>
+<p>Screenshot 2</p>
+<ol start="3" type="a">
+<li>Aligning the Bilingual Subtitles</li>
+</ol>
+<p>The alignment of dual languages in a corpus is useful to researchers
+as an efficient means of collecting data.This technology helps
+researchers align bilingual materials with the same meaning in the
+source and translated texts with its algorithm.The units of alignment
+are varied: namely,passage alignment,sentence alignment,phrase
+alignment,word alignment and even character alignment.The smaller the
+unit is,the most linguistic the information it offers.However,in this
+research project,because I want to verify my study hypotheses about the
+impact of cultural elements in subtitling,I have chosen to undertake
+sentence aligning.Sentence aligning can help me to observe the length
+difference between the source subtitle and the target subtitle.As the
+above UltraEdit sample shows,after the aligning of each pair of
+subtitles in the unit of sentence is accomplished,the use of Microsoft
+Excel can help to fulfil the further calculation.Moreover,the aligning
+in the sentence unit can also help me to test the frequency of the use
+of two kinds of culturally loaded expressions in my second and third
+hypotheses; therefore,the use of UltraEdit in this research is an
+appropriate choice.Besides,as a way of preparation and backup,I can also
+keep the raw materials in the form of “time code + original English
+original subtitle + Chinese translated subtitle” in 15 UltraEdit files
+as well.The advantages of taking this preparatory step are as follows:
+the time code helped the researcher to self-evaluate after finishing the
+task; I could check any pair or pairs of bilingual subtitles in terms of
+their synchronism,which means that only the frames match the
+subtitles,resulting in the audience being able to see the synchronism of
+pictures and dialogues.Then,putting the translated subtitles and the
+source subtitles into two lines,as well as locating them in the form of
+“text-align left”,helped the researcher to see the length difference
+between each pair immediately.The edition of Microsoft Excel in the
+corpus involves 15 files,each of which contains one particular set of
+film subtitles.The other edition of the Word document in the corpus also
+involves 15 files,as well as backup files separately containing the 15
+selected film subtitles.</p>
+<p>The following examples show a sample is kept in three kinds of
+software: the UltraEditor,Excel and Notepad:</p>
+<p>Screenshot 3</p>
+<p>Screenshot 4</p>
+<p>Screenshot 5</p>
+<p>Take the third pair of subtitles as an example.The time code shows
+that the dialogue started at the first minute and 31 seconds of the
+film,with the first subtitle lasting about two seconds,while there are
+seven words in the original subtitle and three characters in the
+translated subtitle.In a visual sense,because the structure of Chinese
+characters is relatively compact and independent,the length difference
+between the bilingual subtitles is not very obvious.But because the
+different word formations,Chinese characters look more complex than
+English characters; therefore,I estimate the reading time of Chinese
+subtitles should be longer than that of English ones.</p>
+<p>As the description above explains,the software of UltraEdit and
+Microsoft Excel can help me realize my testing of the first
+hypothesis,that is,the length comparison between each pair of Chinese
+translated subtitles and its corresponding English original text.Then,in
+order to test and calculate the frequency of two typical expressions in
+Chinese translated subtitles,that is,traditional expression and popular
+expression,another two hypotheses need to be tested,which concern
+whether these two types of expressions are effective in making the
+translated subtitles more attractive and interesting to audiences,and to
+identify the strategies used behind these expressions.In the
+process,another software package “paraconc”,is available to assist me in
+obtaining results about the “frequency” of each type of expression in
+the collected data.As the following example shows,I put the label “TE”
+(traditional expression) and “PE” (popular expression) at the end of
+each translated subtitle which is relevant to traditional expression
+or/and popular expression,then put the whole text of one film’s data
+into paraconc; the subtitles which are labelled will be shown in serial
+numbers.</p>
+<h6 id="阅读日期-2026年01月20日-2026年01月20日-共-1-天">阅读日期：
+2026年01月20日-2026年01月20日 共： 1 天</h6>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

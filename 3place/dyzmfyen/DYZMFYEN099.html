@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="hbaolong@vip.qq.com" />
+  <title>电影字幕翻译EN:7.1.1　Corpus-based Results</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">电影字幕翻译EN:7.1.1　Corpus-based Results</h1>
+<p class="author">hbaolong@vip.qq.com</p>
+</header>
+<center>
+<a href="/3place/dyzmfyen">返回首页</a> <a
+href="/3place/dyzmfyen/mingju.html">本书名句</a> <a
+href="/3place/dyzmfyen/memo.html">本书注解</a> <a
+href="/3place/dyzmfyen/index_rich.html">丰富目录</a> <a
+href="/3place/dyzmfyen/index_readcal.html">同读日历</a> <a
+href="/3place/dyzmfyen/index_timeline.html">时间线</a> <a
+href="/3place/dyzmfyen/index_books.html">引用书籍</a> <a
+href="/3place/dyzmfyen/index_words.html">使用字频</a>
+<div id="wx_pic" style="margin:0 auto;display:none;">
+<img src='/img/logo.png'/>
+</div>
+</center>
+<h4 id="corpus-based-results">7.1.1　Corpus-based Results</h4>
+<p>In the corpus,I put the 15 selected films’ dual language subtitles;
+the total number is 19,081 pairs,and the following table shows the
+frequency of popular expressions that appeared in each of the 15
+selected animation films:</p>
+<p>Screenshot 15</p>
+<p>(A sample calculation in ParaConc)</p>
+<p>The above screenshot illustrates the way of calculating the frequency
+of the use of popular expressions in the 15 selected films.Similar to
+the method of calculating traditional expressions in the last chapter,I
+gave the label “PE” (the abbreviation for popular expression) to each of
+the translated subtitles which involve the use of popular
+expressions,and then put them into a ParaConc,the frequency is
+displayed.After getting all the data of the 15 selected films,I make the
+following table to record all the data:</p>
+<p>Table 8</p>
+<p>Figure 5</p>
+<p>In the above figure,firstly,the film Rio 1 indicates the highest
+frequency of using popular expressions in translation; however,the film
+The Smurfs 1 shows the lowest frequency of using popular expressions
+among the 15 selected films.Secondly,the films which have the top five
+highest frequency of use of popular expressions in their translation
+have three points in common: a) all of these films have over 1,200 pairs
+of bilingual subtitles,except one with 954; b) all of these films used
+popular translation expressions in about 29% of the total number of
+translated subtitles; c) all of the films are relative newly released
+films compared with the rest of the selected films.(The Smurfs 2 and
+Turbo are from 2013; Madagascar 3 is from 2012; Rio 1,Alpha and Omega
+are from 2011.)</p>
+<p>The reasons for applying popular expressions may vary.I checked the
+data of these films and finds that the original English subtitles are
+commonly short and simple,so that there will be not much chance to use
+these typical expressions in translation.However,when I select the
+series of The Smurfs 1 and 2 to compare,I find that the frequency of
+using popular expressions in The Smurfs 2 is dramatically increased.</p>
+<p>Besides,the tendency of using popular expressions in English-Chinese
+subtitle translation now exists in three series of released films
+(including the above mentioned The Smurfs series) out of five in the 15
+selected films as:</p>
+<p>Table 9</p>
+<p>Although the other two series of films Cars 1 and 2,Rio 1 and 2
+showed the reverse situation,the difference value of the frequency
+between them was very small,unlike that of the above three series of
+films.In the above three series of films,the increasing tendency to use
+popular expressions in subtitle translation has mostly shown a dramatic
+increase; this closely reflects the other linguistic phenomena that have
+appeared in recent years in China.With the development of the high-tech
+informational media,particularly the Internet,Chinese people create more
+and more popular expressions in modern Chinese,and widely use these
+up-to-date expressions in their daily life.In these collected data,I
+find that the use of this type of expression becomes more and more
+frequent.In the five series of films,most of the series of films show
+this tendency,considering the similar characters,story lines and
+plots.The phenomenon of the increasing frequency of using popular
+expressions can validate the research hypothesis in this study
+concerning the extent to which the use of popular expressions in E-C
+subtitle translation is effective.The online grades in the next section
+to the series of films can also prove this point.Then,in the rest of
+four films,Frozen,Alpha and Omega,The Croods and Turbo,there are three
+out of four films that show a high frequency of using popular
+expressions in their subtitle translation (around 30%); the common point
+among them is all of these films are the recent three years’ released
+films.Concurrently,in the past three years in China,people pay more and
+more attention to the creation of popular language and prefer to use it
+in daily life.They regard the use of this kind of language is a kind of
+fashion and an easier way to communicate with young people.Therefore,the
+increasing frequency of using popular language in subtitle translation
+in English-language exported animation films in China can be seen as a
+kind of attitude to shorten the distance between the film and its target
+audience; it is,therefore,effective in arousing the audience’s interests
+in these films.This high-frequency use of popular expressions in the
+given data also highlights how the choices and preferences of the
+subtitlers and subtitling companies of these films can keep up with
+language development.</p>
+<p>However,because the content of the narratives is different and the
+number and type of screen characters is not same,it cannot necessarily
+be argued that the more culturally loaded expressions (including
+traditional ones and popular ones) are used,the more expressive and
+multi-layered a film is.Nevertheless,to use evocative culturally loaded
+expressions like popular ones wherever appropriate and possible in a
+given animated film is surely the correct choice,because this language
+has a stronger resonance for the audience,especially the young
+audience,because this is the real language they use in daily
+communication with their friends; these expressions echo what they have
+regularly heard and used.This sort of language will elicit more of a
+response from audiences than dryer,more literal and less evocative
+translation approaches,a perspective reiterated by the responses of the
+questionnaire respondents.</p>
+<p>Taking into account that Rio 1 was the first film in an established
+franchise and The Smurfs 1 was a relatively unknown quantity to Chinese
+audiences,this does raise the question of how important the quality of
+the translated language might be in influencing the acceptance of a film
+in a foreign market,in particular the extent to which the use of
+culturally loaded expressions (including the type of traditional
+expressions discussed in last chapter) in E-C subtitling will affect the
+popularity of the film.</p>
+<p>However,some contradictory phenomena also appear in this graph.Frozen
+received the highest approval rating from netizens,(on the basis of
+information from the following three websites in next section);
+however,the graph shows that its use of popular expressions is the
+second lowest frequency.Considering other elements such as the
+storyline,the film type (this is a musical film),the characters (the
+main characters are two girls),it is arguable that the approval rating
+by online voters will be influenced by these other elements as well.As
+far as the subtitling is concerned,I evaluated the Chinese translated
+subtitles,and there is rarely a problem or inaccuracy in them,the only
+flaw being the repetitive Chinese phrasing in some places which makes
+some of the subtitling unnecessarily long.Compared with the film Rio
+1,the film which had the highest frequency of using popular
+expressions,the story line of Frozen is relatively simple; as a musical
+animated film,nearly every main character has one or two songs to
+perform in the film.For some audience,frequent episodes may slightly
+interference in the process of watching a film; Frozen has fewer main
+characters than those in Rio 1.Furthermore,Rio 1 used popular
+expressions in over 33% of its subtitles — the highest frequency out of
+the films featuring this method in their subtitling — it did also occupy
+first place in the ranking of films as evaluated by Internet users (see
+the chart in the next section).Its ranking of the most popular film
+suggests that the quality of the translated language in subtitles is an
+inevitable criterion in evaluating a film; the quality of the translated
+language does arguably affect the reception of a film.Regardless of a
+film’s overall budget,if one of its individual components is
+demonstrably weak compared with the others,then a viewer’s enjoyment of
+the film will probably be compromised.Especially in translated films,if
+the language component — the translated subtitles — are not good enough
+with many translation mistakes or missed translations in many frames,the
+popularity of this translated film must be influenced,because some of
+the audience will not comprehend the film without getting enough
+information from the translated subtitles.For the audience members who
+have a certain level of English,it will be exasperating when they watch
+the inappropriate translations.</p>
+<h6 id="阅读日期-2026年02月28日-2026年02月28日-共-1-天">阅读日期：
+2026年02月28日-2026年02月28日 共： 1 天</h6>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

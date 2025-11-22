@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="hbaolong@vip.qq.com" />
+  <title>电影字幕翻译EN:4.2.1　Rationale of Corpus</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">电影字幕翻译EN:4.2.1　Rationale of Corpus</h1>
+<p class="author">hbaolong@vip.qq.com</p>
+</header>
+<center>
+<a href="/3place/dyzmfyen">返回首页</a> <a
+href="/3place/dyzmfyen/mingju.html">本书名句</a> <a
+href="/3place/dyzmfyen/memo.html">本书注解</a> <a
+href="/3place/dyzmfyen/index_rich.html">丰富目录</a> <a
+href="/3place/dyzmfyen/index_readcal.html">同读日历</a> <a
+href="/3place/dyzmfyen/index_timeline.html">时间线</a> <a
+href="/3place/dyzmfyen/index_books.html">引用书籍</a> <a
+href="/3place/dyzmfyen/index_words.html">使用字频</a>
+<div id="wx_pic" style="margin:0 auto;display:none;">
+<img src='/img/logo.png'/>
+</div>
+</center>
+<h4 id="rationale-of-corpus">4.2.1　Rationale of Corpus</h4>
+<p>Toury emphasizes the significance of empirical research by suggesting
+that:</p>
+<p>the introduction of empirical methods proved to be a true landmark in
+the evolution of the discipline…and the greatest contribution of
+experimentation lies precisely in its potential for shedding new light
+on the interdependencies of all factors which may act as constraints on
+translation and on the effects of these interdependencies on the
+process,its products,and the functions which any of them may serve in
+the recipient culture,and in increasing their predicative
+capacity.(1995: 221-222)</p>
+<p>Ma and Miao explain that an empirical model of translation studies
+should be improved through the observation,description and analysis of
+phenomena in translation,which not only leads to the empirical
+accumulation of knowledge,but also makes translation studies descriptive
+and multidisciplinary (2009: 336).Within current translation studies,an
+increasing number of scholars have shown interest in carrying out
+research into such issues as “translation universals” using corpus
+translation.From 1993 onwards,corpus linguistics has developed rapidly
+thanks to scholars such as Baker,Laviosa,Shlesinger and Zanettin et
+al.all of whom began to use corpora as a tool to investigate translation
+at both a descriptive and practical level (Baker 1993,Laviosa
+1998,Shlesinger 1998,Zanettin et al.2007).</p>
+<p>In current manifestations of translation research,there are four
+types of electronic corpora that are specifically useful:
+namely,parallel corpora,comparable corpora,monolingual corpora,and
+multilingual corpora.</p>
+<p>According to Baker,corpora applied in translation studies refer to
+“collections of texts held in machine-readable form and capable of being
+analysed automatically or semi-automatically in a variety of ways”
+(1995: 225).</p>
+<p>Corpus-based translation studies is a newly developed field based on
+the theories of corpus linguistics,linguistics and translation
+studies,and mainly focuses on investigating authentic bilingual language
+data by using computer applications to analyse and calculate probability
+and statistics.According to Wang,“the development of corpusbased study
+and bilingual corpora in particular,may help Descriptive Translation
+Studies develop in a deeper way” (2006: 6).</p>
+<p>Baker is considered to have been the first scholar to introduce the
+corpus as a research method in translation studies.She applied the
+research method of corpus linguistics study to the collection of a great
+deal of authentic translation materials,and in turn she described the
+nature of translation and even established many regulations and norms of
+translation.Baker pointed out that,with the development of corpus-based
+translation studies,scholars may use the comparison of the original
+language text and the translated language text to explain the
+communication role of the translated text in the nature of translating
+(1993: 243).Baker’s idea led scholars to certify,modify and clarify the
+nature of translation in order to better describe the nature of
+translation.</p>
+<p>Baker divided the corpora of translation studies into three main
+types: parallel corpora,multilingual corpora and comparable corpora
+according to different study purposes (1995: 230).Parallel corpora
+highlight the differences between the original text and the translated
+text at the level of lexis,sentences or paragraphs.The second type of
+corpora is multilingual corpus.It is normally a collection of two or
+more versions of text; they are all original texts as opposed to
+translated ones.This type of data collection can be regarded as a kind
+of pure “parallel corpora” that offers information to scholars and
+enables them to tell the difference in writing styles between each
+text,and helps them to set up criteria to evaluate the quality of
+translation.Last but not least,comparable corpora refer to two
+independent collections of texts in the same language; for example,texts
+originally produced in a given language (English),and texts translated
+into the same language (English).Scholars can test their theoretical
+hypotheses through vast computer-stored collections of comparable
+texts,which can easily reveal the distinctive linguistic features of
+translated texts.They can also offer learners a better comprehension,not
+only of target but also of source texts,allowing them to compare
+language and cultures in terminology,phraseology and textual
+conventions.Comparable corpora may help scholars to indicate the
+universality of translation.It is clear that the application of corpora
+not only supplies translation scholars with empirical research tools to
+investigate the nature of translation and describe the features of
+translated texts,but it also provides practical translators with an
+invaluable tool in their practical work.</p>
+<p>According to Ma and Miao,</p>
+<p>parallel corpora consist of original texts and their translated
+texts.They can be used to provide information on specific language-pair
+translational behaviour,to positcertain equivalence relationship between
+lexical items or syntactical structures in the two languages
+concerned,or to explore the phenomenon of translationese.They can also
+offer translation learners the possibility to observe what strategies
+translators appear to privilege,and to learn how to overcome specific
+translation problems based on their observation.(2009: 356)</p>
+<p>The acknowledged advantage of corpus is its “data-driven feature
+[that] helps researchers conduct their investigation from the bottom
+up,using concrete facts to make generalizations about languages”,which
+can be tested repeatedly in order to avoid subjectivity and randomness
+in the process of study (Baker,1996: 186).In particular,the use of
+corpus in translation studies,such as in relation to film subtitling,can
+enable researchers to find some peculiar semantic features,differences
+in the style of the texts or language customs,differences in the length
+between the original versions and the translated
+manifestations,co-occurrence,coherence,and even the distinctive features
+of using punctuation within the translation.However,the disadvantages
+are also obvious.On the one hand,the data collection process is labour
+and time intensive.Any researcher copiously needs to transfer the format
+of the selected texts in order to meet the requirements for collecting
+data in the corpus.On the other hand,most scholars tend to proceed with
+their research from the top down in order to find evidence in support of
+their abstract hypotheses (ibid: 186).Therefore,the use of corpus
+requires the researchers’ patience and intelligence.I think with full
+preparation works,these difficulties are resolvable.</p>
+<p>The development of parallel corpus studies in European countries is
+at a mature stage.Meanwhile,in China,the study of corpus linguistics and
+corpus translation has developed very rapidly in the last 10 years.The
+most common types of corpus undergoing development are general
+corpus,specialized corpus,synchronic corpus,diachronic corpus,and
+learner corpus (Liang et al.2013: 4-5).Although some of these corpora
+can be found online (e.g.,http://mtgroup1ict1ac1cn/corpus),these corpora
+rarely meet the needs of language scholars because of the limited data
+that is available to the public.Moreover,instances of E-C parallel
+corpora are even rarer,particularly in relation to the subtitling of
+animation films.</p>
+<p>In this research,I have opted to set up a self-built corpus in order
+to compare the original subtitles and the translated subtitles in my
+selection of 15 feature length animation films.The purpose behind this
+discussion of suitable translation strategies is to take a scientific
+approach with a view to identifying “subtitling universals”,particularly
+in relation to E-C subtitling.</p>
+<p>In the introduction chapter of this book,I explained my research
+purpose and hypotheses.I plan to test and evaluate all of these
+hypotheses using the chosen methodologies.The self-built corpus will
+help to evaluate the effectiveness of the first hypothesis (about the
+length difference between the translated Chinese subtitles and their
+corresponding English original texts) and analyse the proportions of the
+use of traditional expressions and popular expressions in the data.</p>
+<h6 id="阅读日期-2026年01月19日-2026年01月19日-共-1-天">阅读日期：
+2026年01月19日-2026年01月19日 共： 1 天</h6>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>
