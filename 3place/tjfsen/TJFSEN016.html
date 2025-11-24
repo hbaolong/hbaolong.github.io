@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="hbaolong@vip.qq.com" />
+  <title>统计反思EN:2.4. Making the model go</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">统计反思EN:2.4. Making the model go</h1>
+<p class="author">hbaolong@vip.qq.com</p>
+</header>
+<center>
+<a href="/3place/tjfsen">返回首页</a> <a
+href="/3place/tjfsen/mingju.html">本书名句</a> <a
+href="/3place/tjfsen/memo.html">本书注解</a> <a
+href="/3place/tjfsen/index_rich.html">丰富目录</a> <a
+href="/3place/tjfsen/index_readcal.html">同读日历</a> <a
+href="/3place/tjfsen/index_timeline.html">时间线</a> <a
+href="/3place/tjfsen/index_books.html">引用书籍</a> <a
+href="/3place/tjfsen/index_words.html">使用字频</a>
+<div id="wx_pic" style="margin:0 auto;display:none;">
+<img src='/img/logo.png'/>
+</div>
+</center>
+<h4 id="making-the-model-go">2.4. Making the model go</h4>
+<p>Once you have named all the variables and chosen definitions for
+each, a Bayesian model can update all of the prior distributions to
+their purely logical consequences: the posterior distribution. For every
+unique combination of data, likelihood, parameters, and prior, there is
+a unique posterior distribution. This distribution contains the relative
+plausibility of different parameter values, conditional on the data and
+model. The posterior distribution takes the form of the probability of
+the parameters, conditional on the data. In this case, it would be
+Pr(p|W, L), the probability of each possible value ofp, conditional on
+the specific W and L that we observed.</p>
+<p>2.4.1. Bayes’theorem. The mathematical definition of the posterior
+distribution arises from Bayes’ theorem. This is the theorem that gives
+Bayesian data analysis its name. But the theorem itself is a trivial
+implication of probability theory. Here’s a quick derivation of it, in
+the context of the globe tossing example. Really this will just be a
+re-expression of the garden of forking data derivation from earlier in
+the chapter. What makes it look different</p>
+<p>is that it will use the rules of probability theory to coax out the
+updating rule. But it is still just counting.</p>
+<p>The joint probability of the data W and L and any particular value
+ofp is:</p>
+<p>Pr(W, L, p) = Pr(W, L|p) Pr(p)</p>
+<p>This just says that the probability of W, L and p is the product of
+Pr(W, L|p) and the prior probability Pr(p). This is like saying that the
+probability of rain and cold on the same day is equal to the probability
+of rain, when it’s cold, times the probability that it’s cold. This much
+is just definition. But it’s just as true that:</p>
+<p>Pr(W, L, p) = Pr(p|W, L) Pr(W, L)</p>
+<p>All I’ve done is reverse which probability is conditional, on the
+right-hand side. It is still a true definition. It’s like saying that
+the probability of rain and cold on the same day is equal to the
+probability that it’s cold, when it’s raining, times the probability of
+rain. Compare this statement to the one in the previous paragraph.</p>
+<p>Now since both right-hand sides above are equal to the same thing,
+Pr(W, L, p), they are also equal to one another:</p>
+<p>Pr(W, L|p) Pr(p) = Pr(p|W, L) Pr(W, L)</p>
+<p>So we can now solve for the thing that we want, Pr(p|W, L):</p>
+<p>And this is Bayes’ theorem. It says that the probability of any
+particular value of p, consid- ering the data, is equal to the product
+of the relative plausibility of the data, conditional on p, and the
+prior plausibility of p, divided by this thing Pr(W, L), which I’ll call
+the average probability of the data. In word form:</p>
+<p>The average probability of the data, Pr(W, L), can be confusing. It
+is commonly called the “evidence” or the “average likelihood,” neither
+of which is a transparent name. The prob- ability Pr(W, L) is literally
+the average probability of the data. Averaged over what? Averaged over
+the prior. It’s job is just to standardize the posterior, to ensure it
+sums (integrates) to one. In mathematical form:</p>
+<p>The operator E means to take an expectation. Such averages are
+commonly called marginals in mathematical statistics, and so you may
+also see this same probability called a marginal likelihood. And the
+integral above just defines the proper way to compute the average over a
+continuous distribution of values, like the infinite possible values
+ofp.</p>
+<p>The key lesson is that the posterior is proportional to the product
+of the prior and the probability of the data. Why? Because for each
+specific value of p, the number of paths through the garden of forking
+data is the product of the prior number of paths and the new number of
+paths. Multiplication is just compressed counting. The average
+probability on the bottom just standardizes the counts so they sum to
+one. So while Bayes’ theorem looks complicated, because the relationship
+with counting paths is obscured, it just expresses the counting that
+logic demands.</p>
+<p>likelihood</p>
+<p>0</p>
+<p>Figure 2.6. The posterior distribution as a product of the prior
+distribu- tion and likelihood. Top: A flat prior constructs a posterior
+that is simply</p>
+<p>proportional to the likelihood. Middle: A step prior, assigning zero
+proba-</p>
+<p>bility to all values less than 0.5, results in a truncated posterior.
+Bottom: A peaked prior that shifts and skews the posterior, relative to
+the likelihood.</p>
+<p>Figure 2.6 illustrates the multiplicative interaction of a prior and
+a probability of data. On each row, a prior on the left is multiplied by
+the probability of data in the middle to produce a posterior on the
+right. The probability of data in each case is the same. The priors
+however vary. As a result, the posterior distributions vary.</p>
+<p>2.4.2. Motors. Recall that your Bayesian model is a machine, a
+figurative golem. It has built- in definitions for the likelihood, the
+parameters, and the prior. And then at its heart lies a motor that
+processes data, producing a posterior distribution. The action of this
+motor can be thought of as conditioning the prior on the data. As
+explained in the previous section, this conditioning is governed by the
+rules of probability theory, which defines a uniquely logical posterior
+for set of assumptions and observations.</p>
+<p>However, knowing the mathematical rule is often of little help,
+because many ofthe in- teresting models in contemporary science cannot
+be conditioned formally, no matter your skill in mathematics. And while
+some broadly useful models like linear regression can be conditioned
+formally, this is only possible if you constrain your choice of prior to
+special forms that are easy to do mathematics with. We’d like to avoid
+forced modeling choices of this kind, instead favoring conditioning
+engines that can accommodate whichever prior is most useful for
+inference.</p>
+<p>What this means is that various numerical techniques are needed to
+approximate the mathematics that follows from the definition of Bayes’
+theorem. In this book, you’ll meet three different conditioning engines,
+numerical techniques for computing posterior distri- butions:</p>
+<ol type="1">
+<li><p>Grid approximation</p></li>
+<li><p>Quadratic approximation</p></li>
+<li><p>Markov chain Monte Carlo (MCMC)</p></li>
+</ol>
+<p>There are many other engines, and new ones are being invented all the
+time. But the three you’ll get to know here are common and widely
+useful. In addition, as you learn them, you’ll also learn principles
+that will help you understand other techniques.</p>
+<p>Rethinking: How you fit the model is part of the model. Earlier in
+this chapter, I implicitly defined the model as a composite of a prior
+and a likelihood. That definition is typical. But in practical terms, we
+should also consider how the model is fit to data as part of the model.
+In very simple problems, like the globe tossing example that consumes
+this chapter, calculation of the posterior density is trivial and
+foolproof. In even moderately complex problems, however, the details of
+fitting the model to data force us to recognize that our numerical
+technique influences our inferences. This is because different mistakes
+and compromises arise under different techniques. The same model fit to
+the same data using different techniques may produce different answers.
+When something goes wrong, every piece of the machine may be suspect.
+And so our golems carry with them their updating engines, as much slaves
+to their engineering as they are to the priors and likelihoods we
+program into them.</p>
+<p>2.4.3. Grid approximation. One of the simplest conditioning
+techniques is grid approxi- mation. While most parameters are
+continuous, capable of taking on an infinite number of values, it turns
+out that we can achieve an excellent approximation of the continuous
+pos- terior distribution by considering only a finite grid of parameter
+values. At any particular</p>
+<p>R code 2.3</p>
+<p>R code 2.4</p>
+<p>value of a parameter, p′ , it’s a simple matter to compute the
+posterior probability: just mul- tiply the prior probability of p′ by
+the likelihood at p′ . Repeating this procedure for each value in the
+grid generates an approximate picture of the exact posterior
+distribution. This procedure is called grid approximation. In this
+section, you’ll see how to perform a grid approximation, using simple
+bits of R code.</p>
+<p>Grid approximation will mainly be useful as a pedagogical tool, as
+learning it forces the user to really understand the nature of Bayesian
+updating. But in most of your real modeling, grid approximation isn’t
+practical. The reason is that it scales very poorly, as the number of
+parameters increases. So in later chapters, grid approximation will fade
+away, to be replaced by other, more efficient techniques. Still, the
+conceptual value of this exercise will carry forward, as you graduate to
+other techniques.</p>
+<p>In the context of the globe tossing problem, grid approximation works
+extremely well. So let’s build a grid approximation for the model we’ve
+constructed so far. Here is the recipe:</p>
+<ol type="1">
+<li><p>Define the grid. This means you decide how many points to use in
+estimating the posterior, and then you make a list of the parameter
+values on the grid.</p></li>
+<li><p>Compute the value of the prior at each parameter value on the
+grid.</p></li>
+<li><p>Compute the likelihood at each parameter value.</p></li>
+<li><p>Compute the unstandardized posterior at each parameter value, by
+multiplying the prior by the likelihood.</p></li>
+<li><p>Finally, standardize the posterior, by dividing each value by the
+sum of all values. In the globe tossing context, here’s the code to
+complete all five of these steps:</p></li>
+</ol>
+<p>The above code makes a grid of only 20 points. To display the
+posterior distribution now:</p>
+<p>You’ll get the right-hand plot in Figure 2.7. Try sparser grids (5
+points) and denser grids (100 or 1000 points). The correct density for
+your grid is determined by how accurate you want your approximation to
+be. More points means more precision. In this simple example, you can go
+crazy and use 100,000 points, but there won’t be much change in
+inference after the first 100.</p>
+<p>5 points</p>
+<p>0.0 0.2 0.4 0.6 0.8 1.0 probability of water</p>
+<p>20 points</p>
+<p>0.0 0.2 0.4 0.6 0.8 1.0 probability of water</p>
+<p>Figure 2.7. Computing posterior distribution by grid approximation.
+In each plot, the posterior distribution for the globe toss data and
+model is approximated with a finite number of evenly spaced points. With
+only 5 points (left), the approximation is terrible. But with 20 points
+(right), the approximation is already quite good. Compare to the
+analytically solved, exact posterior distribution in Figure 2.5 (page
+30).</p>
+<p>Now to replicate the different priors in Figure 2.5, try these lines
+of code—one at a time—for the prior grid:</p>
+<p>The rest ofthe code remains the same.</p>
+<p>Overthinking: Vectorization. One of R’s useful features is that it
+makes working with lists of numbers almost as easy as working with
+single values. So even though both lines of code above say nothing about
+how dense your grid is, whatever length you chose for the vector p_grid
+will determine the length of the vector prior. In R jargon, the
+calculations above are vectorized, because they work on lists of values,
+vectors. In a vectorized calculation, the calculation is performed on
+each element of the input vector—p_grid in this case—and the resulting
+output therefore has the same length. In other computing environments,
+the same calculation would require a loop. R can also use loops, but
+vectorized calculations are typically faster. They can however be much
+harder to read, when you are starting out with R. Be patient, and you’ll
+soon grow accustomed to vectorized calculations.</p>
+<p>2.4.4. Quadratic approximation. We’ll stick with the grid
+approximation to the globe toss- ing posterior, for the rest ofthis
+chapter and the next. But before long you’ll have to resort to another
+approximation, one that makes stronger assumptions. The reason is that
+the num- ber of unique values to consider in the grid grows rapidly as
+the number of parameters in your model increases. For the
+single-parameter globe tossing model, it’s no problem to com- pute a
+grid of 100 or 1000 values. But for two parameters approximated by 100
+values each, that’s already 1002 = 10,000 values to compute. For 10
+parameters, the grid becomes many</p>
+<p>billions of values. These days, it’s routine to have models with
+hundreds or thousands of pa- rameters. The grid approximation strategy
+scales very poorly with model complexity, so it won’t get us very
+far.</p>
+<p>A useful approach is quadratic approximation. Under quite general
+conditions, the region near the peak of the posterior distribution will
+be nearly Gaussian—or “normal”—in shape. This means the posterior
+distribution can be usefully approximated by a Gaussian distribution. A
+Gaussian distribution is convenient, because it can be completely
+described by only two numbers: the location of its center (mean) and its
+spread (variance).</p>
+<p>A Gaussian approximation is called “quadratic approximation” because
+the logarithm of a Gaussian distribution forms a parabola. And a
+parabola is a quadratic function. So this approximation essentially
+represents any log-posterior with a parabola.</p>
+<p>We’ll use quadratic approximation for much of the first half of this
+book. For many of the most common procedures in applied
+statistics—linear regression, for example—the approx- imation works very
+well. Often, it is even exactly correct, not actually an approximation
+at all. Computationally, quadratic approximation is very inexpensive, at
+least compared to grid approximation and MCMC (discussed next). The
+procedure, which R will happily conduct at your command, contains two
+steps.</p>
+<ol type="1">
+<li><p>Find the posterior mode. This is usually accomplished by some
+optimization algo- rithm, a procedure that virtually “climbs” the
+posterior distribution, as if it were a mountain. The golem doesn’t know
+where the peak is, but it does know the slope under its feet. There are
+many well-developed optimization procedures, most of them more clever
+than simple hill climbing. But all of them try to find peaks.</p></li>
+<li><p>Once you find the peak of the posterior, you must estimate the
+curvature near the peak. This curvature is sufficient to compute a
+quadratic approximation of the entire posterior distribution. In some
+cases, these calculations can be done analyt- ically, but usually your
+computer uses some numerical technique instead.</p></li>
+</ol>
+<p>To compute the quadratic approximation for the globe tossing data,
+we’ll use a tool in the rethinking package: quap. We’re going to be
+using quap a lot in the first half of this book. It’s a flexible model
+fitting tool that will allow us to specify a large number of different
+“regression” models. So it’ll be worth trying it out right now. You’ll
+get a more thorough understanding of it later.</p>
+<p>To compute the quadratic approximation to the globe tossing data:</p>
+<p>To use quap, you provide a formula, a list of data. The formula
+defines the probability of the data and the prior. I’ll say much more
+about these formulas in 4. Now let’s see the output:</p>
+<p>Mean StdDev 5.5% 94.5%</p>
+<p>n = 9</p>
+<p>0.0 0.5 1.0 proportion water</p>
+<p>n = 18</p>
+<p>0.0 0.5 1.0 proportion water</p>
+<p>n = 36</p>
+<p>0.0 0.5 1.0 proportion water</p>
+<p>Figure 2.8. Accuracy of the quadratic approximation. In each plot,
+the exact posterior distribution is plotted in blue, and the quadratic
+approxima- tion is plotted as the black curve. Left: The globe tossing
+data with n = 9 tosses and w = 6 waters. Middle: Double the amount of
+data, with the same fraction of water, n = 18 and w = 12. Right: Four
+times as much data, n = 36 and w = 24.</p>
+<p>p 0.67 0.16 0.42 0.92</p>
+<p>The function precis presents a brief summary of the quadratic
+approximation. In this case, it shows the posterior mean value of p =
+0.67, which it calls the “Mean.” The curvature is labeled “StdDev” This
+stands for standard deviation. This value is the standard deviation of
+the posterior distribution, while the mean value is its peak. Finally,
+the last two values in the precis output show the 89% percentile
+interval, which you’ll learn more about in the next chapter. You can
+read this kind of approximation like: Assuming the posterior is
+Gaussian, it is maximized at 0.67, and its standard deviation is
+0.16.</p>
+<p>Since we already know the posterior, let’s compare to see how good
+the approximation is. I’ll use the analytical approach here, which uses
+dbeta. I won’t explain this calculation, but it ensures that we have
+exactly the right answer. You can find an explanation and derivation
+ofit in just about any mathematical textbook on Bayesian inference.</p>
+<p>You can see this plot (with a little extra formatting) on the left in
+Figure 2.8. The blue curve is</p>
+<p>he analytical posterior and the black curve is the quadratic
+approximation. The black curve</p>
+<p>does alright on its left side, but looks pretty bad on its right
+side. It even assigns positive</p>
+<p>probability top = 1, which we know is impossible, since we saw at
+least one land sample.</p>
+<p>As the amount of data increases, however, the quadratic approximation
+gets better. In the</p>
+<p>middle of Figure 2.8, the sample size is doubled to n = 18 tosses,
+but with the same fraction</p>
+<p>of water, so that the mode of the posterior is in the same place. The
+quadratic approximation looks better now, although still not great. At
+quadruple the data, on the right side of the figure, the two curves are
+nearly the same now.</p>
+<p>This phenomenon, where the quadratic approximation improves with the
+amount of data, is very common. It’s one of the reasons that so many
+classical statistical procedures are nervous about small samples: Those
+procedures use quadratic (or other) approximations that are only known
+to be safe with infinite data. Often, these approximations are useful
+with less than infinite data, obviously. But the rate of improvement as
+sample size increases varies greatly depending upon the details. In some
+models, the quadratic approximation can remain terrible even with
+thousands of samples.</p>
+<p>Using the quadratic approximation in a Bayesian context brings with
+it all the same con- cerns. But you can always lean on some algorithm
+other than quadratic approximation, if you have doubts. Indeed, grid
+approximation works very well with small samples, because in such cases
+the model must be simple and the computations will be quite fast. You
+can also use MCMC, which is introduced next.</p>
+<p>Rethinking: Maximum likelihood estimation. The quadratic
+approximation, either with a uniform prior or with a lot of data, is
+often equivalent to a maximum likelihood estimate (MLE) and its standard
+error. The MLE is a very common non-Bayesian parameter estimate. This
+correspon- dence between a Bayesian approximation and a common
+non-Bayesian estimator is both a blessing and a curse. It is a blessing,
+because it allows us to re-interpret a wide range of published
+non-Bayesian model fits in Bayesian terms. It is a curse, because
+maximum likelihood estimates have some curious drawbacks, and the
+quadratic approximation can share them. We’ll explore these drawbacks in
+later chapters, and they are one of the reasons we’ll turn to Markov
+chain Monte Carlo for the second half of the book.</p>
+<p>Overthinking: The Hessians are coming. Sometimes it helps to know
+more about how the quadratic approximation is computed. In particular,
+the approximation sometimes fails. When it does, chances are you’ll get
+a confusing error message that says something about the “Hessian.”
+Students of world history may know that the Hessians were German
+mercenaries hired by the British in the eighteenth century to do various
+things, including fight against the American revolutionary George
+Washington. These mercenaries are named after a region ofwhat is now
+central Germany, Hesse.</p>
+<p>The Hessian that concerns us here has little to do with mercenaries.
+It is named after mathe- matician Ludwig Otto Hesse (1811–1874). A
+Hessian is a square matrix of second derivatives. It is used for many
+purposes in mathematics, but in the quadratic approximation it is second
+derivatives of the log of posterior probability with respect to the
+parameters. It turns out that these derivatives are sufficient to
+describe a Gaussian distribution, because the logarithm of a Gaussian
+distribution is just a parabola. Parabolas have no derivatives beyond
+the second, so once we know the center of the parabola (the posterior
+mode) and its second derivative, we know everything about it. And in-
+deed the second derivative (with respect to the outcome) of the
+logarithm of a Gaussian distribution is proportional to its inverse
+squared standard deviation (its “precision”: page 76). So knowing the
+standard deviation tells us everything about its shape.</p>
+<p>The standard deviation is typically computed from the Hessian, so
+computing the Hessian is nearly always a necessary step. But sometimes
+the computation goes wrong, and your golem will choke while trying to
+compute the Hessian. In those cases, you have several options. Not all
+hope is lost. But for now it’s enough to recognize the term and
+associate it with an attempt to find the standard deviation for a
+quadratic approximation.</p>
+<p>2.4.5. Markov chain Monte Carlo. There are lots of important model
+types, like multilevel (mixed-effects) models, for which neither grid
+approximation nor quadratic approximation is always satisfactory. Such
+models may have hundreds or thousands or tens-of-thousands of
+parameters. Grid approximation routinely fails here, because it just
+takes too long—the Sun will go dark before your computer finishes the
+grid. Special forms of quadratic approx- imation might work, if
+everything is just right. But commonly, something is not just right.
+Furthermore, multilevel models do not always allow us to write down a
+single, unified func- tion for the posterior distribution. This means
+that the function to maximize (when finding the MAP) is not known, but
+must be computed in pieces.</p>
+<p>As a result, various counterintuitive model fitting techniques have
+arisen. The most pop- ular of these is Markov chain Monte Carlo (MCMC),
+which is a family of conditioning engines capable of handling highly
+complex models. It is fair to say that MCMC is largely re- sponsible for
+the insurgence of Bayesian data analysis that began in the 1990s. While
+MCMC is older than the 1990s, affordable computer power is not, so we
+must also thank the en- gineers. Much later in the book (9), you’ll meet
+simple and precise examples of MCMC model fitting, aimed at helping you
+understand the technique.</p>
+<p>The conceptual challenge with MCMC lies in its highly non-obvious
+strategy. Instead of attempting to compute or approximate the posterior
+distribution directly, MCMC techniques merely draw samples from the
+posterior. You end up with a collection of parameter values, and the
+frequencies of these values correspond to the posterior plausibilities.
+You can then build a picture of the posterior from the histogram of
+these samples.</p>
+<p>We nearly always work directly with these samples, rather than first
+constructing some mathematical estimate from them. And the samples are
+in many ways more convenient than having the posterior, because they are
+easier to think with. And so that’s where we turn in the next chapter,
+to thinking with samples.</p>
+<p>Overthinking: Monte Carlo globe tossing. If you are eager to see MCMC
+in action, a working Markov chain for the globe tossing model does not
+require much code. The following R code is sufficient for a MCMC
+estimate of the posterior:</p>
+<p>The values in p are samples from the posterior distribution. To
+compare to the analytical posterior:</p>
+<p>It’s weird. But it works. I’ll explain this algorithm, the Metropolis
+algorithm, in 9.</p>
+<p>R code 2.8</p>
+<p>R code 2.9</p>
+<h6 id="阅读日期-2025年12月09日-2025年12月09日-共-1-天">阅读日期：
+2025年12月09日-2025年12月09日 共： 1 天</h6>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

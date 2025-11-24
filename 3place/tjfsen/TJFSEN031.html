@@ -1,0 +1,1077 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="hbaolong@vip.qq.com" />
+  <title>统计反思EN:5.1. Spurious association</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">统计反思EN:5.1. Spurious association</h1>
+<p class="author">hbaolong@vip.qq.com</p>
+</header>
+<center>
+<a href="/3place/tjfsen">返回首页</a> <a
+href="/3place/tjfsen/mingju.html">本书名句</a> <a
+href="/3place/tjfsen/memo.html">本书注解</a> <a
+href="/3place/tjfsen/index_rich.html">丰富目录</a> <a
+href="/3place/tjfsen/index_readcal.html">同读日历</a> <a
+href="/3place/tjfsen/index_timeline.html">时间线</a> <a
+href="/3place/tjfsen/index_books.html">引用书籍</a> <a
+href="/3place/tjfsen/index_words.html">使用字频</a>
+<div id="wx_pic" style="margin:0 auto;display:none;">
+<img src='/img/logo.png'/>
+</div>
+</center>
+<h4 id="spurious-association">5.1. Spurious association</h4>
+<p>Let’s leave waffles behind, at least for the moment. An example that
+is easier to under- stand is the correlation between divorce rate and
+marriage rate (Figure 5.2). The rate at which adults marry is a great
+predictor of divorce rate, as seen in the left-hand plot in the figure.
+But does marriage cause divorce? In a trivial sense it obviously does:
+One cannot get a divorce without first getting married. But there’s no
+reason high marriage rate must cause more divorce. It’s easy to imagine
+high marriage rate indicating high cultural valuation of marriage and
+therefore being associated with low divorce rate.</p>
+<p>Another predictor associated with divorce is the median age at
+marriage, displayed in the right-hand plot in Figure 5.2. Age at
+marriage is also a good predictor of divorce rate— higher age at
+marriage predicts less divorce. But there is no reason this has to be
+causal, either, unless age at marriage is very late and the spouses do
+not live long enough to get a divorce.</p>
+<p>Let’s load these data and standardize the variables of interest:</p>
+<p>R code 5.2</p>
+<p>R code 5.3</p>
+<p>R code 5.4</p>
+<p>You can replicate the right-hand plot in the figure using a linear
+regression model:</p>
+<p>Di ~ Normal(µi , σ) µi = α + βAA i</p>
+<p>α ~ Normal(0, 0.2) βA ~ Normal(0, 0.5) σ ~ Exponential(1)</p>
+<p>Di is the standardized (zero centered, standard deviation one)
+divorce rate for State i, and Ai is State i’s standardized median age at
+marriage. The linear model structure should be familiar from the
+previous chapter.</p>
+<p>What about those priors? Since the outcome and the predictor are both
+standardized, the intercept α should end up very close to zero. What
+does the prior slope βA imply? If βA = 1, that would imply that a change
+of one standard deviation in age at marriage is associated likewise with
+a change of one standard deviation in divorce. To know whether or not
+that is a strong relationship, you need to know how big a standard
+deviation of age at marriage is:</p>
+<p>[1] 1.24363</p>
+<p>So when βA = 1, a change of 1.2 years in median age at marriage is
+associated with a full standard deviation change in the outcome
+variable. That seems like an insanely strong rela- tionship. The prior
+above thinks that only 5% of plausible slopes are more extreme than 1.
+We’ll simulate from these priors in a moment, so you can see how they
+look in the outcome space.</p>
+<p>To compute the approximate posterior, there are no new code tricks or
+techniques here. But I’ll add comments to help explain the mass of code
+to follow.</p>
+<p>To simulate from the priors, we can use extract.prior and link as in
+the previous chapter. I’ll plot the lines over the range of 2 standard
+deviations for both the outcome and predictor. That’ll cover most of the
+possible range of both variables.</p>
+<p>Figure 5.3. Plausible regression lines implied by the priors in m5.1.
+These are weakly infor- mative priors in that they allow some implusi-
+bly strong relationships but generally bound the lines to possible
+ranges ofthe variables.</p>
+<p>-2 -1</p>
+<p>Median age marriage (std)</p>
+<p>Figure 5.3 displays the result. You may wish to try some vaguer,
+flatter priors and see how quickly the prior regression lines become
+ridiculous.</p>
+<p>Now for the posterior predictions. The procedure is exactly like the
+examples from the previous chapter: link, then summarize with mean and
+PI, and then plot.</p>
+<p>If you inspect the precis output, you’ll see that posterior for βA is
+reliably negative, as seen in Figure 5.2.</p>
+<p>You can fit a similar regression for the relationship in the
+left-hand plot:</p>
+<p>But merely comparing parameter means between different bivariate
+regressions is no way to decide which predictor is better. Both of these
+predictors could provide independent value, or they could be redundant,
+or one could eliminate the value of the other.</p>
+<p>R code 5.5</p>
+<p>R code 5.6</p>
+<p>To make sense of this, we’re going to have to think causally. And
+then, only after we’ve done some thinking, a bigger regression model
+that includes both age at marriage and mar- riage rate will help us.</p>
+<p>5.1.1. Think before you regress. There are three observed variables
+in play: divorce rate (D), marriage rate (M), and the median age at
+marriage (A) in each State. The pattern we see in the previous two
+models and illustrated in Figure 5.2 is symptomatic of a situation in
+which only one of the predictor variables, A in this case, has a causal
+impact on the outcome, D, even though both predictor variables are
+strongly associated with the outcome.</p>
+<p>To understand this better, it is helpful to introduce a particular
+type of causal graph known as a DAG, short for directed acyclic graph.
+Graph means it is nodes and con- nections. Directed means the
+connections have arrows that indicate directions of causal in- fluence.
+And acyclic means that causes do not eventually flow back on themselves.
+A DAG is a way of describing qualitative causal relationships among
+variables. It isn’t as detailed as a full model description, but it
+contains information that a purely statistical model does not. Unlike a
+statistical model, a DAG will tell you the consequences of intervening
+to change a variable. But only if the DAG is correct. There is no
+inference without assumption.</p>
+<p>The full framework for using DAGs to design and critique statistical
+models is compli- cated. So instead of smothering you in the whole
+framework right now, I’ll build it up one example at a time. By the end
+of the next chapter, you’ll have a set of simple rules that let you
+accomplish quite a lot of criticism. And then other applications will be
+introduced in later chapters.</p>
+<p>Let’s start with the basics. Here is a possible DAG for our divorce
+rate example:</p>
+<p>A W</p>
+<p>D</p>
+<p>If you want to see the code to draw this, see the Overthinking box at
+the end of this section. It may not look like much, but this type of
+diagram does a lot of work. It represents a heuristic causal model. Like
+other models, it is an analytical assumption. The symbols A, M, and D
+are our observed variables. The arrows show directions of influence.
+What this DAG says is:</p>
+<ol type="1">
+<li><p>A directly influences D</p></li>
+<li><p>M directly influences D</p></li>
+<li><p>A directly influences M</p></li>
+</ol>
+<p>These statements can then have further implications. In this case,
+age of marriage influences divorce in two ways. First it has a direct
+effect, A → D. Perhaps a direct effect would arise because younger
+people change faster than older people and are therefore more likely to
+grow incompatible with a partner. Second, it has an indirect effect by
+influencing the marriage rate, which then influences divorce, A → M → D.
+If people get married earlier, then the marriage rate may rise, because
+there are more young people. Consider for example ifan evil dictator
+forced everyone to marry at age 65. Since a smaller fraction of the
+population lives to 65 than to 25, forcing delayed marriage will also
+reduce the marriage rate. If marriage rate itself has any direct effect
+on divorce, maybe by making marriage more or less normative, then some
+of that direct effect could be the indirect effect of age at
+marriage.</p>
+<p>To infer the strength of these different arrows, we need more than
+one statistical model. Model m5.1, the regression of D onA, tells us
+only that the total influence of age at marriage is strongly negative
+with divorce rate. The “total” here means we have to account for every
+path from A to D. There are two such paths in this graph: A → D, a
+direct path, andA → M → D, an indirect path. In general, it is possible
+that a variable like A has no direct effect at all on an outcome like D.
+It could still be associated with D entirely through the indirect path.
+That type of relationship is known as mediation, and we’ll have another
+example later.</p>
+<p>As you’ll see however, the indirect path does almost no work in this
+case. How can we show that? We know from m5.2 that marriage rate is
+positively associated with divorce rate. But that isn’t enough to tell
+us that the path M → D is positive. It could be thatthe association
+between M and D arises entirely from A’s influence on both M and D. Like
+this:</p>
+<p>A</p>
+<p>D</p>
+<p>This DAG is also consistent with the posterior distributions of
+models m5.1 and m5.2. Why? Because both M and D “listen” to A. They have
+information from A. So when you inspect the association between D and M,
+you pick up that common information that they both got from listening to
+A. You’ll see a more formal way to deduce this, in the next chapter.</p>
+<p>So which is it? Is there a direct effect of marriage rate, or rather
+is age at marriage just driving both, creating a spurious correlation
+between marriage rate and divorce rate? To find out, we need to consider
+carefully what each DAG implies. That’s what’s next.</p>
+<p>Rethinking: What’s a cause? Questions of causation can become bogged
+down in philosophical debates. These debates are worth having. But they
+don’t usually intersect with statistical concerns. Knowing a cause in
+statistics means being able to correctly predict the consequences of an
+interven- tion. There are contexts in which even this is complicated.
+For example, it isn’t possible to directly change someone’s body weight.
+Changing someone’s body weight would mean intervening on an- other
+variable, like diet, and that variable would have other causal effects
+in addition. But being underweight can still be a legitimate cause of
+disease, even when we can’t intervene on it directly.</p>
+<p>Overthinking: Drawing a DAG. There are several packages for drawing
+and analyzing DAGs. In this book, we’ll use dagitty. It is both an R
+package and something you can use in your internet browser:</p>
+<p>http://www.dagitty.net/. To draw the simple DAG you saw earlier in
+this section:</p>
+<p>The -&gt; arrows in the DAG definition indicate directions of
+influence. The coordinates function lets you arrange the plot as you
+like.</p>
+<p>5.1.2. Testable implications. How do we use data to compare multiple,
+plausible causal models? The first thing to consider is the testable
+implications of each model. Con- sider the two DAGs we have so far
+considered:</p>
+<p>A W A</p>
+<p>D</p>
+<p>Any DAG may imply that some variables are independent of others under
+certain condi- tions. These are the model’s testable implications, its
+conditional independencies. Con- ditional independencies come in two
+forms. First, they are statements of which variables should be
+associated with one another (or not) in the data. Second, they are
+statements of which variables become dis-associated when we condition on
+some other set of variables.</p>
+<p>What does “conditioning” mean? Informally, conditioning on a variable
+Z means learn- ing its value and then asking if X adds any additional
+information about Y. If learning X doesn’t give you any more information
+about Y, then we might say that Y is independent of X conditional on Z.
+This conditioning statement is sometimes written as: Y 丄丄 X|Z. This is
+very weird notation and any feelings of annoyance on your part are
+justified. We’ll work with this concept a lot, so don’t worry if it
+doesn’t entirely make sense right now. You’ll see examples very
+soon.</p>
+<p>Let’s consider conditional independence in the context of the divorce
+example. What are the conditional independencies of the DAGs at the top
+of the page? How do we derive these conditional independencies? Finding
+conditional independencies is not hard, but also not at all obvious.
+With a little practice, it becomes very easy. The more general rules can
+wait until the next chapter. For now, let’s consider each DAG in turn
+and inspect the possibilities.</p>
+<p>For the DAG on the left above, the one with three arrows, first note
+that every pair of variables is correlated. This is because there is a
+causal arrow between every pair. These arrows create correlations. So
+before we condition on anything, everything is associated with
+everything else. This is already a testable implication. We could write
+it:</p>
+<p>D /丄丄 A D /丄丄 M A /丄丄 M</p>
+<p>That /丄丄 thing means “not independent of.” If we now look in the
+data and find that any pair of variables are not associated, then
+something is wrong with the DAG (assuming the data are correct). In
+these data, all three pairs are in fact strongly associated. Check for
+yourself. You can use cor to measure simple correlations. Correlations
+are sometimes terrible measures of association—many different patterns
+of association with different implications can produce the same
+correlation. But they do honest work in this case.</p>
+<p>Are there any other testable implications for the first DAG above?
+No. It will be easier to see why, if we slide over to consider the
+second DAG, the one in which M has no influence on D. In this DAG, it is
+still true that all three variables are associated with one another. A
+is associated with D and M because it influences them both. And D and M
+are associated with one another, because M influences them both. They
+share a cause, and this leads them to be correlated with one another
+through that cause. But suppose we condition on A. All of the
+information in M that is relevant to predicting D is in A. So once we’ve
+conditioned on A, M tells us nothing more about D. So in the second DAG,
+a testable implication is that D is independent of M, conditional on A.
+In other words, D 丄丄 M|A. The same thing does not</p>
+<p>happen with the first DAG. Conditioning on A does not make D
+independent of M, because M really influences D all by itself in this
+model.</p>
+<p>In the next chapter, I’ll show you the general rules for deducing
+these implications. For now, the dagitty package has the rules built in
+and can find the implications for you. Here’s the code to define the
+second DAG and display the implied conditional independencies.</p>
+<p>D _ ||_ M | A</p>
+<p>The first DAG has no conditional independencies. You can define it
+and check with this:</p>
+<p>There are no conditional independencies, so there is no output to
+display.</p>
+<p>Let’s try to summarize. The testable implications of the first DAG
+are that all pairs of vari- ables should be associated, whatever we
+condition on. The testable implications of the second DAG are that all
+pairs of variables should be associated, before conditioning on
+anything, but that D and M should be independent after conditioning on
+A. So the only implication that differs between these DAGs is the last
+one: D 丄丄 M|A.</p>
+<p>To test this implication, we need a statistical model that conditions
+on A, so we can see whether that renders D independent of M. And that is
+what multiple regression helps with. It can address a useful descriptive
+question:</p>
+<p>Is there any additional value in knowing a variable, once I already
+know all of the other predictor variables?</p>
+<p>So for example once you fit a multiple regression to predict divorce
+using both marriage rate and age at marriage, the model addresses the
+questions:</p>
+<ol type="1">
+<li><p>After I already know marriage rate, what additional value is
+there in also knowing age at marriage?</p></li>
+<li><p>After I already know age at marriage, what additional value is
+there in also knowing marriage rate?</p></li>
+</ol>
+<p>The parameter estimates corresponding to each predictor are the
+(often opaque) answers to these questions. The questions above are
+descriptive, and the answers are also descriptive. It is only the
+derivation of the testable implications above that gives these
+descriptive results a causal meaning. But that meaning is still
+dependent upon believing the DAG.</p>
+<p>Rethinking: “Control” is out of control. Very often, the question
+just above is spoken of as “statisti- cal control,” as in controlling
+for the effect of one variable while estimating the effect of another.
+But this is sloppy language, as it implies too much. Statistical control
+is quite different from experimental control, as we’ll explore more in
+the next chapter. The point here isn’t to police language. Instead, the
+point is to observe the distinction between small world and large world
+interpretations. Since most people who use statistics are not
+statisticians, sloppy language like “control” can promote a sloppy
+culture of interpretation. Such cultures tend to overestimate the power
+of statistical methods, so re- sisting them can be difficult.
+Disciplining your own language may be enough. Disciplining another’s
+language is hard to do, without seeming like a fastidious scold, as this
+very box must seem.</p>
+<p>5.1.3. Multiple regression notation. Multiple regression formulas
+look a lot like the poly- nomial models at the end of the previous
+chapter—they add more parameters and variables to the definition of µi.
+The strategy is straightforward:</p>
+<ol type="1">
+<li><p>Nominate the predictor variables you want in the linear model of
+the mean.</p></li>
+<li><p>For each predictor, make a parameter that will measure its
+conditional association with the outcome.</p></li>
+<li><p>Multiply the parameter by the variable and add that term to the
+linear model.</p></li>
+</ol>
+<p>Examples are always necessary, so here is the model that predicts
+divorce rate, using both marriage rate and age at marriage.</p>
+<p>Di ~ Normal(µi , σ)</p>
+<p>α ~ Normal(0, 0.2)</p>
+<p>βM ~ Normal(0, 0.5)</p>
+<p>βA ~ Normal(0, 0.5)</p>
+<p>σ ~ Exponential(1)</p>
+<p>You can use whatever symbols you like for the parameters and
+variables, but here I’ve chosen R for marriage rate and A for age at
+marriage, reusing these symbols as subscripts for the corresponding
+parameters. But feel free to use whichever symbols reduce the load on
+your own memory.</p>
+<p>So what does it mean to assume µi = α+βMMi +βAA i? Mechanically, it
+means that the expected outcome for any State with marriage rate Mi and
+median age at marriage Ai is the sum of three independent terms. If you
+are like most people, this is still pretty mysterious. The mechanical
+meaning of the equation doesn’t map onto a unique causal meaning. Let’s
+take care of the mechanical bits first, before returning to
+interpretation.</p>
+<p>Overthinking: Compact notation and the design matrix. Often, linear
+models are written using a compact form like:</p>
+<p>where j is an index over predictor variables and n is the number of
+predictor variables. This may be read as the mean is modeled as the sum
+ofan intercept and an additive combination of the products of parameters
+and predictors. Even more compactly, using matrix notation:</p>
+<p>m = Xb</p>
+<p>where m is a vector of predicted means, one for each row in the data,
+b is a (column) vector of param- eters, one for each predictor variable,
+and X is a matrix. This matrix is called a design matrix. It has as many
+rows as the data, and as many columns as there are predictors plus one.
+So X is basically a data frame, but with an extra first column. The
+extra column is filled with 1s. These 1s are multiplied by the first
+parameter, which is the intercept, and so return the unmodified
+intercept. When X is matrix-multiplied by b, you get the predicted
+means. In R notation, this operation is X %*% b.</p>
+<p>We’re not going to use the design matrix approach. But it’s good to
+recognize it, and sometimes it can save you a lot of work. For example,
+for linear regressions, there is a nice matrix formula for the maximum
+likelihood (or least squares) estimates. Most statistical software
+exploits that formula.</p>
+<p>5.1.4. Approximating the posterior. To fit this model to the divorce
+data, we just expand the linear model. Here’s the model definition
+again, with the code on the right-hand side:</p>
+<p>Di ~ Normal(µi , σ)</p>
+<p>D ~ dnorm(mu,sigma)</p>
+<p>µi = α + βMMi + βAA i</p>
+<p>mu &lt;- a + bM<em>M + bA</em>A</p>
+<p>α ~ Normal(0, 0.2)</p>
+<p>a ~ dnorm(0,0.2)</p>
+<p>βM ~ Normal(0, 0.5)</p>
+<p>bM ~ dnorm(0,0.5)</p>
+<p>βA ~ Normal(0, 0.5)</p>
+<p>bA ~ dnorm(0,0.5)</p>
+<p>σ ~ Exponential(1)</p>
+<p>sigma ~ dexp(1)</p>
+<p>And here is the quap code to approximate the posterior
+distribution:</p>
+<p>m5.3 &lt;- quap(</p>
+<p>alist(</p>
+<p>D ~ dnorm( mu , sigma ) ,</p>
+<p>mu &lt;- a + bM<em>M + bA</em>A ,</p>
+<p>a ~ dnorm( 0 , 0.2 ) ,</p>
+<p>bM ~ dnorm( 0 , 0.5 ) ,</p>
+<p>bA ~ dnorm( 0 , 0.5 ) ,</p>
+<p>sigma ~ dexp( 1 )</p>
+<p>) , data = d )</p>
+<p>precis( m5.3 )</p>
+<p>a</p>
+<p>bM</p>
+<p>bA</p>
+<p>sigma</p>
+<p>mean</p>
+<p>0.00</p>
+<p>-0.07</p>
+<p>-0.61</p>
+<p>0.79</p>
+<p>5.5%</p>
+<p>-0.16</p>
+<p>-0.31</p>
+<p>-0.85</p>
+<p>0.66</p>
+<p>94.5%</p>
+<p>0.16</p>
+<p>0.18</p>
+<p>-0.37</p>
+<p>0.91</p>
+<p>The posterior mean for marriage rate, bM, is now close to zero, with
+plenty of probability of both sides of zero. The posterior mean for age
+at marriage, bA, is essentially unchanged. It will help to visualize the
+posterior distributions for all three models, focusing just on the slope
+parameters βA and βM:</p>
+<p>bA</p>
+<p>m5.3</p>
+<p>m5.2</p>
+<p>m5.1</p>
+<p>bM</p>
+<p>m5.3</p>
+<p>m5.2</p>
+<p>m5.1</p>
+<p>-0.5</p>
+<p>The posterior means are shown by the points and the 89% compatibility
+intervals by the solid horizontal lines. Notice how bA doesn’t move,
+only grows a bit more uncertain, while</p>
+<p>bM is only associated with divorce when age at marriage is missing
+from the model. You can interpret these distributions as saying:</p>
+<p>Once we know median age at marriage for a State, there is little or
+no addi- tional predictive power in also knowing the rate of marriage in
+that State.</p>
+<p>In that weird notation, D 丄丄 M|A. This tests the implication of the
+second DAG from earlier. Since the first DAG did not imply this result,
+it is out.</p>
+<p>Note that this does not mean that there is no value in knowing
+marriage rate. Consistent with the earlier DAG, if you didn’t have
+access to age-at-marriage data, then you’d definitely find value in
+knowing the marriage rate. M is predictive but not causal. Assuming
+there are no other causal variables missing from the model (more on that
+in the next chapter), this implies there is no important direct causal
+path from marriage rate to divorce rate. The association between
+marriage rate and divorce rate is spurious, caused by the influence of
+age of marriage on both marriage rate and divorce rate. I’ll leave it to
+the reader to investigate the relationship between age at marriage, A,
+and marriage rate, M, to complete the picture.</p>
+<p>But how did model m5.3 achieve the inference that marriage rate adds
+no additional information, once we know age at marriage? Let’s draw some
+pictures.</p>
+<p>Overthinking: Simulating the divorce example. The divorce data are
+real data. See the sources in ?WaffleDivorce. But it is useful to
+simulate the kind of causal relationships shown in the previous DAG: M ←
+A → D. Every DAG implies a simulation, and such simulations can help us
+design models to correctly infer relationships among variables. In this
+case, you just need to simulate each of the three variables:</p>
+<p>Now if you use these variables in models m5.1, m5.2, and m5.3, you’ll
+see the same pattern of posterior inferences. It is also possible to
+simulate that both A and M influence D: div &lt;- rnorm(N, age + mar ).
+In that case, a naive regression of D on A will overestimate the
+influence of A, just like a naive regression of D on M will overestimate
+the importance of M. The multiple regression will help sort things out
+for you in this situation as well. But interpreting the parameter
+estimates will always depend upon what you believe about the causal
+model, because typically several (or very many) causal models are
+consistent with any one set of parameter estimates. We’ll discuss this
+later in the chapter as Markov equivalence.</p>
+<p>5.1.5. Plotting multivariate posteriors. Let’s pause for a moment,
+before moving on. There are a lot of moving parts here: three variables,
+some strange DAGs, and three models. If you feel at all confused, it is
+only because you are paying attention.</p>
+<p>It will help to visualize the model’s inferences. Visualizing the
+posterior distribution in simple bivariate regressions, like those in
+the previous chapter, is easy. There’s only one predictor variable, so a
+single scatterplot can convey a lot of information. And so in the
+previous chapter we used scatters ofthe data. Then we overlaid
+regression lines and intervals to both (1) visualize the size of the
+association between the predictor and outcome and (2) to get a crude
+sense of the ability of the model to predict the individual
+observations.</p>
+<p>With multivariate regression, you’ll need more plots. There is a huge
+literature detail- ing a variety of plotting techniques that all attempt
+to help one understand multiple linear</p>
+<p>regression. None of these techniques is suitable for all jobs, and
+most do not generalize be- yond linear regression. So the approach I
+take here is to instead help you compute whatever you need from the
+model. I offer three examples of interpretive plots:</p>
+<ol type="1">
+<li><p>Predictor residual plots. These plots show the outcome against
+residual predictor values. They are useful for understanding the
+statistical model, but not much else.</p></li>
+<li><p>Posterior prediction plots. These show model-based predictions
+against raw data, or otherwise display the error in prediction. They are
+tools for checking fit and assessing predictions. They are not causal
+tools.</p></li>
+<li><p>Counterfactual plots. These show the implied predictions for
+imaginary experi- ments. These plots allow you to explore the causal
+implications of manipulating one or more variables.</p></li>
+</ol>
+<p>Each of these plot types has its advantages and deficiencies,
+depending upon the context and the question of interest. In the rest
+ofthis section, I show you how to manufacture each of these in the
+context of the divorce data.</p>
+<p>5.1.5.1. Predictor residual plots. A predictor residual is the
+average prediction error when we use all of the other predictor
+variables to model a predictor of interest. That’s a compli- cated
+concept, so we’ll go straight to the example, where it will make sense.
+The benefit of computing these things is that, once plotted against the
+outcome, we have a bivariate regres- sion that has already conditioned
+on all of the other predictor variables. It leaves the variation that is
+not expected by the model of the mean, µ, as a function of the other
+predictors.</p>
+<p>In our model of divorce rate, we have two predictors: (1) marriage
+rate M and (2) median age at marriage A. To compute predictor residuals
+for either, we just use the other predictor to model it. So for marriage
+rate, this is the model we need:</p>
+<p>Mi ~ Normal(µi , σ)</p>
+<p>µi = α + βAi</p>
+<p>α ~ Normal(0, 0.2)</p>
+<p>β ~ Normal(0, 0.5)</p>
+<p>σ ~ Exponential(1)</p>
+<p>As before, M is marriage rate and A is median age at marriage. Note
+that since we standard- ized both variables, we already expect the mean
+α to be around zero, as before. So I’m reusing the same priors as
+earlier. This code will approximate the posterior:</p>
+<p>And then we compute the residuals by subtracting the observed
+marriage rate in each State from the predicted rate, based upon the
+model above:</p>
+<p>WY</p>
+<p>ND</p>
+<p>HI</p>
+<p>DC</p>
+<p>ME</p>
+<p>-2 -1 0 1 2 3</p>
+<p>Age at marriage (std)</p>
+<p>ME</p>
+<p>WY</p>
+<p>HI</p>
+<p>ND</p>
+<p>DC</p>
+<p>-1.5 -1.0 -0.5 0.0 0.5 1.0 1.5 Marriage rate residuals</p>
+<p>DC</p>
+<p>HI</p>
+<p>ID</p>
+<p>-1 0 1 2 Marriage rate (std)</p>
+<p>HI</p>
+<p>ID</p>
+<p>DC</p>
+<p>-1</p>
+<p>Age at marriage residuals</p>
+<p>Figure 5.4. Understanding multiple regression through residuals. The
+top row shows each predictor regressed on the other predictor. The
+lengths of the line segments connecting the model’s expected value of
+the outcome, the regression line, and the actual value are the
+residuals. In the bottom row, divorce rate is regressed on the residuals
+from the top row. Bottom left: Residual variation in marriage rate shows
+little association with divorce rate. Bottom right: Divorce rate on age
+at marriage residuals, showing remaining variation, and this variation
+is associated with divorce rate.</p>
+<p>When a residual is positive, that means that the observed rate was in
+excess of what the model expects, given the median age at marriage in
+that State. When a residual is negative, that means the observed rate
+was below what the model expects. In simpler terms, States with</p>
+<p>positive residuals have high marriage rates for their median age of
+marriage, while States with negative residuals have low rates for their
+median age of marriage. It’ll help to plot the relationship between
+these two variables, and show the residuals as well. In Figure 5.4,
+upper left, I show m5.4 along with line segments for each residual.
+Notice that the residuals are variation in marriage rate that is left
+over, after taking out the purely linear relationship between the two
+variables.</p>
+<p>Now to use these residuals, let’s put them on a horizontal axis and
+plot them against the actual outcome of interest, divorce rate. In
+Figure 5.4 also (lower left), I plot these residuals against divorce
+rate, overlaying the linear regression of the two variables. You can
+think of this plot as displaying the linear relationship between divorce
+and marriage rates, having conditioned already on median age of
+marriage. The vertical dashed line indicates marriage rate that exactly
+matches the expectation from median age at marriage. So States to the
+right of the line have higher marriage rates than expected. States to
+the left of the line have lower rates. Average divorce rate on both
+sides of the line is about the same, and so the regression line
+demonstrates little relationship between divorce and marriage rates.</p>
+<p>The same procedure works for the other predictor. The top right plot
+in Figure 5.4 shows the regression of A on M and the residuals. In the
+lower right, these residuals are used to predict divorce rate. States to
+the right of the vertical dashed line have older-than-expected median
+age at marriage, while those to the left have younger-than-expected
+median age at marriage. Now we find that the average divorce rate on the
+right is lower than the rate on the left, as indicated by the regression
+line. States in which people marry older than expected for a given rate
+of marriage tend to have less divorce.</p>
+<p>So what’s the point of all of this? There’s conceptual value in
+seeing the model-based predictions displayed against the outcome, after
+subtracting out the influence of other pre- dictors. The plots in Figure
+5.4 do this. But this procedure also brings home the message that
+regression models measure the remaining association of each predictor
+with the out- come, after already knowing the other predictors. In
+computing the predictor residual plots, you had to perform those
+calculations yourself. In the unified multivariate model, it all hap-
+pens automatically. Nevertheless, it is useful to keep this fact in
+mind, because regressions can behave in surprising ways as a result.
+We’ll have an example soon.</p>
+<p>Linear regression models do all of this simultaneous measurement with
+a very specific additive model of how the variables relate to one
+another. But predictor variables can be related to one another in
+non-additive ways. The basic logic of statistical conditioning does not
+change in those cases, but the details definitely do, and these residual
+plots cease to be useful. Luckily there are other ways to understand a
+model. That’s where we turn next.</p>
+<p>Rethinking: Residuals are parameters, not data. There is a tradition,
+especially in parts of biology, of using residuals from one model as
+data in another model. For example, a biologist might regress brain size
+on body size and then use the brain size residuals as data in another
+model. This procedure is always a mistake. Residuals are not known. They
+are parameters, variables with unobserved values. Treating them as known
+values throws away uncertainty. The right way to adjust for body size is
+to include it in the same model,83 preferably a model designed in light
+of an explicit causal model.</p>
+<p>5.1.5.2. Posterior prediction plots. It’s important to check the
+model’s implied predic- tions against the observed data. This is what
+you did in 3, when you simulated globe tosses, averaging over the
+posterior, and comparing the simulated results to the ob- served. These
+kinds of checks are useful in many ways. For now, we’ll focus on two
+uses.</p>
+<p>UT</p>
+<p>ME</p>
+<p>RI</p>
+<p>Figure 5.5. Posterior predictive plot for the multivariate divorce
+model, m5.3. The hori- zontal axis is the observed divorce rate in each
+State. The vertical axis is the model’s posterior predicted divorce
+rate, given each State’s me- dian age at marriage and marriage rate. The
+blue line segments are 89% compatibility inter- vals. The diagonal line
+shows where posterior predictions exactly match the sample.</p>
+<p>-2 -1 0 1</p>
+<ol type="1">
+<li><p>Did the model correctly approximate the posterior distribution?
+Golems do make mistakes, as do golem engineers. Errors can be more
+easily diagnosed by compar- ing implied predictions to the raw data.
+Some caution is required, because not all models try to exactly match
+the sample. But even then, you’ll know what to expect from a successful
+approximation. You’ll see some examples later (13).</p></li>
+<li><p>How does the model fail? Models are useful fictions. So they
+always fail in some way. Sometimes, a model fits correctly but is still
+so poor for our purposes that it must be discarded. More often, a model
+predicts well in some respects, but not in others. By inspecting the
+individual cases where the model makes poor predictions, you might get
+an idea of how to improve it. The difficulty is that this process is
+essentially creative and relies upon the analyst’s domain expertise. No
+robot can (yet) do it for you. It also risks chasing noise, a topic
+we’ll focus on in later chapters.</p></li>
+</ol>
+<p>How could we produce a simple posterior predictive check in the
+divorce example? Let’s begin by simulating predictions, averaging over
+the posterior.</p>
+<h1 id="call-link-without-specifying-new-data">call link without
+specifying new data</h1>
+<h1 id="so-it-uses-original-data-mu---link-m5.3">so it uses original
+data mu &lt;- link( m5.3 )</h1>
+<h1
+id="summarize-samples-across-cases-mu_mean---apply-mu-2-mean-mu_pi---apply-mu-2-pi">summarize
+samples across cases mu_mean &lt;- apply( mu , 2 , mean ) mu_PI &lt;-
+apply( mu , 2 , PI )</h1>
+<h1 id="simulate-observations">simulate observations</h1>
+<h1
+id="again-no-new-data-so-uses-original-data-d_sim---sim-m5.3-n1e4">again
+no new data, so uses original data D_sim &lt;- sim( m5.3 , n=1e4 )</h1>
+<p>D_PI &lt;- apply( D_sim , 2 , PI )</p>
+<p>This code is similar to what you’ve seen before, but now using the
+original observed data.</p>
+<p>For multivariate models, there are many different ways to display
+these simulations. The simplest is to just plot predictions against
+observed. This code will do that, and then add a line to show perfect
+prediction and line segments for the confidence interval of each
+prediction:</p>
+<p>The resulting plot appears in Figure 5.5. It’s easy to see from this
+arrangement of the sim- ulations that the model under-predicts for
+States with very high divorce rates while it over- predicts for States
+with very low divorce rates. That’s normal. This is what regression
+does—it is skeptical of extreme values, so it expects regression towards
+the mean. But beyond this gen- eral regression to the mean, some States
+are very frustrating to the model, lying very far from the diagonal.
+I’ve labeled some points like this, including Idaho (ID) and Utah (UT),
+both of which have much lower divorce rates than the model expects them
+to have. The easiest way to label a few select points is to use
+identify:</p>
+<p>After executing the line of code above, R will wait for you to click
+near a point in the active plot window. It’ll then place a label near
+that point, on the side you choose. When you are done labeling points,
+press your right mouse button (or press esc, on some platforms).</p>
+<p>What is unusual about Idaho and Utah? Both of these States have large
+proportions of members of the Church of Jesus Christ of Latter-day
+Saints. Members of this church have low rates of divorce, wherever they
+live. This suggests that having a finer view on the demo- graphic
+composition of each State, beyond just median age at marriage, would
+help.</p>
+<p>Rethinking: Stats, huh, yeah what is it good for? Often people want
+statistical modeling to do things that statistical modeling cannot do.
+For example, we’d like to know whether an effect is “real” or rather
+spurious. Unfortunately, modeling merely quantifies uncertainty in the
+precise way that the model understands the problem. Usually answers to
+large world questions about truth and causation depend upon information
+not included in the model. For example, any observed correlation between
+an out- come and predictor could be eliminated or reversed once another
+predictor is added to the model. But if we cannot think of the right
+variable, we might never notice. Therefore all statistical models are
+vulnerable to and demand critique, regardless of the precision of their
+estimates and apparent accu- racy of their predictions. Rounds of model
+criticism and revision embody the real tests of scientific hypotheses. A
+true hypothesis will pass and fail many statistical “tests” on its way
+to acceptance.</p>
+<p>Overthinking: Simulating spurious association. One way that spurious
+associations between a pre- dictor and outcome can arise is when a truly
+causal predictor, call it x real, influences both the outcome, y, and a
+spurious predictor, xspur . This can be confusing, however, so it may
+help to simulate this sce- nario and see both how the spurious data
+arise and prove to yourself that multiple regression can reliably
+indicate the right predictor, x real. So here’s a very basic
+simulation:</p>
+<p>R code 5.16</p>
+<p>R code 5.17</p>
+<p>R code 5.18</p>
+<p>Now the data frame d has 100 simulated cases. Because x_real
+influences both y and x_spur, you can think of x_spur as another outcome
+of x_real, but one which we mistake as a potential predictor of y. As a
+result, both x real and xspur are correlated with y. You can see this in
+the scatterplots from pairs(d). But when you include both x variables in
+a linear regression predicting y, the posterior mean for the association
+between y and xspur will be close to zero.</p>
+<p>5.1.5.3. Counterfactual plots. A second sort of inferential plot
+displays the causal impli- cations of the model. I call these plots
+counterfactual, because they can be produced for any values of the
+predictor variables you like, even unobserved combinations like very
+high median age of marriage and very high marriage rate. There are no
+States with this combi- nation, but in a counterfactual plot, you can
+ask the model for a prediction for such a State, asking questions like
+“What would Utah’s divorce rate be, if it’s median age at marriage were
+higher?” Used with clarity of purpose, counterfactual plots help you
+understand the model, as well as generate predictions for imaginary
+interventions and compute how much some observed outcome could be
+attributed to some cause.</p>
+<p>Note that the term “counterfactual” is highly overloaded in
+statistics and philosophy. It hardly ever means the same thing when used
+by different authors. Here, I use it to indicate some computation that
+makes use of the structural causal model, going beyond the posterior
+distribution. But it could refer to questions about both the past and
+the future.</p>
+<p>The simplest use of a counterfactual plot is to see how the outcome
+would change as you change one predictor at a time. If some predictor X
+took on a new value for one or more cases in our data, how would the
+outcome Y have changed? Changing just one predictor X might also change
+other predictors, depending upon the causal model. Suppose for example
+that you pay young couples to postpone marriage until they are 35 years
+old. Surely this will also decrease the number of couples who ever get
+married—some people will die before turning 35, among other
+reasons—decreasing the overall marriage rate. An extraordinary and evil
+degree of control over people would be necessary to really hold marriage
+rate constant while forcing everyone to marry at a later age.</p>
+<p>So let’s see how to generate plots of model predictions that take the
+causal structure into account. The basic recipe is:</p>
+<ol type="1">
+<li><p>Pick a variable to manipulate, the intervention
+variable.</p></li>
+<li><p>Define the range of values to set the intervention variable
+to.</p></li>
+<li><p>For each value of the intervention variable, and for each sample
+in posterior, use the causal model to simulate the values of other
+variables, including the outcome.</p></li>
+</ol>
+<p>In the end, you end up with a posterior distribution of
+counterfactual outcomes that you can plot and summarize in various ways,
+depending upon your goal.</p>
+<p>Let’s see how to do this for the divorce model. Again we take this
+DAG as given:</p>
+<p>w</p>
+<p>D</p>
+<p>To simulate from this, we need more than the DAG. We also need a set
+of functions that tell us how each variable is generated. For
+simplicity, we’ll use Gaussian distributions for each variable, just
+like in model m5.3. But model m5.3 ignored the assumption that A
+influences</p>
+<p>M. We didn’t need that to estimate A → D. But we do need it to
+predict the consequences of manipulating A, because some of the effect
+of A acts through M.</p>
+<p>To estimate the influence of A on M, all we need is to regress A on
+M. There are no other variables in the DAG creating an association
+between A and M. We can just add this regression to the quap model,
+running two regressions at the same time:</p>
+<p>Look at the precis(5.3_A) summary. You’ll see that M and A are
+strongly negatively asso- ciated. If we interpret this causally, it
+indicates that manipulating A reduces M.</p>
+<p>The goal is to simulate what would happen, if we manipulate A. So
+next we define a range of values for A.</p>
+<p>This defines a list of 30 imaginary interventions, ranging from 2
+standard deviations below and 2 above the mean. Now we can use sim,
+which you met in the previous chapter, to simulate observations from
+model m5.3_A. But this time we’ll tell it to simulate both M and D, in
+that order. Why in that order? Because we have to simulate the influence
+of A on M before we simulate the joint influence of A and M on D. The
+vars argument to sim tells it both which observables to simulate and in
+which order.</p>
+<p>R code 5.19</p>
+<p>R code 5.20</p>
+<p>R code 5.21</p>
+<p>Total counterfactual effect of A on D</p>
+<p>-2 -1</p>
+<p>manipulated A</p>
+<p>Counterfactual effect A -&gt; M</p>
+<p>-2 -1</p>
+<p>manipulated A</p>
+<p>Figure 5.6. Counterfactual plots for the multivariate divorce model,
+m5.3. These plots visualize the predicted effect of manipulating age at
+marriage A on divorce rate D. Left: Total causal effect of manipulating
+A (horizontal) on D. This plot contains both paths, A → D and A → M → D.
+Right: Simulated values of M show the estimated influence A → M.</p>
+<p>That’s all there is to it. But do at least glance at the Overthinking
+box at the end of this section, where I show you the individual steps,
+so you can perform this kind of counterfactual simulation for any model
+fit with any software. Now to plot the predictions:</p>
+<p>R code 5.22</p>
+<p>plot( sim_dat , colMeans(s) , ylim=c(-2,2) , type=“l“ ,</p>
+<p>xlab=“manipulated A“ , ylab=“counterfactual D“ )</p>
+<p>shade( apply(s,2,PI) , sim_dat )</p>
+<p>mtext( “Total counterfactual effect of A on D“ )</p>
+<p>The resulting plot is shown in Figure 5.6 (left side). This predicted
+trend in D includes both paths: A → D and A → M → D. We found previously
+that M → D is very small, so the second path doesn’t contribute much to
+the trend. But ifM were to strongly influence D, the code above would
+include the effect. The counterfactual simulation also generated values
+for M. These are shown on the right in Figure 5.6. The object s from the
+code above includes these simulated M values. Try to reproduce the
+figure yourself.</p>
+<p>Of course these calculations also permit numerical summaries. For
+example, the ex- pected causal effect of increasing median age at
+marriage from 20 to 30 is:</p>
+<p>R code 5.23</p>
+<h1
+id="new-data-frame-standardized-to-mean-26.1-and-std-dev-1.24-sim2_dat---data.frame-ac2030-26.11.24">new
+data frame, standardized to mean 26.1 and std dev 1.24 sim2_dat &lt;-
+data.frame( A=(c(20,30)-26.1)/1.24 )</h1>
+<p>s2 &lt;- sim( m5.3_A , data=sim2_dat , vars=c(“M“,“D“) )</p>
+<p>mean( s2[,2] - s2[,1] )</p>
+<p>[1] -4.591425</p>
+<p>This is a huge effect offour and one half standard deviations,
+probably impossibly large.</p>
+<p>Total counterfactual effect of M on D</p>
+<p>Figure 5.7. The counterfactual effect of ma- nipulating marriage rate
+M on divorce rate D. Since M → D was estimated to be very small, there
+is no strong trend here. By manipulating M, we break the influence of A
+on M, and this removes the association between M and D.</p>
+<p>-2 -1</p>
+<p>manipulated M</p>
+<p>The trick with simulating counterfactuals is to realize that when we
+manipulate some variable X, we break the causal influence of other
+variables on X. This is the same as saying we modify the DAG so that no
+arrows enter X. Suppose for example that we now simulate the effect of
+manipulating M. This implies the DAG:</p>
+<p>A</p>
+<p>D</p>
+<p>w</p>
+<p>The arrow A → M is deleted, because if we control the values of M,
+then A no longer influ- ences it. It’s like a perfectly controlled
+experiment. Now we can modify the code above to simulate the
+counterfactual result of manipulating M. We’ll simulate a counterfactual
+for an average state, with A = 0, and see what changing M does.</p>
+<p>We only simulate D now—note the vars argument to sim() in the code
+above. We don’t simulate A, because M doesn’t influence it. I show this
+plot in Figure 5.7. This trend is less strong, because there is no
+evidence for a strong influence of M on D.</p>
+<p>In more complex models with many potential paths, the same strategy
+will compute counterfactuals for an exposure of interest. But as you’ll
+see in later examples, often it is simply not possible to estimate a
+plausible, un-confounded causal effect of some exposure X on some
+outcome Y. But even in those cases, there are still important
+counterfactuals to consider. So we’ll return to this theme in future
+chapters.</p>
+<p>R code 5.25</p>
+<p>R code 5.26</p>
+<p>R code 5.27</p>
+<p>R code 5.28</p>
+<p>Overthinking: Simulating counterfactuals. The example in this section
+used sim() to hide the de- tails. But simulating counterfactuals on your
+own is not hard. It just uses the model definition. Assume we’ve already
+fit model m5.3_A, the model that includes both causal paths A → D and A
+→ M → D. We define a range of values that we want to assign to A:</p>
+<p>Next we need to extract the posterior samples, because we’ll simulate
+observations for each set of samples. Then it really is just a matter of
+using the model definition with the samples, as in previous examples.
+The model defines the distribution of M. We just convert that definition
+to the correspond- ing simulation function, which is rnorm in this
+case:</p>
+<p>I used the with function, which saves us having to type post$ in
+front of every parameter name. The linear model inside rnorm comes right
+out of the model definition. This produces a matrix of values, with
+samples in rows and cases corresponding to the values in A_seq in the
+columns. Now that we have simulated values for M, we can simulate D
+too:</p>
+<p>If you plot A_seq against the column means of D_sim, you’ll see the
+same result as before. In complex models, there might be many more
+variables to simulate. But the basic procedure is the same.</p>
+<h6 id="阅读日期-2025年12月24日-2025年12月24日-共-1-天">阅读日期：
+2025年12月24日-2025年12月24日 共： 1 天</h6>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

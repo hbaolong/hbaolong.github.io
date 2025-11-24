@@ -1,0 +1,909 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="hbaolong@vip.qq.com" />
+  <title>统计反思EN 用字频率</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">统计反思EN 用字频率</h1>
+<p class="author">hbaolong@vip.qq.com</p>
+</header>
+<center>
+<a href="/">返回首页</a> <a href="/booklist/">第三书单</a> <a
+href="/index_hash5.html">HASH5</a>
+</center>
+<hr>
+<center>
+<a href="/3place/tjfsen">返回首页</a> <a
+href="/3place/tjfsen/mingju.html">本书名句</a> <a
+href="/3place/tjfsen/memo.html">本书注解</a> <a
+href="/3place/tjfsen/index_rich.html">丰富目录</a> <a
+href="/3place/tjfsen/index_readcal.html">同读日历</a> <a
+href="/3place/tjfsen/index_timeline.html">时间线</a> <a
+href="/3place/tjfsen/index_books.html">引用书籍</a> <a
+href="/3place/tjfsen/index_words.html">使用字频</a>
+<div id="wx_pic" style="margin:0 auto;display:none;">
+<img src='/img/logo.png'/>
+</div>
+<a href="/3place/tjfsen/hash/">HASH5</a>
+</center>
+<p>1 abandon 1 abbreviation 1 absurd 1 absurdly 1 abundance 1 abusing 1
+acceptance 1 accident 1 accidents 1 accommodate 1 accompanying 1
+accumulated 1 acknowledgments 1 acquainted 1 acquire 1 acts 1 adapt 1
+additions 1 addresses 1 adequate 1 adhering 1 administers 1 adopts 1
+adulthood 1 advances 1 advocate 1 aesthetics 1 affordable 1 africans 1
+afterwards 1 agency 1 ages 1 aggregation 1 aggregations 1 agreement 1
+agrees 1 agricultural 1 aimed 1 aims 1 aki 1 al 1 alabama 1 alan 1
+alchemy 1 algorithmic 1 alike 1 alive 1 allometry 1 alright 1 altering 1
+alters 1 am 1 amass 1 amazon 1 ambiguities 1 ambiguity 1 america 1
+american 1 americas 1 amortized 1 analog 1 analogous 1 analogy 1
+analyzed 1 analyzing 1 anatomy 1 ancestor 1 anchored 1 ancients 1 ancova
+1 anda 1 andandandand 1 andes 1 andfemale 1 andnis 1 angels 1 animal 1
+animated 1 annika 1 announced 1 annoyance 1 anova 1 anticipate 1
+anticipated 1 anxious 1 anymore 1 anyway 1 anyways 1 ape 1 apocryphal 1
+appealing 1 appearance 1 applying 1 appreciation 1 apprehension 1
+appropriately 1 ar 1 archive 1 areas 1 arguably 1 arguing 1 arguments 1
+arisen 1 arose 1 arrange 1 arrival 1 arrived 1 arriving 1 art 1 aspire 1
+assay 1 asserting 1 associate 1 astrology 1 astronomer 1 astronomy 1
+asymmetric 1 asymmetrical 1 ate 1 atically 1 ation 1 ations 1 ative 1
+atmosphere 1 atsd 1 attack 1 attacked 1 attend 1 attentive 1 atthe 1
+attitude 1 attitudes 1 attributed 1 audiences 1 automate 1 automatic 1
+automation 1 aviva 1 awareness 1 awe 1 background 1 bacterial 1 badly 1
+bahamas 1 baldini 1 bar 1 barks 1 barrier 1 basically 1 basics 1 battle
+1 bayesianism 1 bear 1 becoming 1 beginner 1 beginnings 1 begun 1 behaim
+1 behind 1 believing 1 belongs 1 bend 1 beneath 1 bers 1 bezalel 1 bi 1
+bias 1 biggest 1 bilities 1 billions 1 bine 1 biologist 1 birds 1
+bizarre 1 blended 1 bles 1 blob 1 blobs 1 blood 1 bloodsucking 1 blow 1
+blows 1 bly 1 boast 1 bogged 1 bolted 1 bolts 1 bon 1 bonus 1 bothered 1
+bothers 1 bounded 1 bounding 1 boxes 1 brave 1 breadcrumbs 1 breeding 1
+brevity 1 bridges 1 brief 1 british 1 brms 1 broadcasting 1 broadly 1
+broken 1 brooke 1 brought 1 brow 1 brown 1 bruce 1 bruno 1 brute 1 bug 1
+bumbling 1 busy 1 button 1 bx 1 cable 1 caitlin 1 cal 1 calculates 1
+calculating 1 calibrating 1 california 1 calls 1 calm 1 caloric 1
+calories 1 campephilus 1 canada 1 canceling 1 capitals 1 capture 1
+captured 1 captures 1 careless 1 cascade 1 cash 1 catch 1 catches 1
+cation 1 cations 1 caution 1 cautioning 1 cautious 1 cease 1 ceiling 1
+cell 1 centuries 1 cerns 1 cess 1 cessed 1 cesses 1 cex 1 characteristic
+1 characterize 1 characters 1 charlatans 1 charts 1 chasing 1 cheating 1
+child 1 choke 1 chris 1 christ 1 christopher 1 chudek 1 ci 1 cialties 1
+ciated 1 ciation 1 cipangu 1 circumstance 1 circumstances 1 cities 1
+clarke 1 class 1 classic 1 claudius 1 clean 1 clears 1 clever 1 climate
+1 climbs 1 clings 1 clocked 1 closed 1 closely 1 closest 1 clumsiness 1
+clustered 1 coast 1 coax 1 coded 1 cody 1 coefficients 1 coercion 1
+coins 1 collecting 1 colmeans 1 colonies 1 coloration 1 columbus 1
+combined 1 comfort 1 comfortable 1 coming 1 comma 1 commented 1
+commitment 1 committed 1 communicates 1 communities 1 compactly 1
+company 1 comparisons 1 compelling 1 compiled 1 compiler 1 complaint 1
+complaints 1 completed 1 complicates 1 compose 1 comprises 1
+computations 1 computers 1 conceived 1 concentrated 1 conceptualize 1
+confederate 1 confirm 1 confirmations 1 confirming 1 confounding 1
+connection 1 consequential 1 conservative 1 considerably 1 consistency 1
+consists 1 console 1 constitute 1 constraint 1 constructions 1
+constructive 1 contends 1 contentious 1 continued 1 continuing 1
+contours 1 contradictions 1 contributions 1 controlling 1 controversial
+1 conveniently 1 converges 1 converses 1 convert 1 converting 1 convey 1
+convince 1 coordinates 1 cope 1 copy 1 cor 1 cording 1 cornell 1 cosine
+1 cosmology 1 countable 1 counterpoint 1 couple 1 covariate 1
+covariation 1 covaries 1 covary 1 coverage 1 covering 1 cran 1 cratic 1
+create 1 creators 1 creature 1 credibility 1 credible 1 criminal 1
+cristoforo 1 critical 1 crucial 1 crudely 1 cube 1 cubing 1 culate 1
+culprit 1 cultural 1 cultures 1 cup 1 current 1 currently 1 curriculum 1
+cus 1 custom 1 customary 1 customizable 1 cutting 1 daily 1 dangers 1
+dark 1 dashes 1 database 1 dawn 1 dbeta 1 dcck 1 dccm 1 dear 1 deaths 1
+debug 1 decade 1 december 1 declaration 1 declines 1 declining 1
+decommissioned 1 decomposing 1 decrease 1 dedicated 1 deducing 1 deed 1
+deeply 1 definitiveness 1 degrees 1 delayed 1 deleted 1 demonstrably 1
+denser 1 densest 1 dents 1 departs 1 deploy 1 derango 1 derlying 1
+derstanding 1 descends 1 deserve 1 designed 1 designers 1 desk 1 desktop
+1 destroy 1 detector 1 detects 1 determined 1 dev 1 develop 1 deviates 1
+devote 1 devoted 1 diagnosed 1 diagnoses 1 dialect 1 dian 1 dictator 1
+diction 1 dictor 1 dictors 1 dicts 1 died 1 diet 1 differential 1
+differentiate 1 differs 1 dilemma 1 dimension 1 dimensionless 1 diner 1
+dirty 1 disadvantages 1 disagree 1 disagreed 1 disagreement 1 discards 1
+discern 1 discernible 1 disconfirmations 1 disconfirms 1 discover 1
+discoveries 1 discovering 1 discovery 1 discreteness 1 discussion 1
+disease 1 disguise 1 disorder 1 dispersed 1 displaying 1 disregard 1
+disrupt 1 dissimilar 1 distilling 1 distinctly 1 distinguish 1
+distinguished 1 distracts 1 distributional 1 districts 1 ditional 1 div
+1 diversification 1 dobe 1 documentation 1 documented 1 documents 1
+dollar 1 dom 1 domains 1 dominant 1 donated 1 doomed 1 doubled 1 doubts
+1 downs 1 dox 1 dozen 1 dr 1 drafters 1 dramas 1 dramatically 1 dratic 1
+drew 1 drift 1 dropping 1 duce 1 duced 1 ducedto 1 duces 1 ducing 1 dull
+1 dumber 1 durand 1 during 1 dust 1 dutifully 1 dwell 1 dynamic 1
+dynamical 1 dynamics 1 eager 1 earn 1 earthquakes 1 ease 1 east 1 eat 1
+ecology 1 economy 1 ecuted 1 edge 1 edges 1 editors 1 edits 1 educated 1
+educational 1 effectively 1 efficient 1 efforts 1 egotism 1 egyptian 1
+eight 1 eighteenth 1 elaborate 1 electrical 1 elephant 1 eling 1 elitist
+1 emacs 1 embarrass 1 embarrassed 1 emboldened 1 emerged 1 emerging 1
+emmanuel 1 emphasizes 1 emphasizing 1 employed 1 employs 1 ena 1 ences 1
+encode 1 encodes 1 encoding 1 encounters 1 encouraging 1 endeavor 1
+ended 1 energetic 1 engineer 1 engineered 1 english 1 enlivens 1 ensured
+1 ensuring 1 entail 1 entered 1 enterprise 1 ential 1 entists 1 entities
+1 entry 1 episode 1 equations 1 equilibrium 1 equivalents 1 eral 1 erase
+1 erative 1 ered 1 ering 1 ern 1 erred 1 ers 1 esc 1 estimation 1
+estimator 1 esting 1 evaluates 1 evaluating 1 everyplace 1 everywhere 1
+evolved 1 evolves 1 evolving 1 ex 1 exaggerate 1 exaggerated 1
+exaggerating 1 examine 1 examining 1 exceeds 1 exception 1 excess 1
+excited 1 exclaims 1 excluding 1 exclusion 1 exclusively 1 executes 1
+exhaustive 1 expanding 1 expansion 1 expedition 1 experiencing 1
+experimenting 1 expertise 1 explanatory 1 exploiting 1 exploits 1
+explored 1 explores 1 exploring 1 exponentiate 1 exposing 1 express 1
+exps 1 extends 1 external 1 extracts 1 eyeballing 1 f 1 factor 1
+factored 1 fade 1 failing 1 fairly 1 fallen 1 falls 1 falsifiable 1
+falsified 1 falsifying 1 families 1 fantastic 1 fantastical 1 fastidious
+1 fault 1 favorable 1 favors 1 fear 1 fearing 1 featuring 1 feeling 1
+feelings 1 feet 1 fema 1 ferent 1 ferro 1 fetishizing 1 fication 1
+fictions 1 fiddle 1 fidence 1 fight 1 figurative 1 fill 1 financial 1
+finer 1 fines 1 finger 1 finish 1 finishes 1 fire 1 firstborns 1 fitness
+1 flattered 1 fleet 1 flipped 1 flips 1 flower 1 fluctuate 1 fluctuating
+1 fluence 1 fluency 1 fluid 1 flying 1 folk 1 folklore 1 folly 1
+foolproof 1 football 1 foragers 1 foraging 1 forbid 1 forecasts 1 forget
+1 forgotten 1 fork 1 forks 1 formalism 1 formalize 1 former 1 forwards 1
+founded 1 fourier 1 framing 1 freezing 1 frequently 1 friends 1 frugal 1
+frustrating 1 fulfill 1 fulfills 1 functional 1 fundamentally 1 funky 1
+fussing 1 ga 1 gain 1 gained 1 gambit 1 game 1 gamma 1 gams 1 gardens 1
+gate 1 gathering 1 gawking 1 gelman 1 gender 1 gene 1 generalization 1
+generation 1 generators 1 generosity 1 geneticists 1 genius 1 genome 1
+gently 1 geographic 1 george 1 german 1 germany 1 gerous 1 gestation 1
+giants 1 gineers 1 github 1 glad 1 glance 1 glances 1 gle 1 glmms 1 glms
+1 global 1 globes 1 glue 1 goodrich 1 gories 1 gotten 1 graduating 1
+graphic 1 grasping 1 gray 1 grayed 1 greatest 1 greenhouse 1 griddunif 1
+grote 1 group 1 growing 1 grown 1 guarantees 1 guidance 1 guides 1 guru
+1 guts 1 habit 1 habits 1 habsburg 1 hammered 1 hanami 1 handle 1 handy
+1 happy 1 hardcore 1 harmful 1 harrowing 1 hash 1 hat 1 haunted 1 head 1
+headed 1 heads 1 healthy 1 heaney 1 heard 1 heavenly 1 hebrew 1
+heightfrom 1 helped 1 helping 1 hem 1 hend 1 her 1 herefore 1 hides 1
+hiding 1 hierarchical 1 himself 1 hind 1 hindu 1 hint 1 hired 1 hist 1
+histograms 1 hit 1 hits 1 hiv 1 hoc 1 holland 1 holy 1 homeworkch 1
+homoscedasticity 1 hoods 1 hot 1 howerton 1 html 1 huh 1 hydraulic 1
+hypothesize 1 ical 1 icance 1 iceberg 1 idealized 1 identically 1
+identity 1 idiosyncratic 1 idle 1 ifan 1 ified 1 ifit 1 ifm 1 ify 1 ii 1
+illustration 1 imagines 1 imate 1 imbalance 1 imitation 1 immense 1
+immortal 1 impact 1 implement 1 implicitly 1 implying 1 importantly 1
+impose 1 imposed 1 imposes 1 impossibility 1 impractical 1 imprecise 1
+impressive 1 improved 1 improves 1 imputation 1 inadequate 1 incant 1
+includingthe 1 inclusive 1 inconvenience 1 inconvenient 1 indexes 1
+indexing 1 indies 1 indirectly 1 indispensable 1 induce 1 industrious 1
+inexpensive 1 infamously 1 infants 1 influenced 1 inherent 1 initially 1
+initiates 1 initions 1 innovative 1 inquire 1 inquiry 1 inquisition 1
+insanely 1 inscribing 1 inscription 1 insists 1 inspecting 1 inspires 1
+installation 1 installed 1 installing 1 instance 1 instantly 1 institute
+1 institution 1 instruct 1 instructors 1 instructs 1 insufficient 1
+insurgence 1 integrals 1 integrated 1 integrates 1 integrity 1
+intellectual 1 intended 1 intensive 1 intention 1 interacting 1
+interests 1 interpretable 1 interpreted 1 interpretive 1 interrogated 1
+interrogative 1 intersect 1 interviews 1 intimidating 1 introducing 1
+introductions 1 invalid 1 invaluable 1 invented 1 inventing 1 invert 1
+invest 1 invoke 1 involves 1 ions 1 ironic 1 irreplaceable 1 island 1
+issued 1 italy 1 iterated 1 iteration 1 ities 1 ized 1 j 1 jags 1 james
+1 japanese 1 jectives 1 jeremy 1 jesus 1 jointly 1 joints 1 jones 1
+jorge 1 journal 1 judging 1 julia 1 justified 1 justifying 1 juvenile 1
+kabbalah 1 kajokaite 1 kari 1 karthik 1 kcal 1 kill 1 kilogram 1 kimura
+1 kinder 1 kindness 1 knew 1 knocking 1 koster 1 laborious 1 lacking 1
+lacks 1 ladders 1 lagrangian 1 landing 1 larly 1 lated 1 latency 1 lates
+1 latest 1 latin 1 lations 1 latter 1 launching 1 lay 1 layers 1 lean 1
+leaving 1 lee 1 legend 1 legends 1 legitimately 1 lengths 1 letter 1
+levels 1 lf 1 lier 1 lightspeed 1 limitation 1 limiting 1 listen 1
+listening 1 literate 1 lived 1 living 1 lizing 1 lm 1 lobbied 1 locate 1
+loew 1 logarithmic 1 logicians 1 lose 1 losophy 1 loved 1 lowest 1
+ludwig 1 luis 1 lying 1 maciek 1 makers 1 maleness 1 mammal 1 manages 1
+managing 1 mandating 1 mands 1 manipulation 1 manual 1 manually 1
+manufacture 1 manufacturing 1 mapped 1 mappings 1 maps 1 margin 1
+marginals 1 marize 1 mark 1 market 1 marshall 1 martial 1 martin 1 mask
+1 masons 1 masses 1 matched 1 mate 1 mately 1 mates 1 mathematicians 1
+mathew 1 mathy 1 matician 1 mative 1 mattering 1 max 1 maximally 1
+maximize 1 maximized 1 mceachern 1 mcelreath 1 meaningfully 1 meanings 1
+meat 1 mechanism 1 mechanisms 1 mediation 1 medical 1 meeting 1
+melanesia 1 melted 1 member 1 memorize 1 menagerie 1 mention 1 menu 1
+menus 1 mercy 1 messy 1 metal 1 metrics 1 metropolis 1 mial 1 miii 1
+mildly 1 miliar 1 milkis 1 mimics 1 min 1 mindless 1 minor 1
+misinterpretation 1 misleads 1 misled 1 misrepresent 1 misrepresentative
+1 miss 1 misstep 1 misunderstanding 1 misunderstandings 1 mixture 1 mize
+1 mizes 1 mock 1 moderately 1 modest 1 modifying 1 molecules 1 mon 1
+money 1 monkey 1 monkeys 1 moons 1 mortals 1 mostly 1 motions 1
+motivating 1 motoo 1 motors 1 mount 1 mountain 1 mouse 1 movies 1 msword
+1 mtext 1 mum 1 mutual 1 mvrnorm 1 myopic 1 naked 1 naming 1 nan 1 nancy
+1 nario 1 narrating 1 narrative 1 nas 1 national 1 navigate 1 navigating
+1 nections 1 needn 1 needs 1 negatives 1 nential 1 ness 1 netherlands 1
+news 1 newton 1 newtonian 1 nicer 1 nix 1 nj 1 noam 1 nodes 1 nomenon 1
+nomial 1 nominating 1 north 1 northeast 1 notably 1 notepad 1 notified 1
+notion 1 novel 1 novices 1 numbered 1 numerator 1 numeric 1 numerous 1
+nuts 1 nying 1 o 1 obediently 1 obscured 1 observables 1 observer 1
+obstacle 1 obtuse 1 occurrence 1 odd 1 odds 1 ofall 1 ofan 1 ofdags 1
+offa 1 offered 1 offers 1 officially 1 offit 1 offour 1 ofits 1 ofour 1
+ofr 1 ofus 1 ofusing 1 ofw 1 ofwhat 1 oh 1 ok 1 omit 1 omits 1 omitting
+1 ona 1 onist 1 onwards 1 operation 1 operationalizes 1 opinion 1 optim
+1 optimality 1 orbit 1 ordered 1 orderings 1 orders 1 organism 1
+organisms 1 organized 1 ories 1 origin 1 ornamentation 1 ornithologists
+1 ors 1 ory 1 otto 1 ous 1 outer 1 outlines 1 outperform 1 overfit 1
+overlaid 1 overlaying 1 overloaded 1 pacific 1 pages 1 paid 1
+panchanathan 1 papers 1 parabolas 1 paradis 1 paragraph 1 paratively 1
+pare 1 parentheses 1 paring 1 parison 1 participated 1 particles 1 paste
+1 patient 1 paul 1 pause 1 pays 1 pch 1 peaked 1 peaks 1 pears 1 penalty
+1 pens 1 pensive 1 perc 1 percentage 1 percentiles 1 percents 1 periodic
+1 periods 1 permit 1 persecuted 1 pershing 1 persistence 1 personal 1
+personally 1 personification 1 persuasion 1 persuasively 1 pete 1 peting
+1 phd 1 phenomenological 1 philosopher 1 philosophers 1 philosophies 1
+phylogenetics 1 phylogeny 1 physicists 1 pictures 1 pieces 1 pile 1
+piles 1 pitch 1 pivot 1 placeholder 1 plainly 1 plan 1 planck 1
+planetary 1 planks 1 plant 1 plants 1 platform 1 platforms 1 players 1
+plays 1 pleasure 1 pling 1 pluck 1 plucking 1 plus 1 police 1 poll 1
+polls 1 pools 1 pop 1 popperism 1 populate 1 portional 1 posal 1 possess
+1 posted 1 potable 1 potatoes 1 powers 1 precede 1 preceding 1 prefer 1
+preferably 1 prepared 1 preparedness 1 preserving 1 pressing 1
+presumably 1 pretend 1 prevent 1 priceless 1 primes 1 principalis 1
+principled 1 print 1 prising 1 prob 1 probes 1 proc 1 procedural 1
+proceed 1 procrustean 1 professionals 1 profiling 1 programmers 1
+project 1 prominently 1 promote 1 prompt 1 propagates 1 properly 1
+prophets 1 propriate 1 prospecting 1 prosthesis 1 protracted 1 providing
+1 proximation 1 proxy 1 pruned 1 psychology 1 public 1 publications 1
+punches 1 pure 1 push 1 pushing 1 putational 1 pute 1 puted 1 pymc 1
+python 1 quadruple 1 qualitative 1 quantifies 1 quantify 1 quantile 1
+quantities 1 quantum 1 quence 1 query 1 questionable 1 questioning 1
+quick 1 racy 1 raise 1 raised 1 ral 1 randomization 1 randomize 1 ranks
+1 ransforms 1 rapid 1 rary 1 rasmus 1 rational 1 ratios 1 rawdag 1 reach
+1 reaches 1 reaching 1 realism 1 realistic 1 realizations 1 realizes 1
+reasoned 1 recalculate 1 recalls 1 receive 1 received 1 receives 1
+recent 1 recently 1 recognizable 1 recognizes 1 recognizing 1
+recombination 1 recommended 1 reconsider 1 reconstruction 1 recover 1
+recruit 1 rect 1 rectangular 1 recursion 1 red 1 redo 1 reduced 1
+reduces 1 redundant 1 refined 1 refit 1 refitting 1 relativity 1 relaxes
+1 relearn 1 relief 1 religion 1 religiosity 1 relying 1 reminder 1
+remove 1 removing 1 renaming 1 renders 1 rep 1 repeatable 1 repeated 1
+repeatedly 1 repeats 1 replace 1 replacement 1 replete 1 replicates 1
+reply 1 representations 1 represented 1 reproduces 1 republish 1
+researcher 1 resemble 1 residing 1 resolve 1 resolves 1 resolving 1
+resort 1 resource 1 respected 1 responded 1 response 1 restatement 1
+rests 1 retain 1 retracted 1 retrodiction 1 returned 1 returning 1
+reveals 1 reversed 1 reviewing 1 revise 1 revised 1 revisionism 1
+revisions 1 revolutionary 1 reward 1 rewind 1 rewritten 1 ri 1 riage 1
+richard 1 richer 1 richerson 1 ridiculous 1 rightwards 1 rigorous 1
+rigueur 1 rina 1 ring 1 rings 1 rise 1 rituals 1 rlnorm 1 road 1 rob 1
+robert 1 robots 1 robust 1 rockets 1 rogers 1 rolling 1 roman 1 ronald 1
+ronment 1 room 1 root 1 rossi 1 rotates 1 roughness 1 rounding 1
+rstanarm 1 rudolph 1 ruler 1 runif 1 rusty 1 ryan 1 safely 1 sail 1
+sailed 1 saints 1 sane 1 sarah 1 satisfactory 1 satisfied 1 satisfying 1
+saving 1 sc 1 scaffolds 1 scaling 1 scatterplot 1 scatterplots 1
+scatters 1 scenario 1 schematic 1 scholarship 1 schroeder 1
+scientifically 1 scold 1 scolding 1 scoop 1 scope 1 scratch 1 scripts 1
+seamus 1 searches 1 seasoned 1 seat 1 secondary 1 secret 1 secure 1
+seductive 1 seed 1 seek 1 seemed 1 seeming 1 sees 1 selecting 1
+selective 1 send 1 senses 1 september 1 sequentially 1 seriously 1
+servable 1 servant 1 servation 1 servations 1 served 1 server 1 setting
+1 settings 1 severity 1 shades 1 shaped 1 shapes 1 sharply 1 shed 1
+sheds 1 sheer 1 shifts 1 ship 1 shocks 1 shone 1 shortcuts 1 shorter 1
+shout 1 showed 1 shravan 1 shriek 1 shuffling 1 sibilities 1 sible 1
+sifts 1 signal 1 silicon 1 similarities 1 simplehist 1 simplified 1
+simplifies 1 sine 1 sir 1 sis 1 sisting 1 site 1 sites 1 sition 1
+skeleton 1 skeptical 1 skepticism 1 skews 1 skill 1 skilled 1 slaves 1
+slide 1 slight 1 slip 1 sloth 1 smaldino 1 smarter 1 smashers 1
+smothering 1 sneak 1 solutions 1 solved 1 som 1 someplace 1 son 1 song 1
+sophisticated 1 sorts 1 sought 1 span 1 sparser 1 speak 1 specification
+1 specifics 1 specimen 1 speck 1 spectacular 1 spectacularly 1 spective
+1 spell 1 spends 1 spherical 1 spilled 1 spins 1 splice 1 split 1 splits
+1 spoken 1 spond 1 spotting 1 spouses 1 spring 1 squares 1 squaring 1
+squirrel 1 stabilize 1 stack 1 stance 1 stances 1 standing 1 stare 1
+stated 1 statistically 1 stats 1 stature 1 status 1 steadfast 1 steady 1
+stick 1 sticks 1 stimulated 1 stir 1 stock 1 stone 1 stood 1 stop 1
+stops 1 stores 1 storytelling 1 strange 1 strategic 1 strengths 1
+stressful 1 strict 1 strictly 1 strongest 1 struggle 1 student 1 studied
+1 styles 1 stylized 1 subjectivist 1 subjects 1 subscripts 1 subsequent
+1 substantial 1 subtleties 1 subtract 1 success 1 suddenly 1 suffers 1
+suggest 1 suitability 1 suitable 1 sults 1 suming 1 sunk 1 superimposing
+1 supernova 1 superstition 1 supervise 1 supervision 1 supported 1
+supporter 1 supporting 1 supposed 1 supposing 1 sures 1 surprise 1
+survive 1 sustain 1 swear 1 swearing 1 switzerland 1 symmetrical 1
+symptomatic 1 syntax 1 systematically 1 systems 1 tackle 1 taining 1
+tains 1 tainty 1 tal 1 talking 1 taneous 1 targets 1 tastes 1 taxonomic
+1 tbe 1 teacher 1 temp 1 tending 1 teresting 1 terior 1 tern 1 ternative
+1 ters 1 textbooks 1 textedit 1 texts 1 thanks 1 thatthe 1 theories 1
+theorists 1 ther 1 thick 1 thicker 1 thorough 1 thoughtlessly 1 threats
+1 threshold 1 thrill 1 thrives 1 throw 1 throws 1 tial 1 ticeably 1 tick
+1 tie 1 ties 1 tific 1 tight 1 tighten 1 tightening 1 tighter 1 timate 1
+timing 1 tinker 1 tinkering 1 tional 1 tionship 1 tip 1 tiply 1 tiquing
+1 tistics 1 tolerance 1 tom 1 toolbox 1 toolkit 1 tor 1 toying 1 tracing
+1 track 1 tradeoff 1 traditions 1 trail 1 trained 1 trangucci 1
+transformation 1 transformations 1 transforming 1 translated 1
+translations 1 transparency 1 transport 1 trapped 1 treating 1 treats 1
+tree 1 trends 1 tribes 1 trinos 1 triumph 1 troduced 1 troubles 1
+truncated 1 tu 1 tuit 1 tuned 1 ual 1 ular 1 ulate 1 ulations 1 unable 1
+unanimous 1 unanticipated 1 unaware 1 unchanged 1 unconventional 1
+underneath 1 understands 1 underweight 1 undiscovered 1 uneasy 1
+unfamiliar 1 uniformly 1 unifying 1 unintended 1 unit 1 unity 1
+universal 1 universally 1 university 1 unkind 1 unmeasured 1 unmodified
+1 unnatural 1 unnecessary 1 unpacked 1 unpredictable 1 unreasonable 1
+unrevealed 1 unstandardized 1 unstuck 1 unverifiable 1 unwarranted 1
+unyielding 1 ups 1 ural 1 utilized 1 vaguest 1 vals 1 valuable 1
+valuation 1 vanished 1 variate 1 variations 1 varies 1 varying 1
+vasishth 1 vations 1 vectorization 1 vectorizes 1 vehtari 1 velocities 1
+venience 1 verifying 1 verse 1 vestigial 1 vet 1 veterinarian 1 viations
+1 vice 1 vides 1 viduals 1 violated 1 violating 1 virtually 1 virtue 1
+visibly 1 visited 1 visual 1 visually 1 vmmin 1 voyaging 1 vulnerable 1
+wallin 1 walls 1 warfare 1 warnings 1 washington 1 waste 1 watch 1
+watching 1 wayto 1 website 1 weighs 1 westward 1 whistle 1 widths 1
+wiggles 1 wild 1 wilds 1 window 1 windows 1 winntrials 1 wiping 1 wise 1
+withstand 1 wj 1 wk 1 wonder 1 wood 1 workhorse 1 worried 1 worries 1
+woven 1 wrecking 1 writing 1 wrote 1 xaxt 1 xb 1 xbar 1 yards 1 yeah 1
+yield 1 yields 1 yond 1 younger 1 yours 1 yses 1 zontal 1 zoo 2 ables 2
+absolutely 2 accept 2 accepting 2 accepts 2 accomplished 2 accounting 2
+accurately 2 adaptive 2 adjusted 2 adjusting 2 advocates 2 affect 2
+africa 2 african 2 agreed 2 ai 2 aim 2 algorithms 2 allele 2 allowing 2
+alternatives 2 ample 2 analytically 2 ancient 2 andrew 2 animate 2
+anthropology 2 apes 2 appeared 2 application 2 argued 2 arts 2 asks 2
+aspect 2 assess 2 assessing 2 assignment 2 assignments 2 assumed 2 atom
+2 attached 2 author 2 authors 2 baa 2 backwards 2 bags 2 became 2
+beginners 2 begins 2 beliefs 2 ben 2 ber 2 bet 2 binary 2 binomially 2
+biological 2 biologists 2 birthing 2 ble 2 blessing 2 blurred 2 bmm 2
+bol 2 bold 2 borges 2 borns 2 brains 2 branching 2 break 2 breaking 2
+bridge 2 briefly 2 browser 2 bugs 2 bweight 2 came 2 canceled 2 captive
+2 carefully 2 cated 2 causing 2 census 2 centered 2 centering 2
+centimeters 2 challenging 2 character 2 checked 2 children 2 chose 2
+church 2 claim 2 claimed 2 claims 2 clarity 2 clearer 2 clearly 2 click
+2 clicking 2 climb 2 cluster 2 clusters 2 coding 2 collections 2 colors
+2 combining 2 commas 2 comment 2 companion 2 complication 2 composite 2
+compress 2 compressed 2 compromises 2 computation 2 concern 2 concerning
+2 conclusion 2 conduct 2 conducted 2 conducting 2 confound 2 confusion 2
+connect 2 connecting 2 connections 2 consensual 2 consideration 2
+considers 2 constrain 2 constructing 2 consumed 2 consumes 2 contained 2
+content 2 continent 2 continues 2 contribute 2 contributed 2 controls 2
+convention 2 converts 2 couldn 2 counterintuitive 2 countries 2 couples
+2 cover 2 covered 2 creates 2 creating 2 creative 2 crude 2 cruel 2
+cultivated 2 culture 2 curious 2 curse 2 curvy 2 dage 2 damage 2 danger
+2 dangerous 2 dardize 2 dat 2 datum 2 dave 2 death 2 decades 2 deciding
+2 deduced 2 deductive 2 deficiencies 2 definitely 2 demand 2 demands 2
+demonstrated 2 demystify 2 denominator 2 denoted 2 dense 2 dependent 2
+deploying 2 deploys 2 depth 2 derivative 2 destruction 2 detect 2
+detection 2 determine 2 developed 2 developing 2 development 2
+developmental 2 diagnose 2 diagonal 2 diagram 2 die 2 disadvantage 2
+disagreements 2 discard 2 discarded 2 discipline 2 disciplines 2
+disciplining 2 disconfirming 2 disprove 2 distances 2 distinguishing 2
+divided 2 dividing 2 dominated 2 double 2 doubted 2 drawbacks 2 driving
+2 drop 2 due 2 dure 2 educate 2 elections 2 elegant 2 eliminating 2
+embed 2 embedded 2 embodies 2 emerges 2 emet 2 emperor 2 emphasis 2 ence
+2 encountered 2 encourage 2 endnote 2 enforce 2 engine 2 engineers 2
+entails 2 entries 2 enumerating 2 environments 2 epicycle 2 epistemology
+2 etc 2 eter 2 eters 2 european 2 evaluations 2 evenly 2 event 2 evil 2
+exceed 2 exercise 2 existence 2 existing 2 expand 2 expands 2 expert 2
+explaining 2 exposure 2 expressed 2 expresses 2 extended 2 extensive 2
+extracting 2 extraordinary 2 eyes 2 fable 2 factory 2 fair 2 fancier 2
+favoring 2 feathers 2 fed 2 feed 2 feeding 2 file 2 filled 2 filter 2
+finetti 2 fixed 2 flatter 2 flip 2 flipping 2 flow 2 flowchart 2
+fluctuates 2 followed 2 food 2 foolish 2 forecast 2 forecasting 2
+forever 2 formatting 2 forth 2 forward 2 foundational 2 frequent 2 ftl 2
+ful 2 fuss 2 g 2 galileo 2 genetics 2 georgia 2 girl 2 glitches 2 gone 2
+governed 2 gradually 2 gram 2 grids 2 guesses 2 handling 2 hands 2 hang
+2 happily 2 harmless 2 harris 2 heart 2 heat 2 heavy 2 hesse 2 hessians
+2 heuristics 2 hidden 2 hill 2 home 2 hood 2 hopefully 2 http 2
+hurricane 2 hypothetical 2 ically 2 idaho 2 identifies 2 ignored 2
+illusion 2 illustrated 2 illustrates 2 imagination 2 imagined 2
+imperfect 2 implementation 2 implemented 2 impossibly 2 improvement 2
+incomplete 2 inconsistent 2 incorporates 2 incorporating 2 incorrect 2
+incorrectly 2 increased 2 independence 2 individually 2 inevitably 2
+inferential 2 inferring 2 inflexible 2 influencing 2 informally 2 ink 2
+innocent 2 input 2 int 2 integrate 2 intend 2 intent 2 interesting 2
+intermediate 2 internally 2 intervene 2 intervening 2 introduction 2
+inverse 2 invested 2 isp 2 ity 2 japan 2 jargon 2 jewish 2 jews 2 jobs 2
+john 2 judge 2 justifications 2 karl 2 ki 2 labeling 2 lands 2 languages
+2 largest 2 lation 2 learned 2 leaves 2 led 2 legitimate 2 leipzig 2
+lessly 2 lets 2 library 2 lifespan 2 lihood 2 locus 2 logs 2 loses 2 mac
+2 machinery 2 machines 2 magnitudes 2 mainly 2 mar 2 marks 2 married 2
+mary 2 massive 2 matches 2 matching 2 math 2 mature 2 maximizes 2
+meaningful 2 meant 2 measuring 2 mechanical 2 mechanistic 2 melist 2
+memory 2 mess 2 mimic 2 minimizes 2 mixed 2 mle 2 modified 2 molecular 2
+motivate 2 motivated 2 moved 2 multiplicative 2 mutation 2 naive 2
+narrower 2 naturally 2 nbc 2 nd 2 neanderthal 2 necessarily 2 needing 2
+nervous 2 network 2 neutrality 2 neutrinos 2 nevertheless 2 nipulating 2
+noise 2 nominate 2 nominated 2 norm 2 normally 2 notes 2 oath 2
+obedience 2 obligations 2 occur 2 ocean 2 offer 2 ofplausibilities 2 ooe
+2 opaque 2 operates 2 operator 2 opinions 2 optimization 2 options 2
+orbits 2 org 2 originally 2 os 2 outward 2 overconfidence 2
+overconfident 2 overlap 2 packages 2 paired 2 paper 2 paradigm 2 parry 2
+particle 2 particularly 2 partner 2 partners 2 passes 2 passing 2 paying
+2 peer 2 performance 2 performed 2 performs 2 perperperperperper 2
+philosophical 2 phylogenetic 2 pivots 2 placed 2 planning 2 playing 2
+ples 2 plumbers 2 pointing 2 poisson 2 polynomials 2 pooling 2 portion 2
+pos 2 possesses 2 possibility 2 possibly 2 posteriorabs 2 posteriori 2
+postpone 2 postprob 2 practically 2 practicing 2 preface 2 premature 2
+premised 2 presence 2 presenting 2 preserve 2 pretty 2 primary 2 prime 2
+primitive 2 printed 2 proach 2 probe 2 proceeds 2 processed 2 programmed
+2 programs 2 prominent 2 promoting 2 prone 2 proof 2 propagate 2
+psychological 2 ptolemaic 2 published 2 pulls 2 rameters 2 rank 2
+reached 2 reaction 2 readjustment 2 reanalysis 2 reasoning 2 recognized
+2 referred 2 refers 2 reflect 2 reflecting 2 reflects 2 regard 2
+regarded 2 regressed 2 regularly 2 rejecting 2 rely 2 rendering 2
+replaced 2 reporting 2 representing 2 requirement 2 respectively 2
+respects 2 responsibility 2 responsible 2 restricting 2 retrodictions 2
+reusing 2 rising 2 ross 2 rounds 2 rstudio 2 safe 2 sake 2 san 2 sapply
+2 saves 2 scholarly 2 school 2 score 2 scripting 2 sensitive 2 serves 2
+shaking 2 shift 2 shorthand 2 shouldn 2 shuffle 2 shuffled 2 significant
+2 silently 2 simultaneous 2 singleton 2 sity 2 sizes 2 skewed 2 slow 2
+snippet 2 soccer 2 solar 2 somehow 2 somewhat 2 south 2 spain 2 spatial
+2 sponding 2 sponsible 2 spur 2 squared 2 statistician 2 stddev 2
+stereotyped 2 str 2 strategies 2 structural 2 stuck 2 studies 2 stuff 2
+style 2 subscript 2 subsection 2 substitute 2 subtracting 2 successful 2
+suffer 2 sufficiently 2 suggesting 2 summarized 2 summarizes 2 summing 2
+sun 2 superimpose 2 supplies 2 supports 2 surrounding 2 suspicious 2
+swaying 2 switch 2 tacit 2 tallest 2 tea 2 technical 2 technically 2
+technology 2 tent 2 terminal 2 textbook 2 thank 2 theme 2 thin 2
+thrilling 2 tightly 2 toy 2 trace 2 tral 2 transform 2 transforms 2
+transition 2 travel 2 treatments 2 trial 2 trust 2 tukey 2 ture 2
+turning 2 turtle 2 turtles 2 twice 2 ues 2 ultimately 2 uncomfortable 2
+unknown 2 unobservable 2 unusual 2 updates 2 ure 2 useless 2 users 2 ut
+2 vaguely 2 vaguer 2 validation 2 validity 2 variants 2 vars 2 vation 2
+verbal 2 versions 2 viewing 2 visualizing 2 wadlow 2 waffledivorce 2
+wage 2 wants 2 warm 2 weakly 2 wedge 2 went 2 west 2 wherever 2
+whichever 2 widely 2 wider 2 widespread 2 width 2 wigglier 2 winnings 2
+wis 2 wisely 2 words 2 wreck 2 wy 2 xyz 2 yard 2 yes 3 accomplish 3
+accustomed 3 adds 3 adequacy 3 adopt 3 advantage 3 aid 3 amazing 3
+analyst 3 anonymous 3 answered 3 answering 3 anxiety 3 apart 3 apparent
+3 approximating 3 argument 3 arrangement 3 arrow 3 aside 3 australia 3
+barely 3 behave 3 beheim 3 belief 3 believed 3 bits 3 blank 3 bound 3
+boundary 3 bounds 3 boy 3 bracket 3 branch 3 bret 3 brings 3 bunch 3
+butions 3 c 3 calculated 3 cancel 3 catching 3 chances 3 circle 3 clay 3
+climbing 3 colleague 3 combat 3 communicate 3 communicating 3 complexity
+3 comprehension 3 computationally 3 computes 3 conceive 3 confounds 3
+confront 3 consensus 3 construction 3 continue 3 contour 3 convenience 3
+convergence 3 correspondence 3 costs 3 counted 3 country 3 crazy 3
+criterion 3 critique 3 curved 3 de 3 debates 3 deduce 3 defend 3
+demonstrate 3 demonstrates 3 dence 3 describes 3 descriptions 3 deserves
+3 designing 3 detected 3 determines 3 deterministic 3 dexp 3 dheight 3
+dictions 3 difficulties 3 difficulty 3 directed 3 diversity 3 dlnorm 3
+domain 3 draft 3 draws 3 dweight 3 economics 3 einstein 3 election 3
+embodied 3 emp 3 encounter 3 ending 3 ensure 3 ensures 3 enter 3
+equivalence 3 errors 3 europeans 3 evacuation 3 evaluated 3 excellent 3
+expensive 3 experience 3 experienced 3 experimental 3 experts 3
+expressions 3 extent 3 extinct 3 extremely 3 facing 3 factors 3 fall 3
+famous 3 fashion 3 fast 3 faster 3 feature 3 feedback 3 females 3 fields
+3 finds 3 fine 3 fix 3 fluctuations 3 forcing 3 formally 3 foundation 3
+fragile 3 front 3 fully 3 generalize 3 geocentrism 3 glm 3 graduate 3
+greatly 3 halfway 3 heavier 3 heuristic 3 hide 3 him 3 historical 3 hold
+3 houses 3 humans 3 humble 3 hurt 3 id 3 ignorance 3 imation 3 improving
+3 included 3 incredibly 3 independently 3 inevitable 3 infant 3
+influential 3 informative 3 inherently 3 inspire 3 interaction 3
+interbreeding 3 internet 3 interventions 3 introductory 3 invent 3
+investigate 3 involved 3 irrelevant 3 issues 3 justify 3 kalahari 3
+label 3 laws 3 layer 3 leading 3 lem 3 lesson 3 level 3 lie 3 limited 3
+listed 3 literally 3 lives 3 local 3 loci 3 logarithms 3 longest 3 loop
+3 loops 3 lost 3 loves 3 lucky 3 majority 3 mal 3 males 3 man 3 manner 3
+manuscript 3 mapping 3 mapstan 3 march 3 marked 3 masked 3
+mathematically 3 mathematician 3 mation 3 mechanically 3 mechanics 3
+mercenaries 3 mere 3 mii 3 million 3 minimum 3 mislead 3 modeled 3
+modification 3 modus 3 monstrous 3 mother 3 motion 3 motor 3 mv 3
+mysterious 3 names 3 narrowest 3 nation 3 normality 3 normative 3
+objects 3 obstacles 3 ofa 3 opposite 3 ordering 3 overall 3 overestimate
+3 paradox 3 passed 3 pected 3 perfectly 3 phenomena 3 planets 3 play 3
+ple 3 plenty 3 plied 3 poorly 3 populations 3 posteriors 3 potentially 3
+potheses 3 press 3 previously 3 primates 3 probabilistic 3 probable 3
+productive 3 property 3 pulled 3 quantity 3 rameter 3 randomized 3
+randomly 3 rangi 3 ranging 3 ranking 3 rapidly 3 rbinom 3 recommend 3
+reduce 3 refer 3 refining 3 regions 3 regress 3 regular 3 reliably 3
+removes 3 replacing 3 represent 3 resampling 3 respond 3 revealing 3
+review 3 reviewers 3 risk 3 risks 3 rithm 3 role 3 rough 3 rstan 3 said
+3 scaffold 3 scaffolding 3 seeking 3 select 3 separate 3 sequential 3
+serve 3 share 3 shared 3 shortcut 3 sider 3 simpler 3 simplicity 3
+simulates 3 simultaneously 3 situation 3 sixteenth 3 sloppy 3 solve 3
+soon 3 southern 3 spaced 3 specifically 3 specified 3 specify 3 spend 3
+standardizes 3 standardizing 3 started 3 statistic 3 stored 3 strength 3
+subject 3 summarizing 3 surely 3 surface 3 surprises 3 switching 3 talk
+3 tall 3 tant 3 tasks 3 telescope 3 telling 3 tendency 3 tends 3 thinks
+3 thus 3 tollens 3 took 3 tossed 3 training 3 translate 3 transparent 3
+treat 3 tribution 3 truly 3 turned 3 twentieth 3 typing 3 ulam 3
+understood 3 unordered 3 utah 3 valid 3 variety 3 vcov 3 via 3 viewed 3
+views 3 walk 3 walks 3 wall 3 wanted 3 wbi 3 weak 3 whole 3 willing 3
+wisdom 3 wnew 3 word 3 wprior 3 written 3 xspur 3 young 3 z 4 absence 4
+absolute 4 abstract 4 active 4 acyclic 4 adult 4 advanced 4 agree 4
+alpha 4 amounts 4 anyone 4 appearing 4 approximated 4 arrive 4 assigns 4
+attempting 4 attention 4 averaged 4 averages 4 aware 4 behaves 4 bigger
+4 bility 4 bother 4 broad 4 bucket 4 carries 4 causation 4 ce 4 center 4
+changed 4 closer 4 compared 4 compatible 4 completely 4 component 4
+concept 4 confused 4 constraints 4 contemporary 4 controlled 4 cost 4
+cumulative 4 date 4 dates 4 days 4 dbinom 4 dc 4 dcc 4 debate 4 decimal
+4 deck 4 deep 4 derivation 4 derivatives 4 derive 4 desired 4 despite 4
+devices 4 differently 4 difficult 4 diners 4 disaster 4 discuss 4
+discussed 4 distinct 4 doy 4 dprior 4 easiest 4 effective 4 elements 4
+eliminate 4 eliminated 4 embody 4 emphasize 4 epicycles 4 essential 4
+ethical 4 evaluate 4 except 4 exists 4 expectations 4 explained 4
+explanations 4 explicit 4 failure 4 fancy 4 fewer 4 files 4 fisher 4
+fluctuation 4 focusing 4 follows 4 forces 4 format 4 forms 4 fraction 4
+frames 4 generally 4 generates 4 generative 4 genetic 4 girls 4 graphs 4
+grasp 4 grows 4 haven 4 holding 4 hope 4 hundreds 4 ideal 4
+identification 4 image 4 incompatible 4 increasingly 4 indicator 4
+informal 4 install 4 integral 4 interactions 4 intervention 4 introduces
+4 intuitions 4 investment 4 journey 4 keeping 4 km 4 labels 4 learns 4
+likelihoods 4 literature 4 looking 4 luckily 4 manipulated 4 marry 4
+mars 4 medium 4 ment 4 mentioned 4 ments 4 met 4 mistaken 4 moreover 4
+neanderthals 4 neutrino 4 night 4 object 4 observers 4 obvious 4 ofthis
+4 okay 4 older 4 ontological 4 optimal 4 pay 4 pedagogical 4 perhaps 4
+poor 4 popular 4 position 4 positively 4 positives 4 precisely 4
+presented 4 primate 4 produced 4 progress 4 proper 4 proportions 4
+purposes 4 rabbi 4 raining 4 randomness 4 ranges 4 ready 4 realized 4
+record 4 reliable 4 remainder 4 remind 4 repeating 4 reported 4 returns
+4 reveal 4 reverse 4 routine 4 sas 4 saturn 4 save 4 scatter 4 scholars
+4 scientist 4 script 4 search 4 seemingly 4 segments 4 sex 4 sion 4
+slowly 4 smooth 4 sound 4 source 4 sources 4 specifying 4 spot 4 stan 4
+starts 4 stata 4 statements 4 stochastic 4 straightforward 4 study 4
+suggests 4 sway 4 system 4 taller 4 teaches 4 team 4 technique 4 ten 4
+ter 4 terrible 4 thought 4 thousands 4 tistical 4 told 4 topic 4 tricks
+4 tried 4 trivial 4 user 4 vampire 4 vectorized 4 version 4 woodpecker 4
+worry 4 xseq 4 yi 5 according 5 accurate 5 achieve 5 action 5 advice 5
+air 5 algorithm 5 applies 5 approaches 5 asia 5 asked 5 asking 5
+assigned 5 assigning 5 audience 5 automatically 5 began 5 behavior 5
+bell 5 benefits 5 bn 5 born 5 broader 5 calculate 5 calculus 5 capable 5
+care 5 categories 5 circles 5 classical 5 col 5 cold 5 color 5 comments
+5 commonly 5 community 5 concepts 5 concerns 5 conditioned 5 conditions
+5 conjectured 5 constructed 5 constructs 5 contrast 5 converge 5
+counterfactuals 5 courses 5 covariance 5 covariances 5 curvature 5
+dagitty 5 day 5 deal 5 dens 5 di 5 didn 5 differ 5 differences 5
+discrete 5 dna 5 drawing 5 dunif 5 element 5 entirely 5 equally 5
+equation 5 executing 5 exist 5 exp 5 expectation 5 experiments 5
+explains 5 exploit 5 facts 5 fails 5 falsify 5 feel 5 force 5 forced 5
+free 5 further 5 generalized 5 generating 5 getting 5 graph 5 happened 5
+highlighted 5 honest 5 idea 5 ideas 5 identical 5 imaginary 5
+immediately 5 importance 5 increasing 5 indicating 5 indirect 5 insight
+5 instructions 5 interact 5 interested 5 interface 5 interpretations 5
+journals 5 justification 5 kg 5 largely 5 life 5 low 5 main 5 masking 5
+measured 5 members 5 message 5 mistake 5 modern 5 moves 5 negatively 5
+nice 5 obs 5 obviously 5 ofit 5 open 5 optional 5 outline 5 panel 5
+partial 5 pass 5 past 5 pick 5 picture 5 popper 5 positions 5 post 5
+potential 5 present 5 presentation 5 principles 5 prove 5 pull 5
+quantiles 5 rarely 5 regardless 5 relate 5 relations 5 relevant 5 relies
+5 representation 5 researchers 5 respect 5 return 5 revision 5 robot 5
+routinely 5 rule 5 serious 5 significance 5 similarly 5 skills 5 sky 5
+slopes 5 space 5 specialized 5 stand 5 standardize 5 stay 5 stories 5
+subjective 5 subtle 5 sums 5 taken 5 target 5 task 5 taught 5
+temperature 5 terval 5 thinking 5 thousand 5 throughout 5 traditional 5
+trees 5 trick 5 unified 5 universe 5 vampirism 5 variances 5 verify 5
+weird 5 whenever 5 wiggly 6 act 6 adjust 6 analyses 6 animals 6
+appreciate 6 appropriate 6 area 6 aren 6 automated 6 avoid 6 ba 6
+biology 6 blossoms 6 brain 6 bution 6 carry 6 certain 6 challenge 6
+chance 6 choosing 6 clear 6 cloud 6 colleagues 6 collection 6 colombo 6
+combinations 6 compact 6 comparison 6 composition 6 confident 6
+consequences 6 considered 6 considering 6 convenient 6 criticism 6 cubic
+6 defining 6 description 6 device 6 direction 6 directions 6 distinction
+6 diverse 6 divide 6 drawn 6 early 6 effort 6 els 6 ends 6 europe 6
+experiment 6 extra 6 features 6 field 6 finite 6 fits 6 formulas 6
+fundamental 6 furthermore 6 generated 6 got 6 graphical 6 grow 6 hand 6
+hessian 6 huge 6 ignore 6 incorporate 6 increase 6 indicated 6
+interpretation 6 intuitive 6 judah 6 kilograms 6 lack 6 late 6 law 6
+location 6 locations 6 manipulate 6 misleading 6 mode 6 moving 6
+multiplied 6 objective 6 observable 6 oo 6 outside 6 overfitting 6 pair
+6 pb 6 perfect 6 performing 6 philosophy 6 physical 6 planet 6 precision
+6 predicts 6 presents 6 producing 6 ptolemy 6 reading 6 reality 6 recipe
+6 reject 6 replicate 6 reproduce 6 required 6 running 6 sensible 6 sets
+6 she 6 six 6 solution 6 starting 6 stronger 6 surprising 6 suspect 6
+tail 6 taking 6 th 6 themselves 6 theoretical 6 tradition 6 treatment 6
+trouble 6 twins 6 uncertain 6 update 6 upper 6 usual 6 view 6 waffles 6
+waters 6 worlds 6 worse 7 access 7 account 7 added 7 address 7
+advantages 7 algebra 7 along 7 alternative 7 analytical 7 analyze 7
+approximately 7 arrows 7 available 7 away 7 benefit 7 bivariate 7 books
+7 careful 7 category 7 causally 7 caused 7 causes 7 checking 7 chosen 7
+complicated 7 conceptual 7 contents 7 conventional 7 decisions 7
+densities 7 derived 7 detail 7 displays 7 distributed 7 engines 7
+epistemological 7 estimating 7 evolutionary 7 expression 7 extract 7
+fail 7 five 7 focuses 7 frequencies 7 frequentist 7 gets 7 give 7
+guarantee 7 happens 7 higher 7 histogram 7 howell 7 ian 7 identify 7
+implication 7 key 7 kilocalories 7 knot 7 knows 7 kung 7 labeled 7 leave
+7 likewise 7 lists 7 live 7 load 7 lots 7 magnitude 7 major 7 match 7
+maybe 7 measures 7 meet 7 merely 7 multiplication 7 multiplying 7 onto 7
+pa 7 parabola 7 perspective 7 piece 7 plain 7 practical 7 predicting 7
+principle 7 programming 7 put 7 quantitative 7 recognize 7 recorded 7
+reference 7 relates 7 remaining 7 report 7 rules 7 saw 7 scales 7 shade
+7 std 7 straight 7 support 7 term 7 trying 7 u 7 uniquely 7 united 7
+unlike 7 vampires 7 various 7 vary 7 vectors 8 accuracy 8 alist 8 alone
+8 appears 8 arbitrary 8 argue 8 based 8 becomes 8 believe 8 branches 8
+built 8 carlo 8 categorical 8 certainty 8 checks 8 combine 8 commonplace
+8 computational 8 conclude 8 condition 8 confusing 8 consequence 8
+containing 8 corresponds 8 curves 8 dashed 8 default 8 dnew 8 editor 8
+else 8 equivalent 8 essentially 8 estimated 8 evolution 8 execute 8
+expect 8 explicitly 8 explore 8 extreme 8 face 8 found 8 groups 8
+impossible 8 improve 8 index 8 indicates 8 introduce 8 larger 8
+measurements 8 mi 8 modify 8 monte 8 numerical 8 observing 8 otherwise 8
+parts 8 patterns 8 per 8 physics 8 places 8 powerful 8 processing 8
+products 8 rare 8 realize 8 remain 8 remains 8 rior 8 short 8 showing 8
+silly 8 simulations 8 social 8 sort 8 splines 8 spread 8 stands 8
+strongly 8 summaries 8 switches 8 symbols 8 tails 8 teaching 8 truth 8
+updated 8 usefully 9 ability 9 anything 9 applications 9 approximations
+9 assign 9 associations 9 assumes 9 beginning 9 bit 9 bm 9 boys 9
+building 9 certainly 9 chain 9 changing 9 comes 9 contain 9 criteria 9
+definitions 9 degree 9 described 9 descriptive 9 detailed 9 distance 9
+dummy 9 energy 9 especially 9 familiar 9 flexible 9 framework 9 goes 9
+great 9 greater 9 guess 9 helpful 9 indeed 9 infer 9 issue 9 last 9
+marginal 9 method 9 mind 9 moment 9 monday 9 multiply 9 nine 9 num 9 old
+9 pairs 9 parabolic 9 phenomenon 9 plotted 9 processes 9 purely 9 recall
+9 requires 9 rest 9 says 9 scale 9 sides 9 simply 9 slightly 9 solid 9
+speed 9 statement 9 statisticians 9 synthetic 9 tables 9 teach 9
+testable 9 therefore 9 turns 9 typically 9 underlying 9 unfortunately 9
+unless 9 weighted 9 wide 10 additive 10 adults 10 although 10 appear 10
+averaging 10 best 10 beyond 10 big 10 birth 10 box 10 cards 10 central
+10 cherry 10 choice 10 choices 10 computing 10 confidence 10 constant 10
+control 10 correlations 10 correspond 10 defines 10 depending 10
+describing 10 displayed 10 edition 10 eventually 10 final 10 finally 10
+flat 10 follow 10 formal 10 history 10 human 10 imagine 10 including 10
+independencies 10 initial 10 interpreting 10 introduced 10 lead 10
+making 10 manipulating 10 multivariate 10 named 10 narrow 10 none 10
+observe 10 possibilities 10 prague 10 program 10 proportional 10
+residual 10 saying 10 seem 10 seems 10 smaller 10 someone 10 square 10
+swan 10 symbol 10 typical 10 vertical 10 visualize 10 wait 10 wish 11
+ahead 11 alleles 11 almost 11 amount 11 births 11 columns 11 comparing
+11 components 11 continuous 11 empirical 11 following 11 geocentric 11
+happen 11 hardly 11 highest 11 his 11 includes 11 indicate 11 infinite
+11 job 11 joint 11 leads 11 logic 11 marble 11 mistakes 11 name 11
+nature 11 needed 11 negative 11 nor 11 off 11 ordinary 11 panda 11
+predictors 11 probably 11 produces 11 purpose 11 reader 11 related 11
+represents 11 require 11 run 11 sciences 11 sections 11 seeing 11
+sequences 11 series 11 simplest 11 slope 11 step 11 testing 11 until 11
+updating 11 vague 12 adding 12 addition 12 allows 12 apply 12 attempt 12
+bad 12 boundaries 12 century 12 changes 12 close 12 commands 12 computed
+12 conjectures 12 contexts 12 course 12 deviations 12 everyone 12
+explanation 12 female 12 finding 12 future 12 generate 12 growth 12 half
+12 harder 12 high 12 hpdi 12 inspect 12 intercept 12 keep 12 language 12
+likely 12 move 12 necessary 12 page 12 peak 12 place 12 provided 12 rain
+12 reasonable 12 regressions 12 sequence 12 students 12 sufficient 12
+summary 12 table 12 takes 12 tests 12 third 12 weights 12 wind 12 worked
+13 applied 13 arises 13 assuming 13 choose 13 coin 13 conditioning 13
+decide 13 depends 13 difference 13 direct 13 display 13 earth 13 either
+13 entropy 13 equal 13 ever 13 family 13 far 13 full 13 gives 13 having
+13 kinds 13 logarithm 13 lower 13 markov 13 my 13 notation 13 null 13
+ofp 13 ooo 13 outcomes 13 pattern 13 product 13 readers 13 repeat 13
+strong 13 tions 13 together 13 tool 13 trend 13 unobserved 13 whatever
+14 answers 14 command 14 complete 14 construct 14 defined 14 down 14
+engineering 14 expects 14 explain 14 few 14 highly 14 implies 14 include
+14 ing 14 interest 14 k 14 length 14 looks 14 near 14 neither 14 neutral
+14 perform 14 precise 14 reasons 14 sd 14 seq 14 several 14 shaded 14
+special 14 spurious 14 standardized 14 towards 14 xi 15 across 15
+aspects 15 back 15 check 15 computer 15 dags 15 decision 15 depend 15
+effects 15 exact 15 falsification 15 focus 15 formula 15 house 15 imply
+15 light 15 mathematics 15 meaning 15 na 15 precis 15 sampled 15 similar
+15 variance 16 additional 16 allow 16 arise 16 assumption 16 blossom 16
+calculation 16 compatibility 16 complex 16 easily 16 everything 16
+increases 16 individuals 16 link 16 logically 16 male 16 map 16 material
+16 matters 16 milk 16 missing 16 ones 16 percent 16 percentile 16 person
+16 population 16 predicted 16 quickly 16 raw 16 resulting 16 rows 16
+selection 16 steps 16 structure 16 swans 16 text 16 times 16 too 16
+total 16 types 16 units 16 waffle 16 worth 16 years 16 yet 17 able 17
+assume 17 bayes 17 become 17 binomial 17 correlated 17 details 17 events
+17 forking 17 four 17 frequency 17 influences 17 interpret 17 logical 17
+longer 17 me 17 methods 17 note 17 notice 17 plotting 17 provides 17
+research 17 simulating 17 sure 17 techniques 17 tend 17 theorem 17
+understanding 17 yourself 18 actual 18 bottom 18 card 18 come 18 done 18
+exponential 18 goal 18 he 18 horizontal 18 independent 18 inferences 18
+inside 18 log 18 maximum 18 path 18 rates 18 relationships 18 software
+18 strategy 18 turn 18 type 18 won 18 write 19 approximate 19 call 19
+correctly 19 correlation 19 hi 19 knowledge 19 machine 19 marbles 19
+measure 19 output 19 predict 19 provide 19 remember 19 seen 19 shape 19
+specific 19 tells 19 uniform 19 vector 19 wrong 20 actually 20 been 20
+cause 20 combination 20 false 20 fitting 20 helps 20 lies 20 matter 20
+mcmc 20 original 20 own 20 polynomial 20 power 20 practice 20
+probabilities 20 procedures 20 question 20 residuals 20 shows 20 tell 20
+terms 20 toss 20 under 20 variation 21 ask 21 cm 21 corresponding 21
+design 21 earlier 21 easier 21 error 21 had 21 itself 21 learning 21
+read 21 region 21 rnorm 21 spline 21 state 21 y 22 axis 22 begin 22
+calculations 22 cannot 22 column 22 did 22 doing 22 entire 22 knowing 22
+least 22 made 22 nearly 22 nothing 22 states 22 summarize 22 tion 22
+unique 23 basic 23 counterfactual 23 go 23 knots 23 known 23 middle 23
+neocortex 23 ofthe 23 particular 23 results 23 story 23 theory 24 add 24
+describe 24 fact 24 hypothesis 24 long 24 plausibilities 24 points 24
+sim 24 though 25 against 25 correct 25 golems 25 implications 25 implied
+25 individual 25 less 25 never 25 others 25 package 25 size 25 whether
+25 works 26 around 26 associated 26 conjecture 26 contains 26 counting
+26 draw 26 going 26 re 26 single 26 species 26 uses 26 were 27 answer 27
+being 27 body 27 general 27 land 27 range 27 say 27 scientists 27
+something 27 thing 27 top 27 who 27 within 27 year 28 curve 28 directly
+28 doesn 28 enough 28 form 28 makes 28 quite 28 science 28 sometimes 28
+tools 28 usually 28 without 29 blue 29 conditional 29 count 29 density
+29 e 29 exactly 29 expected 29 isn 29 order 29 pi 29 white 30 compare 30
+dnorm 30 loss 30 part 30 random 30 relative 30 working 31 already 31
+consistent 31 evidence 31 garden 31 list 31 little 31 mathematical 31
+multiple 31 natural 31 quap 31 reason 31 sense 31 side 31 start 31 test
+31 things 31 tosses 31 try 32 among 32 deviation 32 hard 32 however 32
+modeling 32 oooo 32 think 33 association 33 estimates 33 frame 33 kind
+33 measurement 33 median 33 overthinking 33 procedure 33 questions 33
+simulation 33 while 34 below 34 black 34 define 34 hypotheses 34
+plausible 34 positive 34 simulated 34 statistics 34 sum 35 find 35
+matrix 35 multilevel 35 sigma 35 tossing 36 build 36 counts 36 end 36
+learn 36 numbers 36 plots 36 real 36 section 36 want 36 why 37 chapters
+37 context 37 easy 37 effect 37 influence 37 must 37 proportion 37 row
+37 show 37 understand 38 problems 38 take 39 bag 39 called 39 change 39
+fit 39 observation 39 relationship 39 scientific 39 set 39 shown 39 true
+40 assumptions 40 b 40 basis 40 heights 40 over 40 predictive 40 small
+40 suppose 41 analysis 41 examples 41 given 41 important 41 mass 41
+still 41 x 42 definition 42 likelihood 42 paths 42 zero 43 better 43
+cases 43 dag 43 problem 44 estimate 44 intervals 44 left 44 people 44
+prediction 45 after 45 again 45 approach 45 functions 46 large 46 lot 46
+might 46 often 46 sampling 46 through 46 ve 47 h 47 later 47 since 47
+standard 47 where 48 common 48 process 49 observed 50 plausibility 50 pr
+50 really 50 used 51 average 51 good 51 point 51 rather 51 would 52 don
+52 golem 52 l 52 lines 52 previous 52 rethinking 52 was 53 compute 53
+look 53 next 53 once 53 result 54 uncertainty 55 consider 55 help 55
+three 56 outcome 56 simple 57 every 57 quadratic 57 those 58 simulate 59
+always 59 useful 59 world 60 age 60 need 60 such 60 time 60 upon 61 case
+61 interval 61 mu 61 their 62 observations 62 second 63 another 63 well
+64 before 65 get 65 grid 65 into 65 out 65 should 66 work 67 function 67
+may 68 produce 69 n 69 sample 70 number 71 divorce 71 instead 72
+inference 73 priors 73 right 74 its 75 book 75 possible 75 predictions
+76 us 77 distributions 77 globe 79 information 79 know 80 new 81 causal
+81 weight 82 up 82 water 86 could 86 does 86 let 87 ways 88 means 89
+above 89 chapter 89 normal 90 our 91 here 91 rate 92 make 93
+approximation 94 linear 94 most 95 between 95 predictor 97 way 98 them
+99 height 100 even 100 gaussian 100 much 100 variable 101 line 101
+marriage 103 w 105 two 106 different 110 example 111 other 111
+parameters 111 very 114 both 114 your 115 has 116 bayesian 116 using 117
+first 119 any 120 only 121 no 124 regression 124 samples 125 also 125
+perperper 125 plot 126 than 127 many 129 same 131 d 133 parameter 137
+mean 137 then 139 p 139 statistical 139 when 141 see 150 because 150
+which 153 they 154 figure 154 what 157 variables 158 t 159 about 162
+some 163 i 164 prior 166 if 166 now 167 use 168 like 172 or 172 value
+173 values 174 do 177 an 182 m 184 r 188 probability 195 just 199 ll 203
+will 204 how 212 more 217 by 221 all 222 one 223 at 229 code 232 models
+242 not 243 there 251 have 285 each 303 distribution 311 so 312 on 323
+these 326 from 353 be 367 can 375 s 395 posterior 398 but 445 data 461
+as 469 with 564 model 585 we 616 are 659 for 694 you 738 this 778 it 865
+that 1201 and 1267 in 1367 is 1545 a 1628 to 2110 of 4649 the</p>
+</body>
+</html>

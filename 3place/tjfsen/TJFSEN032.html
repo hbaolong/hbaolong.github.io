@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="hbaolong@vip.qq.com" />
+  <title>统计反思EN:5.2. Masked relationship</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">统计反思EN:5.2. Masked relationship</h1>
+<p class="author">hbaolong@vip.qq.com</p>
+</header>
+<center>
+<a href="/3place/tjfsen">返回首页</a> <a
+href="/3place/tjfsen/mingju.html">本书名句</a> <a
+href="/3place/tjfsen/memo.html">本书注解</a> <a
+href="/3place/tjfsen/index_rich.html">丰富目录</a> <a
+href="/3place/tjfsen/index_readcal.html">同读日历</a> <a
+href="/3place/tjfsen/index_timeline.html">时间线</a> <a
+href="/3place/tjfsen/index_books.html">引用书籍</a> <a
+href="/3place/tjfsen/index_words.html">使用字频</a>
+<div id="wx_pic" style="margin:0 auto;display:none;">
+<img src='/img/logo.png'/>
+</div>
+</center>
+<h4 id="masked-relationship">5.2. Masked relationship</h4>
+<p>The divorce rate example demonstrates that multiple predictor
+variables are useful for knocking out spurious association. A second
+reason to use more than one predictor variable is to measure the direct
+influences of multiple factors on an outcome, when none of those
+influences is apparent from bivariate relationships. This kind of
+problem tends to arise when there are two predictor variables that are
+correlated with one another. However, one of these is positively
+correlated with the outcome and the other is negatively correlated with
+it.</p>
+<p>You’ll consider this kind of problem in a new data context,
+information about the com- position of milk across primate species, as
+well as some facts about those species, like body mass and brain size.84
+Milkis a huge investment, being much more expensive than gestation. Such
+an expensive resource is likely adjusted in subtle ways, depending upon
+the physiolog- ical and development details of each mammal species.
+Let’s load the data into R first:</p>
+<p>You should see in the structure of the data frame that you have 29
+rows for 8 variables. The variables we’ll consider for now are
+kcal.per.g (kilocalories of energy per gram of milk),</p>
+<p>mass (average female body mass, in kilograms), and neocortex.perc
+(percent of total brain mass that is neocortex mass).</p>
+<p>A popular hypothesis has it that primates with larger brains produce
+more energetic milk, so that brains can grow quickly. Answering
+questions of this sort consumes a lot of effort in evolutionary biology,
+because there are many subtle statistical issues that arise when
+comparing species. It doesn’t help that many biologists have no
+reference model other than a series of regressions, and so the output of
+the regressions is not really interpretable. The causal meaning of
+statistical estimates always depends upon information outside the
+data.</p>
+<p>We won’t solve these problems here. But we will explore a useful
+example. The question here is to what extent energy content of milk,
+measured here by kilocalories, is related to the percent of the brain
+mass that is neocortex. Neocortex is the gray, outer part of the brain
+that is especially elaborate in some primates. We’ll end up needing
+female body mass as well, to see the masking that hides the
+relationships among the variables. Let’s standardize these three
+variables. As in previous examples, standardizing helps us both get a
+reliable approximation of the posterior as well as build reasonable
+priors.</p>
+<p>The first model to consider is the simple bivariate regression
+between kilocalories and neocortex percent. You already know how to set
+up this regression. In mathematical form:</p>
+<p>Ki ~ Normal(µi , σ)</p>
+<p>µi = α + βNNi</p>
+<p>where K is standardized kilocalories and N is standardized neocortex
+percent. We still need to consider the priors. But first let’s just try
+to run this as a quap model with some vague priors, because there is
+another key modeling issue to address first.</p>
+<p>R code 5.29</p>
+<p>R code 5.30</p>
+<p>Error in quap(alist(K ~ dnorm(mu, sigma), mu &lt;- a + bN * N, a ~
+dnorm(0, :</p>
+<p>initial value in ‘vmmin’ is not finite</p>
+<p>The start values for the parameters were invalid. This could be
+caused by missing values (NA) in the data or by start values outside the
+parameter constraints. If there are no NAs, try using explicit start
+values.</p>
+<p>What has gone wrong here? This particular error message means that
+the model didn’t return a valid probability for even the starting
+parameter values. In this case, the culprit is the missing values in the
+N variable. Take a look inside the original variable and see for
+yourself:</p>
+<p>R code 5.31</p>
+<p>R code 5.32</p>
+<p>R code 5.33</p>
+<p>R code 5.34</p>
+<p>[1] 55.16 NA NA NA NA 64.54 64.54 67.64 NA 68.85 58.85 61.69</p>
+<p>[13] 60.32 NA NA 69.97 NA 70.41 NA 73.40 NA 67.53 NA 71.26</p>
+<p>[25] 72.60 NA 70.24 76.30 75.49</p>
+<p>Each NA in the output is a missing value. If you pass a vector like
+this to a likelihood func- tion like dnorm, it doesn’t know what to do.
+After all, what’s the probability of a missing value? Whatever the
+answer, it isn’t a number, and so dnorm returns a NaN. Unable to even
+get started, quap (or rather optim, which does the real work) gives up
+and barks about some weird thing called vmmin not being finite. This
+kind of opaque error message is unfortunately the norm in R. The
+additional part of the message suggesting NA values might be responsible
+is just quap taking a guess.</p>
+<p>This is easy to fix. What you need to do here is manually drop all
+the cases with missing values. This is known as a complete case
+analysis. More automated model fitting com- mands, like lm and glm, will
+silently drop such cases for you. But this isn’t always a good thing.
+First, it’s validity depends upon the process that caused these
+particular values to go missing. In 15, you’ll explore this in much more
+depth. Second, once you start com- paring models, you must compare
+models fit to the same data. If some variables have missing values that
+others do not, automated tools will silently produce misleading
+comparisons.</p>
+<p>Let’s march forward for now, dropping any cases with missing values.
+It’s worth learning how to do this yourself. To make a new data frame
+with only complete cases, use:</p>
+<p>This makes a new data frame, dcc, that consists of the 17 rows from d
+that have no missing values in any of the variables listed inside
+complete.cases. Now let’s work with the new data frame. All that is new
+in the code is using dcc instead of d:</p>
+<p>Before considering the posterior predictions, let’s consider those
+priors. As in many simple linear regression problems, these priors are
+harmless. But are they reasonable? It is impor- tant to build reasonable
+priors, because as the model becomes less simple, the priors can be very
+helpful, but only if they are scientifically reasonable. To simulate and
+plot 50 prior regression lines:</p>
+<p>a ~ dnorm(0, 1)</p>
+<p>bN ~ dnorm(0, 1)</p>
+<p>-2 -1</p>
+<p>neocortex percent (std)</p>
+<p>Figure 5.8. Prior predictive distributions for the first primate milk
+model, m5.5. Each plot shows a range of 2 standard deviations for each
+variable. Left: The vague first guess. These priors are clearly silly.
+Right: Slightly less silly priors that at least stay within the
+potential space of observations.</p>
+<p>The result is displayed on the left side of Figure 5.8. I’ve shown a
+range of 2 standard de- viations for both variables. So that is most of
+the outcome space. These lines are crazy. As in previous examples, we
+can do better by both tightening the α prior so that it sticks closer to
+zero. With two standardized variables, when predictor is zero, the
+expected value of the outcome should also be zero. And the slope βN
+needs to be a bit tighter as well, so that it doesn’t regularly produce
+impossibly strong relationships. Here’s an attempt:</p>
+<p>If you plot these priors, you’ll get what is shown on the right side
+of Figure 5.8. These are still very vague priors, but at least the lines
+stay within the high probability region of the observable data.</p>
+<p>Now let’s look at the posterior:</p>
+<p>R 5co3d6e precis( m5.5 )</p>
+<p>mean sd 5.5% 94.5% a 0.04 0.15 -0.21 0.29 bN 0.13 0.22 -0.22 0.49
+sigma 1.00 0.16 0.74 1.26</p>
+<p>R code 5.37</p>
+<p>R code 5.38</p>
+<p>From this summary, you can possibly see that this is neither a strong
+nor very precise asso- ciation. The standard deviation is almost twice
+the posterior mean. But as always, it’s much easier to see this if we
+draw a picture. Tables of numbers are golem speak, and we are not
+golems. We can plot the predicted mean and 89% compatibility interval
+for the mean to see this more easily. The code below contains no
+surprises. But if have extended the range of N values to consider, in
+xseq, so that the plot looks nicer.</p>
+<p>I display this plot in the upper-left of Figure 5.9. The posterior
+mean line is weakly positive, but it is highly imprecise. A lot of
+mildly positive and negative slopes are plausible, given this model and
+these data.</p>
+<p>Now consider another predictor variable, adult female body mass, mass
+in the data frame. Let’s use the logarithm of mass, log(mass), as a
+predictor as well. Why the logarithm of mass instead of the raw mass in
+kilograms? It is often true that scaling measurements like body mass are
+related by magnitudes to other variables. Taking the log of a measure
+trans- lates the measure into magnitudes. So by using the logarithm of
+body mass here, we’re saying that we suspect that the magnitude of a
+mother’s body mass is related to milk energy, in a linear fashion. Much
+later, in 16, you’ll see why these logarithmic relationships are almost
+inevitable results of the physics of organisms.</p>
+<p>Now we construct a similar model, but consider the bivariate
+relationship between kilo- calories and body mass. Since body mass is
+also standardized, we can use the same priors and stay within possible
+outcome values. But if you were a domain expert in growth, you could
+surely do better than this.</p>
+<p>5.2. MASKED RELATIONSHIP</p>
+<p>-2.0 -1.5 -1.0 -0.5 0.0 0.5 1.0 1.5</p>
+<p>neocortex percent (std)</p>
+<p>-2</p>
+<p>Counterfactual holding M = 0</p>
+<p>-2.0 -1.5 -1.0 -0.5 0.0 0.5 1.0 1.5</p>
+<p>neocortex percent (std)</p>
+<p>Counterfactual holding N = 0</p>
+<p>-2</p>
+<p>Figure 5.9. Milk energy and neocortex among primates. In the top two
+plots, simple bivariate regressions of kilocalories per gram of milk (K)
+on (left) neocortex percent (N) and (right) log female body mass (M)
+show weak associations. In the bottom row, a model with both neocortex
+percent (N) and log body mass (M) shows stronger associations.</p>
+<p>mean sd 5.5% 94.5% a 0.05 0.15 -0.20 0.29 bM -0.28 0.19 -0.59
+0.03</p>
+<p>sigma 0.95 0.16 0.70 1.20</p>
+<p>Log-mass is negatively associated with kilocalories. This association
+does seem stronger than that of neocortex percent, although in the
+opposite direction. It is quite uncertain though, with a wide
+compatibility interval that is consistent with a wide range of both weak
+and stronger relationships. This regression is shown in the upper-right
+of Figure 5.9. You should modify the code that plotted the upper-left
+plot in the same figure, to be sure you understand how to do this.</p>
+<p>Now let’s see what happens when we add both predictor variables at
+the same time to the regression. This is the multivariate model, in math
+form:</p>
+<p>Ki ~ Normal(µi , σ)</p>
+<p>µi = α + βNNi + βMMi α ~ Normal(0, 0.2)</p>
+<p>βN ~ Normal(0, 0.5)</p>
+<p>βM ~ Normal(0, 0.5)</p>
+<p>σ ~ Exponential(1)</p>
+<p>Approximating the posterior requires no new tricks:</p>
+<p>a</p>
+<p>bN</p>
+<p>bM</p>
+<p>sigma</p>
+<p>mean</p>
+<p>0.07</p>
+<p>0.68</p>
+<p>-0.70</p>
+<p>0.74</p>
+<p>5.5%</p>
+<p>-0.15</p>
+<p>0.28</p>
+<p>-1.06</p>
+<p>0.53</p>
+<p>94.5%</p>
+<p>0.28</p>
+<p>1.07</p>
+<p>-0.35</p>
+<p>0.95</p>
+<p>By incorporating both predictor variables in the regression, the
+posterior association of both with the outcome has increased. Visually
+comparing this posterior to those of the previous two models helps to
+see the pattern of change:</p>
+<p>bM</p>
+<p>m5.7</p>
+<p>m5.6</p>
+<p>m5.5</p>
+<p>bN</p>
+<p>m5.7</p>
+<p>m5.6</p>
+<p>m5.5</p>
+<p>-1.0 -0.5 0.0 0.5 1.0 Estimate</p>
+<p>The posterior means for neocortex percent and log-mass have both
+moved away from zero. Adding both predictors to the model seems to have
+made their estimates move apart.</p>
+<p>What happened here? Why did adding neocortex and body mass to the
+same model lead to stronger associations for both? This is a context in
+which there are two variables correlated with the outcome, but one is
+positively correlated with it and the other is negatively correlated
+with it. In addition, both of the explanatory variables are positively
+correlated with one another. Try a simple pairs( ~K + M + N , dcc ) plot
+to appreciate this pattern of correlation. The result of this pattern is
+that the variables tend to cancel one another out.</p>
+<p>This is another case in which multiple regression automatically finds
+the most revealing cases and uses them to produce inferences. What the
+regression model does is ask if species that have high neocortex percent
+for their body mass have higher milk energy. Likewise, the model asks if
+species with high body mass for their neocortex percent have higher milk
+energy. Bigger species, like apes, have milk with less energy. But
+species with more neocortex tend to have richer milk. The fact that
+these two variables, body size and neocortex, are correlated across
+species makes it hard to see these relationships, unless we account for
+both.</p>
+<p>Some DAGs will help. There are at least three graphs consistent with
+these data.</p>
+<p>w N</p>
+<p>K</p>
+<p>w N</p>
+<p>K</p>
+<p>w U N</p>
+<p>K</p>
+<p>Beginning on the left, the first possibility is that body mass (M)
+influences neocortex percent (N). Both then influence kilocalories in
+milk (K). Second, in the middle, neocortex could instead influence body
+mass. The two variables still end up correlated in the sample. Finally,
+on the right, there could be an unobserved variable U that influences
+both M and N, produc- ing a correlation between them. In this book, I’ll
+circle variables that are unobserved. One of the threats to causal
+inference is that there are potentially many unobserved variables that
+influence an outcome or the predictors. We’ll consider this more in the
+next chapter.</p>
+<p>Which of these graphs is right? We can’t tell from the data alone,
+because these graphs imply the same set of conditional independencies.
+In this case, there are no conditional independencies—each DAG above
+implies that all pairs of variables are associated, regardless of what
+we condition on. A set ofDAGs with the same conditional independencies
+is known as a Markov equivalence set. In the Overthinking box on the
+next page, I’ll show you how to simulate observations consistent with
+each of these DAGs, how each can produce the masking phenomenon, and how
+to use the dagitty package to compute the complete set of Markov
+equivalent DAGs. Remember that while the data alone can never tell you
+which causal model is correct, your scientific knowledge of the
+variables will eliminate a large number of silly, but Markov equivalent,
+DAGs.</p>
+<p>The final thing we’d like to do with these models is to finish Figure
+5.9. Let’s make counterfactual plots again. Suppose the third DAG above
+is the right one. Then imagine ma- nipulating M and N, breaking the
+influence of U on each. In the real world, such experiments are
+impossible. If we change an animal’s body size, natural selection would
+then change the other features to match it. But these counterfactual
+plots do help us see how the model views the association between each
+predictor and the outcome. Here is the code to produce the lower-left
+plot in Figure 5.9 (page 149).</p>
+<p>R code 5.41</p>
+<p>xseq &lt;- seq( from=min(dcc)-0.15 , to=max(dcc)+0.15 , length.out=30
+)</p>
+<p>mu &lt;- link( m5.7 , data=data.frame( M=xseq , N=0 ) )</p>
+<p>mu_mean &lt;- apply(mu,2,mean)</p>
+<p>mu_PI &lt;- apply(mu,2,PI)</p>
+<p>plot( NULL , xlim=range(dcc) , ylim=range(dcc) )</p>
+<p>lines( xseq , mu_mean , lwd=2 )</p>
+<p>shade( mu_PI , xseq )</p>
+<p>You should try to reproduce the lower-right plot by modifying this
+code. In the practice problems, I’ll ask you to consider what would
+happen, if you chose one of the other DAGs at the top of the page.</p>
+<p>Overthinking: Simulating a masking relationship. Just as with
+understanding spurious association (page 139), it may help to simulate
+data in which two meaningful predictors act to mask one another. In the
+previous section, I showed three DAGs consistent with this. To simulate
+data consistent with the first DAG:</p>
+<p>R code 5.42</p>
+<h1 id="m---k---n">M -&gt; K &lt;- N</h1>
+<h1 id="m---n">M -&gt; N</h1>
+<p>n &lt;- 100</p>
+<p>M &lt;- rnorm( n )</p>
+<p>N &lt;- rnorm( n , M )</p>
+<p>K &lt;- rnorm( n , N - M )</p>
+<p>d_sim &lt;- data.frame(K=K,N=N,M=M)</p>
+<p>You can quickly see the masking pattern of inferences by replacing
+dcc with d_sim in models m5.5, m5.6, and m5.7. Look at the precis
+summaries and you’ll see the same masking pattern where the slopes
+become more extreme in m5.7. The other two DAGs can be simulated like
+this:</p>
+<p>R code 5.43</p>
+<h1 id="m---k---n-1">M -&gt; K &lt;- N</h1>
+<h1 id="n---m">N -&gt; M</h1>
+<p>n &lt;- 100</p>
+<p>N &lt;- rnorm( n )</p>
+<p>M &lt;- rnorm( n , N )</p>
+<p>K &lt;- rnorm( n , N - M )</p>
+<p>d_sim2 &lt;- data.frame(K=K,N=N,M=M)</p>
+<h1 id="m---k---n-2">M -&gt; K &lt;- N</h1>
+<h1 id="m---u---n">M &lt;- U -&gt; N</h1>
+<p>n &lt;- 100</p>
+<p>U &lt;- rnorm( n )</p>
+<p>N &lt;- rnorm( n , U )</p>
+<p>M &lt;- rnorm( n , U )</p>
+<p>K &lt;- rnorm( n , N - M )</p>
+<p>d_sim3 &lt;- data.frame(K=K,N=N,M=M)</p>
+<p>In the primate milk example, it may be that the positive association
+between large body size and neocortex percent arises from a tradeoff
+between lifespan and learning. Large animals tend to live a long time.
+And in such animals, an investment in learning may be a better
+investment, because learning can be amortized over a longer lifespan.
+Both large body size and large neocortex then influence milk
+composition, but in different directions, for different reasons. This
+story implies that the DAG with an arrow from M to N, the first one, is
+the right one. But with the evidence at hand,</p>
+<p>we cannot easily see which is right. To compute the Markov
+equivalence set, let’s define the first DAG and ask dagitty to do the
+hard work:</p>
+<p>Now MElist should contain six different DAGs. To plot them all, you
+can use d rawdag(MElist). Which of these do you think you could
+eliminate, based upon scientific knowledge of the variables?</p>
+<h6 id="阅读日期-2025年12月25日-2025年12月25日-共-1-天">阅读日期：
+2025年12月25日-2025年12月25日 共： 1 天</h6>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

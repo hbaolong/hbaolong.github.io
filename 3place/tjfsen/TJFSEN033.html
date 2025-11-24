@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="hbaolong@vip.qq.com" />
+  <title>统计反思EN:5.3. Categorical variables</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">统计反思EN:5.3. Categorical variables</h1>
+<p class="author">hbaolong@vip.qq.com</p>
+</header>
+<center>
+<a href="/3place/tjfsen">返回首页</a> <a
+href="/3place/tjfsen/mingju.html">本书名句</a> <a
+href="/3place/tjfsen/memo.html">本书注解</a> <a
+href="/3place/tjfsen/index_rich.html">丰富目录</a> <a
+href="/3place/tjfsen/index_readcal.html">同读日历</a> <a
+href="/3place/tjfsen/index_timeline.html">时间线</a> <a
+href="/3place/tjfsen/index_books.html">引用书籍</a> <a
+href="/3place/tjfsen/index_words.html">使用字频</a>
+<div id="wx_pic" style="margin:0 auto;display:none;">
+<img src='/img/logo.png'/>
+</div>
+</center>
+<h4 id="categorical-variables">5.3. Categorical variables</h4>
+<p>A common question for statistical methods is to what extent an
+outcome changes as a result of presence or absence of a category. A
+category here means discrete and unordered. For example, consider the
+different species in the milk energy data again. Some of them are apes,
+while others are New World monkeys. We might want to ask how predictions
+should vary when the species is an ape instead of a monkey. Taxonomic
+group is a categorical variable, because no species can be half-ape and
+half-monkey (discreteness), and there is no sense in which one is larger
+or smaller than the other (unordered). Other common examples of
+categorical variables include:</p>
+<p>• Sex: male, female</p>
+<p>• Developmental status: infant, juvenile, adult</p>
+<p>• Geographic region: Africa, Europe, Melanesia</p>
+<p>Many readers will already know that variables like this, routinely
+called factors, can easily be included in linear models. But what is not
+widely understood is how these variables are represented in a model. The
+computer does all of the work for us, hiding the machinery. But there
+are some subtleties that make it worth exposing the machinery. Knowing
+how the machine (golem) works both helps you interpret the posterior
+distribution and gives you additional power in building the model.</p>
+<p>Rethinking: Continuous countries. With automated software and lack of
+attention, categorical vari- ables can be dangerous. In 2015, a
+high-impact journal published a study of 1170 children from six
+countries, finding a strong negative association between religiosity and
+generosity.85 The paper caused a small stir among religion researchers,
+because it disagreed with the existing literature. Upon reanalysis, it
+was found that the country variable, which is categorical, was entered
+as a continuous variable instead. This made Canada (value 2) twice as
+much “country” as the United States (value 1). After reanalysis with
+country as a categorical variable, the result vanished and the original
+paper has been retracted. This is a happy ending, because the authors
+shared their data. How many cases like this exist, undiscovered because
+the data have never been shared and are possible lost forever?</p>
+<p>5.3.1. Binary categories. In the simplest case, the variable of
+interest has only two cate- gories, like male andfemale. Let’s rewind to
+the Kalahari data you met in 4. Back then, we ignored sex when
+predicting height, but obviously we expect males and females to have
+different averages. Take a look at the variables available:</p>
+<p>R code</p>
+<p>5.45 data(Howell1) d &lt;- Howell1 str(d)</p>
+<p>‘data.frame’: 544 obs. of 4 variables: $ height: num 152 140 137 157
+145 …</p>
+<p>$ weight: num 47.8 36.5 31.9 53 41.3 …</p>
+<p>$ age : num 63 63 65 41 51 35 32 27 19 54 …</p>
+<p>$ male : int 1 0 0 1 0 1 0 1 0 1 …</p>
+<p>The male variable is our new predictor, an example of a indicator
+variable. Indicator variables—sometimes also called “dummy”
+variables—are devices for encoding unordered categories into
+quantitative models. There is no sense here in which “male” is one more
+than “female.” The purpose of the male variable is to indicate when a
+person in the sample is “male.” So it takes the value 1 whenever the
+person is male, but it takes the value 0 when the person belongs to any
+other category. It doesn’t matter which category is indicated by the 1.
+The model won’t care. But correctly interpreting the model demands that
+you remember, so it’s a good idea to name the variable after the
+category assigned the 1 value.</p>
+<p>There are two ways to make a model with this information. The first
+is to use the indicator variable directly inside the linear model, as
+ifit were a typical predictor variable. The effect of an indicator
+variable is to turn a parameter on for those cases in the category.
+Simultaneously, the variable turns the same parameter off for those
+cases in another category. This will make more sense, once you see it in
+the mathematical definition of the model. Consider again a linear model
+of height, as in 4. Now we’ll ignore weight and the other variables and
+focus only on sex.</p>
+<p>hi ~ Normal(µi , σ)</p>
+<p>µi = α + βm mi</p>
+<p>α ~ Normal(178, 20)</p>
+<p>βm ~ Normal(0, 10)</p>
+<p>σ ~ Uniform(0, 50)</p>
+<p>where h is height and m is the dummy variable indicating a male
+individual. The parameter βm influences prediction only for those cases
+where mi = 1. When mi = 0, it has no effect on prediction, because it is
+multiplied by zero inside the linear model, α+βm mi, canceling it out,
+whatever its value. This is just to say that, when mi = 1, the linear
+model is µi = α+βm . And when mi = 0, the linear model is simply µi = α
+.</p>
+<p>Using this approach means that βm represents the expected difference
+between males and females in height. The parameter α is used to predict
+both female and male heights. But male height gets an extra βm . This
+also means that α is no longer the average height in the sample, but
+rather just the average female height. This can make assigning sensible
+priors a little harder. If you don’t have a sense of the expected
+difference in height—what would be reasonable before seeing the
+data?—then this approach can be a bother. Of course you could get away
+with a vague prior in this case—there is a lot of data.</p>
+<p>Another consequence of having to assign a prior to the difference is
+that this approach necessarily assumes there is more uncertainty about
+one of the categories—“male” in this case—than the other. Why? Because a
+prediction for a male includes two parameters and</p>
+<p>herefore two priors. We can simulate this directly from the priors.
+The prior distributions for μ for females and males are:</p>
+<p>‘data .frame’: 10000 obs . of 2 variables:</p>
+<p>mean sd 5 .5% 94 .5% histogram mu_female 178 .41 20 .04 146 .30 209
+.94 一一▃▇▇▂一一mu_male 177 .97 22 .40 142 .39 214 .82
+一一一▃▇▇▂一一</p>
+<p>The prior</p>
+<h6 id="阅读日期-2025年12月26日-2025年12月26日-共-1-天">阅读日期：
+2025年12月26日-2025年12月26日 共： 1 天</h6>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

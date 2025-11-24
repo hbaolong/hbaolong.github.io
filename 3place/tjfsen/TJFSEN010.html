@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="hbaolong@vip.qq.com" />
+  <title>统计反思EN:1.2. Statistical rethinking</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">统计反思EN:1.2. Statistical rethinking</h1>
+<p class="author">hbaolong@vip.qq.com</p>
+</header>
+<center>
+<a href="/3place/tjfsen">返回首页</a> <a
+href="/3place/tjfsen/mingju.html">本书名句</a> <a
+href="/3place/tjfsen/memo.html">本书注解</a> <a
+href="/3place/tjfsen/index_rich.html">丰富目录</a> <a
+href="/3place/tjfsen/index_readcal.html">同读日历</a> <a
+href="/3place/tjfsen/index_timeline.html">时间线</a> <a
+href="/3place/tjfsen/index_books.html">引用书籍</a> <a
+href="/3place/tjfsen/index_words.html">使用字频</a>
+<div id="wx_pic" style="margin:0 auto;display:none;">
+<img src='/img/logo.png'/>
+</div>
+</center>
+<h4 id="statistical-rethinking">1.2. Statistical rethinking</h4>
+<p>A lot can go wrong with statistical inference, and this is one reason
+that beginners are so anxious about it. When the goal is to choose a
+pre-made test from a flowchart, then the anxiety can mount as one
+worries about choosing the “correct” test. Statisticians, for their
+part, can derive pleasure from scolding scientists, making the
+psychological battle worse.</p>
+<p>But anxiety can be cultivated into wisdom. That is the reason that
+this book insists on working with the computational nuts and bolts of
+each golem. If you don’t understand how the golem processes information,
+then you can’t interpret the golem’s output. This requires knowing the
+model in greater detail than is customary, and it requires doing the
+computa- tions the hard way, at least until you are wise enough to use
+the push-button solutions.</p>
+<p>There are conceptual obstacles as well, obstacles with how scholars
+define statistical ob- jectives and interpret statistical results.
+Understanding any individual golem is not enough, in these cases.
+Instead, we need some statistical epistemology, an appreciation of how
+sta- tistical models relate to hypotheses and the natural mechanisms of
+interest. What are we supposed to be doing with these little
+computational machines, anyway?</p>
+<p>The greatest obstacle that I encounter among students and colleagues
+is the tacit belief that the proper objective of statistical inference
+is to test null hypotheses.3 This is the proper objective, the thinking
+goes, because Karl Popper argued that science advances by falsifying
+hypotheses. Karl Popper (1902–1994) is possibly the most influential
+philosopher of science, at least among scientists. He did persuasively
+argue that science works better by developing hypotheses that are, in
+principle, falsifiable. Seeking out evidence that might embarrass our
+ideas is a normative standard, and one that most scholars—whether they
+describe themselves as scientists or not—subscribe to. So maybe
+statistical procedures should falsify hypotheses, if we wish to be good
+statistical scientists.</p>
+<p>But the above is a kind of folk Popperism, an informal philosophy of
+science common among scientists but not among philosophers of science.
+Science is not described by the falsi- fication standard, and Popper
+recognized that.4 In fact, deductive falsification is impossible in
+nearly every scientific context. In this section, I review two reasons
+for this impossibility.</p>
+<ol type="1">
+<li><p>Hypotheses are not models. The relations among hypotheses and
+different kinds of models are complex. Many models correspond to the
+same hypothesis, and many hypotheses correspond to a single model. This
+makes strict falsification impossible.</p></li>
+<li><p>Measurement matters. Even when we think the data falsify a model,
+another ob- server will debate our methods and measures. They don’t
+trust the data. Sometimes they are right.</p></li>
+</ol>
+<p>For both of these reasons, deductive falsification never works. The
+scientific method cannot be reduced to a statistical procedure, and so
+our statistical methods should not pretend. Sta- tistical evidence is
+part of the hot mess that is science, with all ofits combat and egotism
+and mutual coercion. If you believe, as I do, that science does often
+work, then learning that it</p>
+<p>doesn’t work via falsification shouldn’t change your mind. But it
+might help you do better science. It might open your eyes to many
+legitimately useful functions of statistical golems.</p>
+<p>1.2.1. Hypotheses are not models. When we attempt to falsify a
+hypothesis, we must work with a model of some kind. Even when the
+attempt is not explicitly statistical, there is always a tacit model of
+measurement, of evidence, that operationalizes the hypothesis. All
+models are false,6 so what does it mean to falsify a model? One
+consequence of the requirement to work with models is that it’s no
+longer possible to deduce that a hypothesis is false, just because we
+reject a model derived from it.</p>
+<p>Let’s explore this consequence in the context of an example from
+population biology (Figure 1.2). Beginning in the 1960s, evolutionary
+biologists became interested in the pro- posal that the majority of
+evolutionary changes in gene frequency are caused not by natural
+selection, but rather by mutation and drift. No one really doubted that
+natural selection is re- sponsible for functional design. This was a
+debate about genetic sequences. So began several productive decades of
+scholarly combat over “neutral” models of molecular evolution.7 This
+combat is most strongly associated with Motoo Kimura (1924–1994), who
+was perhaps the strongest advocate of neutral models. But many other
+population geneticists participated. As time has passed, related
+disciplines such as community ecology8 and anthropology9 have
+experienced (or are currently experiencing) their own versions of the
+neutrality debate.</p>
+<p>Let’s use the schematic in Figure 1.2 to explore connections between
+motivating hy- potheses and different models, in the context of the
+neutral evolution debate. On the left, there are two stereotyped,
+informal hypotheses: Either evolution is “neutral” (H0 ) or natu- ral
+selection matters somehow (H1 ). These hypotheses have vague boundaries,
+because they begin as verbal conjectures, not precise models. There are
+hundreds of possible detailed pro- cesses that can be described as
+“neutral,” depending upon choices about population struc- ture, number
+of sites, number of alleles at each site, mutation rates, and
+recombination.</p>
+<p>Once we have made these choices, we have the middle column in Figure
+1.2, detailed process models of evolution. P0A and P0B differ in that
+one assumes the population size and structure have been constant long
+enough for the distribution of alleles to reach a steady state. The
+other imagines instead that population size fluctuates through time,
+which can be true even when there is no selective difference among
+alleles. The “selection matters” hypothesis H1 likewise corresponds to
+many different process models. I’ve shown two big players: a model in
+which selection always favors certain alleles and another in which
+selec- tion fluctuates through time, favoring different alleles.10</p>
+<p>An important feature of these process models is that they express
+causal structure. Dif- ferent process models formalize different cause
+and effect relationships. Whether analyzed mathematically or through
+simulation, the direction of time in a model means that some things
+cause other things, but not the reverse. You can use such models to
+perform experi- ments and probe their causal implications. Sometimes
+these probes reveal, before we even turn to statistical inference, that
+the model cannot explain a phenomenon of interest.</p>
+<p>In order to challenge process models with data, they have to be made
+into statistical models. Unfortunately, statistical models do not embody
+specific causal relationships. A</p>
+<p>Hypotheses Process models Statistical models</p>
+<p>P0A Neutral,</p>
+<p>equilibrium</p>
+<p>P0B Neutral,</p>
+<p>non-equilibrium</p>
+<p>P1A Constant selection</p>
+<p>P1B</p>
+<p>Fluctuating</p>
+<p>selection</p>
+<p>Figure 1.2. Relations among hypotheses (left), detailed process
+models (middle), and statistical models (right), illustrated by the
+example of “neu- tral” models of evolution. Hypotheses (H) are typically
+vague, and so cor- respond to more than one process model (P).
+Statistical evaluations of hy- potheses rarely address process models
+directly. Instead, they rely upon statistical models (M), all of which
+reflect only some aspects of the process models. As a result, relations
+are multiple in both directions: Hypotheses do not imply unique models,
+and models do not imply unique hypotheses.</p>
+<p>This fact greatly complicates statistical inference.</p>
+<p>statistical model expresses associations among variables. As a
+result, many different process models may be consistent with any single
+statistical model.</p>
+<p>How do we get a statistical model from a causal model? One way is to
+derive the ex- pected frequency distribution of some quantity—a
+“statistic”—from the causal model. For example, a common statistic in
+this context is the frequency distribution (histogram) of the frequency
+of different genetic variants (alleles). Some alleles are rare,
+appearing in only a few individuals. Others are very common, appearing
+in very many individuals in the popu- lation. A famous result in
+population genetics is that a model like P0A produces a power law
+distribution of allele frequencies. And so this fact yields a
+statistical model, MII , that pre- dicts a power law in the data. In
+contrast the constant selection process model P1A predicts something
+quite different, MIII.</p>
+<p>Unfortunately, other selection models (P1B ) imply the same
+statistical model, MII , as the neutral model. They also produce power
+laws. So we’ve reached the uncomfortable lesson:</p>
+<ol type="1">
+<li><p>Any given statistical model (M) may correspond to more than one
+process model (P).</p></li>
+<li><p>Any given hypothesis (H) may correspond to more than one process
+model (P).</p></li>
+<li><p>Any given statistical model (M) may correspond to more than one
+hypothesis (H).</p></li>
+</ol>
+<p>Now look what happens when we compare the statistical models to data.
+The classical ap- proach is to take the “neutral” model as a null
+hypothesis. If the data are not sufficiently similar to the expectation
+under the null, then we say that we “reject” the null hypothesis.
+Suppose we follow the history of this subject and take P0A as our null
+hypothesis. This implies data corresponding to MII. But since the same
+statistical model corresponds to a selection model P1B, it’s not clear
+what to make of either rejecting or accepting the null. The null model
+is not unique to any process model nor hypothesis. If we reject the
+null, we can’t really conclude that selection matters, because there are
+other neutral models that predict different distributions of alleles.
+And if we fail to reject the null, we can’t really conclude that
+evolution is neutral, because some selection models expect the same
+frequency distribution.</p>
+<p>This is a huge bother. Once we have the diagram in Figure 1.2, it’s
+easy to see the prob- lem. But few of us are so lucky. While population
+genetics has recognized this issue, scholars in other disciplines
+continue to test frequency distributions against power law expectations,
+arguing even that there is only one neutral model.11 Even if there were
+only one neutral model, there are so many non-neutral models that mimic
+the predictions of neutrality, that neither rejecting nor failing to
+reject the null model carries much inferential power.</p>
+<p>So what can be done? Well, if you have multiple process models, a lot
+can be done. If it turns out that all of the process models of interest
+make very similar predictions, then you know to search for a different
+description of the evidence, a description under which the processes
+look different. For example, while P0A and P1B make very similar power
+law predictions for the frequency distribution of alleles, they make
+very dissimilar predictions for the distribution of changes in allele
+frequency over time. Explicitly compare predictions of more than one
+model, and you can save yourself from some ordinary kinds of folly.</p>
+<p>Statistical models can be confused in other ways as well, such as the
+confusion caused by unobserved variables and sampling bias. Process
+models allow us to design statistical models with these problems in
+mind. The statistical model alone is not enough.</p>
+<p>Rethinking: Entropy and model identification. One reason that
+statistical models routinely corre- spond to many different detailed
+process models is because they rely upon distributions like the nor-
+mal, binomial, Poisson, and others. These distributions are members of a
+family, the exponential family. Nature loves the members of this family.
+Nature loves them because nature loves entropy, and all of the
+exponential family distributions are maximum entropy distributions.
+Taking the nat- ural personification out of that explanation will wait
+until 10. The practical implication is that one can no more infer
+evolutionary process from a power law than one can infer developmental
+process from the fact that height is normally distributed. This fact
+should make us humble about what typical regression models—the meat of
+this book—can teach us about mechanistic process. On the other hand, the
+maximum entropy nature of these distributions means we can use them to
+do useful statistical work, even when we can’t identify the underlying
+process.</p>
+<p>1.2.2. Measurement matters. The logic of falsification is very
+simple. We have a hypothesis H, and we show that it entails some
+observation D. Then we look for D. If we don’t find it, we must conclude
+that H is false. Logicians call this kind of reasoning modus tollens,
+which is Latin shorthand for “the method of destruction.” In contrast,
+finding D tells us nothing certain about H, because other hypotheses
+might also predict D.</p>
+<p>A compelling scientific fable that employs modus tollens concerns the
+color of swans. Before discovering Australia, all swans that any
+European had ever seen had white feathers. This led to the belief that
+all swans are white. Let’s call this a formal hypothesis:</p>
+<p>H0: All swans are white.</p>
+<p>When Europeans reached Australia, however, they encountered swans
+with black feathers. This evidence seemed to instantly prove H0 to be
+false. Indeed, not all swans are white. Some are certainly black,
+according to all observers. The key insight here is that, before
+voyaging to Australia, no number of observations of white swans could
+prove H0 to be true. However it required only one observation of a black
+swan to prove it false.</p>
+<p>This is a seductive story. If we can believe that important
+scientific hypotheses can be stated in this form, then we have a
+powerful method for improving the accuracy of our the- ories: look for
+evidence that disconfirms our hypotheses. Whenever we find a black swan,
+H0 must be false. Progress!</p>
+<p>Seeking disconfirming evidence is important, but it cannot be as
+powerful as the swan story makes it appear. In addition to the
+correspondence problems among hypotheses and models, discussed in the
+previous section, most of the problems scientists confront are not so
+logically discrete. Instead, we most often face two simultaneous
+problems that make the swan fable misrepresentative. First, observations
+are prone to error, especially at the boundaries of scientific
+knowledge. Second, most hypotheses are quantitative, concerning degrees
+of existence, rather than discrete, concerning total presence or
+absence. Let’s briefly consider each of these problems.</p>
+<p>1.2.2.1. Observation error. All observers agree under most conditions
+that a swan is ei- ther black or white. There are few intermediate
+shades, and most observers’ eyes work simi- larly enough that there will
+be little disagreement about which swans are white and which are black.
+But this kind of example is hardly commonplace in science, at least in
+mature fields. Instead, we routinely confront contexts in which we are
+not sure if we have detected a dis- confirming result. At the edges of
+scientific knowledge, the ability to measure a hypothetical phenomenon
+is often in question as much as the phenomenon itself. Here are two
+examples.</p>
+<p>In 2005, a team of ornithologists from Cornell claimed to have
+evidence of an individual Ivory-billed Woodpecker (Campephilus
+principalis), a species thought extinct. The hypothe- sis implied here
+is:</p>
+<p>H0: The Ivory-billed Woodpecker is extinct.</p>
+<p>It would only take one observation to falsify this hypothesis.
+However, many doubted the evidence. Despite extensive search efforts and
+a 0,000 cash reward for information leading to a live specimen, no
+satisfying evidence has yet (by 2020) emerged. Even if good physical
+evidence does eventually arise, this episode should serve as a
+counterpoint to the swan story. Finding disconfirming cases is
+complicated by the difficulties of observation. Black swans are not
+always really black swans, and sometimes white swans are really black
+swans. There are mistaken confirmations (false positives) and mistaken
+disconfirmations (false negatives). Against this background of
+measurement difficulties, scientists who already believe that the
+Ivory-billed Woodpecker is extinct will always be suspicious of a
+claimed falsification. Those who believe it is still alive will tend to
+count the vaguest evidence as falsification.</p>
+<p>Another example, this one from physics, focuses on the detection of
+faster-than-light (FTL) neutrinos.12 In September 2011, a large and
+respected team of physicists announced detection of neutrinos—small,
+neutral sub-atomic particles able to pass easily and harm- lessly
+through most matter—that arrived from Switzerland to Italy in slightly
+faster-than- lightspeed time. According to Einstein, neutrinos cannot
+travel faster than the speed of light. So this seems to be a
+falsification of special relativity. If so, it would turn physics on its
+head.</p>
+<p>The dominant reaction from the physics community was not “Einstein
+was wrong!” but instead “How did the team mess up the measurement?” The
+team that made the measure- ment had the same reaction, and asked others
+to check their calculations and attempt to replicate the result.</p>
+<p>What could go wrong in the measurement? You might think measuring
+speed is a sim- ple matter of dividing distance by time. It is, at the
+scale and energy you live at. But with a fundamental particle like a
+neutrino, if you measure when it starts its journey, you stop the
+journey. The particle is consumed by the measurement. So more subtle
+approaches are needed. The detected difference from light-speed,
+furthermore, is quite small, and so even the latency of the time it
+takes a signal to travel from a detector to a control room can be orders
+of magnitude larger. And since the “measurement” in this case is really
+an estimate from a statistical model, all of the assumptions of the
+model are now suspect. By 2013, the physics community was unanimous that
+the FTL neutrino result was measurement error. They found the technical
+error, which involved a poorly attached cable.13 Furthermore, neu-
+trinos clocked from supernova events are consistent with Einstein, and
+those distances are much larger and so would reveal differences in speed
+much better.</p>
+<p>In both the woodpecker and neutrino dramas, the key dilemma is
+whether the falsifi- cation is real or spurious. Measurement is
+complicated in both cases, but in quite different ways, rendering both
+true-detection and false-detection plausible. Popper was aware of this
+limitation inherent in measurement, and it may be one reason that Popper
+himself saw sci- ence as being broader than falsification. But the
+probabilistic nature of evidence rarely ap- pears when practicing
+scientists discuss the philosophy and practice of falsification.14 My
+reading of the history of science is that these sorts of measurement
+problems are the norm, not the exception.15</p>
+<p>1.2.2.2. Continuous hypotheses. Another problem for the swan story is
+that most inter- esting scientific hypotheses are not of the kind “all
+swans are white” but rather of the kind:</p>
+<p>H0: 80% of swans are white.</p>
+<p>Or maybe:</p>
+<p>H0: Black swans are rare.</p>
+<p>Now what are we to conclude, after observing a black swan? The null
+hypothesis doesn’t say black swans do not exist, but rather that they
+have some frequency. The task here is not to disprove or prove a
+hypothesis of this kind, but rather to estimate and explain the
+distribution of swan coloration as accurately as we can. Even when there
+is no measurement error of any kind, this problem will prevent us from
+applying the modus tollens swan story to our science.16</p>
+<p>You might object that the hypothesis above is just not a good
+scientific hypothesis, be- cause it isn’t easy to disprove. But if
+that’s the case, then most of the important questions about the world
+are not good scientific hypotheses. In that case, we should conclude
+that the definition of a “good hypothesis” isn’t doing us much good.
+Now, nearly everyone agrees that it is a good practice to design
+experiments and observations that can differentiate com-peting
+hypotheses. But in many cases, the comparison must be probabilistic, a
+matter of degree, not kind.17</p>
+<p>1.2.3. Falsification is consensual. The scientific community does
+come to regard some hy- potheses as false. The caloric theory of heat
+and the geocentric model of the universe are no longer taught in science
+courses, unless it’s to teach how they were falsified. And evidence
+often—but not always—has something to do with such falsification.</p>
+<p>But falsification is always consensual, not logical. In light of the
+real problems of measure- ment error and the continuous nature of
+natural phenomena, scientific communities argue towards consensus about
+the meaning of evidence. These arguments can be messy. After the fact,
+some textbooks misrepresent the history so it appears like logical
+falsification.18 Such historical revisionism may hurt everyone. It may
+hurt scientists, by rendering it impossible for their own work to live
+up to the legends that precede them. It may make science an easy target,
+by promoting an easily attacked model of scientific epistemology. And it
+may hurt the public, by exaggerating the definitiveness of scientific
+knowledge.19</p>
+<h6 id="阅读日期-2025年12月03日-2025年12月03日-共-1-天">阅读日期：
+2025年12月03日-2025年12月03日 共： 1 天</h6>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

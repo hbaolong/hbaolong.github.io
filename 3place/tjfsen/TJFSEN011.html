@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="hbaolong@vip.qq.com" />
+  <title>统计反思EN:1.3. Tools for golem engineering</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">统计反思EN:1.3. Tools for golem engineering</h1>
+<p class="author">hbaolong@vip.qq.com</p>
+</header>
+<center>
+<a href="/3place/tjfsen">返回首页</a> <a
+href="/3place/tjfsen/mingju.html">本书名句</a> <a
+href="/3place/tjfsen/memo.html">本书注解</a> <a
+href="/3place/tjfsen/index_rich.html">丰富目录</a> <a
+href="/3place/tjfsen/index_readcal.html">同读日历</a> <a
+href="/3place/tjfsen/index_timeline.html">时间线</a> <a
+href="/3place/tjfsen/index_books.html">引用书籍</a> <a
+href="/3place/tjfsen/index_words.html">使用字频</a>
+<div id="wx_pic" style="margin:0 auto;display:none;">
+<img src='/img/logo.png'/>
+</div>
+</center>
+<h4 id="tools-for-golem-engineering">1.3. Tools for golem
+engineering</h4>
+<p>So if attempting to mimic falsification is not a generally useful
+approach to statistical methods, what are we to do? We are to model.
+Models can be made into testing procedures— all statistical tests are
+also models20—but they can also be used to design, forecast, and argue.
+Doing research benefits from the ability to produce and manipulate
+models, both because scientific problems are more general than “testing”
+and because the pre-made golems you maybe met in introductory statistics
+courses are ill-fit to many research contexts. You may not even know
+which statistical model to use, unless you have a generative model in
+addition. If you want to reduce your chances of wrecking Prague, then
+some golem engineering know-how is needed. Make no mistake: You will
+wreck Prague eventually. But if you are a good golem engineer, at least
+you’ll notice the destruction. And since you’ll know a lot about how
+your golem works, you stand a good chance to figure out what went wrong.
+Then your next golem won’t be as bad. Without engineering training,
+you’re always at someone’s mercy.</p>
+<p>We want to use our models for several distinct purposes: designing
+inquiry, extracting information from data, and making predictions. In
+this book I’ve chosen to focus on tools to help with each purpose. These
+tools are:</p>
+<ol type="1">
+<li><p>Bayesian data analysis</p></li>
+<li><p>Model comparison</p></li>
+<li><p>Multilevel models</p></li>
+<li><p>Graphical causal models</p></li>
+</ol>
+<p>These tools are deeply related to one another, so it makes sense to
+teach them together. Un- derstanding of these tools comes, as always,
+only with implementation—you can’t compre- hend golem engineering until
+you do it. And so this book focuses mostly on code, how to do things.
+But in the remainder of this chapter, I provide introductions to these
+tools.</p>
+<p>1.3.1. Bayesian data analysis. Supposing you have some data, how
+should you use it to learn about the world? There is no uniquely correct
+answer to this question. Lots of approaches, both formal and heuristic,
+can be effective. But one of the most effective and general answers is
+to use Bayesian data analysis. Bayesian data analysis takes a question
+in the form of a model and uses logic to produce an answer in the form
+of probability distributions.</p>
+<p>In modest terms, Bayesian data analysis is no more than counting the
+numbers of ways the data could happen, according to our assumptions.
+Things that can happen more ways are more plausible. Probability theory
+is relevant because probability is just a calculus for counting. This
+allows us to use probability theory as a general way to represent
+plausibility, whether in reference to countable events in the world or
+rather theoretical constructs like</p>
+<p>parameters. The rest follows logically. Once we have defined the
+statistical model, Bayesian data analysis forces a purely logical way of
+processing the data to produce inference.</p>
+<p>2 explains this in depth. For now, it will help to have another
+approach to com- pare. Bayesian probability is a very general approach
+to probability, and it includes as a special case another important
+approach, the frequentist approach. The frequentist ap- proach requires
+that all probabilities be defined by connection to the frequencies of
+events in very large samples.21 This leads to frequentist uncertainty
+being premised on imaginary resampling of data—if we were to repeat the
+measurement many many times, we would end up collecting a list of values
+that will have some pattern to it. It means also that parameters and
+models cannot have probability distributions, only measurements can. The
+distribution of these measurements is called a sampling distribution.
+This resampling is never done, and in general it doesn’t even make
+sense—it is absurd to consider repeat sampling of the diversification of
+song birds in the Andes. As Sir Ronald Fisher, one of the most important
+frequentist statisticians ofthe twentieth century, put it:22</p>
+<p>[…] the only populations that can be referred to in a test of
+significance have no objective reality, being exclusively the product of
+the statistician’s imagination […]</p>
+<p>But in many contexts, like controlled greenhouse experiments, it’s a
+useful device for describ- ing uncertainty. Whatever the context, it’s
+just part of the model, an assumption about what the data would look
+like under resampling. It’s just as fantastical as the Bayesian gambit
+of using probability to describe all types of uncertainty, whether
+empirical or epistemological.23</p>
+<p>But these different attitudes towards probability do enforce
+different trade-offs. Con- sider this simple example where the
+difference between Bayesian and frequentist probability matters. In the
+year 1610, Galileo turned a primitive telescope to the night sky and
+became the first human to see Saturn’s rings. Well, he probably saw a
+blob, with some smaller blobs attached to it (Figure 1.3). Since the
+telescope was primitive, it couldn’t really focus the im- age very well.
+Saturn always appeared blurred. This is a statistical problem, of a
+sort. There’s uncertainty about the planet’s shape, but notice that none
+of the uncertainty is a result of vari- ation in repeat measurements. We
+could look through the telescope a thousand times, and it will always
+give the same blurred image (for any given position of the Earth and
+Saturn). So the sampling distribution of any measurement is constant,
+because the measurement is deterministic—there’s nothing “random” about
+it. Frequentist statistical inference has a lot of trouble getting
+started here. In contrast, Bayesian inference proceeds as usual, because
+the deterministic “noise” can still be modeled using probability, as
+long as we don’t identify probability with frequency. As a result, the
+field of image reconstruction and processing is dominated by Bayesian
+algorithms.24</p>
+<p>In more routine statistical procedures, like linear regression, this
+difference in proba- bility concepts has less of an effect. However, it
+is important to realize that even when a Bayesian procedure and
+frequentist procedure give exactly the same answer, our Bayesian golems
+aren’t justifying their inferences with imagined repeat sampling. More
+generally, Bayesian golems treat “randomness” as a property of
+information, not of the world. Nothing in the real world—excepting
+controversial interpretations of quantum physics—is actually random.
+Presumably, if we had more information, we could exactly predict
+everything. We just use randomness to describe our uncertainty in the
+face of incomplete knowledge. From the perspective of our golem, the
+coin toss is “random,” but it’s really the golem that is ran- dom, not
+the coin.</p>
+<p>Figure 1.3. Saturn, much like Galileo must have seen it. The true
+shape is uncertain, but not because of any sampling variation.
+Probability theory can still help.</p>
+<p>Note that the preceding description doesn’t invoke anyone’s “beliefs”
+or subjective opin- ions. Bayesian data analysis is just a logical
+procedure for processing information. There is a tradition of using this
+procedure as a normative description of rational belief, a tradition
+called Bayesianism.25 But this book neither describes nor advocates it.
+In fact, I’ll argue that no statistical approach, Bayesian or otherwise,
+is by itself sufficient.</p>
+<p>Before moving on to describe the next two tools, it’s worth
+emphasizing an advantage of Bayesian data analysis, at least when
+scholars are learning statistical modeling. This entire book could be
+rewritten to remove any mention of “Bayesian.” In places, it would
+become easier. In others, it would become much harder. But having taught
+applied statistics both ways, I have found that the Bayesian framework
+presents a distinct pedagogical advantage: many people find it more
+intuitive. Perhaps the best evidence for this is that very many sci-
+entists interpret non-Bayesian results in Bayesian terms, for example
+interpreting ordinary p-values as Bayesian posterior probabilities and
+non-Bayesian confidence intervals as Bayes- ian ones (you’ll learn
+posterior probability and confidence intervals in Chapters 2 and 3).
+Even statistics instructors make these mistakes.26 Statisticians appear
+doomed to republish the same warnings about misinterpretation of
+p-values forever. In this sense then, Bayesian models lead to more
+intuitive interpretations, the ones scientists tend to project onto sta-
+tistical results. The opposite pattern of mistake—interpreting a
+posterior probability as a p-value—seems to happen only rarely.</p>
+<p>None of this ensures that Bayesian analyses will be more correct than
+non-Bayesian anal- yses. It just means that the scientist’s intuitions
+will less commonly be at odds with the actual logic of the framework.
+This simplifies some of the aspects of teaching statistical
+modeling.</p>
+<p>1.3.2. Model comparison and prediction. Bayesian data analysis
+provides a way for models to learn from data. But when there is more
+than one plausible model—and in most mature fields there should be—how
+should we choose among them? One answer is to prefer models that make
+good predictions. This answer creates a lot of new questions, since
+knowing which model will make the best predictions seems to require
+knowing the future. We’ll look at two related tools, neither of which
+knows the future: cross-validation and information criteria. These tools
+aim to compare models based upon expected predictive accuracy.</p>
+<p>Comparing models by predictive accuracy can be useful in itself. And
+it will be even more useful because it leads to the discovery of an
+amazing fact: Complex models often make worse predictions than simpler
+models. The primary paradox of prediction is over- fitting.29 Future
+data will not be exactly like past data, and so any model that is
+unaware of this fact tends to make worse predictions than it could. And
+more complex models tend towards more overfitting than simple ones—the
+smarter the golem, the dumber its predic- tions. So if we wish to make
+good predictions, we cannot judge our models simply on how well they fit
+our data. Fitting is easy; prediction is hard.</p>
+<p>Cross-validation and information criteria help us in three ways.
+First, they provide use- ful expectations of predictive accuracy, rather
+than merely fit to sample. So they compare models where it matters.
+Second, they give us an estimate of the tendency of a model to</p>
+<p>overfit. This will help us to understand how models and data
+interact, which in turn helps us to design better models. We’ll take
+this point up again in the next section. Third, cross- validation and
+information criteria help us to spot highly influential
+observations.</p>
+<p>Bayesian data analysis has been worked on for centuries. Information
+criteria are com- paratively very young and the field is evolving
+quickly. Many statisticians have never used information criteria in an
+applied problem, and there is no consensus about which metrics are best
+and how best to use them. Still, information criteria are already in
+frequent use in the sciences, appearing in prominent publications and
+featuring in prominent debates.30 Their power is often exaggerated, and
+we will be careful to note what they cannot do as well as what they
+can.</p>
+<p>Rethinking: The Neanderthal in you. Even simple models need
+alternatives. In 2010, a draft genome of a Neanderthal demonstrated more
+DNA sequences in common with non-African contemporary humans than with
+African ones. This finding is consistent with interbreeding between
+Neanderthals and modern humans, as the latter dispersed from Africa.
+However, just finding DNA in common between modern Europeans and
+Neanderthals is not enough to demonstrate interbreeding. It is also
+consistent with ancient structure in the African continent.31 In short,
+if ancient northeast Africans had unique DNA sequences, then both
+Neanderthals and modern Europeans could possess these sequences from a
+common ancestor, rather than from direct interbreeding. So even in the
+seemingly simple case of estimating whether Neanderthals and modern
+humans share unique DNA, there is more than one process-based
+explanation. Model comparison is necessary.</p>
+<p>1.3.3. Multilevel models. In an apocryphal telling of Hindu
+cosmology, it is said that the Earth rests on the back of a great
+elephant, who in turn stands on the back of a massive turtle. When asked
+upon what the turtle stands, a guru is said to reply, “it’s turtles all
+the way down.”</p>
+<p>Statistical models don’t contain turtles, but they do contain
+parameters. And parameters support inference. Upon what do parameters
+themselves stand? Sometimes, in some of the most powerful models, it’s
+parameters all the way down. What this means is that any particular
+parameter can be usefully regarded as a placeholder for a missing model.
+Given some model of how the parameter gets its value, it is simple
+enough to embed the new model inside the old one. This results in a
+model with multiple levels of uncertainty, each feeding into the next—a
+multilevel model.</p>
+<p>Multilevel models—also known as hierarchical, random effects, varying
+effects, or mixed effects models—are becoming de rigueur in the
+biological and social sciences. Fields as di- verse as educational
+testing and bacterial phylogenetics now depend upon routine multilevel
+models to process data. Like Bayesian data analysis, multilevel modeling
+is not particularly new. But it has only been available on desktop
+computers for a few decades. And since such models have a natural
+Bayesian representation, they have grown hand-in-hand with Bayesian data
+analysis.</p>
+<p>One reason to be interested in multilevel models is because they help
+us deal with over- fitting. Cross-validation and information criteria
+measure overfitting risk and help us to recognize it. Multilevel models
+actually do something about it. What they do is exploit an amazing trick
+known as partial pooling that pools information across units in the data
+in order to produce better estimates for all units. The details will
+wait until 13.</p>
+<p>Partial pooling is the key technology, and the contexts in which it
+is appropriate are diverse. Here are four commonplace examples.</p>
+<ol type="1">
+<li><p>To adjust estimates for repeat sampling. When more than one
+observation arises from the same individual, location, or time, then
+traditional, single-level models may mislead us.</p></li>
+<li><p>To adjust estimates for imbalance in sampling. When some
+individuals, locations, or times are sampled more than others, we may
+also be misled by single-level models.</p></li>
+<li><p>To study variation. If our research questions include variation
+among individuals or other groups within the data, then multilevel
+models are a big help, because they model variation explicitly.</p></li>
+<li><p>To avoid averaging. Pre-averaging data to construct variables can
+be dangerous. Averaging removes variation, manufacturing false
+confidence. Multilevel models preserve the uncertainty in the original,
+pre-averaged values, while still using the average to make
+predictions.</p></li>
+</ol>
+<p>All four apply to contexts in which the researcher recognizes
+clusters or groups of measure- ments that may differ from one another.
+These clusters or groups may be individuals such as different students,
+locations such as different cities, or times such as different years.
+Since each cluster may well have a different average tendency or respond
+differently to any treat- ment, clustered data often benefit from being
+modeled by a golem that expects such variation.</p>
+<p>But the scope of multilevel modeling is much greater than these
+examples. Diverse model types turn out to be multilevel: models for
+missing data (imputation), measurement error, factor analysis, some time
+series models, types of spatial and network regression, and phylogenetic
+regressions all are special applications of the multilevel strategy. And
+some commonplace procedures, like the paired t-test, are really
+multilevel models in disguise. Grasping the concept of multilevel
+modeling may lead to a perspective shift. Suddenly single- level models
+end up looking like mere components of multilevel models. The multilevel
+strategy provides an engineering principle to help us to introduce these
+components into a particular analysis, exactly where we think we need
+them.</p>
+<p>I want to convince the reader of something that appears unreasonable:
+multilevel regres- sion deserves to be the default form of regression.
+Papers that do not use multilevel models should have to justify not
+using a multilevel approach. Certainly some data and contexts do not
+need the multilevel treatment. But most contemporary studies in the
+social and natural sciences, whether experimental or not, would benefit
+from it. Perhaps the most important reason is that even well-controlled
+treatments interact with unmeasured aspects ofthe indi- viduals, groups,
+or populations studied. This leads to variation in treatment effects, in
+which individuals or groups vary in how they respond to the same
+circumstance. Multilevel mod- els attempt to quantify the extent of this
+variation, as well as identify which units in the data responded in
+which ways.</p>
+<p>These benefits don’t come for free, however. Fitting and interpreting
+multilevel mod- els can be considerably harder than fitting and
+interpreting a traditional regression model. In practice, many
+researchers simply trust their black-box software and interpret
+multilevel regression exactly like single-level regression. In time,
+this will change. There was a time in applied statistics when even
+ordinary multiple regression was considered cutting edge, something for
+only experts to fiddle with. Instead, scientists used many simple
+procedures, like t-tests. Now, almost everyone uses multivariate tools.
+The same will eventually be true of multilevel models. Scholarly culture
+and curriculum still have some catching up to do.</p>
+<p>Rethinking: Multilevel election forecasting. One of the older
+applications of multilevel modeling is to forecast the outcomes of
+elections. In the 1960s, John Tukey (1915–2000) began working for the
+National Broadcasting Company (NBC) in the United States, developing
+real-time election prediction models that could exploit diverse types of
+data: polls, past elections, partial results, and complete re- sults
+from related districts. The models used a multilevel framework similar
+to the models presented in Chapters 13 and 14. Tukey developed and used
+such models for NBC through 1978.32 Contempo- rary election prediction
+and poll aggregation remains an active topic for multilevel
+modeling.33</p>
+<p>1.3.4. Graphical causal models. When the wind blows, branches sway.
+If you are human, you immediately interpret this statement as causal:
+The wind makes the branches move. But all we see is a statistical
+association. From the data alone, it could also be that the branches
+swaying makes the wind. That conclusion seems foolish, because you know
+trees do not sway their own branches. A statistical model is an amazing
+association engine. It makes it possible to detect associations between
+causes and their effects. But a statistical model is never sufficient
+for inferring cause, because the statistical model makes no distinction
+between the wind causing the branches to sway and the branches causing
+the wind to blow. Facts outside the data are needed to decide which
+explanation is correct.</p>
+<p>Cross-validation and information criteria try to guess predictive
+accuracy. When I in- troduced them above, I described overfitting as the
+primary paradox in prediction. Now we turn to a secondary paradox in
+prediction: Models that are causally incorrect can make better
+predictions than those that are causally correct. As a result, focusing
+on prediction can system- atically mislead us. And while you may have
+heard that randomized controlled experiments allow causal inference,
+randomized experiments entail the same risks. No one is safe.</p>
+<p>I will call this the identification problem and carefully distinguish
+it from the prob- lem of raw prediction. Consider two different meanings
+of “prediction.” The simplest applies when we are external observers
+simply trying to guess what will happen next. In that case, tools like
+cross-validation are very useful. But these tools will happily recommend
+models that contain confounding variables and suggest incorrect causal
+relationships. Why? Con- founded relationships are real associations,
+and they can improve prediction. After all, if you look outside and see
+branches swaying, it really does predict wind. Successful predic- tion
+does not require correct causal identification. In fact, as you’ll see
+later in the book, predictions may actually improve when we use a model
+that is causally misleading.</p>
+<p>But what happens when we intervene in the world? Then we must
+consider a second meaning of “prediction.” Suppose we recruit many
+people to climb into the trees and sway the branches. Will it make wind?
+Not much. Often the point of statistical modeling is to pro- duce
+understanding that leads to generalization and application. In that
+case, we need more than just good predictions, in the absence of
+intervention. We also need an accurate causal understanding. But
+comparing models on the basis of predictive accuracy—or p-values or
+anything else—will not necessarily produce it.</p>
+<p>So what can be done? What is needed is a causal model that can be
+used to design one or more statistical models for the purpose of causal
+identification. As I mentioned in the neu- tral molecular evolution
+example earlier in this chapter, a complete scientific model contains
+more information than a statistical model derived from it. And this
+additional information contains causal implications. These implications
+make it possible to test alternative causal models. The implications and
+tests depend upon the details. Newton’s laws of motion for</p>
+<p>example precisely predict the consequences of specific interventions.
+And these precise pre- dictions tell us that the laws are only
+approximately right.</p>
+<p>Unfortunately, much scientific work lacks such precise models.
+Instead we must work with vaguer hypotheses and try to estimate vague
+causal effects. Economics for example has no good quantitative model for
+predicting the effect of changing the minimum wage. But the very good
+news is that even when you don’t have a precise causal model, but only a
+heuristic one indicating which variables causally influence others, you
+can still do useful causal infer- ence. Economics might, for example, be
+able to estimate the causal effect of changing the minimum wage, even
+without a good scientific model of the economy.</p>
+<p>Formal methods for distinguishing causal inference from association
+date from the first half of the twentieth century, but they have more
+recently been extended to the study of measurement, experimental design,
+and the ability to generalize (or transport) results across samples.34
+We’ll meet these methods through the use of a graphical causal model.
+The simplest graphical causal model is a directed acyclic graph, usually
+called a DAG. DAGs are heuristic—they are not detailed statistical
+models. But they allow us to deduce which statistical models can provide
+valid causal inferences, assuming the DAG is true.</p>
+<p>But where does a DAG itself come from? The terrible truth about
+statistical inference is that its validity relies upon information
+outside the data. We require a causal model with which to design both
+the collection of data and the structure of our statistical models. But
+the construction of causal models is not a purely statistical endeavor,
+and statistical analysis can never verify all of our assumptions. There
+will never be a golem that accepts naked data and returns a reliable
+model of the causal relations among the variables. We’re just going to
+have to keep doing science.</p>
+<h6 id="阅读日期-2025年12月04日-2025年12月04日-共-1-天">阅读日期：
+2025年12月04日-2025年12月04日 共： 1 天</h6>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

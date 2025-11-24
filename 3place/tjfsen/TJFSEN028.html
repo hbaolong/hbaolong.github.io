@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="hbaolong@vip.qq.com" />
+  <title>统计反思EN:4.5. Curves from lines</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">统计反思EN:4.5. Curves from lines</h1>
+<p class="author">hbaolong@vip.qq.com</p>
+</header>
+<center>
+<a href="/3place/tjfsen">返回首页</a> <a
+href="/3place/tjfsen/mingju.html">本书名句</a> <a
+href="/3place/tjfsen/memo.html">本书注解</a> <a
+href="/3place/tjfsen/index_rich.html">丰富目录</a> <a
+href="/3place/tjfsen/index_readcal.html">同读日历</a> <a
+href="/3place/tjfsen/index_timeline.html">时间线</a> <a
+href="/3place/tjfsen/index_books.html">引用书籍</a> <a
+href="/3place/tjfsen/index_words.html">使用字频</a>
+<div id="wx_pic" style="margin:0 auto;display:none;">
+<img src='/img/logo.png'/>
+</div>
+</center>
+<h4 id="curves-from-lines">4.5. Curves from lines</h4>
+<p>In the next chapter, you’ll see how to use linear models to build
+regressions with more than one predictor variable. But before then, it
+helps to see how to model the outcome as a curved function of a
+predictor. The models so far all assume that a straight line describes
+the relationship. But there’s nothing special about straight lines,
+aside from their simplicity.</p>
+<p>We’ll consider two commonplace methods that use linear regression to
+build curves. The first is polynomial regression. The second is
+b-splines. Both approaches work by transforming a single predictor
+variable into several synthetic variables. But splines have some clear
+advantages. Neither approach aims to do more than describe the function
+that relates one variable to another. Causal inference, which we’ll
+consider much more beginning in the next chapter, wants more.</p>
+<p>4.5.1. Polynomial regression. Polynomial regression uses powers of a
+variable—squares and cubes—as extra predictors. This is an easy way to
+build curved associations. Polyno- mial regressions are very common, and
+understanding how they work will help scaffold later models. To
+understand how polynomial regression works, let’s work through an
+example, using the full !Kung data, not just the adults:</p>
+<p>Go ahead and plot( height ~ weight , d ). The relationship is visibly
+curved, now that we’ve included the non-adult individuals.</p>
+<p>The most common polynomial regression is a parabolic model of the
+mean. Let x be standardized body weight. Then the parabolic equation for
+the mean height is:</p>
+<p>μi = α + β1xi + β2xi2</p>
+<p>The above is a parabolic (second order) polynomial. The α + β 1xi
+part is the same linear function of x in a linear regression, just with
+a little “1” subscript added to the parameter name, so we can tell it
+apart from the new parameter. The additional term uses the square of xi
+to construct a parabola, rather than a perfectly straight line. The new
+parameter β2 measures the curvature of the relationship.</p>
+<p>Fitting these models to data is easy. Interpreting them can be hard.
+We’ll begin with the easy part, fitting a parabolic model of height on
+weight. The first thing to do is to stan- dardize the predictor
+variable. We’ve done this in previous examples. But this is especially
+helpful for working with polynomial models. When predictor variables
+have very large val- ues in them, there are sometimes numerical
+glitches. Even well-known statistical software can suffer from these
+glitches, leading to mistaken estimates. These problems are very com-
+mon for polynomial regression, because the square or cube of a large
+number can be truly massive. Standardizing largely resolves this issue.
+It should be your default behavior.</p>
+<p>To define the parabolic model, just modify the definition of µi.
+Here’s the model:</p>
+<p>hi ~ Normal(µi , σ)</p>
+<p>height ~ dnorm(mu,sigma)</p>
+<p>µi = α + β1xi + β2xi2</p>
+<p>mu &lt;- a + b1<em>weight.s + b2</em>weight.s^2</p>
+<p>α ~ Normal(178, 20)</p>
+<p>a ~ dnorm(178,20)</p>
+<p>β 1 ~ Log-Normal(0, 1)</p>
+<p>b1 ~ dlnorm(0,1)</p>
+<p>β2 ~ Normal(0, 1)</p>
+<p>b2 ~ dnorm(0,1)</p>
+<p>σ ~ Uniform(0, 50)</p>
+<p>sigma ~ dunif(0,50)</p>
+<p>The confusing issue here is assigning a prior for β2 , the parameter
+on the squared value of x. Unlike β 1 , we don’t want a positive
+constraint. In the practice problems at the end of the chapter, you’ll
+use prior predictive simulation to understand why. These polynomial
+parameters are in general very difficult to understand. But prior
+predictive simulation does help a lot.</p>
+<p>Approximating the posterior is straightforward. Just modify the
+definition of mu so that it contains both the linear and quadratic
+terms. But in general it is better to pre-process any variable
+transformations—you don’t need the computer to recalculate the
+transformations on every iteration of the fitting procedure. So I’ll
+also build the square of weight_s as a separate variable:</p>
+<p>Now, since the relationship between the outcome height and the
+predictor weight depends upon two slopes, b1 and b2, it isn’t so easy to
+read the relationship offa table of coefficients:</p>
+<p>R code 4.65</p>
+<p>R code 4.66</p>
+<p>mean sd 5.5% 94.5%</p>
+<p>a 146.06 0.37 145.47 146.65</p>
+<p>b1 21.73 0.29 21.27 22.19</p>
+<p>Figure 4.11. Polynomial regressions of height on weight
+(standardized), for the full !Kung data. In each plot, the raw data are
+shown by the circles. The solid curves show the path of μ in each model,
+and the shaded regions show the 89% interval of the mean (close to the
+solid curve) and the 89% interval of predictions (wider). Left: Linear
+regression. Middle: A second order polynomial, a parabolic or quadratic
+regression. Right: A third order polynomial, a cubic regression.</p>
+<p>-7.80 5.77</p>
+<p>The parameter α (a) is still the intercept, so it tells us the
+expected value of height when weight is at its mean value. But it is no
+longer equal to the mean height in the sample, since there is no
+guarantee it should in a polynomial regression.76 And those β1 and β2
+parameters are the linear and square components of the curve. But that
+doesn’t make them transparent.</p>
+<p>You have to plot these model fits to understand what they are saying.
+So let’s do that. We’ll calculate the mean relationship and the 89%
+intervals of the mean and the predictions, like in the previous section.
+Here’s the working code:</p>
+<p>Plotting all of this is straightforward:</p>
+<p>R 4co6d8e plot( height ~ weight_s , d , col=col.alpha(rangi2,0.5)
+)</p>
+<p>lines( weight.seq , mu.mean )</p>
+<p>shade( mu.PI , weight.seq )</p>
+<p>shade( height.PI , weight.seq )</p>
+<p>The results are shown in Figure 4.11. The left panel of the figure
+shows the familiar linear regression from earlier in the chapter, but
+now with the standardized predictor and full data with both adults and
+non-adults. The linear model makes some spectacularly poor predic-
+tions, at both very low and middle weights. Compare this to the middle
+panel, our new quadratic regression. The curve does a better job of
+finding a central path through the data.</p>
+<p>The right panel in Figure 4.11 shows a higher-order polynomial
+regression, a cubic regression on weight. The model is:</p>
+<p>hi ~ Normal(µi , σ)</p>
+<p>µi = α + β1xi + β2xi2 + β3xi3</p>
+<p>α ~ Normal(178, 20)</p>
+<p>a ~ dnorm(178,20)</p>
+<p>β 1 ~ Log-Normal(0, 1)</p>
+<p>b1 ~ dlnorm(0,1)</p>
+<p>β2 ~ Normal(0, 1)</p>
+<p>b2 ~ dnorm(0,1)</p>
+<p>β3 ~ Normal(0, 1)</p>
+<p>b3 ~ dnorm(0,1)</p>
+<p>σ ~ Uniform(0, 50)</p>
+<p>sigma ~ dunif(0,50)</p>
+<p>Fit the model with a slight modification of the parabolic model’s
+code:</p>
+<p>Computing the curve and intervals is similarly a small modification
+of the previous code. This cubic curve is even more flexible than the
+parabola, so it fits the data even better.</p>
+<p>But it’s not clear that any of these models make a lot of sense. They
+are good geocentric descriptions ofthe sample, yes. But there are two
+problems. First, a better fit to the sample might not actually be a
+better model. That’s the subject of 7. Second, the model con- tains no
+biological information. We aren’t learning any causal relationship
+between height and weight. We’ll deal with this second problem much
+later, in 16.</p>
+<p>Rethinking: Linear, additive, funky. The parabolic model of µi above
+is still a “linear model” of the mean, even though the equation is
+clearly not of a straight line. Unfortunately, the word “linear” means
+different things in different contexts, and different people use it
+differently in the same context. What “linear” means in this context is
+that µi is a linear function of any single parameter. Such models have
+the advantage of being easier to fit to data. They are also often easier
+to interpret, because they assume that parameters act independently on
+the mean. They have the disadvantage of being used thoughtlessly. When
+you have expert knowledge, it is often easy to do better than a linear
+model. These models are geocentric devices for describing partial
+correlations. We should feel embarrassed to use them, just so we don’t
+become satisfied with the phenomenological explanations they
+provide.</p>
+<p>Overthinking: Converting back to natural scale. The plots in Figure
+4.11 have standard units on the horizontal axis. These units are
+sometimes called z-scores. But suppose you fit the model using
+standardized variables, but want to plot the estimates on the original
+scale. All that’s really needed is first to turn off the horizontal axis
+when you plot the raw data:</p>
+<p>R code 4.70</p>
+<p>plot( height ~ weight_s , d , col=col.alpha(rangi2,0.5) , xaxt=“n“
+)</p>
+<p>The xaxt at the end there turns off the horizontal axis. Then you
+explicitly construct the axis, using the axis function.</p>
+<p>R code 4.71</p>
+<p>at &lt;- c(-2,-1,0,1,2)</p>
+<p>labels &lt;- at*sd(d) + mean(d)</p>
+<p>axis( side=1 , at=at , labels=round(labels,1) )</p>
+<p>The first line above defines the location of the labels, in
+standardized units. The second line then takes those units and converts
+them back to the original scale. The third line draws the axis. Take a
+look at the help ?axis for more details.</p>
+<p>4.5.2. Splines. The second way to introduce a curve is to construct
+something known as a spline. The word spline originally referred to a
+long, thin piece of wood or metal that could be anchored in a few places
+in order to aid drafters or designers in drawing curves. In statistics,
+a spline is a smooth function built out of smaller, component functions.
+There are actually many types of splines. The b-spline we’ll look at
+here is commonplace. The “B” stands for “basis,” which here just means
+“component.” B-splines build up wiggly functions from simpler
+less-wiggly components. Those components are called basis functions.
+While there are fancier splines, we want to start B-splines because they
+force you to make a number of choices that other types of splines
+automate. You’ll need to understand B-splines before you can understand
+fancier splines.</p>
+<p>To see how B-splines work, we’ll need an example that is much
+wigglier—that’s a scien- tific term—than the !Kung stature data. Cherry
+trees blossom all over Japan in the spring each year, and the tradition
+of flower viewing (Hanami 花見) follows. The timing of the blossoms can
+vary a lot by year and century. Let’s load a thousand years of blossom
+dates:</p>
+<p>R code 4.72</p>
+<p>library(rethinking)</p>
+<p>data(cherry_blossoms)</p>
+<p>d &lt;- cherry_blossoms</p>
+<p>precis(d)</p>
+<p>‘data .frame’: 1215</p>
+<p>obs . of 5 variables:</p>
+<p>mean</p>
+<p>sd</p>
+<p>5 .5%</p>
+<p>94 .5%</p>
+<p>histogram</p>
+<p>year</p>
+<p>1408 .00</p>
+<p>350 .88</p>
+<p>867 .77</p>
+<p>1948 .23</p>
+<p>▇▇▇▇▇▇▇▇▇▇▇▇一</p>
+<p>doy</p>
+<p>104 .54</p>
+<p>6 .41</p>
+<p>94 .43</p>
+<p>115 .00</p>
+<p>▂▅▇▇▃</p>
+<p>emp</p>
+<p>6 .14</p>
+<p>0 .66</p>
+<p>5 .15</p>
+<p>7 .29</p>
+<p>▃▅▇▃▂</p>
+<p>emp_upper</p>
+<p>7 .19</p>
+<p>0 .99</p>
+<p>5 .90</p>
+<p>8 .90</p>
+<p>一▂▅▇▇▅▂▂一一一一一一一</p>
+<p>emp lower</p>
+<p>5 10</p>
+<p>0 85</p>
+<p>3 79</p>
+<p>6 37</p>
+<p>▃▅▇▃▂</p>
+<p>See ?cherry_blossoms for details and sources. We’re going to work
+with the historical record of first day of blossom, doy, for now. It
+ranges from 86 (late March) to 124 (early May). The years with recorded
+blossom dates run from 812 CE to 2015 CE. You should go</p>
+<p>ahead and plot doy against year to see (also see the figure on the
+next page). There might be some wiggly trend in that cloud. It’s hard to
+tell.</p>
+<p>Let’s try extracting a trend with a B-spline. The short explanation
+of B-splines is that they divide the full range of some predictor
+variable, like year, into parts. Then they assign a parameter to each
+part. These parameters are gradually turned on and off in a way that
+makes their sum into a fancy, wiggly curve. The long explanation
+contains lots more details. But all of those details just exist to
+achieve this goal of building up a big, curvy function from individually
+less curvy local functions.</p>
+<p>Here’s a longer explanation, with visual examples. Our goal is to
+approximate the blos- som trend with a wiggly function. With B-splines,
+just like with polynomial regression, we do this by generating new
+predictor variables and using those in the linear model, μi. Un- like
+polynomial regression, B-splines do not directly transform the predictor
+by squaring or cubing it. Instead they invent a series of entirely new,
+synthetic predictor variables. Each of these synthetic variables exists
+only to gradually turn a specific parameter on and off within a specific
+range of the real predictor variable. Each of the synthetic variables is
+called a basis function. The linear model ends up looking very
+familiar:</p>
+<p>μi = α + w1Bi, 1 + w2Bi,2 + w3Bi,3 + …</p>
+<p>where Bi,n is the n-th basis function’s value on row i, and the w
+parameters are correspond- ing weights for each. The parameters act like
+slopes, adjusting the influence of each basis function on the mean μi.
+So really this is just another linear regression, but with some fancy,
+synthetic predictor variables. These synthetic variables do some really
+elegant descriptive (geocentric) work for us.</p>
+<p>How do we construct these basis variables B? I display the simplest
+case in Figure 4.12, in which I approximate the blossom date data with a
+combination of linear approximations. First, I divide the full range of
+the horizontal axis into four parts, using pivot points called knots.
+The knots are shown by the + symbols in the top plot. I’ve placed the
+knots at even quantiles of the blossom data. In the blossom data, there
+are fewer recorded blossom dates deep in the past. So using even
+quantiles does not produce evenly spaced knots. This is why the second
+knot is so far from the first knot. Don’t worry right now about the code
+to make these knots. You’ll see it later.</p>
+<p>Focus for now just on the picture. The knots act as pivots for five
+different basis functions, our B variables. These synthetic variables
+are used to gently transition from one region of the horizontal axis to
+the next. Essentially, these variables tell you which knot you are close
+to. Beginning on the left of the top plot, basis function 1 has value 1
+and all of the others are set to zero. As we move rightwards towards the
+second knot, basis 1 declines and basis 2 increases. At knot 2, basis 2
+has value 1, and all of the others are set to zero.</p>
+<p>The nice feature of these basis functions is that they make the
+influence of each parameter quite local. At any point on the horizontal
+axis in Figure 4.12, only two basis functions have non-zero values. For
+example, the dashed blue line in the top plot shows the year 1200. Basis
+functions 1 and 2 are non-zero for that year. So the parameters for
+basis functions 1 and 2 are the only parameters influencing prediction
+for the year 1200. This is quite unlike polynomial regression, where
+parameters influence the entire shape of the curve.</p>
+<p>In the middle plot in Figure 4.12, I show each basis function
+multiplied by its corre- sponding weight parameter. I got these weights
+by fitting the model to the data. I’ll show you how to do that in a
+moment. Again focus on the figure for now. Weight parameters can be
+positive or negative. So for example basis function 5 ends up below the
+zero line. It has</p>
+<p>1200</p>
+<p>1</p>
+<p>800</p>
+<p>800</p>
+<p>Figure 4.12. Using B-splines to make local, linear approximations.
+Top: Each basis function is a variable that turns on specific ranges
+ofthe predic- tor variable. At any given value on the horizontal axis,
+e.g. 1200, only two have non-zero values. Middle: Parameters called
+weights multiply the basis functions. The spline at any given point is
+the sum of these weighted basis functions. Bottom: The resulting
+B-spline shown against the data. Each weight parameter determines the
+slope in a specific range of the predictor variable.</p>
+<p>negative weight. To construct a prediction for any given year, say
+for example 1200 again, we just add up these weighted basis functions at
+that year. In the year 1200, only basis functions 1 and 2 influence
+prediction. Their sum is slightly above the zero (the mean).</p>
+<p>Finally, in the bottom plot of Figure 4.12, I display the spline, as
+a 97% posterior interval for μ, over the raw blossom date data. All the
+spline seems to pick up is a change in trend around 1800. You can
+probably guess which global climate trend this reflects. But there is
+more going on in the data, before 1800. To see it, we can do two things.
+First, we can use more knots. The more knots, the more flexible the
+spline. Second, instead of linear approximations, we can use
+higher-degree polynomials.</p>
+<p>Let’s build up the code that will let you reproduce the plots in
+Figure 4.12, but also let you change the knots and degree to anything
+you like. First, we choose the knots. Remem- ber, the knots are just
+values of year that serve as pivots for our spline. Where should the
+knots go? There are different ways to answer this question.77 You can,
+in principle, put the knots wherever you like. Their locations are part
+of the model, and you are responsible for them. Let’s do what we did in
+the simple example above, place the knots at different evenly- spaced
+quantiles of the predictor variable. This gives you more knots where
+there are more observations. We used only 5 knots in the first example.
+Now let’s go for 15:</p>
+<p>Go ahead and inspect knot_list to see that it contains 15 dates.</p>
+<p>The next choice is polynomial degree. This determines how basis
+functions combine, which determines how the parameters interact to
+produce the spline. For degree 1, as in Figure 4.12, two basis functions
+combine at each point. For degree 2, three functions com- bine at each
+point. For degree 3, four combine. R already has a nice function that
+will build basis functions for any list of knots and degree. This code
+will construct the necessary basis functions for a degree 3 (cubic)
+spline:</p>
+<p>The matrix B should have 827 rows and 17 columns. Each row is a year,
+corresponding to the rows in the d2 data frame. Each column is a basis
+function, one of our synthetic variables defining a span of years within
+which a corresponding parameter will influence prediction. To display
+the basis functions, just plot each column against year:</p>
+<p>R code 4.73</p>
+<p>R code 4.74</p>
+<p>R code 4.75</p>
+<p>I show these cubic basis functions in the top plot of Figure
+4.13.</p>
+<p>Now to get the parameter weights for each basis function, we need to
+actually define the model and make it run. The model is just a linear
+regression. The synthetic basis functions do all the work. We’ll use
+each column of the matrix B as a variable. We’ll also have an intercept
+to capture the average blossom day. This will make it easier to define
+priors on the basis weights, because then we can just conceive of each
+as a deviation from the intercept.</p>
+<p>In mathematical form, we start with the probability of the data and
+the linear model:</p>
+<p>Di ~ Normal(μi , σ)</p>
+<p>800</p>
+<p>800</p>
+<p>800</p>
+<p>Figure 4.13. A cubic spline with 15 knots. The top plot is, just like
+in the previous figure, the basis functions. However now more of these
+overlap.</p>
+<p>The middle plot is again each basis weighted by its corresponding
+parameter.</p>
+<p>And the sum of these weighted basis functions, at each point,
+produces the spline shown at the bottom, displayed as a 97% posterior
+interval of μ .</p>
+<p>And then the priors:</p>
+<p>α ~ Normal(100, 10)</p>
+<p>wj ~ Normal(0, 10)</p>
+<p>σ ~ Exponential(1)</p>
+<p>That linear model might look weird. But all it is doing is
+multiplying each basis value by a corresponding parameter wk and then
+adding up all K of those products. This is just a compact way of writing
+a linear model. The rest should be familiar. Although I will ask you to
+simulate from those priors in the practice problems at the end of the
+chapter. You might guess already that the w priors influence how wiggly
+the spline can be.</p>
+<p>This is also the first time we’ve used an exponential distribution as
+a prior. Expo- nential distributions are useful priors for scale
+parameters, parameters that must be positive. The prior for σ is
+exponential with a rate of 1. The way to read an exponential
+distribution is to think ofit as containing no more information than an
+average deviation. That average</p>
+<p>is the inverse of the rate. So in this case it is 1/1 = 1. If the
+rate were 0.5, the mean would be 1/0.5 = 2. We’ll use exponential priors
+for the rest ofthe book, in place of uniform priors. It is much more
+common to have a sense of the average deviation than of the maximum.</p>
+<p>To build this model in quap, we just need a way to do that sum. The
+easiest way is to use matrix multiplication. If you aren’t familiar with
+linear algebra in this context, that’s fine. There is an Overthinking
+box at the end with some more detail about why this works. The only
+other trick is to use a start list for the weights to tell quap how many
+there are.</p>
+<p>You can look at the posterior means if you like with
+precis(m4.7,depth=2). But it won’t reveal much. You should see 17 w
+parameters. But you can’t tell what the model thinks from the parameter
+summaries. Instead we need to plot the posterior predictions. First,
+here are the weighted basis functions:</p>
+<p>This plot, with the knots added for reference, is displayed in the
+middle row of Figure 4.13. And finally the 97% posterior interval for μ,
+at each year:</p>
+<p>R code 4.76</p>
+<p>R code 4.77</p>
+<p>R code 4.78</p>
+<p>This is shown in the bottom of the figure. The spline is much
+wigglier now. Something happened around 1500, for example. If you add
+more knots, you can make this even wigglier. You might wonder how many
+knots is correct. We’ll be ready to address that question in a few more
+chapters. Really we’ll answer it by changing the question. So hang on to
+the question, and we’ll turn to it later.</p>
+<p>Distilling the trend across years provides a lot of information. But
+year is not really a causal variable, only a proxy for features of each
+year. In the practice problems below, you’ll compare this trend to the
+temperature record, in an attempt to explain those wiggles.</p>
+<p>Overthinking: Matrix multiplication in the spline model. Matrix
+algebra is a stressful topic for many scientists. If you have had a
+course in it, it’s obvious what it does. But if you haven’t, it is
+mysterious.</p>
+<p>Matrix algebra is just a new way to represent ordinary algebra. It is
+often much more compact. So to make model m4.7 easier to program, we
+used a matrix multiplication of the basis matrix B by the vector of
+parameters w: B %*% w. This notation is just linear algebra shorthand
+for (1) multiplying each element of the vector w by each value in the
+corresponding row of B and then (2) summing up each result. You could
+also fit the same model with the following less-elegant code:</p>
+<p>So you end up with exactly what you need: A sum linear predictor for
+each year (row). If you haven’t worked with much linear algebra, matrix
+notation can be intimidating. It is useful to remember that it is
+nothing more than the mathematics you already know, but expressed in a
+highly compressed form that is convenient when working with repeated
+calculations on lists of numbers.</p>
+<p>4.5.3. Smooth functions for a rough world. The splines in the
+previous section are just the beginning. A entire class of models,
+generalized additive models (GAMs), focuses on predicting an outcome
+variable using smooth functions of some predictor variables. The topic
+is deep enough to deserve its own book.78</p>
+<h6 id="阅读日期-2025年12月21日-2025年12月21日-共-1-天">阅读日期：
+2025年12月21日-2025年12月21日 共： 1 天</h6>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="hbaolong@vip.qq.com" />
+  <title>统计反思EN:4.2. A language for describing models</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">统计反思EN:4.2. A language for describing models</h1>
+<p class="author">hbaolong@vip.qq.com</p>
+</header>
+<center>
+<a href="/3place/tjfsen">返回首页</a> <a
+href="/3place/tjfsen/mingju.html">本书名句</a> <a
+href="/3place/tjfsen/memo.html">本书注解</a> <a
+href="/3place/tjfsen/index_rich.html">丰富目录</a> <a
+href="/3place/tjfsen/index_readcal.html">同读日历</a> <a
+href="/3place/tjfsen/index_timeline.html">时间线</a> <a
+href="/3place/tjfsen/index_books.html">引用书籍</a> <a
+href="/3place/tjfsen/index_words.html">使用字频</a>
+<div id="wx_pic" style="margin:0 auto;display:none;">
+<img src='/img/logo.png'/>
+</div>
+</center>
+<h4 id="a-language-for-describing-models">4.2. A language for describing
+models</h4>
+<p>This book adopts a standard language for describing and coding
+statistical models. You find this language in many statistical texts and
+in nearly all statistical journals, as it is general to both Bayesian
+and non-Bayesian modeling. Scientists increasingly use this same
+language to describe their statistical methods, as well. So learning
+this language is an investment, no matter where you are headed next.</p>
+<p>Here’s the approach, in abstract. There will be many examples later,
+but it is important to get the general recipe before seeing these.</p>
+<ol type="1">
+<li><p>First, we recognize a set of variables to work with. Some of
+these variables are ob- servable. We call these data. Others are
+unobservable things like rates and averages. We call these
+parameters.</p></li>
+<li><p>We define each variable either in terms of the other variables or
+in terms of a prob- ability distribution.</p></li>
+<li><p>The combination of variables and their probability distributions
+defines a joint gen- erative model that can be used both to simulate
+hypothetical observations as well as analyze real ones.</p></li>
+</ol>
+<p>This outline applies to models in every field, from astronomy to art
+history. The biggest difficulty usually lies in the subject matter—which
+variables matter and how does theory tell us to connect them?—not in the
+mathematics.</p>
+<p>After all these decisions are made—and most of them will come to seem
+automatic to you before long—we summarize the model with something mathy
+like:</p>
+<p>yi ~ Normal(μi , σ)</p>
+<p>μi = βxi</p>
+<p>β ~ Normal(0, 10)</p>
+<p>σ ~ Exponential(1)</p>
+<p>xi ~ Normal(0, 1)</p>
+<p>If that doesn’t make much sense, good. That indicates that you are
+holding the right textbook, since this book teaches you how to read and
+write these mathematical model descriptions. We won’t do any
+mathematical manipulation of them. Instead, they provide an unambigu-
+ous way to define and communicate our models. Once you get comfortable
+with their gram- mar, when you start reading these mathematical
+descriptions in other books or in scientific journals, you’ll find them
+less obtuse.</p>
+<p>The approach above surely isn’t the only way to describe statistical
+modeling, but it is a widespread and productive language. Once a
+scientist learns this language, it becomes easier to communicate the
+assumptions ofour models. We no longer have to remember seemingly
+arbitrary lists of bizarre conditions like homoscedasticity (constant
+variance), because we can just read these conditions from the model
+definitions. We will also be able to see natural ways to change these
+assumptions, instead of feeling trapped within some procrustean model
+type, like regression or multiple regression or ANOVA or ANCOVA or such.
+These are all the same kind of model, and that fact becomes obvious once
+we know how to talk about models as mappings of one set of variables
+through a probability distribution onto another set of variables.
+Fundamentally, these models define the ways values of some variables can
+arise, given values of other variables (2).</p>
+<p>4.2.1. Re-describing the globe tossing model. It’s good to work with
+examples. Recall the proportion of water problem from previous chapters.
+The model in that case was always:</p>
+<p>W ~ Binomial(N, p)</p>
+<p>p ~ Uniform(0, 1)</p>
+<p>where W was the observed count of water, N was the total number of
+tosses, and p was the proportion of water on the globe. Read the above
+statement as:</p>
+<p>The count Wis distributed binomially with sample size N and
+probability p.</p>
+<p>The prior for p is assumed to be uniform between zero and one.</p>
+<p>Once we know the model in this way, we automatically know all of its
+assumptions. We know the binomial distribution assumes that each sample
+(globe toss) is independent of the others, and so we also know that the
+model assumes that sample points are independent of one another.</p>
+<p>For now, we’ll focus on simple models like the above. In these
+models, the first line de- fines the likelihood function used in Bayes’
+theorem. The other lines define priors. Both of the lines in this model
+are stochastic, as indicated by the ~ symbol. A stochastic relation-
+ship is just a mapping of a variable or parameter onto a distribution.
+It is stochastic because no single instance of the variable on the left
+is known with certainty. Instead, the mapping is probabilistic: Some
+values are more plausible than others, but very many different values
+are plausible under any model. Later, we’ll have models with
+deterministic definitions in them.</p>
+<p>Overthinking: From model definition to Bayes’ theorem. To relate the
+mathematical format above to Bayes’ theorem, you could use the model
+definition to define the posterior distribution:</p>
+<p>That monstrous denominator is just the average likelihood again. It
+standardizes the posterior to sum to 1. The action is in the numerator,
+where the posterior probability of any particular value of p is seen
+again to be proportional to the product of the likelihood and prior. In
+R code form, this is the same grid approximation calculation you’ve been
+using all along. In a form recognizable as the above expression:</p>
+<p>R code</p>
+<p>4.6 w &lt;- 6; n &lt;- 9;</p>
+<p>p_grid &lt;- seq(from=0,to=1,length.out=100)</p>
+<p>posterior &lt;- dbinom(w,n,p_grid)*dunif(p_grid,0,1)</p>
+<p>posterior &lt;- posterior/sum(posterior)</p>
+<p>Compare to the calculations in earlier chapters.</p>
+<h6 id="阅读日期-2025年12月18日-2025年12月18日-共-1-天">阅读日期：
+2025年12月18日-2025年12月18日 共： 1 天</h6>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

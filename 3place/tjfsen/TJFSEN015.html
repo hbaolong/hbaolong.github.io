@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="hbaolong@vip.qq.com" />
+  <title>统计反思EN:2.3. Components of the model</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">统计反思EN:2.3. Components of the model</h1>
+<p class="author">hbaolong@vip.qq.com</p>
+</header>
+<center>
+<a href="/3place/tjfsen">返回首页</a> <a
+href="/3place/tjfsen/mingju.html">本书名句</a> <a
+href="/3place/tjfsen/memo.html">本书注解</a> <a
+href="/3place/tjfsen/index_rich.html">丰富目录</a> <a
+href="/3place/tjfsen/index_readcal.html">同读日历</a> <a
+href="/3place/tjfsen/index_timeline.html">时间线</a> <a
+href="/3place/tjfsen/index_books.html">引用书籍</a> <a
+href="/3place/tjfsen/index_words.html">使用字频</a>
+<div id="wx_pic" style="margin:0 auto;display:none;">
+<img src='/img/logo.png'/>
+</div>
+</center>
+<h4 id="components-of-the-model">2.3. Components of the model</h4>
+<p>Now that you’ve seen how the Bayesian model behaves, it’s time to
+open up the machine and learn how it works. Consider three different
+things that we counted in the previous sections.</p>
+<ol type="1">
+<li><p>The number of ways each conjecture could produce an
+observation</p></li>
+<li><p>The accumulated number of ways each conjecture could produce the
+entire data</p></li>
+<li><p>The initial plausibility of each conjectured cause of the
+data</p></li>
+</ol>
+<p>Each of these things has a direct analog in conventional probability
+theory. And so the usual way we build a statistical model involves
+choosing distributions and devices for each that represent the relative
+numbers of ways things can happen.</p>
+<p>In this section, you’ll meet these components in some detail and see
+how each relates to the counting you did earlier in the chapter. The job
+in front ofus is really nothing more than naming all of the variables
+and defining each. We’ll take these tasks in turn.</p>
+<p>2.3.1. Variables. Variables are just symbols that can take on
+different values. In a scientific context, variables include things we
+wish to infer, such as proportions and rates, as well as things we might
+observe, the data. In the globe tossing model, there are three
+variables.</p>
+<p>The first variable is our target of inference, p, the proportion of
+water on the globe. This variable cannot be observed. Unobserved
+variables are usually called parameters. But while p itself is
+unobserved, we can infer it from the other variables.</p>
+<p>The other variables are the observed variables, the counts of water
+and land. Call the count of water W and the count of land L. The sum of
+these two variables is the number of globe tosses: N = W + L.</p>
+<p>2.3.2. Definitions. Once we have the variables listed, we then have
+to define each of them. In defining each, we build a model that relates
+the variables to one another. Remember, the goal is to count all the
+ways the data could arise, given the assumptions. This means, as in the
+globe tossing model, that for each possible value of the unobserved
+variables, such as p, we need to define the relative number of ways—the
+probability—that the values of each observed variable could arise. And
+then for each unobserved variable, we need to define the prior
+plausibility of each value it could take. I appreciate that this is all
+a bit abstract. So here are the specifics, for the globe.</p>
+<p>2.3.2.1. Observed variables. For the count of water W and land L, we
+define how plau- sible any combination of W and L would be, for a
+specific value of p. This is very much like the marble counting we did
+earlier in the chapter. Each specific value of p corresponds to a
+specific plausibility of the data, as in Figure 2.5.</p>
+<p>So that we don’t have to literally count, we can use a mathematical
+function that tells us the right plausibility. In conventional
+statistics, a distribution function assigned to an observed variable is
+usually called a likelihood. That term has special meaning in non-
+Bayesian statistics, however.47 We will be able to do things with our
+distributions that non- Bayesian models forbid. So I will sometimes
+avoid the term likelihood and just talk about distributions of
+variables. But when someone says, “likelihood,” they will usually mean a
+distribution function assigned to an observed variable.</p>
+<p>In the case of the globe tossing model, the function we need can be
+derived directly from the data story. Begin by nominating all of the
+possible events. There are two: water (W) and land (L). There are no
+other events. The globe never gets stuck to the ceiling, for example.
+When we observe a sample ofW’s and L’s of length N (nine in the actual
+sample), we need to say how likely that exact sample is, out of the
+universe of potential samples of the same length. That might sound
+challenging, but it’s the kind of thing you get good at very quickly,
+once you start practicing.</p>
+<p>In this case, once we add our assumptions that (1) every toss is
+independent of the other tosses and (2) the probability of W is the same
+on every toss, probability theory provides a unique answer, known as the
+binomial distribution. This is the common “coin tossing” distribution.
+And so the probability of observing W waters and L lands, with a
+probability p of water on each toss, is:</p>
+<p>Read the above as:</p>
+<p>The counts of“water” W and “land’L are distributed binomially, with
+prob- ability p of“water” on each toss.</p>
+<p>And the binomial distribution formula is built into R, so you can
+easily compute the likeli- hood of the data—six W’s in nine tosses—under
+any value ofp with:</p>
+<p>[1] 0.1640625</p>
+<p>That number is the relative number of ways to get six water, holding
+p at 0.5 and N = W + L at nine. So it does the job of counting relative
+number of paths through the garden. Change the 0.5 to any other value,
+to see how the value changes.</p>
+<p>Much later in the book, in 10, we’ll see that the binomial
+distribution is rather special, because it represents the maximum
+entropy way to count binary events. “Maxi- mum entropy” might sound like
+a bad thing. Isn’t entropy disorder? Doesn’t “maximum entropy” mean the
+death of the universe? Actually it means that the distribution contains
+no additional information other than: There are two events, and the
+probabilities of each in each trial are p and 1 - p. 10 explains this in
+more detail, and the details can certainly wait.</p>
+<p>Overthinking: Names and probability distributions. The “d” in dbinom
+stands for density. Func- tions named in this way almost always have
+corresponding partners that begin with “ r” for random samples and that
+begin with “p” for cumulative probabilities. See for example the help
+?dbinom.</p>
+<p>Rethinking: A central role for likelihood. A great deal of ink has
+been spilled focusing on how Bayesian and non-Bayesian data analyses
+differ. Focusing on differences is useful, but sometimes it distracts us
+from fundamental similarities. Notably, the most influential assumptions
+in both Bayesian and many non-Bayesian models are the distributions
+assigned to data, the likelihood func- tions. The likelihoods influence
+inference for every piece of data, and as sample size increases, the
+likelihood matters more and more. This helps to explain why Bayesian and
+non-Bayesian inferences are often so similar. If we had to explain
+Bayesian inference using only one aspect of it, we should describe
+likelihood, not priors.</p>
+<p>2.3.2.2. Unobserved variables. The distributions we assign to the
+observed variables typ- ically have their own variables. In the binomial
+above, there isp, the probability of sampling water. Since p is not
+observed, we usually call it a parameter. Even though we cannot observe
+p, we still have to define it.</p>
+<p>In future chapters, there will be more parameters in your models. In
+statistical modeling, many of the most common questions we ask about
+data are answered directly by parameters:</p>
+<p>• What is the average difference between treatment groups?</p>
+<p>• How strong is the association between a treatment and an
+outcome?</p>
+<p>• Does the effect of the treatment depend upon a covariate?</p>
+<p>• How much variation is there among groups?</p>
+<p>You’ll see how these questions become extra parameters inside the
+distribution function we assign to the data.</p>
+<p>For every parameter you intend your Bayesian machine to consider, you
+must provide a distribution of prior plausibility, its prior. A Bayesian
+machine must have an initial plausi- bility assignment for each possible
+value of the parameter, and these initial assignments do useful work.
+When you have a previous estimate to provide to the machine, that can
+become the prior, as in the steps in Figure 2.5. Back in Figure 2.5, the
+machine did its learning one piece of data at a time. As a result, each
+estimate becomes the prior for the next step. But this doesn’t resolve
+the problem of providing a prior, because at the dawn of time, when N =
+0, the machine still had an initial state of information for the
+parameter p: a flat line specifying equal plausibility for every
+possible value.</p>
+<p>So where do priors come from? They are both engineering assumptions,
+chosen to help the machine learn, and scientific assumptions, chosen to
+reflect what we know about a phe- nomenon. The flat prior in Figure 2.5
+is very common, but it is hardly ever the best prior. Later chapters
+will focus on prior choice a lot more.</p>
+<p>There is a school of Bayesian inference that emphasizes choosing
+priors based upon the personal beliefs of the analyst.48 While this
+subjective Bayesian approach thrives in some statistics and philosophy
+and economics programs, it is rare in the sciences. Within Bayesian data
+analysis in the natural and social sciences, the prior is considered to
+be just part of the model. As such it should be chosen, evaluated, and
+revised just like all of the other components of the model. In practice,
+the subjectivist and the non-subjectivist will often analyze data in
+nearly the same way.</p>
+<p>None of this should be understood to mean that any statistical
+analysis is not inherently subjective, because of course it is—lots of
+little subjective decisions are involved in all parts of science. It’s
+just that priors and Bayesian data analysis are no more inherently
+subjective than are likelihoods and the repeat sampling assumptions
+required for significance testing.49 Anyone who has visited a statistics
+help desk at a university has probably experienced this
+subjectivity—statisticians do not in general exactly agree on how to
+analyze anything but the simplest of problems. The fact that statistical
+inference uses mathematics does not imply that there is only one
+reasonable or useful way to conduct an analysis. Engineering uses math
+as well, but there are many ways to build a bridge.</p>
+<p>Beyond all of the above, there’s no law mandating we use only one
+prior. If you don’t have a strong argument for any particular prior,
+then try different ones. Because the prior is an assumption, it should
+be interrogated like other assumptions: by altering it and checking how
+sensitive inference is to the assumption. No one is required to swear an
+oath to the assumptions of a model, and no set of assumptions deserves
+our obedience.</p>
+<p>Overthinking: Prior as probability distribution. You could write the
+prior in the example here as:</p>
+<p>The prior is a probability distribution for the parameter. In
+general, for a uniform prior from a to b, the probability of any point
+in the interval is 1/(b - a). If you’re bothered by the fact that the
+probability of every value of p is 1, remember that every probability
+distribution must sum (integrate) to 1. The expression 1/(b - a) ensures
+that the area under the flat line from a to b is equal to 1. There will
+be more to say about this in 4.</p>
+<p>Rethinking: Datum or parameter? It is typical to conceive of data and
+parameters as completely different kinds of entities. Data are measured
+and known; parameters are unknown and must be estimated from data.
+Usefully, in the Bayesian framework the distinction between a datum and
+a parameter is not so fundamental. Sometimes we observe a variable, but
+sometimes we do not. In that case, the same distribution function
+applies, even though we didn’t observe the variable. As a result, the
+same assumption can look like a “likelihood” or a “prior,” depending
+upon context, without any change to the model. Much later in the book
+(15), you’ll see how to exploit this deep identity between certainty
+(data) and uncertainty (parameters) to incorporate measurement error and
+missing data into your modeling.</p>
+<p>2.3.3. A model is born. With all the above work, we can now summarize
+our model. The observed variables W and L are given relative counts
+through the binomial distribution. So we can write, as a shortcut:</p>
+<p>W ~ Binomial(N, p)</p>
+<p>where N = W + L. The above is just a convention for communicating the
+assumption that the relative counts of ways to realize WinNtrials with
+probability p on each trial comes from the binomial distribution. And
+the unobserved parameter p similarly gets:</p>
+<p>p ~ Uniform(0, 1)</p>
+<p>This means that p has a uniform—flat—prior over its entire possible
+range, from zero to one. As I mentioned earlier, this is obviously not
+the best we could do, since we know the Earth has more water than land,
+even if we do not know the exact proportion yet.</p>
+<p>Next, let’s see how to use these assumptions to generate
+inference.</p>
+<h6 id="阅读日期-2025年12月08日-2025年12月08日-共-1-天">阅读日期：
+2025年12月08日-2025年12月08日 共： 1 天</h6>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

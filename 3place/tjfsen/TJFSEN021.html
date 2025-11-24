@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="hbaolong@vip.qq.com" />
+  <title>统计反思EN:3.3. Sampling to simulate prediction</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">统计反思EN:3.3. Sampling to simulate prediction</h1>
+<p class="author">hbaolong@vip.qq.com</p>
+</header>
+<center>
+<a href="/3place/tjfsen">返回首页</a> <a
+href="/3place/tjfsen/mingju.html">本书名句</a> <a
+href="/3place/tjfsen/memo.html">本书注解</a> <a
+href="/3place/tjfsen/index_rich.html">丰富目录</a> <a
+href="/3place/tjfsen/index_readcal.html">同读日历</a> <a
+href="/3place/tjfsen/index_timeline.html">时间线</a> <a
+href="/3place/tjfsen/index_books.html">引用书籍</a> <a
+href="/3place/tjfsen/index_words.html">使用字频</a>
+<div id="wx_pic" style="margin:0 auto;display:none;">
+<img src='/img/logo.png'/>
+</div>
+</center>
+<h4 id="sampling-to-simulate-prediction">3.3. Sampling to simulate
+prediction</h4>
+<p>Another common job for samples is to ease simulation of the model’s
+implied obser- vations. Generating implied observations from a model is
+useful for at least four reasons.</p>
+<ol type="1">
+<li><p>Model design. We can sample not only from the posterior, but also
+from the prior. Seeing what the model expects, before the data arrive,
+is the best wayto understand the implications of the prior. We’ll do a
+lot of this in later chapters, where there will be multiple parameters
+and so their joint implications are not always very clear.</p></li>
+<li><p>Model checking. After a model is updated using data, it is worth
+simulating im- plied observations, to check both whether the fit worked
+correctly and to investi- gate model behavior.</p></li>
+<li><p>Software validation. In order to be sure that our model fitting
+software is working, it helps to simulate observations under a known
+model and then attempt to recover the values of the parameters the data
+were simulated under.</p></li>
+<li><p>Research design. If you can simulate observations from your
+hypothesis, then you can evaluate whether the research design can be
+effective. In a narrow sense, this means doing power analysis, but the
+possibilities are much broader.</p></li>
+<li><p>Forecasting. Estimates can be used to simulate new predictions,
+for new cases and future observations. These forecasts can be useful as
+applied prediction, but also for model criticism and revision.</p></li>
+</ol>
+<p>In this final section of the chapter, we’ll look at how to produce
+simulated observations and how to perform some simple model checks.</p>
+<p>3.3.1. Dummy data. Let’s summarize the globe tossing model that
+you’ve been working with for two chapters now. A fixed true proportion
+of water p exists, and that is the target of our inference. Tossing the
+globe in the air and catching it produces observations of “water” and
+“land” that appear in proportion top and 1 - p, respectively.</p>
+<p>R code 3.20</p>
+<p>R code 3.21</p>
+<p>R code 3.22</p>
+<p>R code 3.23</p>
+<p>Now note that these assumptions not only allow us to infer the
+plausibility of each possi- ble value of p, after observation. That’s
+what you did in the previous chapter. These assump- tions also allow us
+to simulate the observations that the model implies. They allow this,
+because likelihood functions work in both directions. Given a realized
+observation, the like- lihood function says how plausible the
+observation is. And given only the parameters, the likelihood defines a
+distribution of possible observations that we can sample from, to simu-
+late observation. In this way, Bayesian models are always generative,
+capable of simulating predictions. Many non-Bayesian models are also
+generative, but many are not.</p>
+<p>We will call such simulated data dummy data, to indicate that it is a
+stand-in for actual data. With the globe tossing model, the dummy data
+arises from a binomial likelihood:</p>
+<p>where Wis an observed count of “water” andNis the number of tosses.
+Suppose N = 2, two tosses of the globe. Then there are only three
+possible observations: 0 water, 1 water, 2 water. You can quickly
+compute the probability of each, for any given value of p. Let’s use p =
+0.7, which is just about the true proportion of water on the Earth:</p>
+<p>[1] 0.09 0.42 0.49</p>
+<p>This means that there’s a 9% chance of observing w = 0, a 42% chance
+of w = 1, and a 49% chance of w = 2. If you change the value of p,
+you’ll get a different distribution of implied observations.</p>
+<p>Now we’re going to simulate observations, using these probabilities.
+This is done by sampling from the distribution just described above. You
+could use sample to do this, but R provides convenient sampling
+functions for all the ordinary probability distributions, like the
+binomial. So a single dummy data observation of W can be sampled
+with:</p>
+<p>[1] 1</p>
+<p>That 1 means “1 water in 2 tosses.” The “ r” in rbinom stands for
+“random.” It can also generate more than one simulation at a time. A set
+of 10 simulations can be made by:</p>
+<p>[1] 2 2 2 1 2 1 1 1 0 2</p>
+<p>Let’s generate 100,000 dummy observations, just to verify that each
+value (0, 1, or 2) appears in proportion to its likelihood:</p>
+<p>dummy_w</p>
+<p>0 1 2</p>
+<p>0.08904 0.41948 0.49148</p>
+<p>0 2 4 6 8 dummy water count</p>
+<p>Figure 3.5. Distribution of simulated sample observations from 9
+tosses of the globe. These samples assume the proportion of water is
+0.7.</p>
+<p>And those values are very close to the analytically calculated
+likelihoods further up. You will see slightly different values, due to
+simulation variance. Execute the code above multiple times, to see how
+the exact realized frequencies fluctuate from simulation to
+simulation.</p>
+<p>Only two tosses of the globe isn’t much of a sample, though. So now
+let’s simulate the same sample size as before, 9 tosses.</p>
+<p>The resulting plot is shown in Figure 3.5. Notice that most of the
+time the expected obser- vation does not contain water in its true
+proportion, 0.7. That’s the nature of observation: There is a
+one-to-many relationship between data and data-generating processes. You
+should experiment with sample size, the size input in the code above, as
+well as the prob, to see how the distribution of simulated samples
+changes shape and location.</p>
+<p>So that’s how to perform a basic simulation of observations. What
+good is this? There are many useful jobs for these samples. In this
+chapter, we’ll put them to use in examining the implied predictions ofa
+model. But to do that, we’ll have to combine them with samples from the
+posterior distribution. That’s next.</p>
+<p>Rethinking: Sampling distributions. Many readers will already have
+seen simulated observations. Sampling distributions are the foundation
+of common non-Bayesian statistical traditions. In those approaches,
+inference about parameters is made through the sampling distribution. In
+this book, inference about parameters is never done directly through a
+sampling distribution. The poste- rior distribution is not sampled, but
+deduced logically. Then samples can be drawn from the poste- rior, as
+earlier in this chapter, to aid in inference. In neither case is
+“sampling” a physical act. In both cases, it’s just a mathematical
+device and produces only small world (2) numbers.</p>
+<p>3.3.2. Model checking. Model checking means (1) ensuring the model
+fitting worked correctly and (2) evaluating the adequacy of a model for
+some purpose. Since Bayesian mod- els are always generative, able to
+simulate observations as well as estimate parameters from observations,
+once you condition a model on data, you can simulate to examine the
+model’s empirical expectations.</p>
+<p>3.3.2.1. Did the software work? In the simplest case, we can check
+whether the software worked by checking for correspondence between
+implied predictions and the data used to fit the model. You might also
+call these implied predictions retrodictions, as they ask how well the
+model reproduces the data used to educate it. An exact match is neither
+expected nor desired. But when there is no correspondence at all, it
+probably means the software did something wrong.</p>
+<p>There is no way to really be sure that software works correctly. Even
+when the retro- dictions correspond to the observed data, there may be
+subtle mistakes. And when you start working with multilevel models,
+you’ll have to expect a certain pattern of lack of correspon- dence
+between retrodictions and observations. Despite there being no perfect
+way to ensure software has worked, the simple check I’m encouraging here
+often catches silly mistakes, mistakes of the kind everyone makes from
+time to time.</p>
+<p>In the case of the globe tossing analysis, the software
+implementation is simple enough that it can be checked against
+analytical results. So instead let’s move directly to considering the
+model’s adequacy.</p>
+<p>3.3.2.2. Is the model adequate? After assessing whether the posterior
+distribution is the correct one, because the software worked correctly,
+it’s useful to also look for aspects of the data that are not well
+described by the model’s expectations. The goal is not to test whether
+the model’s assumptions are “true,” because all models are false.
+Rather, the goal is to assess exactly how the model fails to describe
+the data, as a path towards model comprehension, revision, and
+improvement.</p>
+<p>All models fail in some respect, so you have to use your judgment—as
+well as the judg- ments of your colleagues—to decide whether any
+particular failure is or is not important. Few scientists want to
+produce models that do nothing more than re-describe existing sam- ples.
+So imperfect prediction (retrodiction) is not a bad thing. Typically we
+hope to either predict future observations or understand enough that we
+might usefully tinker with the world. We’ll consider these problems in
+future chapters.</p>
+<p>For now, we need to learn how to combine sampling of simulated
+observations, as in the previous section, with sampling parameters from
+the posterior distribution. We expect to do better when we use the
+entire posterior distribution, not just some point estimate derived from
+it. Why? Because there is a lot of information about uncertainty in the
+entire posterior distribution. We lose this information when we pluck
+out a single parameter value and then perform calculations with it. This
+loss of information leads to overconfidence.</p>
+<p>Let’s do some basic model checks, using simulated observations for
+the globe tossing model. The observations in our example case are counts
+of water, over tosses of the globe. The implied predictions of the model
+are uncertain in two ways, and it’s important to be aware of both.</p>
+<p>First, there is observation uncertainty. For any unique value of the
+parameter p, there is a unique implied pattern of observations that the
+model expects. These patterns of ob- servations are the same gardens of
+forking data that you explored in the previous chapter. These patterns
+are also what you sampled in the previous section. There is uncertainty
+in the predicted observations, because even if you know p with
+certainty, you won’t know the next globe toss with certainty (unless p =
+0 or p = 1).</p>
+<p>Second, there is uncertainty about p. The posterior distribution over
+p embodies this uncertainty. And since there is uncertainty about p,
+there is uncertainty about everything</p>
+<p>0.9</p>
+<p>0</p>
+<p>number of water samples</p>
+<p>Figure 3.6. Simulating predictions from the total posterior. Top: The
+fa- miliar posterior distribution for the globe tossing data. Ten
+example pa- rameter values are marked by the vertical lines. Values with
+greater poste- rior probability indicated by thicker lines. Middle row:
+Each of the ten pa- rameter values implies a unique sampling
+distribution of predictions. Bot- tom: Combining simulated observation
+distributions for all parameter val- ues (not just the ten shown), each
+weighted by its posterior probability, pro- duces the posterior
+predictive distribution. This distribution propagates un- certainty
+about parameter to uncertainty about prediction.</p>
+<p>hat depends upon p. The uncertainty in p will interact with the
+sampling variation, when we try to assess what the model tells us about
+outcomes.</p>
+<p>We’d like to propagate the parameter uncertainty—carry it forward—as
+we evaluate the implied predictions. All that is required is averaging
+over the posterior density for p, while computing the predictions. For
+each possible value of the parameter p, there is an implied distribution
+of outcomes. So if you were to compute the sampling distribution of
+outcomes at each value ofp, then you could average all of these
+prediction distributions together, using the posterior probabilities of
+each value ofp, to get a posterior predictive distribution.</p>
+<p>Figure 3.6 illustrates this averaging. At the top, the posterior
+distribution is shown, with 10 unique parameter values highlighted by
+the vertical lines. The implied distribution of observations specific to
+each of these parameter values is shown in the middle row of plots.
+Observations are never certain for any value of p, but they do shift
+around in response to it. Finally, at the bottom, the sampling
+distributions for all values of p are combined, using the posterior
+probabilities to compute the weighted average frequency of each possible
+observation, zero to nine water samples.</p>
+<p>The resulting distribution is for predictions, but it incorporates
+all of the uncertainty embodied in the posterior distribution for the
+parameter p. As a result, it is honest. While the model does a good job
+of predicting the data—the most likely observation is indeed the
+observed data—predictions are still quite spread out. If instead you
+were to use only a single parameter value to compute implied
+predictions, say the most probable value at the peak of posterior
+distribution, you’d produce an overconfident distribution of
+predictions, narrower than the posterior predictive distribution in
+Figure 3.6 and more like the sampling distribution shown for p = 0.6 in
+the middle row. The usual effect of this overconfidence will be to lead
+you to believe that the model is more consistent with the data than it
+really is— the predictions will cluster around the observations more
+tightly. This illusion arises from tossing away uncertainty about the
+parameters.</p>
+<p>So how do you actually do the calculations? To simulate predicted
+observations for a single value of p, say p = 0.6, you can use rbinom to
+generate random binomial samples:</p>
+<p>This generates 10,000 (1e4) simulated predictions of 9 globe tosses
+(size=9), assuming p = 0.6. The predictions are stored as counts of
+water, so the theoretical minimum is zero and the theoretical maximum is
+nine. You can use simplehist(w) (in the rethinking package) to get a
+clean histogram of your simulated outcomes.</p>
+<p>All you need to propagate parameter uncertainty into these
+predictions is replace the value 0.6 with samples from the
+posterior:</p>
+<p>The symbol samples above is the same list of random samples from the
+posterior distribu- tion that you’ve used in previous sections. For each
+sampled value, a random binomial obser- vation is generated. Since the
+sampled values appear in proportion to their posterior proba- bilities,
+the resulting simulated observations are averaged over the posterior.
+You can manip- ulate these simulated observations just like you
+manipulate samples from the posterior—you can compute intervals and
+point statistics using the same procedures. If you plot these sam- ples,
+you’ll see the distribution shown in the right-hand plot in Figure
+3.6.</p>
+<p>The simulated model predictions are quite consistent with the
+observed data in this case—the actual count of 6 lies right in the
+middle of the simulated distribution. There is quite a lot of spread to
+the predictions, but a lot of this spread arises from the binomial pro-
+cess itself, not uncertainty about p. Still, it’d be premature to
+conclude that the model is perfect. So far, we’ve only viewed the data
+just as the model views it: Each toss of the globe is completely
+independent of the others. This assumption is questionable. Unless the
+person tossing the globe is careful, it is easy to induce correlations
+and therefore patterns among the sequential tosses. Consider for example
+that about half of the globe (and planet) is cov- ered by the Pacific
+Ocean. As a result, water and land are not uniformly distributed on the
+globe, and therefore unless the globe spins and rotates enough while in
+the air, the position when tossed could easily influence the sample once
+it lands. The same problem arises in coin tosses, and indeed skilled
+individuals can influence the outcome of a coin toss, by exploiting the
+physics of it.63</p>
+<p>So with the goal of seeking out aspects of prediction in which the
+model fails, let’s look at the data in two different ways. Recall that
+the sequence of nine tosses was W L W W W L</p>
+<p>0 2 4 6 8 number of switches</p>
+<p>Figure 3.7. Alternative views of the same posterior predictive
+distribution (see Figure 3.6). Instead of considering the data as the
+model saw it, as a sum of water samples, now we view the data as both
+the length of the maximum run of water or land (left) and the number of
+switches between water and land samples (right). Observed values
+highlighted in blue. While the simulated predictions are consistent with
+the run length (3 water in a row), they are much less consistent with
+the frequent switches (6 switches in 9 tosses).</p>
+<p>W L W. First, consider the length of the longest run of either water
+or land. This will provide a crude measure of correlation between
+tosses. So in the observed data, the longest run is 3 W’s. Second,
+consider the number of times in the data that the sample switches from
+water to land or from land to water. This is another measure of
+correlation between samples. In the observed data, the number of
+switches is 6. There is nothing special about these two new ways of
+describing the data. They just serve to inspect the data in new ways. In
+your own modeling, you’ll have to imagine aspects of the data that are
+relevant in your context, for your purposes.</p>
+<p>Figure 3.7 shows the simulated predictions, viewed in these two new
+ways. On the left, the length of the longest run of water or land is
+plotted, with the observed value of 3 highlighted by the bold line.
+Again, the true observation is the most common simulated ob- servation,
+but with a lot of spread around it. On the right, the number of switches
+from water to land and land to water is shown, with the observed value
+of 6 highlighted in bold. Now the simulated predictions appear less
+consistent with the data, as the majority of simulated observations have
+fewer switches than were observed in the actual sample. This is consis-
+tent with lack of independence between tosses of the globe, in which
+each toss is negatively correlated with the last.</p>
+<p>Does this mean that the model is bad? That depends. The model will
+always be wrong in some sense, be mis-specified. But whether or not the
+mis-specification should lead us to try other models will depend upon
+our specific interests. In this case, if tosses do tend to switch from W
+to L and L to W, then each toss will provide less information about the
+true coverage of water on the globe. In the long run, even the wrong
+model we’ve used throughout</p>
+<p>he chapter will converge on the correct proportion. But it will do so
+more slowly than the posterior distribution may lead us to believe.</p>
+<h6 id="阅读日期-2025年12月14日-2025年12月14日-共-1-天">阅读日期：
+2025年12月14日-2025年12月14日 共： 1 天</h6>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

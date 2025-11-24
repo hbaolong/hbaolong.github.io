@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="hbaolong@vip.qq.com" />
+  <title>统计反思EN:3.5. Practice</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">统计反思EN:3.5. Practice</h1>
+<p class="author">hbaolong@vip.qq.com</p>
+</header>
+<center>
+<a href="/3place/tjfsen">返回首页</a> <a
+href="/3place/tjfsen/mingju.html">本书名句</a> <a
+href="/3place/tjfsen/memo.html">本书注解</a> <a
+href="/3place/tjfsen/index_rich.html">丰富目录</a> <a
+href="/3place/tjfsen/index_readcal.html">同读日历</a> <a
+href="/3place/tjfsen/index_timeline.html">时间线</a> <a
+href="/3place/tjfsen/index_books.html">引用书籍</a> <a
+href="/3place/tjfsen/index_words.html">使用字频</a>
+<div id="wx_pic" style="margin:0 auto;display:none;">
+<img src='/img/logo.png'/>
+</div>
+</center>
+<h4 id="practice">3.5. Practice</h4>
+<p>Problems are labeled Easy (E), Medium (M), and Hard (H).</p>
+<p>Easy. The Easy problems use the samples from the posterior
+distribution for the globe tossing ex- ample. This code will give you a
+specific set of samples, so that you can check your answers exactly.</p>
+<p>Use the values in samples to answer the questions that follow.</p>
+<p>3E1. How much posterior probability lies below p = 0.2?</p>
+<p>3E2. How much posterior probability lies above p = 0.8?</p>
+<p>3E3. How much posterior probability lies between p = 0.2 and p =
+0.8?</p>
+<p>3E4. 20% of the posterior probability lies below which value ofp?</p>
+<p>3E5. 20% of the posterior probability lies above which value ofp?</p>
+<p>3E6. Which values of p contain the narrowest interval equal to 66% of
+the posterior probability?</p>
+<p>3E7. Which values of p contain 66% of the posterior probability,
+assuming equal posterior probabil- ity both below and above the
+interval?</p>
+<p>3M1. Suppose the globe tossing data had turned out to be 8 water in
+15 tosses. Construct the poste- rior distribution, using grid
+approximation. Use the same flat prior as before.</p>
+<p>3M2. Draw 10,000 samples from the grid approximation from above. Then
+use the samples to cal- culate the 90% HPDI for p.</p>
+<p>3M3. Construct a posterior predictive check for this model and data.
+This means simulate the distri- bution of samples, averaging over the
+posterior uncertainty in p. What is the probability of observing 8 water
+in 15 tosses?</p>
+<p>3M4. Using the posterior distribution constructed from the new (8/15)
+data, now calculate the prob- ability of observing 6 water in 9
+tosses.</p>
+<p>3M5. Start over at 3M1, but now use a prior that is zero below p =
+0.5 and a constant above p = 0.5. This corresponds to prior information
+that a majority of the Earth’s surface is water. Repeat each problem
+above and compare the inferences. What difference does the better prior
+make? If it helps, compare inferences (using both priors) to the true
+value p = 0.7.</p>
+<p>3M6. Suppose you want to estimate the Earth’s proportion of water
+very precisely. Specifically, you want the 99% percentile interval of
+the posterior distribution of p to be only 0.05 wide. This means the
+distance between the upper and lower bound of the interval should be
+0.05. How many times will you have to toss the globe to do this?</p>
+<p>Hard. The Hard problems here all use the data below. These data
+indicate the gender (male=1, fe- male=0) of officially reported first
+and second born children in 100 two-child families.</p>
+<p>So for example, the first family in the data reported a boy (1) and
+then a girl (0). The second family reported a girl (0) and then a boy
+(1). The third family reported two girls. You can load these two vectors
+into R’s memory by typing:</p>
+<p>R code 3.29</p>
+<p>library(rethinking)</p>
+<p>data(homeworkch3)</p>
+<p>Use these vectors as data. So for example to compute the total number
+of boys born across all of these births, you could use:</p>
+<p>R code 3.30</p>
+<p>sum(birth1) + sum(birth2)</p>
+<p>[1] 111</p>
+<p>3H1. Using grid approximation, compute the posterior distribution for
+the probability of a birth being a boy. Assume a uniform prior
+probability. Which parameter value maximizes the posterior
+probability?</p>
+<p>3H2. Using the sample function, draw 10,000 random parameter values
+from the posterior distri- bution you calculated above. Use these
+samples to estimate the 50%, 89%, and 97% highest posterior density
+intervals.</p>
+<p>3H3. Use rbinom to simulate 10,000 replicates of 200 births. You
+should end up with 10,000 num- bers, each one a count of boys out of 200
+births. Compare the distribution of predicted numbers of boys to the
+actual count in the data (111 boys out of 200 births). There are many
+good ways to visualize the simulations, but the dens command (part of
+the rethinking package) is probably the easiest way in this case. Does
+it look like the model fits the data well? That is, does the
+distribution of predictions include the actual observation as a central,
+likely outcome?</p>
+<p>3H4. Now compare 10,000 counts of boys from 100 simulated firstborns
+only to the number of boys in the first births, birth1. How does the
+model look in this light?</p>
+<p>3H5. The model assumes that sex of first and second births are
+independent. To check this assump- tion, focus now on second births that
+followed female first borns. Compare 10,000 simulated counts of boys to
+only those second births that followed girls. To do this correctly, you
+need to count the number of first borns who were girls and simulate that
+many births, 10,000 times. Compare the counts of boys in your
+simulations to the actual observed count of boys following girls. How
+does the model look in this light? Any guesses what is going on in these
+data?</p>
+<p>4 Geocentric Models</p>
+<p>History has been unkind to Ptolemy. Claudius Ptolemy (born 90 CE,
+died 168 CE) was an Egyptian mathematician and astronomer, famous for
+his geocentric model of the solar system. These days, when scientists
+wish to mock someone, they might compare him to a supporter of the
+geocentric model. But Ptolemy was a genius. His mathematical model of
+the motions of the planets (Figure 4.1) was extremely accurate. To
+achieve its accuracy, it employed a device known as an epicycle, a
+circle on a circle. It is even possible to have epi- epicycles, circles
+on circles on circles. With enough epicycles in the right places,
+Ptolemy’s model could predict planetary motion with great accuracy. And
+so the model was utilized for over a thousand years. And Ptolemy and
+people like him worked it all out without the aid of a computer. Anyone
+should be flattered to be compared to Ptolemy.</p>
+<p>The trouble of course is that the geocentric model is wrong, in many
+respects. If you used it to plot the path of your Mars probe, you’d miss
+the red planet by quite a distance. But for spotting Mars in the night
+sky, it remains an excellent model. It would have to be re-calibrated
+every century or so, depending upon which heavenly body you wish to
+locate. But the geocentric model continues to make useful predictions,
+provided those predictions remain within a narrow domain of
+questioning.</p>
+<p>The strategy of using epicycles might seem crazy, once you know the
+correct structure of the solar system. But it turns out that the
+ancients had hit upon a generalized system of approximation. Given
+enough circles embedded in enough places, the Ptolemaic strategy is the
+same as a Fourier series, a way of decomposing a periodic function (like
+an orbit) into a series of sine and cosine functions. So no matter the
+actual arrangement of planets and moons, a geocentric model can be built
+to describe their paths against the night sky.</p>
+<p>Linear regression is the geocentric model of applied statistics. By
+“linear regression,” we will mean a family of simple statistical golems
+that attempt to learn about the mean and variance of some measurement,
+using an additive combination of other measurements. Like geocentrism,
+linear regression can usefully describe a very large variety of natural
+phenom- ena. Like geocentrism, linear regression is a descriptive model
+that corresponds to many different process models. If we read its
+structure too literally, we’re likely to make mistakes. But used wisely,
+these little linear golems continue to be useful.</p>
+<p>This chapter introduces linear regression as a Bayesian procedure.
+Under a probability interpretation, which is necessary for Bayesian
+work, linear regression uses a Gaussian (nor- mal) distribution to
+describe our golem’s uncertainty about some measurement of interest.
+This type of model is simple, flexible, and commonplace. Like all
+statistical models, it is not universally useful. But linear regression
+has a strong claim to being foundational, in the sense that once you
+learn to build and interpret linear regression models, you can more
+easily move on to other types of regression which are less normal.</p>
+<p>planet</p>
+<p>epicycle</p>
+<p>Figure 4.1. The Ptolemaic Universe, in which complex motion of the
+planets in the night sky was explained by orbits within orbits, called
+epicycles. The model is incredibly wrong, yet makes quite good
+predictions.</p>
+<h6 id="阅读日期-2025年12月16日-2025年12月16日-共-1-天">阅读日期：
+2025年12月16日-2025年12月16日 共： 1 天</h6>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

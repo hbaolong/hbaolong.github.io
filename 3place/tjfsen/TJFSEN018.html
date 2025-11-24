@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="hbaolong@vip.qq.com" />
+  <title>统计反思EN:2.6. Practice</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">统计反思EN:2.6. Practice</h1>
+<p class="author">hbaolong@vip.qq.com</p>
+</header>
+<center>
+<a href="/3place/tjfsen">返回首页</a> <a
+href="/3place/tjfsen/mingju.html">本书名句</a> <a
+href="/3place/tjfsen/memo.html">本书注解</a> <a
+href="/3place/tjfsen/index_rich.html">丰富目录</a> <a
+href="/3place/tjfsen/index_readcal.html">同读日历</a> <a
+href="/3place/tjfsen/index_timeline.html">时间线</a> <a
+href="/3place/tjfsen/index_books.html">引用书籍</a> <a
+href="/3place/tjfsen/index_words.html">使用字频</a>
+<div id="wx_pic" style="margin:0 auto;display:none;">
+<img src='/img/logo.png'/>
+</div>
+</center>
+<h4 id="practice">2.6. Practice</h4>
+<p>Problems are labeled Easy (E), Medium (M), and Hard (H).</p>
+<p>2E1. Which of the expressions below correspond to the statement: the
+probability of rain on Monday?</p>
+<ol type="1">
+<li><p>Pr(rain)</p></li>
+<li><p>Pr(rain|Monday)</p></li>
+<li><p>Pr(Monday|rain)</p></li>
+<li><p>Pr(rain, Monday)/ Pr(Monday)</p></li>
+</ol>
+<p>2E2. Which of the following statements corresponds to the expression:
+Pr(Monday|rain)?</p>
+<ol type="1">
+<li><p>The probability of rain on Monday.</p></li>
+<li><p>The probability of rain, given that it is Monday.</p></li>
+<li><p>The probability that it is Monday, given that it is
+raining.</p></li>
+<li><p>The probability that it is Monday and that it is
+raining.</p></li>
+</ol>
+<p>2E3. Which of the expressions below correspond to the statement: the
+probability that it is Monday, given that it is raining?</p>
+<ol type="1">
+<li><p>Pr(Monday|rain)</p></li>
+<li><p>Pr(rain|Monday)</p></li>
+<li><p>Pr(rain|Monday) Pr(Monday)</p></li>
+<li><p>Pr(rain|Monday) Pr(Monday)/ Pr(rain)</p></li>
+<li><p>Pr(Monday|rain) Pr(rain)/ Pr(Monday)</p></li>
+</ol>
+<p>2E4. The Bayesian statistician Bruno de Finetti (1906–1985) began his
+1973 book on probability the- ory with the declaration: “PROBABILITY
+DOES NOT EXIST.” The capitals appeared in the original, so I imagine de
+Finetti wanted us to shout this statement. What he meant is that
+probability is a de- vice for describing uncertainty from the
+perspective of an observer with limited knowledge; it has no objective
+reality. Discuss the globe tossing example from the chapter, in light of
+this statement. What does it mean to say “the probability of water is
+0.7”?</p>
+<p>2M1. Recall the globe tossing model from the chapter. Compute and
+plot the grid approximate posterior distribution for each of the
+following sets of observations. In each case, assume a uniform prior for
+p.</p>
+<ol type="1">
+<li><p>W, W, W</p></li>
+<li><p>W, W, W, L</p></li>
+<li><p>L, W, W, L, W, W, W</p></li>
+</ol>
+<p>2M2. Now assume a prior for p that is equal to zero when p &lt; 0.5
+and is a positive constant when p ≥ 0.5. Again compute and plot the grid
+approximate posterior distribution for each of the sets of observations
+in the problem just above.</p>
+<p>2M3. Suppose there are two globes, one for Earth and one for Mars.
+The Earth globe is 70% covered in water. The Mars globe is 100% land.
+Further suppose that one of these globes—you don’t know which—was tossed
+in the air and produced a “land” observation. Assume that each globe was
+equally likely to be tossed. Show that the posterior probability that
+the globe was the Earth, conditional on seeing “land” (Pr(Earth|land)),
+is 0.23.</p>
+<p>2M4. Suppose you have a deck with only three cards. Each card has two
+sides, and each side is either black or white. One card has two black
+sides. The second card has one black and one white side. The third card
+has two white sides. Now suppose all three cards are placed in a bag and
+shuffled. Someone reaches into the bag and pulls out a card and places
+it flat on a table. A black side is shown facing up, but you don’t know
+the color of the side facing down. Show that the probability that the
+other side is also black is 2/3. Use the counting method (Section 2 of
+the chapter) to approach this problem. This means counting up the ways
+that each card could produce the observed data (a black side facing up
+on the table).</p>
+<p>2M5. Now suppose there are four cards: B/B, B/W, W/W, and another
+B/B. Again suppose a card is drawn from the bag and a black side appears
+face up. Again calculate the probability that the other side is
+black.</p>
+<p>2M6. Imagine that black ink is heavy, and so cards with black sides
+are heavier than cards with white sides. As a result, it’s less likely
+that a card with black sides is pulled from the bag. So again assume
+there are three cards: B/B, B/W, and W/W. After experimenting a number
+of times, you conclude that for every way to pull the B/B card from the
+bag, there are 2 ways to pull the B/W card and 3 ways to pull the W/W
+card. Again suppose that a card is pulled and a black side appears face
+up. Show that the probability the other side is black is now 0.5. Use
+the counting method, as before.</p>
+<p>2M7. Assume again the original card problem, with a single card
+showing a black side face up. Before looking at the other side, we draw
+another card from the bag and lay it face up on the table. The face that
+is shown on the new card is white. Show that the probability that the
+first card, the one showing a black side, has black on its other side is
+now 0.75. Use the counting method, if you can. Hint: Treat this like the
+sequence of globe tosses, counting all the ways to see each observation,
+for each possible first card.</p>
+<p>2H1. Suppose there are two species of panda bear. Both are equally
+common in the wild and live in the same places. They look exactly alike
+and eat the same food, and there is yet no genetic assay capable of
+telling them apart. They differ however in their family sizes. Species A
+gives birth to twins 10% of the time, otherwise birthing a single
+infant. Species B births twins 20% of the time, otherwise birthing
+singleton infants. Assume these numbers are known with certainty, from
+many years of field research.</p>
+<p>Now suppose you are managing a captive panda breeding program. You
+have a new female panda of unknown species, and she has just given birth
+to twins. What is the probability that her next birth will also be
+twins?</p>
+<p>2H2. Recall all the facts from the problem above. Now compute the
+probability that the panda we have is from species A, assuming we have
+observed only the first birth and that it was twins.</p>
+<p>2H3. Continuing on from the previous problem, suppose the same panda
+mother has a second birth and that it is not twins, but a singleton
+infant. Compute the posterior probability that this panda is species
+A.</p>
+<p>2H4. A common boast of Bayesian statisticians is that Bayesian
+inference makes it easy to use all of the data, even if the data are of
+different types.</p>
+<p>So suppose now that a veterinarian comes along who has a new genetic
+test that she claims can identify the species of our mother panda. But
+the test, like all tests, is imperfect. This is the informa- tion you
+have about the test:</p>
+<p>• The probability it correctly identifies a species A panda is
+0.8.</p>
+<p>• The probability it correctly identifies a species B panda is
+0.65.</p>
+<p>The vet administers the test to your panda and tells you that the
+test is positive for species A. First ignore your previous information
+from the births and compute the posterior probability that your panda is
+species A. Then redo your calculation, now using the birth data as
+well.</p>
+<p>3 Sampling the Imaginary</p>
+<p>Lots of books on Bayesian statistics introduce posterior inference by
+using a medical test- ing scenario. To repeat the structure of common
+examples, suppose there is a blood test that correctly detects vampirism
+95% of the time. In more precise and mathematical notation, Pr(positive
+test result|vampire) = 0.95. It’s a very accurate test, nearly always
+catching real vampires. It also make mistakes, though, in the form of
+false positives. One percent of the time, it incorrectly diagnoses
+normal people as vampires, Pr(positive test result|mortal) = 0.01. The
+final bit of information we are told is that vampires are rather rare,
+being only 0.1% of the population, implying Pr(vampire) = 0.001. Suppose
+now that someone tests positive for vampirism. What’s the probability
+that he or she is a bloodsucking immortal?</p>
+<p>The correct approach is just to use Bayes’ theorem to invert the
+probability, to compute Pr(vampire|positive). The calculation can be
+presented as:</p>
+<p>where Pr(positive) is the average probability of a positive test
+result, that is,</p>
+<p>Pr(positive) = Pr(positive|vampire) Pr(vampire)</p>
+<ul>
+<li>Pr(positive|mortal) (1 - Pr(vampire))</li>
+</ul>
+<p>Performing the calculation in R:</p>
+<p>[1] 0.08683729</p>
+<p>That corresponds to an 8.7% chance that the suspect is actually a
+vampire.</p>
+<p>Most people find this result counterintuitive. And it’s a very
+important result, because it mimics the structure of many realistic
+testing contexts, such as HIV and DNA testing, criminal profiling, and
+even statistical significance testing (see the Rethinking box at the end
+of this section). Whenever the condition of interest is very rare,
+having a test that finds all the true cases is still no guarantee that a
+positive result carries much information at all. The reason is that most
+positive results are false positives, even when all the true positives
+are detected correctly.</p>
+<p>But I don’t like these examples, for two reasons. First, there’s
+nothing uniquely “Bayesian” about them. Remember: Bayesian inference is
+distinguished by a broad view of probability, not by the use of Bayes’
+theorem. Since all of the probabilities I provided above reference
+frequencies of events, rather than theoretical parameters, all major
+statistical philosophies would agree to use Bayes’ theorem in this case.
+Second, and more important to our work in this chapter, these examples
+make Bayesian inference seem much harder than it has to be. Few people
+find it easy to remember which number goes where, probably because they
+never grasp the logic of the procedure. It’s just a formula that
+descends from the sky. If you are confused, it is only because you are
+trying to understand.</p>
+<p>There is a way to present the same problem that does make it more
+intuitive, however. Suppose that instead of reporting probabilities, as
+before, I tell you the following:</p>
+<ol type="1">
+<li><p>In a population of 100,000 people, 100 of them are
+vampires.</p></li>
+<li><p>Of the 100 who are vampires, 95 of them will test positive for
+vampirism.</p></li>
+<li><p>Of the 99,900 mortals, 999 of them will test positive for
+vampirism.</p></li>
+</ol>
+<p>Now tell me, if we test all 100,000 people, what proportion of those
+who test positive for vampirism actually are vampires? Many people,
+although certainly not all people, find this presentation a lot
+easier.50 Now we can just count up the number of people who test
+positive:</p>
+<p>95 + 999 = 1094. Out of these 1094 positive tests, 95 of them are
+real vampires, so that implies:</p>
+<p>It’s exactly the same answer as before, but without a seemingly
+arbitrary rule.</p>
+<p>The second presentation of the problem, using counts rather than
+probabilities, is often called the frequency format or natural
+frequencies. Why a frequency format helps people in- tuit the correct
+approach remains contentious. Some people think that human psychology
+naturally works better when it receives information in the form a person
+in a natural envi- ronment would receive it. In the real world, we
+encounter counts only. No one has ever seen a probability, the thinking
+goes. But everyone sees counts (“frequencies”) in their daily lives.</p>
+<p>Regardless of the explanation for this phenomenon, we can exploit it.
+And in this chap- ter we exploit it by taking the probability
+distributions from the previous chapter and sam- pling from them to
+produce counts. The posterior distribution is a probability
+distribution. And like all probability distributions, we can imagine
+drawing samples from it. The sampled events in this case are parameter
+values. Most parameters have no exact empirical realiza- tion. The
+Bayesian formalism treats parameter distributions as relative
+plausibility, not as any physical random process. In any event,
+randomness is always a property of informa- tion, never of the real
+world. But inside the computer, parameters are just as empirical as the
+outcome of a coin flip or a die toss or an agricultural experiment. The
+posterior defines the expected frequency that different parameter values
+will appear, once we start plucking parameters out ofit.</p>
+<p>Rethinking: The natural frequency phenomenon is not unique. Changing
+the representation of a problem often makes it easier to address or
+inspires new ideas that were not available in an old representation.51
+In physics, switching between Newtonian and Lagrangian mechanics can
+make problems much easier. In evolutionary biology, switching between
+inclusive fitness and multilevel selection sheds new light on old
+models. And in statistics, switching between Bayesian and non- Bayesian
+representations often teaches us new things about both approaches.</p>
+<p>This chapter teaches you basic skills for working with samples from
+the posterior dis- tribution. It will seem a little silly to work with
+samples at this point, because the posterior distribution for the globe
+tossing model is very simple. It’s so simple that it’s no problem to
+work directly with the grid approximation or even the exact mathematical
+form.52 But there are two reasons to adopt the sampling approach early
+on, before it’s really necessary.</p>
+<p>First, many scientists are uncomfortable with integral calculus, even
+though they have strong and valid intuitions about how to summarize
+data. Working with samples transforms a problem in calculus into a
+problem in data summary, into a frequency format problem. An integral in
+a typical Bayesian context is just the total probability in some
+interval. That can be a challenging calculus problem. But once you have
+samples from the probability distribution, it’s just a matter of
+counting values in the interval. An empirical attack on the posterior
+allows the scientist to ask and answer more questions about the model,
+without relying upon a captive mathematician. For this reason, it is
+easier and more intuitive to work with samples from the posterior, than
+to work with probabilities and integrals directly.</p>
+<p>Second, some of the most capable methods of computing the posterior
+produce nothing but samples. Many of these methods are variants of
+Markov chain Monte Carlo techniques (MCMC, 9). So if you learn early on
+how to conceptualize and process samples from the posterior, when you
+inevitably must fit a model to data using MCMC, you will already know
+how to make sense of the output. Beginning with 9 of this book, you will
+use MCMC to open up the types and complexity of models you can
+practically fit to data. MCMC is no longer a technique only for experts,
+but rather part of the standard toolkit of quantitative science. So it’s
+worth planning ahead.</p>
+<p>So in this chapter we’ll begin to use samples to summarize and
+simulate model output. The skills you learn here will apply to every
+problem in the remainder of the book, even though the details of the
+models and how the samples are produced will vary.</p>
+<p>0.0 0.2 0.4 0.6 0.8 1.0</p>
+<p>proportion water (p)</p>
+<p>Figure 3.1. Sampling parameter values from the posterior
+distribution. Left: 10,000 samples from the posterior implied by the
+globe tossing data and model. Right: The density of samples (vertical)
+at each parameter value (horizontal).</p>
+<p>R code 3.2</p>
+<p>R code 3.3</p>
+<h6 id="阅读日期-2025年12月11日-2025年12月11日-共-1-天">阅读日期：
+2025年12月11日-2025年12月11日 共： 1 天</h6>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="hbaolong@vip.qq.com" />
+  <title>统计反思EN:3.2. Sampling to summarize</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">统计反思EN:3.2. Sampling to summarize</h1>
+<p class="author">hbaolong@vip.qq.com</p>
+</header>
+<center>
+<a href="/3place/tjfsen">返回首页</a> <a
+href="/3place/tjfsen/mingju.html">本书名句</a> <a
+href="/3place/tjfsen/memo.html">本书注解</a> <a
+href="/3place/tjfsen/index_rich.html">丰富目录</a> <a
+href="/3place/tjfsen/index_readcal.html">同读日历</a> <a
+href="/3place/tjfsen/index_timeline.html">时间线</a> <a
+href="/3place/tjfsen/index_books.html">引用书籍</a> <a
+href="/3place/tjfsen/index_words.html">使用字频</a>
+<div id="wx_pic" style="margin:0 auto;display:none;">
+<img src='/img/logo.png'/>
+</div>
+</center>
+<h4 id="sampling-to-summarize">3.2. Sampling to summarize</h4>
+<p>Once your model produces a posterior distribution, the model’s work
+is done. But your work has just begun. It is necessary to summarize and
+interpret the posterior distribution. Exactly how it is summarized
+depends upon your purpose. But common questions include:</p>
+<p>• How much posterior probability lies below some parameter value?</p>
+<p>• How much posterior probability lies between two parameter
+values?</p>
+<p>• Which parameter value marks the lower 5% of the posterior
+probability?</p>
+<p>• Which range of parameter values contains 90% of the posterior
+probability?</p>
+<p>• Which parameter value has highest posterior probability?</p>
+<p>These simple questions can be usefully divided into questions about
+(1) intervals of defined boundaries, (2) questions about intervals of
+defined probability mass, and (3) questions about point estimates. We’ll
+see how to approach these questions using samples from the
+posterior.</p>
+<p>3.2.1. Intervals of defined boundaries. Suppose I ask you for the
+posterior probability that the proportion of water is less than 0.5.
+Using the grid-approximate posterior, you can just add up all of the
+probabilities, where the corresponding parameter value is less than
+0.5:</p>
+<p>[1] 0.1718746</p>
+<p>So about 17% of the posterior probability is below 0.5. Couldn’t be
+easier. But since grid ap- proximation isn’t practical in general, it
+won’t always be so easy. Once there is more than one parameter in the
+posterior distribution (wait until the next chapter for that
+complication), even this simple sum is no longer very simple.</p>
+<p>So let’s see how to perform the same calculation, using samples from
+the posterior. This approach does generalize to complex models with many
+parameters, and so you can use it everywhere. All you have to do is
+similarly add up all of the samples below 0.5, but also</p>
+<p>R code 3.4</p>
+<p>R code 3.5</p>
+<p>R code 3.6</p>
+<p>R code 3.7</p>
+<p>R code 3.8</p>
+<p>R code 3.9</p>
+<p>divide the resulting count by the total number of samples. In other
+words, find the frequency of parameter values below 0.5:</p>
+<p>[1] 0.1726</p>
+<p>And that’s nearly the same answer as the grid approximation provided,
+although your answer will not be exactly the same, because the exact
+samples you drew from the posterior will be different. This region is
+shown in the upper-left plot in Figure 3.2. Using the same approach, you
+can ask how much posterior probability lies between 0.5 and 0.75:</p>
+<p>[1] 0.6059</p>
+<p>So about 61% of the posterior probability lies between 0.5 and 0.75.
+This region is shown in the upper-right plot of Figure 3.2.</p>
+<p>Overthinking: Counting with sum. In the R code examples just above, I
+used the function sum to effectively count up how many samples fulfill a
+logical criterion. Why does this work? It works because R internally
+converts a logical expression, like samples &lt; 0.5, to a vector of
+TRUE and FALSE results, one for each element of samples, saying whether
+or not each element matches the criterion. Go ahead and enter samples
+&lt; 0.5 on the R prompt, to see this for yourself. Then when you sum
+this vector of TRUE and FALSE, R counts each TRUE as 1 and each FALSE as
+0. So it ends up counting how many TRUE values are in the vector, which
+is the same as the number of elements in samples that match the logical
+criterion.</p>
+<p>3.2.2. Intervals of defined mass. It is more common to see scientific
+journals reporting an interval of defined mass, usually known as a
+confidence interval. An interval of posterior probability, such as the
+ones we are working with, may instead be called a credible interval.
+We’re going to call it a compatibility interval instead, in order to
+avoid the unwarranted implications of “confidence” and “credibility.”54
+What the interval indicates is a range of parameter values compatible
+with the model and data. The model and data themselves may not inspire
+confidence, in which case the interval will not either.</p>
+<p>These posterior intervals report two parameter values that contain
+between them a spec- ified amount of posterior probability, a
+probability mass. For this type of interval, it is easier to find the
+answer by using samples from the posterior than by using a grid
+approximation. Suppose for example you want to know the boundaries of
+the lower 80% posterior probabil- ity. You know this interval starts at
+p = 0. To find out where it stops, think of the samples as data and ask
+where the 80th percentile lies:</p>
+<p>80% 0.7607608</p>
+<p>This region is shown in the bottom-left plot in Figure 3.2.
+Similarly, the middle 80% interval lies between the 10th percentile and
+the 90th percentile. These boundaries are found using the same
+approach:</p>
+<p>0.00 0.25 0.50 0.75 1.00</p>
+<p>proportion water (p)</p>
+<p>middle 80%</p>
+<p>0.00 0.25 0.50 0.75 1.00</p>
+<p>proportion water (p)</p>
+<p>Figure 3.2. Two kinds of posterior interval. Top row: Intervals of
+defined boundaries. Top-left: The blue area is the posterior probability
+below a pa- rameter value of 0.5. Top-right: The posterior probability
+between 0.5 and 0.75. Bottom row: Intervals of defined mass.
+Bottom-left: Lower 80% poste- rior probability exists below a parameter
+value of about 0.75. Bottom-right: Middle 80% posterior probability lies
+between the 10% and 90% quantiles.</p>
+<p>10% 90% 0.4464464 0.8118118</p>
+<p>This region is shown in the bottom-right plot in Figure 3.2.</p>
+<p>Intervals ofthis sort, which assign equal probability mass to each
+tail, are very common in the scientific literature. We’ll call them
+percentile intervals (PI). These intervals do a good job of
+communicating the shape of a distribution, as long as the distribution
+isn’t too asymmetrical. But in terms of supporting inferences about
+which parameters are consistent with the data, they are not perfect.
+Consider the posterior distribution and different intervals</p>
+<p>in Figure 3.3. This posterior is consistent with observing three
+waters in three tosses and a uniform (flat) prior. It is highly skewed,
+having its maximum value at the boundary, p = 1. You can compute it, via
+grid approximation, with:</p>
+<p>R code 3.11</p>
+<p>p_grid &lt;- seq( from=0 , to=1 , length.out=1000 )</p>
+<p>prior &lt;- rep(1,1000)</p>
+<p>likelihood &lt;- dbinom( 3 , size=3 , prob=p_grid )</p>
+<p>posterior &lt;- likelihood * prior</p>
+<p>posterior &lt;- posterior / sum(posterior)</p>
+<p>samples &lt;- sample( p_grid , size=1e4 , replace=TRUE ,
+prob=posterior )</p>
+<p>This code also goes ahead to sample from the posterior. Now, on the
+left of Figure 3.3, the 50% percentile compatibility interval is shaded.
+You can conveniently compute this from the samples with PI (part of
+rethinking):</p>
+<p>R code 3.12</p>
+<p>PI( samples , prob=0.5 )</p>
+<p>25% 75%</p>
+<p>0.7037037 0.9329329</p>
+<p>This interval assigns 25% of the probability mass above and below the
+interval. So it pro- vides the central 50% probability. But in this
+example, it ends up excluding the most prob- able parameter values, near
+p = 1. So in terms of describing the shape of the posterior
+distribution—which is really all these intervals are asked to do—the
+percentile interval can be misleading.</p>
+<p>In contrast, the right-hand plot in Figure 3.3 displays the 50%
+highest posterior density interval (HPDI).57 The HPDI is the narrowest
+interval containing the specified probability mass. If you think about
+it, there must be an infinite number of posterior intervals</p>
+<p>50% Percentile Interval</p>
+<p>0.00 0.25 0.50 0.75 1.00</p>
+<p>proportion water (p)</p>
+<p>50% HPDI</p>
+<p>0.00 0.25 0.50 0.75 1.00</p>
+<p>proportion water (p)</p>
+<p>Figure 3.3. The difference between percentile and highest posterior
+den- sity compatibility intervals. The posterior density here
+corresponds to a flat prior and observing three water samples in three
+total tosses of the globe. Left: 50% percentile interval. This interval
+assigns equal mass (25%) to both the left and right tail. As a result,
+it omits the most probable parameter value, p = 1. Right: 50% highest
+posterior density interval, HPDI. This interval finds the narrowest
+region with 50% of the posterior probability. Such a region always
+includes the most probable parameter value.</p>
+<p>with the same mass. But if you want an interval that best represents
+the parameter values most consistent with the data, then you want the
+densest of these intervals. That’s what the HPDI is. Compute it from the
+samples with HPDI (also part of rethinking):</p>
+<p>|0.5 0.8408408</p>
+<p>0.5| 1.0000000</p>
+<p>This interval captures the parameters with highest posterior
+probability, as well as being no- ticeably narrower: 0.16 in width
+rather than 0.23 for the percentile interval.</p>
+<p>So the HPDI has some advantages over the PI. But in most cases, these
+two types of interval are very similar.58 They only look so different in
+this case because the posterior distribution is highly skewed. If we
+instead used samples from the posterior distribution for six waters in
+nine tosses, these intervals would be nearly identical. Try it for
+yourself, using different probability masses, such as prob=0.8 and
+prob=0.95. When the posterior is bell shaped, it hardly matters which
+type of interval you use. Remember, we’re not launching rockets or
+calibrating atom smashers, so fetishizing precision to the 5th decimal
+place will not improve your science.</p>
+<p>The HPDI also has some disadvantages. HPDI is more computationally
+intensive than PI and suffers from greater simulation variance, which is
+a fancy way of saying that it is sensitive to how many samples you draw
+from the posterior. It is also harder to understand and many scientific
+audiences will not appreciate its features, while they will immediately
+understand a</p>
+<p>percentile interval, as ordinary non-Bayesian intervals are typically
+interpreted (incorrectly) as percentile intervals (although see the
+Rethinking box below).</p>
+<p>Overall, if the choice of interval type makes a big difference, then
+you shouldn’t be us- ing intervals to summarize the posterior. Remember,
+the entire posterior distribution is the Bayesian “estimate.” It
+summarizes the relative plausibilities of each possible value of the
+parameter. Intervals of the distribution are just helpful for
+summarizing it. If choice of in- terval leads to different inferences,
+then you’d be better off just plotting the entire posterior
+distribution.</p>
+<p>3.2.3. Point estimates. The third and final common summary task for
+the posterior is to produce point estimates of some kind. Given the
+entire posterior distribution, what value should you report? This seems
+like an innocent question, but it is difficult to answer. The Bayesian
+parameter estimate is precisely the entire posterior distribution, which
+is not a sin- gle number, but instead a function that maps each unique
+parameter value onto a plausibility value. So really the most important
+thing to note is that you don’t have to choose a point es- timate. It’s
+hardly ever necessary and often harmful. It discards information.</p>
+<p>But if you must produce a single point to summarize the posterior,
+you’ll have to ask and answer more questions. Consider the following
+example. Suppose again the globe tossing experiment in which we observe
+3 waters out of 3 tosses, as in Figure 3.3. Let’s consider three
+alternative point estimates. First, it is very common for scientists to
+report the parameter value with highest posterior probability, a maximum
+a posteriori (MAP) estimate. You can easily compute the MAP in this
+example:</p>
+<p>[1] 1</p>
+<p>Or if you instead have samples from the posterior, you can still
+approximate the same point:</p>
+<p>[1] 0.9985486</p>
+<p>0.0 0.2 0.4 0.6 0.8 1.0</p>
+<p>proportion water (p)</p>
+<p>0.0 0.2 0.4 0.6 0.8 1.0</p>
+<p>decision</p>
+<p>Figure 3.4. Point estimates and loss functions. Left: Posterior
+distribution (blue) after observing 3 water in 3 tosses of the globe.
+Vertical lines show the locations ofthe mode, median, and mean. Each
+point implies a different loss function. Right: Expected loss under the
+rule that loss is proportional to absolute distance of decision
+(horizontal axis) from the true value. The point marks the value of p
+that minimizes the expected loss, the posterior median.</p>
+<p>But why is this point, the mode, interesting? Why not report the
+posterior mean or median?</p>
+<p>[1] 0.8005558</p>
+<p>[1] 0.8408408</p>
+<p>These are also point estimates, and they also summarize the
+posterior. But all three—the mode (MAP), mean, and median—are different
+in this case. How can we choose? Figure 3.4 shows this posterior
+distribution and the locations of these point summaries.</p>
+<p>One principled way to go beyond using the entire posterior as the
+estimate is to choose a loss function. A loss function is a rule that
+tells you the cost associated with using any particular point estimate.
+While statisticians and game theorists have long been interested in loss
+functions, and how Bayesian inference supports them, scientists hardly
+ever use them explicitly. The key insight is that different loss
+functions imply different point estimates.</p>
+<p>Here’s an example to help us work through the procedure. Suppose I
+offer you a bet. Tell me which value of p, the proportion of water on
+the Earth, you think is correct. I will pay you 00, if you get it
+exactly right. But I will subtract money from your gain, proportional to
+the distance of your decision from the correct value. Precisely, your
+loss is proportional to the absolute value of d -p, where d is your
+decision and p is the correct answer. We could change the precise dollar
+values involved, without changing the important aspects of this</p>
+<p>problem. What matters is that the loss is proportional to the
+distance of your decision from the true value.</p>
+<p>Now once you have the posterior distribution in hand, how should you
+use it to maxi- mize your expected winnings? It turns out that the
+parameter value that maximizes expected winnings (minimizes expected
+loss) is the median of the posterior distribution. Let’s calcu- late
+that fact, without using a mathematical proof. Those interested in the
+proof should follow the endnote.60</p>
+<p>Calculating expected loss for any given decision means using the
+posterior to average over our uncertainty in the true value. Of course
+we don’t know the true value, in most cases. But if we are going to use
+our model’s information about the parameter, that means using the entire
+posterior distribution. So suppose we decide p = 0.5 will be our
+decision. Then the expected loss will be:</p>
+<p>R code 3.17</p>
+<p>sum( posterior*abs( 0.5 - p_grid ) )</p>
+<p>[1] 0.3128752</p>
+<p>The symbols posterior and p_grid are the same ones we’ve been using
+throughout this chapter, containing the posterior probabilities and the
+parameter values, respectively. All the code above does is compute the
+weighted average loss, where each loss is weighted by its corresponding
+posterior probability. There’s a trick for repeating this calculation
+for every possible decision, using the function sapply.</p>
+<p>R code 3.18</p>
+<p>loss &lt;- sapply( p_grid , function(d) sum( posterior*abs( d -
+p_grid ) ) )</p>
+<p>Now the symbol loss contains a list of loss values, one for each
+possible decision, corre- sponding the values in p_grid. From here, it’s
+easy to find the parameter value that mini- mizes the loss:</p>
+<p>R code 3.19</p>
+<p>p_grid[ which.min(loss) ]</p>
+<p>[1] 0.8408408</p>
+<p>And this is actually the posterior median, the parameter value that
+splits the posterior density such that half of the mass is above it and
+half below it. Try median(samples) for compari- son. It may not be
+exactly the same value, due to sampling variation, but it will be
+close.</p>
+<p>So what are we to learn from all of this? In order to decide upon a
+point estimate, a single-value summary of the posterior distribution, we
+need to pick a loss function. Different loss functions nominate
+different point estimates. The two most common examples are the absolute
+loss as above, which leads to the median as the point estimate, and the
+quadratic loss (d - p)2 , which leads to the posterior mean
+(mean(samples)) as the point estimate. When the posterior distribution
+is symmetrical and normal-looking, then the median and mean converge to
+the same point, which relaxes some anxiety we might have about choosing
+a loss function. For the original globe tossing data (6 waters in 9
+tosses), for example, the mean and median are barely different.</p>
+<p>In principle, though, the details of the applied context may demand a
+rather unique loss function. Consider a practical example like deciding
+whether or not to order an evacuation, based upon an estimate of
+hurricane wind speed. Damage to life and property increases very rapidly
+as wind speed increases. There are also costs to ordering an evacuation
+when</p>
+<p>none is needed, but these are much smaller. Therefore the implied
+loss function is highly asymmetric, rising sharply as true wind speed
+exceeds our guess, but rising only slowly as true wind speed falls below
+our guess. In this context, the optimal point estimate would tend to be
+larger than posterior mean or median. Moreover, the real issue is
+whether or not to order an evacuation. Producing a point estimate of
+wind speed may not be necessary at all.</p>
+<p>Usually, research scientists don’t think about loss functions. And so
+any point estimate like the mean or MAP that they may report isn’t
+intended to support any particular decision, but rather to describe the
+shape of the posterior. You might argue that the decision to make is
+whether or not to accept an hypothesis. But the challenge then is to say
+what the relevant costs and benefits would be, in terms of the knowledge
+gained or lost.61 Usually it’s better to communicate as much as you can
+about the posterior distribution, as well as the data and the model
+itself, so that others can build upon your work. Premature decisions to
+accept or reject hypotheses can cost lives.62</p>
+<p>It’s healthy to keep these issues in mind, if only because they
+remind us that many of the routine questions in statistical inference
+can only be answered under consideration of a particular empirical
+context and applied purpose. Statisticians can provide general outlines
+and standard answers, but a motivated and attentive scientist will
+always be able to improve upon such general advice.</p>
+<h6 id="阅读日期-2025年12月13日-2025年12月13日-共-1-天">阅读日期：
+2025年12月13日-2025年12月13日 共： 1 天</h6>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

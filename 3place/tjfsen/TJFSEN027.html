@@ -1,0 +1,887 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="hbaolong@vip.qq.com" />
+  <title>统计反思EN:4.4. Linear prediction</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">统计反思EN:4.4. Linear prediction</h1>
+<p class="author">hbaolong@vip.qq.com</p>
+</header>
+<center>
+<a href="/3place/tjfsen">返回首页</a> <a
+href="/3place/tjfsen/mingju.html">本书名句</a> <a
+href="/3place/tjfsen/memo.html">本书注解</a> <a
+href="/3place/tjfsen/index_rich.html">丰富目录</a> <a
+href="/3place/tjfsen/index_readcal.html">同读日历</a> <a
+href="/3place/tjfsen/index_timeline.html">时间线</a> <a
+href="/3place/tjfsen/index_books.html">引用书籍</a> <a
+href="/3place/tjfsen/index_words.html">使用字频</a>
+<div id="wx_pic" style="margin:0 auto;display:none;">
+<img src='/img/logo.png'/>
+</div>
+</center>
+<h4 id="linear-prediction">4.4. Linear prediction</h4>
+<p>What we’ve done above is a Gaussian model of height in a population
+of adults. But it doesn’t really have the usual feel of “regression” to
+it. Typically, we are interested in modeling how an outcome is related
+to some other variable, a predictor variable. If the predictor variable
+has any statistical association with the outcome variable, then we can
+use it to predict</p>
+<p>he outcome. When the predictor variable is built inside the model in
+a particular way, we’ll have linear regression.</p>
+<p>So now let’s look at how height in these Kalahari foragers (the
+outcome variable) covaries with weight (the predictor variable). This
+isn’t the most thrilling scientific question, I know. But it is an easy
+relationship to start with, and if it seems dull, it’s because you don’t
+have a theory about growth and life history in mind. If you did, it
+would be thrilling. We’ll try later on to add some of that thrill, when
+we reconsider this example from a more causal per- spective. Right now,
+I ask only that you focus on the mechanics of estimating an association
+between two variables.</p>
+<p>Go ahead and plot adult height and weight against one another:</p>
+<p>The resulting plot is not shown here. You really should do it
+yourself. Once you can see the plot, you’ll see that there’s obviously a
+relationship: Knowing a person’s weight helps you predict height.</p>
+<p>To make this vague observation into a more precise quantitative model
+that relates values of weight to plausible values of height, we need
+some more technology. How do we take our Gaussian model from the
+previous section and incorporate predictor variables?</p>
+<p>4.4.1. The linear model strategy. The strategy is to make the
+parameter for the mean of a Gaussian distribution, μ, into a linear
+function of the predictor variable and other, new parameters that we
+invent. This strategy is often simply called the linear model. The
+linear model strategy instructs the golem to assume that the predictor
+variable has a constant and additive relationship to the mean of the
+outcome. The golem then computes the posterior distribution of this
+constant relationship.</p>
+<p>What this means, recall, is that the machine considers every possible
+combination of the parameter values. With a linear model, some of the
+parameters now stand for the strength of association between the mean of
+the outcome, μ, and the value of some other variable. For each
+combination of values, the machine computes the posterior probability,
+which is a measure of relative plausibility, given the model and data.
+So the posterior distribution ranks the infinite possible combinations
+of parameter values by their logical plausibility. As</p>
+<p>a result, the posterior distribution provides relative plausibilities
+of the different possible strengths of association, given the
+assumptions you programmed into the model. We ask the golem: “Consider
+all the lines that relate one variable to the other. Rank all of these
+lines by plausibility, given these data.” The golem answers with a
+posterior distribution.</p>
+<p>Here’s how it works, in the simplest case of only one predictor
+variable. We’ll wait until the next chapter to confront more than one
+predictor. Recall the basic Gaussian model:</p>
+<p>hi ~ Normal(µ, σ)</p>
+<p>µ ~ Normal(178, 20)</p>
+<p>σ ~ Uniform(0, 50)</p>
+<p>Now how do we get weight into a Gaussian model of height? Let x be
+the name for the column of weight measurements, d2. Let the average
+ofthe x values be x-, “ex bar”. Now we have a predictor variable x,
+which is a list of measures of the same length as h. To get weight into
+the model, we define the mean µ as a function of the values in x. This
+is what it looks like, with explanation to follow:</p>
+<p>hi ~ Normal(µi , σ)</p>
+<p>µi = α + β(xi - x-)</p>
+<p>α ~ Normal(178, 20)</p>
+<p>β ~ Normal(0, 10)</p>
+<p>σ ~ Uniform(0, 50)</p>
+<p>Again, I’ve labeled each line on the right-hand side by the type of
+definition it encodes. We’ll discuss each in turn.</p>
+<p>4.4.1.1. Probability of the data. Let’s begin with just the
+probability of the observed height, the first line of the model. This is
+nearly identical to before, except now there is a little index i on the
+µ as well as the h. You can read hi as “each h” and µi as “each µ.” The
+mean µ now depends upon unique values on each row i. So the little i on
+µi indicates that the mean depends upon the row.</p>
+<p>4.4.1.2. Linear model. The mean µ is no longer a parameter to be
+estimated. Rather, as seen in the second line of the model, µi is
+constructed from other parameters, α and β, and the observed variable x.
+This line is not a stochastic relationship—there is no ~ in it, but
+rather an = in it—because the definition of µi is deterministic. That is
+to say that, once we know α and β and xi, we know µi with certainty.</p>
+<p>The value xi is just the weight value on row i. It refers to the same
+individual as the height value, hi, on the same row. The parameters α
+and β are more mysterious. Where did they come from? We made them up.
+The parameters µ and σ are necessary and sufficient to describe a
+Gaussian distribution. But α and β are instead devices we invent for
+manipulating µ, allowing it to vary systematically across cases in the
+data.</p>
+<p>You’ll be making up all manner of parameters as your skills improve.
+One way to under- stand these made-up parameters is to think of them as
+targets of learning. Each parameter is something that must be described
+in the posterior distribution. So when you want to know something about
+the data, you ask your golem by inventing a parameter for it. This will
+make more and more sense as you progress. Here’s how it works in this
+context. The second line</p>
+<p>of the model definition is just:</p>
+<p>µi = α + β(xi - x-)</p>
+<p>What this tells the regression golem is that you are asking two
+questions about the mean of the outcome.</p>
+<ol type="1">
+<li><p>What is the expected height when xi = x-? The parameter α answers
+this question, because when xi = x-, µi = α . For this reason, α is
+often called the intercept. But we should think not in terms of some
+abstract line, but rather in terms of the meaning with respect to the
+observable variables.</p></li>
+<li><p>What is the change in expected height, when xi changes by 1 unit?
+The parameter β answers this question. It is often called a “slope,”
+again because of the abstract line. Better to think of it as a rate of
+change in expectation.</p></li>
+</ol>
+<p>Jointly these two parameters ask the golem to find a line that
+relates x to h, a line that passes through α when xi = x- and has slope
+β . That is a task that golems are very good at. It’s up to you, though,
+to be sure it’s a good question.</p>
+<p>Overthinking: Units and regression models. Readers who had a
+traditional training in physical sciences will know how to carry units
+through equations of this kind. For their benefit, here’s the model
+again (omitting priors for brevity), now with units of each symbol
+added.</p>
+<p>hi cm ~ Normal(µi cm, σcm)</p>
+<p>So you can see that β must have units of cm/kg in order for the mean
+µi to have units of cm. One of the facts that labeling with units clears
+up is that a parameter like β is a kind of rate—centimeters per
+kilogram. There’s also a tradition called dimensionless analysis that
+advocates constructing variables so that they are unit-less ratios. In
+this context, for example, we might divide height by a reference height,
+removing its units. Measurement scales are arbitrary human
+constructions, and sometimes the unit-less analysis is more natural and
+general.</p>
+<p>4.4.1.3. Priors. The remaining lines in the model define
+distributions for the unobserved variables. These variables are commonly
+known as parameters, and their distributions as pri- ors. There are
+three parameters: α, β, and σ . You’ve seen priors for α and σ before,
+although α was called µ back then.</p>
+<p>The prior for β deserves explanation. Why have a Gaussian prior with
+mean zero? This prior places just as much probability below zero as it
+does above zero, and when β = 0,</p>
+<p>Figure 4.5. Prior predictive simulation for the height and weight
+model. Left: Simulation using the β ~ Normal(0, 10) prior. Right: A more
+sensible log(β) ~ Normal(0, 1) prior.</p>
+<p>weight has no relationship to height. To figure out what this prior
+implies, we have to simulate the prior predictive distribution. There is
+no other reliable way to understand.</p>
+<p>The goal is to simulate heights from the model, using only the
+priors. First, let’s consider a range of weight values to simulate over.
+The range of observed weights will do fine. Then we need to simulate a
+bunch of lines, the lines implied by the priors for α and β . Here’s how
+to do it, setting a seed so you can reproduce it exactly:</p>
+<p>Now we have 100 pairs of α and β values. Now to plot the lines:</p>
+<p>R code 4.38</p>
+<p>R code 4.39</p>
+<p>The result is displayed in Figure 4.5. For reference, I’ve added a
+dashed line at zero—no one is shorter than zero—and the “Wadlow” line at
+272 cm for the world’s tallest person. The pattern doesn’t look like any
+human population at all. It essentially says that the relationship</p>
+<p>between weight and height could be absurdly positive or negative.
+Before we’ve even seen the data, this is a bad model. Can we do
+better?</p>
+<p>We can do better immediately. We know that average height increases
+with average weight, at least up to a point. Let’s try restricting it to
+positive values. The easiest way to do this is to define the prior as
+Log-Normal instead. If you aren’t accustomed to playing with logarithms,
+that’s okay. There’s more detail in the box at the end of this
+section.</p>
+<p>Defining β as Log-Normal(0,1) means to claim that the logarithm of β
+has a Normal(0,1) distribution. Plainly:</p>
+<p>β ~ Log-Normal(0, 1)</p>
+<p>R provides the dlnorm and rlnorm densities for working with
+log-normal distributions. You can simulate this relationship to see what
+this means for β:</p>
+<p>If the logarithm of β is normal, then β itself is strictly positive.
+The reason is that exp(x) is greater than zero for any real number x.
+This is the reason that Log-Normal priors are commonplace. They are an
+easy way to enforce positive relationships. So what does this earn us?
+Do the prior predictive simulation again, now with the Log-Normal
+prior:</p>
+<p>Plotting as before produces the right-hand plot in Figure 4.5. This
+is much more sensible. There is still a rare impossible relationship.
+But nearly all lines in the joint prior for α and β are now within human
+reason.</p>
+<p>We’re fussing about this prior, even though as you’ll see in the next
+section there is so much data in this example that the priors end up not
+mattering. We fuss for two reasons. First, there are many analyses in
+which no amount of data makes the prior irrelevant. In such cases,
+non-Bayesian procedures are no better off. They also depend upon
+structural features of the model. Paying careful attention to those
+features is essential. Second, thinking about the priors helps us
+develop better models, maybe even eventually going beyond
+geocentrism.</p>
+<p>Rethinking: Prior predictive simulation and p-hacking A serious
+problem in contemporary applied statistics is “p-hacking,” the practice
+of adjusting the model and the data to achieve a desired result. The
+desired result is usually ap-value less then 5%. The problem is that
+when the model is adjusted in light of the observed data, then p-values
+no longer retain their original meaning. False results are to be
+expected. We don’t pay any attention top-values in this book. But the
+danger remains, if we choose our priors conditional on the observed
+sample, just to get some desired result. The procedure we’ve performed
+in this chapter is to choose priors conditional on pre-data knowledge of
+the variables— their constraints, ranges, and theoretical relationships.
+This is why the actual data are not shown in the earlier section. We are
+judging our priors against general facts, not the sample. We’ll look at
+how the model performs against the real data next.</p>
+<p>4.4.2. Finding the posterior distribution. The code needed to
+approximate the posterior is a straightforward modification of the kind
+of code you’ve already seen. All we have to do is incorporate our new
+model for the mean into the model specification inside quap and be sure
+to add a prior for the new parameter, β . Let’s repeat the model
+definition, now with the corresponding R code on the right-hand
+side:</p>
+<p>hi ~ Normal(µi , σ)</p>
+<p>height ~ dnorm(mu,sigma)</p>
+<p>µi = α + β(xi - x-)</p>
+<p>mu &lt;- a + b*(weight-xbar)</p>
+<p>α ~ Normal(178, 20)</p>
+<p>β ~ Log-Normal(0, 1)</p>
+<p>σ ~ Uniform(0, 50)</p>
+<p>Notice that the linear model, in the R code on the right-hand side,
+uses the R assignment operator, &lt;-, even though the mathematical
+definition uses the symbol =. This is a code convention shared by
+several Bayesian model fitting engines, so it’s worth getting used to
+the switch. You just have to remember to use &lt;- instead of = when
+defining a linear model.</p>
+<p>That’s it. The above allows us to build the posterior
+approximation:</p>
+<p>Rethinking: Everything that depends upon parameters has a posterior
+distribution. In the model above, the parameter μ is no longer a
+parameter, since it has become a function of the parameters α and β .
+But since the parameters α and β have a joint posterior, so too does μ .
+Later in the chapter, you’ll work directly with the posterior
+distribution of μ, even though it’s not a parameter anymore. Since
+parameters are uncertain, everything that depends upon them is also
+uncertain. This includes statistics like μ, as well as model-based
+predictions, measures offit, and everything else that uses pa- rameters.
+By working with samples from the posterior, all you have to do to
+account for posterior uncertainty in any quantity is to compute that
+quantity for each sample from the posterior. The result- ing quantities,
+one for each posterior sample, will approximate the quantity’s posterior
+distribution.</p>
+<p>Overthinking: Logs and exps, oh my. My experience is that many
+natural and social scientists have naturally forgotten whatever they
+once knew about logarithms. Logarithms appear all the time in applied
+statistics. You can usefully think of y = log(x) as assigning to y the
+order of magnitude of x. The function x = exp(y) is the reverse, turning
+a magnitude into a value. These definitions will make a mathematician
+shriek. But much of our computational work relies only on these
+intuitions.</p>
+<p>These definitions allow the Log-Normal prior for β to be coded
+another way. Instead of defining a parameter β, we define a parameter
+that is the logarithm of β and then assign it a normal distribution.
+Then we can reverse the logarithm inside the linear model. It looks like
+this:</p>
+<p>Note the exp(log_b) in the definition of mu. This is the same model
+as m4.3. It will make the same predictions. But instead of β in the
+posterior distribution, you get log(β). It is easy to translate between
+the two, because β = exp(log(β)). In code form: b &lt;- exp(log_b).</p>
+<p>4.4.3. Interpreting the posterior distribution. One trouble with
+statistical models is that they are hard to understand. Once you’ve fit
+the model, it can only report posterior distribu- tion. This is the
+right answer to the question you asked. But it’s your responsibility to
+process the answer and make sense of it.</p>
+<p>There are two broad categories of processing: (1) reading tables and
+(2) plotting simu- lations. For some simple questions, it’s possible to
+learn a lot just from tables of marginal</p>
+<p>values. But most models are very hard to understand from tables of
+numbers alone. A major difficulty with tables alone is their apparent
+simplicity compared to the complexity of the model and data that
+generated them. Once you have more than a couple of parameters in a
+model, it is very hard to figure out from numbers alone how all of them
+act to influence pre- diction. This is also the reason we simulate from
+priors. Once you begin adding interaction terms (8) or polynomials
+(later in this chapter), it may not even be possible to guess the
+direction of influence a predictor variable has on an outcome.</p>
+<p>So throughout this book, I emphasize plotting posterior distributions
+and posterior pre- dictions, instead of attempting to understand a
+table. Plotting the implications of your mod- els will allow you to
+inquire about things that are hard to read from tables:</p>
+<ol type="1">
+<li><p>Whether or not the model fitting procedure worked
+correctly</p></li>
+<li><p>The absolute magnitude, rather than merely relative magnitude, of
+a relationship between outcome and predictor</p></li>
+<li><p>The uncertainty surrounding an average relationship</p></li>
+<li><p>The uncertainty surrounding the implied predictions of the model,
+as these are distinct from mere parameter uncertainty</p></li>
+</ol>
+<p>In addition, once you get the hang of processing posterior
+distributions into plots, you can ask any question you can think of, for
+any model type. And readers of your results will appreciate a figure
+much more than they will a table of estimates.</p>
+<p>So in the remainder of this section, I first spend a little time
+talking about tables of esti- mates. Then I move on to show how to plot
+estimates that always incorporate information from the full posterior
+distribution, including correlations among parameters.</p>
+<p>Rethinking: What do parameters mean? A basic issue with interpreting
+model-based estimates is in knowing the meaning of parameters. There is
+no consensus about what a parameter means, how- ever, because different
+people take different philosophical stances towards models, probability,
+and prediction. The perspective in this book is a common Bayesian
+perspective: Posterior probabilities of parameter values describe the
+relative compatibility of different states of the world with the data,
+ac- cording to the model. These are small world (2) numbers. So
+reasonable people may disagree about the large world meaning, and the
+details of those disagreements depend strongly upon context. Such
+disagreements are productive, because they lead to model criticism and
+revision, something that golems cannot do for themselves. In later
+chapters, you’ll see that parameters can refer to observable
+quantities—data—as well as unobservable values. This makes parameters
+even more useful and their interpretation even more context
+dependent.</p>
+<p>4.4.3.1. Tables of marginal distributions. With the new linear
+regression trained on the Kalahari data, we inspect the marginal
+posterior distributions ofthe parameters:</p>
+<p>mean sd 5.5% 94.5% a 154.60 0.27 154.17 155.03 b 0.90 0.04 0.84 0.97
+sigma 5.07 0.19 4.77 5.38</p>
+<p>The first row gives the quadratic approximation for α, the second the
+approximation for β , and the third approximation for σ . Let’s try to
+make some sense of them.</p>
+<p>R code 4.45</p>
+<p>R code 4.46</p>
+<p>Let’s focus on b (β), because it’s the new parameter. Since β is a
+slope, the value 0.90 can be read as a person 1 kg heavier is expected
+to be 0.90 cm taller. 89% of the posterior probability lies between 0.84
+and 0.97. That suggests that β values close to zero or greatly above one
+are highly incompatible with these data and this model. It is most
+certainly not evidence that the relationship between weight and height
+is linear, because the model only considered lines. It just says that,
+if you are committed to a line, then lines with a slope around 0.9 are
+plausible ones.</p>
+<p>Remember, the numbers in the default precis output aren’t sufficient
+to describe the quadratic posterior completely. For that, we also
+require the variance-covariance matrix. You can see the covariances
+among the parameters with vcov:</p>
+<p>a b sigma a 0.073 0.000 0.000 b 0.000 0.002 0.000 sigma 0.000 0.000
+0.037</p>
+<p>Very little covariation among the parameters in this case. Using
+pairs(m4.3) shows both the marginal posteriors and the covariance. In
+the practice problems atthe end of the chapter, you’ll see that the lack
+of covariance among the parameters results from centering.</p>
+<p>4.4.3.2. Plotting posterior inference against the data. It’s almost
+always much more use- ful to plot the posterior inference against the
+data. Not only does plotting help in interpret- ing the posterior, but
+it also provides an informal check on model assumptions. When the
+model’s predictions don’t come close to key observations or patterns in
+the plotted data, then you might suspect the model either did not fit
+correctly or is rather badly specified. But even if you only treat plots
+as a way to help in interpreting the posterior, they are invaluable. For
+simple models like this one, it is possible (but not always easy) to
+just read the table of numbers and understand what the model says. But
+for even slightly more complex models, especially those that include
+interaction effects (8), interpreting posterior distribu- tions is hard.
+Combine with this the problem of incorporating the information in vcov
+into your interpretations, and the plots are irreplaceable.</p>
+<p>We’re going to start with a simple version of that task,
+superimposing just the posterior mean values over the height and weight
+data. Then we’ll slowly add more and more infor- mation to the
+prediction plots, until we’ve used the entire posterior
+distribution.</p>
+<p>We’ll start with just the raw data and a single line. The code below
+plots the raw data, computes the posterior mean values for a and b, then
+draws the implied line:</p>
+<p>You can see the resulting plot in Figure 4.6. Each point in this plot
+is a single individual. The black line is defined by the mean slope β
+and mean intercept α . This is not a bad line. It certainly looks highly
+plausible. But there are an infinite number of other highly plausible
+lines near it. Let’s draw those too.</p>
+<p>Figure 4.6. Height in centimeters (vertical) plotted against weight
+in kilograms (horizon- tal), with the line at the posterior mean plotted
+in black.</p>
+<p>4.4.3.3. Adding uncertainty around the mean. The posterior mean line
+is just the poste- rior mean, the most plausible line in the infinite
+universe of lines the posterior distribution has considered. Plots of
+the average line, like Figure 4.6, are useful for getting an impres-
+sion of the magnitude of the estimated influence of a variable. But they
+do a poor job of communicating uncertainty. Remember, the posterior
+distribution considers every possible regression line connecting height
+to weight. It assigns a relative plausibility to each. This means that
+each combination of α and β has a posterior probability. It could be
+that there are many lines with nearly the same posterior probability as
+the average line. Or it could be instead that the posterior distribution
+is rather narrow near the average line.</p>
+<p>So how can we get that uncertainty onto the plot? Together, a
+combination of α and β define a line. And so we could sample a bunch of
+lines from the posterior distribution. Then we could display those lines
+on the plot, to visualize the uncertainty in the regression
+relationship.</p>
+<p>To better appreciate how the posterior distribution contains lines,
+we work with all of the samples from the model. Let’s take a closer look
+at the samples now:</p>
+<p>a b sigma</p>
+<p>1 154.5505 0.9222372 5.188631 2 154.4965 0.9286227 5.278370 3
+154.4794 0.9490329 4.937513 4 155.2289 0.9252048 4.869807</p>
+<p>5 154.9545 0.8192535 5.063672</p>
+<p>Each row is a correlated random sample from the joint posterior of
+all three parameters, using the covariances provided by vcov(m4.3). The
+paired values of a and b on each row define a line. The average of very
+many of these lines is the posterior mean line. But the scatter around
+that average is meaningful, because it alters our confidence in the
+relationship between the predictor and the outcome.</p>
+<p>So now let’s display a bunch of these lines, so you can see the
+scatter. This lesson will be easier to appreciate, if we use only some
+of the data to begin. Then you can see how adding</p>
+<p>R code 4.48</p>
+<p>R code 4.49</p>
+<p>in more data changes the scatter of the lines. So we’ll begin with
+just the first 10 cases in d2. The following code extracts the first 10
+cases and re-estimates the model:</p>
+<p>The last line loops over all 20 lines, using curve to display
+each.</p>
+<p>The result is shown in the upper-left plot in Figure 4.7. By plotting
+multiple regression lines, sampled from the posterior, it is easy to see
+both the highly confident aspects of the relationship and the less
+confident aspects. The cloud of regression lines displays greater
+uncertainty at extreme values for weight.</p>
+<p>The other plots in Figure 4.7 show the same relationships, but for
+increasing amounts of data. Just re-use the code from before, but change
+N &lt;- 10 to some other value. Notice that the cloud of regression
+lines grows more compact as the sample size increases. This is a result
+of the model growing more confident about the location of the mean.</p>
+<p>4.4.3.4. Plotting regression intervals and contours. The cloud of
+regression lines in Fig- ure 4.7 is an appealing display, because it
+communicates uncertainty about the relationship in a way that many
+people find intuitive. But it’s more common, and often much clearer, to
+see the uncertainty displayed by plotting an interval or contour around
+the average regres- sion line. In this section, I’ll walk you through
+how to compute any arbitrary interval you like, using the underlying
+cloud of regression lines embodied in the posterior distribution.</p>
+<p>Focus for the moment on a single weight value, say 50 kilograms. You
+can quickly make a list of 10,000 values of μ for an individual who
+weighs 50 kilograms, by using your samples from the posterior:</p>
+<p>Figure 4.7. Samples from the quadratic approximate posterior
+distribution for the height/weight model, m4.3, with increasing amounts
+of data. In each plot, 20 lines sampled from the posterior distribution,
+showing the uncer- tainty in the regression relationship.</p>
+<p>The code to the right of the &lt;- above takes its form from the
+equation for μi:</p>
+<p>μi = α + β(xi - x-)</p>
+<p>The value of xi in this case is 50. Go ahead and take a look inside
+the result, mu_at_50. It’s a vector of predicted means, one for each
+random sample from the posterior. Since joint a and b went into
+computing each, the variation across those means incorporates the
+uncertainty in and correlation between both parameters. It might be
+helpful at this point to actually plot the density for this vector of
+means:</p>
+<p>Figure 4.8. The quadratic approximate poste- rior distribution of the
+mean height, μ, when weight is 50 kg. This distribution represents the
+relative plausibility of different values of the mean.</p>
+<p>158.0 158.5 159.0 159.5 160.0 160.5 mu|weight=50</p>
+<p>R code 4.51</p>
+<p>R code 4.52</p>
+<p>R code 4.53</p>
+<p>I reproduce this plot in Figure 4.8. Since the components of μ have
+distributions, so too does μ . And since the distributions of α and β
+are Gaussian, so too is the distribution of μ (adding Gaussian
+distributions always produces a Gaussian distribution).</p>
+<p>Since the posterior for μ is a distribution, you can find intervals
+for it, just like for any posterior distribution. To find the 89%
+compatibility interval of μ at 50 kg, just use the PI command as
+usual:</p>
+<p>5% 94%</p>
+<p>158.5860 159.6706</p>
+<p>What these numbers mean is that the central 89% of the ways for the
+model to produce the data place the average height between about 159 cm
+and 160 cm (conditional on the model and data), assuming the weight is
+50 kg.</p>
+<p>That’s good so far, but we need to repeat the above calculation for
+every weight value on the horizontal axis, not just when it is 50 kg. We
+want to draw 89% intervals around the average slope in Figure 4.6.</p>
+<p>This is made simple by strategic use of the link function, a part of
+the rethinking package. What link will do is take your quap
+approximation, sample from the posterior distribution, and then compute
+μ for each case in the data and sample from the posterior distribution.
+Here’s what it looks like for the data you used to fit the model:</p>
+<p>num [1:1000, 1:352] 157 157 158 157 157 …</p>
+<p>You end up with a big matrix of values of μ . Each row is a sample
+from the posterior distribu- tion. The default is 1000 samples, but you
+can use as many or as few as you like. Each column</p>
+<p>is a case (row) in the data. There are 352 rows in d2, corresponding
+to 352 individuals. So there are 352 columns in the matrix mu above.</p>
+<p>Now what can we do with this big matrix? Lots of things. The function
+link provides a posterior distribution of μ for each case we feed it. So
+above we have a distribution of μ for each individual in the original
+data. We actually want something slightly different: a distribution of μ
+for each unique weight value on the horizontal axis. It’s only slightly
+harder to compute that, by just passing link some new data:</p>
+<p>num [1:1000, 1:46] 136 136 138 136 137 …</p>
+<p>And now there are only 46 columns in mu, because we fed it 46
+different values for weight. To visualize what you’ve got here, let’s
+plot the distribution of μ values at each height.</p>
+<p>The result is shown on the left-hand side of Figure 4.9. At each
+weight value in weight.seq, a pile of computed μ values are shown. Each
+of these piles is a Gaussian distribution, like that in Figure 4.8. You
+can see now that the amount of uncertainty in μ depends upon the value
+of weight. And this is the same fact you saw in Figure 4.7.</p>
+<p>The final step is to summarize the distribution for each weight
+value. We’ll use apply, which applies a function of your choice to a
+matrix.</p>
+<p>R code 4.54</p>
+<p>R code 4.55</p>
+<p>R code 4.56</p>
+<p>Read apply(mu,2,mean) as compute the mean of each column (dimension
+“2”) of the matrix mu. Now mu.mean contains the average μ at each weight
+value, and mu.PI contains 89% lower and upper bounds for each weight
+value. Be sure to take a look inside mu.mean and mu.PI, to demystify
+them. They are just different kinds of summaries of the distributions in
+mu, with each column being for a different weight value. These summaries
+are only summaries. The “estimate” is the entire distribution.</p>
+<p>You can plot these summaries on top of the data with a few lines of R
+code:</p>
+<p>Figure 4.9. Left: The first 100 values in the distribution of μ at
+each weight</p>
+<p>value. Right: The !Kung height data again, now with 89% compatibility
+in- terval of the mean indicated by the shaded region. Compare this
+region to the distributions of blue points on the left.</p>
+<p>You can see the results in the right-hand plot in Figure 4.9.</p>
+<p>Using this approach, you can derive and plot posterior prediction
+means and intervals for quite complicated models, for any data you
+choose. It’s true that it is possible to use analytical formulas to
+compute intervals like this. I have tried teaching such an analytical
+approach before, and it has always been disaster. Part of the reason is
+probably my own failure as a teacher, but another part is that most
+social and natural scientists have never had much training in
+probability theory and tend to get very nervous around ,’s. I’m sure
+with enough effort, every one of them could learn to do the mathematics.
+But all of them can quickly learn to generate and summarize samples
+derived from the posterior distribution. So while the mathematics would
+be a more elegant approach, and there is some additional insight that
+comes from knowing the mathematics, the pseudo-empirical approach
+presented here is very flexible and allows a much broader audience of
+scientists to pull insight from their statistical modeling. And again,
+when you start estimating models with MCMC (9), this is really the only
+approach available. So it’s worth learning now.</p>
+<p>To summarize, here’s the recipe for generating predictions and
+intervals from the poste- rior of a fit model.</p>
+<ol type="1">
+<li><p>Use link to generate distributions of posterior values for μ .
+The default behavior of link is to use the original data, so you have to
+pass it a list of new horizontal axis values you want to plot posterior
+predictions across.</p></li>
+<li><p>Use summary functions like mean or PI to find averages and lower
+and upper bounds of μ for each value of the predictor variable.</p></li>
+<li><p>Finally, use plotting functions like lines and shade to draw the
+lines and intervals. Or you might plot the distributions of the
+predictions, or do further numerical calculations with them. It’s really
+up to you.</p></li>
+</ol>
+<p>This recipe works for every model we fit in the book. As long as you
+know the structure of the model—how parameters relate to the data—you
+can use samples from the posterior to describe any aspect of the model’s
+behavior.</p>
+<p>Rethinking: Overconfident intervals. The compatibility interval for
+the regression line in Figure 4.9 clings tightly to the MAP line. Thus
+there is very little uncertainty about the average height as a function
+of average weight. But you have to keep in mind that these inferences
+are always conditional on the model. Even a very bad model can have very
+tight compatibility intervals. It may help if you think of the
+regression line in Figure 4.9 as saying: Conditional on the assumption
+that height and weight are related by a straight line, then this is the
+most plausible line, and these are its plausible bounds.</p>
+<p>Overthinking: How link works. The function link is not really very
+sophisticated. All it is doing is using the formula you provided when
+you fit the model to compute the value of the linear model. It does this
+for each sample from the posterior distribution, for each case in the
+data. You could accomplish the same thing for any model, fit by any
+means, by performing these steps yourself. This is how it’d look for
+m4.3.</p>
+<p>And the values in mu.mean and mu.CI should be very similar (allowing
+for simulation variance) to what you got the automated way, using
+link.</p>
+<p>Knowing this manual method is useful both for (1) understanding and
+(2) sheer power. What- ever the model you find yourself with, this
+approach can be used to generate posterior predictions for any component
+of it. Automated tools like link save effort, but they are never as
+flexible as the code you can write yourself.</p>
+<p>4.4.3.5. Prediction intervals. Now let’s walk through generating an
+89% prediction in- terval for actual heights, not just the average
+height, μ . This means we’ll incorporate the standard deviation σ and
+its uncertainty as well. Remember, the first line of the statistical
+model here is:</p>
+<p>hi ~ Normal(μi , σ)</p>
+<p>What you’ve done so far is just use samples from the posterior to
+visualize the uncertainty in μi, the linear model of the mean. But
+actual predictions of heights depend also upon the distribution in the
+first line. The Gaussian distribution on the first line tells us that
+the model</p>
+<p>expects observed heights to be distributed around μ, not right on top
+of it. And the spread around μ is governed by σ . All of this suggests
+we need to incorporate σ in the predictions somehow.</p>
+<p>Here’s how you do it. Imagine simulating heights. For any unique
+weight value, you sam- ple from a Gaussian distribution with the correct
+mean μ for that weight, using the correct value of σ sampled from the
+same posterior distribution. If you do this for every sample from the
+posterior, for every weight value of interest, you end up with a
+collection of simu- lated heights that embody the uncertainty in the
+posterior as well as the uncertainty in the Gaussian distribution of
+heights. There is a tool called sim which does this:</p>
+<p>R code 4.59</p>
+<p>sim.height &lt;- sim( m4.3 , data=list(weight=weight.seq) )</p>
+<p>str(sim.height)</p>
+<p>num [1:1000, 1:46] 140 131 136 137 142 …</p>
+<p>This matrix is much like the earlier one, mu, but it contains
+simulated heights, not distribu- tions of plausible average height, μ
+.</p>
+<p>We can summarize these simulated heights in the same way we
+summarized the distri- butions of μ, by using apply:</p>
+<p>R code 4.60</p>
+<p>height.PI &lt;- apply( sim.height , 2 , PI , prob=0.89 )</p>
+<p>Now height.PI contains the 89% posterior prediction interval of
+observable (according to the model) heights, across the values of weight
+in weight.seq.</p>
+<p>Let’s plot everything we’ve built up: (1) the average line, (2) the
+shaded region of 89% plausible μ, and (3) the boundaries of the
+simulated heights the model expects.</p>
+<p>R code 4.61</p>
+<h1 id="plot-raw-data">plot raw data</h1>
+<p>plot( height ~ weight , d2 , col=col.alpha(rangi2,0.5) )</p>
+<h1 id="draw-map-line">draw MAP line</h1>
+<p>lines( weight.seq , mu.mean )</p>
+<h1 id="draw-hpdi-region-for-line">draw HPDI region for line</h1>
+<p>shade( mu.HPDI , weight.seq )</p>
+<h1
+id="draw-pi-region-for-simulated-heights-shade-height.pi-weight.seq">draw
+PI region for simulated heights shade( height.PI , weight.seq )</h1>
+<p>The code above uses some objects computed in previous sections, so go
+back and execute that code, if you need to.</p>
+<p>In Figure 4.10, I plot the result. The wide shaded region in the
+figure represents the area within which the model expects to find 89% of
+actual heights in the population, at each weight. There is nothing
+special about the value 89% here. You could plot the boundary for other
+percents, such as 67% and 97% (also both primes), and add those to the
+plot. Doing so would help you see more of the shape of the predicted
+distribution of heights. I leave that as an exercise for the reader.
+Just go back to the code above and add prob=0.67, for example, to the
+call to PI. That will give you 67% intervals, instead of 89% ones.</p>
+<p>Figure 4.10. 89% prediction interval for height, as a function of
+weight. The solid line is the average line for the mean height at each
+weight. The two shaded regions show different 89% plausible regions. The
+narrow shaded in- terval around the line is the distribution of μ . The
+wider shaded region represents the region within which the model expects
+to find 89% of actual heights in the population, at each weight.</p>
+<p>Notice that the outline for the wide shaded interval is a little
+rough. This is the simulation variance in the tails of the sampled
+Gaussian values. If it really bothers you, increase the number of
+samples you take from the posterior distribution. The optional n
+parameter for sim.height controls how many samples are used. Try for
+example:</p>
+<p>Run the plotting code again, and you’ll see the shaded boundary
+smooth out some. With extreme percentiles, it can be very hard to get
+out all of the roughness. Luckily, it hardly matters, except for
+aesthetics. Moreover, it serves to remind us that all statistical
+inference is approximate. The fact that we can compute an expected value
+to the 10th decimal place does not imply that our inferences are precise
+to the 10th decimal place.</p>
+<p>Rethinking: Two kinds of uncertainty. In the procedure above, we
+encountered both uncertainty in parameter values and uncertainty in a
+sampling process. These are distinct concepts, even though they are
+processed much the same way and end up blended together in the posterior
+predictive simu- lation. The posterior distribution is a ranking of the
+relative plausibilities of every possible combina- tion of parameter
+values. The distribution of simulated outcomes, like height, is instead
+a distribution that includes sampling variation from some process that
+generates Gaussian random variables. This sampling variation is still a
+model assumption. It’s no more or less objective than the posterior
+distri- bution. Both kinds of uncertainty matter, at least sometimes.
+But it’s important to keep them straight, because they depend upon
+different model assumptions. Furthermore, it’s possible to view the
+Gauss- ian likelihood as a purely epistemological assumption (a device
+for estimating the mean and variance of a variable), rather than an
+ontological assumption about what future data will look like. In that
+case, it may not make complete sense to simulate outcomes.</p>
+<p>Overthinking: Rolling your own sim. Just like with link, it’s useful
+to know a little about how sim operates. For every distribution like
+dnorm, there is a companion simulation function. For the</p>
+<p>R code 4.63</p>
+<p>R code 4.64</p>
+<p>Gaussian distribution, the companion is rnorm, and it simulates
+sampling from a Gaussian distribu- tion. What we want R to do is
+simulate a height for each set of samples, and to do this for each value
+of weight. The following will do it:</p>
+<p>The values in height.PI will be practically identical to the ones
+computed in the main text and displayed in Figure 4.10.</p>
+<h6 id="阅读日期-2025年12月20日-2025年12月20日-共-1-天">阅读日期：
+2025年12月20日-2025年12月20日 共： 1 天</h6>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>
