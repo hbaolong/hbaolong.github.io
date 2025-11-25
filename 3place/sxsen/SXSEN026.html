@@ -5,7 +5,7 @@
   <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
   <meta name="author" content="hbaolong@vip.qq.com" />
-  <title>5103数学史EN026-2025年11月26日-数学史EN</title>
+  <title>数学史EN:Chapter 22 Analysis</title>
   <style>
     html {
       color: #1a1a1a;
@@ -171,7 +171,7 @@
 </head>
 <body>
 <header id="title-block-header">
-<h1 class="title">5103数学史EN026-2025年11月26日-数学史EN</h1>
+<h1 class="title">数学史EN:Chapter 22 Analysis</h1>
 <p class="author">hbaolong@vip.qq.com</p>
 </header>
 <center>
@@ -182,65 +182,910 @@ href="/3place/sxsen/index_rich.html">丰富目录</a> <a
 href="/3place/sxsen/index_readcal.html">同读日历</a> <a
 href="/3place/sxsen/index_timeline.html">时间线</a> <a
 href="/3place/sxsen/index_books.html">引用书籍</a> <a
-href="/3place/sxsen/index_words.html">使用字频</a> <a
-href="/3place/sxsen/hash/">HASH5</a> <a
+href="/3place/sxsen/index_words.html">使用字频</a>
+<div id="wx_pic" style="margin:0 auto;display:none;">
+<img src='/img/logo.png'/>
+</div>
+<a href="/3place/sxsen/hash/">HASH5</a> <a
 href="/3place/sxsen/dicts/">本书字典</a>
 </center>
-<h4 id="polygonal-areas">Polygonal Areas</h4>
-<p>It used to be held that the Babylonians were better in algebra than
-were the Egyptians, but that they had contributed less to geometry. The
-first half of this statement is clearly substantiated by what we have
-learned in previous paragraphs; attempts to bolster the second half of
-the comparison generally are limited to the measure of the circle or to
-the volume of the frustum of a pyramid. In the Mesopotamian Valley, the
-area of a circle was generally found by taking three times the square of
-the radius, and in accuracy this falls considerably below the Egyptian
-measure. Yet the counting of decimal places in the approximations for π
-is scarcely an appropriate measure of the geometric stature of a
-civilization, and a twentieth-century discovery has effectively
-nullified even this weak argument.</p>
-<p>In 1936, a group of mathematical tablets was unearthed at Susa, a
-couple of hundred miles from Babylon, and these include significant
-geometric results. True to the Mesopotamian penchant for making tables
-and lists, one tablet in the Susa group compares the areas and the
-squares of the sides of the regular polygons of three, four, five, six,
-and seven sides. The ratio of the area of the pentagon, for example, to
-the square on the side of the pentagon is given as 1;40, a value that is
-correct to two significant figures. For the hexagon and the heptagon,
-the ratios are expressed as 2;37,30 and 3;41, respectively. In the same
-tablet, the scribe gives 0;57,36 as the ratio of the perimeter of the
-regular hexagon to the circumference of the circumscribed circle, and
-from this, we can readily conclude that the Babylonian scribe had
-adopted 3;7,30, or 3, as an approximation for π. This is at least as
-good as the value adopted in Egypt. Moreover, we see it in a more
-sophisticated context than in Egypt, for the tablet from Susa is a good
-example of the systematic comparison of geometric figures. One is almost
-tempted to see in it the genuine origin of geometry, but it is important
-to note that it was not so much the geometric context that interested
-the Babylonians as the numerical approximations that they used in
-mensuration. Geometry for</p>
-<p>them was not a mathematical discipline in our sense, but a sort of
-applied algebra or arithmetic in which numbers are attached to
-figures.</p>
-<p>There is some disagreement as to whether the Babylonians were
-familiar with the concept of similar figures, although this appears to
-be likely. The similarity of all circles seems to have been taken for
-granted in Mesopotamia, as it had been in Egypt, and the many problems
-on triangle measure in cuneiform tablets seem to imply a concept of
-similarity. A tablet in the Baghdad Museum has a right triangle ABC
-(Fig. 3.2) with sides a560 and b545 and c575, and it is subdivided into
-four smaller right triangles, ACD, CDE, DEF, and EFB. The areas of these
-four triangles are then given as 8,6 and 5,11;2,24 and 3,19;3,56,9,36
-and 5,53;53,39,50,24, respectively. From these values, the scribe
-computed the length of AD as 27, apparently using a sort of “similarity
-formula” equivalent to our theorem that areas of similar figures are to
-each other as squares on corresponding sides. The lengths of CD and BD
-are found to be 36 and 48, respectively, and through an application of
-the “similarity formula” to triangles BCD and DCE, the length of CE is
-found to be 21;36. The text breaks off in the middle of the calculation
-of DE.</p>
-<h6 id="阅读日期-2025年11月26日-2025年11月26日-共-1-天">阅读日期：
-2025年11月26日-2025年11月26日 共： 1 天</h6>
+<h4 id="chapter-22-analysis">Chapter 22 Analysis</h4>
+<p>It is the simple hypotheses of which one must be most wary; because
+these are the ones that have the most chances of passing unnoticed.</p>
+<p>—Poincaré</p>
+<p>Berlin and Göttingen at Midcentury</p>
+<p>Analysis, the study of infinite processes, had been understood by
+Newton and Leibniz to be concerned with continuous magnitudes, such as
+lengths, areas, velocities, and accelerations, whereas the theory of
+numbers has as its domain the discrete set of natural numbers. We have
+nevertheless seen that Bolzano tried to give purely arithmetic proofs of
+propositions, such as the location theorem in elementary algebra, that
+seemed to depend on properties of continuous functions, and Plücker had
+thoroughly arithmetized analytic geometry. The theory of groups had
+originally been concerned with discrete sets of elements, but Klein
+envisioned a unification of both discrete and continuous aspects of
+mathematics under the group concept. The nineteenth century was indeed a
+period of correlation in mathematics. The geometric interpretation of
+analysis and algebra was one aspect of this tendency; the introduction
+of analytic techniques in number theory was another. Toward the end of
+the century, the strongest current was that of arithmetization; it
+affected algebra, geometry, and analysis.</p>
+<p>In 1855, Dirichlet succeeded Gauss in Göttingen. He left in place, in
+Berlin, a tradition of lectures on the applications of analysis to
+physical problems and number theory. He also left a small group of his
+and Jacobi’s friends and students, who continued to influence
+mathematics at the academy, in the Journal für die reine und angewandte
+Mathematik, and at the university. In Göttingen, mathematical lectures
+were less solidly established. As already noted, Gauss’s limited
+teaching had usually emphasized subjects such as the method of least
+squares that would be useful to his observatory assistants. Most
+mathematics proper was taught by one lecturer, Moritz Stern (1807–1894).
+Dirichlet sought to emphasize the “true” Gaussian legacy with lectures
+on number theory and potential theory.</p>
+<p>There were two young men in Göttingen who were to be profoundly
+influenced by Dirichlet, although they differed greatly in personality
+and mathematical orientation. One was Richard Dedekind; the other,
+Bernhard Riemann. When Dirichlet died unexpectedly in 1859, it was
+Riemann who succeeded him.</p>
+<p>Riemann in Göttingen</p>
+<p>When Riemann became a professor in Göttingen, he was no stranger to
+that university. He had matriculated there in 1846, spent several
+semesters in Berlin to get his mathematical training from Jacobi and
+Dirichlet, then returned to Göttingen, obtained good training in physics
+from Wilhelm Weber, assisted Weber, obtained his doctoral degree, and
+was appointed lecturer (privatdozent) in 1854. His research, as well as
+his career, was split between mathematics and physics. By the time he
+succeeded Dirichlet, he had published five memoirs; two of these dealt
+with problems in physics. A similar division characterized his later
+work, yet, conceptually, it is not the division but the commonality of
+many concepts that predominates. Riemann was a many-sided mathematician
+with a fertile mind, contributing to geometry, the theory of numbers,
+and analysis. Having previously touched on some of his geometric and
+function-theoretic work, we shall here cite only the example of his
+shortest and possibly most famous paper before proceeding to note his
+influence on mathematical physics.</p>
+<p>Euler had noted connections between prime number theory and the
+series</p>
+<p>where s is an integer—a special case of the Dirichlet series. Riemann
+studied the same series for s a complex variable, the sum of the series
+defining a function , which has since been known as Riemann’s zeta
+function. One of the tantalizing suggestions that mathematicians have
+not yet been able to prove or disprove is the famous Riemann conjecture
+that all of the imaginary zeros of the zeta function have real part
+.</p>
+<p>In analysis, Riemann is recalled for his part in the refinement of
+the definition of the integral, for emphasis on the Cauchy-Riemann
+equations, and for the Riemann surfaces. These surfaces are an ingenious
+scheme for uniformizing a function, that is, representing a one-to-one
+mapping of a complex function that in the ordinary Gaussian plane would
+be multivalued. Here we see the most striking aspect of Riemann’s work—a
+strongly intuitive and geometric background in analysis that contrasts
+sharply with the arithmetizing tendencies of the Weierstrassian school.
+His approach has been called “a method of discovery,” whereas that of
+Weierstrass was “a method of demonstration.” His results were so
+significant that Bertrand Russell described him as “logically the
+immediate predecessor of Einstein.” It was Riemann’s intuitive genius in
+physics and mathematics that produced such concepts as that of the
+curvature of a Riemannian space or manifold, without which the theory of
+general relativity could not have been formulated.</p>
+<p>Mathematical Physics in Germany</p>
+<p>There had been several centers of growing activity in mathematical
+physics in Germany before Riemann. Beginning in the 1830s, Dirichlet had
+introduced the techniques of Fourier and the results of his great French
+contemporaries to a large group of students in mathematics and physics
+in Berlin. Dirichlet interacted with the Berlin physicists; he had been
+a friend of Wilhelm Weber’s years before they became colleagues in
+Göttingen. Similarly, in Königsberg, Jacobi had worked closely with the
+mathematical physicist Franz Neumann (1798–1895) in research and
+teaching. In Leipzig, the new analysis was not yet well represented. but
+when the Weber brothers felt the need to consult their mathematical
+colleagues, there were no barriers. When Weber involved Riemann in his
+electrodynamic investigations in Göttingen, the subject had also been
+dealt with in Königsberg; both German traditions drew on the pioneering
+work of André-Marie Ampère and Poisson. When Riemann initiated his
+influential study of the propagation of sound waves, he elaborated on a
+topic that Poisson had furthered in the early years of the century and
+on which Dirichlet had frequently lectured in Berlin. It is an important
+chapter in the history of the wave equation. Riemann’s approach involved
+dealing with a second-order linear differential equation in two
+variables and finding a “characteristic” function that satisfied a
+certain adjoint partial differential equation. Riemann’s technique has
+been widely adopted for hyperbolic equations.</p>
+<p>Paul Du Bois Reymond (1831–1889), who had obtained his doctorate in
+Berlin just before Dirichlet’s departure, built on Riemann’s work in
+obtaining a generalization of Green’s theorem. Hermann Helmholtz
+(1821–1894), who came to mathematical physics from a background in
+physiology, overlapped with Riemann in acoustical studies. Many of his
+notable contributions to the study of sound were included in his popular
+work On the Sensations of Tone. The reduced wave equation Δw + k2w = 0
+is often called the “Helmholtz equation” because he was the first to
+tackle the issue of finding a general solution. The physicist Gustav
+Kirchhoff (1824–1887), who was a contemporary of these men, obtained
+further significant results in the study of partial differential
+equations, particularly the wave equation.</p>
+<p>Mathematical Physics in English-Speaking Countries</p>
+<p>By the middle of the nineteenth century, a number of English-speaking
+men promoted mathematical physics in Great Britain and elsewhere. The
+earliest significant nineteenth-century contributions to mathematical
+physics across the channel were those of the Irishman William Rowan
+Hamilton. When he initiated his studies on dynamics in the 1830s, he
+drew heavily on concepts he had developed while establishing a
+mathematical theory of optics in the late 1820s. Key to his method was
+the introduction of variational principles into the treatment of certain
+partial differential equations. He built on work by Lagrange and Poisson
+but utilized physical principles established earlier. Jacobi, working
+out his own dynamics in the 1830s, recast Hamilton’s innovative ideas
+and called attention to them in the context of his own theory. The
+result is now known as the Hamilton-Jacobi theory. Hamilton’s primary
+champion was the Scottish physicist Peter Guthrie Tait (1831–1901).
+Among Tait’s mathematical contributions are early studies of knots; in
+this, he followed a little-known line of research by Gauss and Listing,
+prompted by electrodynamic investigations. His name came to be known to
+generations in linkage with that of William Thomson through the classic
+Treatise on Natural Philosophy, usually simply referred to as “T and T”
+or “T and T′.” This work, which first appeared in 1867, went through
+several editions. Although it does not make for light reading, nearly a
+century after its first publication it reappeared as a paperback with
+the title Principles of Mechanics and Dynamics.</p>
+<p>William Thomson, Tait’s coauthor, is better known by his title as
+Lord Kelvin. Born in Belfast, raised in Glasgow, and educated in
+Cambridge, he discovered Fourier’s book on heat theory as an adolescent
+and shortly thereafter was given a copy of Green’s rare 1828 Essay.
+Thomson not only studied Green’s work himself but made it known on the
+Continent. His earliest mathematical contributions of the 1840s were
+furthered through communication with Liouville, in whose Journal they
+appeared. They relate to the method of inversion and to Dirichlet’s
+principle, both treated with regard to electricity and magnetism.
+Subsequent research tended to be more physically and experimentally
+oriented.</p>
+<p>Thomson was a contemporary of an English physicist whose name is
+familiar to every student of advanced calculus: George Gabriel Stokes
+(1819–1903). Stokes graduated from Cambridge in 1841; like Thomson, he
+had been senior wrangler. Much of his research was done before 1850;
+during the second part of the century, he held the Lucasian chair of
+mathematics at Cambridge and was an active member of the Royal Society,
+whose Copley medal he had won for a major study on optics in the early
+fifties. William Thomson knew the theorem that bears Stokes’s name in
+1850, although it first appeared in print in the form of an exam
+question in 1854. Stokes proved the theorem when Thomson sent it to him
+in 1850 and seems to have chosen it as an examination question.</p>
+<p>One of those taking this examination in 1854 was James Clerk Maxwell
+(1831–1879). Best known for his stunningly successful derivation, in
+1864, of the electromagnetic wave equations, he was influential in
+urging on mathematicians and physicists the use of vectors. A friend of
+Tait’s, he, too, admired Hamilton. Yet he avoided becoming heavily
+involved in the notational quarrels surrounding many advocates of the
+use of vector analysis.</p>
+<p>Before leaving the English-speaking analysts of the period, we should
+note some important contributions from those studying celestial
+mechanics. As previously noted, nineteenth-century theoretical
+astronomers had two great guidebooks: one was Laplace’s Mécanique
+celeste, the other Gauss’s Theoria motus. The translation of Laplace’s
+work into English brought to European attention an American, Nathaniel
+Bowditch (1773–1838), in the 1830s. The subject was one in which
+American analysts were repeatedly to make their mark, the most notable
+nineteenth-century American contribution being that of George William
+Hill (1838–1914). In 1877–1878, Hill published two important papers on
+lunar theory, in which he established the theory of linear differential
+equations with periodic coefficients. After Henri Poincaré noted the
+importance of this work in 1885, the first of these papers was
+republished in Mittag-Leffler’s Acta Mathematica, and attention was
+drawn to the recently established American Journal of Mathematics, the
+first volume of which had contained Hill’s other paper.</p>
+<p>Finally, it should be noted that the Astronomer Royal of England G.
+B. Airy (1801–1892) made numerous contributions to the study of series
+and integrals, which, although they belong to the age of Gauss and
+Cauchy, were important in the effect they had on England’s midcentury
+analysts and mathematical physicists. For example, in his optical
+studies in 1850, Stokes was confronted with an integral that Airy had
+used to describe a certain situation involving diffraction. Stokes set
+up a differential equation having Airy’s integral as a special solution
+and solved the equation by “semiconvergent” series. This was one of the
+early examples of work that subsequently led to the more general theory
+of such series established by T.-J. Stieltjes (1856–1894).</p>
+<p>Weierstrass and Students</p>
+<p>The leading analyst in Berlin in the second half of the nineteenth
+century was Karl Weierstrass (1815–1897). Weierstrass prepared himself
+at Münster for secondary-school teaching, where an instructor, Christoph
+Gudermann (1798–1851), took Weierstrass under his wing.</p>
+<p>Gudermann was especially interested in elliptic and hyperbolic
+functions; his name is still recalled in the Gudermannian: If u is a
+function of x satisfying the equation tan u = sin hx, then u is known as
+the Gudermannian of x, written as u = gd x. More important to
+mathematics than this minor contribution were the time and inspiration
+the teacher gave to his student Karl Weierstrass, who was destined in
+turn to become the greatest mathematics teacher of the mid-nineteenth
+century—at least, as measured in terms of the number of successful
+research workers he produced. Gudermann had impressed on the young
+Weierstrass what a useful tool the power series representation of a
+function was, and it was in this connection that Weierstrass produced
+his greatest work, following in the footsteps of Abel.</p>
+<p>Weierstrass earned his teacher’s certificate at the late age of
+twenty-six, and for more than a dozen years, he taught at various
+secondary schools. In 1854, however, a paper on Abelian functions,
+appearing in Crelle’s Journal, brought him such recognition that shortly
+thereafter he was offered and he accepted a professorship at the
+University of Berlin. Weierstrass was then almost forty, making him a
+striking exception to the common notion that a great mathematician must
+make his mark early in life.</p>
+<p>It had been generally assumed, before the middle of the nineteenth
+century, that if an infinite series converges for some interval to a
+continuous and differentiable function f(x), then a second series
+obtained by differentiating the original series, term by term,
+necessarily will converge, for the same interval, to f′(x). Several
+mathematicians showed that this is not necessarily the case and that
+term-by-term differentiation can be trusted only if the series is
+uniformly convergent for the interval—that is, if a single N can be
+found such that for every value of x in the interval the partial sums
+Sn(x) will differ from the sum S(x) of the series by less than a given ε
+for all n &gt; N. Weierstrass showed that for a uniformly convergent
+series, term-by-term integration was also permissible. In the matter of
+uniform convergence, Weierstrass was far from alone, for the concept was
+hit on independently at about the same time by at least three other
+men—Cauchy in France (perhaps by 1853), Stokes at Cambridge (in 1847),
+and P. L. V. Seidel (1821–1896) in Germany (in 1848). H. E. Heine
+(1821–1881), previously close to Dirichlet and Riemann, in 1870 proved
+that the Fourier series development of a continuous function is unique
+if one imposes the condition that it be uniformly convergent. Yet
+perhaps no one is more deserving to be known as the father of the
+critical movement in analysis than is Weierstrass. From 1857 until his
+retirement in 1890, he urged a generation of students to use infinite
+series representations with care.</p>
+<p>One of Weierstrass’s important contributions to analysis is known as
+analytic continuation. Weierstrass had shown that the infinite power
+series representation of a function f(x), about a point Pl in the
+complex plane, converges at all points within a circle C1 whose center
+is P1 and which passes through the nearest singularity. If, now, one
+expands the same function about a second point P2 other than P1 but
+within C1, this series will be convergent within a circle C2 having P2
+as the center and passing through the singularity nearest to P2. This
+circle may include points outside C1; hence, one has extended the area
+of the plane within which f(x) is defined analytically by a power
+series; the process can be continued with still other circles.
+Weierstrass therefore defined an analytic function as one power series
+together with all of those that are obtainable from it by analytic
+continuation. The importance of work such as that of Weierstrass is felt
+particularly in mathematical physics, in which solutions of differential
+equations are rarely found in any form other than as an infinite
+series.</p>
+<p>Weierstrass’s influence was exerted through his students as much as
+through his own lectures and publications. In the field of differential
+equations, this brings us to Lazarus Fuchs (1833–1902). Building on work
+by the French mathematicians Briot (1817–1882) and Bouquet (1819–1885),
+and on Riemann’s memoir about the hypergeometric equation, Fuchs
+initiated the systematic study of regular singularities of linear
+ordinary differential equations in the complex domain. His immediate
+motivation came from lectures on Abelian functions that Weierstrass had
+given in 1863. Fuchs’s work was sharpened by G. Frobenius (1849–1917) at
+Berlin and served as a takeoff point for Poincaré.</p>
+<p>Another Weierstrass student who made major contributions to complex
+analysis was H. A. Schwarz (1848–1921). Schwarz was interested in
+mapping questions and was especially affected by Weierstrass’s criticism
+of Riemann’s use of the Dirichlet principle. Riemann’s famous mapping
+theorem, translated into a later terminology, states that “there exists
+one and only one conformal mapping of a given bounded simply connected
+surface onto a second one, for which the images of one interior point
+and one boundary point are prescribed” (Birkhoff 1973, p. 47).
+Weierstrass noted that Riemann’s proof was unacceptable because it
+extended the use of Dirichlet’s principle beyond the limitations that
+would assure the existence of a minimizing integral. Schwarz thereupon
+set out to find specific instances for which he could validate the
+mapping theorem. This search led him to two very useful tools, one known
+as his “reflection principle,” the other as his “alternating process.”
+He was able to obtain a number of specific mappings; for example, he
+could map a simply connected plane region onto a circle, but he could
+not achieve the hoped-for broader generalization.</p>
+<p>Yet another follower of Weierstrass who was to assume international
+importance because of his journal and his support of mathematicians from
+different parts of the world was the Swede Gösta Mittag-Leffler
+(1846–1927). Mittag-Leffler had studied with Charles Hermite (1822–1901)
+in Paris and Ernst Christian Julius Schering (1824–1897) in Göttingen
+before he came to Berlin. He made independent contributions to complex
+function theory. More important, he founded the journal Acta
+Mathematica, was a friend of Weierstrass’s and Hermite’s, exchanged
+information with mathematicians around the world, and supported numerous
+mathematicians directly, as well as through his connections in Sweden
+and elsewhere. Thus, he played an important role in the lives of such
+diverse individuals as Sofia Kovalevskaya, Henri Poincaré, and Georg
+Cantor.</p>
+<p>The Arithmetization of Analysis</p>
+<p>Note that 1872 was a red-letter year not only in geometry but, more
+particularly, in analysis. In that year, crucial contributions toward
+the arithmetization of analysis were made by no fewer than five
+mathematicians, one French, the others German. The Frenchman was H. C.
+R. (Charles) Méray (1835–1911) of Burgundy; the four Germans were Karl
+Weierstrass of Berlin, H. E. Heine of Halle, Georg Cantor (1845–1918),
+also of Halle, and J. W. R. Dedekind (1831–1916) of Braunschweig. These
+men, in a sense, represented the climax in half a century of
+investigation into the nature of function and number that had begun in
+1822 with Fourier’s theory of heat and with an attempt made in that year
+by Martin Ohm (1792–1872) to reduce all of analysis to arithmetic in
+Versuch eines vollständig konsequenten Systems der Mathematik. There
+were two chief causes of uneasiness in this fifty-year interval. One was
+the lack of confidence in operations performed on infinite series. It
+was not even clear whether an infinite series of functions—of powers or
+of sines and cosines, for example—always converges to the function from
+which it was derived. A second cause for concern was occasioned by the
+lack of any definition of the phrase “real number” that lay at the very
+heart of the arithmetization program. By 1817, Bolzano had been so fully
+aware of the need for rigor in analysis that Klein referred to him as
+the “father of arithmetization,” but Bolzano had been less influential
+than Cauchy, whose analysis was still encumbered with geometric
+intuition. Even Bolzano’s continuous nondifferentiable function of about
+1830 was overlooked by successors, and the example of such a function
+given by Weierstrass (in classroom lectures in 1861 and in a paper to
+the Berlin Academy in 1872) was generally thought to be the first
+illustration of it.</p>
+<p>Riemann, meanwhile, had exhibited a function f(x) that is
+discontinuous at infinitely many points in an interval and yet the
+integral of which exists and defines a continuous function F(x) that,
+for the infinity of points in question, fails to have a derivative.
+Riemann’s function is, in a sense, less pathological than are those of
+Bolzano and Weierstrass, but it made clear that the integral required a
+more careful definition than that of Cauchy, which had been guided
+largely by geometric feeling for the area under a curve. The present-day
+definition of the definite integral over an interval in terms of upper
+and lower sums is generally known as the Riemann integral, in honor of
+the man who gave necessary and sufficient conditions that a bounded
+function be integrable. The Dirichlet function, for instance, does not
+have a Riemann integral for any interval. Still more general definitions
+of the integral, with weaker conditions on the function, were proposed
+in the next century, but the definition of the integral used in most
+undergraduate courses in the calculus is still that of Riemann.</p>
+<p>There was a gap of some fifty years between the work of Bolzano and
+that of Weierstrass, but the unity of effort in this half century and
+the need to rediscover Bolzano’s work were such that there is a
+celebrated theorem that bears the name of both men, the
+Bolzano-Weierstrass theorem: A bounded set S containing infinitely many
+elements (such as points or numbers) contains at least one limit point.
+Although this theorem was proved by Bolzano and apparently was also
+known to Cauchy, it was the work of Weierstrass that made it familiar to
+mathematicians.</p>
+<p>Skepticism about Fourier’s series had been expressed by Lagrange, but
+Cauchy, in 1823, thought he had proved the convergence of the general
+Fourier series. Dirichlet had shown that Cauchy’s proof was inadequate
+and had provided sufficient conditions for the convergence. It was in
+seeking to liberalize Dirichlet’s conditions for the convergence of a
+Fourier series that Riemann developed his definition of the Riemann
+integral; in this connection, he showed that a function f(x) may be
+integrable in an interval without being representable by a Fourier
+series. It was the study of infinite trigonometric series that also led
+to Cantor’s theory of sets, to be described later.</p>
+<p>Only a year after the critical year 1872, a young man who had given
+promise of significant contributions to both mathematics and its history
+died at the early age of thirty-four. This was Hermann Hankel
+(1839–1873), a student of Riemann’s and a professor of mathematics at
+Leipzig. In 1867, he had published a book, Theorie der komplexen
+Zahlensysteme, in which he pointed out that “the condition for erecting
+a universal arithmetic is . . . a purely intellectual mathematics, one
+detached from all perceptions.” We have seen that the revolution in
+geometry took place when Gauss, Lobachevsky, and Bolyai freed themselves
+from preconceptions of space. In somewhat the same sense, the
+thoroughgoing arithmetization of analysis became possible only when, as
+Hankel foresaw, mathematicians understood that the real numbers are to
+be viewed as “intellectual structures,” rather than as intuitively given
+magnitudes inherited from Euclid’s geometry. Hankel’s view was not
+really new; a generation of algebraists, especially in Great Britain,
+had been developing a universal arithmetic and multiple algebras. The
+implications for analysis, however, had not been widely recognized.
+During the early 1830s, Bolzano had made an attempt to develop a theory
+of real numbers as limits of rational number sequences, but this had
+gone unnoticed and unpublished until 1962. Sir William Rowan Hamilton
+(1805–1865) perhaps had felt some such need, but his appeal to time,
+rather than to space, was a change in language, although not in logical
+form, from the usual geometric background. The crux of the matter was
+first effectively seized on and published by the quintet of 1872
+mentioned earlier.</p>
+<p>Méray was prompt to present his thoughts, for as early as 1869 he had
+published an article calling attention to a serious lapse in reasoning
+of which mathematicians from the time of Cauchy had been guilty.
+Essentially, the petitio principii consisted of defining the limit of a
+sequence as a real number and then, in turn, defining a real number as a
+limit of a sequence (of rational numbers). It will be recalled that
+Bolzano and Cauchy had attempted to prove that a sequence that
+“converges within itself”—one for which Sn + p differs from Sn (for a
+given integer p and for n sufficiently large) by less than any assigned
+magnitude ε, also converges in the sense of external relations to a real
+number S, the limit of the sequence. Méray, in his Nouveau précis
+d’analyse infinitésimale of 1872, cut the Gordian knot by not invoking
+the external condition of convergence or the real number S. Using only
+the Bolzano-Cauchy criterion, where n, p, and ε are rational numbers,
+convergence can be described without reference to irrational numbers. In
+a broad sense, he regarded a converging sequence as determining either a
+rational number as a limit or a “fictitious number” as a “fictitious
+limit.” These “fictitious numbers” can, he showed, be ordered, and, in
+essence, they are what we know as the irrational numbers. Méray was
+somewhat vague as to whether his converging sequence is the number. If
+it is, as seems to be implied, then his theory is equivalent to one
+developed at the same time by Weierstrass.</p>
+<p>Weierstrass sought to separate the calculus from geometry and to base
+it on the concept of number alone. Like Méray, he also saw that to do
+this, it was necessary to give a definition of an irrational number that
+is independent of the limit concept, inasmuch as the latter had up to
+this point presupposed the former. To correct Cauchy’s logical error,
+Weierstrass settled the question of the existence of a limit of a
+convergent sequence by making the sequence itself the number or the
+limit. Weierstrass’s scheme is too subtle to be presented in detail
+here, but in considerably oversimplified form, we may say that the
+number is not the limit of the series ; it is the sequence associated
+with this series. (Actually, in Weierstrass’s theory, the irrational
+numbers are more broadly defined as aggregates of the rationals, rather
+than more narrowly as ordered sequences of rationals, as we have
+implied.)</p>
+<p>Weierstrass did not publish his views on the arithmetization of
+analysis, but they were made known by men such as Ferdinand Lindemann
+and Eduard Heine, who had followed his lectures. In 1871, Cantor had
+initiated a third program of arithmetization, similar to those of Méray
+and Weierstrass. Heine suggested simplifications that have led to the
+so-called Cantor-Heine development, published by Heine in Crelle’s
+Journal for 1872 in the article “Die Elemente der Funktionenlehre.” In
+essence, the scheme resembled that of Méray’s, in that convergent
+sequences that fail to converge to rational numbers are taken by fiat to
+define irrational numbers. A thoroughly distinct approach to the same
+problem and the one that today is best known was given in the same year
+by Dedekind in a celebrated book, Stetigkeit und die Irrationalzahlen
+(Continuity and Irrational Numbers).</p>
+<p>Dedekind</p>
+<p>Dedekind’s attention had been directed to the problem of irrational
+numbers as early as 1858, when he found himself lecturing on the
+calculus. The limit concept, he concluded, should be developed through
+arithmetic alone, without the usual guidance from geometry, if it were
+to be rigorous. Instead of simply seeking a way out of Cauchy’s vicious
+circle, Dedekind asked himself, as the title of his book implies, what
+there is in continuous geometric magnitude that distinguishes it from
+the rational numbers. Galileo and Leibniz had thought that the
+“continuousness” of points on a line was the result of their
+density—that between any two points, there is always a third; however,
+the rational numbers have this property, yet they do not form a
+continuum. On pondering this matter, Dedekind came to the conclusion
+that the essence of the continuity of a line segment is not due to a
+vague hang-togetherness but to an exactly opposite property: the nature
+of the division of the segment into two parts by a point on the segment.
+In any division of the points of the segment into two classes such that
+each point belongs to one and only one class, and such that every point
+of the one class is to the left of every point in the other, there is
+one and only one point that brings about the division. As Dedekind
+wrote, “By this commonplace remark the secret of continuity is to be
+revealed.” Commonplace the remark may have been, but its author seems to
+have had some qualms about it, for he hesitated for some years before
+committing himself in print.</p>
+<p>Dedekind saw that the domain of rational numbers can be extended to
+form a continuum of real numbers if one assumes what is now known as the
+Cantor-Dedekind axiom, namely, that the points on a line can be put into
+one-to-one correspondence with the real numbers. Arithmetically
+expressed, this means that for every division of the rational numbers
+into two classes A and B such that every number of the first class, A,
+is less than every number of the second class, B, there is one and only
+one real number producing this Schnitt, or Dedekind cut. If A has a
+largest number or if B contains a smallest number, the cut defines a
+rational number, but if A has no largest number and B no smallest, then
+the cut defines an irrational number. If, for example, we put in A all
+negative rational numbers and also all positive rational numbers whose
+squares are less than 2 and in B all positive rational numbers whose
+squares are more than 2, we have subdivided the entire field of rational
+numbers in a manner defining an irrational number—in this case, the
+number that we usually write as . Now, Dedekind pointed out, the
+fundamental theorems on limits can be proved rigorously without recourse
+to geometry. It was geometry that had pointed the way to a suitable
+definition of continuity, but in the end, it was excluded from the
+formal arithmetic definition of the concept. The Dedekind cut in the
+rational number system, or an equivalent construction of real number,
+has now replaced geometrical magnitude as the backbone of analysis.</p>
+<p>The definitions of real number are, as Hankel indicated they should
+be, intellectual constructions on the basis of the rational numbers,
+rather than something imposed on mathematics from without. Of the
+previous definitions, one of the most popular has been that of Dedekind.
+Early in the twentieth century, a modification of the Dedekind cut was
+proposed by Bertrand Russell (1872–1970). He noted that because either
+of Dedekind’s two classes A and B is uniquely determined by the other,
+one alone suffices for the determination of a real number. Thus, can be
+defined simply as that segment or subclass of the set of rational
+numbers made up of all positive rational numbers whose squares are less
+than 2 and also of all negative rational numbers. Similarly, every real
+number is nothing more than a segment of the rational number system.</p>
+<p>In some respects, the life of Dedekind was similar to that of
+Weierstrass. He, too, was one of four children, and he, too, never
+married, and both men lived into their eighties. On the other hand,
+Dedekind made an earlier start in mathematics than had Weierstrass,
+entering Göttingen at the age of nineteen and earning his doctorate
+three years later with a thesis on the calculus that elicited praise
+from Gauss. Dedekind stayed at Göttingen for a few years, teaching and
+listening to lectures by Dirichlet, and then he took up secondary school
+teaching, chiefly at Brunswick, for the rest of his life. Dedekind lived
+so long after his celebrated introduction of “cuts” that the famous
+publishing house of Teubner had listed his death in its Calendar for
+Mathematicians as September 4, 1899. This amused Dedekind, who lived
+more than a dozen years longer, and he wrote to the editor that he had
+passed the day in question in stimulating conversation with his friend
+Georg Cantor.</p>
+<p>Cantor and Kronecker</p>
+<p>The life of Cantor was tragically different from that of his friend
+Dedekind. Cantor was born in St. Petersburg of parents who had migrated
+from Denmark, but most of his life was spent in Germany, the family
+having moved to Frankfurt when he was eleven. His parents were
+Christians of Jewish background—his father had been converted to
+Protestantism, his mother had been born a Catholic. The son Georg took a
+strong interest in the fine-spun arguments of medieval theologians
+concerning continuity and the infinite, and this militated against his
+pursuing a mundane career in engineering, as suggested by his father. In
+his studies at Zurich, Göttingen, and Berlin, the young man consequently
+concentrated on philosophy, physics, and mathematics—a program that
+seems to have fostered his unprecedented mathematical imagination. He
+took his doctorate at Berlin in 1867 with a thesis on the theory of
+numbers, but his early publications show an attraction to Weierstrassian
+analysis. This field prompted the revolutionary ideas that sprang to his
+mind in his late twenties. We have already noted the work of Cantor in
+connection with the prosaic phrase “real number,” but his most original
+contributions centered about the provocative word “infinity.”</p>
+<p>Ever since the days of Zeno, men had been talking about infinity, in
+theology as well as in mathematics, but no one before 1872 had been able
+to tell precisely what he was talking about. All too frequently in
+discussions of the infinite, the examples cited were such things as
+unlimited power or indefinitely large magnitudes. Occasionally,
+attention had instead been focused, as in the work of Galileo and
+Bolzano, on the infinitely many elements in a collection, for example,
+the natural numbers or the points in a line segment. Cauchy and
+Weierstrass saw only paradox in attempts to identify an actual or
+“completed” infinity in mathematics, believing that the infinitely large
+and small indicated nothing more than the potentiality of Aristotle—an
+incompleteness of the process in question. Cantor and Dedekind came to a
+contrary conclusion. Dedekind saw in Bolzano’s paradoxes not an anomaly,
+but a universal property of infinite sets that he took as a precise
+definition:</p>
+<p>A system S is said to be infinite when it is similar to a proper part
+of itself; in the contrary case S is said to be a finite system.</p>
+<p>In somewhat more modern terminology, a set S of elements is said to
+be infinite if the elements of a proper subset S′ can be put into
+one-to-one correspondence with the elements of S. That the set S of
+natural numbers is infinite, for instance, is clear from the fact that
+the subset S′ made up of all triangular numbers is such that to each
+element n of S, there corresponds an element of S′ given by n(n + l)/2.
+This positive definition of a “completed infinite” set is not to be
+confused with the negative statement sometimes written with Wallis’s
+symbol as 1/0 = ∞. This last “equation” simply indicates that there is
+no real number that multiplied by zero will produce the number 1.</p>
+<p>Dedekind’s definition of an infinite set appeared in 1872 in his
+Stetigkeit und irrationale Zahlen. (In 1888, Dedekind amplified his
+ideas in another important treatise, Was sind und was sollen die
+Zahlen.) Two years later, Cantor married, and on the honeymoon, he took
+his bride to Interlaken, where they met Dedekind. In the same year,
+1874, Cantor published in Crelle’s Journal one of his most revolutionary
+papers. He, like Dedekind, had recognized the fundamental property of
+infinite sets, but, unlike Dedekind, Cantor saw that not all infinite
+sets are the same. In the finite case, sets of elements are said to have
+the same (cardinal) number if they can be put into one-to-one
+correspondence. In a somewhat similar way, Cantor set out to build a
+hierarchy of infinite sets according to the Mächtigkeit, or “power,” of
+the set. The set of perfect squares or the set of triangular numbers has
+the same power as the set of all of the positive integers, for the
+groups can be put into one-to-one correspondence. These sets seem to be
+much smaller than the set of all rational fractions, yet Cantor showed
+that the latter set is also countable or denumerable—that is, it, too,
+can be put into one-to-one correspondence with the positive integers,
+hence has the same power. To show this, we merely follow the arrows in
+Fig. 22.1, “counting” the fractions along the way.</p>
+<p>FIG. 22.1</p>
+<p>The rational fractions are so dense that between any two of them, no
+matter how close, there will always be another, yet Cantor’s arrangement
+showed that the set of fractions has the same power as does the set of
+integers. One begins to wonder whether all sets of numbers have the same
+power, but Cantor proved conclusively that this is not the case. The set
+of all real numbers, for example, has a higher power than does the set
+of rational fractions. To show this, Cantor used a reductio ad absurdum.
+Assume that the real numbers between 0 and 1 are countable, are
+expressed as nonterminating decimals (so that , for example, appears as
+0.333 . . . , as 0.499 . . . , and so on), and are arranged in
+denumerable order:</p>
+<p>where aij is a digit between 0 and 9 inclusive. To show that not all
+of the real numbers between 0 and 1 are included above, Cantor exhibited
+an infinite decimal different from all of those listed. To do this,
+simply form the decimal b = 0.b1b2b3 . . . , where bK = 9 if aKK = 1 and
+bK = 1 if aKK ≠ 1. This real number will be between 0 and 1, and yet it
+will be unequal to any one of those in the arrangement that was presumed
+to contain all of the real numbers between 0 and 1.</p>
+<p>The real numbers can be subdivided into two types in two different
+ways: (1) as rational and irrational or (2) as algebraic and
+transcendental. Cantor showed that even the class of algebraic numbers,
+which is far more general than that of rational numbers, nevertheless
+has the same power as that of the integers. Hence, it is the
+transcendental numbers that give to the real number system the “density”
+that results in a higher power. That it is fundamentally a matter of
+density that determines the power of a set is suggested in the fact that
+the power of the set of points on an infinitely extended line is just
+the same as the power of the set of points in any segment of the line,
+however small. To show this, let RS be the infinitely extended line and
+let PQ be any finite segment (Fig. 22.2). Place the segment so that it
+intersects RS at a point O but is not perpendicular to RS and does not
+lie on RS. If the points M and N are so chosen that PM and QN are
+parallel to RS and MON is perpendicular to RS, then, by drawing lines
+through M intersecting both OP and OR and lines through N intersecting
+OQ and OS, a one-to-one correspondence is easily established.</p>
+<p>FIG. 22.2</p>
+<p>More surprising still is the fact that dimensionality is not the
+arbiter of the power of a set. The power of the set of points in a unit
+line segment is just the same as that of the points in a unit area or in
+a unit volume—or, for that matter, in all of three-dimensional space.
+(Dimensionality, however, retains some measure of authority, in that any
+one-to-one mapping of points in a space of unlike dimensionality is
+necessarily a discontinuous mapping.) So paradoxical were some results
+in point-set theory that Cantor himself on one occasion in 1877 wrote to
+Dedekind, “I see it, but I don’t believe it,” and he asked his friend to
+check the proof. Publishers, too, were very hesitant about accepting his
+papers, and several times the appearance of articles by Cantor in
+Crelle’s Journal was delayed by editorial indecision and concern lest
+error lurk in the unconventional approach to mathematical concepts.</p>
+<p>Cantor’s amazing results led him to establish the theory of sets, a
+full-fledged mathematical discipline, known as Mengenlehre (theory of
+assemblages) or Mannigfaltigkeitslehre (theory of manifolds), a branch
+that in the mid-twentieth century was to have profound effects on the
+teaching of mathematics. At the time of its founding, Cantor spent much
+effort in convincing his contemporaries of the validity of the results,
+for there was considerable horror infiniti, and mathematicians were
+reluctant to accept the eigentlich Unendliche or “completed infinity.”
+In piling evidence on evidence, Cantor in the end built a whole
+transfinite arithmetic. The “power” of a set became the “cardinal
+number” of the set. Thus, the “number” of the set of integers is the
+“smallest” transfinite number, E, and the “number” of the set of real
+numbers or of points on a line is a “larger” number, C, the number of
+the continuum. Still unanswered is the question whether there are
+transfinite numbers between E and C. Cantor himself showed that there
+are indefinitely many transfinite numbers beyond C, for he proved that
+the set of subsets of a set is always of a higher power than the set
+itself. Hence, the “number” of the set of subsets of C is a third
+transfinite number, the set of subsets of this set of subsets determines
+a fourth number, and so on, indefinitely. As there are infinitely many
+natural numbers, so are there infinitely many transfinite numbers as
+well.</p>
+<p>The transfinite numbers described previously are cardinal numbers,
+but Cantor also developed an arithmetic of transfinite ordinal numbers.
+Ordering relations are a ticklish matter in mathematics, so it turns out
+that transfinite ordinal arithmetic differs strikingly from finite
+ordinal arithmetic. For finite cases, the rules for ordinal numbers are
+essentially the same as for cardinal numbers. Thus, 3 + 4 = 4 + 3,
+whether these digits represent cardinal or ordinal numbers. If, however,
+one designates by ω the ordinal number of the “counting numbers,” then ω
++ 1 is not the same as 1 + ω, for 1 + ω is obviously the same as ω.
+Moreover, one can show that ω + ω = ω and ω ⋅ ω = ω, properties unlike
+those of finite ordinals but resembling those of transfinite
+cardinals.</p>
+<p>Dedekind and Cantor were among the most capable mathematicians, and
+certainly the most original, of their day, yet neither man secured a
+top-ranking professional position. Dedekind spent almost a lifetime
+teaching at the secondary-school level, and Cantor spent most of his
+career at the University of Halle. Cantor had hoped to achieve the
+distinction of a professorship at the University of Berlin, and he
+blamed Leopold Kronecker (1823–1891) for his lack of success.</p>
+<p>Kronecker had been a student of Kummer’s, first at the
+secondary-school level, when the latter was a teacher in the gymnasium
+that Kronecker attended, later at the University of Breslau. Kronecker
+studied with Steiner and Dirichlet at Berlin, where he obtained his
+doctoral degree in 1845. The son of wealthy parents, he did not
+initially pursue an academic career but looked after the family’s
+financial interests. He continued to do mathematical research, however.
+When he moved to Berlin in 1855, he led the life of a private scholar.
+His prodigious output, covering number theory, the theory of equations,
+and elliptic function theory, among others, in 1861 gained him
+membership in the Academy of Sciences in Berlin. This made him eligible
+to teach at the University of Berlin, which he proceeded to do. He was
+appointed to a regular professorship in 1883, when Kummer retired.
+Kronecker’s research contributions were significant, both for individual
+results and for his overall attempt to arithmetize algebra, as well as
+analysis. His influence on early twentieth-century algebra was
+considerable, as was that on number theory; the work of Erich Hecke
+(1887–1947) serves as an example. The importance of Kronecker’s work has
+been overshadowed in most historical accounts by rather hostile versions
+of his conflict with Cantor. In fact, his predilection for the integers
+and his espousal of constructive procedures also estranged him from
+Weierstrass. To him is attributed the well-known statement “God made the
+integers, and all the rest is the work of man.” He categorically
+rejected the real-number constructions of his day on the grounds that
+they cannot be achieved only through finite processes. He is said to
+have asked Lindemann of what use was the proof that π is not algebraic,
+inasmuch as irrational numbers are nonexistent. Sometimes it is reported
+that his movement died of inanition. We shall later see that it can be
+said to have reappeared in a new form in the work of Poincaré and L. E.
+J. Brouwer.</p>
+<p>In 1883, Cantor wrote a vigorous defense in his Grundlagen einer
+allgemeinen Mannigfaltigkeitslehre (Foundations of a General Theory of
+Manifolds), holding that “definite numerations can be undertaken with
+infinite sets just as well as with finite.” He had no fear of falling
+into what he described as an “abyss of transcendentals,” yet he did
+occasionally lapse into arguments of the theological type. Kronecker
+continued his attacks on the hypersensitive and temperamental Cantor,
+and in 1884, Cantor suffered the first of the nervous breakdowns that
+were to recur during the remaining thirty-three years of his life. Fits
+of depression sometimes led him to doubt his own work, although he was
+comforted to some extent by the support of men such as Hermite. Toward
+the end, he did earn recognition for his achievements, but his death in
+1918 in a mental institution in Halle is a reminder that genius and
+madness sometimes are closely related. The tragedy of his personal life
+is mitigated by the paean of praise of one of the leading mathematicians
+of the early twentieth century, David Hilbert, who described the new
+transfinite arithmetic as “the most astonishing product of mathematical
+thought, one of most beautiful realizations of human activity in the
+domain of the purely intelligible.” Where timid souls had hesitated,
+Hilbert exclaimed, “No one shall expel us from the paradise which Cantor
+has created for us.”</p>
+<p>Analysis in France</p>
+<p>Before examining some of the fruits of Cantor’s paradise, we should
+regard some nineteenth-century analytic work in the country thus far
+ignored in this chapter—France. Although analytic activity during the
+latter part of the nineteenth century was most conspicuous in Germany
+and England, there had been a steady stream of contributions from Paris.
+These took a variety of forms, in teaching and research. Primarily
+associated with teaching were the great textbooks, usually based on
+lecture notes. Sturm’s Cours d’analyse was but one of the
+longest-lasting successors to Cauchy’s record of the course taught at
+the École Polytechnique; at the turn of the century, it was overtaken by
+Goursat’s work, which exerted a special influence in the United States
+through its English translation. Briot and Bouquet’s Théorie des
+fonctions elliptiques was a comprehensive compendium on the subject of
+elliptic functions; H. Laurent produced an elementary textbook on the
+subject more suitable for classroom use. Toward the end of the century,
+Jules Tannery and J. Molk produced multivolume Elements of the theory of
+elliptic functions. There were authors who ranged across a wider field,
+such as Joseph Alfred Serret (1819–1885), who taught and produced
+textbooks on practically every area of mid-nineteenth-century
+mathematics. Also significant was the work of popularizers such as the
+Abbé Moigno, a self-appointed explicator of Cauchy in the 1840s and the
+editor of Cosmos, a journal that reported on scientific and mathematical
+activities.</p>
+<p>Not surprisingly, Cauchy’s work provided ample takeoff points for
+many analysts of the time. For example, Pierre-Alphonse Laurent
+(1813–1854) and Victor Puiseux (1820–1883) are still remembered for
+their contributions to complex function theory. Laurent’s expansion
+replaces Taylor series at certain points of discontinuity; Puiseux went
+beyond Cauchy in a clear discussion of essential singularities and
+related matters.</p>
+<p>French mathematics continued to influence activity elsewhere—we have
+already noted this in connection with Liouville and Camille Jordan.
+Another example may be found in the work of Gabriel Lamé (1795–1860),
+whose name is primarily associated with the introduction of curvilinear
+coordinates to the treatment of the partial differential equations,
+especially the heat equation, describing physical problems. Eduard
+Heine, a much younger member of the Dirichlet circle, who concentrated
+on spherical harmonics and the potential equation, first followed and
+for a while was in close competition with Lamé in his research. Also
+inspired by Lamé’s concept of curvilinear coordinates and overlapping
+with Heine was É. Mathieu (1835–1900), who introduced elliptic
+cylindrical coordinates and the functions named after him in his study
+of the wave equation, in connection with the problem of a vibrating
+elliptic membrane.</p>
+<p>Perhaps the best-known French analytic work of midcentury was that of
+Sturm and Liouville, dealing with the theory of second-order ordinary
+differential equations with boundary conditions. In fact, the papers in
+question were published in the early issues of Liouville’s Journal in
+the 1830s. Their tremendous significance emerged only gradually,
+however, especially through the use made of them by the British
+mathematical physicists of the later period. The problem at issue was
+that of the expansibility into characteristic functions (eigenfunctions)
+of the expression at hand. It can be regarded as a generalization of the
+theory of Fourier series. Sturm had studied not only Fourier’s theory of
+heat but also his work on numerical solutions of equations; the
+influence of this work seems apparent as soon as one reads Sturm’s first
+major result of the theory. This is his separation theorem, which states
+that the oscillations of any two (real) solutions alternate, or separate
+each other. The Sturm-Liouville theory not only confirmed the
+expansibility but also provided criteria for solutions and for the
+evaluation of the eigenfunctions. The theory was not altogether rigorous
+at the outset. Toward the end of the century, refinements in
+applications and proofs were provided. Especially active in the field
+was the American mathematician Maxime Bôcher (1867–1918). Bôcher, who
+trained at Harvard in the 1880s under William Elwood Byerly, Benjamin O.
+Peirce, and James Mills Peirce, had earned his doctoral degree at
+Göttingen under Klein in 1891 with a prize-winning dissertation on the
+series expansions of potential theory. After the turn of the century,
+Bôcher was briefly joined in the study of Sturm-Liouville issues by his
+fellow countrymen Max Mason, G. R. D. Richardson, and G. D. Birkhoff. As
+a token of appreciation for Sturm and Liouville’s theory and the
+research opportunities it had provided for this small band of American
+analysts, Bôcher chose Sturm’s methods as his topic when he was invited
+to give a set of lectures at the University of Paris in the winter of
+1913–1914.</p>
+<p>Liouville is also noted for a variety of other contributions. In
+complex analysis, his work is recalled in Liouville’s theorem: If f(z),
+an entire analytic function of the complex variable z, is bounded over
+the complex plane, then f(z) is a constant. From this theorem, the
+fundamental theorem of algebra can be deduced as a simple corollary as
+follows: If f(z) is a polynomial of degree greater than zero, and if
+f(z) were nowhere zero in the complex plane, then its reciprocal F(z) =
+l/f(z) would satisfy the conditions of the Liouville theorem.
+Consequently, F(z) would have to be a constant, which obviously it is
+not. Therefore, the equation f(z) = 0 is satisfied by at least one
+complex value z = z0. In plane analytic geometry, there is another
+“Liouville theorem”: The lengths of the tangents from a point P to a
+conic C are proportional to the cube roots of the radii of curvature of
+C at the corresponding points of contact. Finally, let us consider
+Liouville’s best-known contribution to the theory of real numbers.</p>
+<p>The theory of numbers deals primarily with the integers or, more
+generally, with ratios of integers—the so-called rational numbers. Such
+numbers are always roots of a linear equation ax + b = 0 with integral
+coefficients. Real analysis deals with a more general type of number
+that may be either rational or irrational. It had been known, in
+essence, to Euclid that the roots of ax2 + bx + c = 0, where a, b, and c
+are integral multiples of a given length, can be constructed
+geometrically with a straightedge and compasses. If the coefficients of
+axn + bxn−1 + cxn−2 + . . . + px + q = 0, where n and a, b, c, . . . , q
+are integers and n &gt; 2, the roots of the equation generally are not
+constructible with Euclidean tools. The roots of such an equation, for n
+&gt; 0, are known as algebraic numbers, to indicate the manner in which
+they are defined. Inasmuch as every rational number is a root of such an
+equation for n = 1, the question naturally arises whether every
+irrational number is a root of such an equation for some n ≥ 2. The
+negative of this question was finally established in 1844 by Liouville,
+who in that year constructed an extensive class of nonalgebraic real
+numbers. The numbers of the particular class that he developed are known
+as Liouville numbers, the more comprehensive set of nonalgebraic real
+numbers being called transcendental numbers. Liouville’s construction of
+transcendental numbers is quite involved, but if one does not insist on
+a proof of transcendentalism, some simple examples of transcendental
+numbers can be given—such as 0.1001000100001 . . . , or numbers of the
+form</p>
+<p>To prove that any particular real number, such as e or π, is not
+algebraic is usually quite difficult. Liouville, for example, was able
+to show, in his Journal for 1844, that neither e nor e2 could be the
+root of a quadratic equation with integral coefficients; hence, given a
+unit line segment, lines of length e or e2 are not constructible by
+Euclidean tools. But it was almost thirty years before another French
+mathematician, Charles Hermite (1822–1901), pursuing the views of
+Liouville, was able to show in 1873 in an article in the Comptes Rendus
+of the Académie that e could not be the root of any polynomial equation
+with integral coefficients—that is, that e is transcendental.</p>
+<p>The status of the number π baffled mathematicians for nine years
+longer than did the number e. Lambert in 1770 and Legendre in 1794 had
+shown that both π and π2 are irrational, but this proof had not put an
+end to the age-old question of the squaring of the circle. The matter
+was finally put to rest in 1882 in a paper in the Mathematische Annalen
+by C. L. F. Lindemann (1852–1939) of Munich. The article, titled “Über
+die Zahl π,” showed conclusively, in extending the work of Liouville and
+Hermite, that π is also a transcendental number. In his proof, Lindemann
+first demonstrated that the equation eix + 1 = 0 cannot be satisfied if
+x is algebraic. Inasmuch as Euler had shown that the value x = π does
+satisfy the equation, it must follow that π is not algebraic. Here,
+finally, was the answer to the classical problem of the quadrature of
+the circle. In order for the quadrature of the circle to be possible
+with Euclidean tools, the number π would have to be the root of an
+algebraic equation with a root expressible in square roots. Because π is
+not algebraic, the circle cannot be squared according to the classical
+rules. Emboldened by his success, Ferdinand Lindemann later published
+several purported proofs of Fermat’s Last Theorem, but they were shown
+by others to be invalid.</p>
+<p>Hermite was one of France’s most influential nineteenth-century
+analysts. Despite, or perhaps because of, the fact that he had fared
+badly as a student when faced with educational pedantry and
+examinations, Hermite at one time or another was affiliated with the
+major mathematically oriented institutions of Paris. Hermite served as
+examiner at the École Polytechnique, substituted at the Collège de
+France, taught at the École Normale, and, from 1869 to 1897, held the
+chair as professor of higher analysis at the Sorbonne. In school, he had
+the same teacher who had encouraged the young Galois; his first reading
+in the mathematical classics consisted of Lagrange’s work on the
+solution of numerical equations and the French translation of Gauss’s
+Disquisitiones Arithmeticae. He had first come to notice in 1842, while
+still a preparatory school student, by submitting two papers to the
+Nouvelles Annales de Mathématiques, a journal aimed at mathematics
+teachers and their more advanced students. One of these papers was a
+very elegant exposition of the insolvability of the quintic. In 1858,
+he, as well as Kronecker, solved the quintic equation using elliptic
+modular functions. During the intervening years, Hermite had come under
+the protection of Liouville, who introduced Hermite to his friends in
+Prussia, especially Jacobi. The ensuing correspondence shows Hermite’s
+early feats in the theory of elliptic and Abelian functions and analytic
+number theory. In 1864, Hermite contributed a new class of special
+functions in connection with the problem of functional expansions over
+unbounded intervals. Ironically, the name of this great analyst nowadays
+appears more frequently in algebra than in analysis: Given a matrix H,
+let each of its elements be replaced by its complex conjugate and call
+the resulting matrix H<em>. If H = H</em>, the matrix is called
+Hermitian. In 1858, Hermite showed that the eigenvalues of such a matrix
+are real. Previously, he had coined the term “orthogonal” for a matrix M
+if −M equals the inverse of M*.</p>
+<p>The steady contributions of nineteenth-century French analysts attest
+to the continuing fertility of French analytic soil, but the most
+telling sign was the spectacular display of new concepts that Poincaré
+and his younger contemporaries presented to the new century.</p>
+<h6 id="阅读日期-2025年12月20日-2025年12月20日-共-1-天">阅读日期：
+2025年12月20日-2025年12月20日 共： 1 天</h6>
 <script src="https://giscus.app/client.js"
         data-repo="hbaolong/hbaolong.github.io"
         data-repo-id="R_kgDOLetDQg"

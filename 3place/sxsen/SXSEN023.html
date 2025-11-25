@@ -5,7 +5,7 @@
   <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
   <meta name="author" content="hbaolong@vip.qq.com" />
-  <title>5103数学史EN023-2025年11月23日-数学史EN</title>
+  <title>数学史EN:Chapter 19 Gauss</title>
   <style>
     html {
       color: #1a1a1a;
@@ -171,7 +171,7 @@
 </head>
 <body>
 <header id="title-block-header">
-<h1 class="title">5103数学史EN023-2025年11月23日-数学史EN</h1>
+<h1 class="title">数学史EN:Chapter 19 Gauss</h1>
 <p class="author">hbaolong@vip.qq.com</p>
 </header>
 <center>
@@ -182,54 +182,748 @@ href="/3place/sxsen/index_rich.html">丰富目录</a> <a
 href="/3place/sxsen/index_readcal.html">同读日历</a> <a
 href="/3place/sxsen/index_timeline.html">时间线</a> <a
 href="/3place/sxsen/index_books.html">引用书籍</a> <a
-href="/3place/sxsen/index_words.html">使用字频</a> <a
-href="/3place/sxsen/hash/">HASH5</a> <a
+href="/3place/sxsen/index_words.html">使用字频</a>
+<div id="wx_pic" style="margin:0 auto;display:none;">
+<img src='/img/logo.png'/>
+</div>
+<a href="/3place/sxsen/hash/">HASH5</a> <a
 href="/3place/sxsen/dicts/">本书字典</a>
 </center>
-<h4 id="approximations">Approximations</h4>
-<p>An Old Babylonian tablet from the Yale Collection (No. 7289) includes
-the calculation of the square root of 2 to three sexagesimal places, the
-answer being written . In modern characters, this number can be
-appropriately written as 1;24,51,10, where a semicolon is used to
-separate the integral and fractional parts, and a comma is used as a
-separatrix for the sexagesimal positions. This form will generally be
-used throughout this chapter to designate numbers in sexagesimal
-notation. Translating this notation into decimal form, we have 1124(60)
-1 151</p>
-<ol start="60" type="1">
-<li>2 110(60) 3. This Babylonian value for p2 is equal to approximately
-1.414222, differing by about 0.000008 from the true value. Accuracy in
-approximations was relatively easy for the Babylonians to achieve with
-their fractional notation, which was rarely equaled until the time of
-the Renaissance.</li>
-</ol>
-<p>The effectiveness of Babylonian computation did not result from their
-system of numeration alone. Mesopotamian mathematicians were skillful in
-developing algorithmic procedures, among which was a square-root process
-often ascribed to later men. It is sometimes attributed to the Greek
-scholar Archytas (428 365 BCE) or to Heron of Alexandria (ca. 100 CE);
-occasionally, one finds it called Newton’s algorithm. This Babylonian
-procedure is as simple as it is effective. Let x5pa be the root desired,
-and let a1 be a first approximation to this root; let a second
-approximation be found from the equation b1 5a/a1. If a1 is too small,
-then b1 is too large, and vice versa. Hence, the arithmetic mean a2
-512ða1 1b1Þ is a plausible next approximation. Inasmuch as a2 is always
-too large, the next approximation, b2 5a/a2, will be too small, and one
-takes the arithmetic mean a3 512ða2 1b2Þ to obtain a still better
-result; the procedure can bep continued indefinitely. The value of 2 on
-Yale Tablet 7289 will be found to be that of a3, where a1 51;30. In the
-Babylonian square-root algorithm, one finds an iterative procedure that
-could have put the mathematicians of the time in touch with infinite
-processes, but scholars of that era did not pursue the implications of
-such problems.</p>
-<p>The algorithm just described is equivalent to a two-term
-approximation to the binomial series, a case with which the Babylonians
-were familiar. If pa2 1b is desired, the approximation a1 5a leads to b1
-5(a2 1b)/a and a2 5(a1 1b1)/25a1b/(2a), which is in agreement with the
-first two terms in the expansion of (a2 1b)1/2 and provides an
-approximation found in Old Babylonian texts.</p>
-<h6 id="阅读日期-2025年11月23日-2025年11月23日-共-1-天">阅读日期：
-2025年11月23日-2025年11月23日 共： 1 天</h6>
+<h4 id="chapter-19-gauss">Chapter 19 Gauss</h4>
+<p>Mathematics is the queen of the sciences and number theory the queen
+of mathematics.</p>
+<p>—Gauss</p>
+<p>Nineteenth-Century Overview</p>
+<p>The nineteenth century deserves to be known as the Golden Age in
+mathematics. The additions to the subject during these one hundred years
+far outweigh the total combined productivity of all preceding ages. The
+century was also one of the most revolutionary in the history of
+mathematics. The introduction into the mathematician’s repertoire of
+concepts such as non-Euclidean geometries, n-dimensional spaces,
+noncommutative algebras, infinite processes, and nonquantitative
+structures all contributed to a radical transformation that changed the
+appearance, as well as the definitions, of mathematics.</p>
+<p>The geographic distribution of mathematical activity also began to
+change. Hitherto, each major period of history seemed to be
+characterized by specific geographic clusters where most advances in
+mathematics took place. During the first half of the nineteenth century,
+the center of mathematical activity became diffused. Nevertheless,
+several decades passed before there were institutions that could boast
+the mathematical strength of the French, epitomized by the École
+Polytechnique. Most countries supported mathematical efforts directed
+toward surveying, navigation, or other areas of application. Support for
+research in pure mathematics—in time or money—was the exception, rather
+than the rule. This is illustrated in the career of the greatest
+mathematician of the time, who was German.</p>
+<p>Gauss: Early Work</p>
+<p>Carl Friedrich Gauss (1777–1855) enjoyed numerical computation as a
+child; an anecdote that is told of his early schooling is
+characteristic. One day, in order to keep the class occupied, the
+teacher had the students add up all of the numbers from 1 to 100, with
+instructions that each child should place his slate on a table as soon
+as he had completed the task. Almost immediately, Carl placed his slate
+on the table, saying, “There it is.” When the instructor finally looked
+at the results, Gauss’s slate was the only one to have the correct
+answer, 5050, with no further calculation. Evidently, the ten-year-old
+boy had mentally computed the sum of the arithmetic progression 1 + 2 +
+3 + . . . + 99 + 100, presumably through the formula m(m + 1)/2. His
+teachers soon called Gauss’s talent to the attention of the Duke of
+Brunswick, who supported his education, which first enabled him to study
+at the local college, then at the University in Göttingen, where he
+matriculated in October 1795.</p>
+<p>The following March, still a month short of being nineteen years old,
+Gauss made a brilliant discovery. For more than 2,000 years, men had
+known how to construct, with compasses and straightedge, the equilateral
+triangle and the regular pentagon (as well as certain other regular
+polygons, the numbers of whose sides are multiples of two, three, and
+five), but no other polygon with a prime number of sides. Gauss showed
+that the regular polygon of seventeen sides could also be constructed
+with compasses and straightedge.</p>
+<p>Gauss commemorated his discovery by starting a diary in which, for
+the next eighteen years, he noted many of his discoveries. He obtained
+numerous results while still a student. Some were rediscoveries of
+theorems established by Euler, Lagrange, and other eighteenth-century
+mathematicians; many were new. Among the more significant discoveries of
+his student days, we may single out the method of least squares, the
+proof of the law of quadratic reciprocity in number theory, and his work
+on the Fundamental Theorem of Algebra.</p>
+<p>He earned his doctorate with a thesis titled “New Demonstration of
+the Theorem That Every Rational Integral Algebraic Function in One
+Variable Can Be Resolved into Real Factors of First or Second Degree.”
+In this, the first of four proofs of the Fundamental Theorem of Algebra
+that he published during his life, Gauss stressed the importance of
+demonstrating the existence of at least one root in proving the theorem
+in question.</p>
+<p>Facsimile of a page in the famous diary of Gauss</p>
+<p>Gauss presented this doctoral thesis to the University of Helmstedt,
+which had on its faculty Johann Friedrich Pfaff (1765–1825), who, next
+to Gauss, was widely regarded as the ranking German mathematician of his
+time. Today he is best known for an 1813 memoir on the integration of
+systems of differential equations. On leaving Göttingen in 1798, he
+returned to his native Brunswick, where he spent the next nine years
+enjoying the continued support of the duke, waited for a suitable job,
+got married, and made some of his major discoveries.</p>
+<p>Number Theory</p>
+<p>While still a student in Göttingen, Gauss had begun work on a major
+publication in number theory. Appearing two years after his doctoral
+dissertation, the Disquisitiones Arithmeticae is one of the great
+classics of mathematical literature. It consists of seven sections.
+Culminating in two proofs of the law of quadratic reciprocity, the first
+four sections are essentially a tightened recasting of
+eighteenth-century number theory. Fundamental in the discussion are the
+concepts of congruence and residue class. Section 5 is devoted to the
+theory of binary quadratic forms, specifically the question of solutions
+for equations of the form ax2 + 2bxy + cy2 = m; the techniques developed
+in this section became the basis for much work done by later generations
+of number theorists. Section 6 consists of various applications. The
+last section, which initially drew the most attention, deals with the
+solution of the general cyclotomic equation of prime degree.</p>
+<p>Gauss called the law of quadratic reciprocity, which Legendre had
+published a couple of years earlier, the theorema aureum, or the gem of
+arithmetic. In his later work, Gauss sought to find comparable theorems
+for congruences xn ≡ p(mod q) for n = 3 and 4, but for these cases, he
+found it necessary to extend the meaning of the word “integer” to
+include the so-called Gaussian integers, that is, numbers of the form a
++ bi, where a and b are integers. The Gaussian integers form an integral
+domain like that of the real integers but more general. Problems in
+divisibility become more complicated, for 5 no longer is a prime, being
+factorable into the product of the two “primes” 1 + 2i and 1 − 2i. In
+fact, no real prime of the form 4n + 1 is a “Gaussian prime,” whereas
+real primes of the form 4n − 1 remain primes in the generalized sense.
+In the Disquisitiones, Gauss included the Fundamental Theorem of
+Arithmetic, one of the basic principles that continues to hold in the
+integral domain of Gaussian integers. In fact, any integral domain for
+which factoring is unique is known today as a Gaussian integral domain.
+One of the contributions of the Disquisitiones was a rigorous proof of
+the theorem, known since the days of Euclid, that any positive integer
+can be represented in one and only one way (except for the order of the
+factors) as a product of primes.</p>
+<p>Not all that Gauss discovered about prime numbers is contained in the
+Disquisitiones. On the back page of a copy of a table of logarithms that
+he had obtained as a boy of fourteen is written cryptically in
+German:</p>
+<p>This is a statement of the celebrated prime number theorem: the
+number of primes less than a given integer a approaches asymptotically
+the quotient a/ln a as a increases indefinitely. The odd thing is that
+if Gauss wrote this, as we presume he did, he kept this beautiful result
+to himself. We do not know whether he had a proof of the theorem or even
+when the statement was written.</p>
+<p>In 1845, a Parisian professor, Joseph L. F. Bertrand (1822–1900),
+guessed that if n &gt; 3, there is always at least one prime between n
+and 2n (or, more precisely, 2n − 2) inclusive. This conjecture, known as
+Bertrand’s postulate, was proved in 1850 by Pafnuty Lvovich Chebyshev
+(1821–1894) of the University of St. Petersburg. Chebyshev was a rival
+of Nikolay Ivanovich Lobachevsky as the leading Russian mathematician of
+his day and became a foreign associate of the Institut de France and of
+the Royal Society of London. Chebyshev, evidently unaware of Gauss’s
+work on primes, was able to show that if π(n)(ln n)/n approaches a limit
+as n increases indefinitely, this limit must be 1, but he could not
+demonstrate the existence of a limit. Not until two years after
+Chebyshev’s death was a proof generally known. Then, in 1896, two
+mathematicians, working independently, came up with demonstrations in
+the same year. One was the Belgian mathematician C. J. de la
+Vallée-Poussin (1866–1962), who lived to be almost ninety-six; the other
+was a Frenchman, Jacques Hadamard (1865–1963), who was almost
+ninety-eight when he died.</p>
+<p>Problems on the number and the distribution of primes have fascinated
+many mathematicians from Euclid’s day to our own. What may be regarded
+as a deep and difficult corollary to Euclid’s theorem on the infinity of
+primes was proved by the mathematician who in 1855 was to succeed Gauss
+at Göttingen. This was Peter Gustav Lejeune Dirichlet (1805–1859), the
+man who did more than anyone else to amplify the Disquisitiones. The
+Dirichlet theorem states not only that the number of prime numbers is
+infinite, but that if one considers only those integers in an arithmetic
+progression a, a + b, a + 2b, . . ., a + nb, in which a and b are
+relatively prime, then even in this relatively sparser subset of the
+integers, there still will be infinitely many primes. The proof
+Dirichlet gave required complicated tools from analysis, where
+Dirichlet’s name is again preserved in the Dirichlet test for uniform
+convergence of a series. Among Dirichlet’s other contributions was the
+first proof of Bertrand’s postulate. It should be noted that Dirichlet’s
+theorem showed that the discrete domain of the theory of numbers cannot
+be studied in isolation from the branch of mathematics dealing with
+continuous variables—that is, that number theory requires the aid of
+analysis. Gauss himself, in the Disquisitiones, had given a striking
+example of the fact that the properties of prime numbers intrude in the
+most unexpected ways even into the realm of geometry.</p>
+<p>Toward the end of the Disquisitiones, Gauss included the first
+important discovery he had made in mathematics: the construction of the
+regular polygon of seventeen sides. He carried the topic to its logical
+conclusion by showing which of the infinitely many possible regular
+polygons can be constructed and which cannot. General theorems, such as
+that which Gauss now proved, are of ever so much more value than a
+single case, no matter how spectacular the single case may be. It will
+be recalled that Fermat had believed that numbers of the form are
+primes, a conjecture that Euler had shown to be incorrect. The number is
+indeed prime, as are also and . Gauss had already shown the polygon of
+seventeen sides to be constructible, and the question naturally arises
+whether a regular polygon of 257 or 65,537 sides can be constructed with
+Euclidean tools. In the Disquisitiones, Gauss answered the question in
+the affirmative, showing that a regular polygon of N sides can be
+constructed with Euclidean tools if and only if the number N is of the
+form N = 2mplp2p3 . . . pr, where m is any positive integer and the p’s
+are distinct Fermat primes. There remains one aspect of the problem that
+Gauss did not answer, and that has not yet been answered. Is the number
+of Fermat primes finite or infinite? For n = 5, 6, 7, 8, and 9, it is
+known that the Fermat numbers are not prime, and it appears possible
+that there are five and only five constructible regular polygons of a
+prime number of sides, two that were known in antiquity and the three
+that were discovered by Gauss. A young man whom the aging Gauss admired,
+Ferdinand Gotthold Eisenstein (1823–1852), an instructor of mathematics
+at Berlin, added a new conjecture about prime numbers when he hazarded
+the thought, unverified up to the present time, that numbers of the form
+, and so on, are primes. To Gauss is attributed the remark that “There
+have been only three epoch-making mathematicians, Archimedes, Newton,
+and Eisenstein.” Whether, given a normal span of years, Eisenstein might
+have fulfilled such a glowing prediction is a matter of conjecture, for
+the young privatdozent died when he was not yet thirty years old.</p>
+<p>Reception of the Disquisitiones Arithmeticae</p>
+<p>Many mathematicians introducing new methods or concepts have found
+that these are viewed with skepticism until it becomes clear not only
+that they are useful in obtaining new results but that they so far
+exceed existing techniques as to make it worthwhile for a mature
+researcher to learn them. Gauss, too, found this to be true in the case
+of his great book on number theory. It created little initial attention;
+only the algebraic contribution of the last section was noted with
+approbation by French authors of the time. One of the very few
+individuals who initiated a correspondence with Gauss for the purpose of
+exchanging ideas about the number-theoretic aspects of the book was a
+certain “Monsieur Leblanc”; this turned out to be Sophie Germain, a
+mathematician who worked outside the established institutions that were
+closed to women. Germain earned the respect and assistance not only of
+Gauss but of Lagrange and Legendre; the latter attached her name to a
+theorem that marks a major step in the three-century marathon effort to
+prove Fermat’s Last Theorem. In another field, the Paris Academy of
+Sciences awarded her a prize for a memoir on the mathematical theory of
+elastic surfaces.</p>
+<p>In general, however—and despite the availability in Paris of a French
+translation after 1807—Gauss’s Disquisitiones arithmeticae lay dormant
+until the late 1820s, when C. G. J. Jacobi (1804–1851) and P. G. Lejeune
+Dirichlet first brought to light some of the deeper consequences to be
+derived from the work.</p>
+<p>Astronomy</p>
+<p>It was astronomy, rather than number theory, that gained immediate
+fame for the twenty-four-year-old author of the Disquisitiones
+Arithmeticae. On January 1, 1801, Giuseppe Piazzi (1746–1826), the
+director of the Palermo observatory, had discovered the new minor planet
+(asteroid) Ceres, but a few weeks afterward, the tiny body was lost to
+sight. Having most unusual computational ability, as well as the added
+advantage of the method of least squares, Gauss took up the challenge to
+compute, from the few recorded observations of the planet, the orbit in
+which it moved. For the task of computing orbits from a limited number
+of observations, he devised a scheme, known as Gauss’s method, that is
+still used to track satellites. The result was a resounding success, the
+planet being rediscovered at the end of the year in very nearly the
+position indicated by his calculations. Gauss’s orbit computations
+captured the attention of astronomers internationally and soon brought
+him to prominence among German mathematical scientists, most of whom
+were engaged in astronomical and geodesic activities at the time. In
+1807, he was appointed director of the Göttingen observatory, a post he
+held for nearly half a century. Two years later, his classic treatise on
+theoretical astronomy, the Theoria Motus, appeared. It provided a clear
+guide for carrying out orbital computations and by the time of his death
+had been translated into English, French, and German.</p>
+<p>Orbital computations were not the only area of astronomical research
+in which Gauss distinguished himself and paved a path for succeeding
+generations, however. Much of his time during the first decade of the
+nineteenth century was spent in working on the problem of perturbations.
+This had moved to the foreground of astronomers’ interests after the
+discovery in 1802 of the minor planet Pallas by Gauss’s good friend, the
+physician and amateur astronomer Heinrich Wilhelm Olbers (1758–1840).
+Pallas has a relatively large eccentricity and is particularly affected
+by the gravitational attraction of other planets such as Jupiter and
+Saturn. Determining the effect of these attractions is a specific
+example of the n-body problem that Euler and Lagrange had previously
+attacked for n = 2 or 3. Gauss’s work on this problem resulted not only
+in astronomical memoirs but in two classical mathematical papers: one
+dealt with infinite series, the other with a new method for numerical
+analysis.</p>
+<p>Gauss’s Middle Years</p>
+<p>The decade in which Gauss arrived at the preceding results had been
+filled with new discoveries, as well as emotionally draining events. He
+had experienced early recognition and honors, happiness in marriage, and
+fatherhood. But then came financial concerns resulting from levies
+imposed by the occupying administration in Göttingen; the deaths of his
+patron, the Duke of Brunswick, and of his wife and third child;
+annoyance at the lack of appreciation of his work among scientists such
+as the French astronomer J. B. J. Delambre; concern over raising his
+children; and rapid entry into a second marriage. The previously
+cheerful young genius became an austere figure whose strict sense of
+duty often led him to seemingly rigid decisions in the nonscientific
+realm. This image was intensified after the 1820s by the lingering
+illness of his second wife, who died in 1831, and an estrangement from
+one of his sons that lasted for more than a decade.</p>
+<p>In the meantime, Gauss’s position as director of the Göttingen
+observatory presented new challenges. Between 1810 and 1820, much of his
+energy was absorbed by the building and outfitting of a new observatory.
+He made the acquaintance of major instrument makers of the period and
+involved himself with the details of instrument construction. Studies of
+instruments and observations led him to significant results in error
+theory. After 1815, his increasing comprehension of the nature of
+instrumental, observational, and technical errors was reinforced by his
+immersion in surveying and geodesy. The result was a set of reports on
+error theory. During the 1820s, he was charged with the survey of the
+Kingdom of Hannover, which meant that he spent numerous summers in the
+field, personally conducting measurements, often under primitive and
+hazardous conditions. The most significant publication that resulted
+from the geometric considerations of the decade appeared in 1827, and it
+opened a new direction in geometric and, ultimately, in physical
+research.</p>
+<p>Gauss was not especially fond of geometry, yet he thought about the
+subject sufficiently to do two things: (1) to arrive, by 1824, at an
+important unpublished conclusion on the parallel postulate; and (2) to
+publish, in 1827, a classic treatise that generally is regarded as the
+cornerstone of a new branch of geometry. Gauss, while still a student at
+Göttingen, had tried to prove the parallel postulate, as had his
+intimate friend Wolfgang (or Farkas) Bolyai (1775–1856) as well. Both
+men continued to look for a proof, the latter giving up in despair, the
+former eventually coming to the conviction that not only was no proof
+possible, but that a geometry quite different from that of Euclid might
+be developed. Had Gauss expanded and published his thoughts on the
+parallel postulate, he would have been hailed as the inventor of
+non-Euclidean geometry, but his silence on the subject resulted in
+credit going to others, as we shall see further on.</p>
+<p>Differential Geometry</p>
+<p>The new branch of geometry that Gauss initiated in 1827 is known as
+differential geometry, and it belongs perhaps more to analysis than to
+the traditional field of geometry. Ever since the days of Newton and
+Leibniz, men had applied the calculus to the study of curves in two
+dimensions; in a sense, this work constituted a prototype of
+differential geometry. Euler and Monge had extended this to include an
+analytic study of surfaces; hence, they are sometimes regarded as the
+fathers of differential geometry. Nevertheless, not until the appearance
+of Gauss’s classical treatise Disquisitiones Circa Superficies Curvas
+was there a comprehensive volume devoted entirely to the subject.
+Roughly speaking, ordinary geometry is interested in the totality of a
+given diagram or figure, whereas differential geometry concentrates on
+the properties of a curve or a surface in the immediate neighborhood of
+a point on the curve or the surface. In this connection, Gauss extended
+the work of Huygens and Clairaut on the curvature of a plane or a gauche
+curve at a point by defining the curvature of a surface at a point—the
+“Gaussian curvature” or “the total curvature.” If at a point P on a
+well-behaved surface S one erects a line N normal to S, the pencil of
+planes through N will cut the surface S in a family of plane curves,
+each of which will have a radius of curvature. The directions of the
+curves with the largest and smallest radii of curvature, R and r, are
+called the principal directions on S at P, and they always happen to be
+perpendicular to each other. The quantities R and r are known as the
+principal radii of curvature of S at P, and the Gaussian curvature of S
+at P is defined as K = 1/rR. (The quantity , known as the mean curvature
+of S at P, also turns out to be useful.) Gauss gave formulas for K in
+terms of the partial derivatives of the surface with respect to various
+coordinate systems, curvilinear as well as Cartesian; he also discovered
+what even he regarded as “remarkable theorems” about properties of
+families of curves, such as geodesics, drawn on the surface.</p>
+<p>Gauss began the treatment of curved surfaces by using the parametric
+equation of a surface introduced by Euler. That means if a point (x, y,
+z) of a surface can be represented by the parameters u and v so that x =
+x(u, v), y = y(u, v), and z = z(u, v), then dx = adu + a′dv, dy = bdu +
+b′dv, dz = cdu + c′dv, where a = xu, a′ = xv, b = yu, b′ = yv, c = zu,
+and c′ = zv. Considering the arc length ds2 = dx2 + dy2 + dz2,
+expressing this in the parametric coordinates gives ds2 = (adu + a′dv)2
++ (bdu + b′dv)2 + (cdu + c′dv)2 = Edu2 + 2Fdudv + Gdv2, where E = a2 +
+b2 + c2, F = aa′ + bb′ + cc′, and G = a′2 + b′2 + c′2. Gauss proceeded
+to show that the properties of a surface depend only on E, F, and G.
+This leads to many consequences. In particular, it becomes easy to say
+what properties of the surface remain invariant. It was in building on
+this work of Gauss that Bernhard Riemann and later geometers transformed
+the subject of differential geometry.</p>
+<p>Gauss’s Later Work</p>
+<p>By the time the work on curved surfaces had appeared, the
+mathematical climate in Germany was beginning to change. One of the most
+significant aspects of this change was the founding of a new journal in
+1809. This was the Annales de Mathématiques Pures et Appliquées, edited
+by Joseph-Diaz Gergonne (1771–1859). In Germany, a periodical similar to
+Gergonne’s Annales, and even more successful, was begun in 1826 by
+August Leopold Crelle (1780–1855) under the title Journal für die reine
+und angewandte Mathematik. So heavily weighted were the articles in the
+direction of pure (reine) mathematics (notably those by Abel, six of
+which appeared in the very first volume) that wags suggested the title
+might be more appropriate if the two German words und angewandte (“and
+applied”) were replaced by the single word unangewandte (“unapplied”).
+Gauss contributed two short articles to this new venture: one was a
+proof of “Harriot’s theorem in algebra,” the other contained the
+statement of Gauss’s principle of least constraint. He continued to
+submit his major memoirs to the Göttingen Gesellschaft der
+Wissenschaften, however. An important memoir on capillarity was
+published by the Göttingen Society, as were his two influential memoirs
+on number theory. Historians often cite the first of these, published in
+1832, because it contains Gauss’s geometric representation of complex
+numbers. The importance of the memoir as a whole lies in the fact that
+it pointed the way to extending the theory of numbers from the reals to
+the complex field and beyond. As noted previously, this was crucial in
+the work of later mathematicians.</p>
+<p>At the more elementary level, it is interesting to observe that the
+graphical representation of complex numbers had already been discovered
+in 1797 by Caspar Wessel (1745–1818) and published in the transactions
+of the Danish academy for 1798, but Wessel’s work went virtually
+unnoticed; hence, today the plane of complex numbers is usually referred
+to as the Gaussian plane, even though Gauss did not publish his views
+until some thirty years after Wessel did. No one before Wessel and Gauss
+took the obvious step of thinking of the real and imaginary parts of a
+complex number a + bi as rectangular coordinates of points in a plane.
+Imaginary numbers, for these could now be visualized in the sense that
+every point in the plane corresponds to a complex number, and the old
+ideas about the nonexistence of imaginary numbers were generally
+abandoned.</p>
+<p>During the last twenty years of his life, Gauss published only two
+major papers of mathematical interest. One was his fourth proof of the
+fundamental theorem of algebra, which he released at the time of his
+doctoral jubilee in 1849, fifty years after the publication of his first
+proof. The other was an influential memoir on potential theory, which
+appeared in 1840, in one of the volumes of geomagnetic results that he
+coedited with his younger friend, the physicist Wilhelm Weber
+(1804–1891). Geomagnetic issues occupied much of his time in the 1830s
+and early forties; he also devoted effort in the late thirties to issues
+pertaining to weights and measures. Most of his publications in the last
+decade of his life reflect work at the astronomical observatory; they
+deal with the newer minor planets, with observations of the recently
+discovered planet Neptune, and with other data of interest to
+astronomers of the day, who read of them in the Astronomische
+Nachrichten.</p>
+<p>Gauss’s mathematics provided the starting point for some of the main
+research areas of modern mathematics. Except for his personal fame and
+the fortune he amassed by making shrewd investments, his external
+circumstances were similar to those of many earlier mathematicians,
+however. His main obligations lay in running an observatory and
+performing various duties for his government. He had teaching
+responsibilities, but because most of his students were ill-prepared, he
+avoided classroom teaching as much as possible, feeling that the returns
+were not worth the investment in time. His best students tended to
+become astronomers, rather than mathematicians, although some, such as
+August Ferdinand Möbius, made a name for themselves in mathematics. Most
+of his research results, aside from those published as books, appeared
+in the publications of the Göttingen Society of Science or in journals
+devoted to astronomy and geodesy—initially, in Franz Xaver von Zach’s
+Monatliche Korrespondenz zur Beförderung der Erd-und Himmelskunde; after
+1820, in the Astronomische Nachrichten. His mathematical communications
+were restricted to correspondence with a few friends and occasional
+visits of younger colleagues from abroad.</p>
+<p>Gauss’s Influence</p>
+<p>Despite the relatively small number of well-known mathematicians who
+could claim to be Gauss’s students in the formal sense, it is hard to
+overestimate the influence Gauss had on successive generations. Those
+who studied his publications, the few who came to see him, the ones who
+followed the new avenues of research he had opened include some of the
+best-known mathematicians of the nineteenth century. When it came to his
+expressed opinion of the work of others, his impact was not always
+salutary, however. Toward the end of his life, Gauss may have become
+uncharacteristically generous in his comments; we note the well-deserved
+appreciation of Riemann’s habilitation and the questionable enthusiasm
+concerning Eisenstein.</p>
+<p>We now turn to the work of some who benefited directly from study of
+his publications, especially the Disquisitiones Arithmeticae, and from
+indirect encouragement through the example he set. In several cases,
+their studies of Gauss’s work supplemented their exposure to the
+investigations of Legendre.</p>
+<p>Abel</p>
+<p>Niels Henrik Abel’s short life (1802–1829) was filled with poverty
+and tragedy. He was born into a large family, the son of the pastor of
+the little village of Findo in Norway. When he was sixteen, his teacher
+urged him to read the great books in mathematics, including the
+Disquisitiones Arithmeticae of Gauss. In his reading, Abel noted that
+Euler had proved the binomial theorem only for rational powers, so he
+filled the gap by giving a proof valid for the general case. When Abel
+was eighteen, his father died, and much of the care of the family fell
+on his young and weak shoulders, yet within the next year, he made a
+remarkable mathematical discovery. Ever since the cubic and quartic
+equations had been solved in the sixteenth century, men had studied the
+quintic. Abel at first thought he had hit on a solution, but in 1824, he
+published a memoir, “On the Algebraic Resolution of Equations,” in which
+he reached the opposite conclusion. He gave the first proof that no
+solution is possible, thus putting an end to the long search. There can
+be no general formula, expressed in explicit algebraic operations on the
+coefficients of a polynomial equation, for the roots of the equation if
+the degree of the equation is greater than 4. An earlier proof, less
+satisfactory and generally overlooked, of the insolvability of the
+quintic had been published in 1799 by Paolo Ruffini (1765–1822), and
+hence the result is now referred to as the Abel-Ruffini theorem.</p>
+<p>When Abel visited Paris in 1826, he hoped his research results would
+gain him recognition by members of the Academy. He found the city
+inhospitable, however, and wrote home to a friend, “Every beginner has a
+great deal of difficulty in getting noticed here. I have just finished
+an extensive treatise on a certain class of transcendental functions but
+Mr. Cauchy scarcely deigns to glance at it.” The publication in question
+contained what he considered the jewel in his bag of mathematical
+treasures, “Abel’s addition theorem,” a grand generalization of Euler’s
+addition theorems on elliptic integrals. Before arriving in Paris, Abel
+had spent some time in Berlin and had been well received by Crelle, who
+was about to inaugurate his new Journal. He invited Abel to contribute
+to the publication. Abel complied; the first volume contained six
+articles by him, which were followed by more for succeeding volumes.
+They included the expanded version of his proof of the insolvability of
+the quintic, as well as his further contributions to the theory of
+elliptic and hyperelliptic functions. While these were appearing in
+Berlin, Abel had returned to his native Norway; increasingly weakened by
+tuberculosis, he kept sending more material to Crelle. He died in 1829,
+scarcely aware of the interest his publications were creating. Two days
+after his death, a letter arrived offering him a position in Berlin.</p>
+<p>Jacobi</p>
+<p>What created something of a sensation and helped increase the
+readership of Crelle’s new journal was the fact that Abel was not alone
+in his new discoveries. The Prussian mathematician Carl Gustav Jacob
+Jacobi (1804–1851) was obtaining many of the same results independently;
+moreover, he, too, was publishing them in the early volumes of Crelle’s
+journal. It became apparent to men such as Legendre that both Abel and
+Jacobi were forging new tools of great consequence. What was not
+generally known was that the unpublished memoranda of Gauss hung like a
+sword of Damocles over mathematics of the first half of the nineteenth
+century. When an important new development was announced by others, it
+frequently turned out that Gauss had had the idea earlier but had
+permitted it to go unpublished. Among the striking instances of this
+situation was the disclosure of elliptic functions, a discovery in which
+four outstanding figures are involved. One of these was, of course,
+Legendre, who had spent some forty years studying elliptic integrals
+almost single-handedly. He had developed a great many formulas, some of
+them resembling relationships among inverse trigonometric functions (a
+number of which had been known much earlier to Euler). This was not
+surprising, inasmuch as the elliptic integral</p>
+<p>includes</p>
+<p>as the special case for which K = 0. Yet it remained for Gauss and
+his two younger contemporaries to take full advantage of a point of view
+that greatly facilitates the study of elliptic integrals. If</p>
+<p>then u = arcsin v. Here u is expressed as a function of the
+independent variable v (x being only the dummy variable for
+integrating), but it turns out to be more felicitous to reverse the
+roles of u and v by choosing u as the independent variable. In this
+case, we have v = f(u), or, in the language of trigonometry, v = sin u.
+The function v = sin u is more expeditiously manipulated, and it has a
+striking property that u = arcsin v does not have: it is periodic. The
+private papers of Gauss show that perhaps as early as 1800, he had
+discovered the double periodicity of elliptic (or lemniscatic)
+functions. It was not until 1827–1828, however, that this remarkable
+property was disclosed by Abel.</p>
+<p>In 1829, Jacobi wrote to Legendre to inquire about the memoir Abel
+had left with Cauchy, for Jacobi had intimations that it touched on his
+outstanding discovery. On looking into the matter, Cauchy in 1830 dug up
+the manuscript, which Legendre later described as “a monument more
+lasting than bronze,” and it was published in 1841 by the French
+Institut among the memoirs presented by foreigners. It contained an
+important generalization of Legendre’s work on elliptic integrals.
+If</p>
+<p>u is a function of v, u = f(v), the properties of which had been very
+extensively described by Legendre in his treatise on elliptic integrals.
+What Legendre had missed and what Gauss, Abel, and Jacobi saw was that
+by inverting the functional relationship between u and v, one obtains a
+more useful and more beautiful function, v = f(u). This function,
+usually written v = sn u and read as “v is the sine amplitude of u,”
+together with others defined in a somewhat similar manner, are known as
+elliptic functions. (Some historical confusion has arisen because
+Legendre used the phrase “fonctions elliptiques” to refer to elliptic
+integrals and not to what are now known as elliptic functions.)</p>
+<p>The most striking property of these new higher transcendental
+functions was, as their three independent discoverers saw, that in the
+theory of complex variables they have a double periodicity, that is,
+there are two complex numbers m and n, such that v = f(u) = f(u + m) =
+f(u + n). Whereas the trigonometric functions have only a real period (a
+period of 2π) and the function ex has only an imaginary period (2πi),
+the elliptic functions have two distinct periods. So impressed was
+Jacobi with the simplicity achieved through a simple inversion of the
+functional relationship in elliptic integrals that he regarded the
+advice “You must always invert” as the secret of success in
+mathematics.</p>
+<p>Jacobi also deserves credit for several critical theorems related to
+elliptic functions. In 1834, he proved that if a single-valued function
+of one variable is doubly periodic, the ratio of the periods cannot be
+real, and that it is impossible for a single-valued function of a single
+independent variable to have more than two distinct periods. To him, we
+also owe a study of the “Jacobi theta functions,” a class of quasi
+doubly periodic entire functions of which the elliptic functions are
+quotients.</p>
+<p>The fateful misplaced memoir by Abel contained the hint of something
+even more general than the elliptical functions. If one replaces the
+elliptic integral with</p>
+<p>where P(x) is a polynomial the degree of which may exceed four, and
+if one again inverts the relationship between u and v, to obtain v =
+f(u), this function is a special case of what is known as an Abelian
+function. It was Jacobi, however, who in 1832 first demonstrated that
+the inversion can be carried out not only for a single variable but for
+functions of several variables.</p>
+<p>The most celebrated results of his research were those in elliptic
+functions, published in 1829, which brought him the praise of Legendre.
+By means of this new analysis, Jacobi later proved again the four-square
+theorem of Fermat and Lagrange. In 1829, Jacobi also published a paper
+in which he made extensive and general use of Jacobians, expressing
+these in a more modern form than had Cauchy:</p>
+<p>Jacobi became so enamored of functional determinants that he insisted
+on thinking of ordinary numerical determinants as Jacobians of n linear
+functions in n unknowns.</p>
+<p>Jacobi’s use of functional determinants in a paper on algebra in 1829
+was only incidental, as had been that of Cauchy. Had this been the only
+contribution from the pen of Jacobi, his name would not have been
+attached to the particular determinant that we are considering. In 1841,
+however, he published a long memoir, “De Determinantibus
+Functionalibus,” specifically devoted to the Jacobian. He pointed out,
+among other things, that this functional determinant is in many ways an
+analogue, for functions of several variables, to the differential
+quotient of a function of a single variable, and, of course, he called
+attention to its role in determining whether a set of equations or
+functions is independent. He showed that if a set of n functions in n
+variables are functionally related, the Jacobian must vanish
+identically; if the functions are mutually independent, the Jacobian
+cannot be identically zero.</p>
+<p>Galois</p>
+<p>Young geniuses whose lives were cut short by death from dueling or
+consumption are part of the real and fictional literary tradition of the
+Romantic Age. Someone wishing to present a mathematical caricature of
+such lives could do no better than to create the characters of Abel and
+Galois. Évariste Galois (1812–1832) was born just outside Paris in the
+village of Bourg-la-Reine, where his father served as mayor. His
+well-educated parents had not shown any particular aptitude for
+mathematics, but the young Galois did acquire from them an implacable
+hatred of tyranny. When he first entered school at the age of twelve, he
+showed little interest in Latin, Greek, or algebra, but he was
+fascinated by Legendre’s Geometry. Later, he read with understanding the
+algebra and the analysis in the works of masters such as Lagrange and
+Abel, but his routine class work in mathematics remained mediocre, and
+his teachers regarded him as eccentric. By the age of sixteen, Galois
+knew what his teachers had failed to recognize—that he was a
+mathematical genius. He hoped, therefore, to enter the school that had
+nurtured so many celebrated mathematicians, the École Polytechnique, but
+his lack of systematic preparation resulted in his rejection.</p>
+<p>This disappointment was followed by others. A paper Galois wrote and
+presented to the Academy when he was seventeen was held up by Cauchy; he
+failed in a second attempt to enter the École Polytechnique; worst of
+all, his father, feeling persecuted because of clerical intrigues,
+committed suicide. Galois entered the École Normale to prepare for
+teaching; he also continued his research. In 1830, he submitted another
+paper to the Academy in a prize competition. Fourier, as secretary of
+the Academy, received the paper but died shortly thereafter, and this
+memoir was lost. Faced on all sides by tyranny and frustration, Galois
+made the cause of the 1830 revolution his own. A blistering letter
+criticizing the indecision of the director of the École Normale resulted
+in Galois’s expulsion. A third effort to present a paper to the Academy
+resulted in its being returned by Poisson with a request for proofs.
+Thoroughly disillusioned, Galois joined the National Guard. In 1831, he
+was twice arrested; he had proposed a toast in a gathering of
+republicans that was interpreted as a threat on the life of King Louis
+Philippe. Shortly afterward, he became involved with a coquette and was
+challenged to a duel. The night before the duel, with forebodings of
+death, Galois spent the hours jotting down, in a letter to a friend
+named Chevalier, notes for posterity concerning his discoveries. He
+asked that the letter be published (as it was within the year) in the
+Revue Encydopédique and expressed the hope that Jacobi and Gauss might
+publicly give their opinion as to the importance of the theorems. On the
+morning of May 30, 1832, Galois met his adversary in a duel with
+pistols, which resulted in his death the following day. He was twenty
+years old.</p>
+<p>In 1846, Joseph Liouville edited several memoirs and manuscript
+fragments of Galois and published these, along with the last letter to
+Chevalier in his Journal de Mathématiques. This marks the beginning of
+the effective dissemination of Galois’s ideas, although some clues to
+Galois’s work had been published earlier. Two papers by Galois had
+appeared in Ferussac’s Bulletin Sciences Mathématiques of 1830. In the
+first, Galois had listed three criteria for the solvability of a
+“primitive” equation; the chief of these was the beautiful proposition
+that</p>
+<p>In order that an irreducible equation of prime degree be solvable by
+radicals, it is necessary and sufficient that all its roots be rational
+functions of any two of them.</p>
+<p>Aside from referring to Gauss’s cyclotomic equation and noting that
+his results had been derived from the theory of permutations, this paper
+contained no indication of the method used to derive results and no
+proofs. In the other paper, on number theory, Galois showed how to
+construct finite fields of order p given the root of an irreducible
+congruence of degree n mod p. Here, too, he stressed the analogy to
+Gauss’s results in Section III of the Disquisitiones Arithmeticae. His
+letter to Chevalier, published in September 1832, had contained an
+outline of the main results of the memoir that had been returned by the
+Academy. There, Galois had indicated what he considered to be the
+essential part of his theory. In particular, he stressed the difference
+between adjoining one or all of the roots of the resolvent and related
+it to the decomposition of the group G of the equation. In modern
+terminology, he indicated that an extension of the given field is normal
+if and only if the corresponding subgroup is a normal subgroup of G. He
+observed that an equation whose group cannot be properly decomposed (one
+whose group does not have a normal subgroup) should be transformed into
+one that can. Then, he noted the equivalent of saying that an equation
+is solvable if and only if one obtains a chain of normal subgroups of
+prime index. Unaccompanied by proofs, definitions, or adequate
+explanations of the new concepts involved, the profound content of the
+letter was not understood until Liouville published the full memoir,
+along with these previously published papers.</p>
+<p>The main goal of the memoir is the proof of the theorem quoted
+previously. The memoir contains the important notion of
+“adjunction”:</p>
+<p>We shall call every quantity rational which is expressed as a
+rational function of the coefficients of the equation and of a certain
+number of quantities adjoined to the equation and selected
+arbitrarily.</p>
+<p>Galois noted that Gauss’s cyclotomic equation of prime degree n is
+irreducible until a root of one of the auxiliary equations is adjoined.
+Gauss, in his criteria for the constructibility of regular polygons, had
+in essence solved the question of the solvability of the equation a0Xn +
+an = 0 in terms of rational operations and square roots on the
+coefficients. Galois generalized the result to provide criteria for the
+solvability of in terms of rational operations and nth roots on the
+coefficients. His approach to the problem, now known as Galois theory,
+was another of the highly original contributions to algebra in the
+nineteenth century. Yet it has been said that Galois theory is like
+garlic, in that there is no such thing as a little of it. One must make
+a substantial study of it to appreciate the reasoning—as Galois’s
+experience with his contemporaries showed. Nevertheless, we can indicate
+in a general way what is behind Galois theory and why it has been
+important.</p>
+<p>Galois began his investigations with some work of Lagrange on
+permutations on the roots of a polynomial equation. Any change in the
+ordered arrangement of n objects is called a permutation on these
+objects. If, for example, the order of the letters a, b, c is changed to
+c, a, b, this permutation is written succinctly as (acb), a notation in
+which each letter is taken into the letter immediately following, the
+first letter being understood to be the successor of the last letter.
+Thus, the letter a was carried into c, c in turn was carried into b, and
+b went into a. The notation (ac) or (ac, b), however, means that a goes
+into c, c goes into a, and b goes into itself. If two permutations are
+performed successively, the resulting permutation is known as the
+product of the two permutation transformations. Thus, the product of
+(acb) and (ac, b), written as (acb)(ac, b), is the permutation (a, bc).
+The identical permutation I takes each letter into itself—that is, it
+leaves the order a, b, c unchanged. The set of all permutations on the
+letters a, b, c clearly satisfies the definition of a group, given in
+chapter 20 on geometry; this group, containing six permutations, is
+known as the symmetric group on a, b, c. In the case of n distinct
+elements, x1, x2, . . . , xn, the symmetric group on these contains n!
+transformations. If these elements are the roots of an irreducible
+equation, the properties of the symmetric group provide necessary and
+sufficient conditions that the equation be solvable by radicals.</p>
+<p>Inspired by Abel’s proof of the insolvability by radicals of the
+quintic equation, Galois discovered that an irreducible algebraic
+equation is solvable by radicals if and only if its group—that is, the
+symmetric group on its roots—is solvable. The description of a solvable
+group is quite complicated, involving as it does relationships between
+the group and its subgroups. The three permutations (abc), (abc)2, and
+(abc)3 = I form a subgroup of the symmetric group on a, b, and
+c. Lagrange had already shown that the order of a subgroup must be a
+factor of the order of the group, but Galois went deeper and found
+relations between the factorability of the group of an equation and the
+solvability of the equation. Moreover, to him we owe the use in 1830 of
+the word “group” in its technical sense in mathematics and the concept
+of a normal subgroup.</p>
+<p>Although his work was done before that of most of the British
+algebraists of the great period 1830–1850, Galois’s ideas were without
+influence until they were published in 1846. Presence in Paris did not
+guarantee success to even the brightest young mathematical minds of the
+day. Abel and Galois are the most illustrious examples of men who felt
+frustrated by their failure to find the recognition they sought in
+Paris.</p>
+<p>The situation had changed by the time Liouville published Galois’s
+work in his Journal. By midcentury, a substantial number of
+mathematicians were actively pursuing research in France, Prussia, and
+England. Each country had established a major mathematical journal in
+the second quarter of the century. In 1836, Liouville had founded the
+Journal de Mathématiques Pures et Appliquées. The Cambridge Mathematical
+Journal followed. Crelle’s journal continued to thrive, with much active
+support from Dirichlet and his students.</p>
+<p>Gauss and Cauchy died within two years of each other, the former in
+1855, the latter in 1857. They had been preceded in death by many of
+their contemporaries, including some of their younger followers; they
+were followed, in 1859, by Dirichlet and Alexander von Humboldt. In this
+respect, the 1850s mark the end of an era. But the decade also brought a
+new direction to the continued unfolding of the mathematical legacy of
+Gauss and Cauchy: that which emerged from the work of Bernhard Riemann
+(1826–1866).</p>
+<h6 id="阅读日期-2025年12月17日-2025年12月17日-共-1-天">阅读日期：
+2025年12月17日-2025年12月17日 共： 1 天</h6>
 <script src="https://giscus.app/client.js"
         data-repo="hbaolong/hbaolong.github.io"
         data-repo-id="R_kgDOLetDQg"
