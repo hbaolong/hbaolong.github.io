@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="hbaolong@vip.qq.com" />
+  <title>麦克白EN:Act and Scene Divisions were provided in the Folio in a much more thoroughgoing way than in the Quartos. Sometimes, however, they were erroneous or omitted; corrections and additions supplied by editorial tradition are indicated by square brackets. Five-act division is based on a classical model, and act breaks provided the opportunity to replace the candles in the indoor Blackfriars playhouse that the King’s Men used after 1608, but Shakespeare did not necessarily think in terms of a five-part structure of dramatic composition. The Folio convention is that a scene ends when the stage is empty. Nowadays, partly under the influence of film, we tend to consider a scene to be a dramatic unit that ends with either a change of imaginary location or a significant passage of time within the narrative. Shakespeare’s fluidity of composition accords well with this convention, so in addition to act and scene numbers we provide a running scene count in the right margin at the beginning of each new scene, in the typeface used for editorial directions. Where there is a scene break caused by a momentary bare stage, but the location does not change and extra time does not pass, we use the convention running scene continues. There is inevitably a degree of editorial judgment in making such calls, but the system is very valuable in suggesting the pace of the plays.</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">麦克白EN:Act and Scene Divisions were provided in the
+Folio in a much more thoroughgoing way than in the Quartos. Sometimes,
+however, they were erroneous or omitted; corrections and additions
+supplied by editorial tradition are indicated by square brackets.
+Five-act division is based on a classical model, and act breaks provided
+the opportunity to replace the candles in the indoor Blackfriars
+playhouse that the King’s Men used after 1608, but Shakespeare did not
+necessarily think in terms of a five-part structure of dramatic
+composition. The Folio convention is that a scene ends when the stage is
+empty. Nowadays, partly under the influence of film, we tend to consider
+a scene to be a dramatic unit that ends with either a change of
+imaginary location or a significant passage of time within the
+narrative. Shakespeare’s fluidity of composition accords well with this
+convention, so in addition to act and scene numbers we provide a running
+scene count in the right margin at the beginning of each new scene, in
+the typeface used for editorial directions. Where there is a scene break
+caused by a momentary bare stage, but the location does not change and
+extra time does not pass, we use the convention running scene continues.
+There is inevitably a degree of editorial judgment in making such calls,
+but the system is very valuable in suggesting the pace of the
+plays.</h1>
+<p class="author">hbaolong@vip.qq.com</p>
+</header>
+<center>
+<a href="/3place/mkben">返回首页</a> <a
+href="/3place/mkben/mingju.html">本书名句</a> <a
+href="/3place/mkben/memo.html">本书注解</a> <a
+href="/3place/mkben/index_rich.html">丰富目录</a> <a
+href="/3place/mkben/index_readcal.html">同读日历</a> <a
+href="/3place/mkben/index_timeline.html">时间线</a> <a
+href="/3place/mkben/index_books.html">引用书籍</a> <a
+href="/3place/mkben/index_words.html">使用字频</a>
+<div id="wx_pic" style="margin:0 auto;display:none;">
+<img src='/img/logo.png'/>
+</div>
+</center>
+<h4
+id="act-and-scene-divisions-were-provided-in-the-folio-in-a-much-more-thoroughgoing-way-than-in-the-quartos.-sometimes-however-they-were-erroneous-or-omitted-corrections-and-additions-supplied-by-editorial-tradition-are-indicated-by-square-brackets.-five-act-division-is-based-on-a-classical-model-and-act-breaks-provided-the-opportunity-to-replace-the-candles-in-the-indoor-blackfriars-playhouse-that-the-kings-men-used-after-1608-but-shakespeare-did-not-necessarily-think-in-terms-of-a-five-part-structure-of-dramatic-composition.-the-folio-convention-is-that-a-scene-ends-when-the-stage-is-empty.-nowadays-partly-under-the-influence-of-film-we-tend-to-consider-a-scene-to-be-a-dramatic-unit-that-ends-with-either-a-change-of-imaginary-location-or-a-significant-passage-of-time-within-the-narrative.-shakespeares-fluidity-of-composition-accords-well-with-this-convention-so-in-addition-to-act-and-scene-numbers-we-provide-a-running-scene-count-in-the-right-margin-at-the-beginning-of-each-new-scene-in-the-typeface-used-for-editorial-directions.-where-there-is-a-scene-break-caused-by-a-momentary-bare-stage-but-the-location-does-not-change-and-extra-time-does-not-pass-we-use-the-convention-running-scene-continues.-there-is-inevitably-a-degree-of-editorial-judgment-in-making-such-calls-but-the-system-is-very-valuable-in-suggesting-the-pace-of-the-plays.">Act
+and Scene Divisions were provided in the Folio in a much more
+thoroughgoing way than in the Quartos. Sometimes, however, they were
+erroneous or omitted; corrections and additions supplied by editorial
+tradition are indicated by square brackets. Five-act division is based
+on a classical model, and act breaks provided the opportunity to replace
+the candles in the indoor Blackfriars playhouse that the King’s Men used
+after 1608, but Shakespeare did not necessarily think in terms of a
+five-part structure of dramatic composition. The Folio convention is
+that a scene ends when the stage is empty. Nowadays, partly under the
+influence of film, we tend to consider a scene to be a dramatic unit
+that ends with either a change of imaginary location or a significant
+passage of time within the narrative. Shakespeare’s fluidity of
+composition accords well with this convention, so in addition to act and
+scene numbers we provide a running scene count in the right margin at
+the beginning of each new scene, in the typeface used for editorial
+directions. Where there is a scene break caused by a momentary bare
+stage, but the location does not change and extra time does not pass, we
+use the convention running scene continues. There is inevitably a degree
+of editorial judgment in making such calls, but the system is very
+valuable in suggesting the pace of the plays.</h4>
+<p>Speakers’ Names are often inconsistent in Folio. We have regularized
+speech headings, but retained an element of deliberate inconsistency in
+entry directions, in order to give the flavor of Folio.</p>
+<p>Verse is indicated by lines that do not run to the right margin and
+by capitalization of each line. The Folio printers sometimes set verse
+as prose, and vice versa (either out of misunderstanding or for reasons
+of space). We have silently corrected in such cases, although in some
+instances there is ambiguity, in which case we have leaned toward the
+preservation of Folio layout. Folio sometimes uses contraction (“turnd”
+rather than “turned”) to indicate whether or not the final “-ed” of a
+past participle is sounded, an area where there is variation for the
+sake of the five-beat iambic pentameter rhythm. We use the convention of
+a grave accent to indicate sounding (thus “turnèd” would be two
+syllables), but would urge actors not to overstress. In cases where one
+speaker ends with a verse half line and the next begins with the other
+half of the pentameter, editors since the late eighteenth century have
+indented the second line. We have abandoned this convention, since the
+Folio does not use it, and nor did actors’ cues in the Shakespearean
+theater. An exception is made when the second speaker actively
+interrupts or completes the first speaker’s sentence.</p>
+<p>Spelling is modernized, but older forms are very occasionally
+maintained where necessary for rhythm or aural effect.</p>
+<p>Punctuation in Shakespeare’s time was as much rhetorical as
+grammatical. “Colon” was originally a term for a unit of thought in an
+argument. The semicolon was a new unit of punctuation (some of the
+Quartos lack them altogether). We have modernized punctuation
+throughout, but have given more weight to Folio punctuation than many
+editors, since, though not Shakespearean, it reflects the usage of his
+period. In particular, we have used the colon far more than many
+editors: it is exceptionally useful as a way of indicating how many
+Shakespearean speeches unfold clause by clause in a developing argument
+that gives the illusion of enacting the process of thinking in the
+moment. We have also kept in mind the origin of punctuation in classical
+times as a way of assisting the actor and orator: the comma suggests the
+briefest of pauses for breath, the colon a middling one, and a full stop
+or period a longer pause. Semicolons, by contrast, belong to an era of
+punctuation that was only just coming in during Shakespeare’s time and
+that is coming to an end now: we have accordingly used them only where
+they occur in our copy texts (and not always then). Dashes are sometimes
+used for parenthetical interjections where the Folio has brackets. They
+are also used for interruptions and changes in train of thought. Where a
+change of addressee occurs within a speech, we have used a dash preceded
+by a full stop (or occasionally another form of punctuation). Often the
+identity of the respective addressees is obvious from the context. When
+it is not, this has been indicated in a marginal stage direction.</p>
+<p>Entrances and Exits are fairly thorough in Folio, which has
+accordingly been followed as faithfully as possible. Where characters
+are omitted or corrections are necessary, this is indicated by square
+brackets (e.g. “[and Attendants]”). Exit is sometimes silently
+normalized to Exeunt, and Manet anglicized to “remains.” We trust Folio
+positioning of entrances and exits to a greater degree than most
+editors.</p>
+<p>Editorial Stage Directions such as stage business, asides,
+indications of addressee and of characters’ position on the gallery
+stage are only used sparingly in Folio. Other editions mingle directions
+of this kind with original Folio and Quarto directions, sometimes
+marking them by means of square brackets. We have sought to distinguish
+what could be described as directorial interventions of this kind from
+Folio-style directions (either original or supplied) by placing them in
+the right margin in a smaller typeface. There is a degree of
+subjectivity about which directions are of which kind, but the procedure
+is intended as a reminder to the reader and the actor that Shakespearean
+stage directions are often dependent upon editorial inference alone and
+are not set in stone. We also depart from editorial tradition in
+sometimes admitting uncertainty and thus printing permissive stage
+directions, such as an Aside? (often a line may be equally effective as
+an aside or a direct address—it is for each production or reading to
+make its own decision) or a may exit or a piece of business placed
+between arrows to indicate that it may occur at various different
+moments within a scene.</p>
+<p>Line Numbers are editorial, for reference and to key the explanatory
+and textual notes.</p>
+<p>Explanatory Notes explain allusions and gloss obsolete and difficult
+words, confusing phraseology, occasional major textual cruces, and so
+on. Particular attention is given to non-standard usage, bawdy innuendo,
+and technical terms (e.g. legal and military language). Where more than
+one sense is given, commas indicate shades of related meaning, slashes
+alternative or double meanings.</p>
+<p>Textual Notes at the end of the play indicate major departures from
+the Folio. They take the following form: the reading of our text is
+given in bold and its source given after an equals sign, with “F2”
+indicating a reading that derives from the Second Folio of 1632, “F3”
+one that derives from the Third Folio of 1663–64, and “Ed” that it
+derives from the subsequent editorial tradition. The rejected Folio
+(“F”) reading is then given. Thus for Act 3 Scene 6 line 25: “son = Ed.
+F = Sonnes” means that the Folio text refers to Duncan’s two sons, where
+the context clearly demands one, so we have corrected to the singular.
+It is possible, of course, in this case that the mistake is
+Shakespeare’s, not the printer’s: he might have forgotten that he sent
+Donalbain to Ireland and only Malcolm to England. The editorial task is
+a never-ending process of conjecture and debate.</p>
+<h6 id="阅读日期-2025年12月03日-2025年12月03日-共-1-天">阅读日期：
+2025年12月03日-2025年12月03日 共： 1 天</h6>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>
