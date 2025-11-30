@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="hbaolong@vip.qq.com" />
+  <title>走向无限EN:2 The Santa Claus Problem</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">走向无限EN:2 The Santa Claus Problem</h1>
+<p class="author">hbaolong@vip.qq.com</p>
+</header>
+<center>
+<a href="/3place/zxwxen">返回首页</a> <a
+href="/3place/zxwxen/mingju.html">本书名句</a> <a
+href="/3place/zxwxen/memo.html">本书注解</a> <a
+href="/3place/zxwxen/index_rich.html">丰富目录</a> <a
+href="/3place/zxwxen/index_readcal.html">同读日历</a> <a
+href="/3place/zxwxen/index_timeline.html">时间线</a> <a
+href="/3place/zxwxen/index_books.html">引用书籍</a> <a
+href="/3place/zxwxen/index_words.html">使用字频</a>
+<div id="wx_pic" style="margin:0 auto;display:none;">
+<img src='/img/logo.png'/>
+</div>
+</center>
+<h4 id="the-santa-claus-problem">2 The Santa Claus Problem</h4>
+<p>When I’d asked Sam for a list of people who could describe what he
+was like before the age of eighteen, he’d taken a deep breath and said,
+“That’s slim pickings.” He suggested his parents, Joe Bankman and
+Barbara Fried. He mentioned that he had a younger brother, Gabe. Apart
+from that, he said, he had no early relationships that would cast any
+light on him, and there were no experiences in his childhood that
+mattered much. “I’m a little confused about my childhood,” he said. “I
+just can’t figure out what I did with it. I look at the things I did,
+and I cannot successfully add up to twenty-four hours a day. I
+daydreamed some. I read some books. I played some video games, but that
+wasn’t until high school. I had one or two friends I’d hang out with now
+and again.” The names of those friends, with one exception, would not
+ever spring to mind. He was happy to supply me with his date of birth:
+March 5, 1992. Beyond that, he didn’t have much to say, and didn’t think
+his childhood had anything to say about him—which struck me as odd, as
+he had spent roughly two-thirds of his life in it.</p>
+<p>He’d gone to school for thirteen years with other children. He’d been
+admitted to colleges, which would have required teachers to write him
+recommendations. His parents were well-known professors. Most Sundays,
+I’d learn, Joe and Barbara hosted a dinner that guests remember fondly
+to this day. “The conversation was intoxicating,” recalls Tino Cuéllar,
+a Stanford law professor who would go on to become a judge on
+California’s supreme court and then head of the Carnegie Endowment for
+International Peace. “Fifteen percent of it was what was going on in
+your life, fifteen percent was politics, and the rest was ideas. How we
+thought about what we thought about—aesthetics, music, whatever.” Sam
+had been at those dinners but could not think of any one of their guests
+who’d be worth my talking to. Pressed, he suggested I call his brother,
+who was now employed by Sam to distribute Sam’s money to political
+candidates. Gabe, three years younger, told me that I was wasting my
+time. “We weren’t close growing up,” he said, when I reached him. “I
+don’t think Sam liked school that much, but I don’t really know. He kept
+to himself. I would interact with him as another tenant in my
+house.”</p>
+<p>Sam’s parents were only a bit more helpful. Sam had been their first
+child, and so it had taken them longer than it might have to figure out
+that there was no point in parenting him by any book. “Childhood was a
+funny thing for Sam,” said Joe. “He was never comfortable with kids, or
+with being a kid.” They’d briefly attempted to inflict upon him a normal
+childhood before realizing that there was no point. The trip to the
+amusement park was a good example. When Sam was a small child, his
+mother had located a Six Flags or Great America park. She’d hauled him
+dutifully from amusement to amusement until she realized Sam wasn’t
+amused. Instead of throwing himself into the rides, he was watching her.
+“Are you having fun, Mom?” he asked finally, by which he meant, Is this
+really your or anyone else’s idea of fun? “I realized I had been
+busted,” said Barbara.</p>
+<p>By the time Sam was eight she had given up on the idea that his wants
+and needs would be anything like other children’s. She remembered the
+instant that happened. She had been at Stanford for over a decade, a
+frequent contributor of difficult papers to academic journals. “I was
+walking him to school, and he asked me what I was doing,” recalled
+Barbara. “I told him I was giving some paper, and he asked, ‘What’s it
+on?’” I gave him a bullshit answer, and he pressed me on it, and by the
+end of the walk we were in the middle of a deep conversation about the
+argument. The points he was making were better than any of the
+reviewers’. At that moment my parenting style changed.”</p>
+<p>To their friends who came to dinner on Sunday nights, Joe was always
+light, Barbara more serious. Joe was funny, Barbara trenchant. Gabe was
+a bright and cheery little kid whom everyone loved. Sam was always a
+presence, but he was quieter and more watchful and less accessible than
+his little brother. To their dinner guests it seemed that Joe and
+especially Barbara were both a little afraid for, and of, their elder
+son. And that they were concerned about how he would ever fit into the
+world. “We worried that Gabe’s light was going to shine, and Sam would
+hide his under a bushel,” said Barbara.</p>
+<p>Sam himself took a bit longer to recognize the gulf between himself
+and other children. He didn’t really know why he didn’t have friends the
+way other kids did. Between the ages of eight and ten, he was sideswiped
+by a pair of realizations that, taken together, amounted to an epiphany.
+The first came one December day during the third grade. Christmas was
+approaching, and a few of his classmates brought up the critical subject
+of Santa Claus.</p>
+<p>The Bankman-Frieds weren’t big on the usual holidays. They celebrated
+Hanukkah but with so little enthusiasm that one year they simply forgot
+it, and, realizing that none of them cared, stopped celebrating
+anything. “It was like, ‘Alright, who was bothered by this fact? The
+fact that we forgot Hanukkah.’ No one raised their hand,” Sam said. They
+didn’t do birthdays, either. Sam didn’t feel the slightest bit deprived.
+“My parents were like, I dunno, ‘Is there something you want? Alright,
+bring it up. And you can have it. Even in February. Doesn’t have to be
+in December. If you want it, let’s have an open and honest conversation
+about it instead of us trying to guess.’” Sam, like his parents, didn’t
+see the point in anyone trying to imagine what someone else might want.
+The family’s indifference to convention came naturally and
+unselfconsciously. It was never, Look how interesting we are, we don’t
+observe any of the rituals that define so many American lives. “It’s not
+like they said, ‘Gifts are dumb,’” recalled Sam. “They never tried to
+convince us about gifts. It didn’t happen like that.”</p>
+<p>None of what the Bankman-Frieds did was for show; they weren’t that
+kind of people. They just really thought about what they did before they
+did it. In his twenties Sam would learn that his parents had never
+married. In silent protest of the fact that their gay friends could not
+legally marry, they’d joined in a civil union. And they never said a
+word about it to their children, or to anyone else, as far as Sam could
+tell. Later, Sam understood that “they were clearly being driven by a
+different underlying belief system.” As a small child he knew only that
+there were things other children took for granted that he did not. One
+was Santa Claus.</p>
+<p>Of course Sam was aware of Santa. “I’d like heard of it,” he said. “I
+hadn’t thought that deeply about it.” He thought of Santa roughly the
+same way he thought of cartoon characters. Bugs Bunny existed too, in
+some sense, but Bugs Bunny wasn’t real. Now, at the age of eight, he
+realized that other children believed that Santa was real, in a way that
+Bugs Bunny was not. It blew his mind. He went home that afternoon, shut
+himself in his room, and thought it over. “Imagine you had never been
+introduced to the idea of Santa as a real thing,” said Sam. “And then
+one day someone tells you that ninety-five percent of the people your
+age in the world believe in him. That this guy lives in the North Pole
+and has these elves. That he takes off with these flying reindeer. He
+flies into your chimney and brings you presents. Unless you’ve been
+naughty, in which case he brings coal. Though for some reason no one
+actually knows anyone who has gotten coal. And he does this just once a
+year. You’re like, ‘What the fuck? Where did that come from?’”</p>
+<p>He found his way to a solution that offered temporary relief: only
+children suffered from this madness. Yes, kids believed in Santa. But
+grown-ups did not. There was a limit to the insanity. But then, a year
+or so later, a boy in his class said he believed in God.</p>
+<p>Sam had heard of God too. “God was like a thing on TV,” he said. “God
+came up. But I didn’t think anyone actually believed in God.” It told
+you something not just about Sam but about his upbringing that he could
+live for almost ten years inside the United States of America without
+realizing that other people believed in God. “I never asked myself, ‘Why
+does God come up if no one believes in it?’” he said. “I had never gone
+through that process before. I hadn’t drilled down into ‘Do people
+believe in it?’” Now Henry was telling him not only that he believed in
+God but that his parents did too. So did lots of other grown-ups. “And I
+freaked out,” recalled Sam. “Then he freaked out. We both freaked out. I
+remember thinking, Wait a minute, do you think I’m going to hell?
+Because that seems like a big deal. If hell exists, why do you, like,
+care about McDonald’s? Why are we talking about any of this shit, if
+there is a hell. If it really exists. It’s fucking terrifying,
+hell.”</p>
+<p>This was Santa all over again, only worse. God—or rather the fact
+that anyone believed in him—rocked Sam’s world. Just sideswiped his view
+of other people and what was going on inside their minds. He tried to
+confront adults—mainly friends of his parents’ who came to dinner—about
+God. He always found it easier to talk to grown-ups than to children and
+had always been better at it than other children—a fact he attributed to
+the idiotic childishness of other children. His parents’ friends were at
+their dinner table every Sunday, and available for inspection. “I’d ask
+them, ‘Do you believe in God?’ They’d equivocate—like, say something
+about a Being that started the Clock of the Universe. And I’d think,
+Quit fucking around: it’s a binary question. Just yes or no.” He didn’t
+understand the unwillingness of even really smart grown-ups to get the
+right answer to this question. “It was weird to me,” he said. “I never
+understood why people bothered pretending about this shit.”</p>
+<p>From the widespread belief in God, and Santa, Sam drew a conclusion:
+it was possible for almost everyone to be self-evidently wrong about
+something. “Mass delusions are a property of the world, as it turns
+out,” he said. He had to accept that there was nothing he could do about
+this. There was no point in arguing with other kids’ belief in Santa
+Claus. Yet he didn’t feel the slightest need to pretend to agree. He
+simply came to terms with the fact that the world could be completely
+wrong about something, and he could be completely right. There could be
+a kind of equilibrium in which everyone in the world could remain wrong
+and he could remain right, and neither side would even try to change the
+other’s mind. “There are times when we’re just going to stare at each
+other,” said Sam.</p>
+<p>One interpretation of Sam’s childhood is that he was simply waiting
+for it to end. That’s how he thought about it, more or less: that he was
+holding his breath until other people grew up so he could talk to them.
+“A lot of childhood just never made sense to me,” he said. “If you don’t
+find it magical to think about Santa Claus then it’s just fucking dumb.”
+Although he found it easier to talk with adults than with children, the
+connections he made with the adults were no stronger than those he made
+with other kids. In some deep way, he sensed, he remained cut off from
+other human beings. He could read them, but they couldn’t read him.
+“There were some things I had to teach myself to do,” he said. “One is
+facial expressions. Like making sure I smile when I’m supposed to smile.
+Smiling was the biggest thing that I most weirdly couldn’t do.” Other
+people would say or do things to which he was meant to respond with some
+emotional display. And instead of faking it, he questioned the premise.
+What’s the whole point of facial expressions in the first place? If
+you’re going to say something to me, just say it. Why do I have to grin
+while you do it?</p>
+<p>Very early on, Sam realized that he’d need to acquire abilities most
+people just took for granted. But he also knew that he could take for
+granted abilities that other people sweated to learn. When the teacher
+said that Sally had thirteen apples in her basket, then picked twice as
+many apples as she already had and added them to that same basket, Sam
+knew faster than the other kids how many apples Sally had in her basket.
+In kindergarten a teacher had suggested to Barbara and Joe that they
+remove him from public school and enroll him in a school for gifted
+kids. “We thought she was bats,” said Barbara. For the next seven years
+they were given no reason to think they’d made a mistake. Right through
+middle school Sam was a good but not great student, defined mainly by
+his disinterest in whatever his teacher was saying. “I was obedient in
+that I wouldn’t do shit I wasn’t supposed to do,” said Sam. “But I
+wouldn’t necessarily do shit I was supposed to do. I would just be
+sitting there in a stupor.”</p>
+<p>It was in middle school that he became conscious of the fact that he
+was not a happy person. Depression took many forms, and his was of the
+low-level, simmering kind. “I think in general when people are depressed
+they know they are depressed,” he said. “My form of it was not
+out-of-control negative. My form of it was lack of positive.” He had a
+fault line inside him, pressure was building on it, and one day, in the
+seventh grade, it slipped. His mother returned from work to find Sam
+alone, in despair. “I came home, and he was crying,” recalled Barbara.
+“He said, ‘I’m so bored I’m going to die.’” Barbara and Joe organized a
+small group of parents to beseech the school to offer an advanced math
+class. The school relented and brought in a special teacher. “The class
+met at seven,” recalled Barbara. “And for the first time Sam just jumped
+out of bed at six thirty. Up till then there wasn’t a real clear
+indicator that he was special.” It was then that Barbara and Joe decided
+to spend the money to send him to a fancy private high school, Crystal
+Springs Uplands.</p>
+<p>Crystal Springs made no difference. “I hated it there too,” said Sam.
+“The whole way through. I didn’t like classes. I didn’t like my
+schoolmates. I was bored.” The student body was a who’s who of Silicon
+Valley children. (Steve Jobs’s son, Reed, was in Sam’s class.) By most
+standards it was a nerdy school. A jock was a person who ran track. To
+Sam it still felt unserious. “It was a lot of moderately unambitious
+really rich kids,” he said. “The one thing they knew is they didn’t have
+to worry. So there was not a lot of drive, and not a lot of pressure.
+Everyone went to Stanford.” He wanted to think about things the other
+kids had no interest in—including thinking—and he had no interest in
+what they wanted to think about. He didn’t even bother trying to fit in.
+Everyone else carried a backpack; he alone showed up with a rolling bag
+whose wheels thump-thump-thumped over the cobblestones as he moved from
+class to class. When weaker students conferred before a test, they
+sometimes tried to get him to join in, in the hope that he might save
+them. Sam wanted no part of it. “He was like, ‘Sorry, you’re on your
+own,’” recalled one classmate. “I think he felt above a lot of it. In
+class he had the attitude of being above a lot of things. He was not
+liked or disliked. He was just kind of there.” Said another classmate,
+“He was the butt of jokes made by people who sort of pretended he was in
+on them, but he wasn’t.” During the school campout Sam hadn’t even tried
+to go to sleep. Everyone just thought that was weird. “I was viewed as
+smart, as a nerd, not as a good guy or a bad guy,” said Sam. “Not really
+viewed as a person. Smart and inoffensive and maybe not all that human.”
+Worse, he didn’t totally disagree with his classmates’ assessment. “I
+didn’t feel misunderstood. I felt like their half-assed guesses were in
+the right ballpark.”</p>
+<p>By high school Sam had decided that he just didn’t like school, which
+was odd for a person who would finish at the top of his class. He’d also
+decided that at least some of the fault lay not with him but with
+school. English class, for instance. His doubts about English class
+dated back to the sixth grade. That was when the teachers had stopped
+worrying about simple literacy and turned their attention to deeper
+questions. “As soon as English class went from ‘can you read a book’ to
+writing an essay about a book, I completely lost interest,” recalled
+Sam. He found literary criticism bizarre: Who cared what you felt or
+thought about a story? The story was the story, with no provably right
+or wrong way to read it. “If they said talk about what you like or don’t
+like, okay, I would do that,” he said. That’s not what they were asking
+him to do, however. They were asking him to interpret the book, and then
+judging him on his interpretations.</p>
+<p>In elementary school he’d read the Harry Potter books over and over.
+By the eighth grade he had stopped reading books altogether. “You start
+to associate it with a negative feeling, and you stop liking it,” he
+said. “I started to associate books with a thing I didn’t like.” He kept
+his thoughts about the literary-industrial establishment to himself
+through middle school, but by high school they began to leak out of him.
+“I objected to the fundamental reality of the entire class,” said Sam of
+English. “All of a sudden I was being told I was wrong—about a thing it
+was impossible to be wrong about. The thing that offended me is that it
+wasn’t honest with itself. It was subjectivity framed as objectivity.
+All the grading was arbitrary. I don’t even know how you grade it. I
+disagreed with the implicit factual claims behind the things that got
+good grades.” He’d sat through middle school in a stupor, but by high
+school he was sure enough of his own mind that he was willing to
+challenge his English teachers’ cherished beliefs on grounds
+unrecognizable to English teachers. Their belief, for instance, that
+Shakespeare was an especially good writer.</p>
+<p>The plot twist in Much Ado About Nothing—typical of
+Shakespeare—relies on, simultaneously, one-dimensional and unrealistic
+characters, illogical plots and obvious endings. I mean, come on—kill
+someone because he thinks, with good reason, that his fiancée is
+cheating on him? Beatrice is absurdly out of line in an unrealistic way;
+Benedick is absurd for listening to her, and this is all supposed to be
+taken in stride.</p>
+<p>To Sam’s way of thinking, the case against Shakespeare could be made
+with basic statistics:</p>
+<p>I could go on and on about the failings of Shakespeare … but really I
+shouldn’t need to: the Bayesian priors are pretty damning. About half
+the people born since 1600 have been born in the past 100 years, but it
+gets much worse than that. When Shakespeare wrote almost all Europeans
+were busy farming, and very few people attended university; few people
+were even literate—probably as low as ten million people. By contrast
+there are now upwards of a billion literate people in the Western
+sphere. What are the odds that the greatest writer would have been born
+in 1564? The Bayesian priors aren’t very favorable.fn1</p>
+<p>That he still received good grades from his English teachers didn’t
+lessen his skepticism of their enterprise. Why were they giving him an
+A? Why were they giving any grade to anyone for what amounted to an
+opinion? “I convinced the teachers that I was a good student, and thus I
+got good grades,” he said. “It was self-fulfilling to a decent extent.”
+They gave him an A because they didn’t want to explain why they didn’t
+give him an A. All of humanities was like this for him: dopey stuff he
+wanted mainly to escape but that somehow always lurked just around every
+corner. In choosing a college to attend, Sam sought to ensure he’d never
+again be made to write an essay about Jane Austen.</p>
+<p>But even MIT, where he eventually landed, had a humanities
+requirement. A single liberal arts class, which he satisfied by taking
+film history, but even that grated on him. “Whatever cease-fire existed
+earlier in my life was gone,” he said. “I was starting to get a little
+bit of a whiff of ‘I don’t have to put up with it anymore.’” The very
+first question on the final exam set him off. What’s the difference
+between art and entertainment? “It’s a bullshit distinction dreamed up
+by academics trying to justify the existence of their jobs,” wrote Sam,
+and handed the exam back.</p>
+<p>He felt nothing in the presence of art. He found religion absurd. He
+thought both right-wing and left-wing political opinions kind of dumb,
+less a consequence of thought than of their holder’s tribal identity. He
+and his family ignored the rituals that punctuated most people’s
+existence. He didn’t even celebrate his own birthday. What gave pleasure
+and solace and a sense of belonging to others left Sam cold. When the
+Bankman-Frieds traveled to Europe, Sam realized that he was just staring
+at a lot of old buildings for no particular reason. “We did a few
+trips,” he said. “I basically hated it.” To his unrelenting alienation
+there was one exception: games. In sixth grade Sam heard about a game
+called Magic: The Gathering. For the next four years it was the only
+activity that consumed him faster than he could consume it.</p>
+<p>Magic had been created in the early 1990s by a young mathematician
+named Richard Garfield. It was the first of a new kind of game,
+designed, perhaps, for a new kind of person. Garfield had started with
+an odd question: Could a strategic game be designed that allowed the
+players to come to it with different equipment? He wasn’t sure if it was
+even possible. You couldn’t allow poker players to show up with their
+own privately curated decks, or chess players to come equipped with
+whichever pieces they wanted to. You didn’t want players to be able to
+simply buy better material and thus victory.</p>
+<p>In the game Garfield designed, players did indeed buy their own
+playing cards, and assembled their own decks for competition. Each of
+the cards had a picture of some mythical character—a witch, a demon, and
+so on—and each character had its own special traits and a quantified
+ability to inflict and withstand damage. (If Magic sounds similar to
+Storybook Brawl, it’s because Storybook Brawl was one of many games
+modeled on Magic.) But you couldn’t just buy the best cards—because you
+never knew which cards would be the best. The game itself was unstable.
+The cards constantly changed in ways that were impossible to anticipate:
+new cards were introduced, and old cards were banned. The interactions
+between the cards were too complicated to fully understand—at some point
+Garfield realized even he could not predict what might happen in his own
+game, which he liked. “The game is shallow if you know when you create
+it what the best play is,” he said. “There should exist within the game
+a scenario where it is impossible to determine a winning strategy.”</p>
+<p>This was a radical notion: the game was ultimately unknowable. Merely
+playing a lot and memorizing the best moves only got you so far, as from
+one game to the next the best moves would change. “It makes it so
+players have to constantly adapt the strategy to things no one could
+have anticipated,” said Garfield. The people who were good at Magic were
+those who found it easy to adapt their strategies. As the best strategy
+was not just hard to know but unknowable, the people who were good at
+Magic were also comfortable making decisions while being certain that
+they were uncertain.</p>
+<p>Sam was good at Magic. Inside the game he interacted more easily with
+other people than he could outside it. Playing the game, he made his one
+meaningful childhood friend, a boy named Matt Nass.fn2 Matt was as chill
+as a twelve-year-old boy could be. He had none of the neediness of other
+kids. “Given the backdrop of I don’t understand kids in the first place,
+neediness was a problem,” said Sam. Matt made zero social or emotional
+demands on him. He didn’t need Sam to generate facial expressions, or to
+ask him questions about himself, or really to do anything but play
+Magic.</p>
+<p>Matt’s sheer lack of needs opened Sam up as much as Sam ever opened
+up. Sam and Matt bought their cards together, and got driven together by
+their parents to play local tournaments against grown men.fn3 Eventually
+they went on the junior circuit together—reaching, at the end of tenth
+grade, the national championships in Chicago. Matt saw Sam as maybe no
+one else did. “I think it’s easy to think of people who are extremely
+rational as robotic,” he said, “but I really don’t think that applies to
+Sam. He was a really rare combination of hyper-rational and extremely
+kind.” They drifted apart in high school but attended colleges an hour’s
+drive from each other. In the fall of Sam’s junior year, he knocked on
+Matt’s dorm room door. “I was playing video games and too distracted to
+check my phone, so I had no idea what had happened,” recalled Matt. That
+afternoon, Matt’s father, with whom he was very close, had died of a
+heart attack. “Sam told me the news in person and then drove me back to
+his nerd frat at MIT, where we played board games and video games all
+night to distract me before I flew back home the next day.”</p>
+<p>Every life is defined not just by what happens in it but by what
+doesn’t. The beginning of Sam’s life is as striking for what didn’t
+happen in it as for what did. He could see he was different from most
+other kids. He made no effort to join their games, and they didn’t
+understand his. He maintained what he later called a “romantically
+positive” view of himself. “I didn’t think it was a happy thing that I
+was different,” he said. “I thought it was a cool thing.” His only
+weapon for defending himself against the derision of his schoolmates was
+a shallow contempt, and a weak sense of his own superiority. “But I
+never had a super principled reason for it. It was, I better think that,
+or what do I have going for me?” He was perfectly positioned,
+emotionally and intellectually, to make a religion of himself. What were
+the odds of a mathematically gifted kid in the middle of Silicon Valley
+in the early 2000s not picking up The Fountainhead and finding his inner
+life inside? But that never happened.</p>
+<p>Sam saw some merits in a certain kind of libertarianism. But he
+listened to actual libertarians argue why, for instance, they shouldn’t
+need to pay taxes. And he thought, Yeah, of course no one likes to pay
+taxes, but that’s not exactly a philosophy. “They blurred the line
+between libertarianism as a philosophy and selfishness as a philosophy,”
+he said. His internal wiring didn’t carry this particular signal. “The
+notion that other people don’t matter as much as I do felt like a
+stretch,” he said. “I thought it would be bizarre even to think about.”
+It was one thing to feel isolated; it was another to believe that one’s
+place of isolation was the center of the universe. Or that you and what
+happened to you were the only things that mattered. “It felt unambitious
+to not care about what happened to the rest of the world,” said Sam. “It
+was shooting too low to only think about what was going to impact
+me.”</p>
+<p>In their day jobs, his parents continually wrestled with the tension,
+in American law, between individual freedoms and the collective good.
+Both identified, broadly speaking, as utilitarians: any law should seek
+not to maximize some abstract notion of freedom but rather the greatest
+good for the greatest number. They never pushed their views on Sam, but
+Sam of course heard them. And his parents mostly made sense to him.
+Around the time he stopped reading books, he turned to utilitarian
+message boards on the internet. He might not have felt connections to
+individual people, but that only made it easier for him to consider the
+interests of humanity as a whole. “Not being super close to that many
+particular people made it more natural to care not about anyone in
+particular but about everyone,” he said. “The default wiring I had was,
+‘Yeah, there’s not anyone who doesn’t matter. So I guess I should care
+the same amount about everyone.’” One day, at the age of twelve, he had
+popped out of his room and made an impassioned point in defense of
+utilitarianism. “I was just stunned when I realized that’s what he was
+doing in his bedroom,” said Barbara. As Sam would later explain:</p>
+<p>When I was about 12 years old I was first becoming politically aware
+and started to think through social issues. Gay marriage was a no
+brainer—you don’t have to be a hardcore utilitarian to see that making
+people’s lives miserable because they’re completely harmlessly a little
+bit different than you is stupid. But abortion was nagging me a bit. I
+was pretty conflicted for a while: having unwanted kids is bad, but so
+was murder.</p>
+<p>Then Sam framed abortion as a utilitarian might. Not by dwelling on
+the rights of the mother or the rights of the unborn child but by
+evaluating the utility of either course of action.</p>
+<p>There are lots of good reasons why murder is usually a really bad
+thing: you cause distress to the friends and family of the murdered, you
+cause society to lose a potentially valuable member in which it has
+already invested a lot of food and education and resources, and you take
+away the life of a person who had already invested a lot into it. But
+none of those apply to abortion. In fact, if you think about the actual
+consequences of an abortion, except for the distress caused to the
+parents (which they’re in the best position to evaluate), there are few
+differences from if the fetus had never been conceived in the first
+place. In other words, to a utilitarian abortion looks a lot like birth
+control. In the end murder is just a word and what’s important isn’t
+whether you try to apply the word to a situation but the facts of the
+situation that caused you to describe it as murder in the first place.
+And in the case of abortion few of the things that make murder so bad
+apply.fn4</p>
+<p>This was how Sam figured out who he was: by thinking about things for
+himself, without a whole lot of concern for the thoughts of others.
+There were two brief periods, however, when he had someone around to
+think about things with. Playing Magic with Matt Nass was one; math camp
+was the other. After his freshman year in high school, he went to a
+summer camp for mathematically gifted kids, on the Colby College campus.
+(Joe drove him there and got lost—then saw an awkward-looking kid
+sitting under a tree, fiddling with a Rubik’s Cube. “That’s when I knew
+we’d found the place,” said Joe.) For Sam, math camp was a revelation:
+here were kids with whom he had something in common. At math camp people
+didn’t seem to care about his lack of facial expressions. At math camp
+he had conversations with other people that resembled the conversations
+he’d been having with himself. When other kids spoke about politics, it
+wasn’t to express some dumb opinion. It was to figure out the best way
+to model elections and predict their outcomes. When they discussed their
+lives and how they might live them, they actually made sense to him.
+Math camp kids could think their way to a belief. “And if you can’t
+think your way to a belief, how can you think your way to an action?”
+asked Sam.</p>
+<p>At math camp Sam found people drawn to the flavor of utilitarianism
+that appealed to him. “For the first time I wasn’t one of the smartest,”
+said Sam. “Each of the campers was more interesting than the most
+interesting person in high school. They were smarter in every way. They
+were also more quantitative. But they had more distance from standard
+culture and felt less pressure or less ability to conform.”</p>
+<p>At the center of math camp social life was not math but puzzles and
+games. Sam knew he loved games; after math camp he loved puzzles, too.
+When he got home he decided to create his own puzzles, for others to
+solve. Math camp had alerted him to the existence of people not entirely
+different from himself. He used these puzzles to seek them out. He’d put
+out an APB on every nerd site on the internet. Some weekends, one
+hundred socially awkward humans of every age from all over the Bay Area
+would turn up on the Stanford campus to find Sam waiting with a puzzle.
+Solving the first puzzle led them to some other place on campus, where,
+if they ever reached it, they’d find another puzzle, also created by
+Sam. Solving that puzzle would lead them to yet another place on campus,
+and yet another puzzle, and so on. On and on this went, for hours, until
+some genius arrived at, in essence, Sam’s horcrux. Sam’s puzzle hunts
+were seriously complicated. But he also created some simpler puzzles and
+put them online. Like this one:</p>
+<p>Sam’s biggest puzzle remained himself. Before math camp, he’d told
+himself that he was smarter than other people. Math camp disproved that
+theory. “This feels like the place for me more than anyplace I’ve ever
+been,” he said. “But I’m below average. I didn’t think there was
+anything about me that made me special, and it bothered me. Nothing I
+did—no pieces of knowledge I had—set me apart at math camp.” By math
+camp standards he was only mediocre at puzzles and games. But he also
+suspected that the sorts of games they played at math camp were too
+regular for his mind. “The place I am strongest is the place where you
+have to do things other people would find shocking,” he said. He still
+had no idea where in the world, if anywhere, he might find such a place.
+Or if it existed.</p>
+<h6 id="阅读日期-2025年12月03日-2025年12月03日-共-1-天">阅读日期：
+2025年12月03日-2025年12月03日 共： 1 天</h6>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

@@ -1,0 +1,806 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="hbaolong@vip.qq.com" />
+  <title>走向无限EN:3 Meta Games</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">走向无限EN:3 Meta Games</h1>
+<p class="author">hbaolong@vip.qq.com</p>
+</header>
+<center>
+<a href="/3place/zxwxen">返回首页</a> <a
+href="/3place/zxwxen/mingju.html">本书名句</a> <a
+href="/3place/zxwxen/memo.html">本书注解</a> <a
+href="/3place/zxwxen/index_rich.html">丰富目录</a> <a
+href="/3place/zxwxen/index_readcal.html">同读日历</a> <a
+href="/3place/zxwxen/index_timeline.html">时间线</a> <a
+href="/3place/zxwxen/index_books.html">引用书籍</a> <a
+href="/3place/zxwxen/index_words.html">使用字频</a>
+<div id="wx_pic" style="margin:0 auto;display:none;">
+<img src='/img/logo.png'/>
+</div>
+</center>
+<h4 id="meta-games">3 Meta Games</h4>
+<p>After not much happening in the life of Sam Bankman-Fried for a very
+long time, two big things occurred in the fall of 2012, at so nearly the
+same time that it would soon be hard to remember that they had nothing
+to do with each other. Sam had entered his junior year at MIT as just
+another physics student who had lost his interest in physics.
+Approximately zero of MIT’s physics majors became physicists anymore.
+Most went to work for Google, or for high-frequency trading firms. Jump
+Trading, Tower Research Capital, Hudson River Trading, Susquehanna
+International Group, Wolverine Trading, Jane Street Capital: all these
+Wall Street companies Sam had never heard of came to the job fair that
+year inside the MIT gym. And he became just a little curious about
+them.</p>
+<p>Even a few months earlier his curiosity would have surprised him.
+He’d never had the slightest interest in money. He neither knew nor
+cared about finance. Apart from a firmly held idea that he should
+evaluate his actions by their utilitarian effects, he had no clue what
+to do with his life. He’d always just thought that he’d wind up being
+some kind of professor, like his parents. “I had sort of implicitly
+assumed that academia was the center of morality,” he said. “It was
+where people were at least thinking of how to have the most impact on
+the world.” Two years of college classes and the previous summer’s
+internship, during which he’d helped MIT researchers with their
+projects, had killed that assumption. During college lectures he’d
+experienced a boredom that had the intensity of physical pain. He had no
+ability to listen to a canned talk. He’d figure out where the professor
+was going with whatever he was saying and, bang, he was out. The more
+Sam saw of academic life, the more it felt like one long canned talk,
+created mainly for narrow career purposes. “I sort of started to look at
+it from a different perspective, and I got a little bit disillusioned,”
+he said. “There was very little evidence that they were doing much of
+anything to change the world. Or even thinking about how to have the
+most impact on the world.”</p>
+<p>Newly aware that he had no plan for the future, he’d gone to the job
+fair, where he found all these booths run by Wall Street firms. He’d
+never heard of any of them, but right away he could see that, whatever
+they did, they weren’t all doing the same thing, because they were
+looking for different kinds of people. Some advertised for “core
+developers,” or “programmers,” while others were looking for “traders.”
+Sam had no talent for coding—the two closest friends he’d made at MIT
+were both coders, but he still couldn’t tell a good coder from a bad
+coder. About trading all he knew was that he was not obviously
+unqualified to do it. He dropped his résumé with the firms looking for
+traders. It still felt like a lark. “Someone told me that a lot of
+physics majors go to work on Wall Street, and I thought, Eh, maybe, but
+probably not.”</p>
+<p>He was surprised when three different high-frequency trading firms
+emailed him to invite him to interview for their summer internships:
+Susquehanna, Wolverine, and Jane Street Capital. “It turned out that
+this was a real thing,” he said. Exactly what it was remained a mystery,
+even after the firms had reached out to him. You couldn’t just google
+“Jane Street Capital” and learn anything useful about the place. There
+was hardly anything about Jane Street Capital on the internet.fn1 “I had
+no idea what to expect,” said Sam. “I didn’t even know what types of
+interviews these were going to be.”</p>
+<p>He had three phone interviews with Jane Street traders, and they were
+like no interviews he’d ever heard of. Something about his résumé must
+have caught these people’s attention, but they didn’t seem to care about
+anything on it. They didn’t ask him about what he was studying, or how
+he’d spent his summer vacations. They didn’t ask for references or
+inquire into his hobbies—or really attempt to learn anything about his
+life thus far on earth. The Jane Street traders seemed to believe that
+no evaluation of him other than their own was of any use in determining
+whether he was suited to do what they did. But their questions were
+mostly just mental math. The first ones were so trivial that Sam figured
+they must just be trying to see how his mind responded when he was
+nervous. “What’s twelve times seven?,” for example. And: “How sure are
+you of your answer?” The more correct answers Sam supplied, the more
+complicated the mental math became. If you roll two six-sided dice, what
+are the odds you get at least one three? The odds of rolling a three
+with one die were obviously 1 in 6. If you didn’t stop and think, you
+might guess the odds of rolling a three with two dice were 1 in 3. The
+error in that answer could be seen if you reframed the question: What
+are the chances of NOT rolling a three with two dice? You had a 5-in-6
+chance of not rolling a three with a single die; to get the odds with
+two dice, you multiplied five-sixths by five-sixths. So: 25/36ths. There
+was an 11-in-36 chance that, with a roll of two dice, you’d get one
+three.</p>
+<p>The in-person interview, in mid-November, was different. Jane Street
+sent him a train ticket to New York City and provided a car and driver
+to take him out to a disaster relief site in Totowa, New Jersey.
+Hurricane Sandy had swept Jane Street out of its lower Manhattan
+offices. The disaster site had an eerie industrial feel—the desks were
+all the same, you needed a key to use the bathroom—but Sam hardly
+noticed. What preoccupied him was what Jane Street wanted him to do for
+an entire day: solve puzzles and play games. These games came with a
+warning label, however. The Jane Street selection process was designed
+to minimize the amount of valuable time the traders spent evaluating
+applicants. The moment any interviewer disapproved of Sam’s play, the
+games would end, and he’d be sent packing. The Jane Street trader who
+handed him a stack of a hundred poker chips explained that this was his
+stake for the day—and that no one who had lost all their chips playing
+the games he was about to play had ever been given a job at Jane
+Street.</p>
+<p>For the first game, Sam was grouped in a room with two other
+applicants and a Jane Street trader. The trader dealt out a hand of
+poker, then asked them each to reveal a single card. Then he started
+suggesting all these weird wrinkles on poker. For example: You can pay
+four chips to exchange one of your cards for a new one. Does anyone want
+to do that? After each new card, the trader would stop play and try to
+provoke Sam and the other two guys into making side bets with each
+other. Does anyone want to make odds on the next card being a heart? How
+many clubs do you hold, collectively, in your hands? This wasn’t poker.
+This was some kind of meta poker. Or a jousting tournament, but with
+playing cards. Sam saw right away that the key to the game was to make
+quick judgments about the expected value of bizarre situations, and act
+on them. Yet none of the decisions actually felt all that strange to
+him. “The thing that was surprising about them to me was the lack of
+things that were surprising,” said Sam.</p>
+<p>Of course, it was impossible to know just how accurately these games
+identified great traders, because no one who played them poorly was
+given a chance to trade. Still, at the end of that first round Sam was
+sitting on a lot more chips than the other two applicants. At which
+point his interviewers separated him from the other two applicants, whom
+he never saw again, and put him through five more rounds of forty-five
+minutes each. All of the games turned out to be as peculiar as the card
+game. The coin-flipping game, for instance:</p>
+<p>Here are ten coins, each differently weighted. One is a normal,
+evenly weighted coin, and thus has a fifty percent chance of landing on
+heads (or tails). The other nine coins are all unevenly weighted, though
+no two in exactly the same way. We’re not going to tell you how they are
+weighted, except to say that some are weighted to land more often on
+heads and some on tails. One coin might land on heads sixty-two percent
+of the time, for example, while another coin might land on tails eighty
+percent of the time. You’ll be given thirty minutes to flip any coin you
+wish. You’ll be allowed to flip one hundred times in total. For every
+heads that you flip, you win one poker chip.</p>
+<p>The Jane Street trader who was interviewing him finished explaining
+the game and then asked: How much are you willing to pay to play? As you
+could simply pick the evenly weighted coin and flip that a hundred
+times, the expected value was at least fifty chips. Sam guessed he
+should be willing to pay roughly sixty-five chips to play, though there
+was no way to know, as they gave you no idea of the exact weighting of
+the coins. That must have been, at worst, not an entirely wrong answer
+to the trader’s question, as the trader allowed him to play. Once he
+began flipping the weighted coins, the trader interrupted again, to
+offer him even more weird gambles: Want to bet on what that next flip
+will be? Want to bet on the true weighting of the coin you’ve now
+flipped five times that came up heads four of them? Sam could see that
+there was no exactly right way to play, just some wrong ones. Unless you
+were simply giving up, there was no point in flipping the evenly
+weighted, 50-50 coin, for example, as it gave you no new information. A
+lot of very smart people wasted flips searching for the optimal
+coin—that is, the one most heavily weighted toward heads. They’d flip
+each coin five times, say, to gather the data they needed to make decent
+statistical calculations. As a strategy it wasn’t totally dumb. But
+their desire for greater certainty led them to waste a lot of flips on
+inferior coins. Sam’s instinct was to pick an unevenly weighted coin and
+flip it until it came up tails. Based on how many flips that took, and
+some dirty math, he’d then decide whether to proceed with the coin or
+move on to another. He started the game willing never to find the
+optimal coin so long as he found a good enough one. The game, he sensed,
+was testing his relationship to information: when he sought it, how he
+sought it, how he updated his beliefs in response to it.</p>
+<p>Jane Street poker wasn’t normal poker, and Jane Street coin flipping
+wasn’t normal coin flipping. None of the Jane Street games were even
+games, exactly, so much as games within games, or games about games. The
+most difficult part of each game was seeing exactly what it was. “A
+median American would take twenty minutes to just figure out what the
+game was,” said Sam. “A Harvard student could understand the game, and a
+Harvard math student could understand the game and the mathematical
+structure underlying it. It’s a lot of quantitative information but not
+perfect quantitative information. The idea is to give you partial
+knowledge and relationships that can be only partially understood. And
+there’s time pressure.” Sam thought time pressure favored him. It wasn’t
+that he thrived under pressure; it was that he didn’t feel it. He wasn’t
+better than usual when he was on a clock; he just wasn’t worse—and most
+people were. Other people felt emotions; he did not. Most people, facing
+a complicated problem and a ticking sound, had trouble seeing quickly
+what mattered and what did not, especially if the problem had no perfect
+solution. Few of the Jane Street traders’ questions had perfectly
+correct answers. They were testing him for an ability to make messy
+judgments and act quickly on them—and not to be too bothered about
+questions to which he did not, and could not, know the answer. “It was
+all the intuitive decisions you make in Magic, condensed down but even
+more complicated,” said Sam. “Even Magic does not get you there.”</p>
+<p>The puzzles that the Jane Street traders gave Sam to solve were
+designed, like the betting games, to expose blind spots in his mind. The
+one about baseball was the simplest example. What are the odds that I
+have a relative who is a professional baseball player? one of the Jane
+Street traders had asked him.</p>
+<p>Sam’s first thought was to define the problem. If you didn’t define
+the problem, you couldn’t solve it. “That was one thing he was testing
+for with the question,” said Sam. “Did I realize that the question was
+ambiguous?” What counted as a “relative”? he asked the trader. What did
+he mean by “professional baseball players”? Every human being is related
+to every other human being, in some sense. And lots of people who are
+not in the major leagues are paid to play baseball. “Relative,” the Jane
+Street trader said, was any second cousin or closer, and “pro baseball
+player” included both major and minor leagues but nothing else. Sam
+guessed there were roughly one hundred baseball teams that fit that
+definition, and that each had roughly thirty players. So: three thousand
+active pro baseball players, plus maybe another seven thousand retired
+ones. Ten thousand players in a population of three hundred million
+Americans. So: one in thirty thousand Americans had played or were
+playing pro baseball. Sam didn’t know off the top of his head how many
+relatives the average American had, but he thought thirty was a
+reasonable guess. Thus the odds this guy had a relative who played pro
+baseball were roughly one in a thousand.</p>
+<p>The numbers were obviously not exactly right, merely a good enough
+start. But it was here that Sam paused his mental math and said, I think
+there’s a decent chance you are asking me this question because it is
+salient for you—because you have a relative who plays professional
+baseball.</p>
+<p>Here things became tricky. The trader might have anticipated that Sam
+would have this thought. The trader might have intentionally asked a
+question that he had no special reason to ask, just to trick Sam. Here
+was just another aspect of the puzzle: you had to figure out how many
+levels down you should go before you should stop thinking. Sam decided,
+as he nearly always did, that more than one level down was too clever by
+half. It was far more likely that the guy had some reason to ask the
+question than that he did not. He didn’t know by exactly how much, but
+the mere fact the trader had asked the question shifted the odds that he
+had a relative who played pro baseball to something better than one in a
+thousand. “That was the other thing he was testing for,” said Sam. “Did
+I realize that there was information in the question I was asked?”</p>
+<p>In the end Sam put the odds at one in fifty. And it turned out that
+the Jane Street trader did indeed have a second cousin who had played
+professional baseball. But none of that was the point of the problem.
+The point was how Sam framed it, or failed to. “There were no right
+answers,” said Sam. “There were only wrong answers.”</p>
+<p>By the end of the day of interviews, Sam felt he’d discovered
+something about himself. “I thought, This is correctly testing for
+something that matters quite a bit, even if I find it hard to articulate
+what it is,” he said. Nothing in normal life—not even the games and
+puzzles that had sustained Sam through childhood—could serve as a proxy
+for whatever “traders” did at Jane Street. “Childhood doesn’t give you a
+version of this that would tell you that you are good at it,” said Sam.
+Childhood had given him math, at which he’d been very good but not
+great. Childhood had given him various strategic board and card games,
+at which he’d also been very good but not great. The Jane Street traders
+had tested his mind for qualities it had never been precisely tested
+for. And it appeared to Sam that God had tweaked trading in various
+ways, or at least games intended to simulate trading, to make it
+different from math and board games. Each of those tweaks had made the
+games more congruent with his mind. “By the end of the day it was clear
+that it was by far the best I’d ever done at anything,” he said.</p>
+<p>Jane Street offered him a summer internship. So for that matter did
+the other high-frequency trading firms that had invited him to apply.
+One firm had halted their interview process midway through and announced
+that Sam had done so much better at their weird games and puzzles than
+every other applicant that there was no longer any point in watching him
+play. Later, on the Jane Street trading floor, one fellow trader still
+enjoyed dreaming up games and puzzles and putting them to Sam, just to
+watch him play. Other people would have no idea what she was talking
+about—would not even see what the game was. Sam would not only instantly
+understand the game but would play it beautifully.</p>
+<p>Perfume in the mail, she’d once said to Sam.</p>
+<p>Sent scent, he’d replied.</p>
+<p>Britney Spears is no longer working.</p>
+<p>Idle idol.</p>
+<p>A Goldman Sachs analyst discovers a cash flow model that predicts the
+future.</p>
+<p>Profit prophet.</p>
+<p>In the presence of strange new games, the relevant thought processes
+just seemed to come to Sam.</p>
+<p>One other oddly big thing happened to Sam at the beginning of his
+junior year. Completely out of the blue, a twenty-five-year-old lecturer
+in philosophy at Oxford University named Will Crouchfn2 reached out and
+asked to meet with him. Sam never learned how the guy had found
+him—probably from the writing Sam had been doing on various utilitarian
+message boards. MacAskill belonged to a small group inside Oxford that
+had embraced ideas hatched long ago by an Australian philosopher named
+Peter Singer. He wanted Sam to join him for coffee, then attend a talk
+he was about to give down the road at Harvard. Just then Sam was maybe
+the least likely person in Cambridge, Massachusetts, to voluntarily
+attend a talk by some random academic. But the fact that this professor
+had sought him out (signaling, to Sam, a justifiable lack of
+self-importance), coupled with the mention of Peter Singer’s name,
+caught his attention. Peter Singer was at least partly responsible for
+the ideas Sam had about what to do with his life.</p>
+<p>Those ideas, in their modern incarnation, dated back to 1971, when
+Singer was himself a twenty-five-year-old lecturer in philosophy at
+Oxford University. The trigger for them had been an oncoming famine in
+Bangladesh. The sight of people dying of hunger who might have been
+saved if only other, richer people had sent food bothered Singer enough
+for him to think about it. In an essay, called “Famine, Affluence, and
+Morality,” he groped for a way to dramatize the nature of this moral
+failing. “I was trying to think of an example when it would be wrong not
+to help even though you are in no way responsible for the problem,” he
+said. The example he came up with was of a person out on a walk coming
+upon a child drowning in a pond. What, asked Singer, would you do in
+this situation? You wouldn’t even think about it. You would leap into
+the pond and save the child, even if it meant ruining your expensive new
+shoes. Then why, asked Singer, were we so slow to send the equivalent of
+those expensive new shoes to prevent a Bengali child from starving? “The
+whole way we look at moral issues—our moral conceptual scheme—needs to
+be altered, and with it, the way of life that has come to be taken for
+granted in our society,” he wrote, in that first of what would be a
+lifetime of similar salvos. We needed to go way beyond ruining our new
+shoes. Eventually he came to the view that we needed to give what we had
+to others until the cost to ourselves outweighed the benefits to them.
+We needed to stop thinking of charity as a thing that was nice to do but
+okay not to do, and begin to think of it as our duty.</p>
+<p>Singer himself proceeded to do just this, and gave away more and more
+of his own earnings. His essay naturally launched a thousand rebuttals
+from other philosophers. “Teachers would assign it to students and say,
+‘Your task is to find where the argument is wrong,’” Singer recalled.
+There were many obvious complaints: His story was about a single child:
+it was not practical to save them all. Once you start down this road of
+giving away everything but the bare minimum of what you need to survive,
+where do you draw the line at what is enough? (“Sometimes There Is
+Nothing Wrong with Letting a Child Drown” was the title of one
+rebuttal.) Beneath much of the criticism was the feeling that Singer was
+making it too difficult for ordinary affluent people to live a moral
+life. “It has been argued by some writers … that we need to have a basic
+moral code which is not too far beyond the capacities of the ordinary
+man, for otherwise there will be a general breakdown of compliance with
+the moral code,” wrote Singer, in one of his own rebuttals to this idea,
+in his original paper. “Crudely stated, this argument suggests that if
+we tell people that they ought to refrain from murder and give
+everything they do not really need to famine relief, they will do
+neither, whereas if we tell them that they ought to refrain from murder
+and that it is good to give to famine relief but not wrong not to do so,
+they will at least refrain from murder.”</p>
+<p>The academic debate turned out not to matter very much in the real
+world, as ordinary affluent people simply ignored Singer. For nearly
+forty years, whenever Singer’s ideas came up, no one did much of
+anything except squirm in discomfort. At Princeton, the school brimming
+with ordinary affluent people where Singer wound up teaching, he was
+permitted to introduce a course in practical ethics only after students
+clamored for it. But then, in 2009, a small group of young philosophers
+at Oxford University set out to put Singer’s ideas into practice. A
+graduate student and research associate named Toby Ord kicked it off by
+announcing that he would donate a third of his salary to charities
+proven effective in poor countries, then explained his reasoning. (At
+little inconvenience to himself his money would save, over the course of
+Ord’s lifetime, eighty thousand African children from blindness.) Will
+MacAskill followed with a charm offensive to recruit young people on
+college campuses to join the cause. “The thing that Toby and Will did
+was to say, ‘No, we think the argument is sound,’” said Singer. The new
+social movement sprang directly from Singer’s forty-year-old argument.
+Effective altruism, the Oxford philosophers called their movement, after
+trying and failing to think of a better name.</p>
+<p>The argument that MacAskill put to Sam and a small group of Harvard
+students in the fall of 2012 went roughly as follows: you, student at an
+elite university, will spend roughly eighty thousand hours of your life
+working. If you are the sort of person who wants to “do good” in the
+world, what is the most effective way to spend those hours? It sounded
+like a question to which there were only qualitative answers, but
+MacAskill framed it in quantitative terms. He suggested that the
+students judge the effectiveness of their lives by counting the number
+of lives they saved during those eighty thousand hours. The goal was to
+maximize the number.</p>
+<p>He then showed the students a slide listing the sorts of careers they
+might pursue, were they to use their careers to save lives. He’d grouped
+these into four broad categories and offered examples of each: Direct
+Benefiter (doctor, NGO worker), Money-Maker (banker, management
+consultant), Researcher (medical research, ethicist), and Influencer
+(politician, teacher). Eventually, he told the students, you were going
+to have to choose which sort of career you would pursue. Each career
+type came with the opportunity to save lives, but the math was different
+for each, a bit like the math for which hero to play in Storybook Brawl.
+A Researcher or an Influencer stood a chance of saving some massive
+number of lives. The agronomist Norman Borlaug (Researcher), for
+instance, had invented disease-resistant wheat, which had saved roughly
+two hundred fifty million people from starvation. Researcher and
+Influencer, however, were tricky career choices: it was difficult to
+predict who would be good at them, and even harder to forecast their
+effects. The odds of any given Researcher or Influencer saving vast
+numbers of lives were vanishingly small.</p>
+<p>The clearer choice—the choice MacAskill dwelled on in his talk—was
+between Direct Benefiter and Money-Maker. Put bluntly: Should you do
+good, or make money and pay other people to do good? Was it better to
+become a doctor or a banker? MacAskill made a rough calculation of the
+number of lives saved by a doctor working in a poor country, where lives
+were cheapest to save. Then he posed a question: “What if I became an
+altruistic banker, pursuing a lucrative career in order to donate my
+earnings?” Even a mediocre investment banker could expect sufficient
+lifetime earnings to pay for several doctors in Africa—and thus would
+save several times more lives than any one doctor.</p>
+<p>Then he pushed his point a step further, in the direction of the
+investment banker. “Making a difference requires doing something that
+wouldn’t have happened anyway,” he said. If you didn’t become a doctor,
+someone else would take your place and the doctoring would still get
+done. Of course, if you didn’t become a banker, someone else would also
+take your place—but that person would spend his money on houses and cars
+and private schools for his kids and perhaps some non-life-saving
+donations to Yale. Very little of the replacement banker’s earnings
+would find its way to doctors in Africa. All those people you might have
+saved if you had become a banker and given away your money would die.
+Thus anyone with the ability to go to Wall Street and make vast sums of
+money had something like a moral obligation to do so—even if they found
+Wall Street faintly distasteful. “Many lucrative careers are really
+pretty innocuous,” said MacAskill, helpfully.</p>
+<p>Earn to give, MacAskill called his idea. His final slide was an
+invitation: “If you are convinced to any extent by the arguments given
+above, please come up and speak with me afterwards.” Even before he was
+done, he knew the sort of person who’d be coming up to speak with him:
+the sort of person who scored an 800 on their math SAT, and understood
+that the test was too crude to capture their full aptitude. Like Jane
+Street Capital, the effective altruism movement had come to Cambridge,
+Massachusetts, for a reason. Roughly three in four of the people who
+approached MacAskill after one of his talks were young men with a
+background in math or science. “The demographics of who this appeals to
+are the demographics of a physics PhD program,” he said. “The levels of
+autism ten times the average. Lots of people on the spectrum.”</p>
+<p>A few days later MacAskill wrote an email to another newly minted
+effective altruist, whom he hoped to introduce to Sam.</p>
+<p>I met Sam in Cambridge MA the other day—he’s a junior physicist at
+MIT. Despite having the geekiest email address everfn3 I was super
+impressed by him. He was brought up as a utilitarian by his parents, two
+Stanford professors, is serious, dedicated, and committed to doing good,
+and seems really smart and sensible too (i.e. takes some of the weirder
+ideas seriously, but isn’t fanatic about them). He’s thinking about
+earning to give or going into politics.</p>
+<p>Sam was only a step behind the first people responding to this new
+call to arms. That fall of 2012, a student of Peter Singer’s at
+Princeton had just become the first college student, to Singer’s
+knowledge, to take a job on Wall Street for the express purpose of
+making money to give away. His name was Matt Wage, and he’d been hired
+by Jane Street Capital.</p>
+<p>In the presence of strange new games, the relevant thought processes
+just seemed to come to Sam. In the presence of strange new people, not
+so much—though it took Jane Street Capital a bit longer to figure that
+out. That’s something they hadn’t tested for in the interviews. But at
+the end of the summer of 2013, nine months after they’d hired him, Jane
+Street executives sat Sam down to discuss his performance. The strengths
+he’d revealed in the interviews were still clearly strengths. He’d been
+better at all the trading games than most of the other interns. His mind
+was clearly well suited to modern financial markets—so obviously so
+that, just a few weeks into the summer internship, the Jane Street
+executives had taken him aside and offered him a full-time job.</p>
+<p>Sam’s weaknesses were the news. At the point of intake, no one at
+Jane Street had tested Sam for his social abilities. None of his
+interviewers had cared how he related to other people. The Jane Street
+executives now told Sam that more than a few people inside the firm were
+asking the question that people had often asked about him: Who is this
+guy? They’d compiled what amounted to a rap sheet. Several things had
+occurred that summer to cause the Jane Street executives to be a bit
+less sure of their feelings about Sam. All had involved social
+interactions. Some Jane Street full-timers had found Sam’s constant
+fidgeting annoying, especially the way he compulsively shuffled playing
+cards. One senior Jane Street executive had been seriously offended by
+the bluntness with which Sam had revealed the stupidity of a question
+the executive had posed to a class of interns. Maybe most alarmingly,
+more than a few Jane Streeters were disturbed by Sam’s indifference to
+other people’s feelings. As an example, the Jane Street executives cited
+what Sam had done to a fellow intern, here called Asher Mellman.</p>
+<p>Jane Street’s interns had been encouraged to gamble with each other
+and with the full-time employees. All summer the interns had made bets
+with each other, on anything they could think to bet on—which team would
+win some game, how many jelly beans some intern could eat in forty-five
+seconds, which interns would receive full-time job offers, and so on. To
+keep things from getting out of hand, Jane Street set a loss limit of a
+hundred dollars per day per intern. The gambling was a teaching tool. It
+taught interns to turn gambles that most people would not make at all,
+or make by the seat of their pants, into numbers that could be analyzed.
+It compelled them to think quantitatively about qualitative things. To
+think rigorously about everything—even a jelly-bean-eating contest.
+After all, what Jane Street was looking for were traders who could think
+faster and better than everyone else in global financial markets.</p>
+<p>On the day in question, Sam hadn’t been looking for trouble. It was
+Asher Mellman who approached him. Which surprised him, because Sam could
+not stand Asher. Asher had come to Jane Street from Harvard, and Sam had
+decided, fairly quickly, that he was “fake and stuck-up and
+unimpressive.” (“He half had some maybe gig with Nate Silver and he made
+sure everyone knew.”) Sam realized that his feelings were a reflection
+more of his own tastes than of some universal loathsomeness of Asher’s.
+“It’s not that he’s an unlikable guy in general,” said Sam. “Much of the
+world likes him. But if you don’t like Asher, you really don’t like
+Asher.” Sam especially didn’t like the way Asher tried to impress other
+people, because what Asher found impressive about himself were precisely
+the qualities Sam most disliked in others. Asher was pretentious about
+the food he ate, and he put more thought than most Jane Street interns
+into the clothes he wore. “He had opinions on what sweater was a nice
+sweater, and what were not nice sweaters.” Sam knew that a lot of
+people, himself included, were bad at distinguishing their pet peeves
+from legitimate criticism. “It triggered me in specific ways that I know
+I’m sensitive to,” said Sam. “Part of me is like, Jesus Christ, Sam, why
+do you care why he cares what sweaters he’s wearing?” A bigger part of
+him cared.</p>
+<p>And Asher had approached him. In the conference room, one morning.
+Before Jane Street’s intern class.</p>
+<p>Let’s make a bet, Asher had said.</p>
+<p>On what?</p>
+<p>On how much any one intern will lose gambling today.</p>
+<p>Sam’s first thought was about adverse selection. Adverse selection
+was a favorite topic at Jane Street. In this context it meant that the
+person most eager to make a bet with you is the person you should be
+most worried about betting against. When people wanted to bet—or
+trade—with you, there was usually a reason: they knew something you did
+not. (That they had a second cousin who had played in the minor leagues,
+for instance.) The first thing you did when someone offered you a bet
+was to make sure you weren’t missing what they might know. Some piece of
+information. Some non-obvious angle to the problem. Lots of bets looked
+stupid after the fact because the person on the receiving end hadn’t
+thought about why a bet had been proposed in the first place. Jane
+Street hammered this bitter fact into you every day, and these gambling
+games were the tool.</p>
+<p>A full-time Jane Street trader might approach a group of interns and
+say something like: I got some dice in my pocket. Anyone want to make a
+market how many? The interns, primed to gamble, were also eager to
+impress full-time Jane Street traders. And so some less savvy intern
+might actually do it. He’d think it over and (because he’d read the Jane
+Street guide on how to make markets) say something like, Two at five,
+one up. (That is, he’d “buy” at two dice or “sell” at five dice.) Some
+other intern who “sold” to the less savvy intern would be betting that
+the full-time Jane Street trader had fewer than two dice in his
+pocket—and the smarter intern would win one dollar for each die fewer
+than two the trader actually had (“one up”). If the trader had zero dice
+in his pocket, the intern who had made the market would owe the savvier
+intern two bucks. Anyone who “bought” from the intern at five was
+betting that the trader had more than five dice in his pocket—and would
+win a dollar for every die over five. Thus if you “bought” at five, and
+the trader had only two dice in his pocket, you would owe the intern
+three dollars. On the other hand, if the trader had nine dice in his
+pocket, the intern owed you four dollars.</p>
+<p>The full-time trader was not testing for an ability to make
+intelligent guesses about the greatest and least number of dice held by
+a person who walked around with dice in his pocket. He was testing to
+see if the intern had the sense to ask meta-level questions: Why is this
+trader asking me how many dice he has in his pocket? What risk might he
+be disguising? “Two at five, one up” seemed reasonable—if you didn’t ask
+those questions. After all, the trader probably had some dice in his
+pocket—otherwise why would he be asking? And if he had more than five
+dice in his pocket, surely you’d see a bulge. Two at five, one up was
+not reasonable, however. Two at five, one up was all you needed to hear
+to know that the intern should never be offered a full-time job as a
+Jane Street trader. This became obvious to all after the intern said two
+at five, one up, and the other, smarter intern had “bought” at five. And
+the trader pulled from his pocket sacks that contained a grand total of
+723 extremely tiny dice.</p>
+<p>I just want to be clear, Sam had said to Asher Mellman. This cannot
+settle above one hundred or below zero, right? (That is, the most that
+any intern might lose in a day is one hundred dollars, and the least is
+zero.)</p>
+<p>Right, said Asher.</p>
+<p>You really want to bet against me? asked Sam.</p>
+<p>Yes.</p>
+<p>Why?</p>
+<p>It’d be fun.</p>
+<p>You a buyer or a seller?</p>
+<p>Depends on the price, said Asher.</p>
+<p>Sam now knew most of what he needed to know—that Asher had not
+thought hard enough about this bet he’d dreamed up. “If I were a more
+mature person, I would not have taken the bet,” said Sam. Instead, he
+said, I’m a buyer, at fifty. (As a “buyer” Sam was betting on an intern
+loss of more than fifty dollars that day. If the biggest loser that day
+lost only forty dollars, Sam would owe Asher ten dollars. If the biggest
+loser lost sixty dollars, Asher would owe Sam ten dollars.)</p>
+<p>Sixty-five, countered Asher. Sam promptly accepted, then turned to
+the other interns in the room and shouted: Who wants to flip a coin with
+me for ninety-eight dollars? The day’s lecture hadn’t started, but the
+conference room was filling up. A bunch of interns already were hanging
+around, waiting. I’ll pay a dollar to anyone who will do it! shouted
+Sam. (“By then the interns are all addicted to gambling, and to positive
+expected value gambling more than anything in the world.”) To the Jane
+Street way of thinking, Sam was offering free money. A Jane Street
+intern had what amounted to a professional obligation to take any bet
+with a positive expected value. The coin toss itself was a 50-50
+proposition, and so the expected value to the person who accepted Sam’s
+bet was a dollar: (0.5 × 8) – (0.5 × 8) + = . The expected value of
+Sam’s position was even better, thanks to his side bet with Asher that
+paid him a dollar for every dollar over sixty-five lost that day by any
+intern. After the coin flip, either Sam or some other intern would have
+lost ninety-eight dollars: win or lose the coin flip, Sam would collect
+thirty-three dollars from Asher (the difference between ninety-eight and
+sixty-five).</p>
+<p>Only Asher had negative expected value. Asher lost whatever happened.
+And Asher was now clearly deeply embarrassed.</p>
+<p>Sam won the first coin flip. But that was just the start. To maximize
+Asher’s pain, some intern needed to lose one hundred dollars.</p>
+<p>I’ll pay a dollar to anyone who will flip me for ninety-nine dollars,
+Sam shouted.</p>
+<p>Now he had a machine for creating wagers in which both parties
+enjoyed positive expected value. That machine was named Asher. Interns
+were lined up to take the bet. “People get so obsessed with free dollars
+when you frame it correctly,” said Sam. He was by then in full obsessive
+gaming mode. “There was nothing that was going to stop me. If I’d have
+spent the rest of the internship flipping that coin, I’d have been
+satisfied.” And for a while it appeared that he might, as he won the
+second coin flip too.</p>
+<p>I’ll pay a dollar to anyone who will flip me for ninety-nine fifty,
+shouted Sam.</p>
+<p>The other interns clearly felt obligated to take the bets, but the
+mood in the room was shifting in response to Asher’s feelings. Plus the
+Jane Street trader who was meant to deliver the lecture had arrived and
+was watching the whole thing. But Sam won the third coin flip too, so to
+his way of thinking the gambling wasn’t yet over.</p>
+<p>I’ll pay a dollar to anyone who’ll flip me for ninety-nine
+seventy-five, he shouted.</p>
+<p>It wasn’t until the fourth flip that Sam lost—and by then everyone
+except Sam was unsettled by Asher’s humiliation. And yet Sam was ever so
+slightly taken aback, a few weeks later, when his superiors expressed
+their dismay at what he’d done. “They said the second coin flip was
+already one too many,” said Sam. He wasn’t surprised to learn that Asher
+Mellman felt wounded. What surprised him was that his Jane Street bosses
+thought that he somehow missed the effect he was having on other people.
+He’d known exactly what he was doing. What he’d done to Asher was no
+more than what Jane Street was doing to competitors in financial markets
+every day. “It was not like I was unaware I was being a piece of shit to
+Asher,” he said. “The relevant thing was: Should I decide to prioritize
+making the people around me feel better, or proving my point?” Sam
+thought his bosses had misread his social problems. They thought he
+needed to learn how to read other people. Sam believed the opposite was
+true. “I read people pretty well,” he said. “They just didn’t read
+me.”</p>
+<h6 id="阅读日期-2025年12月04日-2025年12月04日-共-1-天">阅读日期：
+2025年12月04日-2025年12月04日 共： 1 天</h6>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>
