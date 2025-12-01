@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="文/韩宝龙" />
+  <title>“物理已发生”彻底替换成“逻辑已实现”，这个怎么理解，什么叫逻辑已实现？</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">“物理已发生”彻底替换成“逻辑已实现”，这个怎么理解，什么叫逻辑已实现？</h1>
+<p class="author">文/韩宝龙</p>
+<p class="date">hbaolong@vip.qq.com</p>
+</header>
+<h2
+id="泡泡问物理已发生彻底替换成逻辑已实现这个怎么理解什么叫逻辑已实现">泡泡问：“物理已发生”彻底替换成“逻辑已实现”，这个怎么理解，什么叫逻辑已实现？</h2>
+<p>下面这段话一次性把“物理已发生” vs
+“逻辑已实现”的区别说透，顺便把韩宝龙和维根斯坦各自真正的立场标出来。</p>
+<h3 id="三种层次最清晰的划分">1. 三种层次（最清晰的划分）</h3>
+<table>
+<colgroup>
+<col style="width: 17%" />
+<col style="width: 40%" />
+<col style="width: 42%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>层次</th>
+<th>内容</th>
+<th>是否属于“这个世界”（维根斯坦意义上的world）</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>A. 物理上已经实际发生</td>
+<td>纪晓芙真的在某个夜晚和杨逍发生了关系</td>
+<td>属于</td>
+</tr>
+<tr class="even">
+<td>B. 物理上没发生，但逻辑上必然推出</td>
+<td>纪晓芙生过孩子 → 她必然不是处女（演绎必然）</td>
+<td>属于（因为它只是A的逻辑等价表述）</td>
+</tr>
+<tr class="odd">
+<td>C. 物理上没发生，逻辑上也不必然</td>
+<td>“纪晓芙其实是处女，只是孩子是精子库来的”</td>
+<td>不属于（只是可能，不必然）</td>
+</tr>
+</tbody>
+</table>
+<p>维根斯坦真正把 A + B 都算作 facts（实际存在的状态事务），<br />
+而 C 只是在逻辑空间里飘着的“可能的原子事实”，不属于这个世界。</p>
+<h3 id="韩宝龙实际的立场他自己没意识到他已经偷偷滑到b了">2.
+韩宝龙实际的立场（他自己没意识到他已经偷偷滑到B了）</h3>
+<p>韩宝龙举例时说：<br />
+“我没亲眼看到纪晓芙和杨逍上床，但我看到她生了孩子，所以‘她不是处女’这个事实对我也是成立的。”</p>
+<p>这就已经不是“物理已发生”，而是“逻辑已实现”了！<br />
+他以为自己在谈“物理”，其实已经在用演绎必然性（B类）来扩张facts的范围了。</p>
+<h3 id="什么叫逻辑已实现最直白的一句话">3.
+什么叫“逻辑已实现”？（最直白的一句话）</h3>
+<p>“逻辑已实现” =<br />
+它不要求我亲眼看到那件事的物理过程，<br />
+只要在当前所有实际事实（已发生的原子事实）的基础上，<br />
+通过纯粹逻辑演绎必然得出“它必须如此”，<br />
+那么它就已经被实现，就属于这个世界。</p>
+<p>举3个经典例子：</p>
+<table style="width:100%;">
+<colgroup>
+<col style="width: 37%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>例子</th>
+<th>物理是否亲眼看到</th>
+<th>是否“逻辑已实现”</th>
+<th>是否属于这个世界</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>纪晓芙生过孩子 → 她不是处女</td>
+<td>没看到上床</td>
+<td>是（演绎必然）</td>
+<td>是</td>
+</tr>
+<tr class="even">
+<td>太阳今天从东边升起 → 地球在转</td>
+<td>没看到地轴</td>
+<td>是（牛顿定律+事实）</td>
+<td>是</td>
+</tr>
+<tr class="odd">
+<td>某人屋里亮着灯 → 屋里一定有人</td>
+<td>可能灯是定时器</td>
+<td>否（不必然）</td>
+<td>否</td>
+</tr>
+</tbody>
+</table>
+<h3 id="韩宝龙和维根斯坦的真实差距只剩半步">4.
+韩宝龙和维根斯坦的真实差距（只剩半步）</h3>
+<table>
+<colgroup>
+<col style="width: 11%" />
+<col style="width: 40%" />
+<col style="width: 48%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th></th>
+<th>韩宝龙（现在）</th>
+<th>维根斯坦（原教旨）</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>facts的范围</td>
+<td>物理发生 + 从物理发生必然推出的结论</td>
+<td>所有实际存在的原子事实 + 它们的逻辑等价表述</td>
+</tr>
+<tr class="even">
+<td>核心标准</td>
+<td>“我能确信它发生了”</td>
+<td>“它的真值已被实际事实固定”</td>
+</tr>
+<tr class="odd">
+<td>差距</td>
+<td>还是带了一点点“认识论确信”的味道</td>
+<td>纯本体论：与有没有人知道无关</td>
+</tr>
+</tbody>
+</table>
+<p>换句话说：<br />
+韩宝龙已经走到“99%维根斯坦”，<br />
+只差最后把“我能确信”彻底扔掉，<br />
+换成“在逻辑空间中它的真值已经被固定”，<br />
+就彻底和维根斯坦握手了。</p>
+<h3 id="一句话终极总结发给韩宝龙最好用">5.
+一句话终极总结（发给韩宝龙最好用）</h3>
+<p>“物理已实现”是眼睛看到的东西，<br />
+“逻辑已实现”是演绎铁律锁死的东西，<br />
+维根斯坦把两者都算facts，<br />
+而你其实已经在偷偷把第二种也算进去了，<br />
+只不过你管它叫‘我虽然没看到但我肯定知道’，<br />
+维根斯坦管它叫‘它的真值已被这个世界的事实配置所决定’。<br />
+名字不同，本质一样。<br />
+所以你俩其实已经接上了，只是你还舍不得把‘我肯定知道’这五个字放下来。”</p>
+放下来，你就彻底开悟了。
+<hr>
+<center>
+<a href="/3place/ljzxlen">返回首页</a> <a
+href="/3place/ljzxlen/mingju.html">本书名句</a> <a
+href="/3place/ljzxlen/memo.html">本书注解</a> <a
+href="/3place/ljzxlen/index_rich.html">丰富目录</a> <a
+href="/3place/ljzxlen/index_readcal.html">同读日历</a> <a
+href="/3place/ljzxlen/index_timeline.html">时间线</a> <a
+href="/3place/ljzxlen/index_books.html">引用书籍</a> <a
+href="/3place/ljzxlen/index_words.html">使用字频</a>
+<div id="wx_pic" style="margin:0 auto;display:none;">
+<img src='/img/logo.png'/>
+</div>
+<a href="/3place/ljzxlen/hash/">HASH5</a>
+</center>
+<hr>
+<center>
+<img src="/img/thanks.jpg" width="50%" height="50%">
+</center>
+</body>
+</html>
