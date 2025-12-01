@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="文/韩宝龙" />
+  <title>详细解释一下state，既然它那么重要。</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">详细解释一下state，既然它那么重要。</h1>
+<p class="author">文/韩宝龙</p>
+<p class="date">hbaolong@vip.qq.com</p>
+</header>
+<h3
+id="analysis-of-the-word-state-from-etymology-root-and-morphology">Analysis
+of the word <strong>state</strong> from etymology, root, and
+morphology</h3>
+<h4 id="etymology-origin-historical-development">1. Etymology (Origin
+&amp; Historical Development)</h4>
+<ul>
+<li>Entered English in the late 12th – early 13th century
+(c. 1175–1225).</li>
+<li>Directly borrowed from Old French <strong>estat</strong> (modern
+French <strong>état</strong>), which meant “status, condition, rank,
+estate, government”.</li>
+<li>Old French took it from Latin <strong>status</strong> (“manner of
+standing, condition, position, state of affairs”), originally the past
+participle of <strong>stāre</strong> “to stand”.</li>
+<li>First English uses (1200s) were almost all in the sense “social rank
+/ estate” (e.g., “the three estates of the realm” = clergy, nobility,
+commons).</li>
+<li>By the 1530s–40s it broadened to “political entity / country” (→
+modern nation-state).</li>
+<li>The verb “to state” (= declare formally) appeared around 1590–1600,
+back-formed from the earlier noun.</li>
+</ul>
+<h4 id="root-classical-elements">2. Root &amp; Classical Elements</h4>
+<p>Latin core:</p>
+<table>
+<colgroup>
+<col style="width: 16%" />
+<col style="width: 16%" />
+<col style="width: 39%" />
+<col style="width: 27%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Component</th>
+<th>Latin form</th>
+<th>Meaning</th>
+<th>PIE root</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>sta-</td>
+<td>stāre</td>
+<td>“to stand”</td>
+<td>*steh₂- “to stand”</td>
+</tr>
+<tr class="even">
+<td>-tus</td>
+<td>past participle suffix</td>
+<td>“having stood” → condition/position</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>→ Literal original meaning: “the way something stands” → condition →
+status → government → country.</p>
+<p>Close relatives from the same <strong>stā-</strong> family: - stand,
+stay, station, status, statue, stable, stage, establish, constant,
+instant, distance, substance, obstacle, static, statue, constitute,
+destiny, stationary, steadfast, etc.</p>
+<h4 id="morphology-word-formation-in-modern-english">3. Morphology (Word
+Formation in Modern English)</h4>
+<table>
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 35%" />
+<col style="width: 44%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Word</th>
+<th>Formation</th>
+<th>Meaning / Use</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>state (n. &amp; v.)</td>
+<td>direct borrowing</td>
+<td>condition, country; to declare</td>
+</tr>
+<tr class="even">
+<td>statement</td>
+<td>state + -ment</td>
+<td>formal declaration</td>
+</tr>
+<tr class="odd">
+<td>stately</td>
+<td>state + -ly</td>
+<td>dignified, impressive</td>
+</tr>
+<tr class="even">
+<td>statesman</td>
+<td>state + man</td>
+<td>skilled political leader</td>
+</tr>
+<tr class="odd">
+<td>statesmanship</td>
+<td>statesman + -ship</td>
+<td>skill in governing</td>
+</tr>
+<tr class="even">
+<td>overstate</td>
+<td>over- + state</td>
+<td>exaggerate</td>
+</tr>
+<tr class="odd">
+<td>understate</td>
+<td>under- + state</td>
+<td>say less than the truth</td>
+</tr>
+<tr class="even">
+<td>nation-state</td>
+<td>nation + state</td>
+<td>sovereign country</td>
+</tr>
+<tr class="odd">
+<td>welfare state</td>
+<td>welfare + state</td>
+<td>country with social safety net</td>
+</tr>
+<tr class="even">
+<td>state-of-the-art</td>
+<td>fixed phrase</td>
+<td>most advanced technology</td>
+</tr>
+</tbody>
+</table>
+<h4 id="summary-table">4. Summary Table</h4>
+<table>
+<colgroup>
+<col style="width: 22%" />
+<col style="width: 77%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Aspect</th>
+<th>Detail</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>First recorded</td>
+<td>c. 1200 (as noun “rank/condition”)</td>
+</tr>
+<tr class="even">
+<td>Original Latin</td>
+<td>status ← stāre “to stand”</td>
+</tr>
+<tr class="odd">
+<td>PIE root</td>
+<td>*steh₂- “to stand”</td>
+</tr>
+<tr class="even">
+<td>Key semantic shifts</td>
+<td>“way of standing” → social rank → political condition → modern
+country</td>
+</tr>
+<tr class="odd">
+<td>Verb formation</td>
+<td>1590s, back-formation from the noun</td>
+</tr>
+<tr class="even">
+<td>Living relatives</td>
+<td>stand, stay, station, status, establish, constant, statue,
+stable</td>
+</tr>
+<tr class="odd">
+<td>Modern super-common phrases</td>
+<td>state-of-the-art, head of state, welfare state, United States</td>
+</tr>
+</tbody>
+</table>
+<p>In short:<br />
+<strong>state</strong> began life 2,000 years ago as the Latin way of
+saying “the way something stands”.</p>
+It climbed from physical posture → social status → political power → the
+modern nation-state we know today — one of the most successful semantic
+journeys in English.
+<hr>
+<center>
+<a href="/3place/ljzxlen">返回首页</a> <a
+href="/3place/ljzxlen/mingju.html">本书名句</a> <a
+href="/3place/ljzxlen/memo.html">本书注解</a> <a
+href="/3place/ljzxlen/index_rich.html">丰富目录</a> <a
+href="/3place/ljzxlen/index_readcal.html">同读日历</a> <a
+href="/3place/ljzxlen/index_timeline.html">时间线</a> <a
+href="/3place/ljzxlen/index_books.html">引用书籍</a> <a
+href="/3place/ljzxlen/index_words.html">使用字频</a>
+<div id="wx_pic" style="margin:0 auto;display:none;">
+<img src='/img/logo.png'/>
+</div>
+<a href="/3place/ljzxlen/hash/">HASH5</a>
+</center>
+<hr>
+<center>
+<img src="/img/thanks.jpg" width="50%" height="50%">
+</center>
+</body>
+</html>
