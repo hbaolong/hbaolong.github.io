@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="文/韩宝龙" />
+  <title>项目设计</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">项目设计</h1>
+<p class="author">文/韩宝龙</p>
+<p class="date">hbaolong@vip.qq.com</p>
+</header>
+<h3
+id="逻辑哲学论热点话题系列每日一辩基于2025年12月热点">《逻辑哲学论》热点话题系列：每日一辩（基于2025年12月热点）</h3>
+<p>你的计划太棒了！用维特根斯坦的“照片理论”剖析热点，能把抽象哲学变成日常武器，让大家从“吵架”变成“思考”。<br />
+我帮你设计一个<strong>7天系列</strong>（一周一轮，循环扩展），每天选1个2025年12月争议热点（基于当前搜索，如Project
+2025、AI监管、枪支控制、移民、气候政策、加密货币禁令、领导力扁平化）。每个话题有：<br />
+- <strong>热点简介</strong>（争议点）。<br />
+-
+<strong>维特根斯坦式分析</strong>（用2.0–2.2框架剁开：是照片？废片？为什么？）。<br />
+-
+<strong>讨论问题</strong>（引导沟通：你怎么拍这张照片？触角对得上吗？）。<br />
+- <strong>金句收尾</strong>（发朋友圈用）。</p>
+<p>系列标题：<strong>“维特根斯坦的刀：热点废片大鉴别”</strong><br />
+每天输出1篇短文（300字内），末尾加互动：欢迎评论你的“照片”！</p>
+<h4 id="day-1-project-2025的反堕胎任务组">Day 1: Project
+2025的“反堕胎任务组”</h4>
+<p><strong>热点简介</strong>：Project
+2025提案将堕胎药限制在7周内，并设立“亲生命任务组”，引发民主党猛烈批评，认为这是对女性权利的倒退（2025年12月国会辩论白热化）。</p>
+<p><strong>维特根斯坦分析</strong>：<br />
+“Project 2025的反堕胎任务组是好政策吗？”<br />
+-
+这是一张想拍现实的照片（2.1），但像素（“亲生命”）对不上对象（女性自主权），插槽（伦理价值）在逻辑空间里飘着（2.202）。<br />
+-
+触角全断（2.1515）：谁定义“好政策”？可验证？7周限制能被现实撞出真假吗？<br />
+- 废片（2.225）：先验假的资格都没有，属于不可说领域（7）。</p>
+<p><strong>讨论问题</strong>：你的“堕胎政策”照片怎么拍？插槽对得上现实吗？</p>
+<p><strong>金句</strong>：废片别吵，闭嘴撞现实去。</p>
+<h4 id="day-2-ai监管-vs-创新">Day 2: AI监管 vs 创新</h4>
+<p><strong>热点简介</strong>：2025年12月，美国联邦政府推动AI加密通信访问法（Public
+Forum辩题），科技巨头抗议称扼杀创新，民主党称保护隐私（国会听证会火爆）。</p>
+<p><strong>维特根斯坦分析</strong>：<br />
+“AI加密访问法扼杀创新吗？”<br />
+-
+合格照片（2.21）：像素（访问法）对应对象（隐私），可真可假（2.223）：看数据泄露率撞现实。<br />
+- 但“创新”插件模糊（2.201），逻辑空间里可能亮也可能灭（2.202）。<br />
+- 不是废片，但对错需验证（2.225）：先验真？不存在。</p>
+<p><strong>讨论问题</strong>：你的AI政策照片，哪根触角最可能断？</p>
+<p><strong>金句</strong>：照片先拍，现实再撞，别急着喊“创新死”。</p>
+<h4 id="day-3-枪支控制法">Day 3: 枪支控制法</h4>
+<p><strong>热点简介</strong>：2025年12月，多州通过更严枪支法（Fast
+Company报道），NRA称侵犯二修正案，枪击案受害者呼吁“够了”（全国辩论）。</p>
+<p><strong>维特根斯坦分析</strong>：<br />
+“更严枪支法侵犯权利吗？”<br />
+- 合格但争议照片（2.22）：意义（安全 vs
+权利）清晰，可撞现实（2.223）：看犯罪率数据。<br />
+-
+共享逻辑形式（2.18）：宪法插槽对得上，但“侵犯”插件主观（2.203）。<br />
+- 非废片，但真假需现实判定（2.225）。</p>
+<p><strong>讨论问题</strong>：枪支照片的扣法，你扣哪边？</p>
+<p><strong>金句</strong>：权利不是先验真，拿数据撞，别空谈。</p>
+<h4 id="day-4-移民执法敏感区">Day 4: 移民执法敏感区</h4>
+<p><strong>热点简介</strong>：Project
+2025提案移除学校/教堂等“敏感区”移民执法禁令，引发人权抗议（CBS报道，2025年12月街头游行）。</p>
+<p><strong>维特根斯坦分析</strong>：<br />
+“移除敏感区禁令合理吗？”<br />
+-
+废片边缘（2.16）：像素（执法）对不上对象（人权），触角断在伦理插槽（2.1515）。<br />
+- 逻辑空间里可能（2.202），但“合理”无法验证（2.225）。<br />
+- 不可说（7）：政治雾，闭嘴。</p>
+<p><strong>讨论问题</strong>：你的移民照片，能亮出真假吗？</p>
+<p><strong>金句</strong>：敏感区不是废片，执法的触角别乱伸。</p>
+<h4 id="day-5-气候政策-vs-经济">Day 5: 气候政策 vs 经济</h4>
+<p><strong>热点简介</strong>：2025年12月，国会辩论“重野化土地”决议（NS&amp;DA主题），环保派称救地球，农民抗议毁经济（投票中）。</p>
+<p><strong>维特根斯坦分析</strong>：<br />
+“重野化土地毁经济吗？”<br />
+- 合格照片（2.21）：意义（生态 vs 经济）可撞数据（2.223）。<br />
+- 共享形式（2.18）：因果链清晰，但“毁”插件需验证（2.225）。<br />
+- 非废片：现实会亮出答案。</p>
+<p><strong>讨论问题</strong>：气候照片的插槽，你插经济还是地球？</p>
+<p><strong>金句</strong>：野化土地先拍，经济数据再撞，别猜。</p>
+<h4 id="day-6-加密货币禁令">Day 6: 加密货币禁令</h4>
+<p><strong>热点简介</strong>：2025年12月，联邦推动加密通信访问（PF辩题），隐私倡导者称“数字独裁”，科技派称防恐怖（国会僵局）。</p>
+<p><strong>维特根斯坦分析</strong>：<br />
+“加密禁令是数字独裁吗？”<br />
+- 合格但主观照片（2.22）：意义清晰，可验证泄露案（2.223）。<br />
+- “独裁”插槽模糊（2.201），但逻辑空间合法（2.202）。<br />
+- 撞现实前，别急判（2.225）。</p>
+<p><strong>讨论问题</strong>：你的加密照片，触角碰得到隐私吗？</p>
+<p><strong>金句</strong>：禁令不是废片，数据撞出真假。</p>
+<h4 id="day-7-领导力扁平化">Day 7: 领导力扁平化</h4>
+<p><strong>热点简介</strong>：2025年12月，企业辩论“中层管理无用”（Effectory报告），扁平化派称高效，传统派称混乱（HR危机）。</p>
+<p><strong>维特根斯坦分析</strong>：<br />
+“中层管理无用吗？”<br />
+- 合格照片（2.21）：可撞生产数据（2.223）。<br />
+- 共享形式（2.18）：组织结构清晰，但“无用”需验证（2.225）。<br />
+- 非废片：现实会亮出答案。</p>
+<p><strong>讨论问题</strong>：你的公司照片，扁平化扣得上吗？</p>
+<p><strong>金句</strong>：中层不是先验假，数据撞，别空谈。</p>
+<p><strong>系列Tips</strong>：每天发1篇，末尾加“你的照片怎么拍？评论区撞现实！”。用工具搜索新热点，保持新鲜。扩展：加投票或辩论挑战。想更多天数或调整？随时说！</p>
+<hr>
+<center>
+<a href="/3place/mrzx">返回首页</a> <a
+href="/3place/mrzx/mingju.html">本书名句</a> <a
+href="/3place/mrzx/memo.html">本书注解</a> <a
+href="/3place/mrzx/index_rich.html">丰富目录</a> <a
+href="/3place/mrzx/index_readcal.html">同读日历</a> <a
+href="/3place/mrzx/index_timeline.html">时间线</a> <a
+href="/3place/mrzx/index_books.html">引用书籍</a> <a
+href="/3place/mrzx/index_words.html">使用字频</a>
+<div id="wx_pic" style="margin:0 auto;display:none;">
+<img src='/img/logo.png'/>
+</div>
+<a href="/3place/mrzx/hash/">HASH5</a>
+</center>
+<hr>
+<center>
+<img src="/img/thanks.jpg" width="50%" height="50%">
+</center>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>
