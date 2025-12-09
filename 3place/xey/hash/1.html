@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>tmp</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<p>以下是您列出的全部单词，一句话词源 + 简明英文解释（2025最实用版：</p>
+<ol type="1">
+<li>abbot– from Aramaic abba “father” → the “father” (head) of a
+monastery<br />
+</li>
+<li>abeyance– Old French baer “gape, expect” → state of waiting or
+suspension<br />
+</li>
+<li>absolve– Latin ab- + solvere “loosen” → to set free from guilt or
+blame<br />
+</li>
+<li>accurate– Latin ad- + cura “care” → done with care → exact<br />
+</li>
+<li>adherent– Latin adhaerere “stick to” → someone who sticks to a
+belief or leader<br />
+</li>
+<li>allegiance– Old French lige “liege” ← Latin ligare “bind” → loyalty
+or binding duty<br />
+</li>
+<li>anarchy– Greek an- “without” + arkhos “ruler” → absence of
+government<br />
+</li>
+<li>antiquity– Latin antiquus “ancient” ← ante “before” → ancient
+times<br />
+</li>
+<li>apostle– Greek apostolos “one sent forth” → messenger, especially of
+Jesus<br />
+</li>
+<li>appeal– Latin appellare “call upon, address” → to call for help or
+review<br />
+</li>
+<li>appropriate– Latin appropriare “make one’s own” → suitable or take
+for oneself<br />
+</li>
+<li>aristocracy– Greek aristos “best” + kratos “power” → rule by the
+best people<br />
+</li>
+<li>ascertainable– Old French acertener “make certain” → able to be
+found out<br />
+</li>
+<li>assist– Latin ad- + sistere “stand by” → to stand by and help<br />
+</li>
+<li>astronomer– Greek astron “star” + nomos “law” → student of the laws
+of the stars<br />
+</li>
+<li>austerity– Latin austerus “harsh, severe” → strict self-discipline
+or economy<br />
+</li>
+<li>authority– Latin auctor “originator” ← augere “increase” → power to
+command<br />
+</li>
+<li>barbarian– Greek barbaros “babbler, non-Greek speaker” → uncivilised
+foreigner<br />
+</li>
+<li>baron– Frankish baro “free warrior” → nobleman of high rank<br />
+</li>
+<li>bishop– Greek episkopos “overseer” → senior Christian
+clergyman<br />
+</li>
+<li>breach– Germanic *brekan “break” → violation or gap<br />
+</li>
+<li>broadest– Old English brād “wide” → superlative of broad<br />
+</li>
+<li>capable– Latin capere “take, hold” → able to do something<br />
+</li>
+<li>carbon– Latin carbo “coal, charcoal”<br />
+</li>
+<li>catholic– Greek katholikos “universal” ← kata “according to” + holos
+“whole”<br />
+</li>
+<li>causation– Latin causa “cause” → the act of causing<br />
+</li>
+<li>celibacy– Latin caelebs “unmarried” → state of being unmarried
+(especially priests)<br />
+</li>
+<li>censure– Latin censere “judge” → official strong disapproval<br />
+</li>
+<li>chivalry– Old French cheval “horse” → knightly code of honour<br />
+</li>
+<li>christianity– Greek christos “anointed” → the religion of
+Christ<br />
+</li>
+<li>circumstance– Latin circum- + stare “stand around” → surrounding
+conditions<br />
+</li>
+<li>clergy– Greek klēros “lot, heritage” → body of ordained
+ministers<br />
+</li>
+<li>cohesion– Latin cohaerere “stick together” → unity or sticking
+together<br />
+</li>
+<li>compromise– Latin com- + promittere “promise together” → mutual
+concession<br />
+</li>
+<li>conception– Latin con- + capere “take together” → idea or beginning
+of pregnancy<br />
+</li>
+<li>confine– Latin con- + finis “limit” → to keep within limits<br />
+</li>
+<li>confusion– Latin con- + fundere “pour together” → disorder<br />
+</li>
+<li>consequent– Latin consequi “follow closely” → following as a
+result<br />
+</li>
+<li>consideration– Latin considerare “examine the stars” → careful
+thought<br />
+</li>
+<li>constantine– Latin constans “standing firm” → name of the Roman
+emperor<br />
+</li>
+<li>contemporary– Latin con- + tempus “time” → living or occurring at
+the same time<br />
+</li>
+<li>converse– Latin conversari “keep company with” → opposite or to
+talk<br />
+</li>
+<li>cosmic– Greek kosmos “order, universe” → relating to the
+universe<br />
+</li>
+<li>courtly– Old French cort “court” → refined, polite behaviour at
+royal court<br />
+</li>
+<li>crystallize– Greek krystallos “ice” → make or become clear and
+definite<br />
+</li>
+<li>culminate– Latin culmen “top, summit” → reach the highest
+point<br />
+</li>
+<li>curtail– Latin curtus “short” → to cut short<br />
+</li>
+<li>decisive– Latin decīdere “cut off” → settling an issue
+definitely<br />
+</li>
+<li>definite– Latin definitus “limited, defined” → clearly stated or
+decided<br />
+</li>
+<li>derive– Latin de- + rivus “stream” → obtain from a source<br />
+</li>
+<li>descartes– French family name ← Latin de cartis “of the
+maps/charts”<br />
+</li>
+<li>descent– Latin descendere “climb down” → act of descending<br />
+</li>
+<li>deserve– Latin de- + servire “serve well” → be worthy of<br />
+</li>
+<li>desiccate– Latin desiccare “dry up completely” → remove
+moisture<br />
+</li>
+<li>destitute– Latin destitutus “abandoned” → without money or
+possessions<br />
+</li>
+<li>devoid– Old French desvuidier “empty out” → completely lacking<br />
+</li>
+<li>devotion– Latin devovere “dedicate wholly” → deep love or
+loyalty<br />
+</li>
+<li>disapproval– dis- + approval → unfavourable opinion<br />
+</li>
+<li>disastrous– Latin dis- + astrum “star” → ill-starred,
+calamitous<br />
+</li>
+<li>disputation– Latin disputare “debate” → formal argument<br />
+</li>
+<li>distinct– Latin distinguere “distinguish” → clearly different<br />
+</li>
+<li>doctrine– Latin doctrina “teaching” → set of beliefs<br />
+</li>
+<li>dogma– Greek dogma “opinion” → belief put forward as unquestionably
+true<br />
+</li>
+<li>dogmatic– Greek dogmatikos → asserting opinions in an arrogant
+way<br />
+</li>
+<li>duel– Latin duellum “war between two” → combat between two
+persons<br />
+</li>
+<li>ecclesiastical– Greek ekklēsia “assembly, church” → relating to the
+Christian Church<br />
+</li>
+<li>ecclesiastics– same as above → clergy, church officials<br />
+</li>
+<li>ego– Latin ego “I” → the self<br />
+</li>
+<li>emanation– Latin emanare “flow out” → something that flows from a
+source<br />
+</li>
+<li>eminent– Latin eminere “stand out” → famous and respected<br />
+</li>
+<li>endeavoured– Old French en- + devoir “duty” → tried hard<br />
+</li>
+<li>endure– Latin in- + durare “harden” → last or withstand<br />
+</li>
+<li>epicurean– Greek philosopher Epicurus → devoted to sensual
+pleasure<br />
+</li>
+<li>eternal– Latin aeternus “everlasting”<br />
+</li>
+<li>eternity– Latin aeternitas → infinite time<br />
+</li>
+<li>ethical– Greek ethos “character” → relating to morals<br />
+</li>
+<li>explicit– Latin explicare “unfold” → stated clearly and fully<br />
+</li>
+<li>exponent– Latin exponere “put out” → person who explains or
+represents<br />
+</li>
+<li>expose– Latin ex- + ponere “place out” → reveal or uncover<br />
+</li>
+<li>exposition– Latin expositio “setting forth” → detailed
+explanation<br />
+</li>
+<li>extinction– Latin ex- + stinguere “quench” → dying out
+completely<br />
+</li>
+<li>feudal– Frankish fehu-ōd “cattle-property” → medieval land-holding
+system<br />
+</li>
+<li>folly– Old French folie “madness” → foolish act<br />
+</li>
+<li>franciscan– St Francis of Assisi → member of the Franciscan
+order<br />
+</li>
+<li>friar– Latin frater “brother” → member of a mendicant order<br />
+</li>
+<li>gradual– Latin gradus “step” → happening by degrees<br />
+</li>
+<li>heretical– Greek haeresis “choice, sect” → opposing accepted
+doctrine<br />
+</li>
+<li>hesitation– Latin haesitare “stick fast, stammer” → pause in
+doubt<br />
+</li>
+<li>illustrative– Latin illustrare “light up” → serving as an
+example<br />
+</li>
+<li>immortal– Latin in- + mortalis “not dying” → living forever<br />
+</li>
+<li>imperative– Latin imperare “command” → essential, compulsory<br />
+</li>
+<li>impertinent– Latin in- + pertinere “not belonging” → irrelevant or
+rude<br />
+</li>
+<li>implicit– Latin implicare “entwined” → implied though not plainly
+expressed<br />
+</li>
+<li>impose– Latin in- + ponere “place upon” → force something on
+someone<br />
+</li>
+<li>impotent– Latin in- + potens “powerless”<br />
+</li>
+<li>impure– Latin in- + purus “not pure”<br />
+</li>
+<li>incorporation– Latin in- + corpus “body” → forming into a legal
+body<br />
+</li>
+<li>indubitable– Latin in- + dubitare “not to be doubted”<br />
+</li>
+<li>inevitable– Latin in- + evitare “not to be avoided”<br />
+</li>
+<li>inexorably– Latin inexorabilis “unyielding” → relentlessly<br />
+</li>
+<li>infer– Latin in- + ferre “carry in” → deduce from evidence<br />
+</li>
+<li>inherit– Latin in- + heres “heir” → receive by succession<br />
+</li>
+<li>innate– Latin innatus “inborn”<br />
+</li>
+<li>innumerable– Latin in- + numerare “countless”<br />
+</li>
+<li>insanity– Latin in- + sanus “not sane”<br />
+</li>
+<li>insensitive– Latin in- + sentire “not feeling”<br />
+</li>
+<li>insertion– Latin inserere “insert”<br />
+</li>
+<li>insolence– Latin insolens “unaccustomed, arrogant”<br />
+</li>
+<li>insoluble– Latin in- + solvere “cannot be solved”<br />
+</li>
+<li>integral– Latin integer “whole” → essential part<br />
+</li>
+<li>intelligible– Latin intelligere “understandable”<br />
+</li>
+<li>intermediate– Latin inter- + medius “in the middle”<br />
+</li>
+<li>intimate– Latin intimus “innermost” → very close or private<br />
+</li>
+<li>intolerably– Latin in- + tolerare “unbearably”<br />
+</li>
+<li>invasion– Latin in- + vadere “go in” → hostile entry<br />
+</li>
+<li>investigation– Latin in- + vestigare “track, search”<br />
+</li>
+<li>jejune– Latin jejunus “fasting, empty” → dull, childish<br />
+</li>
+<li>jurisdiction– Latin juris “law” + dictio “speaking” → power to
+administer law<br />
+</li>
+<li>laity– Greek laos “people” → non-clergy<br />
+</li>
+<li>latent– Latin latere “lie hidden” → present but not visible<br />
+</li>
+<li>legality– Latin lex “law” → lawfulness<br />
+</li>
+<li>liberty– Latin liber “free”<br />
+</li>
+<li>linger– Middle English lengeren ← long → stay longer than
+necessary<br />
+</li>
+<li>liturgy– Greek leitourgia “public service” → form of public
+worship<br />
+</li>
+<li>loyalty– Old French loial ← Latin legalis → faithfulness<br />
+</li>
+<li>lump– Middle English lumpe “shapeless mass<br />
+</li>
+<li>macedonian– from Macedonia, ancient kingdom of Alexander the
+Great<br />
+</li>
+<li>medieval– Latin medius “middle” + aevum “age” → of the Middle
+Ages<br />
+</li>
+<li>mediterranean– Latin medius + terra “land in the middle of the land”
+= inland sea<br />
+</li>
+<li>mention– Latin mentio “speaking of”<br />
+</li>
+<li>mercantile– Latin mercari “trade” → commercial<br />
+</li>
+<li>merit– Latin meritum “deserved” → worth or excellence<br />
+</li>
+<li>milieu– French “middle-place” → social environment<br />
+</li>
+<li>monarch– Greek monos “single” + arkhein “rule” → sole ruler<br />
+</li>
+<li>monograph– Greek monos + graphein “single writing” → specialised
+study<br />
+</li>
+<li>monopoly– Greek monos + polein “sell alone” → exclusive
+control<br />
+</li>
+<li>mould– Latin modulus “small measure” → shape or pattern<br />
+</li>
+<li>obsolete– Latin obsoletus “worn out” → no longer used<br />
+</li>
+<li>orthodox– Greek orthos “correct” + doxa “opinion” → accepted
+doctrine<br />
+</li>
+<li>doubtless– doubt + less → certainly<br />
+</li>
+<li>outburst– out + burst → sudden explosion of emotion<br />
+</li>
+<li>outcome– out + come → result<br />
+</li>
+<li>pagan– Latin paganus “country-dweller” → non-Christian<br />
+</li>
+<li>papal– Latin papa “pope” → relating to the Pope<br />
+</li>
+<li>paralyse– Greek para- + lyein “loosen aside” → disable<br />
+</li>
+<li>passion– Latin pati “suffer” → intense feeling or suffering<br />
+</li>
+<li>patriotic– Greek patris “fatherland” → loving one’s country<br />
+</li>
+<li>perpetually– Latin per- + petere “continually” → forever<br />
+</li>
+<li>persecution– Latin persequi “pursue harshly” → systematic
+mistreatment<br />
+</li>
+<li>persuade– Latin per- + suadere “thoroughly advise” → convince<br />
+</li>
+<li>pillage– Old French piller “plunder” → rob with violence<br />
+</li>
+<li>pious– Latin pius “dutiful, devout”<br />
+</li>
+<li>possess– Latin possidere “sit as master” → own<br />
+</li>
+<li>predecessor– Latin prae- + decessor “one who goes before”<br />
+</li>
+<li>presence– Latin praesens “being at hand”<br />
+</li>
+<li>profess– Latin profiteri “declare openly” → openly declare
+belief<br />
+</li>
+<li>profound– Latin profundus “deep”<br />
+</li>
+<li>proportion– Latin pro- + portio “in proportion”<br />
+</li>
+<li>rebellion– Latin re- + bellum “war again” → armed resistance<br />
+</li>
+<li>reciprocal– Latin reciprocus “returning” → mutual<br />
+</li>
+<li>refinement– re- + fine → making more cultured or pure<br />
+</li>
+<li>reformation– Latin reformatio → the 16th-c Protestant
+Reformation<br />
+</li>
+<li>renewal– re- + new → making new again<br />
+</li>
+<li>repent– Latin re- + poenitere “regret deeply” → feel sorry for
+sin<br />
+</li>
+<li>repentance– repent + -ance → state of being sorry for sin<br />
+</li>
+<li>revelation– Latin revelare “unveil” → divine disclosure<br />
+</li>
+<li>rigid– Latin rigidus “stiff”<br />
+</li>
+<li>scholarly– scholar + -ly → learned, academic<br />
+</li>
+<li>secular– Latin saeculum “generation, age” → worldly, not
+religious<br />
+</li>
+<li>severe– Latin severus “serious, strict”<br />
+</li>
+<li>Socratics– followers of Socrates<br />
+</li>
+<li>sought– past of seek → looked for<br />
+</li>
+<li>specialist– special + -ist → expert in one field<br />
+</li>
+<li>speculation– Latin speculari “observe” → forming theories without
+firm evidence<br />
+</li>
+<li>spite– Old French despit “contempt” → malice<br />
+</li>
+<li>stimulate– Latin stimulare “goad, urge” → rouse to activity<br />
+</li>
+<li>stoic– Greek stoa “porch” (school of Zeno) → enduring pain without
+complaint<br />
+</li>
+<li>stoics– followers of Stoicism<br />
+</li>
+<li>subject to– Latin sub- + jacere “thrown under” → liable to<br />
+</li>
+<li>submerge– Latin sub- + mergere “dip under” → go under water<br />
+</li>
+<li>superiority– Latin superior “higher”<br />
+</li>
+<li>supreme– Latin supremus “highest”<br />
+</li>
+<li>surpass– French surpasser ← Latin super- + passare “go beyond”<br />
+</li>
+<li>suspicion– Latin suspicere “mistrust”<br />
+</li>
+<li>synthesis– Greek syn- + tithenai “put together” → combining into a
+whole<br />
+</li>
+<li>teutonic– Latin Teutoni, ancient Germanic tribe<br />
+</li>
+<li>theology– Greek theos “god” + logos “study” → study of God<br />
+</li>
+<li>tidy– Middle English “in good time” → neat and orderly<br />
+</li>
+<li>tournament– Old French torneiement “jousting contest”<br />
+</li>
+<li>trial– Anglo-French trier “try” → test or legal proceeding<br />
+</li>
+<li>unity– Latin unus “one” → oneness<br />
+</li>
+<li>vacuum– Latin vacuus “empty” → empty space<br />
+</li>
+<li>vague– Latin vagus “wandering, uncertain”<br />
+</li>
+<li>variance– Latin variare “change” → difference or disagreement<br />
+</li>
+<li>vary– Latin variare “change”<br />
+</li>
+<li>victorious– Latin victor “winner”<br />
+</li>
+<li>vigorous– Latin vigor “life force”<br />
+</li>
+<li>vigour– same as above (BrE spelling)<br />
+</li>
+<li>virtuous– Latin virtus “excellence, courage”<br />
+</li>
+<li>vivid– Latin vividus “full of life”<br />
+</li>
+<li>vivify– Latin vivificare “make alive”<br />
+</li>
+<li>vow– Anglo-French vou ← Latin votum “vow”<br />
+</li>
+<li>wholly– whole + -ly → completely</li>
+</ol>
+一句话背完原则：<br />
+<strong>90% 是拉丁词根 + 前缀（in-/ex-/re-/con-），剩下10%
+是希腊或日耳曼土生土长。</strong><br />
+全部背完，你的英语词根词汇量直接起飞！<br />
+需要我按字母顺序给你PDF版吗？随时发～
+<hr>
+<center>
+<a href="/3place/xey">返回首页</a> <a
+href="/3place/xey/mingju.html">本书名句</a> <a
+href="/3place/xey/memo.html">本书注解</a> <a
+href="/3place/xey/index_rich.html">丰富目录</a> <a
+href="/3place/xey/index_readcal.html">同读日历</a> <a
+href="/3place/xey/index_timeline.html">时间线</a> <a
+href="/3place/xey/index_books.html">引用书籍</a> <a
+href="/3place/xey/index_words.html">使用字频</a>
+<div id="wx_pic" style="margin:0 auto;display:none;">
+<img src='/img/logo.png'/>
+</div>
+<a href="/3place/xey/hash/">HASH5</a>
+</center>
+<hr>
+<center>
+<img src="/img/thanks.jpg" width="50%" height="50%">
+</center>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>
