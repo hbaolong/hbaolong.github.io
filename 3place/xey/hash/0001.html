@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="文/韩宝龙" />
+  <title>快速浏览单词法</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">快速浏览单词法</h1>
+<p class="author">文/韩宝龙</p>
+<p class="date">hbaolong@vip.qq.com</p>
+</header>
+<p>abbot,英 [ˈæbət] 美 [ˈæbət] n. 男修道院院长；大寺院男住持</p>
+<p>abeyance,英 [əˈbeɪəns] 美 [əˈbeɪəns]
+n. 中止，停顿；归属待定，暂搁</p>
+<p>absolve,英 [əbˈzɒlv] 美 [əbˈzɑːlv] vt. 免除；赦免；宣告……无罪</p>
+<p>accurate,英 [ˈækjərət] 美 [ˈækjərət] adj.
+准确的，精确的；（工具，方法）精密的；正确无误的；（武器、投掷）精准的</p>
+<p>adherent,英 [ədˈhɪərənt] 美 [ədˈhɪrənt] n. （政党、思想的）拥护者
+adj. 粘着的；遵守的；（植物）联生的</p>
+<p>allegiance,英 [əˈliːdʒəns] 美 [əˈliːdʒəns]
+n. （对政党、宗教、统治者的）忠诚，效忠，拥戴</p>
+<p>anarchy,英 [ˈænəki] 美 [ˈænərki] n. 无政府状态；混乱，无秩序</p>
+<p>antiquity,英 [ænˈtɪkwəti] 美 [ænˈtɪkwəti]
+n. 古代（尤指古希腊和古罗马时期）；年代久远；文物，古物；古代，古时（尤指古埃及、古希腊、古罗马时期）</p>
+<p>apostle,英 [əˈpɒsl] 美 [əˈpɑːsl] n. 信徒，使徒；最初的传道者</p>
+<p>appeal,英 [əˈpiːl] 美 [əˈpiːl]
+n. 呼吁，恳求；上诉，申诉；吸引力，感染力；（为慈善或正义事业的）募捐；启发，打动
+v. 呼吁，恳求；上诉，申诉；有吸引力，引起兴趣；启发，打动</p>
+<p>appropriate,英 [əˈprəʊpriət] 美 [əˈproʊpriət] adj. 合适的，相称的 v.
+拨出（款项）；私占，挪用</p>
+<p>aristocracy,英 [ˌærɪˈstɒkrəsi] 美 [ˌærɪˈstɑːkrəsi]
+n. 贵族，贵族阶级；贵族统治</p>
+<p>ascertainable,英 [ˌæsəˈteɪnəbl] 美 [ˌæsərˈteɪnəbl] adj.
+可查明的；可确定的</p>
+<p>assist,英 [əˈsɪst] 美 [əˈsɪst] v. 帮助，协助；<古>参加，出席
+n. （球赛中的）助攻；资助，帮助</p>
+<p>astronomer,英 [əˈstrɒnəmə(r)] 美 [əˈstrɑːnəmər] n. 天文学家</p>
+<p>austerity,英 [ɒˈsterəti] 美 [ɔːˈsterəti]
+n. （经济的）紧缩，严格节制消费；艰苦，朴素；苦行，禁欲；（物品的）简朴，无华；严格，严厉</p>
+<p>authority,英 [ɔːˈθɒrəti] 美 [əˈθɔːrəti]
+n. 专家，权威人士；行政管理机构；权利，权限；权威，威信；许可，授权；当局，官方</p>
+<p>barbarian,英 [bɑːˈbeəriən] 美 [bɑːrˈberiən]
+n. 野蛮人；未开化的人；无教养的人 adj. 野蛮的；未开化的</p>
+<p>baron,英 [ˈbærən] 美 [ˈbærən] n. 男爵；大亨；巨头
+n. （Baron）人名；（英、汤）巴伦；（匈）鲍龙；（法、俄、德、意、捷、荷、罗、以、瑞典、印尼）巴龙</p>
+<p>bishop,英 [ˈbɪʃəp] 美 [ˈbɪʃəp]
+n. （基督教的）主教；（国际象棋中的）象</p>
+<p>breach,英 [briːtʃ] 美 [briːtʃ]
+n. 违反，破坏；（关系）中断，终止；缺口 v.
+违反，破坏；在……上打开缺口</p>
+<p>broadest,英 [brɔ:dɪst] adj. 宽广的</p>
+<p>capable,英 [ˈkeɪpəb(ə)l] 美 [ˈkeɪpəb(ə)l] adj.
+有能力的；有本领的，能干的；可以……的，容许……的</p>
+<p>carbon,英 [ˈkɑːbən] 美 [ˈkɑːrbən] n. 碳；复写纸；炭精棒；碳纤维 adj.
+碳的，碳处理的</p>
+<p>catholic,英 [ˈkæθlɪk] 美 [ˈkæθlɪk] adj.
+广泛的，包罗万象的；天主教的（Catholic）n. 天主教教徒</p>
+<p>causation,英 [kɔːˈzeɪʃn] 美 [kɔːˈzeɪʃn] n. 原因；因果关系；出现</p>
+<p>celibacy,英 [ˈselɪbəsi] 美 [ˈselɪbəsi] n. 独身</p>
+<p>censure,英 [ˈsenʃə(r)] 美 [ˈsenʃər] n. <正式>严厉批评，谴责 v.
+<正式>严厉批评，正式谴责</p>
+<p>chivalry,英 [ˈʃɪvəlri] 美 [ˈʃɪvəlri] n. 骑士精神（复数
+chivalries）；骑士制度</p>
+<p>christianity,英 [ˌkrɪstiˈænəti] 美 [ˌkrɪstiˈænəti]
+n. 基督教；基督教精神，基督教教义</p>
+<p>circumstance,英 [ˈsɜːkəmstəns] 美 [ˈsɜːrkəmstæns]
+n. 条件，情况，环境；境况，经济状况；详情，原委；命运，境遇 v.
+处于某种情况</p>
+<p>clergy,英 [ˈklɜːdʒi] 美 [ˈklɜːrdʒi] n. （总称）神职人员</p>
+<p>cohesion,英 [kəʊˈhiːʒ(ə)n] 美 [koʊˈhiːʒ(ə)n]
+n. 凝聚力，团结；内聚力；（句子、文章等在语法或含义方面的）连贯，衔接</p>
+<p>compromise,英 [ˈkɒmprəmaɪz] 美 [ˈkɑːmprəmaɪz]
+n. 折中，妥协；妥协方案，折中办法 v. 妥协，让步；危及，损害</p>
+<p>conception,英 [kənˈsepʃ(ə)n] 美 [kənˈsepʃ(ə)n]
+n. 概念，观念；想出，构想；受孕，怀孕；创始</p>
+<p>confine,英 [kənˈfaɪn] 美 [kənˈfaɪn] v.
+限制，局限；防止……扩散；关押，监禁；使离不开（或受困于床、轮椅等）</p>
+<p>confusion,英 [kənˈfjuːʒn] 美 [kənˈfjuːʒ(ə)n]
+n. 困惑，不明确；混淆，混同；慌乱，窘迫；混乱局面，乱成一团</p>
+<p>consequent,英 [ˈkɒnsɪkwənt] 美 [ˈkɑːnsɪkwent] adj.
+随之发生的，由此引起的；（河流，山谷）顺向的
+n. 后件，推断；（音乐）答题，答句</p>
+<p>consideration,英 [kənˌsɪdəˈreɪʃ(ə)n] 美 [kənˌsɪdəˈreɪʃ(ə)n]
+n. 考虑，斟酌；考虑因素；体贴，关心；报酬，酬金；（合同协议中的）对价，约因；<旧>重要（性）</p>
+<p>constantine,英 [ˈkɒnstənˌtaɪn] 美 [ˈkɑːnstənˌtin; ˈkɑːnstənˌtaɪn]
+n. 君士坦丁（阿尔及利亚地名）；康斯坦丁（男子名）</p>
+<p>contemporary,英 [kənˈtemp(ə)rəri] 美 [kənˈtempəreri] adj.
+当代的，现代的；同时期的，同时代的 n. 同时代的人；同龄人，同辈</p>
+<p>converse,英 [kənˈvɜːs] 美 [kənˈvɜːrs] v. 谈话，交谈
+n. 相反的事物，反面说法；<旧>谈话，交谈；逆命题 adj.
+相反的，颠倒的，逆向的</p>
+<p>cosmic,英 [ˈkɒzmɪk] 美 [ˈkɑːzmɪk] adj.
+宇宙的，外层空间的；巨大的，极重要的；精神的，神灵的</p>
+<p>courtly,英 [ˈkɔːtli] 美 [ˈkɔːrtli] adj.
+尊严而有礼貌的；奉承的；有宫廷气派的，威严的</p>
+<p>crystallize,英 [ˈkrɪstəlaɪz] 美 [ˈkrɪstəlaɪz] v.
+（使）结晶；（使）明确化，（使）具体化；给（水果或花瓣）裹上糖霜；（财政）将浮动费用改为固定费用</p>
+<p>culminate,英 [ˈkʌlmɪneɪt] 美 [ˈkʌlmɪneɪt] v.
+（以……）结束，告终；到达顶点，达到高潮；<旧>（天体）达于中天，到子午线</p>
+<p>curtail,英 [kɜːˈteɪl] 美 [kɜːrˈteɪl] v.
+减缩，限制；剪短；剥夺……特权等</p>
+<p>decisive,英 [dɪˈsaɪsɪv] 美 [dɪˈsaɪsɪv] adj.
+果断的，决断的；决定性的，关键的；确定的，明确的</p>
+<p>definite,英 [ˈdefɪnət] 美 [ˈdefɪnət] adj.
+清晰的，明晰的；确定的，不会改变的；肯定的，一定的 n. 确定之事</p>
+<p>derive,英 [dɪˈraɪv] 美 [dɪˈraɪv] v.
+获得，取得；起源于，来自；提取，衍生（化学物质）</p>
+<p>descartes,[dei’ka:t] n. 笛卡尔（法国哲学家，数学家）</p>
+<p>descent,英 [dɪˈsent] 美 [dɪˈsent]
+n. 下降，降落；斜坡，斜面；出身，血统；堕落，沦落；突然到访，突袭</p>
+<p>deserve,英 [dɪˈzɜːv] 美 [dɪˈzɜːrv] v. 值得，应受</p>
+<p>desiccate,英 [ˈdesɪˌkeɪt] 美 [ˈdesɪˌkeɪt] vi. 变干 vt. 使干；干贮</p>
+<p>destitute,英 [ˈdestɪtjuːt] 美 [ˈdestɪtuːt] adj. 穷困的；无的；缺乏的
+n. 赤贫者 vt. 使穷困；夺去</p>
+<p>devoid,英 [dɪˈvɔɪd] 美 [dɪˈvɔɪd] adj. 缺乏，完全没有</p>
+<p>devotion,英 [dɪˈvəʊʃn] 美 [dɪˈvoʊʃ(ə)n]
+n. 挚爱，忠诚；奉献；（宗教的）虔诚；祈祷，礼拜</p>
+<p>disapproval,英 [ˌdɪsəˈpruːv(ə)l] 美 [ˌdɪsəˈpruːvl]
+n. 不赞同，反对</p>
+<p>disastrous,英 [dɪˈzɑːstrəs] 美 [dɪˈzæstrəs] adj.
+灾难性的，使损失惨重的；极失败的，很糟的</p>
+<p>disputation,英 [ˌdɪspjuˈteɪʃn] 美 [ˌdɪspjuˈteɪʃn]
+n. 争论；辩论；驳斥</p>
+<p>distinct,英 [dɪˈstɪŋkt] 美 [dɪˈstɪŋkt] adj.
+不同的，有区别的；清楚的，明显的；确切的</p>
+<p>doctrine,英 [ˈdɒktrɪn] 美 [ˈdɑːktrɪn]
+n. 教义，主义，信条；（政府政策的）正式声明</p>
+<p>dogma,英 [ˈdɒɡmə] 美 [ˈdɔːɡmə] n. 教条，信条，教义</p>
+<p>dogmatic,英 [dɒɡˈmætɪk] 美 [dɔːɡˈmætɪk] adj. 教条的；武断的</p>
+<p>duel,英 [ˈdjuːəl] 美 [ˈduːəl] n. 决斗；斗争，抗争 vi. 决斗</p>
+<p>ecclesiastical,英 [ɪˌkliːziˈæstɪkl] 美 [ɪˌkliːziˈæstɪkl] adj.
+教会的；牧师的；神职的</p>
+<p>ecclesiastics n．教士，神职人员：在基督教会中担任宗教职务的人。</p>
+<p>ego,英 [ˈiːɡəʊ] 美 [ˈiːɡoʊ]
+n. 自负，自尊，自我意识；（心理学）自我</p>
+<p>emanation,英 [ˌeməˈneɪʃn] 美 [ˌeməˈneɪʃn]
+n. 发出，散发；散发出的稀薄物质；辐射形式；放射性射气；派出机构；（神的）显灵</p>
+<p>eminent,英 [ˈemɪnənt] 美 [ˈemɪnənt] adj.
+（在某领域或职业中）卓越的，出众的；突出的，明显的</p>
+<p>endeavoured,英 [ɪnˈdevə(r)] 美 [ɪnˈdevər] v. 努力，尽力
+n. 努力，尝试；事业，活动</p>
+<p>endure,英 [ɪnˈdjʊə(r)] 美 [ɪnˈdʊr] v. 持续存在，持久；忍受，忍耐</p>
+<p>epicurean,英 [ˌepɪkjʊəˈriːən] 美 [ˌepɪkjʊˈriːən] adj.
+（尤指通过美食）享乐主义的；伊壁鸠鲁（学派）的；食物（美味的）n. 享乐主义者；美食家；信奉伊壁鸠鲁主义的人</p>
+<p>eternal,英 [ɪˈtɜːn(ə)l] 美 [ɪˈtɜːrn(ə)l] adj.
+永恒的，永存的；似乎无休无止的，没完没了的</p>
+<p>eternity,英 [ɪˈtɜːnəti] 美 [ɪˈtɜːrnəti]
+n. 无穷无尽的时间；永恒，永久；永生；未来，来世；死</p>
+<p>ethical,英 [ˈeθɪk(ə)l] 美 [ˈeθɪk(ə)l] adj.
+道德的，伦理的；合乎道德的；有益于人（类）的，环保的；（药品）凭处方出售的</p>
+<p>explicit,英 [ɪkˈsplɪsɪt] 美 [ɪkˈsplɪsɪt] adj.
+清楚明白的，明确的，详述的；直截了当的，坦率的；赤裸裸表现性爱（或暴力）的，露骨的
+n. （手稿、早期印刷品或礼拜仪式上唱诗的）结束语</p>
+<p>exponent,英 [ɪkˈspəʊnənt] 美 [ɪkˈspoʊnənt]
+n. 拥护者，倡导者；代表人物；指数，幂；大师，行家；成分；说明者，说明物
+adj. 说明的</p>
+<p>expose,英 [ɪkˈspəʊz] 美 [ɪkˈspoʊz] v.
+暴露，使显露；使面临，使遭受（危险或不快）；揭露，揭发；接触，体验；露出，显露（感情）；使（胶卷）曝光；弃（婴孩）于户外让其死去
+n. 揭露，曝光</p>
+<p>exposition,英 [ˌekspəˈzɪʃ(ə)n] 美 [ˌekspəˈzɪʃ(ə)n]
+n. 解释，阐述；展览会，博览会；（奏鸣曲等的）呈示部；暴露，揭露</p>
+<p>extinction,英 [ɪkˈstɪŋkʃn] 美 [ɪkˈstɪŋkʃ(ə)n]
+n. 灭绝，消亡；（债务的）偿清；消光</p>
+<p>feudal,英 [ˈfjuːd(ə)l] 美 [ˈfjuːd(ə)l] adj.
+封建（制度）的；过时（或老式）得可笑的；争吵的</p>
+<p>folly,英 [ˈfɒli] 美 [ˈfɑːli] n. 愚蠢；荒唐事；讽刺剧</p>
+<p>franciscan,英 [frænˈsɪskən] 美 [frænˈsɪskən] adj. （天主教）方济会的
+n. （天主教）方济会修士</p>
+<p>friar,英 [ˈfraɪə(r)] 美 [ˈfraɪər] n. 化缘修士；男修道士</p>
+<p>gradual,英 [ˈɡrædʒuəl] 美 [ˈɡrædʒuəl] adj.
+逐渐的，渐进的；平缓的，不陡的</p>
+<p>heretical,英 [həˈretɪk(ə)l] 美 [həˈretɪk(ə)l] adj. 异端的；异教的</p>
+<p>hesitation,英 [ˌhezɪˈteɪʃn] 美 [ˌhezɪˈteɪʃ(ə)n] n. 犹豫，不情愿</p>
+<p>illustrative,英 [ˈɪləstrətɪv] 美 [ɪˈlʌstrətɪv] adj.
+作例证用的，解释性的；图解的，插图的</p>
+<p>immortal,英 [ɪˈmɔːt(ə)l] 美 [ɪˈmɔːrt(ə)l] adj.
+不死的，永存的；不朽的，流芳百世的，永垂千古的
+n. 神，永生不灭者；永垂不朽的人物；法国科学院院士（Immortal）；<史>古波斯皇家护卫（Immortals）</p>
+<p>imperative,英 [ɪmˈperətɪv] 美 [ɪmˈperətɪv] adj.
+极重要的，必要的；命令的，强制的；祈使的n.
+重要紧急的事，必要的事；祈使语气，祈使语气动词；命令</p>
+<p>impertinent,英 [ɪmˈpɜːtɪnənt] 美 [ɪmˈpɜːrt(ə)nənt] adj.
+不恰当的；无礼的；粗鲁的；不相干的</p>
+<p>implicit,英 [ɪmˈplɪsɪt] 美 [ɪmˈplɪsɪt] adj.
+含蓄的，未言明的；内含的，固有的；无疑问的，无保留的；（函数）隐式的，隐的</p>
+<p>impose,英 [ɪmˈpəʊz] 美 [ɪmˈpoʊz] v.
+强制推行，强制实行；把（自己的观点、信仰等）强加于；打扰，麻烦；把（活字页）拼版；欺骗</p>
+<p>impotent,英 [ˈɪmpətənt] 美 [ˈɪmpətənt] adj.
+无力的；无效的；虚弱的；阳萎的</p>
+<p>impure,英 [ɪmˈpjʊə(r)] 美 [ɪmˈpjʊr] adj.
+不纯的；肮脏的；道德败坏的</p>
+<p>incorporation,英 [ɪnˌkɔːpəˈreɪʃn] 美 [ɪnˌkɔːrpəˈreɪʃn]
+n. 合并；公司，团体组织</p>
+<p>indubitable,英 [ɪnˈdjuːbɪtəbl] 美 [ɪnˈduːbɪtəb(ə)l] adj.
+不容置疑的；明确的</p>
+<p>inevitable,英 [ɪnˈevɪtəb(ə)l] 美 [ɪnˈevɪtəb(ə)l] adj.
+必然发生的，不可避免的；总会发生的，惯常的
+n. 必然发生的事，不可避免的事</p>
+<p>inexorably,英 [ɪnˈeksərəbli] 美 [ɪnˈeksərəbli] adv.
+不可逆转地，不可阻挡地 adv. 无情地；冷酷地</p>
+<p>infer,英 [ɪnˈfɜː(r)] 美 [ɪnˈfɜːr] v. 推断，推论；暗示，暗指,To guess
+or conclude something from evidence or clues (you are not told directly;
+you work it out).</p>
+<p>inherit,英 [ɪnˈherɪt] 美 [ɪnˈherɪt] v.
+继承（遗产）；经遗传获得（品质、身体特征等）；接手，承担；接收（前所有者的事物）；<古>（尤作圣经翻译和典故用语）得到</p>
+<p>innate,英 [ɪˈneɪt] 美 [ɪˈneɪt] adj.
+先天的，固有的；（信仰）根深蒂固的</p>
+<p>innumerable,英 [ɪˈnjuːmərəb(ə)l] 美 [ɪˈnuːmərəb(ə)l] adj.
+无数的，数不清的</p>
+<p>insanity,英 [ɪnˈsænəti] 美 [ɪnˈsænəti]
+n. 精神错乱，精神失常；愚蠢（或不理智）的事</p>
+<p>insensitive,英 [ɪnˈsensətɪv] 美 [ɪnˈsensətɪv] adj.
+（对他人的感受）未意识到的，漠不关心的；身体无感觉的，麻木的；不敏感的，反应迟钝的</p>
+<p>insertion,英 [ɪnˈsɜːʃn] 美 [ɪnˈsɜːrʃn]
+n. 插入，嵌入；（书、文章等中）添加的东西；（服装面料的）布饰，绣饰；（报刊的）插登广告；（器官的）附着</p>
+<p>insolence,英 [ˈɪnsələns] 美 [ˈɪnsələns] n. 傲慢；傲慢无礼的行为</p>
+<p>insoluble,英 [ɪnˈsɒljəb(ə)l] 美 [ɪnˈsɑːljəb(ə)l] adj.
+不能解决的；[化学] 不能溶解的；难以解释的</p>
+<p>integral,英 [ˈɪntɪɡrəl] 美 [ˈɪntɪɡrəl] adj.
+必需的，必要的，不可或缺的；作为组成部分的；完整的；整的，积分的
+n. 积分；完整</p>
+<p>intelligible,英 [ɪnˈtelɪdʒəb(ə)l] 美 [ɪnˈtelɪdʒəb(ə)l] adj.
+可理解的，明白易懂的；只能凭智力理解的</p>
+<p>intermediate,英 [ˌɪntəˈmiːdiət] 美 [ˌɪntərˈmiːdiət] adj.
+居中的，中间的；中等程度的，中级的
+n. 中级水平者，中级学生；中间事物；（化合物）中间体 v.
+充当调解人，斡旋</p>
+<p>intimate,英 [ˈɪntɪmət] 美 [ˈɪntɪmət] adj.
+亲密的；个人的，隐私的；温馨的，幽静舒适的；详尽的，精通的；密切的，紧密的；有性关系的，暧昧的
+v. 透露，暗示；宣布，通告 n. 密友，知己</p>
+<p>intolerably,英 [ɪnˈtɒlərəbli] 美 [ɪnˈtɑːlərəbli] adv.
+到难耐的程度；无法忍受地</p>
+<p>invasion,英 [ɪnˈveɪʒ(ə)n] 美 [ɪnˈveɪʒ(ə)n]
+n. 侵略，入侵；涌入，大批进入；侵犯，干预；侵袭，扩散</p>
+<p>investigation,英 [ɪnˌvestɪˈɡeɪʃ(ə)n] 美 [ɪnˌvestɪˈɡeɪʃ(ə)n]
+n. 调查，审查；科学研究，学术研究</p>
+<p>jejune,英 [dʒɪˈdʒuːn] 美 [dʒɪˈdʒuːn] adj.
+枯燥无味的；幼稚的；缺乏营养的</p>
+<p>jurisdiction,英 [ˌdʒʊərɪsˈdɪkʃn] 美 [ˌdʒʊrɪsˈdɪkʃ(ə)n]
+n. 司法权，审判权；管辖权；管辖区域，管辖范围</p>
+<p>laity,英 [ˈleɪəti] 美 [ˈleɪəti] n. 俗人；外行人；门外汉</p>
+<p>latent,英 [ˈleɪt(ə)nt] 美 [ˈleɪt(ə)nt] adj.
+（性质，状态）潜在的，隐藏的；（芽、静止期等）休眠的，潜伏的；（微生物，尤指病毒）蛰伏的；（疾病）潜伏的</p>
+<p>legality,英 [lɪˈɡæləti] 美 [lɪˈɡæləti] n. 合法；合法性；墨守法规</p>
+<p>liberty,英 [ˈlɪbəti] 美 [ˈlɪbərti]
+n. 自由，自由权；（某种）合法权利；冒犯行为（或言语），失礼；意志自由，选择自由；<非正式>
+自以为是的言语，专断的行动；（水手的）上岸休假</p>
+<p>linger,英 [ˈlɪŋɡə(r)] 美 [ˈlɪŋɡər] v.
+继续存留，缓慢消失；流连，逗留；持续看（或思考）；苟延残喘；消磨，缓慢度过</p>
+<p>liturgy,英 [ˈlɪtədʒi] 美 [ˈlɪtərdʒi]
+n. 礼拜仪式；圣餐仪式；祷告文</p>
+<p>loyalty,英 [ˈlɔɪəlti] 美 [ˈlɔɪəlti]
+n. 忠诚，忠贞；忠于……的强烈情感</p>
+<p>lump,英 [lʌmp] 美 [lʌmp]
+n. （不定形的）块；（单独的）大量；肿块；方糖；<非正式>笨重的人，傻大个；<非正式>个体劳动者
+v.
+把……归并在一起；无奈地接受，勉强同意；结块，起疙瘩；<英>背负（重物）</p>
+<p>macedonian,英 [ˌmæsəˈdəʊniən] 美 [ˌmæsəˈdoʊniən] adj. 马其顿的
+n. 马其顿人</p>
+<p>medieval,英 [ˌmediˈiːv(ə)l] 美 [ˌmiːdˈiːv(ə)l] adj.
+中世纪的；<非正式>非常老派的，极其过时的</p>
+<p>mediterranean,英 [ˌmedɪtəˈreɪniən] 美 [ˌmedɪtəˈreɪniən]
+n. （Mediterranean）地中海地区；地中海沿岸国家居民 adj.
+（Mediterranean）地中海的，地中海沿岸的；地中海沿岸国家居民的；（肤色）浅黑的</p>
+<p>mention,英 [ˈmenʃ(ə)n] 美 [ˈmenʃ(ə)n] v.
+提到，谈到；提名，推荐；传令嘉奖，提名表扬
+n. 提及，说起，写上一笔；提名表扬</p>
+<p>mercantile,英 [ˈmɜːkəntaɪl] 美 [ˈmɜːrkəntiːl] adj.
+贸易的，商业的；营利主义的</p>
+<p>merit,英 [ˈmerɪt] 美 [ˈmerɪt]
+n. 优秀品质，价值；优点，长处；<英>（成绩等级）良好；事实真相，是非曲直；善行，善事
+v. 值得，应受；应受赏（或罚）</p>
+<p>milieu,英 [mɪlˈjɜː] 美 [mɪlˈjuː] n. 环境；周围；出身背景</p>
+<p>monarch,英 [ˈmɒnək] 美 [ˈmɑːnərk] n. 君主，女王；黑脉金斑蝶；王鹟</p>
+<p>monograph,英 [ˈmɒnəɡrɑːf] 美 [ˈmɑːnəɡræf] n. 专题著作，专题论文 vt.
+写关于……的专著</p>
+<p>monopoly,英 [məˈnɒpəli] 美 [məˈnɑːpəli]
+n. 垄断，垄断权；垄断企业，专卖者；独占，专利品；大富翁（棋类游戏,游戏者以玩具钞票买卖房地产）</p>
+<p>mould,英 [məʊld] 美 [moʊld]
+n. 模具，铸模；类型，个性；霉，霉菌；框架，型芯；松软沃土，腐殖土 v.
+使……成形，用模子制作，浇铸；影响，塑造；（使）紧贴于，吻合；（使）发霉</p>
+<p>obsolete,英 [ˈɒbsəliːt] 美 [ˌɑːbsəˈliːt] adj.
+淘汰的，废弃的；（生物特征的一部分）退化的 vt.
+<美>淘汰（产品），废弃（想法）</p>
+<p>orthodox,英 [ˈɔːθədɒks] 美 [ˈɔːrθədɑːks] adj.
+（观念、方法或行为）传统的，正统的；（人）正统派的，循规蹈矩的；东正教的，正教的（Orthodox）；（物）普通的，正常的
+n. 正统的人，正统的事物</p>
+<p>oubtless,英 [ˈdaʊtləs] 美 [ˈdaʊtləs] adv. 无疑地，肯定地 adj.
+无疑的，肯定的</p>
+<p>outburst,英 [ˈaʊtbɜːst] 美 [ˈaʊtbɜːrst]
+n. （火山、情感等的）爆发；破裂</p>
+<p>outcome,英 [ˈaʊtkʌm] 美 [ˈaʊtkʌm] n. 结果，效果</p>
+<p>pagan,英 [ˈpeɪɡən] 美 [ˈpeɪɡən]
+n. 异教徒（信非主流宗教者）；非基督教徒；新异教主义者；无宗教信仰者 adj.
+异教的，异教徒的</p>
+<p>papal,英 [ˈpeɪpl] 美 [ˈpeɪpl] adj. 教宗的；罗马教皇的；教皇制度的</p>
+<p>paralyse,英 [ˈpærəlaɪz] 美 [ˈpærəlaɪz] v.
+使瘫痪，使麻痹；（尤指由于恐慌或害怕）使丧失思维（或活动）能力；使不能正常运作，使陷入瘫痪</p>
+<p>passion,英 [ˈpæʃ(ə)n] 美 [ˈpæʃ(ə)n]
+n. 爱恋，情欲；激情，热情；酷爱，热衷的爱好（或活动等）；盛怒，激愤；耶稣的受难（the
+Passion）</p>
+<p>patriotic,英 [ˌpætriˈɒtɪk] 美 [ˌpeɪtriˈɑːtɪk] adj.
+爱国的，有爱国心的</p>
+<p>perpetually,英 [pəˈpetʃuəli] 美 [pərˈpetʃuəli] adv.
+永恒地，持久地</p>
+<p>persecution,英 [ˌpɜːsɪˈkjuːʃ(ə)n] 美 [ˌpɜːrsɪˈkjuːʃn]
+n. （尤指因种族、宗教或政治信仰而进行的）迫害，残害；烦扰</p>
+<p>persuade,英 [pəˈsweɪd] 美 [pərˈsweɪd] v.
+说服，劝服；使相信，使信服；（情形，事件）驱使，敦促</p>
+<p>pillage,英 [ˈpɪlɪdʒ] 美 [ˈpɪlɪdʒ] v. （尤指在战争中）掠夺，抢劫
+n. （尤指在战争中）掠夺，抢劫；掠夺物</p>
+<p>pious,英 [ˈpaɪəs] 美 [ˈpaɪəs] adj. 虔诚的；敬神的；可嘉的；尽责的</p>
+<p>possess,英 [pəˈzes] 美 [pəˈzes] v. <正式>
+拥有，持有；具有（品质或能力）；（尤指邪恶的鬼魅或精灵）缠住，迷住；受（感情）支配，受（感情）影响；了解，懂得;</p>
+<p>predecessor,英 [ˈpriːdəsesə(r)] 美 [ˈpredəsesər]
+n. 前任，前辈；（被取代的）原有事物，前身</p>
+<p>presence,英 [ˈprez(ə)ns] 美 [ˈprez(ə)ns]
+n. 出席，存在；<正式>（某人的）所在地方；<文>感觉中的存在物（如鬼魂）；驻扎部队，驻扎的警力；风度，气质；（公司在某地的）工人（或产品），势力</p>
+<p>profess,英 [prəˈfes] 美 [prəˈfes] vt.
+自称，（尤指）伪称；公开承认（某种感受或信仰）；信仰，信奉（宗教）；正式准予加入（be
+professed）；<旧>以教授身份教（某科目），传授</p>
+<p>profound,英 [prəˈfaʊnd] 美 [prəˈfaʊnd] adj.
+（影响）深刻的，极大的；（感情）强烈的，深切的；（思想）深邃的，（见解）深刻的；<文>深的，深处的；完全的；艰深的，玄奥的；（疾病，残疾）严重的</p>
+<p>proportion,英 [prəˈpɔːʃ(ə)n] 美 [prəˈpɔːrʃ(ə)n]
+n. 部分，份额；比例；正确的比例，均衡；大小，程度（proportions）；（事情的）重要性，严重性；等比关系
+v. <正式> 使（某物）成比例，使相称；分摊</p>
+<p>rebellion,英 [rɪˈbeljən] 美 [rɪˈbeljən] n. 叛乱，反抗；
+（对权威的）反抗，不服从；叛逆，不顺从</p>
+<p>reciprocal,英 [rɪˈsɪprək(ə)l] 美 [rɪˈsɪprək(ə)l] adj.
+相互的，互惠的，报答的；（路线，方向）反向的；（代词，动词）互相的；（量，函数）倒数的；互逆的，互反的
+n. 反身代词，相互动词； 倒数，乘法逆元素；互相起作用的事物</p>
+<p>refinement,英 [rɪˈfaɪnmənt] 美 [rɪˈfaɪnmənt]
+n. 精炼，精制；（精细的）改进，改善；举止文雅；高雅情趣；改良品</p>
+<p>reformation,英 [ˌrefəˈmeɪʃn] 美 [ˌrefərˈmeɪʃn]
+n. 改革，革新；（16世纪促成新教产生的）宗教改革运动（the
+Reformation）</p>
+<p>renewal,英 [rɪˈnjuːəl] 美 [rɪˈnuːəl]
+n. 恢复，重新开始；（有效期的）延长，续订；更新，改建；（有神授超凡能力基督徒的）精神重生</p>
+<p>repent,英 [rɪˈpent] 美 [rɪˈpent] vi. 后悔；忏悔 vt.
+后悔；对……感到后悔</p>
+<p>repentance,英 [rɪˈpentəns] 美 [rɪˈpentəns] n. 悔改；后悔</p>
+<p>revelation,英 [ˌrevəˈleɪʃ(ə)n] 美 [ˌrevəˈleɪʃ(ə)n]
+n. 被揭示的真相，被揭露的内情；揭露，披露；出乎意料的事物，令人惊喜的发现；（上帝的）启示，默示；《启示录》（《圣经·新约》末卷，讲述上帝对圣约翰有关未来的启示）（Revelation）</p>
+<p>rigid,英 [ˈrɪdʒɪd] 美 [ˈrɪdʒɪd] adj.
+（方法、体制等）严格死板的，僵化的；（人）顽固的，不通融的；刚硬的，不易弯曲的；（因强烈的感情而）僵硬的，僵直的；精确的
+n. 未铰接的货车</p>
+<p>scholarly,英 [ˈskɒləli] 美 [ˈskɑːlərli] adj.
+学术的，学术性的；博学的，勤奋好学的</p>
+<p>secular,英 [ˈsekjələ(r)] 美 [ˈsekjələr] adj.
+非宗教的，世俗的；现实世界的；（教士）教区的，在俗的；政府的而非教会的，民事的；（天文）缓慢的，长期的；（经济）（波动，趋势）长期性的；（尤指古罗马的庆祝活动）每世纪一次的，约百年一次的
+n. 在俗牧师；平信徒，普通信徒</p>
+<p>severe,英 [sɪˈvɪə(r)] 美 [sɪˈvɪr] adj.
+十分严重的，极为恶劣的；艰巨的，严峻的；（惩罚、批评）严厉的，重的；严厉的，苛刻的；不加装饰的，朴素的</p>
+<p>Socratics,[səu’krætik] adj. （古希腊哲学家）苏格拉底的；问答法的
+n. （古希腊哲学家）苏格拉底的信徒</p>
+<p>sought,英 [sɔːt] 美 [sɔːt] v. 寻找（seek 的过去式和过去分词</p>
+<p>specialist,英 [ˈspeʃəlɪst] 美 [ˈspeʃəlɪst]
+n. 专家；专科医生；美国陆军专业人员（高于一等兵低于下士的军衔） adj.
+专业的；专门的；专家的</p>
+<p>speculation,英 [ˌspekjuˈleɪʃ(ə)n] 美 [ˌspekjuˈleɪʃ(ə)n]
+n. 投机，投机买卖；猜测，推测，推断</p>
+<p>spite,英 [spaɪt] 美 [spaɪt] n. 恶意，怨恨；不顾，尽管；不由自主地</p>
+<p>stimulate,英 [ˈstɪmjuleɪt] 美 [ˈstɪmjuleɪt] v.
+促进，激发（某事物）；激发，鼓励；使（身体，生物系统）兴奋，刺激；起刺激作用</p>
+<p>stoic,英 [ˈstəʊɪk] 美 [ˈstoʊɪk] n. 坚忍克己者，坦然面对困难的人 adj.
+坚忍的；禁欲的 n. （Stoic）斯多葛派学者；禁欲主义者 adj.
+（Stoic）斯多葛派的；禁欲主义的</p>
+<p>stoics,英 [ˈstəʊɪks] 美 [ˈstoʊɪks] n. 斯多噶派学者；禁欲主义者（Stoic
+的复数）</p>
+<p>subject to,受到或可能受到（某事物）的影响。</p>
+<p>submerge,英 [səbˈmɜːdʒ] 美 [səbˈmɜːrdʒ] v.
+（使）潜入水中，（使）没入水中，浸没；湮没，掩盖（思想、感情等）；使（自己）集中精力于，使（自己）沉浸于</p>
+<p>superiority,英 [suːˌpɪəriˈɒrəti] 美 [suːˌpɪriˈɔːrəti]
+n. 优越，优势；优越感，骄傲自大</p>
+<p>supreme,英 [suːˈpriːm; sjuːˈpriːm] 美 [suˈpriːm] adj.
+最高的，至高无上的；（政府、司法或军事机构）拥有最高权力的；极大的，极度的；（处罚，牺牲）涉及死的；杰出的
+n. 奶油沙司 v. 用工具处理水果（尤指柑橘类）以达到最佳效果</p>
+<p>surpass,英 [səˈpɑːs] 美 [sərˈpæs] v.
+超过，胜过，优于；比（预期的或希望的）更好；超越自我；超出（理解范围）</p>
+<p>suspicion,英 [səˈspɪʃ(ə)n] 美 [səˈspɪʃ(ə)n]
+n. 不好的预感，猜想；（对某人有罪、不诚实等的）怀疑；不信任，猜疑；少量，一点
+v. <方> 怀疑</p>
+<p>synthesis,英 [ˈsɪnθəsɪs] 美 [ˈsɪnθəsɪs]
+n. 综合，综合体；（化学物质的）合成；音响合成；（黑格尔哲学中的）合题；（语法）合成；（语言学）综合</p>
+<p>teutonic,英 [tjuːˈtɒnɪk] 美 [tuːˈtɑːnɪk] adj.
+日耳曼人的；条顿人的；日耳曼语的 n. 日耳曼语；条顿语</p>
+<p>theology,英 [θiˈɒlədʒi] 美 [θiˈɑːlədʒi] n. 神学；宗教体系</p>
+<p>tidy,英 [ˈtaɪdi] 美 [ˈtaɪdi] adj.
+整洁的，有条理的；（人）爱整洁的，爱整齐的；<非正式>（款额）巨大的；相当好的，令人满意的
+v. 使整洁，整理
+n. 盛零碎物品的容器；<英>整理，收拾；<美>（椅子靠背的）罩单，套子</p>
+<p>tournament,英 [ˈtʊənəmənt] 美 [ˈtʊrnəmənt]
+n. 锦标赛，联赛；（中世纪的）骑士比武大会；阅兵式</p>
+<p>trial,英 [ˈtraɪəl] 美 [ˈtraɪəl]
+n. 审判，审理；试验，试用；（对人的忍耐、自制力的）考验，磨练；烦人的事，惹麻烦的人；预赛，选拔赛；（检验车手技能的）摩托车障碍检验赛；（动物的）比赛，表演
+v. 测试，试验；（马、狗等动物）参加比赛</p>
+<p>unity,英 [ˈjuːnəti] 美 [ˈjuːnəti]
+n. 团结，统一；整体性，统一性；三一律（指戏剧在时间、地点和情节三点上的统一性）；统一体；（数目或数字）一</p>
+<p>vacuum,英 [ˈvækjuːm] 美 [ˈvækjuːm]
+n. 真空，真空容器；真空吸尘器；空白，空虚；（用真空吸尘器所做的）清洁，清扫
+v. 用真空吸尘器打扫</p>
+<p>vague,英 [veɪɡ] 美 [veɪɡ] adj.
+不明确的，不清楚的；（形状）模糊的；（感情、记忆等）不完整的，不清晰的；含糊其词的，闪烁其词的；茫然的，心不在焉的</p>
+<p>variance,英 [ˈveəriəns] 美 [ˈveriəns]
+n. 分歧，不一致；变化幅度，差额；（官方的）特殊许可；（律）（两个供述或证据间的）不符；（统计）方差</p>
+<p>vary,英 [ˈveəri] 美 [ˈveri] v.
+（使）不同，（使）呈现差异；（根据情况而）变化，改变；改变，使……变化；变奏</p>
+<p>victorious,英 [vɪkˈtɔːriəs] 美 [vɪkˈtɔːriəs] adj. 胜利的，获胜的</p>
+<p>vigorous,英 [ˈvɪɡərəs] 美 [ˈvɪɡərəs] adj.
+精力充沛的，充满活力的；强壮的，强健的</p>
+<p>vigour,英 [ˈvɪɡə(r)] 美 [ˈvɪɡər] n. 活力，精力；气势</p>
+<p>virtuous,英 [ˈvɜːtʃuəs] 美 [ˈvɜːrtʃuəs] adj.
+道德高尚的，品行端正的；自命清高的，自鸣得意的；<旧>（尤指妇女）贞洁的；有效力的</p>
+<p>vivid,英 [ˈvɪvɪd] 美 [ˈvɪvɪd] adj.
+生动的，逼真的；（颜色）鲜艳的，明亮的；（人的想像）丰富的</p>
+<p>vivify,英 [ˈvɪvɪˌfaɪ] 美 [ˈvɪvəˌfaɪ] vt. 使生动；使活跃；给与生气</p>
+<p>vow,英 [vaʊ] 美 [vaʊ] n. 誓约，诺言；（婚礼等上的）誓言 v.
+立誓，发誓</p>
+<p>wholly,英 [ˈhəʊlli] 美 [ˈhoʊlli] adv. 完全地，全部地</p>
+<hr>
+<center>
+<a href="/3place/xey">返回首页</a> <a
+href="/3place/xey/mingju.html">本书名句</a> <a
+href="/3place/xey/memo.html">本书注解</a> <a
+href="/3place/xey/index_rich.html">丰富目录</a> <a
+href="/3place/xey/index_readcal.html">同读日历</a> <a
+href="/3place/xey/index_timeline.html">时间线</a> <a
+href="/3place/xey/index_books.html">引用书籍</a> <a
+href="/3place/xey/index_words.html">使用字频</a>
+<div id="wx_pic" style="margin:0 auto;display:none;">
+<img src='/img/logo.png'/>
+</div>
+<a href="/3place/xey/hash/">HASH5</a>
+</center>
+<hr>
+<center>
+<img src="/img/thanks.jpg" width="50%" height="50%">
+</center>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>
