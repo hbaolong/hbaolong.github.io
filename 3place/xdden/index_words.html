@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="hbaolong@vip.qq.com" />
+  <title>悉达多EN 用字频率</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">悉达多EN 用字频率</h1>
+<p class="author">hbaolong@vip.qq.com</p>
+</header>
+<center>
+<a href="/">返回首页</a> <a href="/booklist/">第三书单</a> <a
+href="/index_hash5.html">HASH5</a>
+</center>
+<hr>
+<center>
+<a href="/3place/xdden">返回首页</a> <a
+href="/3place/xdden/mingju.html">本书名句</a> <a
+href="/3place/xdden/memo.html">本书注解</a> <a
+href="/3place/xdden/index_rich.html">丰富目录</a> <a
+href="/3place/xdden/index_readcal.html">同读日历</a> <a
+href="/3place/xdden/index_timeline.html">时间线</a> <a
+href="/3place/xdden/index_books.html">引用书籍</a> <a
+href="/3place/xdden/index_words.html">使用字频</a>
+<div id="wx_pic" style="margin:0 auto;display:none;">
+<img src='/img/logo.png'/>
+</div>
+</center>
+<p>1 abilities 1 abode 1 absorbed 1 absorbing 1 abstain 1 accusation 1
+ache 1 achieving 1 activities 1 add 1 addressing 1 admitted 1 admitting
+1 admonition 1 advised 1 afar 1 affairs 1 affection 1 affectionately 1
+afternoon 1 agonising 1 agree 1 agreed 1 ailing 1 aim 1 akin 1 alleged 1
+alleys 1 allow 1 alongside 1 aloud 1 amusedly 1 anew 1 anguish 1
+animallike 1 annihilating 1 annoyance 1 anoint 1 answering 1 anticipated
+1 ants 1 anyhow 1 anymore 1 apes 1 apparently 1 appeal 1 appearance 1
+appears 1 appetite 1 appointed 1 approached 1 approve 1 arcs 1 area 1
+arguing 1 arose 1 aroused 1 arrangement 1 arrivals 1 arriving 1 arrogant
+1 artist 1 ascended 1 ashamed 1 aspect 1 aspects 1 atoned 1 attach 1
+attempts 1 attended 1 attracted 1 attracts 1 attributes 1 audacious 1
+austere 1 avoid 1 avoiding 1 await 1 awaking 1 awe 1 baby 1 balls 1
+banter 1 bare 1 bark 1 base 1 bashful 1 basics 1 bathe 1 beach 1 beams 1
+bearded 1 beating 1 beckoned 1 beds 1 bee 1 beetle 1 beggars 1 beheld 1
+beings 1 believes 1 belonging 1 belongs 1 benefactor 1 benefactors 1
+benefit 1 benevolent 1 benevolently 1 besides 1 besiege 1 bidding 1 big
+1 birds 1 birthplace 1 bite 1 biting 1 bitten 1 bitterly 1 blissful 1
+bloated 1 bloody 1 blossoming 1 blow 1 bluish 1 boars 1 boasted 1 boiled
+1 bold 1 bone 1 bore 1 born 1 bother 1 bottomless 1 bowing 1 bowls 1
+boys 1 brahmanism 1 branches 1 brawny 1 breach 1 breaking 1 breasts 1
+breathes 1 briefly 1 broke 1 brushed 1 bubbles 1 building 1 bull 1 bulls
+1 burdening 1 burn 1 burry 1 burst 1 bursting 1 businesses 1 businessmen
+1 bustle 1 bustling 1 butterfly 1 buzzed 1 buzzing 1 calculations 1 camp
+1 canes 1 capable 1 capacity 1 captive 1 cared 1 careful 1 caress 1 carp
+1 carpets 1 carries 1 carrion 1 carters 1 cast 1 castaway 1 casually 1
+catch 1 cautious 1 cavities 1 celebrating 1 celebration 1 certainly 1
+chance 1 character 1 characteristics 1 charge 1 charged 1 charitable 1
+charms 1 chatted 1 cheek 1 cheerfully 1 chewing 1 chiefly 1
+childlikeness 1 chimpanzee 1 chin 1 choosing 1 chore 1 circles 1
+circling 1 cistern 1 clanged 1 clapped 1 clean 1 cleansing 1 clearer 1
+clemency 1 clenched 1 cleric 1 climbing 1 cling 1 cloud 1 clouds 1
+coincidence 1 coins 1 comb 1 combed 1 comes 1 comforting 1 command 1
+commands 1 commemorate 1 committing 1 companionship 1 company 1 compare
+1 compared 1 complain 1 complaining 1 completeness 1 completion 1
+comprehensible 1 conceal 1 conceited 1 concentration 1 conceptions 1
+concern 1 concerned 1 concerning 1 conclusion 1 conclusions 1 conducting
+1 confessed 1 confessing 1 confirmation 1 conflict 1 confused 1 consent
+1 consented 1 consider 1 considered 1 constant 1 containing 1 continuing
+1 contracted 1 contracts 1 controlled 1 conveyed 1 copper 1 core 1
+corners 1 cornucopia 1 coronation 1 corpses 1 correctly 1 costs 1
+cottages 1 couch 1 counted 1 counterpart 1 courage 1 court 1 courtesans
+1 courtesy 1 cousin 1 covetousness 1 cowered 1 craft 1 crafts 1 cramps 1
+creation 1 creations 1 creature 1 creatures 1 crescent 1 criminal 1
+croak 1 crowd 1 crude 1 cruise 1 crying 1 cult 1 customers 1 cut 1 damp
+1 dance 1 dangerous 1 dare 1 dared 1 darkness 1 daughter 1 daughters 1
+daybreak 1 daytime 1 daze 1 deadly 1 deaf 1 dealers 1 deaths 1 debate 1
+debtors 1 deceitful 1 decent 1 deceptions 1 deceptive 1 deceptively 1
+decide 1 decided 1 dedicated 1 defamation 1 definitely 1 degree 1
+delicacy 1 delicious 1 delightedly 1 delights 1 delude 1 delusion 1
+demanded 1 demonstrate 1 demonstrated 1 demonstrating 1 denial 1 denser
+1 deny 1 depart 1 dependencies 1 depicted 1 depraved 1 deprivations 1
+deprive 1 depths 1 desiring 1 desolate 1 desperate 1 destroy 1 destroyed
+1 destroying 1 destructive 1 determining 1 detours 1 develop 1 developed
+1 developing 1 devil 1 devious 1 devoted 1 devour 1 devoured 1 dew 1
+differentiate 1 differentiation 1 difficulties 1 dinner 1 direct 1
+directed 1 direction 1 directions 1 disappearance 1 disappointed 1
+disappointments 1 disbelievers 1 discard 1 discover 1 discussions 1
+disdainfully 1 disease 1 disembarking 1 dish 1 dismembered 1
+disobedience 1 dispersed 1 displayed 1 displease 1 displeasure 1
+disputes 1 disregard 1 dissolved 1 distinction 1 distress 1 divide 1
+diving 1 doctrines 1 doomed 1 doors 1 dormant 1 downwards 1 dragged 1
+drank 1 drawing 1 dreamed 1 dreaming 1 dreariness 1 dripping 1 dryness 1
+duty 1 dwell 1 dwelling 1 dwelt 1 eagerness 1 earn 1 earned 1 earth 1
+earthly 1 eccentric 1 ecstasy 1 ecstatic 1 eddies 1 edges 1 educated 1
+effects 1 efforts 1 eightfold 1 eighty 1 either 1 elements 1 elephants 1
+elevated 1 elevation 1 embarrassed 1 embarrassing 1 embarrassment 1
+emerged 1 emergency 1 emit 1 emptied 1 enchantment 1 encircled 1
+encountered 1 ending 1 endure 1 endured 1 enemy 1 enjoyable 1 enjoyed 1
+enjoying 1 enlarged 1 enriched 1 entice 1 entities 1 entity 1 entrust 1
+envying 1 era 1 err 1 errors 1 escaped 1 escapes 1 escaping 1 etched 1
+eternally 1 event 1 eventually 1 evermore 1 examples 1 excess 1 excited
+1 executioner 1 exhaled 1 exhausting 1 existing 1 expected 1 expertise 1
+exposed 1 expresses 1 expressing 1 external 1 extreme 1 extremely 1
+exuberant 1 eyebrows 1 eyelids 1 facing 1 factor 1 fades 1 failing 1
+faithfulness 1 falcon 1 falls 1 false 1 familiarity 1 family 1 famous 1
+fan 1 farmer 1 fastest 1 fasts 1 fateful 1 fathers 1 fattened 1
+favourite 1 fearfulness 1 feathers 1 feels 1 fenced 1 fermented 1
+fervour 1 festering 1 feverish 1 field 1 fifteen 1 fight 1 fill 1
+filling 1 filth 1 finer 1 fingers 1 firm 1 fisher 1 fists 1 five 1
+flabby 1 flame 1 flared 1 flash 1 flee 1 flexible 1 flickered 1 floated
+1 flocked 1 flocking 1 flourishing 1 flowers 1 flown 1 fly 1 flying 1
+foamed 1 foaming 1 focused 1 foolishly 1 fools 1 forbade 1 forcefully 1
+forces 1 foreign 1 forgiveness 1 forlorn 1 former 1 fornicator 1 forties
+1 fortunate 1 forty 1 fought 1 fragrance 1 fragrants 1 frenzied 1 fresh
+1 frightened 1 frightening 1 frost 1 fuming 1 gaga 1 gambler 1 gambling
+1 games 1 gaps 1 gardens 1 gather 1 gazed 1 generated 1 generations 1
+gifted 1 girl 1 glad 1 glass 1 glistened 1 glory 1 glow 1 gnaw 1 gold 1
+grab 1 grabbed 1 grace 1 grant 1 granted 1 grasped 1 grass 1 greatest 1
+greatness 1 greedily 1 grooves 1 guests 1 guilt 1 gullibly 1 gundert 1
+hairs 1 halted 1 handle 1 hanging 1 happening 1 happens 1 happier 1
+harmed 1 harming 1 harmony 1 harsh 1 hastiness 1 hasty 1 heads 1 healed
+1 health 1 healthy 1 heating 1 heavier 1 hedge 1 heed 1 helper 1 helps 1
+herbs 1 herd 1 hermann 1 hermit 1 herself 1 hesitate 1 hesitated 1
+hesitation 1 hesse 1 hide 1 higher 1 highly 1 hight 1 hint 1 honest 1
+honestly 1 honey 1 honours 1 hoped 1 hopeless 1 hopelessness 1 hopes 1
+hospitality 1 hostile 1 houses 1 hovered 1 hug 1 huge 1 hull 1 humblest
+1 humidity 1 humiliate 1 humorous 1 hungrily 1 hyaenas 1 ice 1 icy 1
+identify 1 ignorant 1 ill 1 illusions 1 imagine 1 imagined 1 imagining 1
+imitate 1 imitation 1 immaterial 1 immensely 1 impatiently 1 impending 1
+impenetrable 1 imperceptibly 1 imperfect 1 impetuously 1 impossible 1
+incessant 1 increase 1 increased 1 increasing 1 india 1 indian 1
+indignantly 1 indignation 1 indispensable 1 individuality 1 indulgence 1
+inescapable 1 inevitable 1 infants 1 infected 1 inferior 1 inform 1
+information 1 infused 1 inhale 1 inhaled 1 initiate 1 injury 1 injustice
+1 insatiably 1 inscrutable 1 insensitivity 1 insights 1 insist 1
+instance 1 instruct 1 instructed 1 insult 1 insulted 1 insulting 1
+intelligent 1 intend 1 interest 1 interested 1 interests 1 interior 1
+interrupted 1 interrupting 1 intertwined 1 intimate 1 intoxicated 1
+invaded 1 invisibly 1 invitation 1 invited 1 invocation 1 involved 1
+inwardly 1 irrefutably 1 irreproachable 1 isolated 1 jaguar 1 japan 1
+joint 1 joke 1 jokes 1 judge 1 judgement 1 juicy 1 jumped 1 keen 1
+keeping 1 kid 1 kidnap 1 kindled 1 kinds 1 kisses 1 kissing 1 knock 1
+krishna 1 lady 1 lain 1 lakshmi 1 lamentation 1 lamented 1 landlords 1
+lands 1 lanes 1 lank 1 latter 1 layers 1 leaf 1 legend 1 length 1 lets 1
+liable 1 liberated 1 lie 1 lied 1 lies 1 lifetime 1 lifted 1 lighting 1
+linen 1 links 1 listeners 1 listlessness 1 lit 1 loan 1 loaned 1 loaning
+1 loneliness 1 loops 1 loose 1 lovable 1 low 1 lowered 1 loyalty 1 lucky
+1 luminous 1 lunatic 1 lunch 1 lured 1 lustre 1 magadha 1 magical 1 main
+1 majority 1 managed 1 mankind 1 manners 1 mara 1 marked 1 mastered 1
+masterful 1 masters 1 match 1 mating 1 matter 1 matters 1 maya 1 meals 1
+meaningless 1 meaninglessness 1 meant 1 meantime 1 meditate 1
+meditations 1 meditative 1 melted 1 melting 1 mend 1 mentioned 1
+merchants 1 merciless 1 mercilessly 1 message 1 messenger 1 midnight 1
+mild 1 mildness 1 milk 1 miraculous 1 mirror 1 mist 1 mistaken 1
+mistakes 1 moaning 1 moderate 1 modest 1 modestly 1 mold 1 month 1 moods
+1 mothers 1 motion 1 motioned 1 motionlessly 1 mourners 1 moved 1
+movement 1 movements 1 moves 1 mud 1 mumbled 1 mumbling 1 murkier 1
+murmur 1 murmured 1 murmuring 1 musicians 1 nails 1 nameless 1 nations 1
+naughtiness 1 neck 1 needs 1 nest 1 net 1 newly 1 nice 1 nicely 1 nights
+1 nipple 1 nit 1 nobleman 1 noblemen 1 nothingness 1 notice 1 noticeable
+1 notions 1 numb 1 numbness 1 numbs 1 nursing 1 nurtured 1 obedient 1
+objection 1 obstructing 1 occupation 1 occupations 1 occupy 1 odds 1
+offer 1 official 1 oily 1 ointments 1 older 1 omen 1 opening 1 openly 1
+openness 1 operate 1 opposed 1 ordered 1 ordinary 1 orgies 1 originally
+1 ornamental 1 outburst 1 overcame 1 overestimated 1 overwhelmed 1 owl 1
+pace 1 paces 1 painfully 1 painted 1 pangs 1 parade 1 parched 1 pardon 1
+parents 1 partaking 1 partially 1 participate 1 particular 1
+particularly 1 partner 1 parts 1 passenger 1 passes 1 passing 1
+patiently 1 pavilion 1 payed 1 peaceful 1 peacefully 1 pearls 1 peel 1
+peels 1 pen 1 penance 1 penetrating 1 performance 1 performing 1 perish
+1 perishing 1 persuading 1 pestilence 1 petitioned 1 petrified 1
+petrifying 1 petty 1 physicians 1 picture 1 pieces 1 piled 1 pillows 1
+pious 1 pit 1 pitied 1 plague 1 plan 1 planning 1 plans 1 plant 1 plays
+1 pleasantly 1 pleased 1 pleases 1 plentiful 1 plucked 1 plunge 1
+plunging 1 point 1 poisoned 1 ponderingly 1 poorer 1 popped 1 posed 1
+positioned 1 positioning 1 possess 1 possibility 1 potion 1 pouches 1
+poultry 1 prajapati 1 prayers 1 praying 1 prays 1 precise 1 precocious 1
+prefer 1 pregnant 1 presents 1 preserved 1 presumable 1 pretended 1
+prevailing 1 previously 1 price 1 prince 1 prisoner 1 privileged 1
+proceed 1 profit 1 profitable 1 profits 1 progress 1 progressed 1
+prohibited 1 promises 1 propelling 1 properties 1 property 1 prosper 1
+protruding 1 provide 1 pulling 1 pumpkin 1 punished 1 pupils 1 purchase
+1 purer 1 purified 1 purity 1 pursued 1 pursuer 1 pursuing 1 pus 1
+putrefaction 1 puzzled 1 quality 1 quick 1 quietness 1 rabbit 1
+radiantly 1 rainbows 1 rank 1 ranting 1 rational 1 reaches 1 reaching 1
+readiness 1 reads 1 reality 1 realization 1 realm 1 rebirths 1 reborn 1
+rebuke 1 reciprocate 1 recognising 1 reddishly 1 redeemed 1 reduce 1
+reeds 1 refer 1 refreshed 1 refuse 1 regained 1 regarding 1 rejecting 1
+rejoiced 1 rejuvenated 1 relationships 1 relative 1 reliable 1 relief 1
+remains 1 reminder 1 reminiscent 1 remote 1 removed 1 renew 1 repeat 1
+repeating 1 repentance 1 repetition 1 repetitions 1 replaced 1 replied 1
+represented 1 reproach 1 repulsive 1 request 1 require 1 requires 1
+resembling 1 respects 1 resting 1 restless 1 rests 1 retiring 1 retold 1
+retreated 1 revel 1 richer 1 richest 1 richness 1 righteously 1 rigid 1
+ripened 1 ripped 1 riverbank 1 rivers 1 roared 1 roll 1 rolland 1 rolled
+1 romain 1 roof 1 root 1 ropes 1 rosy 1 rot 1 rotten 1 roughly 1 round 1
+roundness 1 ruins 1 rumours 1 run 1 runaway 1 sacrificing 1 sakya 1 sale
+1 salutations 1 samaveda 1 sanctity 1 sand 1 sandy 1 saturated 1 save 1
+scared 1 scattered 1 scene 1 scorched 1 scorn 1 scorns 1 screams 1
+scriptures 1 seams 1 searches 1 secretly 1 seducer 1 seeding 1 seeker 1
+seeks 1 seeming 1 seemingly 1 sensations 1 sense 1 sensing 1 sensual 1
+separating 1 sermon 1 serve 1 setting 1 settled 1 sex 1 sexual 1
+sexuality 1 shake 1 shaking 1 shape 1 shaped 1 share 1 shave 1 shaved 1
+shaven 1 shell 1 shelter 1 shimmering 1 shins 1 ship 1 shipment 1
+shipping 1 shiver 1 shivered 1 shivering 1 shivers 1 shop 1 shore 1 shot
+1 shouted 1 shouts 1 shuddering 1 shut 1 sickliness 1 sickness 1 sigh 1
+sighed 1 sighing 1 silly 1 silver 1 silverishly 1 simpler 1 simultaneous
+1 simultaneousness 1 sinful 1 singsong 1 sins 1 skeleton 1 skills 1
+skinned 1 sleepless 1 slender 1 slightest 1 slim 1 slip 1 slow 1 slower
+1 slumber 1 slurred 1 smarter 1 smash 1 smashing 1 smelled 1 smoothly 1
+snakes 1 sneak 1 soap 1 sob 1 sobering 1 softness 1 soiled 1 soiling 1
+sold 1 solemnity 1 solid 1 solved 1 somehow 1 somewhat 1 sorrow 1
+sources 1 spare 1 sparingly 1 specific 1 spectacle 1 spectator 1 sped 1
+speed 1 spiral 1 spirituality 1 splendid 1 splendour 1 split 1 sponge 1
+spots 1 sprang 1 spread 1 spreads 1 sprout 1 squandering 1 squares 1
+squeeze 1 staff 1 stairs 1 stale 1 stammered 1 stammeringly 1 standstill
+1 starry 1 startled 1 starts 1 steal 1 stem 1 stems 1 stir 1 stole 1
+stolen 1 stones 1 stopping 1 stories 1 straight 1 straightening 1
+strangest 1 streets 1 strengthened 1 stretched 1 strict 1 strictly 1
+strides 1 strike 1 strongest 1 struck 1 struggling 1 stubborn 1
+stubbornly 1 stuck 1 students 1 stuff 1 stung 1 stupidity 1 style 1
+subdued 1 submergence 1 submission 1 submissive 1 subservient 1
+substance 1 succeed 1 success 1 succumbed 1 suck 1 sucks 1 sufferingly 1
+suicide 1 summoned 1 sunrise 1 sunset 1 superiority 1 support 1 supposed
+1 surpassed 1 suspect 1 suspected 1 swearwords 1 sweetest 1 sweetly 1
+sweets 1 swollen 1 syllable 1 table 1 tackle 1 takes 1 tales 1 tanned 1
+tavern 1 teachable 1 teeth 1 temple 1 tenacity 1 tended 1 tendency 1
+tense 1 terribly 1 test 1 tested 1 text 1 textbooks 1 thankful 1 theirs
+1 thieves 1 thighs 1 thinkers 1 third 1 thirsted 1 thirty 1 thorny 1
+thorough 1 thoughtful 1 thoughtfully 1 thousandfoldness 1 threadbare 1
+threatened 1 throughly 1 throughout 1 throwing 1 thumped 1 tiger 1
+tilted 1 timidness 1 tiny 1 tip 1 title 1 toes 1 toiling 1 toilsome 1
+tolerance 1 tome 1 tone 1 tormented 1 torn 1 torture 1 tortured 1 tower
+1 traced 1 train 1 trainee 1 tranquility 1 transcendent 1 transformation
+1 transmitted 1 travels 1 treasures 1 tremendous 1 tremor 1 trick 1
+tries 1 trough 1 truthful 1 try 1 tumbles 1 twitched 1 ugliness 1
+ultimately 1 unbearable 1 unbelievable 1 uncertain 1 unconsciousness 1
+undertook 1 uniform 1 uniformity 1 universe 1 unlearn 1 unleash 1
+unlikely 1 unmoved 1 unpleasant 1 unrelenting 1 unrest 1 unsaid 1
+unsatisfiable 1 unselfish 1 unsown 1 unsteadiness 1 unstoppable 1
+unsuccessfully 1 untouchable 1 unwavering 1 unworthy 1 upanishad 1
+upanishades 1 upbringing 1 upcoming 1 upholstered 1 upright 1 upset 1
+upward 1 urgently 1 useless 1 utter 1 uttered 1 uttering 1 vacuous 1
+value 1 valued 1 vanities 1 vanity 1 vapour 1 vedas 1 veins 1
+venerability 1 venerate 1 venerated 1 verily 1 vexed 1 vice 1
+viciousness 1 victim 1 victorious 1 victory 1 vigour 1 violently 1
+virtue 1 virtues 1 vision 1 visited 1 visitor 1 visitors 1 vomiting 1
+vomits 1 vultures 1 waits 1 waking 1 wall 1 wander 1 wandered 1 waned 1
+warmer 1 warmly 1 warnings 1 warriors 1 wars 1 washed 1 waste 1 wasting
+1 watchful 1 wavered 1 wavers 1 weary 1 weave 1 weaving 1 wedding 1
+weddings 1 weird 1 welcomed 1 wept 1 wet 1 wetness 1 whining 1 whisper 1
+whomever 1 whorehouses 1 whores 1 wiggling 1 wild 1 wilhelm 1 willingly
+1 wisely 1 wiser 1 wishing 1 withering 1 womb 1 wondrously 1 wool 1
+worker 1 workers 1 workings 1 worn 1 worser 1 worshipper 1 worthwhile 1
+wounded 1 wounds 1 wove 1 woven 1 wretchedness 1 wrists 1 wrote 1
+yearned 1 zeal 1 zealous 1 zealously 2 abandon 2 abandoned 2 ablution 2
+accompanied 2 acted 2 admiration 2 admiring 2 advise 2 ah 2 ahead 2
+alike 2 alms 2 anathapindika 2 anger 2 annihilate 2 annoyed 2 answers 2
+appearances 2 approval 2 arch 2 ardent 2 areas 2 argue 2 arrogance 2
+asceticism 2 aside 2 autumn 2 awoke 2 axe 2 bamboo 2 banana 2 banyan 2
+bast 2 bathing 2 beats 2 begin 2 believers 2 beloved 2 bend 2
+benevolence 2 beyond 2 births 2 bits 2 bizarre 2 blessing 2 blew 2
+blindly 2 blown 2 boats 2 bondage 2 book 2 bowl 2 bows 2 brahma 2 brow 2
+brushwood 2 built 2 burden 2 burnt 2 busy 2 buy 2 buying 2 calling 2
+canopy 2 capture 2 carefully 2 carry 2 carrying 2 cause 2 charming 2
+cheeks 2 cheerful 2 chopped 2 chose 2 coincidental 2 collapsed 2 collect
+2 colour 2 colours 2 comedy 2 commit 2 common 2 companion 2 comparing 2
+complete 2 comprehend 2 conducts 2 confession 2 conscious 2 contained 2
+contently 2 convey 2 convince 2 cooked 2 country 2 covered 2 created 2
+crocodiles 2 crossed 2 curiosity 2 curiously 2 danger 2 debtor 2 decayed
+2 deceive 2 decency 2 decision 2 deed 2 deepest 2 depending 2
+desperation 2 despicable 2 despised 2 destination 2 destined 2 destiny 2
+detour 2 devote 2 devout 2 difficult 2 dim 2 directly 2 discontent 2
+discuss 2 discussing 2 disobedient 2 disposition 2 dispute 2 dissect 2
+distinguished 2 distrustful 2 diversity 2 dog 2 draw 2 dreary 2 dressed
+2 drifted 2 drinker 2 drinking 2 dripped 2 driven 2 driver 2 droves 2
+drowned 2 drunk 2 drunkard 2 dusty 2 duties 2 dwells 2 eagerly 2 ears 2
+easy 2 effected 2 effort 2 elegant 2 enchanted 2 encompassed 2 enemies 2
+enlightened 2 entangled 2 enticed 2 envy 2 essential 2 events 2
+everybody 2 example 2 exchanged 2 exercise 2 exhaling 2 exhausted 2
+expect 2 expectation 2 expecting 2 explain 2 failed 2 failure 2 faithful
+2 fare 2 farmers 2 fasted 2 fault 2 feared 2 fears 2 fed 2 fields 2
+fiery 2 figures 2 firmly 2 fishes 2 flesh 2 flew 2 flock 2 flourished 2
+flower 2 fool 2 forever 2 forgetfulness 2 forgive 2 forsaken 2 freezing
+2 friendliness 2 fro 2 fruits 2 fully 2 further 2 futile 2 gambled 2
+garment 2 gentleman 2 glances 2 glistening 2 glorious 2 goat 2 godly 2
+grasp 2 gratefully 2 greed 2 habit 2 habits 2 hang 2 happen 2 hardness 2
+harm 2 hated 2 hating 2 hatred 2 headed 2 heal 2 healing 2 hearing 2
+heavy 2 hell 2 helped 2 helping 2 hill 2 hips 2 hold 2 holding 2
+honourable 2 horror 2 host 2 hot 2 humans 2 hunter 2 hurriedly 2
+hurrying 2 hurt 2 illusion 2 immense 2 impatience 2 impatient 2
+incarnation 2 indestructibility 2 indignant 2 informed 2 inhaling 2 inn
+2 innumerable 2 instructions 2 intent 2 intention 2 intoxication 2
+jackal 2 jewelry 2 job 2 joking 2 joys 2 kidding 2 killing 2 kneeling 2
+knife 2 laborious 2 lack 2 lacked 2 lacks 2 laden 2 lake 2 lamentingly 2
+lasted 2 lazy 2 lead 2 leading 2 leaned 2 leapt 2 lessons 2 letter 2
+level 2 likes 2 line 2 lines 2 locked 2 log 2 loincloth 2 longed 2 loses
+2 lots 2 loud 2 lover 2 lovers 2 lower 2 lukewarm 2 luxury 2 maids 2
+maja 2 makes 2 male 2 manifestations 2 mark 2 marvellous 2 master 2 mat
+2 meaningful 2 meat 2 mere 2 merely 2 middle 2 miserably 2 missing 2
+mistress 2 modesty 2 moonlight 2 move 2 multitude 2 murderer 2 murky 2
+music 2 mystery 2 natural 2 noise 2 noon 2 novices 2 nuisance 2 nurse 2
+o 2 object 2 obsessed 2 occupied 2 offering 2 oneself 2 oppose 2 origin
+2 ought 2 overcoming 2 paced 2 pains 2 parable 2 paralysed 2 pass 2
+passionately 2 passions 2 patient 2 pause 2 payment 2 penetrated 2
+perfectly 2 perfume 2 perfumed 2 perished 2 petted 2 pike 2 pilgrimages
+2 places 2 poem 2 poetry 2 pointlessness 2 poison 2 polite 2 position 2
+pouch 2 poured 2 poverty 2 praised 2 predecessor 2 preferred 2 presented
+2 presenting 2 pride 2 priests 2 princes 2 pristine 2 process 2 proper 2
+properly 2 protect 2 proudly 2 proven 2 pulled 2 pushed 2 putting 2
+random 2 rapids 2 rays 2 realisation 2 realised 2 receiving 2 recent 2
+recitation 2 reflecting 2 reflection 2 regard 2 rejected 2 relieve 2
+reluctance 2 remain 2 rendered 2 repeated 2 reported 2 reports 2
+required 2 resembled 2 reside 2 resistance 2 restlessness 2 retired 2
+reward 2 ridiculous 2 rigidly 2 risen 2 road 2 robber 2 robbers 2 robes
+2 rock 2 rule 2 rumbling 2 safe 2 sail 2 saint 2 sakyamuni 2 salutation
+2 savage 2 savathi 2 says 2 scholar 2 school 2 scold 2 scream 2 screamed
+2 scroll 2 searched 2 seasons 2 seat 2 sent 2 separation 2 seventy 2
+shackle 2 shady 2 shaggy 2 shameful 2 sheep 2 shocked 2 shook 2 showing
+2 shown 2 shy 2 sides 2 simultaneously 2 sing 2 singular 2 situation 2
+skill 2 skinny 2 slight 2 smartest 2 smell 2 soil 2 sometimes 2
+somewhere 2 songs 2 sorcerers 2 sounds 2 space 2 sparkling 2 speaker 2
+speaks 2 speeches 2 spices 2 spite 2 stable 2 stains 2 stared 2 staying
+2 stiff 2 stirring 2 stove 2 straightened 2 striving 2 struggle 2 study
+2 subject 2 sucked 2 suffer 2 suitable 2 sunshine 2 sweetness 2 symbols
+2 tall 2 target 2 task 2 tears 2 telling 2 tenderly 2 tenderness 2
+tending 2 tens 2 thicket 2 thinks 2 thoroughly 2 threw 2 thrown 2 timid
+2 tormenting 2 tough 2 towns 2 trading 2 transformations 2
+transitoriness 2 transparent 2 transported 2 treasure 2 treat 2 treated
+2 trembling 2 trifles 2 trip 2 trust 2 twenty 2 unconscious 2
+undefeatable 2 understandable 2 unexpressable 2 unwhithering 2 upper 2
+upriver 2 urged 2 useful 2 usual 2 vessel 2 vices 2 villages 2 vishnu 2
+voluntarily 2 wailing 2 wake 2 war 2 warned 2 warning 2 warrior 2 wash 2
+washing 2 watch 2 watching 2 waterfall 2 waves 2 weak 2 weakened 2
+wealth 2 weep 2 weighed 2 withered 2 woe 2 won 2 wonderfully 2 wood 2
+worked 2 worried 2 worrying 2 worship 2 wrapped 2 writing 2 wrong 2
+yours 3 ability 3 ablutions 3 account 3 achieved 3 actions 3 admired 3
+admonished 3 aged 3 agony 3 agreement 3 amount 3 amusement 3 anxiety 3
+anybody 3 apart 3 assumed 3 awaited 3 awaiting 3 awakened 3 badly 3
+bananas 3 banks 3 basket 3 baskets 3 bath 3 beautifully 3 beggar 3
+belonged 3 bitter 3 blossom 3 blossomed 3 bodies 3 bottom 3 bracelets 3
+breathing 3 burned 3 bushes 3 captured 3 caught 3 chain 3 change 3 cheat
+3 chosen 3 cloak 3 closely 3 collected 3 colourful 3 concentrated 3
+conducted 3 confess 3 connected 3 consisted 3 contain 3 contemplation 3
+contempt 3 contents 3 contradiction 3 control 3 conversation 3 cooled 3
+crystal 3 current 3 custom 3 daily 3 dancing 3 dangling 3 defeated 3
+delicate 3 delighted 3 depth 3 desires 3 despise 3 devotion 3
+disappointment 3 discovered 3 disgusted 3 doubt 3 doubted 3 dreamt 3 dry
+3 due 3 dull 3 eager 3 enjoy 3 entering 3 envied 3 equanimity 3 error 3
+excellent 3 exists 3 eye 3 fair 3 faith 3 falling 3 fearful 3 features 3
+feed 3 female 3 finds 3 finished 3 fire 3 fleeting 3 follower 3 forward
+3 four 3 fragrant 3 gate 3 gathering 3 gestures 3 getting 3 gifts 3
+glowing 3 gotten 3 grateful 3 grief 3 group 3 handed 3 handsome 3
+happily 3 harder 3 harvest 3 heading 3 hearts 3 heat 3 heavenly 3 height
+3 heron 3 hesitantly 3 hit 3 honoured 3 however 3 hunting 3 hurry 3
+importance 3 indestructible 3 inscription 3 insight 3 jackals 3 journey
+3 kill 3 killed 3 king 3 knees 3 language 3 laughs 3 laughter 3 leaves 3
+letters 3 liked 3 limbs 3 lives 3 lonely 3 longingly 3 losses 3 loudly 3
+lustful 3 maid 3 mango 3 meal 3 merged 3 mine 3 miracles 3 miserable 3
+mock 3 mockingly 3 moments 3 months 3 mortal 3 mourning 3 noticed 3 obey
+3 obstacle 3 outside 3 painful 3 pampered 3 paper 3 penitent 3 performed
+3 permission 3 permit 3 physical 3 picked 3 pity 3 politely 3 pondering
+3 positions 3 possibly 3 powerful 3 practise 3 practised 3 practising 3
+precious 3 punish 3 quenched 3 question 3 questions 3 rain 3 rare 3
+realizations 3 reason 3 receive 3 reflected 3 regarded 3 religious 3
+resolution 3 resounded 3 revealed 3 rocks 3 rolling 3 room 3 rumour 3
+running 3 sacrifices 3 sacrificial 3 satisfy 3 saying 3 scorned 3 sea 3
+searcher 3 seeking 3 seem 3 sensation 3 separated 3 sequence 3 served 3
+shared 3 shimmered 3 showed 3 simply 3 sink 3 sit 3 sixty 3 solely 3
+song 3 sons 3 spared 3 spells 3 spiritual 3 spit 3 spreading 3 spring 3
+stand 3 stank 3 star 3 steps 3 strangely 3 strangers 3 straw 3 student 3
+submerged 3 supple 3 surface 3 tale 3 teaches 3 thanks 3 thinker 3
+thirsty 3 throw 3 tie 3 tied 3 timidly 3 tiredly 3 touching 3
+transformed 3 traveller 3 troubled 3 trunk 3 trying 3 twice 3 unity 3
+urge 3 urges 3 valuable 3 verse 3 wear 3 weeping 3 wherever 3 whole 3
+wide 3 wife 3 willingness 3 win 3 wind 3 woken 3 wore 3 working 3
+worshipped 3 wrestled 3 wretched 3 younger 4 abused 4 actually 4
+afterwards 4 air 4 alas 4 allowed 4 animals 4 answered 4 arm 4 arrow 4
+asking 4 assistant 4 astonished 4 attention 4 bad 4 bear 4 bees 4
+begging 4 birth 4 blissfulness 4 blood 4 books 4 bored 4 breast 4 brown
+4 build 4 calmly 4 calmness 4 carried 4 certain 4 childhood 4 childish 4
+circle 4 closer 4 comfort 4 commanded 4 committed 4 community 4
+concealed 4 courtesan 4 cracked 4 crouched 4 daemons 4 dark 4 deprived 4
+desired 4 disciples 4 disdain 4 distorted 4 downhill 4 dress 4 drown 4
+easily 4 eaten 4 embraced 4 equal 4 eternity 4 existed 4 fading 4
+fighting 4 finger 4 fixed 4 floating 4 folded 4 followers 4 forgotten 4
+form 4 forth 4 fortune 4 freshly 4 friendship 4 funeral 4 future 4
+gamblers 4 gesture 4 gets 4 girls 4 gloomy 4 grew 4 guard 4 guest 4
+guided 4 hardly 4 hers 4 holiness 4 hundreds 4 idea 4 images 4
+incessantly 4 instead 4 intended 4 join 4 kindly 4 land 4 laughing 4 law
+4 leaving 4 legs 4 listener 4 longing 4 losing 4 loving 4 mask 4 mean 4
+meaning 4 meet 4 merchandise 4 misery 4 mysterious 4 naked 4 noble 4
+nowhere 4 obeyed 4 obtain 4 obtained 4 occurred 4 oil 4 opposite 4
+orders 4 parted 4 penitents 4 perform 4 pile 4 playing 4 pointed 4
+pointless 4 pondered 4 poor 4 possessed 4 possession 4 prayer 4 pure 4
+raft 4 rage 4 rainy 4 rarely 4 ready 4 remember 4 reminded 4 renewed 4
+renounced 4 rising 4 sadly 4 scent 4 scolding 4 season 4 second 4 sensed
+4 shine 4 shines 4 shone 4 show 4 sick 4 sight 4 similar 4 sinner 4
+slipped 4 snake 4 special 4 spend 4 stakes 4 stirred 4 strive 4 strongly
+4 succeeded 4 superior 4 swiftly 4 sympathy 4 taste 4 tender 4 terrible
+4 tongue 4 tried 4 ugly 4 unchanged 4 understanding 4 veil 4 visible 4
+void 4 wasted 4 ways 4 whispered 4 white 4 wisest 4 wished 4 wishes 4
+woke 4 worldly 4 worry 4 worth 4 written 5 according 5 act 5 age 5 angry
+5 answer 5 ascetics 5 astonishment 5 beard 5 beat 5 believed 5 belong 5
+black 5 bliss 5 cage 5 care 5 caste 5 closed 5 constantly 5 content 5
+delight 5 destitute 5 distrust 5 does 5 doing 5 ear 5 early 5 emptiness
+5 escape 5 experience 5 expressed 5 faces 5 feats 5 ferrymen 5 final 5
+finding 5 flow 5 flowing 5 following 5 foot 5 forests 5 forget 5 friends
+5 gap 5 gathered 5 gaze 5 gives 5 greedy 5 green 5 greeting 5 grow 5
+growing 5 hate 5 held 5 highest 5 hope 5 hundred 5 joined 5 kissed 5
+knowledgeable 5 large 5 late 5 less 5 lovely 5 memory 5 met 5 midst 5
+mocking 5 mountains 5 need 5 needed 5 numbing 5 offered 5 opinion 5
+opinions 5 owned 5 pay 5 perceived 5 play 5 quite 5 rules 5 rushing 5
+sacred 5 set 5 shoulders 5 silence 5 simple 5 skin 5 sloth 5 sounded 5
+speaking 5 speech 5 spent 5 spot 5 state 5 stomach 5 street 5 strong 5
+surely 5 ten 5 thanked 5 thin 5 trade 5 turning 5 veneration 5 wants 5
+wheel 5 whenever 5 window 5 worthy 5 write 6 above 6 accustomed 6 alien
+6 alive 6 attentively 6 awakening 6 awoken 6 bearing 6 becomes 6
+becoming 6 beg 6 behold 6 blind 6 bow 6 bread 6 breathe 6 breathed 6
+broken 6 brothers 6 burning 6 causes 6 changed 6 cheerfulness 6 cold 6
+consciousness 6 curious 6 differently 6 done 6 door 6 drawn 6 dreams 6
+enough 6 entrance 6 essence 6 everywhere 6 fact 6 fall 6 fast 6 fell 6
+fig 6 finally 6 fleeing 6 forehead 6 forms 6 fruit 6 garments 6 god 6
+golden 6 greeted 6 half 6 hidden 6 human 6 image 6 important 6 instantly
+6 jetavana 6 joyful 6 keep 6 lips 6 loss 6 making 6 mockery 6 mute 6
+none 6 observed 6 occasionally 6 opened 6 pilgrims 6 please 6 pleasures
+6 precisely 6 prepared 6 priest 6 proud 6 rather 6 rested 6 sake 6 sang
+6 secrets 6 service 6 several 6 story 6 stranger 6 stream 6 strength 6
+surrounded 6 teaching 6 touch 6 travelled 6 trees 6 truth 6 ultimate 6
+unable 6 unknown 6 use 6 village 6 waters 6 wonderful 6 wondrous 6
+worthless 7 afraid 7 almost 7 animal 7 appeared 7 ascetic 7 awake 7 best
+7 bid 7 breath 7 call 7 chamber 7 clear 7 clearly 7 continued 7 course 7
+dice 7 dust 7 enter 7 evil 7 except 7 exercises 7 existence 7 fasting 7
+fate 7 feet 7 fine 7 fish 7 fled 7 gone 7 happiness 7 help 7 itself 7
+kept 7 kindness 7 knowing 7 known 7 led 7 monk 7 myth 7 news 7 next 7
+oar 7 oldest 7 paths 7 patience 7 piece 7 pilgrim 7 placed 7 played 7
+power 7 praise 7 present 7 previous 7 purpose 7 real 7 recognise 7 red 7
+rice 7 sadness 7 shining 7 short 7 shoulder 7 singing 7 sleeping 7 slept
+7 slightly 7 soft 7 softly 7 spirit 7 step 7 stepped 7 stupid 7 suffered
+7 talked 7 tomorrow 7 travellers 7 understood 7 vain 7 waited 7 whatever
+7 within 7 year 7 yearning 8 art 8 bowed 8 bright 8 continue 8 deception
+8 disappeared 8 dream 8 drink 8 eat 8 empty 8 enlightenment 8 fallen 8
+ferried 8 follow 8 force 8 forced 8 free 8 gray 8 hours 8 infinitely 8
+living 8 lose 8 lying 8 moon 8 nodded 8 overcome 8 pretty 8 riches 8 sad
+8 satisfied 8 seems 8 sin 8 sound 8 spell 8 spoken 8 start 8 stop 8
+stronger 8 suddenly 8 sweet 8 travelling 8 turn 8 welcome 8 women 8 work
+8 worries 9 acts 9 aware 9 beginning 9 bent 9 blue 9 bring 9 close 9
+despair 9 distant 9 drop 9 dying 9 entered 9 followed 9 gift 9 giving 9
+grown 9 hands 9 kiss 9 knows 9 laugh 9 mother 9 motionless 9 necessary 9
+nobody 9 pale 9 perfection 9 possible 9 recognised 9 respect 9 rest 9
+servant 9 shadow 9 someone 9 taking 9 talk 9 talking 9 thank 9 three 9
+watched 9 willing 9 wrinkles 10 accept 10 arms 10 ask 10 ate 10 better
+10 between 10 brightly 10 cannot 10 chest 10 cycle 10 disgust 10 entire
+10 entirely 10 evening 10 exclaimed 10 feeling 10 goals 10 hard 10
+looking 10 magic 10 manner 10 moving 10 open 10 passion 10 perfect 10
+pleasure 10 realized 10 received 10 return 10 robe 10 servants 10 shade
+10 sitting 10 stars 10 starting 10 stay 10 town 10 verses 10 wait 10
+wearing 10 wine 11 accepted 11 advice 11 began 11 business 11 calm 11
+children 11 divine 11 flowed 11 foolishness 11 front 11 ground 11
+innermost 11 inside 11 lot 11 make 11 possessions 11 really 11 search 11
+silent 11 sir 11 sky 11 sought 11 sun 11 teach 11 therefore 11 tiredness
+11 touched 11 true 11 understand 11 whose 11 wisdom 11 youth 12 asleep
+12 bank 12 bit 12 called 12 coming 12 experienced 12 far 12 garden 12
+gave 12 indeed 12 lust 12 means 12 name 12 near 12 perfected 12 quickly
+12 sansara 12 seek 12 strange 12 tasted 12 truly 12 yesterday 13 ago 13
+believe 13 different 13 everyone 13 feel 13 given 13 kind 13 lay 13 must
+13 nirvana 13 off 13 oneness 13 passed 13 past 13 peace 13 remembered 13
+seeing 13 shoes 13 smart 13 source 13 taken 13 themselves 13 thousands
+13 tree 13 yellow 13 yourself 14 against 14 behind 14 dead 14 die 14
+ferry 14 head 14 hunger 14 last 14 learning 14 may 14 meditation 14 put
+14 reach 14 rose 14 say 14 secret 14 single 14 smiled 14 taught 14
+teachers 14 thousand 14 whom 15 across 15 alone 15 around 15 brought 15
+completely 15 desire 15 each 15 few 15 friendly 15 high 15 light 15
+morning 15 nevertheless 15 offerings 15 pilgrimage 15 remained 15 senses
+15 side 15 smiling 15 started 15 tired 15 together 15 waiting 15 whether
+16 atman 16 bed 16 glance 16 gods 16 got 16 home 16 refuge 16 salvation
+16 stayed 16 stone 16 take 16 why 16 wound 17 along 17 anything 17 died
+17 eternal 17 farewell 17 hear 17 leave 17 listening 17 mind 17 speak 17
+stopped 17 though 17 took 17 towards 17 upon 18 end 18 fear 18 foolish
+18 happened 18 happy 18 having 18 order 18 others 18 our 18 quiet 18
+read 18 returned 18 silently 18 teacher 18 thirst 18 two 18 walked 18
+walking 18 word 19 bird 19 boat 19 body 19 childlike 19 deeply 19 filled
+19 food 19 game 19 going 19 look 19 ones 19 searching 19 today 19 us 19
+voices 19 yes 20 hand 20 listen 20 little 20 live 20 monks 20 rich 20
+shall 20 wish 21 brahmans 21 child 21 days 21 house 21 loved 21 might 21
+often 21 some 21 standing 21 venerable 21 walk 21 wanted 21 woman 22
+both 22 death 22 deep 22 ever 22 laughed 22 neither 22 night 22 told 23
+clothes 23 great 23 lived 23 merchant 23 nor 23 place 23 soon 23 think
+23 under 23 used 24 else 24 first 24 grove 24 ran 24 right 24 should 24
+since 24 stood 25 became 25 lost 25 myself 25 pain 25 reached 25 times
+25 until 25 wise 26 because 26 find 26 listened 26 quoth 27 city 27 get
+27 hut 27 kamaswami 27 part 27 seen 27 slowly 27 small 27 went 28 give
+28 hair 28 holy 28 learn 28 made 28 new 28 om 28 quietly 28 tell 29
+another 29 knowledge 29 men 29 mouth 29 person 29 such 29 those 29 while
+30 among 30 money 30 sat 30 seemed 30 turned 31 am 31 dear 31 hour 31
+joy 31 left 31 soul 31 yet 32 ferryman 32 years 33 longer 33 perhaps 34
+heard 34 moment 34 thinking 34 too 34 want 36 down 36 gotama 37 even 37
+go 37 most 37 own 38 back 38 can 38 goal 38 see 38 sleep 39 boy 39
+exalted 39 something 40 come 40 forest 40 full 40 here 40 its 40 let 41
+able 41 beautiful 41 thing 41 young 42 than 42 thoughts 42 water 42 way
+43 always 43 asked 43 found 43 samanas 44 away 44 suffering 44 voice 45
+father 45 knew 45 things 45 we 46 day 46 other 46 same 46 self 47 buddha
+48 brahman 48 once 48 smile 48 son 49 came 51 already 51 never 53
+through 53 thus 53 vasudeva 53 well 54 after 54 could 54 these 56 old 56
+over 56 words 57 good 57 looked 58 before 58 then 58 where 59 everything
+59 much 60 path 61 spoke 62 know 62 out 62 samana 63 being 63 still 66
+every 66 eyes 66 friend 66 oh 66 very 67 face 68 become 68 world 71 any
+71 heart 71 people 71 up 71 without 72 kamala 72 nothing 72 only 73
+their 74 felt 74 just 76 about 76 if 76 she 76 teachings 77 or 80 an 80
+learned 80 love 81 were 81 will 82 thought 84 do 84 man 87 life 88 did
+89 your 90 how 93 has 94 her 95 again 95 said 96 long 96 many 96 now 98
+them 99 himself 99 saw 105 more 107 so 108 river 109 are 111 who 113
+also 114 they 117 into 122 what 122 would 127 there 133 been 138 time
+139 govinda 139 like 143 no 147 at 153 when 160 me 172 by 180 on 189 all
+189 my 195 be 203 which 222 one 231 as 231 have 246 from 249 but 305 not
+315 is 319 that 345 for 363 with 374 siddhartha 387 you 395 i 452 this
+458 him 471 it 511 was 524 had 629 in 708 his 911 a 935 he 987 of 1148
+to 1358 and 2045 the</p>
+</body>
+</html>
