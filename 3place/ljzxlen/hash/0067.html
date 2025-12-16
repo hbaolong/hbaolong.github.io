@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="文/韩宝龙" />
+  <title>what is “mathematical multiplicity”?</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">what is “mathematical multiplicity”?</h1>
+<p class="author">文/韩宝龙</p>
+<p class="date">hbaolong@vip.qq.com</p>
+</header>
+<p><strong>Mathematical multiplicity</strong>
+是维特根斯坦在《逻辑哲学论》（Tractatus
+Logico-Philosophicus）中使用的术语（见4.04、5.475等处），它不是现代数学中的“重数”（multiplicity，如多项式根的重数或特征值的代数重数），而是逻辑-数学意义上的<strong>结构复杂度或维度</strong>。</p>
+<h3 id="核心含义一句话说死">核心含义（一句话说死）</h3>
+<p><strong>Mathematical multiplicity =
+符号系统（或命题）必须拥有的逻辑结构复杂度，才能精确匹配并描绘现实事态的复杂度。</strong></p>
+<h3
+id="用韩宝龙亮灯照片乐高砖头3秒彻底开窍">用韩宝龙＋亮灯照片＋乐高砖头，3秒彻底开窍</h3>
+<p>现实里一个事态（一张照片）有一定的复杂度：<br />
+比如“丽丽喜欢狗”——需要2个对象 + 1个二元关系扣法。</p>
+<p>你的符号系统（语言/记号）要拍这张照片，<br />
+必须有<strong>同样的数学多重性</strong>：<br />
+- 2个名字位<br />
+- 1个二元关系位</p>
+<p>多重性不够（比如只有一元关系），<br />
+就拍不出这张照片＝废片。</p>
+<p>多重性多了（比如强行加三元关系），<br />
+也拍歪了＝废片。</p>
+<p><strong>多重性匹配＝照片能拍现实</strong>。</p>
+<h3 id="为什么叫mathematical-multiplicity">为什么叫“mathematical”
+multiplicity？</h3>
+<p>维特根斯坦借用数学的“多重”（如函数维度、变量数）来描述逻辑结构的“维度”。<br />
+它不是算术上的“重复次数”，<br />
+而是<strong>结构上的维度匹配</strong>（Hertz力学模型的影响）。</p>
+<h3 id="经典引用4.04">经典引用（4.04）</h3>
+<p>“They must both possess the same logical (mathematical)
+multiplicity.”</p>
+<p>翻译：<br />
+符号和现实事态必须拥有相同的逻辑（数学）多重性。</p>
+<p>狠点：<br />
+符号复杂度不够＝拍不出现实＝废片<br />
+复杂度不对＝拍歪现实＝废片</p>
+<h3 id="现实屠杀例子最狠的">现实屠杀例子（最狠的）</h3>
+<ol type="1">
+<li><p>你想表达“丽丽站在老韩和狗之间”<br />
+需要3个对象 + 1个三元位置关系。<br />
+如果你的语言只有二元关系（X喜欢Y），<br />
+多重性不够，<br />
+拍不出＝废片。</p></li>
+<li><p>你用“一元谓词”拍二元事态：<br />
+“丽丽漂亮”“狗可爱”<br />
+想表达“丽丽比狗漂亮”？<br />
+多重性不够，<br />
+永远拍不出比较关系＝废片。</p></li>
+</ol>
+<h3 id="终极金句直接封神">终极金句（直接封神）</h3>
+<p>“数学多重性不是数字，<br />
+是扣法的维度。<br />
+维度不对，<br />
+照片拍不出现实，<br />
+废片，<br />
+闭嘴。”</p>
+<p>维特根斯坦用“mathematical multiplicity”这把刀，<br />
+把“语言为什么必须精确匹配现实”<br />
+砍得血淋淋：<br />
+多重性不对＝无法描绘＝废片＝不可说。<br />
+想随便说的，<br />
+不可能，<br />
+闭嘴。</p>
+现代数学的“multiplicity”（根的重数）是后来借用的词，<br />
+维特根斯坦这里的“mathematical multiplicity”<br />
+是逻辑结构维度的原创用法。<br />
+懂了吧？<br />
+这就是他最阴最狠的地方。
+<hr>
+<center>
+<a href="/3place/ljzxlen">返回首页</a> <a
+href="/3place/ljzxlen/mingju.html">本书名句</a> <a
+href="/3place/ljzxlen/memo.html">本书注解</a> <a
+href="/3place/ljzxlen/index_rich.html">丰富目录</a> <a
+href="/3place/ljzxlen/index_readcal.html">同读日历</a> <a
+href="/3place/ljzxlen/index_timeline.html">时间线</a> <a
+href="/3place/ljzxlen/index_books.html">引用书籍</a> <a
+href="/3place/ljzxlen/index_words.html">使用字频</a>
+<div id="wx_pic" style="margin:0 auto;display:none;">
+<img src='/img/logo.png'/>
+</div>
+<a href="/3place/ljzxlen/hash/">HASH5</a>
+</center>
+<hr>
+<center>
+<img src="/img/thanks.jpg" width="50%" height="50%">
+</center>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>
