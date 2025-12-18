@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="文/韩宝龙" />
+  <title>what is Hertz’s Mechanics, on Dynamic Models?</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">what is Hertz’s Mechanics, on Dynamic Models?</h1>
+<p class="author">文/韩宝龙</p>
+<p class="date">hbaolong@vip.qq.com</p>
+</header>
+<h3
+id="海因里希赫兹的力学原理新论die-prinzipien-der-mechanik-in-neuem-zusammenhange-dargestellt">海因里希·赫兹的《力学原理新论》（Die
+Prinzipien der Mechanik in neuem Zusammenhange dargestellt）</h3>
+<p>这本书是德国物理学家<strong>海因里希·赫兹</strong>（Heinrich
+Hertz，1857–1894）于1894年（他去世后由弟子整理出版）的遗作，全名为<strong>《力学原理新论》</strong>（英文常见译名：<strong>The
+Principles of Mechanics in a New
+Form</strong>）。它不是一本普通的经典力学教材，而是一次<strong>哲学性的力学重建</strong>，目的是消除经典力学（尤其是牛顿力学）中的概念模糊和形而上学残余，特别是对“力”（Kraft）这个概念的批判。</p>
+<h4 id="核心目标">核心目标</h4>
+<p>赫兹认为传统力学有三大问题： 1.
+<strong>力</strong>是隐形的、形而上学的概念（我们看不到力，只能看到效果）。
+2. 现有表述冗余且不清晰。 3. 理论中存在不必要的假设。</p>
+<p>他想用<strong>更简洁、更透明</strong>的方式重新表述力学，剔除“力”这个根本概念。</p>
+<h4 id="动态模型dynamische-modelle的核心思想">“动态模型”（dynamische
+Modelle）的核心思想</h4>
+<p>赫兹提出，用<strong>隐质量（verborgene Massen）和隐运动（verborgene
+Bewegungen）</strong>来代替“力”。</p>
+<ul>
+<li>传统力学：<strong>可见质量 + 隐形力</strong><br />
+</li>
+<li>赫兹力学：<strong>可见运动 +
+隐质量/隐运动</strong>（通过刚性约束连接）</li>
+</ul>
+<p>基本假设（赫兹的“根本定律”）：
+所有物质点都沿<strong>最直路径</strong>（geradeste
+Bahn，即测地线）运动。<br />
+弯曲路径或加速度，是由<strong>隐质量</strong>通过不可见的约束产生的。</p>
+<p>这样，力学完全用<strong>质量、时间、空间</strong>三个基本概念表述，不再需要“力”作为独立实体。</p>
+<p>赫兹把这种表述叫<strong>动态模型</strong>（dynamische
+Modelle），并提出科学理论的标准： -
+<strong>允许的</strong>（zulässig）：不违反思维规律和经验。 -
+<strong>正确的</strong>（richtig）：与观察一致。 -
+<strong>最简的</strong>（einfachst）：在正确的前提下，假设最少。</p>
+<h4 id="书籍结构">书籍结构</h4>
+<ul>
+<li><strong>前言</strong>（亥姆霍兹作）：称赞赫兹的原创性。</li>
+<li><strong>引论</strong>：批判现有力学，提出目标。</li>
+<li><strong>第一卷</strong>：纯运动学（点的系统几何）。</li>
+<li><strong>第二卷</strong>：动力学，引入隐质量模型和根本定律。</li>
+</ul>
+<h4 id="影响与评价">影响与评价</h4>
+<ul>
+<li><strong>物理学</strong>：赫兹体系与牛顿等价，但更繁琐，未取代牛顿力学。</li>
+<li><strong>哲学</strong>：极大影响了<strong>维特根斯坦</strong>的早期思想。<br />
+赫兹的“Bild”（图像/模型）概念，直接启发了《逻辑哲学论》的<strong>图像论</strong>（picture
+theory）：理论是现实的“模型”，必须共享逻辑结构。</li>
+<li><strong>科学哲学</strong>：赫兹强调理论是<strong>表象/模型</strong>而非绝对真理，是现代工具主义（instrumentalism）的先声。</li>
+</ul>
+<h4 id="为什么重要">为什么重要？</h4>
+<p>这本书短小精悍（约300页），却把物理、逻辑、哲学融为一体。<br />
+赫兹用物理学家的严谨，做了哲学家的清理工作：<br />
+剔除多余概念，让力学“透明”。</p>
+<p>一句话总结：<br />
+赫兹的力学不是“新物理”，<br />
+是“清理旧物理”的哲学手术——<br />
+用隐质量代替力，<br />
+用动态模型重建世界表象，<br />
+干净、优雅、深刻。</p>
+<p>强烈推荐读原著（中译本有王福山译《力学原理》），<br />
+尤其是想理解维特根斯坦图像论来源的人，<br />
+这本书是必读前传。</p>
+<hr>
+<center>
+<a href="/3place/ljzxlen">返回首页</a> <a
+href="/3place/ljzxlen/mingju.html">本书名句</a> <a
+href="/3place/ljzxlen/memo.html">本书注解</a> <a
+href="/3place/ljzxlen/index_rich.html">丰富目录</a> <a
+href="/3place/ljzxlen/index_readcal.html">同读日历</a> <a
+href="/3place/ljzxlen/index_timeline.html">时间线</a> <a
+href="/3place/ljzxlen/index_books.html">引用书籍</a> <a
+href="/3place/ljzxlen/index_words.html">使用字频</a>
+<div id="wx_pic" style="margin:0 auto;display:none;">
+<img src='/img/logo.png'/>
+</div>
+<a href="/3place/ljzxlen/hash/">HASH5</a>
+</center>
+<hr>
+<center>
+<img src="/img/thanks.jpg" width="50%" height="50%">
+</center>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>
