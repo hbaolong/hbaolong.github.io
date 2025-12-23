@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="文/韩宝龙" />
+  <title>What is Frege’s concept-script?</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">What is Frege’s concept-script?</h1>
+<p class="author">文/韩宝龙</p>
+<p class="date">hbaolong@vip.qq.com</p>
+</header>
+<h3
+id="弗雷格的概念文字begriffsschrift是什么">弗雷格的“概念文字”（Begriffsschrift）是什么？</h3>
+<p><strong>概念文字</strong>（德文：<strong>Begriffsschrift</strong>，全称《概念文字，一种模仿算术语言构建的纯思维的形式语言》）是戈特洛布·弗雷格（Gottlob
+Frege）于1879年出版的开创性著作，常被视为<strong>现代数理逻辑的诞生宣言</strong>。</p>
+<h4 id="核心内容与创新">核心内容与创新</h4>
+<p>弗雷格不满于传统亚里士多德逻辑的局限（只能处理主谓结构，无法表达关系和多重量化），他发明了一种全新的<strong>形式语言系统</strong>，称为“概念文字”（concept-script），特点如下：</p>
+<ol type="1">
+<li><p><strong>二维书写方式</strong><br />
+不同于线性自然语言，概念文字用树状结构（类似现代逻辑公式），清晰表达逻辑关系。<br />
+例如，条件句用垂直线和水平线表示：</p>
+<pre><code>    B
+———
+A</code></pre>
+<p>表示“如果A，则B”。</p></li>
+<li><p><strong>引入关键符号</strong></p>
+<ul>
+<li><strong>量词</strong>：首次系统引入全称量词（∀）和存在量词（∃）。</li>
+<li><strong>函数-论元结构</strong>：把命题看作函数（如f(x)），对象是论元。</li>
+<li><strong>否定、条件、蕴涵</strong>等连接词的精确定义。</li>
+<li><strong>变量和绑定</strong>：处理多重量化（如“所有人爱某人” vs
+“某人被所有人爱”）。</li>
+</ul></li>
+<li><p><strong>目标</strong></p>
+<ul>
+<li>构建一种<strong>纯思维的形式语言</strong>，像算术一样严谨、无歧义。</li>
+<li>为<strong>逻辑主义</strong>奠基：试图证明数学（尤其是算术）可归约为逻辑。</li>
+</ul></li>
+</ol>
+<h4 id="历史意义">历史意义</h4>
+<ul>
+<li><strong>现代逻辑的起点</strong>：概念文字是第一个完整的<strong>谓词逻辑</strong>系统。</li>
+<li><strong>影响</strong>：直接启发罗素、维特根斯坦、现代符号逻辑、计算机科学。
+<ul>
+<li>维特根斯坦《逻辑哲学论》大量借鉴弗雷格的函项、真值、量词概念。</li>
+<li>现代逻辑符号（∀, ∃, → 等）都源于或受其影响。</li>
+</ul></li>
+</ul>
+<h4 id="为什么叫概念文字">为什么叫“概念文字”？</h4>
+<p>弗雷格认为自然语言充满歧义，<br />
+“概念文字”是一种<strong>纯概念的书写方式</strong>，<br />
+剔除心理、修辞，只保留逻辑结构。</p>
+<h4 id="小结一句话封神">小结（一句话封神）</h4>
+<p>概念文字不是“文字”，<br />
+是人类第一次用严格符号，<br />
+把思维的逻辑骨架完全剥出来。<br />
+没有它，<br />
+就没有现代逻辑，<br />
+就没有分析哲学，<br />
+也没有今天的计算机。</p>
+如果你在读维特根斯坦，<br />
+弗雷格的《概念文字》是必读前传——<br />
+短小精悍，却改写历史。<br />
+推荐英译本或涂纪亮中译本。
+<hr>
+<center>
+<a href="/3place/ljzxlen">返回首页</a> <a
+href="/3place/ljzxlen/mingju.html">本书名句</a> <a
+href="/3place/ljzxlen/memo.html">本书注解</a> <a
+href="/3place/ljzxlen/index_rich.html">丰富目录</a> <a
+href="/3place/ljzxlen/index_readcal.html">同读日历</a> <a
+href="/3place/ljzxlen/index_timeline.html">时间线</a> <a
+href="/3place/ljzxlen/index_books.html">引用书籍</a> <a
+href="/3place/ljzxlen/index_words.html">使用字频</a>
+<div id="wx_pic" style="margin:0 auto;display:none;">
+<img src='/img/logo.png'/>
+</div>
+<a href="/3place/ljzxlen/hash/">HASH5</a>
+</center>
+<hr>
+<center>
+<img src="/img/thanks.jpg" width="50%" height="50%">
+</center>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>
