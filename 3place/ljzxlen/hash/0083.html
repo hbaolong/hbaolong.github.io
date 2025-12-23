@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="文/韩宝龙" />
+  <title>what is truth-possibility?</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">what is truth-possibility?</h1>
+<p class="author">文/韩宝龙</p>
+<p class="date">hbaolong@vip.qq.com</p>
+</header>
+<h3
+id="维特根斯坦逻辑哲学论中的truth-possibility真可能性">维特根斯坦《逻辑哲学论》中的“truth-possibility”（真可能性）</h3>
+<p><strong>truth-possibility</strong>（德文：<strong>Wahrheitsmöglichkeit</strong>，常译为“真可能性”或“真值可能性”）是维特根斯坦在《逻辑哲学论》中用于分析命题意义的核心技术概念，主要出现在<strong>4.4–4.46</strong>节，以及<strong>2.2x</strong>系列关于真值函数的部分。</p>
+<h4 id="一句话说死3秒开窍">一句话说死（3秒开窍）</h4>
+<p><strong>真可能性</strong>就是一组基本命题（原子命题）所有可能的真假组合中的<strong>一种具体组合</strong>。</p>
+<h4 id="详细解释">详细解释</h4>
+<p>维特根斯坦把命题看作基本命题的<strong>真值函数</strong>（truth-function）。</p>
+<p>假设有两个基本命题：<br />
+- p：“外面在下雨。”<br />
+- q：“外面很冷。”</p>
+<p>每个命题可以真（T）或假（F），总共有<strong>4种真可能性</strong>：</p>
+<table>
+<thead>
+<tr class="header">
+<th>p</th>
+<th>q</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>T</td>
+<td>T</td>
+</tr>
+<tr class="even">
+<td>T</td>
+<td>F</td>
+</tr>
+<tr class="odd">
+<td>F</td>
+<td>T</td>
+</tr>
+<tr class="even">
+<td>F</td>
+<td>F</td>
+</tr>
+</tbody>
+</table>
+<p>这4行就是{p, q}的<strong>真可能性</strong>。</p>
+<p>一个复合命题（如“p 且 q”、“p 或 q”）的意义，<br />
+就是<strong>在这些真可能性中选择某些行作为‘真’的情况</strong>。</p>
+<p>例如“p 且 q”：<br />
+只在第一行（TT）为真，<br />
+其他三行为假。</p>
+<h4
+id="关键原文引用pears-mcguinness英译">关键原文引用（Pears-McGuinness英译）</h4>
+<p><strong>4.43</strong><br />
+Agreement with the truth-possibilities can be expressed by correlating
+the mark ‘T’ (true) with them in the schema.</p>
+<p><strong>4.431</strong><br />
+The expression of agreement and disagreement with the
+truth-possibilities of elementary propositions expresses the
+truth-conditions of a proposition.</p>
+<p><strong>4.46</strong><br />
+Among the possible groups of truth-conditions there are two extreme
+cases.<br />
+In one… tautology（重言式）。<br />
+In the other… contradiction（矛盾式）。</p>
+<h4 id="为什么重要狠点">为什么重要？（狠点）</h4>
+<p>真可能性揭示了： - 命题的<strong>意义</strong> =
+它在真可能性表中同意（T）的那些行。 -
+所有有意义的命题都是基本命题的<strong>真值函数</strong>。 -
+重言式（全T）和矛盾式（全F）没有实际内容（没排除任何可能性）。</p>
+<h4 id="通俗比喻">通俗比喻</h4>
+<p>想象两个开关（p和q），有4种开/关组合。<br />
+复合规则“两个都开”只在一种组合为真。<br />
+这种“一种组合”就是<strong>真可能性</strong>。</p>
+<h4 id="终极总结">终极总结</h4>
+<p><strong>真可能性</strong> = 真值表中的一行。<br />
+有意义的命题 = 在真值表中选一些行作为“真”。<br />
+全选或全不选 = 无意义（重言式或矛盾式）。</p>
+<p>这就是维特根斯坦用真值函数彻底剖析语言意义的工具——<br />
+没有神秘，只有T/F的穷尽组合。</p>
+懂了吧？<br />
+有疑问再问！
+<hr>
+<center>
+<a href="/3place/ljzxlen">返回首页</a> <a
+href="/3place/ljzxlen/mingju.html">本书名句</a> <a
+href="/3place/ljzxlen/memo.html">本书注解</a> <a
+href="/3place/ljzxlen/index_rich.html">丰富目录</a> <a
+href="/3place/ljzxlen/index_readcal.html">同读日历</a> <a
+href="/3place/ljzxlen/index_timeline.html">时间线</a> <a
+href="/3place/ljzxlen/index_books.html">引用书籍</a> <a
+href="/3place/ljzxlen/index_words.html">使用字频</a>
+<div id="wx_pic" style="margin:0 auto;display:none;">
+<img src='/img/logo.png'/>
+</div>
+<a href="/3place/ljzxlen/hash/">HASH5</a>
+</center>
+<hr>
+<center>
+<img src="/img/thanks.jpg" width="50%" height="50%">
+</center>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>
