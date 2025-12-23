@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="hbaolong@vip.qq.com" />
+  <title>熊十力全集:数论</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">熊十力全集:数论</h1>
+<p class="author">hbaolong@vip.qq.com</p>
+</header>
+<center>
+<a href="/3place/xslqj">返回首页</a> <a
+href="/3place/xslqj/mingju.html">本书名句</a> <a
+href="/3place/xslqj/memo.html">本书注解</a> <a
+href="/3place/xslqj/index_rich.html">丰富目录</a> <a
+href="/3place/xslqj/index_readcal.html">同读日历</a> <a
+href="/3place/xslqj/index_timeline.html">时间线</a> <a
+href="/3place/xslqj/index_books.html">引用书籍</a> <a
+href="/3place/xslqj/index_words.html">使用字频</a>
+<div id="wx_pic" style="margin:0 auto;display:none;">
+<img src='/img/logo.png'/>
+</div>
+</center>
+<h4 id="数论">数论</h4>
+<p>印度外道与大乘关系密切者，莫如数论、胜论。故此二家以次略说。</p>
+<p>数论创始者名劫比罗。其后弟子之中有筏理沙，此翻为雨。雨时生故，即以为名。其雨徒党，名雨众外道。梵云僧佉，此翻为数，即智慧数数度诸法根本立名。从数起论，名为数论。此师所造，有《金七十论》本七十行颂，因金耳国王以金赐之，遂名金七十论。世亲为之作长行。可见世亲曾受此派影响。</p>
+<p>基师《述记》叙数论义，依《金七十论》，立二十五谛。总略为三，次中为四，广为二十五。</p>
+<p>总为三者：谓变易、自性、我知者。</p>
+<p>变易者：谓中间二十三谛，即自性所作，名为变易。</p>
+<p>自性者，冥性也。今名自性，古名冥性。今亦名胜性。未生大等，但住自分，名为自性。若生大等，便名胜性，用增胜故。</p>
+<p>我知者，神我也。</p>
+<p>次中为四者：一、本而非变易。即自性是。自性能生大等，故名为本。不从他生，故非变易。</p>
+<p>二、变易而非本。一说，谓十六谛是也。即十一根及五大，总十六谛。又说，但十一根是。即除五大。此唯从他生，名为变易。不能生他，故非本。</p>
+<p>三、亦本亦变易。此复二说：一说，谓七谛是也。即大及我慢，并五唯量。又说，并五大合十二法。于前七谛，又说，并五大，合十二法。此从他生，故亦变易。复生他，故亦本。</p>
+<p>四、非本非变易，谓神我谛。</p>
+<p>广为二十五谛者：一、自性，二、大，三、我慢，四、五唯，五、五大，六、五知根，七、五作业根，八、心平等根，九、我知者。于此九位，开为二十五谛。</p>
+<p>问：“自性云何能与诸法为生因也？”答：三德合故，能生诸谛。三德者，勇、尘、闇。闇即佛家所谓无明，一名为惑。此中三德甚有深义，学者宜玩味。</p>
+<p>问：“此我知者，为是作者、为是受者？”答：是受者，三德为能作故。问：“既非作者，用我何为？”答：为领义故。此中义字，当训为境。于境证知，名领义。由有我是知者故，得证于境。余不能知。又从冥性既转变已，有诸境界，我受用故。</p>
+<p>自性：本有、法尔本有，非始起故。无为、常住，唯能生他，非从他生。</p>
+<p>由我起思，受用境界。故自性与我，于诸谛中特为根本。前说我非本者，不生他故。今说我亦为本者，能受用他故。</p>
+<p>从自性先生大，注意先字。大者，增长义。自性相增，故名为大，或名觉，亦名想、名遍满、名智、名慧。</p>
+<p>从大，生我执。我执者，自性起用，观察于我。知我须境，故名我执。初亦名转异，亦名脂腻。</p>
+<p>有说我慢生五大、五唯、十一法。五大者，谓地、水、火、风、空。其所云空者，别有一物名之为空，非谓虚空无为及空界色等。五唯者，谓声、触、色、味、香。</p>
+<p>有说，我慢但生五唯，五唯生五大，五大生十一根。为我受用故。</p>
+<p>十一根者：初、五知根：谓眼根、耳根、鼻根、舌根、皮根。次、五作业根：一、语具，谓语所须口舌等是。二、手，三、足。此中手足即取皮根少分而言。前取皮总相，今但取支故。四、小便处，五、大便处。又次心根，《金七十论》说心根即分别为体。有说以肉团心为体。</p>
+<p>神我以思为体，故因明说“执我是思。”</p>
+<p>三德，是生死因。由所转变，扰乱我故，不得解脱。若知二十三谛，转变无常，生厌修道。自性隐迹，不生诸谛，我便解脱。其为说大概如此。</p>
+<p>兹依二十五谛，列表如下：</p>
+<p>世亲唯识，依数论自性而改立种子义。其第八藏识，亦与数论神我相当。</p>
+<h6 id="阅读日期-2026年05月28日-2026年05月28日-共-1-天">阅读日期：
+2026年05月28日-2026年05月28日 共： 1 天</h6>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="hbaolong@vip.qq.com" />
+  <title>熊十力全集:识论</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">熊十力全集:识论</h1>
+<p class="author">hbaolong@vip.qq.com</p>
+</header>
+<center>
+<a href="/3place/xslqj">返回首页</a> <a
+href="/3place/xslqj/mingju.html">本书名句</a> <a
+href="/3place/xslqj/memo.html">本书注解</a> <a
+href="/3place/xslqj/index_rich.html">丰富目录</a> <a
+href="/3place/xslqj/index_readcal.html">同读日历</a> <a
+href="/3place/xslqj/index_timeline.html">时间线</a> <a
+href="/3place/xslqj/index_books.html">引用书籍</a> <a
+href="/3place/xslqj/index_words.html">使用字频</a>
+<div id="wx_pic" style="margin:0 auto;display:none;">
+<img src='/img/logo.png'/>
+</div>
+</center>
+<h4 id="识论">识论</h4>
+<p>具云《成唯识论》，亦云《三十论》。在昔释尊示灭，佛法一味、及百余年间，有大天者出，始兴诤论，判为二部：一大众部，二上座部。大众部复分为九，上座部析为十一，合二十部。诸部繁衍，约当佛灭后四百年间云。后龙树菩萨兴于南天竺，约当佛灭后六百年顷，始造《大智度》等论，宣说法空，是为大乘。其弟子提婆菩萨造《百论》等，宏阐指要。然末流沉空，将资矫正。迄佛灭后九百年间，北天竺有无着菩萨者，旁治小学，《瑜伽本地分》，多详小乘义。董理大乘。以其对治空见，世遂目其学为有宗；而区龙树提婆之学为空宗。自是大乘乃分为二。无着异母弟世亲菩萨，本习小乘，遍通异部，造论五百，隐蔽大乘。无着悯之，托疾命诱。中路闻诲，方信大乘。改轨宏扬，亦造论五百。具如别传。</p>
+<p>按世亲闻法无着，始归大乘。虽复克承家学，而卒乃自创唯识一派，未尝笃守其兄之说。无着本善谈法相，而已渐具唯识之体系。其生平撰述甚富，就此方所译者言之，当以《大论》及《辩中边》为最要。《大论》乃法相钜典，自来治有宗学者皆知之。《辩中边》已大备唯识之规模，而言唯识者多不之察，乃群奉《识论》为宗主。此自印土十师已然，非独吾华慈恩派下如此也。吾于上卷有云，唯识学是世亲学者特据其传授影响而言之，非谓无着不言唯识也。《中边颂》无着自谓闻之慈氏，与《大论》闻之慈氏同一托词。盖皆其所自造，而假慈氏以神其说，亦可见其矜重之意。无着造此颂，付世亲为之释。基师云：“旧以为《世亲》所造，非也。”释文既出世亲手笔，自是世亲归趣大乘以后时事。想无着已届暮年，故委释文于世亲也。《颂》初明虚妄分别有，以此具摄三自性。三性后详。宏廓深远，而无世亲识论派烦琐与穿凿之弊。余常欲疏其大义，苦不得暇。冀后之达者，游意于兹。</p>
+<p>世亲唯识之论，《百法》总其弘纲，《识论》完其组织。大网细目毕具。至于《摄论释》，重在成立赖耶。《二十论》偏明唯识无境。无境者，谓无心外之境故。及《识论》出，而《摄论》、《二十论》之义，亦无不于兹汇聚。《识论三十颂》本世亲晚年所作，释文未竟而卒。十大论师继起，十师者：一亲胜，二火辨，三难佗，四德慧，五安慧，六净月，七护法，八胜友，九胜子，十智月是。法海波澜，至为壮阔。其间护法、安慧声德尤振。玄奘大师译《唯识》时，本主十家之释，各别全翻。窥基法师特欲糅集十师之义，成为一部。异义纷纶，悉折衷于护法。基师初禀奘师，奘师未允，盖久而后许焉。今所传《识论》，即基师译本。虽云糅集十师，而实壹宗护法，无异为护法一家之学。基师称护法云：“此师所说，最有研寻，于诸义中，多为南指。邪徒失趣，正理得方。迥拔众师，类超群圣者，其唯护法一人乎。”《述记》卷一。基师又自述其参糅之绩云：“初功之际，十释别翻，昉、尚、光、基，四人同受。数朝之后，基求退迹。大师固问，基殷请曰：’群圣制作，各驰誉于五天，虽文具传于贝叶，而义不备于一本。情见各异，禀者无依。请错综群言，以为一本，楷定真谬，权衡盛则。’久而遂许，故得此论行焉。大师礼遣三贤，独授庸拙。此论也，括众经之秘，包群圣之旨，何滞不融，无幽不烛。仰之不极，俯之不测；远之无智，近之有识。虽复本出五天，然彼无兹糅释，直尔十师之别作，鸠集犹难。况更摭此幽文，诚为未有。”又云：“不立功于参糅，可谓失时者也。”《唯识枢要》卷一。详此，则基师揉集《识论》，虽义据十师，而功同独创。匪唯护法之嫡传，实乃世亲之冢嗣。然或者以《识论》独崇护法九师之旨，书佚难详，又不无遗憾云。基师既成《识论》，更为《述记》。凡论中不尽之义，与众说之待搜罗，己意之当发抒者，皆于记中见之。此传译最善之法。然《述记》文字难读，想是随时笔札，未经整理。基师与其门下疏通《述记》之作，复有八种。卷帙繁重，其内容多不必可贵。学者非专于其业，鲜不废然束阁。实则读此等书，正如入山采宝，虽云荆棘载途，虚劳步履。然偶于无意中得一至宝，其价值不可思议也。《识论》之研究，大盛于唐。唐人章疏目录今可考者，犹百余种。但即其现存者观之，大抵失之烦琐。禅学之徒，起而匡其失，至不立文字，则矫枉过直。虑非梵土佛家本旨也。</p>
+<p>印度论文体制，先以韵语总括全书意义，名之为颂。次依颂作释文，名曰长行，则论之正文也。世亲作《三十颂》，未及为长行而卒。</p>
+<h6 id="阅读日期-2026年05月30日-2026年05月30日-共-1-天">阅读日期：
+2026年05月30日-2026年05月30日 共： 1 天</h6>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>
