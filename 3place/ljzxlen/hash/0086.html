@@ -4,8 +4,8 @@
   <meta charset="utf-8" />
   <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-  <meta name="author" content="hbaolong@vip.qq.com" />
-  <title>逻辑哲学论EN:5 A proposition is a truth-function of elementary propositions.</title>
+  <meta name="author" content="文/韩宝龙" />
+  <title>what is Russell’s ‘+c’</title>
   <style>
     html {
       color: #1a1a1a;
@@ -171,10 +171,77 @@
 </head>
 <body>
 <header id="title-block-header">
-<h1 class="title">逻辑哲学论EN:5 A proposition is a truth-function of
-elementary propositions.</h1>
-<p class="author">hbaolong@vip.qq.com</p>
+<h1 class="title">what is Russell’s ‘+c’</h1>
+<p class="author">文/韩宝龙</p>
+<p class="date">2025年12月25日</p>
 </header>
+<p>% hbaolong@vip.qq.com</p>
+<h3 id="罗素的c是什么">罗素的“+c”是什么？</h3>
+<p>罗素的“+c”出现在伯特兰·罗素与阿尔弗雷德·诺斯·怀特海合著的《数学原理》（Principia
+Mathematica，简称PM）中，是他们为了<strong>避免罗素悖论</strong>而引入的一个特殊记号，全称是<strong>“the
+sum of classes of the type
+c”</strong>或类似描述，具体指<strong>类型c的类的和</strong>（sum of
+classes of type c）。</p>
+<h4 id="背景罗素悖论">背景：罗素悖论</h4>
+<p>罗素悖论（1901年发现）：<br />
+让R是“所有不包含自己的类的类”，<br />
+问R是否包含自己？<br />
+- 如果包含自己，则按定义不应包含。<br />
+- 如果不包含自己，则按定义应包含。<br />
+矛盾。</p>
+<p>这摧毁了弗雷格的逻辑主义体系，也威胁到朴素集合论。</p>
+<h4
+id="罗素的解决方案类型论theory-of-types">罗素的解决方案：类型论（Theory
+of Types）</h4>
+<p>罗素在《数学原理》中引入<strong>分支类型论</strong>（ramified theory
+of types），把实体分成不同“类型”（type）：<br />
+- 类型0：个体（individuals）<br />
+- 类型1：个体的类<br />
+- 类型2：类的类<br />
+- ……</p>
+<p>同类型实体才能互相谓述，避免自指悖论。</p>
+<p>但这带来新问题：<br />
+要定义“类”本身，需要更高类型，<br />
+导致无限后退。</p>
+<h4 id="c到底是啥">“+c”到底是啥？</h4>
+<p>“+c”是一个<strong>技术记号</strong>，用于表示<strong>某个特定类型c的类的总和</strong>（sum
+of all classes of type c）。</p>
+<p>在PM中，罗素用它来： - 避免直接谈论“所有类的类”这种自指结构。 -
+在定义数字、数学对象时，限制在某个固定类型c内的类总和。 -
+确保定义不跨越类型，避免悖论。</p>
+<p>简单说：<br />
+“+c”像一个“安全阀”，<br />
+把无限后退限制在某个类型c内，<br />
+让数学定义能进行下去。</p>
+<h4 id="为什么这么麻烦">为什么这么麻烦？</h4>
+<p>因为罗素想<strong>严格避免悖论</strong>，<br />
+宁可引入复杂记号，<br />
+也不让自指漏网。</p>
+<h4 id="后来呢">后来呢？</h4>
+<ul>
+<li>类型论太繁琐，数学家不喜欢。<br />
+</li>
+<li>后来策梅洛-弗兰克尔集合论（ZFC）用“限制公理”更优雅地解决了悖论。<br />
+</li>
+<li>维特根斯坦在《逻辑哲学论》里也批判了类型论（3.331–3.333），认为它是多余的，因为逻辑本身不允许自指。</li>
+</ul>
+<h4 id="终极金句直接封神">终极金句（直接封神）</h4>
+<p>“罗素的‘+c’是类型论的救命稻草，<br />
+为了堵悖论的洞，<br />
+硬生生把数学扣上一个安全带。<br />
+牛是牛，<br />
+但太勒，<br />
+后来大家解开安全带，<br />
+用ZFC跑得更快。”</p>
+<p>如果你在读《逻辑哲学论》，<br />
+维特根斯坦对罗素类型论的批判（尤其是3.333“函数不能是自己的论元”），<br />
+就是对“+c”这种补丁的温柔一刀。</p>
+懂了吧？<br />
+“+c”是罗素反悖论的临时工，<br />
+干了脏活累活，<br />
+功劳大，<br />
+但后来被优化掉了。
+<hr>
 <center>
 <a href="/3place/ljzxlen">返回首页</a> <a
 href="/3place/ljzxlen/mingju.html">本书名句</a> <a
@@ -189,51 +256,10 @@ href="/3place/ljzxlen/index_words.html">使用字频</a>
 </div>
 <a href="/3place/ljzxlen/hash/">HASH5</a>
 </center>
-<h4 id="a-proposition-is-a-truth-function-of-elementary-propositions.">5
-A proposition is a truth-function of elementary propositions.</h4>
-<pre><code> (An elementary proposition is a truth-function of itself.)
-
-    5.01 Elementary propositions are the truth-arguments of propositions.
-
-    5.02 It is easy to confuse the arguments of functions with the indices of names. For I recognize from both an argument and an index the meaning of the sign that contains them.</code></pre>
-<ul>
-<li><p>indices,英 [ˈɪndɪsiːz] 美 [ˈɪndɪsiːz]
-n. 指数；目录（index的复数）</p>
-<p>In Russell’s ‘+c’, for example, ‘c’ is an index that indicates that
-the whole sign is the addition sign for cardinal numbers. But this
-designation rests on arbitrary convention and instead of ‘+c’ a simple
-sign could be chosen; in ‘~p’, however, ‘p’ is not an index but an
-argument: the sense of ‘~p’ cannot be understood without prior
-understanding of the sense of ‘p’. (In the name ‘Julius Caesar’ ‘Julius’
-is an index. The index is always part of a description of the object to
-whose name we attach it. For example, the Caesar of the gens
-Julia.)</p></li>
-<li><p>indicate,英 [ˈɪndɪkeɪt] 美 [ˈɪndɪkeɪt] v.
-表明，标示；象征，暗示；间接提及，示意；指示，指出；<英>（用灯光或手臂）打行车转向信号；有必要，被建议</p></li>
-<li><p>cardinal,英 [ˈkɑːdɪn(ə)l] 美 [ˈkɑːrdɪnl]
-n. 红衣主教；基数，纯数；红衣凤头鸟；猩红，鲜红 adj.
-最主要的，基本的</p></li>
-</ul>
-<h5 id="what-is-russells-c"><a href="./hash/0086.html">what is Russell’s
-‘+c’</a></h5>
-<pre><code> The confusion of argument and index underlies, if I am not mistaken, Frege’s theory of the meaning of propositions and functions. For Frege the propositions of logic were names and their arguments the indices of these names.</code></pre>
-<h6 id="阅读日期-2025年12月25日-2025年12月25日-共-1-天">阅读日期：
-2025年12月25日-2025年12月25日 共： 1 天</h6>
-<script src="https://giscus.app/client.js"
-        data-repo="hbaolong/hbaolong.github.io"
-        data-repo-id="R_kgDOLetDQg"
-        data-category="General"
-        data-category-id="DIC_kwDOLetDQs4CfLEl"
-        data-mapping="url"
-        data-strict="0"
-        data-reactions-enabled="1"
-        data-emit-metadata="1"
-        data-input-position="top"
-        data-theme="preferred_color_scheme"
-        data-lang="zh-CN"
-        crossorigin="anonymous"
-        async>
-</script>
+<hr>
+<center>
+<img src="/img/thanks.jpg" width="50%" height="50%">
+</center>
 <script src="https://giscus.app/client.js"
         data-repo="hbaolong/hbaolong.github.io"
         data-repo-id="R_kgDOLetDQg"
