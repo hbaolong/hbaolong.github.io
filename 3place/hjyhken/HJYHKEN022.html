@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="hbaolong@vip.qq.com" />
+  <title>黑客与画家EN:Chapter 15. Design and Research</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">黑客与画家EN:Chapter 15. Design and Research</h1>
+<p class="author">hbaolong@vip.qq.com</p>
+</header>
+<center>
+<a href="/3place/hjyhken">返回首页</a> <a
+href="/3place/hjyhken/mingju.html">本书名句</a> <a
+href="/3place/hjyhken/memo.html">本书注解</a> <a
+href="/3place/hjyhken/index_rich.html">丰富目录</a> <a
+href="/3place/hjyhken/index_readcal.html">同读日历</a> <a
+href="/3place/hjyhken/index_timeline.html">时间线</a> <a
+href="/3place/hjyhken/index_books.html">引用书籍</a> <a
+href="/3place/hjyhken/index_words.html">使用字频</a>
+<div id="wx_pic" style="margin:0 auto;display:none;">
+<img src='/img/logo.png'/>
+</div>
+</center>
+<h4 id="chapter-15.-design-and-research">Chapter 15. Design and
+Research</h4>
+<p>Visitors to this country are often surprised to find that Americans
+like to begin a conversation by asking “what do you do?“ I’ve never
+liked this question. I’ve rarely had a neat answer to it. But I think I
+have finally solved the problem. Now, when someone asks me what I do, I
+look them straight in the eye and say, “I’m designing a new dialect of
+Lisp.“ I recommend this answer to anyone who doesn’t like being asked
+what they do. The conversation will turn immediately to other
+topics.</p>
+<p>I don’t consider myself to be doing research on programming
+languages. I’m just designing one, in the same way that someone might
+design a building or a chair or a new typeface. I’m not trying to
+discover anything new. I just want to make a language that will be good
+to program in.</p>
+<p>The difference between design and research seems to be a question of
+new versus good. Design doesn’t have to be new, but it has to be good.
+Research doesn’t have to be good, but it has to be new. I think these
+two paths converge at the top: the best design surpasses its
+predecessors by using new ideas, and the best research solves problems
+that are not only new, but worth solving. So ultimately design and
+research are aiming for the same destination, just approaching it from
+different directions.</p>
+<p>What do you do differently when you treat programming languages as a
+design problem instead of a research topic?</p>
+<p>The biggest difference is that you focus more on the user. Design
+begins by asking, who is this for and what do they need from it? A good
+architect, for example, does not begin by creating a design that he then
+imposes on the users, but by studying the intended users and figuring
+out what they need.</p>
+<p>Notice I said “what they need,“ not “what they want.“ I don’t mean to
+give the impression that working as a designer means working as a sort
+of short-order cook, making whatever the client tells you to. This
+varies from field to field in the arts, but I don’t think there is any
+field in which the best work is done by the people who just make exactly
+what the customers tell them to.</p>
+<p>The customer is always right in the sense that the measure of good
+design is how well it works for the user. If you make a novel that bores
+everyone, or a chair that’s horribly uncomfortable to sit in, then
+you’ve done a bad job, period. It’s no defense to say that the novel or
+chair is designed according to the most advanced theoretical
+principles.</p>
+<p>And yet, making what works for the user doesn’t mean simply making
+what the user tells you to. Users don’t know what all the choices are,
+and are often mistaken about what they really want. It’s like being a
+doctor. You can’t just treat a patient’s symptoms. When a patient tells
+you his symptoms, you have to figure out what’s actually wrong with him,
+and treat that.</p>
+<p>This focus on the user is a kind of axiom from which most of the
+practice of good design can be derived, and around which most design
+issues center.</p>
+<p>When I say that design must be for users, I don’t mean to imply that
+good design aims at some kind of lowest common denominator. You can pick
+any group of users you want. If you’re designing a tool, for example,
+you can design it for anyone from beginners to experts, and what’s good
+design for one group might be bad for another. The point is, you have to
+pick some group of users. I don’t think you can even talk about good or
+bad design except with reference to some intended user.</p>
+<p>You’re most likely to get good design if the intended users include
+the designer himself. When you design something for a group that doesn’t
+include you, it tends to be for people you consider less sophisticated
+than you, not more sophisticated. And looking down on the user, however
+benevolently, always seems to corrupt the designer. I suspect few
+housing projects in the US were designed by architects who expected to
+live in them. You see the same thing in programming languages. C, Lisp,
+and Smalltalk were created for their own designers to use. Cobol, Ada,
+and Java were created for other people to use.</p>
+<p>If you think you’re designing something for idiots, odds are you’re
+not designing something good, even for idiots.</p>
+<p>Even if you’re designing something for the most sophisticated users,
+though, you’re still designing for humans. It’s different in research.
+In math you don’t choose abstractions because they’re easy for humans to
+understand; you choose whichever make the proof shorter. I think this is
+true for the sciences generally. Scientific ideas are not meant to be
+ergonomic.</p>
+<p>Over in the arts, things are different. Design is all about people.
+The human body is a strange thing, but when you’re designing a chair,
+that’s what you’re designing for, and there’s no way around it. All the
+arts have to pander to the interests and limitations of humans. In
+painting, for example, all other things being equal a painting with
+people in it will be more interesting than one without. It is not merely
+an accident of history that the great paintings of the Renaissance are
+all full of people. If they hadn’t been, painting as a medium wouldn’t
+have the prestige it does.</p>
+<p>Like it or not, programming languages are also for people, and I
+suspect the human brain is just as lumpy and idiosyncratic as the human
+body. Some ideas are easy for people to grasp and some aren’t. For
+example, we seem to have a very limited capacity for dealing with
+detail. It’s this fact that makes programming languages a good idea in
+the first place; if we could handle the detail, we could just program in
+machine language.</p>
+<p>Remember, too, that languages are not primarily a form for finished
+programs, but something that programs have to be developed in. Anyone in
+the arts could tell you that you might want different mediums for the
+two situations. Marble, for example, is a nice, durable medium for
+finished ideas, but a hopelessly inflexible one for developing new
+ideas.</p>
+<p>A program, like a proof, is a pruned version of a tree that in the
+past has had false starts branching off all over it. So the test of a
+language is not simply how clean the finished program looks in it, but
+how clean the path to the finished program was. A design choice that
+gives you elegant finished programs may not give you an elegant design
+process. For example, I’ve written a few macro defining macros that look
+now like little gems, but writing them took hours of the ugliest trial
+and error, and frankly, I’m still not entirely sure they’re correct.</p>
+<p>We often act as if the test of a language were how good finished
+programs look in it. It seems so convincing when you see the same
+program written in two languages, and one version is much shorter. When
+you approach the problem from the direction of the arts, you’re less
+likely to depend on this sort of test. You don’t want to end up with a
+programming language like marble.</p>
+<p>For example, it is a huge win in developing software to have an
+interactive toplevel, what in Lisp is called a read-eval-print loop. And
+when you have one, this has real effects on the design of the language.
+It would not work well for a language where you have to declare
+variables before using them. When you’re just typing expressions into
+the toplevel, you want to be able to set x to some value and then start
+doing things to x. You don’t want to have to declare the type of x
+first. You may dispute either of the premises, but if a language has to
+have a toplevel to be convenient, and mandatory type declarations are
+incompatible with a toplevel, then no language that makes type
+declarations mandatory could be convenient to program in.</p>
+<p>To get good design you have to get close, and stay close, to your
+users. You have to calibrate your ideas on actual users constantly. One
+of the reasons Jane Austen’s novels are so good is that she read them
+out loud to her family. That’s why she never sinks into self-indulgently
+arty descriptions of landscapes, or pretentious philosophizing. (The
+philosophy’s there, but it’s woven into the story instead of being
+pasted onto it like a label.) If you open an average “literary“ novel
+and imagine reading it out loud to your friends as something you’d
+written, you’ll feel all too keenly what an imposition that kind of
+thing is upon the reader.</p>
+<p>In the software world, this idea is known as Worse is Better.
+Actually, there are several ideas mixed together in the concept of Worse
+is Better, which is why people are still arguing about whether worse is
+actually better or not. But one of the main ideas in that mix is that if
+you’re building something new, you should get a prototype in front of
+users as soon as possible.</p>
+<p>The alternative approach might be called the Hail Mary strategy.
+Instead of getting a prototype out quickly and gradually refining it,
+you try to create the complete, finished product in one long touchdown
+pass. Countless startups destroyed themselves this way during the
+Internet Bubble. I’ve never heard of a case where it worked.</p>
+<p>What people outside the software world may not realize is that Worse
+is Better is found throughout the arts. In drawing, for example, the
+idea was discovered during the Renaissance. Now almost every drawing
+teacher will tell you that the right way to get an accurate drawing is
+not to work your way slowly around the contour of an object, because
+errors will accumulate and you’ll find at the end that the lines don’t
+meet. Instead you should draw a few quick lines in roughly the right
+place, and then gradually refine this initial sketch.</p>
+<p>In most fields, prototypes have traditionally been made out of
+different materials. Typefaces to be cut in metal were initially
+designed with a brush on paper. Statues to be cast in bronze were
+modelled in wax. Patterns to be embroidered on tapestries were drawn on
+paper with ink wash. Buildings to be constructed from stone were tested
+on a smaller scale in wood.</p>
+<p>What made oil paint so exciting, when it first became popular in the
+fifteenth century, was that you could make the finished work from the
+prototype. You could make a preliminary drawing if you wanted to, but
+you weren’t held to it; you could work out all the details, and even
+make major changes, as you finished the painting.</p>
+<p>You can do this in software too. A prototype doesn’t have to be just
+a model; you can refine it into the finished product. I think you should
+always do this when you can. It lets you take advantage of new insights
+you have along the way. But perhaps even more important, it’s good for
+morale.</p>
+<p>Morale is key in design. I’m surprised people don’t talk more about
+it. One of my first drawing teachers told me: if you’re bored when
+you’re drawing something, the drawing will look boring. For example,
+suppose you have to draw a building, and you decide to draw each brick
+individually. You can do this if you want, but if you get bored halfway
+through and start making the bricks mechanically instead of observing
+each one, the drawing will look worse than if you had merely suggested
+the bricks.</p>
+<p>Building something by gradually refining a prototype is good for
+morale because it keeps you engaged. In software, my rule is: always
+have working code. If you’re writing something you’ll be able to test in
+an hour, you have the prospect of an immediate reward to motivate you.
+The same is true in the arts, and particularly in oil painting. Most
+painters start with a blurry sketch and gradually refine it. If you work
+this way, then in principle you never have to end the day with something
+that looks unfinished. Indeed, there is even a saying among painters: “A
+painting is never finished. You just stop working on it.“ This idea will
+be familiar to anyone who has worked on software.</p>
+<p>Morale is another reason that it’s hard to design something for an
+unsophisticated user. It’s hard to stay interested in something you
+don’t like yourself. To make something good, you have to be thinking,
+“wow, this is really great,“ not “what a piece of shit; those fools will
+love it.“</p>
+<p>Design means making things for humans. But it’s not just the user
+who’s human. The designer is human too.</p>
+<h6 id="阅读日期-2026年01月18日-2026年01月18日-共-1-天">阅读日期：
+2026年01月18日-2026年01月18日 共： 1 天</h6>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

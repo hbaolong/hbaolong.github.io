@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="hbaolong@vip.qq.com" />
+  <title>黑客与画家EN:Chapter 10. Programming Languages Explained</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">黑客与画家EN:Chapter 10. Programming Languages
+Explained</h1>
+<p class="author">hbaolong@vip.qq.com</p>
+</header>
+<center>
+<a href="/3place/hjyhken">返回首页</a> <a
+href="/3place/hjyhken/mingju.html">本书名句</a> <a
+href="/3place/hjyhken/memo.html">本书注解</a> <a
+href="/3place/hjyhken/index_rich.html">丰富目录</a> <a
+href="/3place/hjyhken/index_readcal.html">同读日历</a> <a
+href="/3place/hjyhken/index_timeline.html">时间线</a> <a
+href="/3place/hjyhken/index_books.html">引用书籍</a> <a
+href="/3place/hjyhken/index_words.html">使用字频</a>
+<div id="wx_pic" style="margin:0 auto;display:none;">
+<img src='/img/logo.png'/>
+</div>
+</center>
+<h4 id="chapter-10.-programming-languages-explained">Chapter 10.
+Programming Languages Explained</h4>
+<p>Any machine has a list of things you can tell it to do. Sometimes the
+list is short. There are only two things I can do to my electronic
+kettle: turn it on and turn it off. My CD player is more complicated. As
+well as turning it on and off, I can turn the volume up and down, tell
+it to play or pause, move back or forward one song, and ask it to play
+songs in random order.</p>
+<p>Like any other kind of machine, a computer has a list of things it
+can do. For example, every computer can be told to add two numbers. The
+complete list of things a computer can do is its machine language.</p>
+<p>Machine Language</p>
+<p>When computers were first invented, all programs had to be written as
+sequences of machine language instructions. Soon after, they started to
+be written in a slightly more convenient form called assembly language.
+In assembly language the list of commands is the same, but you get to
+use more programmer-friendly names. Instead of referring to the add
+instruction as 11001101, which is what the machine might call it, you
+get to say add.</p>
+<p>The problem with machine/assembly language is that most computers can
+only do very simple things. For example, suppose you want to tell a
+computer to beep 10 times. There’s not likely to be a machine
+instruction to do something n times. So if you wanted to tell a computer
+to do something 10 times using actual machine instructions, you’d have
+to say something equivalent to:</p>
+<p>put the number 10 in memory location 0</p>
+<p>a if location 0 is negative, go to line b</p>
+<p>beep</p>
+<p>subtract 1 from the number in location 0</p>
+<p>go to line a</p>
+<p>b …rest of program…</p>
+<p>If you have to do this much work to make the machine beep 10 times,
+imagine the labor of writing something like a word processor or a
+spreadsheet.</p>
+<p>And by the way, take another look at the program. Will it actually
+beep ten times? Nope, eleven. In the first line I should have said 9
+instead of 10. I deliberately put a bug in our example to illustrate an
+important point about languages. The more you have to say to get
+something done, the harder it is to see bugs.</p>
+<p>High-Level Languages</p>
+<p>Imagine you had to produce assembly language programs, but you had an
+assistant to do all the dirty work for you. So you could just write
+something like</p>
+<p>dotimes 10 beep</p>
+<p>and your assistant would write the assembly language for you (but
+without bugs).</p>
+<p>In fact, this is how most programmers do work. Except the assistant
+isn’t a person, but a compiler. A compiler is a program that translates
+programs written in a convenient form, like the one liner above, into
+the simple-minded language that the hardware understands.</p>
+<p>The more convenient language that you feed to the compiler is called
+a high-level language. It lets you build your programs out of powerful
+commands, like “do something n times“ instead of wimpy ones like “add
+two numbers.“</p>
+<p>When you get to build your programs out of bigger concepts, you don’t
+need to use as many of them. Written in our imaginary high-level
+language, our program is only a fifth as long. And if there were a
+mistake in it, it would be easy to see.</p>
+<p>Another advantage of high-level languages is that they make your
+programs more portable. Different computers all have slightly different
+machine languages. You cannot, as a rule, take a machine language
+program written for one computer and run it on another. If you wrote
+your programs in machine language, you’d have to rewrite them all to run
+them on a new computer. If you use a high-level language, all you have
+to rewrite is the compiler.</p>
+<p>Compilers aren’t the only way to implement high-level languages. You
+could also use an interpreter, which examines your program one piece at
+a time and executes the corresponding machine language commands, instead
+of translating the whole thing into machine language and running
+that.</p>
+<p>Open Source</p>
+<p>The high-level language that you feed to the compiler is also known
+as source code, and the machine language translation it generates is
+called object code. When you buy commercial software, you usually only
+get the object code. (Object code is so hard to read that it is
+effectively encrypted, thus protecting the company’s trade secrets.) But
+lately there is an alternative approach: open source software, where you
+get the source code as well, and are free to modify it if you want.</p>
+<p>There is a real difference between the two models. Open source gives
+you a lot more control. When you’re using open source software and you
+want to understand what it’s doing, you can read the source code and
+find out. If you want, you can even change the software and recompile
+it.</p>
+<p>One reason you might want to do that is to fix a bug. You can’t fix
+bugs in Microsoft Windows, for example, because you don’t have the
+source code. (In theory you could hack the object code, but in practice
+this is very hard. It’s also probably forbidden by the license
+agreement.) This can be a real problem. When a new security hole is
+discovered in Windows, you have to wait for Microsoft to release a fix.
+And security holes at least get fixed fast. If the bug merely paralyzes
+your computer occasionally, you may have to wait till the next full
+release for it to be fixed.</p>
+<p>But the advantage of open source isn’t just that you can fix it when
+you need to. It’s that everyone can. Open source software is like a
+paper that has been subject to peer review. Lots of smart people have
+examined the source code of open source operating systems like Linux and
+FreeBSD and have already found most of the bugs. Whereas Windows is only
+as reliable as big-company QA can make it.</p>
+<p>Open source advocates are sometimes seen as wackos who are against
+the idea of property in general. A few are. But I’m certainly not
+against the idea of property, and yet I would be very reluctant to
+install software I didn’t have the source code for. The average end user
+may not need the source code of their word processor, but when you
+really need reliability, there are solid engineering reasons for
+insisting on open source.</p>
+<p>Language Wars</p>
+<p>Most programmers, most of the time, program in high-level languages.
+Few use assembly language now. Computer time has become much cheaper,
+while programmer time is as expensive as ever, so it’s rarely worth the
+trouble of writing programs in assembly language. You might do it in a
+few critical parts of, say, a computer game, where you wanted to
+micromanage the hardware to squeeze out that last increment of
+speed.</p>
+<p>Fortran, Lisp, Cobol, Basic, C, Pascal, Smalltalk, C++, Java, Perl,
+and Python are all high-level languages. Those are just some of the
+better known ones. There are literally hundreds of different high-level
+languages. And unlike machine languages, which all offer similar
+instruction sets, these high-level languages give you quite different
+concepts to build programs out of.</p>
+<p>So which one do you use? Ah, well, there is a great deal of
+disagreement about that. Part of the problem is that if you use a
+language for long enough, you start to think in it. So any language
+that’s substantially different feels terribly awkward, even if there’s
+nothing intrinsically wrong with it. Inexperienced programmers’
+judgements about the relative merits of programming languages are often
+skewed by this effect.</p>
+<p>Other hackers, perhaps from a desire to seem sophisticated, will tell
+you that all languages are basically the same. I’ve programmed in all
+kinds of languages, said the tough old hacker as he eased up to the bar,
+and it don’t matter which you use. What matters is whether you have the
+right stuff. Or something along those lines.</p>
+<p>This is nonsense, of course. There is a world of difference between,
+say, Fortran I and the latest version of Perl—or for that matter between
+early versions of Perl and the latest version of Perl. But the tough old
+hacker may himself believe what he’s saying. It’s possible to write the
+same primitive Pascal-like programs in almost every language. If you
+only ever eat at McDonald’s, it will seem that food is much the same in
+every country.</p>
+<p>Some hackers prefer the language they’re used to, and dislike
+anything else. Others say that all languages are the same. The truth is
+somewhere between these two extremes. Languages do differ, but it’s hard
+to say for certain which are best. The field is still evolving.</p>
+<p>Abstractness</p>
+<p>Just as high-level languages are more abstract than assembly
+language, some high-level languages are more abstract than others. For
+example, C is quite low-level, almost a portable assembly language,
+whereas Lisp is very high-level.</p>
+<p>If high-level languages are better to program in than assembly
+language, then you might expect that the higher-level the language, the
+better. Ordinarily, yes, but not always. A language can be very
+abstract, but offer the wrong abstractions. I think this happens in
+Prolog, for example. It has fabulously powerful abstractions for solving
+about 2% of problems, and the rest of the time you’re bending over
+backward to misuse these abstractions to write de facto Pascal
+programs.</p>
+<p>Another reason you might want to use a lower-level language is
+efficiency. If you need code to be super fast, it’s better to stay close
+to the machine. Most operating systems are written in C, and it is not a
+coincidence. As hardware gets faster, there is less pressure to write
+applications in languages as low-level as C, but everyone still seems to
+want operating systems to be as fast as possible. (Or maybe they want
+the prospect of buffer-overflow attacks to keep them on their
+toes.1)</p>
+<p>Seat Belts or Handcuffs?</p>
+<p>The biggest debate in language design is probably the one between
+Those who think that a language should prevent programmers from doing
+stupid things, and those who think programmers should be allowed to do
+whatever they want. Java is in the former camp, and Perl in the latter.
+(Not surprisingly, the DoD is big on Java.)</p>
+<p>Partisans of permissive languages ridicule the other sort as
+“BandandandandD“ (bondage and discipline) languages, with the rather
+impudent implication that those who like to program in them are bottoms.
+I don’t know what the other side call languages like Perl. Perhaps they
+are not the sort of people to make up amusing names for the
+opposition.</p>
+<p>The debate resolves into several smaller ones, because there are
+several ways to prevent programmers from doing stupid things. One of the
+more active questions at the moment is static versus dynamic typing. In
+a statically-typed language, you have to know the kind of values each
+variable can have at the time you write the program. With dynamic
+typing, you can set any variable to any value, whenever you want.</p>
+<p>Advocates of static typing argue that it helps to prevent bugs and
+helps compilers to generate fast code (both true). Advocates of dynamic
+typing argue that static typing restricts what programs you can write
+(also true). I prefer dynamic typing. I hate a language that tells me
+what to do. But some smart people seem to like static typing, so the
+question must still be an open one.</p>
+<p>OO</p>
+<p>Another big topic at the moment is object-oriented programming. It
+means a different way of organizing programs. Suppose you want to write
+a program to find the areas of two-dimensional figures. At first it only
+has to know about circles and squares. One way to do it would be to
+write a single piece of code, within which you test whether you’re being
+asked about a circle or a square, and then use the corresponding formula
+to find the area. The object-oriented way to write this program would be
+to create two classes, circle and square, and then attach to each class
+a snippet of code (called a method) for finding the area of that type of
+figure. When you need to find the area of something, you ask what its
+class is, retrieve the corresponding method, and run that to get the
+answer.</p>
+<p>These two cases may sound very similar, and indeed what actually
+happens when you run the code is much the same. (Not surprisingly, since
+you’re solving the same problem.) But the code can end up looking quite
+different. In the object-oriented version, the code for finding the
+areas of squares and circles may even end up in different files, one
+part in the file containing all the stuff to do with circles, and the
+other in the file containing the stuff to do with squares.</p>
+<p>The advantage of the object-oriented approach is that if you want to
+change the program to find the area of, say, triangles, you just add
+another chunk of code for them, and you don’t even have to look at the
+rest. The disadvantage, critics would counter, is that adding things
+without looking at what was already there tends to produce the same
+results in programs that it does in buildings.</p>
+<p>The debate about object-oriented programming is not as clear-cut as
+the one about static versus dynamic typing. With typing you have to
+choose one or the other. But the object-orientedness of a language is a
+matter of degree. Indeed, there are two senses of object-oriented: some
+languages are object-oriented in the sense that they let you program in
+that style, and others in the sense that they force you to.</p>
+<p>I see little advantage in the latter. Surely a language that lets you
+do x is at least as good as one that forces you to. So as regards
+languages, at least, we can finesse this question. Sure, use a language
+that lets you write object-oriented programs. Whether you ever actually
+want to then becomes a separate question.</p>
+<p>Renaissance</p>
+<p>One thing I think everyone in the language business will agree on is
+that there are a lot of new programming languages lately. Until the
+1980s, only institutions could afford the hardware needed to develop
+programming languages, and so most were designed by professors or
+researchers at large companies. Now a high school kid can afford all the
+hardware necessary.</p>
+<p>Inspired largely by the example of Larry Wall, the designer of Perl,
+lots of hackers are thinking, why can’t I design my own language? Those
+who manage to harness the power of the open source community can get a
+lot of code written for them very quickly.</p>
+<p>The result is a kind of language you might call top-heavy: a language
+whose inner core is not very well designed, but which has enormously
+powerful libraries of code for solving specific problems. (Imagine a
+Yugo with a jet engine bolted to the roof.) For the little, everyday
+problems that programmers spend so much of their time solving, libraries
+are probably more important than the core language. And so these odd
+hybrids are quite useful, and become correspondingly popular. A Yugo
+with a jet engine bolted to the roof might actually work, as long as you
+didn’t try to take a corner in it.2</p>
+<p>Another result is a great deal of variety. There has always been a
+lot of variety in programming languages. Fortran, Lisp, and APL differ
+from one another as much as starfish, bears, and dragonflies, and all
+were designed before 1970. But the new open source languages have
+certainly continued this tradition.</p>
+<p>I seem to hear about a new language every couple days. Jonathan
+Erickson has called it “the programming language renaissance.“ Another
+phrase people sometimes use is “the language wars.“ But there is no
+contradiction here. The Renaissance was full of wars.</p>
+<p>Indeed, many historians believe that the wars were a byproduct of the
+forces that created the Renaissance.3 The key to Europe’s vigor may have
+been the fact that it was divided up into a number of small, competing
+states. These were close enough that ideas could travel from one to the
+other, but independent enough that no one ruler could put a lid on
+innovation—as the Chinese court disastrously did when they forbade the
+development of large ocean-going ships.</p>
+<p>So it is probably all to the good that programmers live in a
+post-Babel world. If we were all using the same language, it would
+probably be the wrong one.</p>
+<h6 id="阅读日期-2026年01月12日-2026年01月12日-共-1-天">阅读日期：
+2026年01月12日-2026年01月12日 共： 1 天</h6>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

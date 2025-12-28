@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="hbaolong@vip.qq.com" />
+  <title>黑客与画家EN:Chapter 8. A Plan for Spam</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">黑客与画家EN:Chapter 8. A Plan for Spam</h1>
+<p class="author">hbaolong@vip.qq.com</p>
+</header>
+<center>
+<a href="/3place/hjyhken">返回首页</a> <a
+href="/3place/hjyhken/mingju.html">本书名句</a> <a
+href="/3place/hjyhken/memo.html">本书注解</a> <a
+href="/3place/hjyhken/index_rich.html">丰富目录</a> <a
+href="/3place/hjyhken/index_readcal.html">同读日历</a> <a
+href="/3place/hjyhken/index_timeline.html">时间线</a> <a
+href="/3place/hjyhken/index_books.html">引用书籍</a> <a
+href="/3place/hjyhken/index_words.html">使用字频</a>
+<div id="wx_pic" style="margin:0 auto;display:none;">
+<img src='/img/logo.png'/>
+</div>
+</center>
+<h4 id="chapter-8.-a-plan-for-spam">Chapter 8. A Plan for Spam</h4>
+<p>I think it’s possible to stop spam, and that content-based filters
+are the way to do it. The Achilles heel of the spammers is their
+message. They can circumvent any other barrier you set up. They have so
+far, at least. But they have to deliver their message, whatever it is.
+If we can write software that recognizes their messages, there is no way
+they can get around that.1</p>
+<p>To the recipient, spam is easily recognizable. If you hired someone
+to read your mail and discard the spam, they would have little trouble
+doing it. How much do we have to do, short of AI, to automate this
+process?</p>
+<p>I think we will be able to solve the problem with fairly simple
+algorithms. In fact, I’ve found that you can filter present-day spam
+acceptably well using nothing more than a Bayesian combination of the
+spam probabilities of individual words. Using a slightly tweaked (as
+described below) Bayesian filter, we now miss less than 5 per 1000
+spams, with 0 false positives.</p>
+<p>The statistical approach is not usually the first one people try when
+they write spam filters. Most hackers’ first instinct is to try to write
+software that recognizes individual properties of spam. You look at
+spams and you think, the gall of these guys to try sending me mail that
+begins “Dear Friend“ or has a subject line that’s all uppercase and ends
+in eight exclamation points. I can filter out that stuff with about one
+line of code.</p>
+<p>And so you do, and in the beginning it works. A few simple rules will
+take a big bite out of your incoming spam. Merely looking for the word
+click will catch 79.7% of the emails in my spam corpus, with only 1.2%
+false positives.</p>
+<p>I spent about six months writing software that looked for individual
+spam features before I tried the statistical approach. What I found was
+that recognizing that last few percent of spams got very hard, and that
+as I made the filters stricter I got more false positives.</p>
+<p>False positives are innocent emails that get mistakenly identified as
+spams. For most users, missing legitimate email is an order of magnitude
+worse than receiving spam, so a filter that yields false positives is
+like an acne cure that carries a risk of death to the patient.</p>
+<p>The more spam a user gets, the less likely he’ll be to notice one
+innocent mail sitting in his spam folder. And strangely enough, the
+better your spam filters get, the more dangerous false positives become,
+because when the filters are really good, users will be more likely to
+ignore everything they catch.</p>
+<p>I don’t know why I avoided trying the statistical approach for so
+long. I think it was because I got addicted to trying to identify spam
+features myself, as if I were playing some kind of competitive game with
+the spammers. (Nonhackers don’t often realize this, but most hackers are
+very competitive.) When I did try statistical analysis, I found
+immediately that it was much cleverer than I had been. It discovered, of
+course, that terms like virtumundo and teens were good indicators of
+spam. But it also discovered that per and FL and ff0000 are good
+indicators of spam. In fact, ff0000 (HTML for bright red) turns out to
+be as good an indicator of spam as any pornographic term.</p>
+<p>Here’s a sketch of how I do statistical filtering. I start with one
+corpus of spam and one of non spam mail. At the moment each one has
+about 4000 messages in it. I scan the entire text, including headers and
+embedded HTML and Javascript, of each message in each corpus. I
+currently consider alphanumeric characters, dashes, apostrophes, and
+dollar signs to be part of tokens, and everything else to be a token
+separator. (There is probably room for improvement here.) I ignore
+tokens that are all digits, and I also ignore HTML comments, not even
+considering them as token separators.</p>
+<p>I count the number of times each token (ignoring case, currently)
+occurs in each corpus. At this stage I end up with two large hash
+tables, one for each corpus, mapping tokens to number of
+occurrences.</p>
+<p>Next I create a third hash table, this time mapping each token to the
+probability that an email containing it is a spam, Pspam|w which I
+calculate as follows:</p>
+<p>rg = min(1, 2(good(w)/G)), rb = min (1, bad(w)/B)</p>
+<p>Pspam|w = max(.01,min(.99, rb /(rg + rb )))</p>
+<p>where w is the token whose probability we’re calculating, good and
+bad are the hash tables I created in the first step, and G and B are the
+number of non spam and spam messages respectively.</p>
+<p>I want to bias the probabilities slightly to avoid false positives,
+and by trial and error I’ve found that a good way to do it is to double
+all the numbers in good. This helps to distinguish between words that
+occasionally do occur in legitimate email and words that almost never
+do. I only consider words that occur more than five times in total
+(actually, because of the doubling, occurring three times in non spam
+mail would be enough). And then there is the question of what
+probability to assign to words that occur in one corpus but not the
+other. Again by trial and error I chose .01 and .99. There may be room
+for tuning here, but as the corpus grows such tuning will happen
+automatically anyway.</p>
+<p>The especially observant will notice that while I consider each
+corpus to be a single long stream of text for purposes of counting
+occurrences, I use the number of emails in each, rather than their
+combined length, as the divisor in calculating spam probabilities. This
+adds another slight bias to protect against false positives.</p>
+<p>When new mail arrives, it is scanned into tokens, and the most
+interesting fifteen tokens, where interesting is measured by how far
+their spam probability is from a neutral .5, are used to calculate the
+probability that the mail is spam. If w1, . . . , w15 are the fifteen
+most interesting tokens, you calculate the combined probability
+thus:</p>
+<p>Figure 8-1.</p>
+<p>One question that arises in practice is what probability to assign to
+a word you’ve never seen, i.e. one that doesn’t occur in the hash table
+of word probabilities. I’ve found, again by trial and error, that .4 is
+a good number to use. If you’ve never seen a word before, it is probably
+fairly innocent; spam words tend to be all too familiar.</p>
+<p>I treat mail as spam if the algorithm above gives it a probability of
+more than .9 of being spam. But in practice it would not matter much
+where I put this threshold, because few probabilities end up in the
+middle of the range.</p>
+<p>One great advantage of the statistical approach is that you don’t
+have to read so many spams. Over the past six months, I’ve read
+literally thousands of spams, and it is really kind of demoralizing.
+Norbert Wiener said if you compete with slaves you become a slave, and
+there is something similarly degrading about competing with spammers. To
+recognize individual spam features you have to try to get into the mind
+of the spammer, and frankly I want to spend as little time inside the
+minds of spammers as possible.</p>
+<p>But the real advantage of the Bayesian approach, of course, is that
+you know what you’re measuring. Feature-recognizing filters like Spam
+Assassin assign a spam “score“ to email. The Bayesian approach assigns
+an actual probability. The problem with a “score“ is that no one knows
+what it means. The user doesn’t know what it means, but worse still,
+neither does the developer of the filter. How many points should an
+email get for having the word sex in it? A probability can of course be
+mistaken, but there is little ambiguity about what it means, or how
+evidence should be combined to calculate it. Based on my corpus, sex
+indicates a .97 probability of the containing email being a spam,
+whereas sexy indicates .99 probability. And Bayes’s Rule, equally
+unambiguous, says that an email containing both words would, in the
+(unlikely) absence of any other evidence, have a 99.97% chance of being
+a spam.</p>
+<p>Because it is measuring probabilities, the Bayesian approach
+considers all the evidence in the email, both good and bad. Words that
+occur disproportionately rarely in spam (like though or tonight or
+apparently) contribute as much to decreasing the probability as bad
+words like unsubscribe and opt-in do to increasing it. So an otherwise
+innocent email that happens to include the word sex is not going to get
+tagged as spam.</p>
+<p>Ideally, of course, the probabilities should be calculated
+individually for each user. I get a lot of email containing the word
+Lisp, and (so far) no spam that does. So a word like that is effectively
+a kind of password for sending mail to me. In my earlier spam-filtering
+software, the user could set up a list of such words and mail containing
+them would automatically get past the filters. On my list I put words
+like Lisp and also my zipcode, so that (otherwise rather
+spammy-sounding) receipts from online orders would get through. I
+thought I was being very clever, but I found that the Bayesian filter
+did the same thing for me, and moreover discovered of a lot of words I
+hadn’t thought of.</p>
+<p>When I said at the start that our filters let through less than 5
+spams per 1000 with 0 false positives, I’m talking about filtering my
+mail based on a corpus of my mail. But these numbers are not misleading,
+because that is the approach I’m advocating: filter each user’s mail
+based on the spam and non spam mail he receives. Essentially, each user
+should have two delete buttons, ordinary delete and delete-as-spam.
+Anything deleted as spam goes into the spam corpus, and everything else
+goes into the non spam corpus.</p>
+<p>You could start users with a seed filter, but ultimately each user
+should have his own per-word probabilities based on the actual mail he
+receives. This (a) makes the filters more effective, (b) lets each user
+decide their own precise definition of spam, and (c) perhaps best of all
+makes it hard for spammers to tune mails to get through the filters. If
+a lot of the brain of the filter is in the individual databases, then
+merely tuning spams to get through the seed filters won’t guarantee
+anything about how well they’ll get through individual users’ varying
+and much more trained filters.</p>
+<p>Content-based spam filtering is often combined with a white list, a
+list of senders whose mail can be accepted with no filtering. One easy
+way to build such a white list is to keep a list of every address the
+user has ever sent mail to. If a mail reader has a delete as spam button
+then you could also add the from address of every email the user has
+deleted as ordinary trash.</p>
+<p>I’m an advocate of white lists, but more as a way to save computation
+than as a way to improve filtering. I used to think that white lists
+would make filtering easier, because you’d only have to filter email
+from people you’d never heard from, and someone sending you mail for the
+first time is constrained by convention in what they can say to you.
+Someone you already know might send you an email talking about sex, but
+someone sending you mail for the first time would not be likely to. The
+problem is, people can have more than one email address, so a new from
+address doesn’t guarantee that the sender is writing to you for the
+first time. It is not unusual for an old friend (especially if he is a
+hacker) to suddenly send you an email with a new from-address, so you
+can’t risk false positives by filtering mail from unknown addresses
+especially stringently.</p>
+<p>In a sense, though, my filters do themselves embody a kind of white
+list (and blacklist) because they are based on entire messages,
+including the headers. So to that extent they “know“ the email addresses
+of trusted senders and even the routes by which mail gets from them to
+me. And they know the same about spam, including the server names,
+mailer versions, and protocols.</p>
+<p>If I thought that I could keep up current rates of spam filtering, I
+would consider this problem solved. But it doesn’t mean much to be able
+to filter out most present-day spam, because spam evolves. Indeed, most
+anti spam techniques so far have been like pesticides that do nothing
+more than create a new, resistant strain of bugs.</p>
+<p>I’m more hopeful about Bayesian filters, because they evolve with the
+spam. So as spammers start using v1agra instead of viagra to evade
+simple-minded spam filters based on individual words, Bayesian filters
+automatically notice. Indeed, v1agra is far more damning evidence than
+viagra, and Bayesian filters know precisely how much more.</p>
+<p>Still, anyone who proposes a plan for spam filtering has to be able
+to answer the question: if the spammers knew exactly what you were
+doing, how well could they get past you? For example, I think that if
+checksum-based spam filtering becomes a serious obstacle, the spammers
+will just switch to mad-lib techniques for generating message
+bodies.</p>
+<p>To beat Bayesian filters, it would not be enough for spammers to make
+their emails unique or to stop using individual naughty words. They’d
+have to make their mails indistinguishable from your ordinary mail. And
+this I think would severely constrain them. Spam is mostly sales
+pitches, so unless your regular mail is all sales pitches, spams will
+inevitably have a different character. And the spammers would also, of
+course, have to change (and keep changing) their whole infrastructure,
+because otherwise the headers would look as bad to the Bayesian filters
+as ever, no matter what they did to the message body. I don’t know
+enough about the infrastructure that spammers use to know how hard it
+would be to make the headers look innocent, but my guess is that it
+would be even harder than making the message look innocent.</p>
+<p>Assuming they could solve the problem of the headers, the spam of the
+future will probably look something like this:</p>
+<p>Hey there. Check out the following: http://www.27meg.com/foo</p>
+<p>because that is about as much sales pitch as content-based filtering
+will leave the spammer room to make. (Indeed, it will be hard even to
+get this past filters, because if everything else in the email is
+neutral, the spam probability will hinge on the URL, and it will take
+some effort to make that look neutral.)</p>
+<p>Spammers range from businesses running so-called opt-in lists who
+don’t even try to conceal their identities, to guys who hijack mail
+servers to send out spams promoting porn sites. If we use filtering to
+whittle their options down to mails like the one above, that should
+pretty much put the spammers on the “legitimate“ end of the spectrum out
+of business; they feel obliged by various state laws to include
+boilerplate about why their spam is not spam, and how to cancel your
+“subscription,“ and that kind of text is easy to recognize.</p>
+<p>(I used to think it was naive to believe that stricter laws would
+decrease spam. Now I think that while stricter laws may not decrease the
+amount of spam that spammers send, they can certainly help filters to
+decrease the amount of spam that recipients actually see.)</p>
+<p>All along the spectrum, if you restrict the sales pitches spammers
+can make, you will inevitably tend to put them out of business. That
+word business is an important one to remember. The spammers are
+businessmen. They send spam because it works. It works because although
+the response rate is abominably low (at best 15 per million, vs. 3000
+per million for a catalog mailing), the cost, to them, is practically
+nothing. The cost is enormous for the recipients, about 5 man-weeks for
+each million recipients who spend a second to delete the spam, but the
+spammer doesn’t have to pay that.</p>
+<p>Sending spam does cost the spammer something, though.2 So the lower
+we can get the response rate—whether by filtering, or by using filters
+to force spammers to dilute their pitches—the fewer businesses will find
+it worth their while to send spam.</p>
+<p>The reason the spammers use the kinds of sales pitches that they do
+is to increase response rates. This is possibly even more disgusting
+than getting inside the mind of a spammer, but let’s take a quick look
+inside the mind of someone who responds to a spam. This person is either
+astonishingly credulous or deeply in denial about their sexual
+interests. In either case, repulsive or idiotic as the spam seems to us,
+it is exciting to them. The spammers wouldn’t say these things if they
+didn’t sound exciting. And “check out the following“ is just not going
+to have nearly the pull with the spam recipient as the kinds of things
+that spammers say now. Result: if it can’t contain exciting sales
+pitches, spam becomes less effective as a marketing vehicle, and fewer
+businesses want to use it.</p>
+<p>That is the big win in the end. I started writing spam filtering
+software because I didn’t want have to look at the stuff anymore. But if
+we get good enough at filtering out spam, it will stop working, and the
+spammers will actually stop sending it.</p>
+<p>Of all the approaches to fighting spam, from software to laws, I
+believe Bayesian filtering will be the single most effective. But I also
+think that the more different kinds of anti spam efforts we undertake,
+the better, because any measure that constrains spammers will tend to
+make filtering easier. And even within the world of content-based
+filtering, I think it will be a good thing if there are many different
+kinds of software being used simultaneously. The more different filters
+there are, the harder it will be for spammers to tune spams to get
+through them.</p>
+<h6 id="阅读日期-2026年01月10日-2026年01月10日-共-1-天">阅读日期：
+2026年01月10日-2026年01月10日 共： 1 天</h6>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>
