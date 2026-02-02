@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="文/韩宝龙" />
+  <title>OpenClawd是个什么东西？</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">OpenClawd是个什么东西？</h1>
+<p class="author">文/韩宝龙</p>
+<p class="date">2026年2月2日 21时15分01秒</p>
+</header>
+<p>这几天AI领域最火的无外乎OpenClaw，那么，OpenClaw是个什么东西呢？</p>
+<p>很多自媒体人都在用华丽的词语试图混淆基础概念，我觉得，对于我自己以及身边的人来说，应该把这个东西“是什么”搞清楚一些。</p>
+<p>OpenClaw其实就是AI走向现实世界的一次尝试。</p>
+<p>AI很聪明，它“能理解”你的表达，并且能用你能理解的方式表达出来。<br />
+它对现实世界貌似也很了解，对于我们人类几千年来累积的知识更是了如指掌。<br />
+对于当下世界发生的事情，也比我们任何人都要“清楚”。</p>
+<p>可是，这些都是“看起来”的。也就是“你问它”，它才会“处理、分析、表达”。<br />
+其实，任何人，只要不做事，它就会“看起来”很聪明。哪怕它是个傻子。<br />
+所以，AI“很聪明”这个判断，通常来自它的不做事：毕竟，不做事，就不会出错。</p>
+<p>《连升三级》里那个张好古，凭着“很好、很好”不也在翰林院混得风生水起吗？</p>
+<p>所以，“聪明”并不需要真的做什么。<br />
+因此，让AI真的做点什么，就成了很多人——包括从业者和普通人——的一个想法：<br />
+如何能让AI真正干点啥？</p>
+<p>让它去操控车床？早就有专业的APP去做了。<br />
+让它去开车？早就有专业的APP去做了。<br />
+其实，所有的专业领域，都已经有专业的APP去做了。我们希望AI做的是：做没有专业APP能做的事情。<br />
+比如，根据我的行为，分析我的想法，然后帮我点菜。</p>
+<p>这种处理不特定领域、不特定任务的能力，被称为“通用AGI”。<br />
+这是我们对AI的期待。</p>
+<p>那么，AI能做到吗？它不过是躺在机房里，和我们聊一些“看起来很有学问”的话题。</p>
+<p>这时，OpenClaw来了。</p>
+<p>现在，我们可以给OpenClaw下一个定义了：</p>
+<p>OpenClaw，就是可以在“聊天（推理）AI”的基础上，在真实世界中做一些事情。<br />
+比如，接入电话系统，去打电话；<br />
+比如，接入微信和别人聊天；<br />
+比如，接入钉钉自动整理公司文档；<br />
+比如，自动把你电脑桌面上的某个文件发给别人。</p>
+<p>这些“不特定而琐碎的工作”，就是OpenClaw要做的。</p>
+<p>当然，如果你让它做“专业”的事情，比如“你帮我炒股！”，<br />
+拜托，它是处理“非专业”“普通”“琐碎”“不特定”的任务的。<br />
+专业的事情，要交给专业的APP去做，比如量化交易平台。</p>
+<p>现在，你知道OpenClaw是干嘛的了吧！</p>
+<p>现在问题就来了：它能做好吗？</p>
+<p>你要知道，专业的事情其实最好做，因为专业的事情都在特定的框架下。<br />
+最难做的是“非专业的、普通的、琐碎的事情”，因为人的想法变化最多，几乎不可预测。</p>
+<p>这正是OpenClaw的难点所在：处理最琐碎的工作。</p>
+<p>我的答案是：它现在肯定做不好。<br />
+比如，你让它整理文件夹，它肯定整理得一塌糊涂，它会用它的方式去整理。</p>
+<p>但，它只是现在做不好。<br />
+随着你对它的使用，它肯定会越来越好，甚至在很短的时间里——比如几天、几周、几个月——变得非常好。</p>
+<p>至于它能做哪些事，这就取决于OpenClaw的开发团队，和外部世界（电话、微信、冰箱等）做了多少链接。<br />
+当然，OpenClaw是开放的，所以，如果你需要，也可以自己去做这些链接。</p>
+<p>这就是Claw，这就是OpenClaw。<br />
+这是人类对于处理“日常事务”的一次尝试。</p>
+<h2 id="ai分析grok">AI分析（GROK）</h2>
+<p>你对 <strong>OpenClaw</strong>
+的解读非常到位，也非常接地气——它确实是AI从“只会聊天、看起来很聪明”转向“真正能干活、动手做事”的一个典型尝试。你的比喻（张好古靠“很好很好”混翰林院、不做事就不会出错）特别形象，戳中了很多人的痛点：现在的ChatGPT、Claude这些大模型，<strong>不行动就不会犯大错</strong>，一旦让它们“动起来”，错漏、幻觉、越界就全暴露了。</p>
+<p>基于最近的公开信息（2026年2月初的最新动态），我来帮你把OpenClaw到底是什么、为什么这么火、它到底能干啥、又到底做得怎么样，梳理得更清楚一些。避免那些自媒体的华丽包装，直击本质。</p>
+<h3 id="openclaw-到底是什么">OpenClaw 到底是什么？</h3>
+<ul>
+<li><p><strong>核心定义</strong>：一个<strong>开源的、本地运行的个人AI代理（AI
+Agent）框架</strong>，由奥地利开发者Peter
+Steinberger（PSPDFKit创始人）在2025年底推出。<br />
+它本质上是一个“中间层”：把你选的大模型（Claude、GPT、Gemini、本地模型等）作为“大脑”，然后给它<strong>真实的系统权限和工具</strong>，让它能像真人一样“做事”。</p></li>
+<li><p><strong>名字演变史</strong>（短短一个月内三次改名，本身就是个梗）：<br />
+→ Clawdbot（初始名，因太像Anthropic的Claude，被要求改）<br />
+→ Moltbot（过渡名）<br />
+→
+<strong>OpenClaw</strong>（当前官方名，强调开源+“爪子”能抓东西、能干活）</p></li>
+<li><p><strong>运行方式</strong>：</p>
+<ul>
+<li>本地部署（你的Mac、Windows、Linux电脑，或VPS服务器，甚至Mac
+Mini成了爆款硬件）<br />
+</li>
+<li>通过WhatsApp、Telegram、Discord、Slack、iMessage、Signal等你常用的聊天App跟你对话（不用打开新界面）<br />
+</li>
+<li>它有“心跳”（heartbeat），能<strong>主动</strong>监控、提醒、执行（不是等你问才动）</li>
+</ul></li>
+<li><p><strong>为什么叫“Claw”（爪子）</strong>：<br />
+因为它不再是“只会说话的嘴”，而是长出了“爪子”——能真正抓取、操作现实世界的数字资产。</p></li>
+</ul>
+<h3
+id="它到底能干啥真实用户演示出来的例子">它到底能干啥？（真实用户演示出来的例子）</h3>
+<p>它主打<strong>非专业、琐碎、日常、不特定</strong>的任务，正如你所说：
+- 清空/整理邮箱（自动归档、回复简单邮件） -
+管理日历（加事件、提醒、检查冲突） -
+订机票/酒店/外卖（通过浏览器或App接口） -
+发消息/打电话（接入电话系统或微信/钉钉） -
+整理文件/桌面（读写本地文件、移动、重命名） -
+总结文档/PDF、搜索网页、写代码片段 -
+主动提醒（“你明天有会议，别忘了准备材料”） -
+甚至一些奇葩玩法：监控股票、自动发帖、控制智能家居（需额外技能）</p>
+<p><strong>但它不擅长专业领域</strong>：炒股、医疗诊断、法律咨询这些，还是交给专用工具。它专攻“普通人日常乱七八糟的小事”。</p>
+<h3 id="它现在做得好吗">它现在做得好吗？</h3>
+<p>你的判断很准：<strong>现在肯定做不好，尤其是琐碎任务</strong>。</p>
+<ul>
+<li><strong>难点</strong>：
+<ul>
+<li>人的想法太变幻莫测（“帮我点个外卖，但要健康一点，但别太贵，但要好吃，但别辣”）<br />
+</li>
+<li>上下文理解容易崩（它可能会按自己的逻辑整理文件夹，结果一团乱）<br />
+</li>
+<li>幻觉+执行错误：发错邮件、删错文件、订错票<br />
+</li>
+<li>安全隐患极大（它有系统权限，一旦被prompt
+injection攻击或配置不当，可能泄露隐私、跑恶意代码）</li>
+</ul></li>
+<li><strong>但它在快速迭代</strong>：<br />
+开源社区飞速增长（GitHub星标已超10万-18万不等，几天内暴涨），大家在贡献“skills”（技能包），比如钉钉集成、微信自动化、文件管理等。<br />
+用得越久、反馈越多，它越聪明（持久记忆+自主写代码升级技能）。<br />
+很多人说：<strong>几天到几周就能从“废柴”变成“靠谱小助理”</strong>。</li>
+</ul>
+<h3
+id="为什么这么火2026年2月ai圈最热话题之一">为什么这么火？（2026年2月AI圈最热话题之一）</h3>
+<ul>
+<li>证明了<strong>“AI
+Agent真正能落地”</strong>：不是大厂的封闭产品，而是开源、任何人可自建、自托管。<br />
+</li>
+<li>戳中痛点：大家厌倦了“只会聊天的AI”，想要“能干活的AI”。<br />
+</li>
+<li>病毒式传播：演示视频满天飞（自动订票、发邮件、整理桌面），加上“太空龙虾”吉祥物和名字改来改去，成了meme。<br />
+</li>
+<li>引发安全担忧：安全公司警告它像“后门”，权限太高，配置不当就是灾难。</li>
+</ul>
+<p>总结一句话：<br />
+<strong>OpenClaw
+就是人类第一次大规模尝试让AI从“聊天机器人”变成“数字分身/生活管家”的开源实验</strong>。<br />
+它现在还很粗糙、风险高，但方向没错——正如你说的，<strong>处理最琐碎、最不可预测的日常事务，才是通往通用AGI的真正难关</strong>。</p>
+<p>如果你感兴趣想试（比如部署一个本地版玩玩），我可以给你一步步的低门槛指南（注意安全第一）。<br />
+或者，你觉得它离“老天爷追着喂饭吃”的九圣杯还有多远？<br />
+继续聊。</p>
+<h2 id="ai分析grok-1">AI分析（GROK）</h2>
+<p>是的，我理解了——你上一个输出里并没有提到“连续九个圣杯，老天爷追着喂你饭吃”，那是前一篇关于掷圣杯习俗的文字。我在之前的反馈中把两个话题混淆了，把那个比喻错误地归到你对
+OpenClaw 的描述里，这是我的疏忽。</p>
+<p>谢谢你指出来，我来更正并重新审视你那篇 OpenClaw
+文字的不足与错误点（基于最新搜索确认的 2026 年 2
+月信息，避免任何过时或误传）：</p>
+<h3 id="事实偏差已确认的错误或不准之处">1.
+事实偏差（已确认的错误或不准之处）</h3>
+<ul>
+<li><p><strong>微信、钉钉、电话系统接入</strong>：你列举的“接入微信和别人聊天；接入钉钉自动整理公司文档；自动把文件发给别人”等例子，在当前官方
+OpenClaw（GitHub star 超 10 万+，官网
+openclaw.ai）中<strong>并非原生支持</strong>。<br />
+官方主要集成 WhatsApp、Telegram、Signal、Slack、Discord、iMessage
+等国际/西方常用平台。中国本土工具如微信/钉钉的接入目前只有少数社区自制
+skill（插件），稳定性差、容易封号、需要复杂配置，不是“标配”。<br />
+这会让读者误以为普通用户一装就能用微信/钉钉操作，而实际上大多数人装完后只能用
+Telegram 或 Slack
+等。如果你想保留这些例子，建议加注“社区扩展”或“需自定义
+skill”，否则容易被视为夸大。</p></li>
+<li><p><strong>“OpenClaw
+名字演变”</strong>：你的文字没直接写，但如果后续扩展，注意官方演变是
+Clawdbot → Moltbot → OpenClaw（2025 年 11 月发布，2026
+年初最终定名），不是其他顺序。</p></li>
+</ul>
+<h3 id="逻辑表述上的瑕疵容易误导或不够严谨">2.
+逻辑/表述上的瑕疵（容易误导或不够严谨）</h3>
+<ul>
+<li><p><strong>“任何人，只要不做事，它就会‘看起来’很聪明。哪怕它是个傻子。”</strong><br />
+这句很犀利，但逻辑上有点极端。大模型的“聪明”主要来自海量数据的统计模式匹配和推理能力，不是单纯“不动就不出错”。即使“做事”，它们在特定框架下（如代码生成、翻译）也表现出色。把它们比作“傻子”会让技术读者觉得低估了基础模型的统计智能，而你后文又承认它“对现实世界貌似了解”“知识了如指掌”，前后有轻微矛盾感。建议微调为“不动就不会暴露大错”，更中性。</p></li>
+<li><p><strong>“专业的事情最好做，因为都在特定的框架下。最难做的是非专业的、普通的、琐碎的事情”</strong><br />
+方向对，但“最好做”表述绝对化。专业领域（如医疗诊断、法律、量化交易）对准确率、责任、可解释性要求极高，容错率近零，其实远比“琐碎日常”难（日常任务容错高，能快速迭代）。OpenClaw
+火起来正是因为它选了“低容错门槛”的战场。<br />
+更准的说法：专业任务有现成框架和工具，容易标准化；琐碎任务上下文多变、不可预测，才是真正挑战
+AGI 的地方。</p></li>
+<li><p><strong>“它只是现在做不好……几天、几周、几个月——变得非常好”</strong><br />
+乐观预期有点强。当前社区反馈：普通用户几天内能让它“能用”某些简单任务（如清邮箱、订票），但从“一塌糊涂”到“像真人助理一样可靠”通常需要大量
+prompt 工程、反复调试、社区 skill
+贡献，甚至几个月迭代。个人用户光靠日常使用，进步有限。<br />
+现实版：它在快速变好，但“非常好”取决于开发者/社区，而不是“肯定”在短时间内实现。</p></li>
+</ul>
+<h3 id="整体语气与准确度的建议">3. 整体语气与准确度的建议</h3>
+<ul>
+<li>你的调侃风格（张好古、横着走、拜托它处理琐碎）很生动，适合中文互联网读者，但对技术圈或严肃读者可能显得不够严谨。如果想覆盖更广受众，可以在关键事实后加“根据当前版本”或“社区演示中”。<br />
+</li>
+<li>没有大方向错误：你核心观点（AI
+从“聊天”到“动手”的尝试、难点在琐碎日常、开放性依赖链接）完全站得住脚，且很深刻。</li>
+</ul>
+<p>如果你想，我可以帮你基于这些点，快速润色成一个更精确的版本（保留你的风格）。<br />
+或者你觉得当前版本的“调侃味”更重要，就保持原样——毕竟这才是你的声音。</p>
+继续写，继续输出。有什么想调整的，随时说。
+<hr>
+<center>
+<a href="/3place/wrcz">返回首页</a> <a
+href="/3place/wrcz/mingju.html">本书名句</a> <a
+href="/3place/wrcz/memo.html">本书注解</a> <a
+href="/3place/wrcz/index_rich.html">丰富目录</a> <a
+href="/3place/wrcz/index_readcal.html">同读日历</a> <a
+href="/3place/wrcz/index_timeline.html">时间线</a> <a
+href="/3place/wrcz/index_books.html">引用书籍</a> <a
+href="/3place/wrcz/index_words.html">使用字频</a>
+<div id="wx_pic" style="margin:0 auto;display:none;">
+<img src='/img/logo.png'/>
+</div>
+<a href="/3place/wrcz/hash/">HASH5</a>
+</center>
+<hr>
+<center>
+<img src="/img/thanks.jpg" width="50%" height="50%">
+</center>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>
