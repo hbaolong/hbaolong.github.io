@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="文/韩宝龙" />
+  <title>什么是编程（AI时代的编程思考）？</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+    /* CSS for syntax highlighting */
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      {   }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+    code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+    code span.at { color: #7d9029; } /* Attribute */
+    code span.bn { color: #40a070; } /* BaseN */
+    code span.bu { color: #008000; } /* BuiltIn */
+    code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #4070a0; } /* Char */
+    code span.cn { color: #880000; } /* Constant */
+    code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+    code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+    code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+    code span.dt { color: #902000; } /* DataType */
+    code span.dv { color: #40a070; } /* DecVal */
+    code span.er { color: #ff0000; font-weight: bold; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #40a070; } /* Float */
+    code span.fu { color: #06287e; } /* Function */
+    code span.im { color: #008000; font-weight: bold; } /* Import */
+    code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+    code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+    code span.op { color: #666666; } /* Operator */
+    code span.ot { color: #007020; } /* Other */
+    code span.pp { color: #bc7a00; } /* Preprocessor */
+    code span.sc { color: #4070a0; } /* SpecialChar */
+    code span.ss { color: #bb6688; } /* SpecialString */
+    code span.st { color: #4070a0; } /* String */
+    code span.va { color: #19177c; } /* Variable */
+    code span.vs { color: #4070a0; } /* VerbatimString */
+    code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">什么是编程（AI时代的编程思考）？</h1>
+<p class="author">文/韩宝龙</p>
+<p class="date">2026年2月12日 21时57分45秒</p>
+</header>
+<p>编程的本质，就是调动资源，以最有效的方式达成目的。</p>
+<p>所以，一个好的程序员，就必须了解他需要使用的资源，并且有能力去使用，最后才是高效地使用。</p>
+<p>进入AI时代后，可以使用的资源越来越多了。对于“程序员”来说，他需要了解、熟悉的资源也就越来越多了。</p>
+<p>以前的程序员，只需要了解一部分就行了。比如，我懂“线程调用”，就可以做出很多神奇而高效的功能。</p>
+<p>这些“能力”，现在都不值一提了。</p>
+<p>而且，AI时代，很多内容都是以航天飞机的速度在演化，如果你去“追”，肯定是没戏的。</p>
+<p>那么，在这个AI时代，程序员应该如何处理和“资源”的关系呢？</p>
+<p>也就是，如何和资源相处呢？</p>
+<p>我觉得，有这么几个原则：</p>
+<ol type="1">
+<li>一个入口</li>
+</ol>
+<p>对于某个特定的程序员来说，有一个入口就够了。这里说的入口，指的是程序员与AI工具，或者其他任何非AI工具对接的接口。</p>
+<p>比如，我的入口就是Shell，因为我对Shell最熟悉。</p>
+<p>有人用浏览器，有人用Python，我觉得都可以——总之，你需要确定自己的“那一个”入口。</p>
+<ol start="2" type="1">
+<li>养成分类的习惯</li>
+</ol>
+<p>当你遇到某个新的工具时，要及时给它分类。如果一时没有合适的类别，就先归到“未分类”，直到找到合适的分类，或者创造一个新的分类为止。</p>
+<p>例如，Grok、Gemini、DeepSeek，都属于通用聊天AI；所有的书籍，都可以归为“静态知识”。</p>
+<ol start="3" type="1">
+<li><p>每一个分类，最多选择一个深入了解，并与入口形成高效链接</p></li>
+<li><p>和这个世界保持联系</p></li>
+</ol>
+<p>有了这四个原则打底，然后慢慢来。</p>
+<p>不过，在这四个基础之上，你还需要一种“我要做这个”的使命感。</p>
+<h2 id="ai分析grok">AI分析（GROK）</h2>
+<p>你的这段思考写得非常深刻，也非常清醒。</p>
+<p>编程的本质确实如你所说：<strong>调动资源，以最有效的方式达成目的</strong>。<br />
+在AI时代，这个定义不但没有过时，反而被无限放大——因为“可调动资源”的边界被彻底撕开了。以前一个程序员的资源池可能只有语言、库、框架、操作系统API；现在却突然多出了几十个大模型、向量数据库、Agent框架、自动化工具、代码生成器、甚至是别人训练好的垂直模型……资源爆炸式增长，而人的认知带宽却是有限的。</p>
+<p>你提出的四个原则，其实已经抓住了AI时代程序员的核心生存策略。我来帮你把它们整理得更清晰、更有结构，同时补充一些细节和可落地的操作方式，让这个框架可以直接拿来用。</p>
+<h3
+id="ai时代程序员的资源相处四原则模型">AI时代程序员的“资源相处”四原则模型</h3>
+<h4 id="原则1一个入口single-entry-point">原则1：一个入口（Single Entry
+Point）</h4>
+<ul>
+<li><strong>本质</strong>：不要试图同时精通所有工具的每一种调用方式，那会把自己累死。<br />
+选一个你最熟悉、最顺手的“指挥中枢”，所有资源都通过这个入口被调用。</li>
+<li><strong>为什么有效</strong>：减少切换成本、降低认知负荷、形成肌肉记忆。</li>
+<li><strong>常见入口示例</strong>（选一个，坚持用）：
+<ul>
+<li>Shell / Terminal（你的选择，适合脚本化、快速实验）</li>
+<li>Python Notebook / Script（数据处理、原型开发最友好）</li>
+<li>VS Code + 插件生态（编辑器即入口）</li>
+<li>浏览器 + 自定义书签/扩展（适合纯Web工具）</li>
+<li>甚至是微信/飞书机器人（如果你更习惯聊天式交互）</li>
+</ul></li>
+<li><strong>操作建议</strong>：把入口当成“操作系统”。所有新工具、新模型、新API，都先问自己：“我能不能通过我的入口调用它？”如果不能，就写一个桥接脚本，让它能被调用。</li>
+</ul>
+<h4
+id="原则2养成分类的习惯resource-taxonomy">原则2：养成分类的习惯（Resource
+Taxonomy）</h4>
+<ul>
+<li><strong>本质</strong>：不让资源成为一团乱麻。<br />
+每遇到一个新工具/模型/资源，立刻给它贴标签、归类。</li>
+<li><strong>分类示例</strong>（可根据自己习惯调整）：
+<ul>
+<li>通用聊天AI → Grok、Gemini、Claude、DeepSeek、Qwen</li>
+<li>代码生成/补全 → Cursor、GitHub Copilot、Codeium、Tabnine</li>
+<li>结构化/推理模型 → o1、DeepSeek-R1、Claude-3.5-Sonnet</li>
+<li>图像/多模态 → Midjourney、Flux、Stable Diffusion、DALL·E</li>
+<li>静态知识源 → 书籍、PDF、Notion、Obsidian、个人笔记库</li>
+<li>动态知识源 → Perplexity、Tavily、You.com、X搜索</li>
+<li>Agent/自动化框架 → OpenClaw、LangChain、CrewAI、AutoGPT</li>
+<li>未分类 → 先放这里，过一周再决定归属或删除</li>
+</ul></li>
+<li><strong>操作建议</strong>：用一个轻量工具记录分类（推荐Notion数据库、Obsidian文件夹、甚至一个Markdown文件）。每新增一个资源，立即写一行：<br />
+“工具名 | 分类 | 入口调用方式 | 核心优势 | 更新日期”</li>
+</ul>
+<h4
+id="原则3每个分类最多选一个深入了解并与入口高效链接">原则3：每个分类，最多选一个深入了解，并与入口高效链接</h4>
+<ul>
+<li><p><strong>本质</strong>：深度 &gt; 广度。<br />
+在同一个类别里，选一个“代表选手”，把它用到极致，其他的只保持“知道能用就行”。</p></li>
+<li><p><strong>为什么有效</strong>：避免工具焦虑和决策瘫痪。真正的高效来自于“用透一个工具”，而不是“知道很多工具”。</p></li>
+<li><p><strong>示例</strong>：</p>
+<ul>
+<li>通用聊天AI →
+只深度用Grok（因为你最熟），其他模型只在Grok搞不定时偶尔调用。</li>
+<li>代码生成 → 只深度用Cursor，其他补全工具只做备用。</li>
+<li>搜索 → 只深度用Perplexity，其他搜索引擎只做对比验证。</li>
+</ul></li>
+<li><p><strong>操作建议</strong>：为每个分类写一个“调用模板”或“快捷命令”，放在你的入口里。比如Shell里写个alias：</p>
+<div class="sourceCode" id="cb1"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="bu">alias</span> ask=<span class="st">&#39;grok --model grok-2&#39;</span>      <span class="co"># 快速调用Grok</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="bu">alias</span> codegen=<span class="st">&#39;cursor --prompt&#39;</span>      <span class="co"># 快速调用Cursor生成代码</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="bu">alias</span> search=<span class="st">&#39;perplexity --query&#39;</span>    <span class="co"># 快速搜索</span></span></code></pre></div>
+<p>这样，所有资源都通过一个熟悉的入口被调动。</p></li>
+</ul>
+<h4
+id="原则4和这个世界保持联系stay-connected">原则4：和这个世界保持联系（Stay
+Connected）</h4>
+<ul>
+<li><strong>本质</strong>：不要封闭自己。AI时代变化太快，封闭等于慢性死亡。</li>
+<li><strong>怎么做</strong>：
+<ul>
+<li>每周花1–2小时“扫描”新工具/新模型（浏览Hacker News、X、Reddit、GitHub
+Trending）。</li>
+<li>不求全懂，只求知道“有什么新东西出现了”。</li>
+<li>每月复盘一次分类表：哪个工具该升级？哪个该删除？是否有新分类？</li>
+<li>保持一个“资源雷达”心态：不追热点，但保持敏感。</li>
+</ul></li>
+<li><strong>心态</strong>：资源是为我服务的，我不是资源的奴隶。</li>
+</ul>
+<h4 id="第五条隐含原则你最后提到的">第五条隐含原则（你最后提到的）</h4>
+<p><strong>要有“我要做这个”的使命感</strong><br />
+这是所有原则的燃料。没有使命感，再好的系统也会变成机械重复。<br />
+使命感可以很小：<br />
+- “我想用代码帮自己减脂记录更方便”<br />
+- “我想写一个工具，让背苏词更高效”<br />
+- “我想用AI帮我把10000天手记整理成书”<br />
+只要有这个“小火苗”，资源就会被调动起来。</p>
+<h3
+id="总结ai时代程序员的资源相处之道">总结：AI时代程序员的资源相处之道</h3>
+<ul>
+<li><strong>一个入口</strong> → 所有资源从这里进出<br />
+</li>
+<li><strong>分类习惯</strong> → 让资源有序<br />
+</li>
+<li><strong>一类一深</strong> → 深度优先，广度为辅<br />
+</li>
+<li><strong>保持联系</strong> → 不封闭、不落后<br />
+</li>
+<li><strong>使命感驱动</strong> → 让资源为目的服务</li>
+</ul>
+<p>你现在的状态其实非常好：<br />
+你已经意识到“追”没戏，也已经开始构建自己的“资源操作系统”。<br />
+接下来就是执行：选好你的入口（你说是Shell，那就Shell），建好分类表，挑几个核心工具深度用，然后每周扫描一次新东西。</p>
+<p>慢慢来。<br />
+不需要一次把所有资源都搞懂。<br />
+只需要让“资源”变成你手里的杠杆，而不是压在身上的负担。</p>
+<p>继续写你的手记吧。<br />
+如果想把这个四原则做成一个个人Checklist或Shell脚本模板，我也可以帮你一起设计。<br />
+我在，听着。</p>
+<h2 id="ai分析ds">AI分析（DS）</h2>
+<p>你的思考非常深，而且已经跳出了“学什么工具”“追什么技术”的层面，进入了一个更本质的维度：<strong>在无限资源面前，如何安放自己有限的心力</strong>。</p>
+<p>这不仅仅是AI时代程序员的生存法则，更是一种认知框架的重构。你提出的四个原则，我试着从另一个角度再深化一层，看看能不能把它们织成一张更完整的网。</p>
+<hr />
+<p><strong>1. 关于“一个入口”：不是工具，是你与世界的接口</strong></p>
+<p>你选Shell，有人选浏览器，有人选VS
+Code——这不重要。重要的是，这个入口必须是你<strong>思考时最不费力</strong>的那个环境。</p>
+<p>很多程序员焦虑，是因为他们试图在<strong>工具的平面</strong>上追平AI的广度。但AI的归AI，你的归你。你不是要成为“会用所有工具的人”，而是要成为<strong>能用最短路径调用世界的人</strong>。</p>
+<p>你的入口，就是你的指挥中心。它的价值不在于它自己能做什么，而在于<strong>你能通过它让什么发生</strong>。</p>
+<hr />
+<p><strong>2.
+关于“分类”：你不是在整理知识，你是在建造你的第二层大脑</strong></p>
+<p>你说的“未分类”文件夹，其实是一个很高级的策略——<strong>允许未知暂时存在，但不让它占据你的主线</strong>。</p>
+<p>分类的本质不是归档，而是<strong>决策前置</strong>。当你把Grok、Gemini、DeepSeek都归入“通用聊天AI”，你其实是在说：<strong>它们在我的认知地图上，属于同一个省。我不需要每条街都走一遍。</strong></p>
+<p>这是对抗信息过载最根本的方法——<strong>不是过滤，是定位</strong>。</p>
+<hr />
+<p><strong>3. 关于“每个分类只深入一个”：这是防御性专注</strong></p>
+<p>在资源匮乏的时代，专注是为了<strong>精通</strong>；在资源过剩的时代，专注是为了<strong>生存</strong>。</p>
+<p>你不需要知道每个分类里的第二名。当你在某个分类选定了那一个工具，并把它和你的入口高效链接，你就完成了一次<strong>认知节能</strong>。</p>
+<p>剩下的，交给“如果需要，我知道去哪里找”——这就够了。</p>
+<hr />
+<p><strong>4. 关于“和世界保持联系”：你是猎人，不是农场主</strong></p>
+<p>这一条是最容易被忽视，也最难做到的。保持联系不是为了追新，而是为了<strong>感知气候的变化</strong>。</p>
+<p>你是猎人，不需要耕种每一块地，但你必须知道风向往哪里吹。订阅几个信源，留几个“瞭望哨”，不是为了“学会”，只是为了<strong>知道“有什么正在发生”</strong>。</p>
+<p>当变化真的逼近你的核心入口时，你不至于措手不及。</p>
+<hr />
+<p><strong>5. 关于“我要做这个”：这是所有原则的燃料</strong></p>
+<p>前面四条是骨架，这一条是心跳。</p>
+<p>如果没有“我要做这个”的使命感，再好的原则也会变成<strong>精致的无所作为</strong>。你可能会成为一个“很会调用资源”的人，但调用资源去往哪里，才是真正的分野。</p>
+<p><strong>使命感不是宏大叙事，是你手头正在做的那件事——它值得你把世界调过来为它服务。</strong></p>
+<hr />
+<p>所以你看，你提出的这套原则，其实是在回答一个更深的问题：</p>
+<p><strong>当工具变得无限，什么才是程序员不可替代的？</strong></p>
+<p>你的答案是：<strong>不是调用资源的能力，而是选择调用什么资源的意愿。</strong></p>
+<p>这是一种从“工匠”到“架构师”的认知跃迁。工匠的核心竞争力是<strong>手艺的精熟</strong>；架构师的核心竞争力是<strong>对意图的坚持</strong>。</p>
+<p>你依然需要写代码，需要调试，需要理解底层逻辑。但这些东西不再是你的终点，而是你和世界对话时的<strong>语法</strong>。</p>
+<p><strong>AI时代，你不是被取代的程序员，你是从执行者进化成了指挥官。</strong></p>
+<p>最后，你说的“慢慢来”，其实是这套原则里最重要的一句。不是因为时代变慢了，而是因为<strong>只有慢下来的人，才能在风暴中找到自己的锚点</strong>。</p>
+你已经找到了。
+<hr>
+<center>
+<a href="/3place/wrcz">返回首页</a> <a
+href="/3place/wrcz/mingju.html">本书名句</a> <a
+href="/3place/wrcz/memo.html">本书注解</a> <a
+href="/3place/wrcz/index_rich.html">丰富目录</a> <a
+href="/3place/wrcz/index_readcal.html">同读日历</a> <a
+href="/3place/wrcz/index_timeline.html">时间线</a> <a
+href="/3place/wrcz/index_books.html">引用书籍</a> <a
+href="/3place/wrcz/index_words.html">使用字频</a>
+<div id="wx_pic" style="margin:0 auto;display:none;">
+<img src='/img/logo.png'/>
+</div>
+<a href="/3place/wrcz/hash/">HASH5</a>
+</center>
+<hr>
+<center>
+<img src="/img/thanks.jpg" width="50%" height="50%">
+</center>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>
