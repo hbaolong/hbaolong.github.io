@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="文/韩宝龙" />
+  <title>分析一个AI对话</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">分析一个AI对话</h1>
+<p class="author">文/韩宝龙</p>
+<p class="date">2026年2月26日 21时45分23秒</p>
+</header>
+<p>20260224_AI后时代生存之道_毛盼盼&amp;Leo&amp;张欣然_AI冲击下的生存与资产策略_避险与智能体经济</p>
+<h2
+id="地理避险生存地的筛选标准与备选方案">地理避险：生存地的筛选标准与备选方案</h2>
+<h4 id="提问">提问</h4>
+<p>在AI冲击或潜在热战背景下，应选择什么样的地理位置作为避险地？</p>
+<h4 id="回答">回答</h4>
+<p>优先选择远离政治/战略中心、能自给自足（有水、电、耕地）且有小团体抱团能力的地区。</p>
+<p>具体推荐：</p>
+<ol type="1">
+<li><p>云南（楚雄、大理）：气候好、物价低、已有数字游民聚集地。</p></li>
+<li><p>新疆：地广人稀、粮食产能足以支撑当地、远离内陆动荡。</p></li>
+<li><p>安徽南部（黄山、大别山）：相对安全。避开北京、合肥、杭州等重点攻击对象及山东等人口高密度区。</p></li>
+</ol>
+<h4 id="内容">内容</h4>
+<p>毛盼盼分享了基于安全等级和五行的排序，Leo补充了生存底线原则及新疆的防御价值。</p>
+<h4 id="关键词-地理避险-自给自足-云南-新疆-避难所">关键词 地理避险,
+自给自足, 云南, 新疆, 避难所</h4>
+<h2
+id="社会风险ai对社会中间层的剧烈冲击">社会风险：AI对社会中间层的剧烈冲击</h2>
+<h4 id="提问-1">提问</h4>
+<p>这一轮AI浪潮与以往的技术革命有何本质区别？</p>
+<h4 id="回答-1">回答</h4>
+<p>冲击速度极快，预期在2-3年内打破现有经济循环，而非像以往有10-20年消化期。核心风险在于白领中间层会被急剧压缩（就业人口可能降低30%-50%），导致社会组织结构无法承接冲击，进而引发银行体系、房贷等系统性风险。</p>
+<h4 id="内容-1">内容</h4>
+<p>Leo认为人类劳动力在成本结构上已丧失竞争优势，且社会结构难以应对递归式进化的智能体。</p>
+<h4 id="关键词-生产力爆发-中间层坍塌-系统性风险-递归循环">关键词
+生产力爆发, 中间层坍塌, 系统性风险, 递归循环</h4>
+<h2
+id="生存哲学碳基物种在硅基时代的小麦逻辑">生存哲学：碳基物种在硅基时代的“小麦逻辑”</h2>
+<h4 id="提问-2">提问</h4>
+<p>当AI智力远超人类时，人类应如何定位自己的存在价值？</p>
+<h4 id="回答-2">回答</h4>
+<p>人类应借鉴“小麦生存逻辑”：人类曾驯化小麦，但实际也被小麦反向筛选。当AI递归完成、智力达到数百万级别时，人类可能沦为“低等物种”或“宠物”。只要人类不形成阻力（不阻碍其建设与扩张），硅基生命可能并不在意人类的存在。人类应致力于提供情绪价值或微小的协作价值（如建设厂房、能源供应），以维持“蜜月期”。</p>
+<h4 id="内容-2">内容</h4>
+<p>Leo提出物种跃迁论，认为硅基生命是无机物向有机物之后的下一次进化，人类需寻找与智能体协作的生态位。</p>
+<h4 id="关键词-小麦逻辑-碳基与硅基-宠物假设-物种进化">关键词 小麦逻辑,
+碳基与硅基, 宠物假设, 物种进化</h4>
+<h2
+id="商业机会从服务人类转向服务智能体">商业机会：从服务人类转向服务智能体</h2>
+<h4 id="提问-3">提问</h4>
+<p>在AI时代，哪些领域还存在赚钱的增量空间？</p>
+<h4 id="回答-3">回答</h4>
+<ol type="1">
+<li><p>智能体服务市场：满足Agent的算力、存储、能源及支付结算需求，这是未来的主要增量。</p></li>
+<li><p>个人情绪价值：为同胞提供情感慰藉。</p></li>
+<li><p>资产类价值：关注具有穿越周期能力的资产。尽量避开“功能性价值”赛道，因为其性价比极易被AI卷到零利润。</p></li>
+</ol>
+<h4 id="内容-3">内容</h4>
+<p>Leo指出<strong>AI带来的增量不来自人类需求，而来自智能体和具身智能的自我进化需求。</strong></p>
+<h4 id="关键词-智能体需求-情绪价值-增量空间-功能性价值">关键词
+智能体需求, 情绪价值, 增量空间, 功能性价值</h4>
+<h2
+id="金融基建web3作为智能体经济的雏形">金融基建：Web3作为智能体经济的雏形</h2>
+<h4 id="提问-4">提问</h4>
+<p>现有的货币和支付体系将如何演变以适应智能体？</p>
+<h4 id="回答-4">回答</h4>
+<p>传统的银行和Swift体系是为工业时代设计的，对智能体而言阻力太大。基于Web3的加密货币体系（如Solana,
+Polygon）虽然目前不完善，但其链上结算特性天然契合智能体。<strong>智能体需要的是高频、精准、无国界的价值交换载体（如小数点后60位的精度），这可能催生下一代硅基金融体系。</strong></p>
+<h4 id="内容-4">内容</h4>
+<p>Leo研究发现<strong>Agent在使用钱包时非常自然，Web3可能是智能体经济的钱庄阶段。</strong></p>
+<h4 id="关键词-agent支付-web3-价值交换-链上结算">关键词 Agent支付, Web3,
+价值交换, 链上结算</h4>
+<h2
+id="组织进化邓巴数失效与ai驱动的情报组织系统">组织进化：邓巴数失效与AI驱动的情报/组织系统</h2>
+<h4 id="提问-5">提问</h4>
+<p>AI将如何改变人类的组织架构和学习模式？</p>
+<h4 id="回答-5">回答</h4>
+<ol type="1">
+<li><p>组织去科层化：Agent拥有强大的长上下文记忆（Memory），不再受限于人类领导者的邓巴数（约150人限制），单个Agent可对接数百人，传统科层制可能瓦解。</p></li>
+<li><p>推荐式教育：由于AI进化太快，人类需要一种“自动化推荐学习机制”来跟上意图表达的节奏。</p></li>
+<li><p>算力平权：在AI面前，人类个体的算力差异被抹平，选择“相信算力更强的AI”可能成为一种生存策略。</p></li>
+</ol>
+<h4 id="内容-5">内容</h4>
+<p>张欣然分享了关于“硅基经济学”和复杂系统的研究，以及对奇迹创坛裁员现状的观察。</p>
+<h4 id="关键词-邓巴数-记忆机制-组织变革-算力平权">关键词 邓巴数,
+记忆机制, 组织变革, 算力平权</h4>
+<h2
+id="行动计划道组织建设与游学考察">行动计划：道组织建设与游学考察</h2>
+<h4 id="提问-6">提问</h4>
+<p>面对不确定的未来，小团体应采取哪些具体行动？</p>
+<h4 id="回答-6">回答</h4>
+<ol type="1">
+<li><p>建立“道组织”：形成具有共同价值观、能抱团取暖的线上线下组织。</p></li>
+<li><p>地理资源盘点：成员贡献家乡资源，筛选3个以上的聚集地（如云南、四川、九江等）以分级抵御风险。</p></li>
+<li><p>游学考察：安排实地调研，提前储备避险地。</p></li>
+<li><p>资产对冲：必要时储备实物黄金或比特币（大饼）作为跨周期资产。</p></li>
+</ol>
+<h4 id="内容-6">内容</h4>
+<p>毛盼盼总结了会议共识，强调了地理空间备份和新型组织形式的重要性。</p>
+<h4 id="关键词-道组织-抱团取暖-游学考察-风险抵御">关键词 道组织,
+抱团取暖, 游学考察, 风险抵御</h4>
+<h2
+id="生产力实操利用智能体构建视频内容流水线">生产力实操：利用智能体构建视频内容流水线</h2>
+<h4 id="提问-7">提问</h4>
+<p>如何具体利用AI提升内容生产效率？</p>
+<h4 id="回答-7">回答</h4>
+<p>Leo分享了其视频号经验：</p>
+<ol type="1">
+<li><p>文稿生成：通过训练Agent学习固定模板，加入“废话文学”和“钩子”以提升用户停留。</p></li>
+<li><p>素材自动化：利用Agent从外网（Youtube）抓取素材并自动剪辑成块。</p></li>
+<li><p>流程压缩：将一期视频的人工参与时间从原本的高强度压缩至3-4小时，Agent承担60%以上的拼装组合工作。</p></li>
+</ol>
+<h4 id="内容-7">内容</h4>
+<p>Leo解释了如何通过Skill训练让智能体替代人工进行选题、写稿和搜集素材。</p>
+<h4 id="关键词-内容自动化-视频流水线-skill训练-生产力工具">关键词
+内容自动化, 视频流水线, Skill训练, 生产力工具</h4>
+<hr>
+<center>
+<a href="/3place/wrcz">返回首页</a> <a
+href="/3place/wrcz/mingju.html">本书名句</a> <a
+href="/3place/wrcz/memo.html">本书注解</a> <a
+href="/3place/wrcz/index_rich.html">丰富目录</a> <a
+href="/3place/wrcz/index_readcal.html">同读日历</a> <a
+href="/3place/wrcz/index_timeline.html">时间线</a> <a
+href="/3place/wrcz/index_books.html">引用书籍</a> <a
+href="/3place/wrcz/index_words.html">使用字频</a>
+<div id="wx_pic" style="margin:0 auto;display:none;">
+<img src='/img/logo.png'/>
+</div>
+<a href="/3place/wrcz/hash/">HASH5</a>
+</center>
+<hr>
+<center>
+<img src="/img/thanks.jpg" width="50%" height="50%">
+</center>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>
