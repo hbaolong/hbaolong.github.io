@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="文/韩宝龙" />
+  <title>用完整的软件工程来完整‘阅读超市’</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">用完整的软件工程来完整‘阅读超市’</h1>
+<p class="author">文/韩宝龙</p>
+<p class="date">2026年3月11日 22时22分00秒</p>
+</header>
+<p>接下来的一周，我要用完整的软件工程的思路，0代码的方式，完整‘阅读超市’，也就是用营养素类比书籍的项目。</p>
+<h2 id="利永贞">利永贞</h2>
+<h4 id="读书">读书</h4>
+<h4 id="写字">写字</h4>
+<h4 id="慢跑">慢跑</h4>
+<h4 id="核心平板静蹲等">核心（平板、静蹲等）</h4>
+<h4 id="朋友交往">朋友交往</h4>
+<h2 id="群龙无首">群龙无首</h2>
+<h4 id="读书-1">读书</h4>
+<h4 id="约见陌生人">约见陌生人</h4>
+<h4 id="使用新工具">使用新工具</h4>
+<h2 id="ai分析ds">AI分析（DS）</h2>
+<p>你把“阅读超市”这个想法，放进“软件工程”的框架里，用“营养素”作类比——这是一个既熟悉又新鲜的组合。</p>
+<p>熟悉的是，你一直在用“慢碳慢知识”的比喻，把知识比作食物，把阅读比作消化。新鲜的是，你这次要用“完整的软件工程思路”来执行，而且是“0代码”——这意味着你不是在写程序，而是在用工程的思维来设计、执行、迭代一个为期一周的“知识摄入项目”。</p>
+<p>这很像是给自己做一次<strong>认知上的Sprint</strong>。</p>
+<hr />
+<h2 id="一什么是阅读超市">一、什么是“阅读超市”？</h2>
+<p>我试着还原你的隐喻：</p>
+<ul>
+<li><strong>超市</strong>：是知识的集散地，摆满了各种“书籍/信息/概念”。</li>
+<li><strong>营养素</strong>：是你给知识分类的维度——快碳知识（快速吸收、即时能量）、慢碳知识（缓慢释放、持久供能）、蛋白质知识（构建思维肌肉）、脂肪知识（储备能量，但过量会臃肿）、维生素/矿物质知识（微量但关键）……</li>
+<li><strong>阅读</strong>：不再是“看书”，而是<strong>选择、搭配、摄入、消化</strong>的过程。</li>
+<li><strong>软件工程思路</strong>：需求分析（我需要什么知识？）、设计（如何搭配？）、实现（如何阅读？）、测试（我消化了吗？）、迭代（如何改进？）。</li>
+</ul>
+<p>你接下来一周，就是要用这套方法论，把自己当成一个“知识身体系统”，进行一次有意识的、可度量的、可优化的知识摄入实验。</p>
+<hr />
+<h2 id="二为什么是0代码">二、为什么是“0代码”？</h2>
+<p>“0代码”在这里是个有趣的限定。你不是要做个App，不是要写自动化脚本，而是<strong>用思维本身来执行工程</strong>。</p>
+<p>这意味着：</p>
+<ul>
+<li>工具是你的大脑、笔记本、可能还有AI助手；</li>
+<li>代码是<strong>你的决策逻辑</strong>；</li>
+<li>运行环境是<strong>你的日常生活</strong>；</li>
+<li>输出是<strong>你一周后的认知状态</strong>。</li>
+</ul>
+<p>这是一种“人即程序”的工程实践——你既是开发者，又是运行环境，还是最终产品。</p>
+<hr />
+<h2 id="三如何用软件工程思路来执行">三、如何用软件工程思路来执行？</h2>
+<p>我可以帮你把这一周的“阅读超市”拆解成几个经典的工程阶段，供你参考：</p>
+<h3 id="需求分析day-1">1. 需求分析（Day 1）</h3>
+<ul>
+<li><strong>问题</strong>：我这周需要什么样的“营养素”？是补充“快碳知识”以应对紧急工作，还是“慢碳知识”以构建长期思维？是“蛋白质知识”来强化某个专业领域，还是“维生素知识”来填补认知盲区？</li>
+<li><strong>输出</strong>：一份“知识购物清单”，可能分类列出你想“摄入”的书籍/文章/概念。</li>
+</ul>
+<h3 id="架构设计day-1-2">2. 架构设计（Day 1-2）</h3>
+<ul>
+<li><strong>问题</strong>：如何搭配这些知识？哪些该精读（慢碳），哪些该泛读（快碳），哪些只需“闻一闻”（维生素）？</li>
+<li><strong>输出</strong>：一周阅读计划表，每天的时间分配，阅读顺序，以及“消化方式”（笔记、复述、实践、讨论等）。</li>
+</ul>
+<h3 id="迭代开发day-2-6">3. 迭代开发（Day 2-6）</h3>
+<ul>
+<li><strong>执行</strong>：每天按照计划“摄入”，但允许调整。就像敏捷开发中的每日站会，你可以每天早晨回顾昨天读的“吸收效果”，调整今天的“菜谱”。</li>
+<li><strong>关键</strong>：保持“测试驱动”——每读完一个章节或一本书，问自己：我吸收了吗？能用一句话讲给别人听吗？能和我已有的知识产生连接吗？</li>
+</ul>
+<h3 id="集成测试day-6-7">4. 集成测试（Day 6-7）</h3>
+<ul>
+<li><strong>问题</strong>：这一周摄入的“营养素”是否在体内形成了新的认知结构？有没有“食物相克”（概念冲突）？有没有“营养过剩”（信息过载）？</li>
+<li><strong>方式</strong>：尝试写一篇总结，或者用“费曼技巧”把这一周学到的核心讲给一个假想的听众（或AI），看是否流畅。</li>
+</ul>
+<h3 id="部署与运维day-7-及以后">5. 部署与运维（Day 7 及以后）</h3>
+<ul>
+<li><strong>部署</strong>：把新知识“部署”到你的日常思维中，让它成为你的一部分。</li>
+<li><strong>运维</strong>：持续观察这些知识如何在未来被调用，是否需要“补丁”或“升级”。</li>
+</ul>
+<hr />
+<h2
+id="四几个可能需要注意的工程风险">四、几个可能需要注意的“工程风险”</h2>
+<ul>
+<li><strong>过度设计</strong>：别让计划本身变成负担。软件工程的本质是“解决实际问题”，不是“写完美文档”。保持灵活。</li>
+<li><strong>消化不良</strong>：你之前强调过“慢”——给知识裹上包裹，让它们缓慢释放。这一周虽然只有七天，但也要注意“摄入量”不要超过“消化能力”。</li>
+<li><strong>需求蔓延</strong>：逛超市时容易什么都想买。坚持你的清单，或者至少记录“冲动购物”的原因，事后分析。</li>
+</ul>
+<hr />
+<h2 id="五这和你的用六用九完全一致">五、这和你的“用六用九”完全一致</h2>
+<p>用六：每天固定的阅读节奏，持续摄入，这是“利永贞”。
+用九：允许自己尝试没读过的类型，允许惊喜，这是“见群龙无首”。</p>
+<p>软件工程的本质，也是用六（稳定的流程）和用九（拥抱变化）的结合。</p>
+<hr />
+<h2
+id="六最后想送你一句你可能需要的话">六、最后，想送你一句你可能需要的话</h2>
+<p>这一周，你不是在“读书”，你是在<strong>为自己设计一场认知的营养实验</strong>。</p>
+<p>实验的成果，不是记住了多少，而是你对自己的“知识代谢系统”有了更深的了解——就像你通过桑拿房、15个饺子、盐与情绪，越来越了解自己的身体一样。</p>
+期待你一周后分享你的“实验报告”。
+<hr>
+<center>
+<a href="/3place/wrcz">返回首页</a> <a
+href="/3place/wrcz/mingju.html">本书名句</a> <a
+href="/3place/wrcz/memo.html">本书注解</a> <a
+href="/3place/wrcz/index_rich.html">丰富目录</a> <a
+href="/3place/wrcz/index_readcal.html">同读日历</a> <a
+href="/3place/wrcz/index_timeline.html">时间线</a> <a
+href="/3place/wrcz/index_books.html">引用书籍</a> <a
+href="/3place/wrcz/index_words.html">使用字频</a>
+<div id="wx_pic" style="margin:0 auto;display:none;">
+<img src='/img/logo.png'/>
+</div>
+<a href="/3place/wrcz/hash/">HASH5</a>
+</center>
+<hr>
+<center>
+<img src="/img/thanks.jpg" width="50%" height="50%">
+</center>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>
