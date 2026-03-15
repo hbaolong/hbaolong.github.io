@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="文/韩宝龙" />
+  <title>题目这东西，我有个程序员的角度</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">题目这东西，我有个程序员的角度</h1>
+<p class="author">文/韩宝龙</p>
+<p class="date">2026年3月15日 10时05分31秒</p>
+</header>
+<h2
+id="题目这东西我有个程序员的角度">题目这东西，我有个程序员的角度</h2>
+<p>今天美娟讲王国维《人间词话》第五十五则，说到“诗有题而诗亡，词有题而词亡”。王国维的意思是，最早的诗词都没有题目，后人硬加题目，反而把意境框死了。</p>
+<p>美娟讲得挺好，从庄子“混沌开七窍”讲到读苏词的体验，都到位。但我听了之后，想从程序员的角度补充一点。</p>
+<hr />
+<h3 id="一">一</h3>
+<p>我们程序员写代码，输出数据的时候，通常要考虑两种场景：</p>
+<p>一种输出是给<strong>另一个程序</strong>看的。这种数据要尽可能标准、规范、无歧义，这样对方程序才能准确解析。比如XML、JSON，格式严丝合缝，错一个标点都不行。</p>
+<p>另一种输出是给<strong>人</strong>看的。这种数据要尽可能“human
+readable”——让人一眼就能看懂，减少思考成本。比如HTML，浏览器渲染出来是花花绿绿的网页，你想看什么直接点就行。</p>
+<p>这两种输出，目的不同，标准也不同。给程序看的，要精确；给人看的，要友好。</p>
+<hr />
+<h3 id="二">二</h3>
+<p>诗词是给人看的。那么，它需不需要“human readable”？</p>
+<p>需要。</p>
+<p>《诗经》三百篇，你怎么区分它们？你说“就是那首关关雎鸠”，别人就知道你说的是哪首。你说“就是那首蒹葭苍苍”，别人也知道。这就是用第一句作为“代号”。后人给《诗经》每篇取前两个字作题目——“关雎”“蒹葭”“鹿鸣”——不是为了概括内容，只是为了方便记忆和区分。</p>
+<p>这叫什么？这叫<strong>编号</strong>，不叫<strong>命名</strong>。</p>
+<p>编号的目的是区分，不是概括。就像你给文件起名“20250315会议纪要”，只是为了知道这是哪天开的会，不是为了概括会议的全部内容。</p>
+<p>《论语》的篇名“学而”“为政”“八佾”，也是这个道理。孔子的弟子编书的时候，取每篇开头两个字作标题，方便查找而已。</p>
+<hr />
+<h3 id="三">三</h3>
+<p>王国维批评的，不是这种作为“编号”的题目。</p>
+<p>他批评的是后来那些编词选的人，比如《花庵词选》《草堂诗余》的编者，他们给每首词强行加题，还给古人的无题词也加题，试图用两个字“概括”整首词的内容。</p>
+<p>这叫<strong>命名</strong>——试图用题目框定意义。</p>
+<p>命名和编号，本质不同。</p>
+<p>编号，是“为了方便，取个标识”。你叫我“远山”，只是知道群里这个人是你，并不代表你真的是座山。</p>
+<p>命名，是“用题目告诉你这是啥”。比如一首词叫《春怨》，你就知道这词大概写的是春天的哀怨，理解就被框住了。</p>
+<p>王国维反对的是后者。他说“如观一幅佳山水而即曰此某山某河，可乎？”——看到一幅好山水，非要说这是某山某河，等于把山水看死了。</p>
+<hr />
+<h3 id="四">四</h3>
+<p>但我得说一句：编号还是有必要的。</p>
+<p>我读苏轼词，自己整理的时候，会用第一句作为“编号”。比如“明月几时有”“大江东去”“莫听穿林打叶声”，一说就知道是哪首。</p>
+<p>如果没有这个编号，你怎么跟人讨论？你说“苏轼那首写月亮的”，人家说“苏轼写月亮的多了，《水调歌头》《西江月》《念奴娇》都是，你说哪首？”</p>
+<p>没法聊。</p>
+<p>所以题目作为“编号”，是必要的。这叫“有名万物之母”——道德经都说了，总得有个名字才能交流。</p>
+<hr />
+<h3 id="五">五</h3>
+<p>王国维没把这个区分说清楚。他把“编号”和“命名”混在一起批评了。</p>
+<p>这是他的局限。</p>
+<p>但他说的大方向是对的——那些试图用题目“概括”内容的做法，确实会杀死诗词的开放性。</p>
+<p>就像丽丽说的，李煜的“问君能有几多愁”，可以是亡国之痛，可以是失恋之苦，可以是人生失意。你加个题目叫《虞美人·感怀》，还开放；你要加个题目叫《虞美人·咏亡国》，就把其他可能性全堵死了。</p>
+<p>题目一框，境界就小了。</p>
+<hr />
+<h3 id="六">六</h3>
+<p>所以我的结论是：</p>
+<p>题目可以有，但只能是“编号”，不能是“命名”。</p>
+<p>编号，是为了方便交流，让人知道你在说哪首。命名，是为了框定意义，让人“正确理解”。</p>
+<p>诗词的意义，不该被框定。每个人读同一首词，读出自己的感受，这才是诗词的生命力。</p>
+<p>就像远山说的，好的诗词“浓妆淡抹总相宜”——你怎么看都好，所有人都能在其中找到共情。</p>
+<p>如果非要加个题目，那最好只是“门牌号”，不是“说明书”。</p>
+以上。
+<hr>
+<center>
+<a href="/3place/rjch">返回首页</a> <a
+href="/3place/rjch/mingju.html">本书名句</a> <a
+href="/3place/rjch/memo.html">本书注解</a> <a
+href="/3place/rjch/index_rich.html">丰富目录</a> <a
+href="/3place/rjch/index_readcal.html">同读日历</a> <a
+href="/3place/rjch/index_timeline.html">时间线</a> <a
+href="/3place/rjch/index_books.html">引用书籍</a> <a
+href="/3place/rjch/index_words.html">使用字频</a>
+<div id="wx_pic" style="margin:0 auto;display:none;">
+<img src='/img/logo.png'/>
+</div>
+<a href="/3place/rjch/hash/">HASH5</a>
+</center>
+<hr>
+<center>
+<img src="/img/thanks.jpg" width="50%" height="50%">
+</center>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>
