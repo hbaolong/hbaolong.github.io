@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="hbaolong@vip.qq.com" />
+  <title>汉宫秋 用字频率</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">汉宫秋 用字频率</h1>
+<p class="author">hbaolong@vip.qq.com</p>
+</header>
+<center>
+<a href="/">返回首页</a> <a href="/booklist/">第三书单</a> <a
+href="/hash5/">HASH5</a>
+</center>
+<hr>
+<center>
+<a href="/3place/hgq">返回首页</a> <a
+href="/3place/hgq/mingju.html">本书名句</a> <a
+href="/3place/hgq/memo.html">本书注解</a> <a
+href="/3place/hgq/index_rich.html">丰富目录</a> <a
+href="/3place/hgq/index_readcal.html">同读日历</a> <a
+href="/3place/hgq/index_timeline.html">时间线</a> <a
+href="/3place/hgq/index_books.html">引用书籍</a> <a
+href="/3place/hgq/index_words.html">使用字频</a>
+<div id="wx_pic" style="margin:0 auto;display:none;">
+<img src='/img/logo.png'/>
+</div>
+</center>
+<p>113 不 96 云 80 一 74 我 70 是 69 下 63 的 61 他 56 人 54 驾 52 那 51
+来 50 王 49 唱 48 宫 46 汉 45 也 45 了 42 番 40 上 40 儿 39 这 36 有 36
+你 36 君 36 家 33 科 33 俺 32 昭 32 生 32 见 32 朝 31 今 30 与 30 日 30
+去 30 娘 29 做 29 妾 28 里 28 得 27 着 27 使 27 和 26 毛 25 为 25 时 25
+将 25 国 25 陛 24 延 24 旦 24 大 23 寿 23 女 23 明 22 自 22 天 21 怕 21
+可 21 个 21 帝 20 则 20 要 20 看 19 怎 19 图 19 到 18 中 18 长 18 早 18
+以 18 无 18 索 18 身 18 如 18 罢 17 主 17 头 17 尚 17 后 16 只 16 雁 16
+江 16 黄 16 都 16 臣 15 夜 15 选 15 望 15 送 15 说 15 书 15 似 15 十 15
+声 15 卿 15 门 15 回 15 好 15 恩 15 当 15 待 15 出 14 之 14 者 14 在 14
+于 14 行 14 心 14 金 14 官 14 风 14 多 14 单 14 兵 13 月 13 又 13 阳 13
+休 13 南 13 两 13 妃 13 成 13 百 12 知 12 咱 12 些 12 相 12 武 12 文 12
+山 12 入 12 情 12 青 12 就 12 皇 12 花 12 何 12 地 12 曾 12 便 11 正 11
+引 11 小 11 塞 11 却 11 亲 11 且 11 前 11 您 11 某 11 美 11 落 11 留 11
+教 11 叫 11 画 11 高 11 道 11 从 11 差 10 众 10 朕 10 问 10 万 10 谁 10
+若 10 嫱 10 起 10 破 10 内 10 尽 10 等 10 此 10 处 10 边 9 子 9 影 9 银
+9 幸 9 想 9 香 9 西 9 死 9 事 9 诗 9 甚 9 公 9 必 8 妆 8 再 8 已 8 衣 8
+听 8 添 8 台 8 四 8 少 8 煞 8 色 8 秋 8 琵 8 琶 8 名 8 梦 8 临 8 肯 8 接
+8 呼 8 恨 8 寡 8 定 8 点 8 宠 8 北 8 半 7 左 7 争 7 玉 7 呀 7 向 7 献 7
+兀 7 未 7 外 7 投 7 思 7 圣 7 三 7 然 7 遣 7 恁 7 蒙 7 每 7 马 7 吕 7 离
+7 冷 7 寒 7 过 7 管 7 关 7 更 7 敢 7 二 7 殿 7 第 7 弹 7 打 7 春 7 才 7
+别 7 报 7 把 7 爱 6 奏 6 旨 6 枕 6 宰 6 远 6 元 6 右 6 因 6 吾 6 虽 6 属
+6 舍 6 取 6 请 6 千 6 年 6 命 6 满 6 龙 6 令 6 量 6 酒 6 近 6 会 6 韩 6
+还 6 归 6 光 6 阁 6 父 6 分 6 对 6 斗 6 传 6 愁 6 部 6 被 6 悲 6 扮 6 般
+6 白 6 安 5 醉 5 烛 5 重 5 折 5 怨 5 原 5 用 5 依 5 样 5 消 5 退 5 宿 5
+水 5 刷 5 受 5 收 5 室 5 侍 5 士 5 纱 5 全 5 求 5 恰 5 偏 5 难 5 奈 5 目
+5 免 5 么 5 慢 5 柳 5 流 5 凉 5 空 5 旧 5 久 5 呵 5 海 5 孤 5 发 5 灯 5
+刀 5 车 5 常 5 背 4 走 4 字 4 紫 4 冢 4 真 4 愿 4 雨 4 忧 4 易 4 叶 4 业
+4 寻 4 宣 4 姓 4 新 4 萧 4 响 4 乡 4 息 4 舞 4 五 4 枉 4 铁 4 首 4 手 4
+食 4 失 4 什 4 射 4 杀 4 散 4 容 4 曲 4 侵 4 桥 4 强 4 平 4 恼 4 莫 4 民
+4 猛 4 盟 4 眉 4 忙 4 露 4 楼 4 陵 4 猎 4 梁 4 理 4 苦 4 军 4 九 4 静 4
+惊 4 进 4 交 4 讲 4 饯 4 嫁 4 甲 4 计 4 胡 4 候 4 侯 4 合 4 挂 4 躬 4 扶
+4 夫 4 凤 4 放 4 房 4 烦 4 伐 4 断 4 端 4 动 4 丹 4 辞 4 楚 4 城 4 承 4
+称 4 肠 4 壁 4 比 4 本 4 杯 4 败 4 灞 3 昨 3 祖 3 秭 3 竹 3 轴 3 州 3 直
+3 掌 3 斩 3 越 3 御 3 欲 3 悠 3 永 3 拥 3 迎 3 应 3 意 3 矣 3 耶 3 养 3
+岩 3 言 3 涯 3 羞 3 兴 3 形 3 星 3 宵 3 厢 3 县 3 弦 3 先 3 仙 3 喜 3 卧
+3 位 3 晚 3 团 3 庭 3 挑 3 体 3 堂 3 榻 3 所 3 岁 3 随 3 厮 3 睡 3 霜 3
+树 3 瘦 3 势 3 世 3 氏 3 胜 3 甥 3 神 3 社 3 烧 3 赏 3 商 3 伤 3 沙 3 忍
+3 绕 3 裘 3 穷 3 清 3 轻 3 欺 3 凄 3 七 3 弄 3 农 3 牛 3 宁 3 昵 3 乃 3
+母 3 末 3 闷 3 梅 3 没 3 貌 3 路 3 领 3 灵 3 脸 3 立 3 李 3 礼 3 口 3 控
+3 觉 3 绝 3 救 3 镜 3 敬 3 锦 3 结 3 皆 3 椒 3 绛 3 间 3 加 3 寂 3 既 3
+几 3 急 3 及 3 唤 3 红 3 横 3 黑 3 号 3 古 3 共 3 功 3 歌 3 割 3 赶 3 负
+3 伏 3 封 3 非 3 方 3 而 3 阏 3 鼎 3 雕 3 登 3 倒 3 但 3 带 3 代 3 搭 3
+翠 3 窗 3 除 3 充 3 持 3 草 3 步 3 波 3 拨 3 遍 3 避 3 奔 3 保 3 薄 3 伴
+3 八 3 暗 3 按 2 作 2 宗 2 装 2 赚 2 珠 2 朱 2 纣 2 治 2 至 2 职 2 枝 2
+诏 2 丈 2 绽 2 战 2 盏 2 展 2 毡 2 乍 2 贼 2 择 2 载 2 运 2 院 2 缘 2 鸳
+2 冤 2 遇 2 羽 2 幼 2 油 2 由 2 幽 2 姻 2 阴 2 驿 2 议 2 宜 2 摇 2 腰 2
+幺 2 羊 2 扬 2 鸯 2 央 2 艳 2 晏 2 眼 2 颜 2 炎 2 鸦 2 巡 2 雪 2 袖 2 雄
+2 兄 2 醒 2 信 2 谢 2 写 2 歇 2 笑 2 箫 2 项 2 巷 2 显 2 咸 2 闲 2 席 2
+惜 2 误 2 务 2 温 2 渭 2 尾 2 围 2 忘 2 往 2 亡 2 娃 2 途 2 透 2 偷 2 同
+2 通 2 迢 2 田 2 题 2 提 2 剔 2 特 2 逃 2 态 2 太 2 踏 2 苏 2 嗣 2 寺 2
+私 2 丝 2 双 2 衰 2 数 2 熟 2 梳 2 绶 2 守 2 实 2 施 2 师 2 省 2 升 2 深
+2 设 2 稍 2 裳 2 瑟 2 荣 2 穹 2 秦 2 悄 2 墙 2 枪 2 钱 2 泣 2 岂 2 妻 2
+颇 2 泼 2 凭 2 贫 2 篇 2 陪 2 畔 2 盼 2 攀 2 排 2 念 2 辇 2 能 2 拿 2 谋
+2 眸 2 模 2 鸣 2 面 2 麻 2 罗 2 銮 2 绿 2 禄 2 鹿 2 庐 2 六 2 刘 2 菱 2
+凌 2 泠 2 林 2 亮 2 良 2 恋 2 怜 2 帘 2 力 2 哩 2 泪 2 乐 2 劳 2 廊 2 郎
+2 困 2 况 2 款 2 宽 2 块 2 哭 2 恐 2 堪 2 倦 2 居 2 舅 2 境 2 净 2 景 2
+井 2 精 2 禁 2 紧 2 解 2 节 2 嗟 2 角 2 浇 2 娇 2 螀 2 箭 2 鉴 2 奸 2 假
+2 佳 2 稷 2 祸 2 魂 2 昏 2 欢 2 怀 2 话 2 哄 2 贵 2 故 2 谷 2 勾 2 弓 2
+根 2 各 2 戈 2 纲 2 干 2 改 2 该 2 服 2 丰 2 粉 2 废 2 飞 2 返 2 藩 2 法
+2 娥 2 顿 2 短 2 度 2 独 2 兜 2 丁 2 调 2 貂 2 奠 2 弟 2 淡 2 吹 2 仇 2
+程 2 趁 2 搽 2 策 2 菜 2 财 2 病 2 鞭 2 宝 2 霸 1 坐 1 尊 1 罪 1 卒 1 足
+1 纵 1 姿 1 坠 1 撞 1 壮 1 桩 1 庄 1 驻 1 注 1 助 1 伫 1 逐 1 诸 1 骤 1
+僽 1 昼 1 粥 1 诌 1 种 1 锺 1 终 1 忠 1 致 1 咫 1 织 1 政 1 证 1 整 1 挣
+1 征 1 侦 1 针 1 照 1 棹 1 爪 1 帐 1 章 1 宅 1 摘 1 诈 1 憎 1 糟 1 遭 1
+葬 1 狁 1 匀 1 约 1 圆 1 鬻 1 语 1 舆 1 虞 1 馀 1 谀 1 友 1 游 1 犹 1 硬
+1 缨 1 莺 1 英 1 尹 1 裀 1 音 1 翼 1 悒 1 亦 1 倚 1 疑 1 移 1 迤 1 夷 1
+伊 1 野 1 咬 1 瑶 1 尧 1 怏 1 杨 1 殃 1 燕 1 掩 1 檐 1 筵 1 阎 1 盐 1 烟
+1 衙 1 压 1 循 1 旬 1 獯 1 血 1 学 1 旋 1 悬 1 婿 1 许 1 虚 1 须 1 绣 1
+岫 1 秀 1 修 1 性 1 刑 1 衅 1 燮 1 薤 1 携 1 邪 1 楔 1 效 1 霄 1 潇 1 枭
+1 像 1 翔 1 襄 1 湘 1 现 1 玁 1 嫌 1 夏 1 霞 1 瑕 1 暇 1 瞎 1 虾 1 隙 1
+系 1 徙 1 乌 1 握 1 挝 1 翁 1 揾 1 闻 1 魏 1 畏 1 味 1 卫 1 委 1 惟 1 闱
+1 违 1 微 1 网 1 弯 1 袜 1 唾 1 褪 1 推 1 兔 1 土 1 屠 1 痛 1 廷 1 汀 1
+贴 1 跳 1 条 1 填 1 替 1 啼 1 倘 1 唐 1 汤 1 叹 1 贪 1 苔 1 它 1 锁 1 嗽
+1 宋 1 搠 1 朔 1 爽 1 帅 1 耍 1 恕 1 舒 1 疏 1 兽 1 试 1 矢 1 史 1 拾 1
+石 1 湿 1 盛 1 韶 1 鮹 1 晌 1 觞 1 善 1 衫 1 扫 1 桑 1 赛 1 弱 1 润 1 软
+1 儒 1 肉 1 柔 1 蓉 1 任 1 热 1 惹 1 染 1 劝 1 犬 1 泉 1 觑 1 趋 1 驱 1
+区 1 倾 1 寝 1 禽 1 切 1 巧 1 憔 1 敲 1 乾 1 牵 1 弃 1 气 1 启 1 乞 1 其
+1 齐 1 栖 1 坡 1 捧 1 配 1 佩 1 沛 1 抛 1 叛 1 盘 1 徘 1 帕 1 偶 1 暖 1
+扭 1 佞 1 凝 1 鸟 1 碾 1 逆 1 嫩 1 男 1 鼐 1 纳 1 拏 1 暮 1 牧 1 漠 1 寞
+1 磨 1 灭 1 眇 1 描 1 眠 1 觅 1 迷 1 们 1 帽 1 冒 1 茅 1 矛 1 蔓 1 卖 1
+麦 1 骂 1 蟆 1 络 1 鸾 1 率 1 闾 1 炉 1 垆 1 芦 1 漏 1 娄 1 笼 1 骝 1 旒
+1 溜 1 另 1 劣 1 列 1 料 1 蓼 1 嘹 1 粮 1 隶 1 例 1 利 1 丽 1 犁 1 梨 1
+勒 1 酪 1 老 1 牢 1 揽 1 栏 1 赖 1 喇 1 坤 1 馈 1 亏 1 快 1 客 1 刻 1 渴
+1 犒 1 糠 1 开 1 钧 1 决 1 句 1 阄 1 迥 1 旌 1 京 1 筋 1 借 1 界 1 揭 1
+阶 1 轿 1 鲛 1 疆 1 缰 1 践 1 谏 1 贱 1 件 1 尖 1 架 1 价 1 笳 1 伽 1 祭
+1 寄 1 继 1 己 1 籍 1 棘 1 疾 1 赍 1 基 1 姬 1 机 1 饥 1 镬 1 或 1 伙 1
+混 1 惠 1 谎 1 惶 1 凰 1 荒 1 环 1 坏 1 槐 1 徊 1 滑 1 骅 1 华 1 唬 1 虎
+1 葫 1 斛 1 厚 1 糇 1 鸿 1 鹤 1 贺 1 河 1 喝 1 皓 1 浩 1 汗 1 害 1 嗨 1
+咳 1 哈 1 裹 1 滚 1 广 1 馆 1 冠 1 观 1 怪 1 瓜 1 固 1 鼓 1 骨 1 姑 1 遘
+1 沟 1 贡 1 恭 1 供 1 攻 1 隔 1 刚 1 感 1 盖 1 富 1 复 1 妇 1 付 1 甫 1
+浮 1 芙 1 否 1 缝 1 俸 1 奋 1 肥 1 芳 1 乏 1 耳 1 额 1 蛾 1 俄 1 讹 1 朵
+1 盹 1 队 1 堆 1 毒 1 逗 1 陡 1 东 1 蝶 1 叠 1 吊 1 簟 1 钿 1 典 1 攧 1
+递 1 抵 1 底 1 滴 1 堤 1 镫 1 德 1 蹈 1 黛 1 歹 1 妲 1 错 1 撮 1 寸 1 忖
+1 存 1 村 1 凑 1 赐 1 次 1 唇 1 垂 1 怆 1 串 1 穿 1 川 1 初 1 丑 1 筹 1
+惆 1 冲 1 耻 1 齿 1 尺 1 墀 1 驰 1 痴 1 吃 1 乘 1 诚 1 丞 1 晨 1 沉 1 尘
+1 彻 1 怅 1 场 1 嫦 1 谄 1 产 1 僝 1 缠 1 槎 1 插 1 藏 1 苍 1 残 1 彩 1
+布 1 剥 1 并 1 饼 1 秉 1 鬓 1 杓 1 编 1 笔 1 逼 1 爆 1 抱 1 绑 1 邦 1 搬
+1 班 1 坝 1 拗 1 挨 1 哀</p>
+</body>
+</html>
