@@ -1,0 +1,878 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="hbaolong@vip.qq.com" />
+  <title>阿甘正传EN 用字频率</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">阿甘正传EN 用字频率</h1>
+<p class="author">hbaolong@vip.qq.com</p>
+</header>
+<center>
+<a href="/">返回首页</a> <a href="/booklist/">第三书单</a> <a
+href="/hash5/">HASH5</a>
+</center>
+<hr>
+<center>
+<a href="/3place/agzzen">返回首页</a> <a
+href="/3place/agzzen/mingju.html">本书名句</a> <a
+href="/3place/agzzen/memo.html">本书注解</a> <a
+href="/3place/agzzen/index_rich.html">丰富目录</a> <a
+href="/3place/agzzen/index_readcal.html">同读日历</a> <a
+href="/3place/agzzen/index_timeline.html">时间线</a> <a
+href="/3place/agzzen/index_books.html">引用书籍</a> <a
+href="/3place/agzzen/index_words.html">使用字频</a>
+<div id="wx_pic" style="margin:0 auto;display:none;">
+<img src='/img/logo.png'/>
+</div>
+</center>
+<p>1 abandoned 1 ability 1 absolute 1 absolutely 1 absurd 1 abuse 1
+accident 1 acclaimed 1 accommodations 1 accompany 1 accomplish 1 accord
+1 accordin 1 accually 1 accused 1 acquire 1 acting 1 activities 1 actor
+1 acts 1 adam 1 added 1 addressed 1 addressee 1 admission 1 adonis 1
+adventure 1 adventures 1 advertisement 1 advertisin 1 adviser 1
+aeronautics 1 affaire 1 affection 1 afire 1 aforehan 1 aged 1 agreed 1
+agriculture 1 agronomy 1 ahh 1 ahhhh 1 al 1 alaska 1 algebra 1 ali 1
+alien 1 alike 1 alive 1 allied 1 alls 1 alongside 1 amarillo 1 amaze 1
+amazed 1 amount 1 amuse 1 amused 1 amusin 1 amusing 1 analysis 1 animals
+1 annihilated 1 antennas 1 anthill 1 antilogarithms 1 anyplace 1 anytime
+1 appeal 1 appointment 1 appreciate 1 appropriate 1 approval 1 apron 1
+aprons 1 arab 1 arabs 1 argggg 1 argument 1 ark 1 arrivin 1 arrow 1
+arson 1 art 1 artificial 1 assault 1 assed 1 assembled 1 assholes 1
+assign 1 assignment 1 association 1 assumed 1 astronauts 1 asylum 1
+atlanta 1 atomic 1 attend 1 attendants 1 attitude 1 attracted 1 auction
+1 auditing 1 august 1 aunt 1 austrailians 1 auto 1 automobile 1
+available 1 avarice 1 award 1 awarded 1 awesome 1 awkward 1 axein 1
+babbling 1 backs 1 baez 1 baggage 1 baggy 1 bailin 1 bald 1 baler 1
+balloon 1 ballroom 1 bandages 1 banners 1 bared 1 barge 1 bashed 1
+bashin 1 basket 1 baskets 1 bathin 1 bats 1 battalion 1 bawling 1 bayous
+1 beamin 1 beans 1 beckon 1 becomin 1 bedroom 1 bedsheet 1 beef 1 beet 1
+beethoven 1 beforehand 1 beggars 1 beggin 1 beginning 1 behalf 1 behol 1
+believed 1 believin 1 bellies 1 bells 1 belly 1 bellybuster 1 belong 1
+below 1 belts 1 benches 1 bendin 1 beneath 1 benjie 1 benoni 1 berries 1
+bes 1 beside 1 bewildered 1 bible 1 bicycle 1 bigger 1 billboards 1
+billion 1 birds 1 birthday 1 bite 1 bizarre 1 blades 1 blank 1 bleedin 1
+blessin 1 blew 1 bloodshot 1 blot 1 blots 1 blouse 1 blow 1 blowguns 1
+blown 1 bluish 1 boarder 1 boarders 1 boardin 1 boards 1 bob 1 boilers 1
+bonds 1 bone 1 bonfire 1 bonged 1 bonnie 1 bonzoland 1 boo 1 booked 1
+bookkeepin 1 boolean 1 boon 1 boos 1 booze 1 bore 1 borneo 1 botherin 1
+boundin 1 bouquet 1 bowel 1 bows 1 boyfrien 1 brace 1 brain 1 brass 1
+breathed 1 breathin 1 breeze 1 briefly 1 brighter 1 brilliance 1 brink 1
+brite 1 broken 1 brother 1 bubbas 1 bucket 1 buckets 1 bud 1 buddy 1 bug
+1 bugs 1 buildins 1 builds 1 bull 1 bullet 1 bullhorn 1 bumblin 1 bumped
+1 bumper 1 bumpin 1 bums 1 bunched 1 bunches 1 bunk 1 bunnies 1 burden 1
+burn 1 burns 1 bushel 1 busload 1 buttons 1 butts 1 buys 1 buzz 1 buzzin
+1 byword 1 cain 1 cake 1 camptown 1 canada 1 canceled 1 cancelin 1
+candidacy 1 candyass 1 canebreak 1 cannon 1 canoes 1 canvas 1 capacity 1
+capitalists 1 captain 1 cardboard 1 cared 1 cares 1 carloads 1 carrots 1
+carson 1 carton 1 cartwheels 1 cases 1 catcallin 1 catched 1 category 1
+catfishin 1 cats 1 catsup 1 cattle 1 caulk 1 cave 1 caved 1 cease 1
+ceiling 1 cell 1 centers 1 century 1 cereals 1 certain 1 certifiable 1
+chained 1 chalk 1 champeenship 1 chances 1 chanted 1 chaos 1 characters
+1 charges 1 chargin 1 chariot 1 charity 1 charles 1 chattanooga 1 cheap
+1 cheat 1 checkered 1 cheered 1 cheering 1 cherries 1 chests 1 chew 1
+chewed 1 chi 1 chicken 1 chocolates 1 choice 1 chops 1 chords 1
+chrissakes 1 chromatic 1 chuckled 1 chunks 1 cigar 1 cigarettes 1
+circles 1 cities 1 civilians 1 civilized 1 clack 1 clawin 1 cleaned 1
+clearer 1 clenched 1 climb 1 climbin 1 clime 1 climin 1 clint 1 clog 1
+cloth 1 clothespins 1 clothing 1 cloud 1 cloudy 1 clown 1 clowns 1 clue
+1 clyde 1 co 1 coaches 1 coast 1 coat 1 coauthored 1 coaxiel 1 cockpit 1
+coconut 1 coffeehouse 1 coin 1 collard 1 collectin 1 column 1 columnists
+1 commentators 1 comments 1 committed 1 common 1 communists 1 companion
+1 compartment 1 competition 1 complaint 1 complaints 1 complex 1
+compliment 1 computations 1 concert 1 concerts 1 conditions 1
+condominiums 1 confidant 1 confined 1 conkin 1 conscience 1 considered 1
+considerin 1 console 1 consternation 1 construct 1 consult 1 consumed 1
+contenders 1 contest 1 continue 1 continuin 1 contracts 1 contraption 1
+contrary 1 contribution 1 controlled 1 convention 1 conversations 1
+convinced 1 convincin 1 cookie 1 cooks 1 cool 1 coon 1 cooperates 1
+coordinates 1 corks 1 cornerback 1 corp 1 corporate 1 corporations 1
+corralled 1 correctly 1 corrupt 1 costumes 1 costuming 1 coudda 1
+couldst 1 counselor 1 counted 1 courage 1 courthouse 1 covert 1 cozy 1
+crack 1 cracklin 1 craft 1 crafty 1 crammin 1 crappola 1 crates 1
+crawfish 1 create 1 creative 1 creeped 1 creepin 1 crickets 1 criminal 1
+crimson 1 crisis 1 criticism 1 crook 1 crooks 1 crop 1 crops 1 crossed 1
+crossin 1 crosswise 1 crouchin 1 crowded 1 crowds 1 crucial 1 cruise 1
+crying 1 cuban 1 cult 1 cults 1 cultured 1 cups 1 curiously 1 curlin 1
+curly 1 currently 1 cuss 1 cusswords 1 customers 1 cute 1 cycle 1
+cyclotrons 1 damage 1 damp 1 dancers 1 danger 1 dangle 1 danglin 1
+daniels 1 dared 1 darkness 1 dated 1 daubbin 1 daubin 1 daughters 1
+dawbin 1 dawns 1 daylight 1 de 1 debut 1 decorated 1 dedication 1 deduct
+1 deeper 1 defend 1 deferred 1 definately 1 degenerate 1 degree 1
+delight 1 delighted 1 delivery 1 demonstrated 1 demonstrations 1 deny 1
+dependin 1 depends 1 derelicts 1 describe 1 described 1 designed 1 desks
+1 desperate 1 desperation 1 despicable 1 destiny 1 detective 1
+determined 1 developin 1 device 1 devil 1 dickhead 1 didst 1 difference
+1 dig 1 dignified 1 dignity 1 dilemma 1 dime 1 dimes 1 dinin 1 dip 1
+diploma 1 diplomacy 1 diplomatic 1 directions 1 directors 1 dirtier 1
+disability 1 disappeared 1 disaster 1 discharged 1 discussin 1
+discussions 1 disgraceful 1 disgruntled 1 disguise 1 disguised 1
+disgusted 1 disgusting 1 dishwasher 1 disloyal 1 disneyland 1 display 1
+displays 1 displeased 1 dispute 1 disputin 1 disqualify 1 distractive 1
+dive 1 dived 1 diversification 1 divides 1 dividin 1 divorce 1 dizzy 1
+dock 1 dogwise 1 dolls 1 dolly 1 doorway 1 double 1 doubts 1 downriver 1
+dragon 1 drapes 1 drawin 1 dreadful 1 dreamboat 1 dreamed 1 dredgin 1
+dresser 1 dressing 1 drifted 1 drill 1 drinks 1 dripped 1 drool 1 drown
+1 drummed 1 drunkard 1 drunken 1 dryin 1 ducks 1 due 1 duffelbag 1
+dufflebag 1 dumbfool 1 dummos 1 dummy 1 dumped 1 dumps 1 dusk 1 dusted 1
+dustmop 1 dutch 1 duties 1 dyin 1 dying 1 dylan 1 ear 1 earnin 1
+earrings 1 eased 1 east 1 eastern 1 eastwood 1 eatable 1 eaten 1 eats 1
+eaves 1 edges 1 eel 1 eerie 1 eggplant 1 einsteins 1 election 1
+elevators 1 elsewhere 1 embarrassin 1 empire 1 employ 1 employed 1
+employees 1 enclosed 1 encountered 1 endin 1 enemy 1 energy 1 engage 1
+enjoyable 1 enlightenment 1 enlistments 1 enroll 1 entendre 1 entrance 1
+entranceway 1 envoy 1 er 1 escaped 1 escorted 1 established 1 estate 1
+evacuation 1 evening 1 eventful 1 events 1 everybody 1 everythin 1
+everywhere 1 evil 1 exalted 1 examination 1 examined 1 exceptions 1
+excerpts 1 exciting 1 excused 1 exhaust 1 exhausted 1 exit 1 expec 1
+experiment 1 explained 1 exploded 1 explosion 1 exposed 1 expressed 1
+extent 1 extreme 1 facin 1 factory 1 facts 1 faded 1 faint 1 fairly 1
+falkbeer 1 fallin 1 falls 1 false 1 fambly 1 fame 1 famine 1 fancy 1
+fans 1 farmer 1 farmers 1 farmin 1 farrah 1 fascist 1 fashionable 1
+fasten 1 faster 1 fatal 1 fate 1 father 1 favor 1 favors 1 fawcett 1
+fears 1 fearsome 1 feast 1 feature 1 february 1 feels 1 fellas 1 fellows
+1 fertile 1 fetch 1 fetched 1 fiddle 1 fiddlin 1 fiercely 1 fifth 1
+figure 1 file 1 fill 1 filmin 1 final 1 finishin 1 firs 1 fiscal 1 fishy
+1 fits 1 flap 1 flapjacks 1 flappin 1 flashbulbs 1 flashlight 1 flayed 1
+flesh 1 flew 1 flibbertigibbet 1 flies 1 floors 1 flop 1 flophouse 1
+flower 1 flowers 1 fluke 1 flushed 1 foamin 1 fold 1 foldup 1 folk 1
+foller 1 following 1 foolishness 1 footballs 1 forces 1 foreign 1
+foreigners 1 forelorn 1 forgive 1 fork 1 forks 1 formal 1 formula 1
+fortunately 1 forwarded 1 fought 1 fouled 1 fourier 1 fourteen 1 foward
+1 foxhole 1 francisco 1 frawg 1 freaks 1 friendlier 1 frightenin 1 frown
+1 frownin 1 fruitcakes 1 frustrated 1 frustration 1 fryin 1 fucker 1
+furniture 1 fuss 1 fussin 1 g 1 gain 1 gapin 1 gasoline 1 gate 1
+gatherin 1 gawd 1 gawked 1 generations 1 genius 1 gently 1 georgeous 1
+gestures 1 getaway 1 ghettos 1 giants 1 gibberish 1 gift 1 gimme 1
+gimmick 1 gladys 1 gleamin 1 glowed 1 glowing 1 glued 1 goaline 1
+goalpost 1 godamighty 1 gold 1 goldbrick 1 goo 1 goof 1 goofball 1
+goosebumps 1 gouge 1 govern 1 gown 1 grace 1 graduate 1 graduated 1
+grandest 1 grandmama 1 granola 1 grant 1 grateful 1 grates 1 gray 1
+greaseball 1 greased 1 greatest 1 greatgodamighty 1 greed 1 greens 1
+greet 1 grew 1 grief 1 grinder 1 grinned 1 grip 1 gripes 1 grippe 1
+grits 1 groceries 1 grocery 1 grosse 1 grouchy 1 grovelin 1 growed 1
+growl 1 grown 1 grows 1 grubstake 1 gto 1 guerrilla 1 guidance 1 guitar
+1 guitars 1 guns 1 guru 1 gymnasium 1 hafwhat 1 hail 1 hairy 1 halfback
+1 halfways 1 halfwit 1 hallway 1 ham 1 hammerlock 1 hammerlocks 1
+handbasket 1 handcuffed 1 handkerchiefs 1 hanwritin 1 hardware 1 harm 1
+harmed 1 harvest 1 harvestin 1 harvesting 1 hatched 1 hated 1 hath 1
+hatred 1 heal 1 health 1 healthy 1 heartbeat 1 heated 1 heath 1 heavens
+1 heaves 1 heavily 1 heels 1 held 1 helluva 1 helpers 1 helpless 1
+heppin 1 heroism 1 hers 1 herself 1 hi 1 hiding 1 highlands 1 hillside 1
+himsef 1 hinges 1 hips 1 hire 1 hirin 1 hiss 1 hisses 1 hits 1 hittin 1
+hiwaian 1 hoedown 1 hoffman 1 hog 1 hoistin 1 holds 1 holdup 1 holes 1
+hollared 1 hollers 1 homemade 1 homes 1 honey 1 honin 1 honkin 1
+honorable 1 hooches 1 hooked 1 hooper 1 hope 1 hopeful 1 hoppen 1 hoppin
+1 horace 1 hornet 1 hornets 1 horns 1 horror 1 hosed 1 hotter 1 hottest
+1 houses 1 hovered 1 hubcap 1 huddled 1 hulk 1 humans 1 humidity 1
+hummin 1 hung 1 hunger 1 hunkered 1 hunters 1 hurry 1 husband 1 hush 1
+hustled 1 ice 1 iceboxes 1 iceland 1 identify 1 idiotic 1 iggles 1
+ignominious 1 ii 1 imagination 1 immediately 1 immensely 1 impending 1
+imperialist 1 impress 1 improved 1 inc 1 inch 1 incident 1
+incompatibility 1 incredible 1 incredibly 1 indiana 1 indicate 1
+induction 1 informs 1 infrequent 1 insert 1 insisted 1 instances 1
+instant 1 institute 1 instrumental 1 insurance 1 intend 1 interesting 1
+interview 1 interzonal 1 intestin 1 intolerable 1 invading 1 invention 1
+invested 1 investigating 1 invisible 1 invitational 1 involuntary 1 iq 1
+iron 1 irs 1 isbn 1 issue 1 itself 1 j 1 jab 1 jack 1 jackets 1 jackson
+1 janitor 1 japan 1 japanese 1 jaws 1 jeannie 1 jello 1 jelly 1 jester 1
+jet 1 jethro 1 jiggaboos 1 jimbo 1 joan 1 johnny 1 joint 1 jokester 1
+jokin 1 jolly 1 judgment 1 jumps 1 june 1 jungles 1 juno 1 kept 1 keys 1
+kicker 1 kid 1 kinder 1 kine 1 kiss 1 kissin 1 klux 1 kneecaps 1 kneed 1
+kneelin 1 knife 1 knot 1 knowin 1 knowledge 1 kp 1 ku 1 kumingtang 1
+lace 1 lackeys 1 lame 1 language 1 laos 1 lapel 1 largest 1 lasted 1
+lately 1 laughed 1 launched 1 launchin 1 launching 1 law 1 lawlessness 1
+lawn 1 lawyer 1 lawyers 1 layed 1 lazy 1 leary 1 leases 1 leather 1
+leaving 1 led 1 lefarge 1 legend 1 legless 1 lemonade 1 lemons 1 lend 1
+lengthwise 1 lennie 1 lennin 1 leopard 1 lets 1 letting 1 lice 1 lickin
+1 lieutenants 1 lifes 1 lifts 1 lightnin 1 likely 1 likin 1 limits 1 lip
+1 list 1 liszt 1 lit 1 livable 1 livelyhood 1 liver 1 lives 1 loaded 1
+loadin 1 loaned 1 lob 1 location 1 loitering 1 longside 1 longtime 1
+lookaroun 1 lookit 1 loomin 1 loops 1 lopin 1 loren 1 loss 1 lotion 1
+loudly 1 lovin 1 lower 1 ltd 1 lucille 1 lumber 1 lungs 1 m 1 madman 1
+magazine 1 magic 1 magician 1 maginations 1 mahu 1 maids 1 mail 1 maimin
+1 mainly 1 majors 1 maneuvers 1 mangled 1 manhandlin 1 maniac 1 manner 1
+manners 1 manually 1 march 1 marcher 1 marches 1 marijuana 1 marine 1
+marked 1 markers 1 marketplace 1 marsman 1 marvel 1 marvelous 1 mary 1
+mashed 1 masked 1 masks 1 mass 1 mathematical 1 matrix 1 matters 1
+meador 1 meaning 1 meanwhile 1 media 1 medics 1 meeting 1 meetins 1
+megaphone 1 memories 1 memorize 1 memory 1 memphis 1 menace 1 mendin 1
+menu 1 merely 1 messengers 1 meter 1 meters 1 mexico 1 miami 1 mice 1
+midgets 1 midnight 1 mighta 1 mile 1 millionaire 1 mindin 1 minds 1
+minnesota 1 minor 1 miraculously 1 misery 1 mist 1 mistakes 1 miz 1 mo 1
+mockery 1 modern 1 molasses 1 molested 1 molestin 1 moments 1 monday 1
+monotonous 1 moose 1 morals 1 mornins 1 mosquito 1 motherfucker 1
+motionin 1 motorpool 1 mouthful 1 mouthpiece 1 movement 1 movements 1
+moving 1 mr 1 mud 1 muddled 1 muhammad 1 mummy 1 murderer 1 mush 1
+mushin 1 musicians 1 muss 1 mussed 1 mustard 1 mystify 1 naggin 1 nah 1
+napoleon 1 narrowed 1 nastier 1 nature 1 navel 1 nay 1 nd 1 nearest 1
+neath 1 necessary 1 neckit 1 neckline 1 needle 1 needs 1 nerves 1 nest 1
+netload 1 newt 1 nhon 1 nick 1 nickel 1 nickels 1 nightmare 1 nights 1
+nineteen 1 ninety 1 nobility 1 nods 1 nogood 1 nohow 1 noise 1 nominated
+1 noose 1 normal 1 norwegians 1 notepad 1 notifying 1 nuclear 1 nudged 1
+nuf 1 numbers 1 nun 1 nuns 1 nutshell 1 o 1 oar 1 oblivion 1 observin 1
+obviously 1 occasion 1 occasionally 1 occasions 1 occur 1 occurred 1
+odds 1 offen 1 offense 1 offensive 1 offerin 1 ones 1 onion 1 onions 1
+oooh 1 ooooh 1 opened 1 operate 1 operatin 1 operator 1 opinion 1 opp 1
+opponent 1 opposite 1 oranges 1 orangutan 1 orations 1 orchestra 1
+ordeal 1 orderly 1 organ 1 organize 1 organized 1 organizing 1
+originality 1 ours 1 ourself 1 outboard 1 outdoor 1 outdoors 1 outfit 1
+outnumbered 1 outrunned 1 outskirts 1 outsmart 1 outsmarted 1 overalls 1
+overhead 1 overrun 1 oversize 1 owner 1 oyster 1 packages 1 packers 1
+paddies 1 paddled 1 pads 1 paint 1 paintin 1 pallet 1 pan 1 pancake 1
+pancakes 1 pans 1 parades 1 paramount 1 parboiled 1 parents 1 paris 1
+participants 1 partners 1 path 1 patience 1 patriotic 1 paul 1 pawin 1
+peabrain 1 peach 1 peas 1 peddle 1 peed 1 peeled 1 peelin 1 peepin 1
+peer 1 peerin 1 pen 1 pentagon 1 peoples 1 per 1 perch 1 perform 1
+performances 1 perk 1 permanant 1 permission 1 permittin 1 personal 1
+persons 1 perspective 1 pestilence 1 peter 1 petroff 1 petrokivitch 1
+phenomenal 1 philosophic 1 piano 1 picher 1 picherin 1 pickin 1 pickled
+1 picnics 1 picures 1 pie 1 pied 1 pig 1 piled 1 pillow 1 ping 1 pinkish
+1 pins 1 piper 1 pishposh 1 placards 1 planets 1 plank 1 planning 1
+plastered 1 plate 1 plates 1 platter 1 pleasant 1 pleasing 1 plenty 1
+plop 1 plowin 1 ploy 1 pluckin 1 pluggin 1 plus 1 poet 1 poets 1 pointe
+1 poison 1 poisoned 1 pokin 1 polecat 1 poles 1 policemen 1 polish 1
+polished 1 politics 1 polked 1 polkin 1 pong 1 pontiac 1 ponziani 1 pooh
+1 pop 1 popcorn 1 poppa 1 poppin 1 portable 1 pose 1 positions 1
+possibility 1 possibily 1 possible 1 postcard 1 potato 1 pounced 1 pound
+1 pouns 1 pour 1 pourin 1 pours 1 powerless 1 practicin 1 praisin 1
+prancin 1 preachers 1 precede 1 precisely 1 predicament 1 preferred 1
+pregnant 1 prepare 1 prepared 1 preparin 1 preparing 1 presser 1
+pressing 1 presume 1 pretendin 1 prevails 1 primative 1 prince 1 print 1
+priorities 1 prison 1 prisoner 1 prizes 1 probably 1 probe 1 problems 1
+process 1 produce 1 producer 1 profit 1 progress 1 progressed 1
+promising 1 promoter 1 pronto 1 proper 1 property 1 props 1 prospects 1
+protected 1 protestants 1 protesters 1 providing 1 psychiatric 1
+psychiatrist 1 puddin 1 puffy 1 pulitzer 1 pulpits 1 punched 1 punchin 1
+punctured 1 punishment 1 purebread 1 purse 1 pursuit 1 push 1 pushes 1
+pushups 1 puzzled 1 quadrangle 1 quadrats 1 quakin 1 qualifies 1 quart 1
+questioned 1 qui 1 quickly 1 quieted 1 quilts 1 quote 1 racin 1 racks 1
+radley 1 rag 1 rage 1 rains 1 raked 1 ram 1 ramar 1 rampant 1 rams 1
+rangin 1 rapped 1 rappin 1 rapport 1 rassled 1 rats 1 raw 1 razor 1
+reader 1 realty 1 reasons 1 reassigned 1 received 1 recognizable 1 recon
+1 recordin 1 recovered 1 recruited 1 recruitment 1 redskins 1 reed 1
+refer 1 reflection 1 refrigerator 1 refuse 1 regard 1 regret 1 regular 1
+reinvest 1 reinvestment 1 relationship 1 relatively 1 relativity 1
+relaxed 1 relaxing 1 relieve 1 religion 1 remake 1 remedial 1 remembered
+1 remin 1 reminded 1 remove 1 remus 1 rent 1 rented 1 reopening 1
+reporter 1 repulsive 1 reserved 1 resistin 1 respect 1 respectable 1
+respects 1 responsible 1 reti 1 return 1 reunion 1 revelation 1 reviled
+1 revive 1 revived 1 revives 1 revolution 1 rhinoceros 1 ribs 1 rich 1
+richmond 1 rid 1 riddance 1 rides 1 ridges 1 ringin 1 rinse 1 ripe 1
+risin 1 riskin 1 rival 1 roast 1 robots 1 roger 1 roller 1 rollers 1
+rolls 1 romantic 1 roofin 1 rooks 1 rope 1 rottin 1 rounded 1 rowed 1
+rows 1 royal 1 royalty 1 rub 1 rude 1 rug 1 rugs 1 ruin 1 ruins 1 rule 1
+rumble 1 rumblin 1 rummagin 1 runway 1 runways 1 russia 1 sack 1 sacks 1
+sag 1 sale 1 salute 1 sambwiches 1 san 1 sand 1 sans 1 saucers 1 saunter
+1 sausage 1 savin 1 saving 1 sawyer 1 scairt 1 scales 1 scandal 1 scares
+1 scarier 1 scarred 1 scary 1 scatterin 1 schedule 1 schevenigen 1
+scholarship 1 schools 1 scolded 1 scoop 1 scorchin 1 scores 1 scorn 1
+scot 1 scowl 1 scrapbook 1 scratched 1 screaming 1 screams 1 screechin 1
+screwballs 1 screwed 1 screwups 1 screwy 1 scrubbin 1 seafood 1 search 1
+searchin 1 searsucker 1 secon 1 secons 1 secretly 1 seize 1 selfish 1
+sellin 1 sells 1 senator 1 senatorial 1 sends 1 senior 1 seniority 1
+sensible 1 sentence 1 sentenced 1 sentences 1 separation 1 serial 1
+series 1 seriously 1 sermon 1 service 1 services 1 servin 1 setting 1
+severed 1 sewed 1 sewer 1 sex 1 shabby 1 shacks 1 shades 1 shallow 1
+shallows 1 shamed 1 shanties 1 shape 1 sharper 1 shavin 1 sheets 1 shef
+1 shelf 1 shell 1 shellfish 1 shields 1 shif 1 ships 1 shirts 1
+shirttail 1 shithead 1 shithouse 1 shitpot 1 shits 1 shittin 1 shitty 1
+sho 1 shoe 1 shoplifting 1 shoppin 1 shops 1 shorts 1 shots 1 shoulda 1
+shoved 1 shovel 1 shows 1 shrewd 1 shriekin 1 shrieking 1 shrimpin 1
+shrinkin 1 shriveled 1 shrouds 1 shuckers 1 shucks 1 sick 1 sidecars 1
+sideline 1 sideshow 1 sidewalks 1 sidewise 1 sighed 1 significant 1
+signifies 1 silence 1 silently 1 silly 1 silver 1 similar 1 simpleton 1
+sine 1 singer 1 singin 1 singing 1 single 1 sink 1 sinkin 1 sir 1 site 1
+sittin 1 sitting 1 sizable 1 sizes 1 skint 1 skirts 1 slam 1 slammer 1
+sleepy 1 sleet 1 slews 1 slid 1 slightest 1 slingshot 1 slipped 1
+slippery 1 slippin 1 slobber 1 slowly 1 sluggin 1 slurpees 1 smacked 1
+smackeroos 1 smackin 1 small 1 smartest 1 smoked 1 smoking 1 smolderin 1
+smooth 1 smushed 1 snags 1 snakes 1 snapped 1 snares 1 snarlin 1 sneak 1
+sneakers 1 snifflin 1 snoozin 1 snout 1 snuck 1 soccer 1 soften 1 soil 1
+soldier 1 sole 1 soles 1 solution 1 solve 1 someday 1 someways 1 soot 1
+soothe 1 sophia 1 sore 1 sorrowful 1 sorrowfully 1 sortin 1 souci 1
+soundin 1 sources 1 southeastern 1 souvenirs 1 sowed 1 spaced 1 spacemen
+1 spain 1 spangles 1 spank 1 spared 1 sparkle 1 sparks 1 spasmos 1 spats
+1 speaking 1 speaks 1 specialties 1 specialty 1 specimen 1 spectacles 1
+spectacular 1 speeches 1 speechless 1 spen 1 spendin 1 spheriod 1
+spillway 1 spinal 1 spinned 1 spirit 1 spirits 1 spittin 1 splendid 1
+sponsor 1 spooks 1 spread 1 spreadin 1 springs 1 spy 1 sqeeze 1 squawked
+1 squealin 1 squeeze 1 squint 1 squintin 1 squirm 1 squirrels 1 squirt 1
+squirtin 1 squirting 1 squnch 1 squnched 1 srimpin 1 stabbed 1
+stabilization 1 stackin 1 staggerin 1 stain 1 stains 1 stakes 1 stale 1
+stalemate 1 stalls 1 startle 1 startled 1 starve 1 starved 1 starvin 1
+statement 1 stature 1 steak 1 steamed 1 sted 1 stern 1 stickers 1
+stingin 1 stinkin 1 stinks 1 stock 1 stomachs 1 stone 1 stoned 1 stones
+1 stooges 1 stoppin 1 stores 1 storin 1 storm 1 stormin 1 stowed 1
+straighten 1 strain 1 strainin 1 strangers 1 strangest 1 strap 1 straps
+1 strategic 1 strategy 1 stream 1 stretched 1 strictly 1 stride 1 strike
+1 string 1 strings 1 strip 1 stripes 1 stroke 1 strokin 1 strollin 1
+stronger 1 strongest 1 studied 1 studies 1 studio 1 stuffin 1 stumbled 1
+stump 1 stupider 1 stupidity 1 styrofoam 1 subject 1 success 1
+successful 1 sucker 1 suckered 1 sued 1 suffered 1 sufferin 1 suggesting
+1 suggestion 1 suitable 1 sumatra 1 summers 1 sundown 1 sunglasses 1
+sunk 1 sunnyside 1 sunshine 1 sunup 1 superb 1 superman 1 suppers 1
+support 1 supposed 1 surely 1 surplus 1 suspicious 1 suzanna 1 swang 1
+swarmin 1 swattin 1 sweater 1 sweatshirts 1 swep 1 swines 1 swing 1
+swinging 1 switch 1 switchboard 1 symbolic 1 sympathetic 1 symphony 1
+tablecloth 1 tack 1 tackle 1 tacklin 1 tadpole 1 tag 1 taggin 1 tail 1
+talents 1 tanks 1 tantrum 1 tapes 1 tarrasch 1 tarzan 1 tasted 1 tasty 1
+taxes 1 teached 1 teamed 1 teasing 1 techniques 1 tee 1 teensey 1 temper
+1 temptations 1 tender 1 tents 1 terminal 1 terms 1 terribly 1 tested 1
+textbook 1 theater 1 themes 1 theory 1 thereby 1 therefore 1 theyself 1
+thick 1 thieves 1 thigh 1 thinks 1 thirst 1 thirteen 1 thoughts 1
+thousands 1 thousans 1 thown 1 threatened 1 throne 1 throughout 1
+throwin 1 thumbin 1 thunder 1 thunderstorms 1 thunk 1 thus 1 tickets 1
+ticklin 1 tidy 1 tight 1 til 1 tiles 1 toad 1 toe 1 toes 1 token 1
+tolerate 1 tolerated 1 toll 1 tomatos 1 tomb 1 ton 1 tonic 1 tons 1 tool
+1 toothbrush 1 tore 1 torn 1 torture 1 tote 1 toted 1 toting 1
+touchdowns 1 towel 1 towels 1 trace 1 track 1 tracks 1 trailin 1 trained
+1 trainer 1 transferred 1 trap 1 trash 1 travel 1 treasure 1 treated 1
+tremblin 1 tremendous 1 tremendously 1 tribal 1 tribesmen 1 trigger 1
+trigonometry 1 trinkets 1 trousers 1 truce 1 truckin 1 truncated 1
+trunks 1 trussed 1 truthful 1 tumblin 1 tunes 1 turnip 1 tuxedo 1 ugly 1
+umbrella 1 unbrella 1 unbuckle 1 unbutton 1 uncomfortable 1 undefeated 1
+underdog 1 underneath 1 underpants 1 understands 1 understood 1
+underwater 1 underwear 1 undignified 1 undone 1 undress 1 unfastened 1
+unions 1 unloosen 1 unnamed 1 unpacked 1 unravel 1 unraveled 1
+unrecognized 1 unresponsible 1 unspeakable 1 unstrap 1 untied 1 untyin 1
+unwaddin 1 unzipped 1 updated 1 useful 1 useless 1 using 1 usual 1
+utilize 1 va 1 vagrant 1 vaguely 1 valuable 1 van 1 vanish 1 vanished 1
+varied 1 various 1 vehicle 1 vender 1 venture 1 verge 1 versus 1
+veterans 1 vexes 1 viable 1 victim 1 viewers 1 views 1 vikings 1 vile 1
+violated 1 violent 1 violin 1 virtually 1 visitor 1 wacked 1 wad 1
+waddin 1 wade 1 wages 1 wagin 1 wagon 1 wail 1 waiter 1 waiters 1
+waivers 1 wake 1 wakes 1 walks 1 walter 1 wanda 1 wanna 1 warehouse 1
+warfare 1 washed 1 wastin 1 watches 1 waved 1 waving 1 weapon 1 weared 1
+weasel 1 weather 1 weavin 1 weeds 1 weenies 1 weighin 1 weighs 1 weight
+1 welt 1 whack 1 wharf 1 wheelbarrows 1 wheelchairs 1 whip 1 whippin 1
+whispered 1 whistle 1 whom 1 whoppin 1 whup 1 wildly 1 wilshire 1 wink 1
+winning 1 winnings 1 wins 1 winter 1 wires 1 wisecracks 1 wishin 1
+withdraw 1 wits 1 wooden 1 woods 1 wordsworth 1 worms 1 wrap 1 wreck 1
+wriggle 1 wringin 1 wringing 1 wrinkles 1 wristwatches 1 writers 1
+writes 1 writing 1 wuppin 1 yankees 1 yearbook 1 yellow 1 yessir 1
+yessiree 1 yo 1 yoke 1 york 1 yourselfs 1 zone 2 © 2 accidentally 2
+accomplished 2 acrost 2 acted 2 actors 2 actress 2 add 2 address 2
+adjustin 2 ads 2 advanced 2 advantage 2 advice 2 afflicted 2 afford 2
+afterwards 2 aisle 2 album 2 allow 2 altho 2 although 2 ankles 2
+announcer 2 answered 2 answers 2 anyone 2 anywhere 2 appearance 2
+applied 2 arena 2 arguin 2 arrived 2 arrows 2 asked 2 assin 2 assistant
+2 assume 2 attraction 2 australia 2 author 2 authorities 2 awfully 2
+awnin 2 aye 2 babies 2 baboon 2 backup 2 backward 2 bacon 2 badly 2 bags
+2 bail 2 bale 2 bangin 2 banks 2 barely 2 basically 2 bath 2 bay 2 beach
+2 beards 2 bearer 2 bedford 2 beds 2 behavior 2 bent 2 bettin 2 beyon 2
+bills 2 billy 2 bin 2 bird 2 birmingham 2 biscuits 2 bitch 2 blanket 2
+bleak 2 block 2 blocks 2 blood 2 boil 2 bombs 2 bookie 2 boot 2 bored 2
+borrowed 2 bother 2 bottles 2 bozo 2 brains 2 bran 2 bread 2 brick 2
+briefcase 2 brightest 2 britches 2 broad 2 bubblin 2 bugged 2 bullets 2
+burnin 2 burning 2 buster 2 bustin 2 button 2 buyin 2 calling 2
+cambridge 2 camera 2 candidate 2 candy 2 caps 2 capsule 2 cards 2
+careful 2 carefully 2 cargo 2 carolina 2 carrier 2 carries 2 carrying 2
+ceilin 2 celebrate 2 ceremony 2 chains 2 champion 2 championships 2
+chandelier 2 character 2 charleston 2 chased 2 cheeks 2 chessmen 2
+chickens 2 chief 2 children 2 chin 2 choakin 2 chosen 2 christ 2 chucked
+2 church 2 circuit 2 civilization 2 clearin 2 closet 2 cloudin 2 clump 2
+coachin 2 coal 2 cocksucker 2 colander 2 collar 2 collect 2 collected 2
+complain 2 complainin 2 concerned 2 conclude 2 conduct 2 confusion 2
+conk 2 connecticut 2 contend 2 conversation 2 cooked 2 cooking 2
+copyright 2 cots 2 cottonseed 2 countin 2 court 2 crabs 2 crackin 2
+crane 2 crash 2 crashed 2 crawlin 2 creation 2 cried 2 cross 2 crude 2
+curiosity 2 curl 2 curtains 2 custom 2 dancin 2 dangerous 2 dare 2 darts
+2 date 2 decision 2 definate 2 degrees 2 demand 2 demonstrate 2 dial 2
+difficult 2 disappointed 2 dishonest 2 distressed 2 division 2 dixie 2
+doors 2 doubt 2 drawed 2 dreamt 2 dressin 2 dried 2 drivin 2 droppin 2
+drove 2 drownin 2 drum 2 dry 2 dryden 2 dryer 2 duckboards 2 dumbo 2
+dump 2 during 2 dust 2 earlier 2 ease 2 economy 2 edgar 2 education 2
+eighty 2 elbow 2 empty 2 encyclopedias 2 enjoy 2 enjoyed 2 enormous 2
+enter 2 entirely 2 escort 2 especially 2 evertime 2 exaggeration 2
+excitin 2 excuse 2 executive 2 exercise 2 expand 2 expanded 2
+experienced 2 explain 2 expression 2 eyein 2 fail 2 fainted 2 faints 2
+fake 2 faked 2 familiar 2 family 2 farming 2 fart 2 feather 2 feelings 2
+felled 2 female 2 fence 2 fiend 2 figgers 2 figured 2 finals 2 financial
+2 firebase 2 fired 2 fist 2 flail 2 flash 2 flashin 2 fleet 2 flingin 2
+flounderin 2 flour 2 flung 2 folded 2 fooled 2 foolin 2 fools 2 forehead
+2 forgit 2 formed 2 former 2 fortune 2 foul 2 fourth 2 frankenstein 2
+frawgs 2 freak 2 fred 2 freedom 2 fried 2 friendly 2 fruit 2 fucked 2
+fucking 2 further 2 gather 2 gathered 2 genesis 2 gentlemen 2 gesture 2
+gigglin 2 gits 2 given 2 gives 2 glance 2 glasses 2 glob 2 glory 2
+gloucester 2 glum 2 goalposts 2 gorilla 2 gougin 2 grades 2 gravity 2
+grease 2 greater 2 grin 2 groom 2 grounds 2 group 2 grunt 2 gulf 2
+gunnysack 2 gwinn 2 halftime 2 handin 2 hanful 2 hanged 2 happens 2
+happily 2 headlines 2 hee 2 heliocopter 2 helmets 2 henderson 2 heped 2
+hershey 2 hid 2 hidin 2 hightail 2 hollywood 2 homeroom 2 horn 2 hose 2
+hoverin 2 howlin 2 humiliated 2 humongus 2 hundrits 2 hurtin 2 huts 2
+hysterical 2 icebox 2 iced 2 ideal 2 imbecile 2 immoral 2 improve 2
+inches 2 incomin 2 indeed 2 individual 2 inform 2 ink 2 instance 2
+international 2 investments 2 invited 2 involved 2 itsef 2 jacket 2
+jackoff 2 jeans 2 jerk 2 jerkoff 2 jewelry 2 jobs 2 jockstraps 2 john 2
+join 2 joints 2 jumped 2 key 2 kickin 2 klan 2 knittin 2 knockin 2
+knowingly 2 lagoon 2 laid 2 lan 2 large 2 latest 2 laundry 2 leak 2
+leaked 2 leaned 2 leap 2 leaped 2 leapin 2 lever 2 lift 2 lightbulb 2
+lights 2 limb 2 lines 2 lite 2 located 2 lock 2 loiterin 2 lonely 2
+lonesome 2 longshoreman 2 looking 2 louder 2 louisville 2 loved 2 lovely
+2 lucky 2 lunchtime 2 madmen 2 mamas 2 manage 2 maneuver 2 marchin 2
+margaret 2 marshes 2 mattress 2 meanin 2 means 2 measure 2 meditatin 2
+member 2 mildly 2 milk 2 millin 2 mirror 2 miserable 2 missed 2 missin 2
+missing 2 mixed 2 mob 2 mongolian 2 monica 2 monster 2 monument 2
+mortars 2 mos 2 motor 2 mouths 2 musical 2 musta 2 napalm 2 nathan 2
+nation 2 native 2 neat 2 necktie 2 noises 2 nope 2 notebooks 2 notes 2
+noticed 2 noticin 2 novel 2 numbnuts 2 nutty 2 oaf 2 observation 2 offer
+2 oil 2 older 2 opening 2 opportunity 2 pad 2 pained 2 painted 2 pal 2
+palm 2 palms 2 panic 2 pantry 2 particular 2 particularly 2 parties 2
+partly 2 parts 2 passin 2 patterns 2 pawns 2 peaceful 2 peanut 2 peek 2
+pension 2 percent 2 perfectly 2 performance 2 period 2 persuaded 2
+phoned 2 photo 2 photograph 2 photographer 2 physical 2 physics 2
+picture 2 pictures 2 pigs 2 pink 2 pith 2 places 2 plain 2 planes 2
+planned 2 plantin 2 pleasure 2 pointed 2 poke 2 polite 2 popagallo 2
+pope 2 popularity 2 possibly 2 poundin 2 precious 2 presence 2 presently
+2 presents 2 pro 2 promised 2 protestin 2 prove 2 provide 2 puff 2 pygmy
+2 quick 2 quietly 2 races 2 racket 2 railroad 2 rained 2 rape 2 rare 2
+reachin 2 realistic 2 realized 2 realizin 2 rec 2 reception 2 recognized
+2 regional 2 relations 2 remarks 2 rememberin 2 remembers 2 reply 2
+resemble 2 retarded 2 retards 2 ridin 2 rigged 2 rightly 2 riot 2 rip 2
+ripped 2 rippin 2 ripple 2 robbed 2 rock 2 rocket 2 rocks 2 rode 2 rodeo
+2 roomate 2 round 2 rowboats 2 rubbin 2 rumors 2 runner 2 running 2 rush
+2 russian 2 sadly 2 saigon 2 saloon 2 santa 2 sat 2 savage 2 scant 2
+scar 2 scare 2 scenery 2 science 2 scowlin 2 scrambled 2 scrapin 2
+screech 2 screw 2 scribblin 2 script 2 sea 2 seatbelt 2 seatbelts 2
+seats 2 seconds 2 security 2 seein 2 serve 2 served 2 sets 2 seventeen 2
+sewn 2 shakespeare 2 shall 2 shame 2 shaved 2 shiny 2 shipped 2 shovelin
+2 shown 2 shrimp 2 shrugged 2 sidewalk 2 silent 2 simply 2 sing 2
+sixteen 2 sixty 2 skin 2 skirt 2 sleepin 2 sleeve 2 slept 2 slew 2
+slicked 2 slimy 2 slit 2 smarter 2 smelt 2 smiled 2 smiles 2 smokin 2
+snap 2 snatch 2 soakin 2 sobbin 2 sofa 2 souns 2 sourly 2 spaceman 2
+spasmoin 2 specially 2 spectacle 2 speed 2 spit 2 splained 2 splainin 2
+splash 2 spot 2 springtime 2 sputterin 2 squashed 2 squirmin 2 srimps 2
+st 2 stairs 2 stake 2 standing 2 star 2 starboard 2 stewardess 2 sticks
+2 stirred 2 stockin 2 stole 2 stompin 2 straightened 2 stranded 2 straw
+2 strugglin 2 strung 2 study 2 stumblin 2 stupo 2 suck 2 suited 2 sunset
+2 supplies 2 suppose 2 surprise 2 surrounded 2 suspiciously 2 swamp 2
+swanee 2 sweatin 2 sweepin 2 swimmin 2 swung 2 symbol 2 tax 2 teachers 2
+tearin 2 temporarily 2 tensive 2 thin 2 thirsty 2 those 2 thou 2 tiger 2
+tires 2 title 2 told 2 tossed 2 tossin 2 total 2 towns 2 translate 2
+treat 2 treatin 2 treatment 2 trench 2 trucked 2 trucks 2 true 2 trying
+2 tube 2 tubes 2 tumped 2 twist 2 type 2 uggh 2 uncle 2 undershorts 2
+unfair 2 unfortunate 2 unhappy 2 uniforms 2 universe 2 unless 2 unusual
+2 unzip 2 upper 2 vacation 2 variation 2 view 2 visit 2 vodka 2 wadnt 2
+waitress 2 walking 2 walton 2 wand 2 wandered 2 wanderin 2 washin 2
+waterfront 2 watermelon 2 ways 2 weekend 2 weigh 2 weird 2 western 2 wet
+2 wheel 2 wheels 2 whipped 2 whose 2 wide 2 wife 2 willing 2 winston 2
+wipe 2 wiped 2 wiry 2 wizzin 2 wood 2 working 2 wouldn 2 writer 2 x 2
+yelled 2 yeller 2 yesterday 2 young 2 younger 2 yourself 2 zipper 3
+accounta 3 acres 3 action 3 afternoons 3 airplanes 3 airport 3 americans
+3 angeles 3 apart 3 apes 3 apiece 3 apparently 3 appears 3 armed 3
+arrange 3 arranged 3 arrest 3 arrested 3 arrive 3 ashamed 3 aside 3
+attack 3 autobiography 3 axes 3 backstage 3 bait 3 banquet 3 bars 3
+baseball 3 beard 3 beatle 3 beers 3 beg 3 bellowin 3 belt 3 bend 3
+benning 3 blame 3 blob 3 blue 3 bomb 3 booin 3 books 3 born 3 boulevard
+3 bounce 3 brown 3 brush 3 bum 3 bush 3 busses 3 busted 3 busy 3 butter
+3 cabin 3 cafeteria 3 cage 3 calm 3 cameras 3 cannibal 3 cape 3 caption
+3 cash 3 cat 3 caused 3 cents 3 championship 3 chase 3 chest 3 chicago 3
+circlin 3 civil 3 cleaver 3 clerk 3 climbed 3 clock 3 color 3 communist
+3 complicated 3 conference 3 confused 3 conked 3 couch 3 crab 3 crate 3
+crawl 3 credit 3 creek 3 crew 3 curious 3 daft 3 dagger 3 danang 3 dance
+3 defense 3 depot 3 diaper 3 die 3 directly 3 dix 3 doctors 3 doghouse 3
+dogs 3 donald 3 dozen 3 dragged 3 drain 3 drama 3 drawn 3 dream 3
+droolin 3 drummer 3 dug 3 earn 3 effort 3 egg 3 elmer 3 equations 3
+everwhere 3 every 3 experience 3 explosions 3 f 3 famous 3 fannin 3 feed
+3 feelins 3 fields 3 fightin 3 filled 3 filthy 3 findin 3 finds 3 fishin
+3 fists 3 flailin 3 flomaton 3 flunked 3 forever 3 forty 3 fraternity 3
+friday 3 fry 3 fuckin 3 future 3 gambit 3 gas 3 giant 3 goal 3 goat 3
+government 3 grenade 3 ground 3 gruntin 3 guinea 3 gunner 3 happenin 3
+happiest 3 harrington 3 harvested 3 headed 3 headin 3 headline 3 heave 3
+heaved 3 heaven 3 hepped 3 hey 3 hillbillies 3 himself 3 hissin 3 hooks
+3 hopin 3 horizons 3 horrible 3 huddle 3 huge 3 ideas 3 iii 3 imagine 3
+impression 3 interpreter 3 introduced 3 jabberin 3 janet 3 johnson 3
+keel 3 keen 3 keyboard 3 kill 3 killin 3 kin 3 kitchen 3 knee 3 knees 3
+landed 3 laws 3 layin 3 leadin 3 leanin 3 learnin 3 less 3 liar 3 lid 3
+lif 3 lifetime 3 limeade 3 lips 3 listened 3 loan 3 lobby 3 local 3 lord
+3 los 3 losin 3 lug 3 lying 3 madam 3 main 3 makeup 3 market 3 mars 3
+master 3 matches 3 medic 3 medical 3 mental 3 mesh 3 message 3
+mississippi 3 moanin 3 mountains 3 mrs 3 mumblin 3 murder 3 myself 3
+names 3 nasty 3 natural 3 needed 3 nevertheless 3 niggers 3 nite 3 noon
+3 nor 3 noses 3 official 3 ordered 3 orleans 3 ourselves 3 outer 3
+pacific 3 package 3 pajaymas 3 panel 3 parade 3 parkin 3 parlor 3
+partition 3 party 3 passed 3 pat 3 peaches 3 perimeter 3 photographers 3
+pipe 3 platform 3 playing 3 pockets 3 pointin 3 points 3 position 3
+potatoes 3 pounce 3 poured 3 prayin 3 press 3 professional 3 profits 3
+provincetown 3 pullin 3 pumpin 3 purpose 3 puts 3 quarters 3 range 3
+rassler 3 readin 3 record 3 relieved 3 remarkable 3 rescued 3 retired 3
+road 3 robe 3 rosy 3 ruint 3 ruler 3 sales 3 salt 3 satisfied 3 savannah
+3 savant 3 saying 3 scheme 3 season 3 seconts 3 shin 3 shop 3 shouted 3
+shove 3 showers 3 shriek 3 sides 3 sights 3 signed 3 simple 3 singed 3
+sister 3 sisters 3 slogan 3 slope 3 slung 3 socks 3 songs 3 sooner 3
+soul 3 sounded 3 sour 3 spear 3 split 3 squared 3 squash 3 squawkin 3
+squished 3 stack 3 stamped 3 stan 3 starts 3 stops 3 stories 3 strapped
+3 streets 3 studyin 3 stuffed 3 sugar 3 surprised 3 sweet 3 swimming 3
+tables 3 taking 3 tall 3 tap 3 taxicab 3 teach 3 teams 3 tend 3 term 3
+terribily 3 texas 3 though 3 thumb 3 tiny 3 tinymight 3 tits 3 toilets 3
+tomato 3 touchdown 3 traffic 3 travelin 3 trick 3 tricks 3 truck 3 truly
+3 turnin 3 upstairs 3 vice 3 vine 3 wall 3 wanta 3 warm 3 weapons 3
+wears 3 weepin 3 wheelchair 3 whenever 3 whisper 3 wierd 3 wig 3 wildest
+3 wings 3 winner 3 wire 3 women 3 wonderful 3 wore 3 woulda 3 wound 3
+writin 3 written 3 yours 3 yup 4 actin 4 agree 4 alley 4 allowed 4
+announce 4 ants 4 apparent 4 area 4 ask 4 asshole 4 astronaut 4 ate 4
+atheletic 4 backwards 4 bar 4 barracks 4 beautiful 4 behave 4 behind 4
+bitin 4 bleachers 4 bongin 4 bounds 4 bow 4 bowin 4 c 4 cab 4 california
+4 campus 4 cans 4 captured 4 center 4 chatterin 4 cigarette 4 clap 4
+cleanin 4 closed 4 closer 4 commences 4 computer 4 congressional 4
+contain 4 correct 4 coughin 4 count 4 covered 4 crap 4 deep 4 direction
+4 director 4 dirty 4 distance 4 docks 4 dope 4 doris 4 drank 4 dresses 4
+drink 4 dropped 4 drug 4 drunk 4 earl 4 easier 4 elevator 4 embarrassed
+4 envelope 4 everplace 4 expected 4 fairy 4 fan 4 fed 4 fellow 4 flight
+4 floatin 4 freeway 4 fresh 4 frightened 4 geeks 4 georgia 4 gist 4 goes
+4 goodbye 4 gotten 4 grappin 4 guard 4 hammer 4 handed 4 hands 4 hang 4
+having 4 heliocopters 4 hero 4 hide 4 hill 4 hills 4 hired 4 hug 4
+huggin 4 human 4 hundred 4 id 4 important 4 includin 4 indian 4
+interested 4 interestin 4 intermediate 4 jam 4 jesus 4 jockstrap 4
+kiddin 4 landin 4 laps 4 lay 4 leg 4 letters 4 lifted 4 limes 4
+literature 4 locker 4 male 4 meat 4 mighty 4 miles 4 mission 4 mistake 4
+monkey 4 moon 4 muncie 4 nashville 4 naturally 4 nonetheless 4 nurse 4
+oak 4 object 4 odd 4 operation 4 order 4 otherwise 4 outlook 4 p 4
+paddlin 4 paddy 4 pair 4 papers 4 parachute 4 pardon 4 passes 4 perfect
+4 pile 4 pinned 4 pitcher 4 pitchers 4 plannin 4 plastic 4 platoon 4
+players 4 pleased 4 pleiku 4 poor 4 pots 4 pressed 4 program 4 proud 4
+pushin 4 question 4 race 4 raise 4 raised 4 ran 4 rediculous 4 referee 4
+remind 4 reporters 4 restaurant 4 rifle 4 roll 4 rook 4 rooms 4 rose 4
+rowboat 4 scratchin 4 scream 4 screwin 4 sell 4 settle 4 sheet 4 shined
+4 shinin 4 shorter 4 shrug 4 signs 4 size 4 slappin 4 slep 4 snatched 4
+sold 4 somesuch 4 sometime 4 somewhat 4 somewhere 4 spend 4 spent 4
+squattin 4 steamin 4 stepped 4 stickin 4 stow 4 suits 4 sumbitch 4
+summer 4 takes 4 talked 4 tank 4 tape 4 tea 4 tear 4 telephone 4
+temperer 4 tests 4 thank 4 through 4 toward 4 trainin 4 tribe 4 union 4
+until 4 upon 4 usin 4 usually 4 vulgar 4 waist 4 waiting 4 wantin 4 ward
+4 wayne 4 wearing 4 webbed 4 wine 4 wipin 4 wished 4 worked 4 works 4
+worth 4 wounded 4 writ 4 yale 4 yarn 4 yep 5 above 5 age 5 airplane 5
+alabama 5 alone 5 ammo 5 angry 5 anymore 5 beads 5 bell 5 beverly 5
+biggest 5 bitchin 5 bitty 5 boilin 5 breath 5 brigade 5 building 5
+bushes 5 calls 5 campaign 5 career 5 carried 5 cauldron 5 changed 5
+chinaman 5 clear 5 cold 5 comes 5 completely 5 cop 5 counter 5 crabbin 5
+crawled 5 decide 5 demonstration 5 desk 5 diapers 5 divinity 5 doing 5
+drag 5 duck 5 eatin 5 event 5 expenses 5 extremely 5 eye 5 fault 5
+feeblestein 5 figgerin 5 finger 5 fit 5 float 5 flown 5 forth 5 friend 5
+fun 5 garden 5 general 5 george 5 girls 5 grade 5 grenades 5 growin 5
+growlin 5 gym 5 headquarters 5 heads 5 helmet 5 hodaddy 5 hold 5 huh 5
+hut 5 impossible 5 jar 5 kicked 5 latrine 5 learn 5 lettin 5 loony 5
+manager 5 mills 5 morning 5 moron 5 moustache 5 named 5 neckid 5 nervous
+5 news 5 nicer 5 nodded 5 noplace 5 nothing 5 nowhere 5 officer 5 often
+5 oughta 5 pack 5 packin 5 paddle 5 page 5 philosophy 5 pichers 5 plant
+5 pocket 5 policeman 5 popular 5 post 5 pot 5 present 5 private 5 prize
+5 protestant 5 queen 5 relief 5 rice 5 ridge 5 rolled 5 rollin 5 roof 5
+roomin 5 row 5 rubber 5 rung 5 runs 5 rushin 5 sad 5 safe 5 sambwich 5
+save 5 several 5 shoulder 5 sky 5 sounds 5 spin 5 spring 5 stayin 5
+strong 5 sunday 5 suprise 5 suprised 5 swim 5 teacher 5 tears 5 thanked
+5 thanks 5 theyselfs 5 thirty 5 ticket 5 tide 5 tin 5 torch 5 touch 5
+tower 5 train 5 twice 5 upset 5 upside 5 waited 5 watched 5 weighed 5
+welcome 5 whether 5 while 5 whupped 5 winders 5 wonder 5 words 5 worry 5
+yards 6 act 6 ago 6 america 6 answer 6 audience 6 auditorium 6 bet 6
+bishop 6 boats 6 bones 6 boone 6 bottle 6 bottom 6 brought 6 bucks 6
+buildin 6 bullshit 6 cannibals 6 cart 6 classes 6 colored 6 commotion 6
+creature 6 damned 6 dawn 6 died 6 dinner 6 dreams 6 driver 6 electric 6
+exhibit 6 expectin 6 faces 6 fell 6 fish 6 flat 6 force 6 forget 6
+forgot 6 found 6 foxholes 6 free 6 full 6 furthermore 6 gave 6 gets 6
+givin 6 glarin 6 glass 6 goon 6 grate 6 handkerchief 6 hearin 6 heat 6
+hours 6 houston 6 hungry 6 idiots 6 keepin 6 knocked 6 ladies 6 lake 6
+lap 6 lead 6 leaves 6 leavin 6 lieutenant 6 liked 6 listenin 6 lived 6
+marsh 6 mask 6 math 6 may 6 meal 6 medals 6 mention 6 moved 6 moves 6
+national 6 newspaper 6 newspapers 6 ocean 6 packed 6 paid 6 personally 6
+picked 6 pieces 6 pole 6 principal 6 public 6 pygmie 6 quarterback 6
+rainin 6 reached 6 scared 6 second 6 secret 6 seed 6 senate 6 sense 6
+share 6 shine 6 shoot 6 shrubs 6 shucker 6 sit 6 situation 6 smart 6
+song 6 soun 6 spinnin 6 sport 6 startin 6 student 6 stupid 6 sun 6
+swingin 6 taste 6 teachin 6 tells 6 terrific 6 thousand 6 threat 6 tired
+6 today 6 totally 6 tune 6 turns 6 twistin 6 unfortunately 6 wear 6
+whoever 6 winnin 6 without 6 woud 7 afterward 7 ah 7 around 7 attention
+7 balls 7 bank 7 bastid 7 blowin 7 board 7 body 7 bright 7 brung 7 built
+7 came 7 card 7 catchin 7 check 7 coffee 7 commander 7 cookin 7 cops 7
+coulda 7 cover 7 cry 7 dark 7 death 7 dog 7 drinkin 7 duke 7 early 7
+excited 7 expect 7 fact 7 fat 7 felt 7 fifteen 7 fight 7 fly 7 follow 7
+forward 7 french 7 friends 7 games 7 grass 7 green 7 grinnin 7 grow 7
+hand 7 hat 7 heart 7 help 7 history 7 honor 7 its 7 jackoffs 7 kick 7
+kids 7 knight 7 laugh 7 load 7 longer 7 luck 7 makes 7 meant 7 mess 7
+microphone 7 motion 7 mouth 7 north 7 nose 7 notice 7 number 7 nuts 7
+orangutang 7 park 7 payin 7 peace 7 peculiar 7 peking 7 pin 7 please 7
+pond 7 porch 7 puttin 7 reach 7 recognize 7 report 7 saved 7 screamin 7
+screen 7 seven 7 shellin 7 short 7 showin 7 slow 7 smell 7 smoke 7 son 7
+south 7 special 7 starin 7 stars 7 stayed 7 steam 7 stomach 7 tavern 7
+tie 7 tied 7 tongue 7 tonight 7 twelve 7 u 7 wherever 7 wish 7 workin 7
+worried 7 worse 7 worst 7 wrote 8 american 8 appear 8 asses 8 awe 8
+basement 8 bear 8 bench 8 besides 8 box 8 burnt 8 cap 8 capitol 8
+certainly 8 charge 8 cheer 8 china 8 city 8 clappin 8 department 8 dorm
+8 downtown 8 edge 8 entire 8 evenin 8 fixed 8 followin 8 fort 8 fuck 8
+hauled 8 knives 8 knock 8 laughin 8 lean 8 lear 8 lie 8 managed 8
+minutes 8 nets 8 ponds 8 quarter 8 rather 8 reason 8 role 8 s 8 saddle 8
+salesman 8 saturday 8 score 8 seems 8 shore 8 shut 8 step 8 stew 8 stood
+8 taught 8 tire 8 toilet 8 trees 8 trip 8 uh 8 uniform 8 waitin 8 wavin
+8 wild 8 word 8 yell 8 yet 9 afraid 9 awful 9 batre 9 bed 9 beer 9 being
+9 bring 9 carryin 9 case 9 chance 9 chessboard 9 chinese 9 claxton 9
+club 9 cook 9 costume 9 cot 9 coud 9 crazy 9 dead 9 dumb 9 durin 9 easy
+9 extra 9 feelin 9 flyin 9 fore 9 god 9 gook 9 grand 9 hangin 9 haul 9
+helt 9 highschool 9 however 9 la 9 learnt 9 looks 9 mao 9 meantime 9
+month 9 movies 9 neck 9 neither 9 onto 9 problem 9 realize 9 ropes 9
+rudolph 9 scene 9 serious 9 shack 9 showed 9 sign 9 splain 9 steps 9
+stopped 9 store 9 strange 9 television 9 tour 9 understan 9 wants 9
+weeks 9 won 9 yoursef 10 animal 10 bananas 10 bathroom 10 beginnin 10
+behole 10 boiler 10 book 10 broke 10 business 10 cars 10 cheerin 10
+college 10 cup 10 dollar 10 drive 10 fix 10 fixin 10 garbage 10 halfway
+10 high 10 holler 10 known 10 late 10 legs 10 loud 10 love 10 million 10
+mine 10 moment 10 natives 10 orange 10 person 10 pit 10 plan 10 rassle
+10 smile 10 smilin 10 something 10 sound 10 square 10 stuck 10 teeth 10
+third 10 wave 10 wonderin 10 write 10 wrong 10 yawk 11 able 11 anybody
+11 apartment 11 bawlin 11 bayou 11 boston 11 both 11 bowl 11 boys 11
+butt 11 canoe 11 chantin 11 control 11 corn 11 country 11 dear 11 doyle
+11 finish 11 hole 11 idea 11 judge 11 jumpin 11 knows 11 left 11 live 11
+lo 11 low 11 married 11 met 11 miss 11 mobile 11 months 11 mostly 11
+nasa 11 nebraska 11 net 11 nine 11 noddin 11 note 11 others 11 paper 11
+perhaps 11 plane 11 plays 11 pounds 11 red 11 spears 11 state 11
+straight 11 tellin 11 thowin 11 tomorrow 11 truth 11 vegetable 11
+vietnam 11 village 11 yes 12 ahead 12 banjo 12 chairman 12 change 12 cut
+12 dirt 12 drums 12 english 12 glad 12 goddamn 12 hall 12 hardly 12 kilt
+12 kinds 12 land 12 lunch 12 many 12 meet 12 men 12 movin 12 nut 12
+pulled 12 quite 12 ready 12 roun 12 shootin 12 sight 12 sleep 12 spose
+12 terrible 12 understand 12 wind 12 yard 13 axin 13 baby 13 bought 13
+break 13 care 13 charlie 13 clean 13 course 13 decided 13 different 13
+dunno 13 eight 13 fifty 13 fingers 13 girl 13 gotta 13 happened 13 hovel
+13 instead 13 knew 13 loose 13 lyin 13 match 13 past 13 pay 13 questions
+13 read 13 seemed 13 shook 13 shoulders 13 speak 13 stick 13 team 13
+tournament 13 tv 13 yeah 14 afore 14 arms 14 banana 14 boat 14 breakfast
+14 chasin 14 chinamen 14 close 14 corner 14 cussin 14 earth 14 foot 14
+half 14 harvard 14 hep 14 indianapolis 14 job 14 middle 14 pants 14
+quackenbush 14 rest 14 shirt 14 speech 14 station 14 story 14 taken 14
+towards 14 yellin 15 anything 15 beatin 15 become 15 bust 15 catch 15
+commenced 15 does 15 drop 15 exactly 15 fast 15 food 15 funny 15 holdin
+15 letter 15 lost 15 matter 15 phone 15 secont 15 shake 15 shakin 15
+shoes 15 shot 15 should 15 shout 15 test 15 walked 15 walkin 15 whatever
+15 wilkins 15 woman 16 anythin 16 carry 16 commence 16 cotton 16
+finished 16 gun 16 havin 16 holt 16 part 16 pick 16 police 16 practice
+16 quit 16 radio 16 saw 16 sent 16 six 16 stage 16 stand 16 supper 16
+table 16 tom 16 turned 16 twenty 16 voice 17 between 17 black 17 buy 17
+callin 17 cryin 17 dress 17 dressed 17 dunce 17 everthing 17 grap 17
+great 17 hot 17 jail 17 jump 17 least 17 leave 17 line 17 music 17 old
+17 ought 17 pull 17 reckon 17 river 17 space 17 states 17 thought 17
+watch 17 win 18 across 18 actually 18 cannot 18 chair 18 far 18 field 18
+floor 18 hersef 18 kranz 18 lose 18 mose 18 movie 18 ourselfs 18 same 18
+somehow 18 tree 18 use 19 air 19 already 19 beat 19 because 19 blowed 19
+caught 19 fall 19 feet 19 felder 19 fine 19 hospital 19 ivan 19 medal 19
+pass 19 quiet 19 rain 19 ride 19 seat 19 send 19 show 19 side 19
+sometimes 19 together 19 united 20 almost 20 bit 20 cracked 20 each 20
+either 20 fire 20 grurck 20 hard 20 hit 20 light 20 mad 20 office 20
+piece 20 snake 20 talkin 20 white 21 always 21 goons 21 kep 21 knowed 21
+machine 21 need 21 once 21 really 21 sorry 21 stay 21 their 21 wanted 22
+afternoon 22 against 22 daddy 22 deal 22 eggs 22 folks 22 happy 22 hotel
+22 lady 22 listen 22 livin 22 near 22 nearly 22 player 22 point 22
+remember 22 thousan 22 thow 22 wait 22 world 23 believe 23 car 23 comin
+23 looked 23 none 23 rasslin 23 shoutin 23 soon 23 street 23 washington
+23 watchin 23 wearin 23 whole 24 arm 24 best 24 doctor 24 haf 24 honest
+24 outside 24 probly 24 takin 24 talk 24 year 25 begin 25 chess 25 eat
+25 foun 25 king 25 nod 25 open 25 pygmies 25 these 25 tried 25 trouble
+25 week 26 bag 26 band 26 class 26 end 26 feel 26 fool 26 gooch 26 hour
+26 minute 26 own 26 po 26 ring 26 sergeant 26 someplace 26 water 26
+winder 27 clothes 27 going 27 mind 27 times 27 turd 28 behin 28 cept 28
+days 28 everthin 28 figgered 28 four 28 hans 28 seem 28 sorts 28 such 28
+university 28 war 29 bryant 29 crowd 29 curtis 29 dollars 29 hair 29
+hurt 29 most 29 next 29 spaceship 29 top 29 town 30 bad 30 em 30 makin
+30 pee 30 suit 30 tho 30 walk 30 work 30 years 31 colonel 31 guys 31
+kinda 31 thinkin 32 any 32 company 32 hear 32 move 32 must 32 oh 32 only
+32 ten 32 used 33 boy 33 damn 33 gooks 33 grapped 33 groun 33 heard 33
+inside 33 mornin 33 school 34 game 34 hollerin 34 keep 34 played 34
+sposed 34 stuff 35 bidness 35 happen 35 professor 36 called 36 harmonica
+36 hundrit 36 standin 37 bein 37 better 37 call 37 face 37 last 37
+runnin 37 three 38 army 38 ball 38 couple 38 few 38 jungle 38 mean 38
+outta 38 sayin 38 stop 39 along 39 another 39 guess 39 okay 40 anyway 40
+five 40 name 40 new 40 under 40 welch 41 bus 41 curran 41 lef 41 life 41
+sudden 41 try 42 ape 42 axe 42 raquel 42 suddenly 43 front 43 still 43
+thowed 44 also 44 man 44 might 45 git 46 door 46 enough 46 eyes 46
+hissef 46 house 46 tribble 46 turn 47 ass 47 mysef 47 since 48 very 49
+gump 49 made 49 nobody 49 president 49 said 49 started 49 why 50 account
+50 begun 50 later 50 nice 50 seen 52 before 52 hell 52 money 52 pretty
+52 sam 53 figger 53 find 53 room 53 than 53 were 54 home 54 place 54
+till 55 doin 55 football 55 tryin 56 gettin 58 playin 59 else 59 mike 59
+never 60 bunch 61 did 61 maybe 62 finally 63 away 63 kind 63 much 64
+bubba 64 lot 64 sort 64 thru 65 srimp 66 idiot 67 fellers 68 lookin 69
+coach 70 run 70 settin 71 anyhow 72 long 73 goin 73 han 73 sure 75 let
+75 real 75 took 77 everbody 78 gone 78 guy 78 nex 79 which 80 tole 81
+more 82 even 82 somebody 82 things 85 give 85 just 85 night 85 right 88
+nothin 89 two 90 fritch 91 first 91 want 93 are 93 good 93 who 95 could
+95 make 95 put 96 major 96 play 97 ever 100 head 100 went 100 will 101
+way 102 again 103 would 104 think 105 feller 106 thing 110 how 112 tell
+113 shit 114 mama 114 set 114 wile 115 mister 115 now 115 take 117 too
+118 people 118 your 120 axed 120 know 120 see 121 other 123 here 125
+cause 125 gonna 126 day 128 about 128 by 129 start 130 been 133 if 142
+our 143 into 143 time 144 can 145 dan 145 forrest 145 where 149 sue 152
+aroun 157 well 163 off 164 has 164 ole 166 somethin 174 and 174 jenny
+174 not 176 done 186 had 187 little 188 am 188 no 191 after 193 jus 196
+as 201 bout 205 them 206 over 208 her 212 look 214 one 218 some 223 from
+230 says 238 big 247 go 249 have 250 do 255 us 279 back 287 or 292 this
+293 down 308 come 309 when 318 him 320 then 326 his 341 like 349 so 355
+get 375 what 386 there 394 at 419 she 422 be 422 out 427 got 438 with
+477 for 522 my 525 all 584 but 609 up 645 we 659 they 690 was 707 on 733
+you 777 that 836 say 980 he 986 it 1006 me 1085 in 1171 is 1301 of 1992
+a 2107 to 2453 i 3265 the 3818 an</p>
+</body>
+</html>
