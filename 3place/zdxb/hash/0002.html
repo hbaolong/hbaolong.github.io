@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="文/韩宝龙" />
+  <title>什么是自然杀伤细胞？</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">什么是自然杀伤细胞？</h1>
+<p class="author">文/韩宝龙</p>
+<p class="date">2026年6月3日 12时10分37秒</p>
+</header>
+<p><strong>自然杀伤细胞</strong>是先天免疫系统中的一类特殊淋巴细胞。它的名字很形象：<strong>天生就知道如何“杀死”目标，不需要提前学习或致敏</strong>。</p>
+<p>在《战斗细胞》的比喻体系里，如果把适应性免疫的杀伤T细胞比作受过严格训练的“狙击手”（只杀特定的、被呈报过的目标），那自然杀伤细胞就像一支
+<strong>24小时待命的特种警察</strong>，按照几条简单的内部规则自主巡逻、果断出击。</p>
+<hr />
+<h3 id="核心特点">核心特点</h3>
+<ul>
+<li><strong>属于先天免疫</strong>：不需要预先接触病原体就能立即工作。</li>
+<li><strong>反应极快</strong>：感染后数小时内就能发挥作用（而适应性免疫的杀伤T细胞需要3-7天才能大量生成）。</li>
+<li><strong>目标两类</strong>：
+<ol type="1">
+<li><strong>被病毒感染的细胞</strong>（阻止病毒复制和扩散）</li>
+<li><strong>癌细胞</strong>（识别并清除发生恶性转化的异常细胞）</li>
+</ol></li>
+</ul>
+<hr />
+<h3 id="它是如何识别坏人的">它是如何识别“坏人”的？</h3>
+<p>自然杀伤细胞的识别机制非常巧妙，不依赖抗体或特定的抗原受体，而是通过细胞表面的
+<strong>激活受体</strong> 和 <strong>抑制受体</strong>
+进行“平衡计算”。</p>
+<p>它主要检查身体其他细胞表面的一类分子：<strong>MHC-I类分子</strong>（主要组织相容性复合体I类）。</p>
+<ul>
+<li>正常健康的细胞都会在表面展示MHC-I分子，相当于一个“<strong>自家人身份证</strong>”。</li>
+<li>自然杀伤细胞表面的<strong>抑制受体</strong>会持续结合这个“身份证”，收到的信号是“别杀我”。</li>
+</ul>
+<p><strong>两种情况会让自然杀伤细胞动手：</strong></p>
+<ol type="1">
+<li><strong>丢失自我</strong>：病毒或癌细胞有时会故意下调MHC-I分子的表达（试图逃脱杀伤T细胞的识别）。但这样一来，“身份证”没了，抑制信号减弱，而激活信号相对占上风，自然杀伤细胞就会<strong>杀死这个细胞</strong>。</li>
+<li><strong>应激信号</strong>：受感染或癌变的细胞表面会出现一些应激诱导的分子（如MICA/MICB），这些能被自然杀伤细胞的<strong>激活受体</strong>直接识别，发出“杀我”信号，压倒抑制信号，触发杀伤。</li>
+</ol>
+<p>简单记忆：<strong>正常细胞喊“别杀我”（通过MHC-I），自然杀伤细胞就走开；如果细胞沉默或发出“杀我”信号，自然杀伤细胞就动手。</strong></p>
+<hr />
+<h3 id="它是如何杀敌的">它是如何杀敌的？</h3>
+<p>与杀伤T细胞类似，自然杀伤细胞通过释放穿孔素和颗粒酶来杀死目标：</p>
+<ol type="1">
+<li>与靶细胞紧密接触。</li>
+<li>释放<strong>穿孔素</strong>，在靶细胞膜上打孔。</li>
+<li>注入<strong>颗粒酶</strong>，诱导靶细胞凋亡（程序性死亡）。</li>
+</ol>
+<hr />
+<h3 id="自然杀伤细胞-vs.-杀伤t细胞cd8-t细胞">自然杀伤细胞
+vs. 杀伤T细胞（CD8+ T细胞）</h3>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">特征</th>
+<th style="text-align: left;">自然杀伤细胞</th>
+<th style="text-align: left;">杀伤T细胞</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><strong>所属免疫</strong></td>
+<td style="text-align: left;">先天免疫</td>
+<td style="text-align: left;">适应性免疫</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>激活是否需要抗原呈递</strong></td>
+<td style="text-align: left;">不需要</td>
+<td style="text-align: left;">需要（树突状细胞呈递）</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>识别方式</strong></td>
+<td style="text-align: left;">平衡抑制/激活信号（检查MHC-I）</td>
+<td
+style="text-align: left;">通过T细胞受体（TCR）识别特定抗原-MHC-I复合物</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>是否有记忆</strong></td>
+<td
+style="text-align: left;">近年发现存在“训练免疫”和记忆样NK，但传统上认为记忆弱</td>
+<td style="text-align: left;">有强大的免疫记忆</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>反应速度</strong></td>
+<td style="text-align: left;">数小时内</td>
+<td style="text-align: left;">初次反应3-7天，二次反应更快</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="与战斗细胞的关联">与《战斗细胞》的关联</h3>
+<p>书中会将自然杀伤细胞描述为<strong>先天免疫的杀手</strong>，与巨噬细胞、中性粒细胞等并列。值得注意的一个常见误解是：<strong>自然杀伤细胞不需要“许可”</strong>——它没有像辅助T细胞那样的指挥官来激活，而是随时处于“半激活”状态，时刻监视全身细胞的状态。</p>
+<p>你可以结合<strong>阶段1的学习</strong>来理解：在病毒感染早期，自然杀伤细胞是第一批冲到现场的“清除者”之一，在适应性免疫启动之前就把被感染的细胞杀掉，为后续的特异性反应争取时间。</p>
+<hr />
+<h3 id="一个帮助记忆的场景">一个帮助记忆的场景</h3>
+<blockquote>
+<p>想象一个社区（人体）： -
+<strong>巨噬细胞</strong>是巡逻的清道夫，吃掉垃圾和细菌。 -
+<strong>中性粒细胞</strong>是疯狂的冲锋队，冲进去无差别攻击。 -
+<strong>自然杀伤细胞</strong>是便衣警察，挨家挨户检查身份证（MHC-I）。如果住户拿不出身份证，或者窗户上贴着“帮帮我”（应激信号），警察二话不说就破门而入，击毙里面的坏人（病毒或癌变细胞）。</p>
+</blockquote>
+如果你已经读完《战斗细胞》的相关章节，觉得书中的某个比喻让你困惑，或者想进一步区分自然杀伤细胞与树突状细胞、巨噬细胞的功能边界，可以随时提问。
+<hr>
+<center>
+<a href="/3place/zdxb">返回首页</a> <a
+href="/3place/zdxb/mingju.html">本书名句</a> <a
+href="/3place/zdxb/memo.html">本书注解</a> <a
+href="/3place/zdxb/index_rich.html">丰富目录</a> <a
+href="/3place/zdxb/index_readcal.html">同读日历</a> <a
+href="/3place/zdxb/index_timeline.html">时间线</a> <a
+href="/3place/zdxb/index_books.html">引用书籍</a> <a
+href="/3place/zdxb/index_words.html">使用字频</a>
+<div id="wx_pic" style="margin:0 auto;display:none;">
+<img src='/img/logo.png'/>
+</div>
+<a href="/3place/zdxb/hash/">HASH5</a>
+</center>
+<hr>
+<center>
+<img src="/img/thanks.jpg" width="50%" height="50%">
+</center>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>
