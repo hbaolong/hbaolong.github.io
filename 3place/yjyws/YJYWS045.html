@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="hbaolong@vip.qq.com" />
+  <title>以交易为生:45.价差合约（CFD）</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">以交易为生:45.价差合约（CFD）</h1>
+<p class="author">hbaolong@vip.qq.com</p>
+</header>
+<center>
+<a href="/3place/yjyws">返回首页</a> <a
+href="/3place/yjyws/mingju.html">本书名句</a> <a
+href="/3place/yjyws/memo.html">本书注解</a> <a
+href="/3place/yjyws/index_rich.html">丰富目录</a> <a
+href="/3place/yjyws/index_readcal.html">同读日历</a> <a
+href="/3place/yjyws/index_timeline.html">时间线</a> <a
+href="/3place/yjyws/index_books.html">引用书籍</a> <a
+href="/3place/yjyws/index_words.html">使用字频</a>
+<div id="wx_pic" style="margin:0 auto;display:none;">
+<img src='/img/logo.png'/>
+</div>
+</center>
+<h4 id="价差合约cfd">45.价差合约（CFD）</h4>
+<p>价差合约是对未来货币、指数或者股票价值的赌注。如果你买了一份价差合约，对应标的的价格上升了，你能从卖给你合约的公司那儿得到相应差价；但如果价格下跌，你则要支付相应差价。价差合约是一种能让投机者赌价格上涨或下跌的衍生品。价差赌注（spread
+betting）与价差合约类似，这种形式在英国和爱尔兰是合法的，但在美国不合法。</p>
+<p>我写这本书时，价差合约在澳大利亚、加拿大、法国、德国、中国香港、爱尔兰、意大利、日本、荷兰、新西兰、挪威、波兰、葡萄牙、新加坡、南非、西班牙、瑞典、瑞士和英国都可以进行交易。在美国，因为证券交易委员会（Securities
+and Exchange Commission）的限制，价差合约是被禁止的。</p>
+<p>价差合约是20世纪90年代初期，由布莱恩·季伦（Brian
+Keelan）和乔恩·伍德（Jon Wood），两位在伦敦的瑞银华宝（UBS
+Warburg）员工发明的。机构交易者用它们来对冲股票风险和避税。在20世纪90年代末期，几家公司开始向普通交易者推广零售的价差合约，兜售杠杆和免税（在英国可以免税）的优势。有供应商将品种从伦敦市场的股票扩展到全球股票、商品、债券和外汇。指数价差合约，基于诸如道琼斯指数、标准普尔500指数、富时100指数、德国法兰克福指数等全球几大主要指数，很快成为这类交易工具中最受欢迎的品种。</p>
+<p>价差合约是个人交易者和供应商之间的合约，不同供应商所提供的交易条款不同。每个价差合约基于一定的标的品种，由供应商创建并与交易者达成交易。你必须准备好支付相应的差价、佣金和隔夜融资成本。合约期限通常都不长，但仓位一夜之间就可以建立好。融资费用和盈亏每天都要财务结算。价差合约以保证金的方式进行交易。</p>
+<p>在较大的价差合约之外，还有很多迷你合约，这样小型交易者更容易参与。没有到期日意味着没有时间衰减的损失。多头支付融资成本，而空头获得相应的成本收入。</p>
+<p>价差合约有几个缺陷。相对于合约的交易规模，价差合约的佣金通常比例非常高。买卖价差由合约供应商所控制，同时他们也控制着合约价格，这可能偏离标的证券的价格。换句话说，零售交易者所交易的对手是专业团队——专业团队在游戏过程中有移动门柱的能力。</p>
+<p>一位新西兰的客户写信给我说：“对于价差合约和价差赌注，必须明白的是买入价差合约，你不仅要打败市场，同时还要打败赌场，价差合约的提供者对产品有定价权，因为这是他们的工具。虽然有时它们模拟着真实市场的走势，但并不意味着它与真实市场的交易是一样的。”</p>
+<p>价差合约着重定位于新手和没有经验的交易者，宣扬潜在的收益，而掩饰存在的风险。澳大利亚金融监管机构（澳大利亚证券投资委员会，ASIC）认为，价差合约交易的风险比赌马或赌场赌博的风险更大。价差合约在美国是被禁止的，管理者还没忘记在20世纪之初的时候野鸡证券交易所一度泛滥的情景。</p>
+<p>证券交易委员会（SEC）在这个问题上的姿态让我想起了另一个联邦机构，食品和药品监督局（Food
+and Drug
+Administration），它一直在美国禁止销售沙利度胺——怀孕女性使用的镇静药物。结果，在它的全部副作用被公众知道之后，美国公民幸免于由该药物在欧洲引起的畸形儿流行病的灾难。</p>
+<h6 id="阅读日期-2026年08月20日-2026年08月20日-共-1-天">阅读日期：
+2026年08月20日-2026年08月20日 共： 1 天</h6>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="hbaolong@vip.qq.com" />
+  <title>以交易为生:21.计算机在交易中的运用</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">以交易为生:21.计算机在交易中的运用</h1>
+<p class="author">hbaolong@vip.qq.com</p>
+</header>
+<center>
+<a href="/3place/yjyws">返回首页</a> <a
+href="/3place/yjyws/mingju.html">本书名句</a> <a
+href="/3place/yjyws/memo.html">本书注解</a> <a
+href="/3place/yjyws/index_rich.html">丰富目录</a> <a
+href="/3place/yjyws/index_readcal.html">同读日历</a> <a
+href="/3place/yjyws/index_timeline.html">时间线</a> <a
+href="/3place/yjyws/index_books.html">引用书籍</a> <a
+href="/3place/yjyws/index_words.html">使用字频</a>
+<div id="wx_pic" style="margin:0 auto;display:none;">
+<img src='/img/logo.png'/>
+</div>
+</center>
+<h4 id="计算机在交易中的运用">21.计算机在交易中的运用</h4>
+<p>计算机化的技术分析比传统的图表分析更加客观。你可能会说支撑位和阻力位只是暂时的，但你无法否认技术指标指示的方向。当然，在你辨认出某种指标的信息之后，你依然得决定你该做什么。</p>
+<p>工具箱</p>
+<p>当你做木工或金属加工有关的活计时，你能到五金店买到各式各样的工具来帮助你巧妙高效地工作。技术分析工具箱为处理市场数据提供了一系列电子工具。</p>
+<p>当你决定使用计算机做技术分析时，你该首先列出一张单子，写明你想要计算机帮你实现的任务。这需要你花些功夫认真地思考，但这也要好过开始时什么都做，之后又迷惑地抓脑袋，想要找出计算机到底能为你干什么。确定你到底想跟踪哪个市场，想看哪种类型的图表，想用那些指标。</p>
+<p>工具箱能画出周、日以及日内的交易图表。它可以将计算机屏幕分成几个窗口描绘价格和指标。好的工具箱包含许多流行的指标，如移动平均、通道、MACD指标、随机指标、RSI指标以及其他数十个（如果不是数百个的话）指标。它允许你修正所有的指标，甚至创建自己的指标。</p>
+<p>好的工具箱能够让你比较任意两个市场并且分析它们的价差。如果你进行期权交易，你的工具箱必须包含期权定价模型。高级工具箱能够让你回测自己的交易系统。</p>
+<p>好工具箱的另一个特征是其具有扫描股票的能力。比如说你想找出纳斯达克100指数成分股中，指数移动平均指标正在上涨的股票，并且其价格不超过其指数移动平均数的1%。你的软件能找出这些股票吗？它允许你把一些基本面数据加入到搜索条件中去吗，比如每股收益上升？想想你到底需要哪些指标，然后问问哪些软件开发者能够满足你的要求。</p>
+<p>各个价位都能找到好的工具箱。交易新手起步时可能会和在线服务商签订合约，获得免费的计算机工具。后续你可以升级到付费版本。这本书中的大部分图表都是用这种免费服务做出来的，如StockCharts.com，因为我想让你们看到即使花费很少也可以做到很多。部分人觉得这样已经足够了，但我们中的许多人会购买付费版的安装软件，这样能更多地定制化。随着软件的价格稳步下跌，你不必太过担心。你可以先买一些简单便宜的软件使用，以后再逐步升级到其他的——这只是约会，并不是婚姻。</p>
+<p>一旦你决定要使用哪种工具包，你可能希望一些能熟练使用该软件的人来帮你安装到电脑上。这会为没有经验的用户节约大量的时间和精力。</p>
+<p>越来越多的经纪商为他们的客户提供免费的分析软件。价格合理但它们通常有两个严格的限制。首先，出于法律原因的考虑，他们提供的软件非常难以修改；其次，只能在线使用。交易者经常问我如何把我自己的指标加入到他们的软件中，但通常得到的答案都是——你无法做到。</p>
+<p>大多数经纪商的软件让你能够用同一款分析软件下单或者改变你的订单。这对于那些日内短线交易者来说非常方便，但对于做长线的人就没那么重要了。一定要确保你关闭了能够实时显示持仓股票盈亏的功能。时时刻刻盯着资金的增加或者减少会给你带来压力并让你分心。就像歌里唱的那样：“别在交易的时间数你的钱，交易结束后有的是时间。”关注技术指标和价格，而不是盯着你的资金，思考你能用它买什么。</p>
+<p>技术分析软件在不断得到改进，在一本书里推荐某种特定的软件是不适合的。但作为一种公共服务，我的公司Elder.com维护着一份简要的软件指南，我们会定期更新其中的内容并通过电子邮件发送给任何有需要的交易者。</p>
+<p>正如在这本书前面提到的那样，大多数用于技术分析的交易软件都能分成三类：工具箱、黑箱和灰箱。工具箱是为认真的交易者准备的，黑箱是为那些还相信圣诞老人的交易者准备的，而灰箱则介于两者之间。当考虑一种新的软件包时，首先要确定这种软件到底属于哪种类型。</p>
+<p>黑箱和灰箱</p>
+<p>黑箱软件纯粹是一种魔法：它告诉你买卖的时间和品种，却不告诉你为什么。你把数据下载进软件然后按一个按钮，灯亮了，齿轮一响然后一条信息浮现出来告诉你该怎么做。多么神奇！</p>
+<p>黑箱总是有令人印象深刻的盈利曲线，展示着过去的盈利能力。但每个黑箱最终都会自毁，因为市场一直在变。即使内置了自我优化功能的系统也无法生存，因为人们并不知道什么样的优化方式是我们将来需要的。没有什么可以替代人类的判断。用黑箱赚钱的唯一方式就是卖掉它，大部分的黑箱都是由骗子卖给那些缺乏安全感而又轻信别人的交易者。</p>
+<p>每个黑箱都是注定要失败的，即使是一个诚实的开发者卖给你的。复杂的人类活动，比如交易行为，是无法自动化的。机器只能帮助却无法取代人类。</p>
+<p>用黑箱进行交易意味着你在使用某个人的一小点智慧，而且是过去某个时点的智慧。市场总是在变化，专业者的观点也在变。但是黑箱却在不断地鼓捣出买卖指令。对于失败的交易者来说，如果不是代价如此“昂贵”的话，倒也是件有趣的事情。</p>
+<p>灰箱基于其独特公式产生买卖指令。与黑箱不同，它公开其基本的原理并且允许你在一定程度上调整它的系数。灰箱越接近于工具箱就越好。</p>
+<p>计算机</p>
+<p>在线软件可以在任何一台电脑上运行，但是大多数单机软件需要Windows环境才能运行。有些交易者在Mac电脑上运行相仿的软件。也有为平板电脑开发的软件，比如专门为iPad开发的软件。</p>
+<p>技术分析的软件往往不需要强大的处理能力，但使用最先进的机器依然是有意义的，因为这样的机器可以用许多年。</p>
+<p>许多短线交易者喜欢使用多屏幕来获得对于市场多维度的观点，而且看重其能同时查看多个交易品种的能力。因为我喜欢旅游，我会随身带着一个小型外接屏幕来监测市场，使我在路上也能进行交易。它的尺寸和笔记本差不多大小，但要比笔记本薄很多，只有一个USB插口而且没有电源线。</p>
+<p>市场数据</p>
+<p>波段交易者或者长线交易者会在几天内或者几周内进入并退出市场，而短线交易者如果不是几分钟的话，会在几个小时内进出一次市场。收盘后的数据对长线交易者已经足够了，但是对于日内的短线交易者来说，他们需要实时数据。</p>
+<p>当你下载每日数据用于研究时，最好包含两波牛市和熊市的周期，或大约十年的周期。无论何时当我要研究一只股票时，我都喜欢回溯其12年的交易历史，来判断它在12年的交易范围内是便宜还是昂贵。</p>
+<p>无论何时你想交易时，你必须知道你的优势——是什么能让你赚钱。辨认图形模式的能力就是我的一种优势，但是如果一只股票的交易历史太短，就没有模式供你辨认。这就是我避免交易新近上市（上市时间短于一年）的股票的原因。</p>
+<p>收集和分析数据时，不要在同一时间追踪太多的市场。要关注数据的深度和质量而不是数量。首先从关注重要市场指数开始，比如道琼斯指数、纳斯达克指数以及标准普尔指数。许多专业交易者专注于相对较少的几只股票。他们了解了这些股票并且开始熟悉它们的交易模式。</p>
+<p>你可以从关注12只股票开始。许多专业交易人员都把他们关注的股票限制在100只以内，他们每周末都复盘这些股票并且在笔记本上记下关于它们的笔记。他们可能从这个股票池中选取不超过十只看起来在下周会有一波行情的股票，然后集中精力关注它们。你可以从年度热门股票中逐渐建立自己的关注清单。再加入一小部分最有前途的行业中的股票以及一些你之前交易过的股票。像园丁打理花园一样建立你的清单：你不可能在一个季度就打理出一座漂亮的花园，但你可以通过几个季节的努力来完成这一工作。</p>
+<p>尝试着在你自己的时区内追踪数据。当我在海外授课时，交易者们经常问我，我是否在他们国家的市场进行交易。我提醒他们说，无论何时做交易都是试图从别人的口袋中拿钱，同时别人也试图从你的口袋里拿钱。这个游戏即使在你清醒的时候也够难的了，在不同的时区进行交易风险会更大，那意味着让当地人趁你熟睡时从你的口袋里拿钱。这也就是为什么我基本上把自己的交易都限制在美国市场内。许多海外交易者抱怨说他们发现自己国家的市场太小了，问我在巨大的流动性良好的美国市场做交易情况会不会变好。答案取决于他们的时区和美国的时区相差是不是太大。比如，从欧洲做美国市场的交易就很容易。以欧洲时间来看，美国股市在下午3：30开盘，晚上10：00收盘。但是你要是从亚洲或者澳大利亚做美国市场的交易就很难。不过如果你是长线投资者并且要抓住长期趋势的话，这样做也行。</p>
+<p>新手应该避免日内交易。日内交易要求瞬时决策的能力，如果一旦停止思考你就死定了。学着在一个稍慢的环境里做交易决策。在你考虑做日内交易前，首先要成为一个有竞争力的趋势交易者或者中长线交易者。如果你把趋势交易和日内交易做比较时，你会发现区别就像玩电子游戏的一级难度和九级难度的区别一样。你在相同的迷宫奔跑，要躲开同样的怪物，但是游戏的九级难度是如此之快，你的反应几乎是下意识的。学着从一级难度开始分析市场——在成为日内的超短线交易者之前先做一个长线交易者吧。我们会在第33节“时间周期”中，再次回到这个话题。</p>
+<p>趋势交易是个很好的起点。比如说，持有某个仓位几天。挑选那些趋势很好、成交量又不错的热门股票。开始时只买上几手。一些趋势交易者的仓位只持有几天，但是用实时数据来确定入场和出场的时间，而其他的趋势交易者只使用每日收盘后的数据也能做好。</p>
+<p>三组主要的技术指标</p>
+<p>技术指标能够帮助你识别趋势和反转。它们比图表模式更加客观，而且能够提供空方和多方之间力量均衡的洞见。</p>
+<p>一个巨大的挑战就是许多指标之间会相互冲突。一些指标在趋势形成的市场中有效，而一些指标则在波动的市场中有效。一些指标擅长抓住反转的点，而另一些指标则更擅长确定趋势的持续。这就是为什么从那么多指标中挑选出少数几个指标并将其联合使用是非常有必要的。</p>
+<p>许多新手寻找着一颗“银色子弹”[1]——一种独一无二的神奇指标，但是市场太复杂了，根本无法用一个指标来衡量。其他人试图考察多个指标，然后取信号的平均值。这样的“考察”可能是有严重偏差的，这取决于你的指标选取。</p>
+<p>大多数指标是基于5个相同的数据的：开盘价、最高价、最低价、收盘价和成交量。价格是最基本的，其他指标都是从中衍生出来的。用10个、20个、50个指标并不能让你的分析更深入，因为它们都是基于相同的东西。</p>
+<p>我们可以把所有指标分成3类：趋势跟随指标、震荡指标和其他指标。趋势跟随指标在大盘上涨或者下跌时最有效，但在大盘震荡区间效果急剧下降。震荡指标在震荡区间的市场中能判断出拐点，但是在大盘趋势逐渐形成时，它给出的信号是不成熟和危险的。其他指标能够提供有关大众心理的洞见。在使用任何指标之前，确保自己理解这些指标是测量什么用的，它的工作原理是什么。只有这样你才能对指标发出的信号充满信心。</p>
+<p>趋势跟随指标包括移动平均值、MACD线（moving average
+convergence-divergence，指数平滑异同移动平均线）、趋向系统、能量潮（on-balance
+volume）以及收集派发指标等。趋势跟随指标属于同步或者滞后指标，它们在趋势反转之后才反转。</p>
+<p>震荡指标有助于识别反转点。它们包括MACD柱状线（MACD-histogram）、强力指数指标、随机指标、变化率、动能指标、相对力量指标、埃尔德射线指标（Elder-ray）、威廉百分比（Williams%R）以及其他指标。震荡指标是先行指标或者同步指标，常常比K线先反转。</p>
+<p>复合型指标能够提供多空双方强度的信息。它们包括新高-新低指标、看跌/认购期权比（put/call
+ratio）、好友指数（bullish
+consensus）、交易者指数以及其他指数。它们可以是先行或者同步指标。</p>
+<p>将不同组中的不同指标结合起来是很有用的，可以抵消各个指标的缺点同时保留它们的优点。这正是“三重滤网交易系统”的目标所在（见第39节）。</p>
+<p>当我们开始探索技术指标时，我们最好谨慎行事。有时候它们的信号是非常明确的，有时候又很模糊。多年之前我就学会了，只有当我非常确定指标发出的信号时，我才会选择进场。如果我发现自己一直盯着图表试图理解其中的信号，那么我会翻到下一页去看另一只股票。</p>
+<p>如果你看到一个熟悉的指标，但不理解其中的意思，最可能的原因是你试图分析的这只股票正处在混乱阶段（见第17节）。如果指标信号不明确，那就不要试图理解其中的意思，也不要求助于其他指标，而仅仅只需要把股票放在一边然后去找下一只股票。个人交易者最大的好处就是没有人逼着你交易——我们能够等待最好和最清晰的信号。</p>
+<p>当你看到不同的指标的信号时，记住你不能把交易建立在一个单一的指标之上。我们要挑选几个我们理解并信任的指标，把它们结合到一个交易系统中。下一章我们将要考察这些指标，本书的后面我们会看到如何从这些指标中构建自己的交易系统。</p>
+<p>[1]
+银色子弹往往被描绘成具有驱魔功效的武器，是针对狼人等超自然怪物的特效武器。后来也被比喻为具有极端有效性的解决方法，作为撒手锏、最强杀招、王牌等的代称。——译者注</p>
+<h6 id="阅读日期-2026年07月28日-2026年07月28日-共-1-天">阅读日期：
+2026年07月28日-2026年07月28日 共： 1 天</h6>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

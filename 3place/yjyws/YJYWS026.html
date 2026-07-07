@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="hbaolong@vip.qq.com" />
+  <title>以交易为生:25.震荡指标</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">以交易为生:25.震荡指标</h1>
+<p class="author">hbaolong@vip.qq.com</p>
+</header>
+<center>
+<a href="/3place/yjyws">返回首页</a> <a
+href="/3place/yjyws/mingju.html">本书名句</a> <a
+href="/3place/yjyws/memo.html">本书注解</a> <a
+href="/3place/yjyws/index_rich.html">丰富目录</a> <a
+href="/3place/yjyws/index_readcal.html">同读日历</a> <a
+href="/3place/yjyws/index_timeline.html">时间线</a> <a
+href="/3place/yjyws/index_books.html">引用书籍</a> <a
+href="/3place/yjyws/index_words.html">使用字频</a>
+<div id="wx_pic" style="margin:0 auto;display:none;">
+<img src='/img/logo.png'/>
+</div>
+</center>
+<h4 id="震荡指标">25.震荡指标</h4>
+<p>趋势跟随指标能帮助我们辨认趋势——比如MACD线或者趋向系统，而震荡指标则能帮助我们抓住反转点。无论何时市场大众被恐惧或贪婪的情绪攫住时，人们都会蜂拥而上，但是过一阵子这种强烈的情绪又会逐渐消散。震荡指标就是测量这种冲击的速度的，并能显示出何时它的能量开始减弱。</p>
+<p>震荡指标能识别市场大众的极端情绪，能够帮助你发现市场中乐观或悲观情绪难以持续的价位。专业交易者总会逆着极端情绪而来，他们会在衍生品上对赌价格将回归理性。当市场上涨，大众由于贪婪而激动地高喊，争先恐后地追随着市场时，专业交易者已经开始准备卖空了。当市场下跌，大众陷入恐慌时，专业交易者则已经准备好买多了。震荡指标能帮我们找到这样的交易时机。</p>
+<p>超买和超卖</p>
+<p>超买意味着市场点位太高，随时可能回调。当震荡指标到达前期的高位水平时，就形成了超买。超卖意味着市场点位太低，随时可能反弹。当震荡指标到达前期的低位水平时，就形成了超卖。</p>
+<p>一定要记住，这些高低位水平并不是绝对的。当一波强力的上升趋势开始后，震荡指标可以持续几个星期的超买状态，这样给出的卖出信号是过早的。同样，在急剧的下跌趋势中，也可能保持几周的超卖状态，这样给出的买入信号是过早的。知道什么时候使用趋势跟随指标，什么时候使用震荡指标是成熟分析师的标志（见第39节）。</p>
+<p>我们可以通过水平参考线来标记超买和超卖的震荡指标。我们选择画线的位置时，应该使得在过去6个月的震荡指标仅最高点和最低点超出线段之外。画这些线的正确方法是让震荡指标只有5%的时间超出这些线之外。每3个月重新调整线的位置。</p>
+<p>当震荡指标上升或者下跌超出这些参考线时，它帮你识别出这种极端情况不可持续，可能后续会形成一个顶部或者底部。震荡指标在震荡区间内的效果非常好，但是当一个新的趋势在震荡区间内形成时，它会发出过早的甚至是危险的信号。</p>
+<p>我们已经考察过一个重要的震荡指标了——MACD柱状线。我们之所以提前考察MACD柱状线，因为它是从趋势跟随指标——MACD线中衍生出来的。马上我们将会探讨几个非常流行的震荡指标：随机指标（stochastic）和相对强弱指标（relative
+strength index，RSI）。</p>
+<h6 id="阅读日期-2026年08月01日-2026年08月01日-共-1-天">阅读日期：
+2026年08月01日-2026年08月01日 共： 1 天</h6>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

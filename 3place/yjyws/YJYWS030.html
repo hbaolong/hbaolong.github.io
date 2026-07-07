@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="hbaolong@vip.qq.com" />
+  <title>以交易为生:29.以成交量为基础的指标</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">以交易为生:29.以成交量为基础的指标</h1>
+<p class="author">hbaolong@vip.qq.com</p>
+</header>
+<center>
+<a href="/3place/yjyws">返回首页</a> <a
+href="/3place/yjyws/mingju.html">本书名句</a> <a
+href="/3place/yjyws/memo.html">本书注解</a> <a
+href="/3place/yjyws/index_rich.html">丰富目录</a> <a
+href="/3place/yjyws/index_readcal.html">同读日历</a> <a
+href="/3place/yjyws/index_timeline.html">时间线</a> <a
+href="/3place/yjyws/index_books.html">引用书籍</a> <a
+href="/3place/yjyws/index_words.html">使用字频</a>
+<div id="wx_pic" style="margin:0 auto;display:none;">
+<img src='/img/logo.png'/>
+</div>
+</center>
+<h4 id="以成交量为基础的指标">29.以成交量为基础的指标</h4>
+<p>一些指标是以成交量为基础发出交易信号的。比如，成交量的5日EMA，可以帮助我们看清成交量变化的趋势，成交量的EMA处于上升趋势，可确认现在的价格趋势，而成交量的EMA下降，意味着价格趋势在变弱。</p>
+<p>种种基于成交量的指标相对于成交量柱来说提供了更加精确的时机信号。这些指标包括下面将介绍的能量潮指标（OBV）和集散指标（A/D）。强力指数指标将价格和成交量数据结合起来，帮助我们发现在哪个区域价格可能发生反转。</p>
+<p>能量潮指标</p>
+<p>约瑟夫·格兰维尔发明了能量潮指标并在他的《股票市场时机的新策略》（New
+Strategy of Daily Stock Market
+Timing）一书中详细介绍了这一指标。他将能量潮指标作为股市的领先指标，不过别的分析师将其运用到了期货市场上。</p>
+<p>能量潮指标将成交量进行滚动加总，每日的成交量会被加入或减去，这取决于当日价格比昨天价格高还是低。若股票当日收盘价高于前一日收盘价，这意味着当日多头在与空头的交战中取得了胜利，那么当日的成交量就会加到OBV上；若股票当日收盘价低于前一日收盘价，这意味着当日空头在与多头的交战中取得了胜利，那么当日的成交量就会从OBV中减去；若股票当日收盘价与前一日收盘价持平，那么OBV保持不变。OBV常常在价格变化之前先行变化，起到领先指标的作用。</p>
+<p>群体心理</p>
+<p>当期的价格代表着市场短期内价值的共识，而成交量代表了众多市场参与者的情绪，它反映了交易者们在金钱和情绪上卷入的紧密程度，还有输家感受到的疼痛，这也是OBV指标要去监测的。</p>
+<p>一个创新高的OBV表明多头势力强大，空头受到重创，价格将会上升；一个创新低的OBV表明空头势力强大，多头受到重创，价格将会下降。当OBV的走势偏离了价格的走势时，这意味着大众的情绪和大众对价格的共识相偏离，人们将更可能跟随直觉而不是理性的思考，这也是为什么成交量经常先于价格变化而变化。</p>
+<p>交易信号</p>
+<p>OBV顶峰或者底部的形态比其绝对值重要，因为OBV的大小取决于计算的基准日。根据OBV确认的趋势方向进行交易会更加安全（见图29-1）。</p>
+<p>图29-1　麦当劳（MCD）日线图，22日指数移动均线，能量潮指标（OBV）</p>
+<p>资料来源：Stockcharts.com。</p>
+<p>能量潮指标</p>
+<p>麦当劳（MCD）是一只变化缓慢且走势稳定的股票。你可以看到它的交易价格波动区间很窄，该区间被几条虚线标示了出来。（底部有两条虚线，一条低一些，一条高一些）注意到MCD的假突破倾向（图中底部的A、C区域以及顶部的B、D区域），A区域形成了袋鼠尾。</p>
+<p>在图形的右边，股票市场处于自由下跌阶段，然而当MCD股票在其近期的低价区域交易，其能量潮指标却达到高水平时，此时你应该选择买入而不是卖出。</p>
+<p>（1）当OBV达到新高时，便确认了多头的力量，表明价格将很可能持续上涨，并给出买入的信号；当OBV跌穿上一个底部值时，便确认了空头的力量，价格将可能继续创新低，给出了卖出信号。</p>
+<p>（2）当OBV与价格相背离时，便是强烈的买入或卖出信号。如果价格上涨趋势出现了回调，随后反弹创新高，但OBV却没有创新高，这便产生了熊市背离，是卖出信号；如果价格在下降趋势中出现了反弹，之后再创新低，但OBV却没有创新低，这便产生了牛市背离，是买入信号。长期背离比短期背离更加重要，一个长达几周的熊市背离比起短短数日的熊市背离来说给出的卖空信号强度更大。</p>
+<p>（3）当价格在震荡区间，但OBV却突破新高时，便出现了买入信号；反之，当价格在震荡区间内，但OBV却创新低时，便出现了卖出信号。</p>
+<p>更多关于OBV的信息</p>
+<p>格兰维尔之所以能在股市中成功择时的另一个原因是他将能量潮指标（OBV）和净趋势指标（net
+field trend indicator）以及峰值指标（climax
+indicator）结合了起来，他将道琼斯工业指数里每一只成分股的OBV计算出来并将这些指标划分为上升、下降、持平三类，他将其称为个股的净趋势值，该值可取1，0，-1。峰值指标是所有30只道琼斯工业指数成分股的净趋势值之和。</p>
+<p>当股市反弹并且峰值指标达到新高时，此时便出现了很强的买入信号；当股市反弹但峰值指标却没有创新高时，便出现了卖出信号。</p>
+<p>你可以将道琼斯工业指数看成一支马队，这支队伍由30匹马组成，并拉动着市场这辆马车。峰值指标可以让我们知道往上拉、往下拉以及在休息的马各有多少匹，如果其中24匹马将市场往上拉，1匹往下拉，另外5匹在休息，此时市场这辆马车将会向上移动；如果只有9匹马在往上拉，7匹往下拉，14匹马在原地休息，则市场这辆马车用不了多久将滚下山坡。</p>
+<p>不同寻常的是，格兰维尔完全靠手工计算这些数据[1]。如今，OBV、净趋势指标以及峰值指标都可以很轻松地通过编程在计算机上算出来。将这些指标运用到涵盖所有标普500指数成分股的数据库中是很值得的。用这种方法可以帮助交易标普500股指期货以及期权的交易者们很好地进行交易信号确认。</p>
+<p>集散指标（A/D）</p>
+<p>拉瑞·威廉姆斯（Larry
+Williams）开发了集散指标，他在《我如何赚取100万美元》（How I Made One
+Million
+Dollars）这本书中详细描述并介绍了这一指标，这一指标是作为股票的领先指标设计的，但是也有一些分析师将其运用到期货交易中。集散指标的独特之处在于，除了成交量之外，它追踪的是开盘价和收盘价之间的关系。其概念很接近于日本蜡烛图，在拉瑞·威廉姆斯写书时日本蜡烛图及其使用方法还并未被西方交易者所知。</p>
+<p>集散指标比OBV指标得到更好的调整，因为它只用当天交易量的一定比例归入到多头或空头势力中去，按照双方当日获胜的程度作为其比例。其公式如下：</p>
+<p>如果收盘价高于开盘价，当日多头获胜，则A/D值为正；如果收盘价低于开盘价，则当日空头获胜，A/D值为负；如果收盘价和开盘价一致，则当日多空双方打成平手，A/D值为0。所有日A/D值的滚动计算创造了累计A/D的指标。</p>
+<p>比如说，如果当日最高价与最低价之间差距是5个点，开盘价与收盘价之间的差距是2个点，则当日成交量的2/5归功于获胜方。就如同OBV一样，A/D高低的形态十分重要，而它的绝对值水平主要受计算基准日影响。</p>
+<p>当市场处于上升过程中，大部分人都聚焦于新高的到来，但若开盘价低于收盘价，则追踪开盘价与收盘价之间关系的A/D值将下降，警示人们上升趋势不再像它原先看上去那样强势了。反之，若价格下降时A/D值有所上升，则表明多方正在逐渐积聚力量。</p>
+<p>群体行为</p>
+<p>开盘价反映了市场闭市期间在价格上积累的压力，开盘价更有可能被那些晚上读新闻、早上交易的业余投资者们所主导。</p>
+<p>专业投资者全天都十分积极活跃，他们经常和业余投资者对着干，进行反向交易。随着交易不断进行下去，业余投资者和动作较慢的机构投资者买卖行为所引起的市场波澜也逐渐消退。在临近收盘时，专业投资者此时更可能主导市场。收盘价显得尤为重要，因为交易账户的结算都以收盘价为准。</p>
+<p>A/D值追踪了业余投资者和专业投资者当日对战的结果，当收盘价高于开盘价时，即专业投资者比业余投资者更倾向于看多时，A/D值将上升；当收盘价低于开盘价时，即专业投资者比业余投资者更倾向于看空时，A/D值将下降。与专业投资者同方向下注、与业余者反方向下注比较有利。</p>
+<p>交易准则</p>
+<p>当市场中开盘价低于收盘价时，表明市场由弱转强，这时候A/D值上升，并给出专业投资者比业余投资者更倾向于看多的信号，此时上升将很可能持续；当A/D值下降时，表明专业投资者比业余投资者更倾向于看空，市场将在当日持续走低，第二天将很可能继续走低。</p>
+<p>最好的交易信号出现在A/D值背离价格走向时。</p>
+<p>（1）如果价格上涨创新高但A/D值却没有随之创新高，则出现了卖出信号。这种熊市背离表明市场上专业投资者在上涨过程中卖出。</p>
+<p>（2）牛市背离发生价格创新低但A/D值却没有创新低时，表明了市场上专业投资者在下跌过程不断买入并逐步建仓，反弹即将到来（见图29-2）。</p>
+<p>图29-2　谷歌公司（GOOG）日线图，集散指标</p>
+<p>资料来源：Stockcharts.com。</p>
+<p>集散指标</p>
+<p>“大事发生之前总会有其征兆”是一句古老的谚语，这句话对于技术分析派来说意义重大。谷歌公司的股票GOOG持续下跌已经数月了，但是其上升的A/D值表明大资金正在不断地买入。该股票在B处创造了比A处更低的底部价格，但是其A/D值的底部却抬高了。同样重要的是，A/D值在价格暴涨之前还创了新高（在图中由垂直箭头标出），紧接着公司就公布了好得出人意料的业绩报告。一些人之前便知道了接下来将要发生的事，他们大规模的买入被累积A/D值形态和向上的突破所确认。技术分析有助于减少外部投资者和内幕信息知情人之间的信息地位差距。</p>
+<p>更多关于A/D值</p>
+<p>当你根据A/D值与价格之间的背离为依据，进行做多或做空的时候，记住就算是市场上专业的投资者也会犯错。你需要设置止损单并用巴斯克维尔的猎犬法则（见第23节）来保护自己。</p>
+<p>在A/D和日本蜡烛图之间有很强的类似性，它们都关注开盘价和收盘价之间的差异。A/D比蜡烛图更深入的一点是，它还将成交量考虑了进去。</p>
+<p>[1]
+2005年在堪萨斯城，我拜访了格兰维尔。他不仅仅是靠手工做所有的计算工作，甚至还避免上网，因为他对无处不在的偷窥怀有戒心——那时还没有披露政府监控。他将他的电脑与互联网隔离，直到他需要发送新闻通讯稿时才联上。格兰维尔监控日内价格时，会将他的电视调到CNBC台，关闭声音，并且用毛巾盖住屏幕的上面一半，这样他所能看到的就只有一条带子在屏幕下面部分移动了。</p>
+<h6 id="阅读日期-2026年08月05日-2026年08月05日-共-1-天">阅读日期：
+2026年08月05日-2026年08月05日 共： 1 天</h6>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

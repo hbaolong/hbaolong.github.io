@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="hbaolong@vip.qq.com" />
+  <title>以交易为生:27.相对强弱指标</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">以交易为生:27.相对强弱指标</h1>
+<p class="author">hbaolong@vip.qq.com</p>
+</header>
+<center>
+<a href="/3place/yjyws">返回首页</a> <a
+href="/3place/yjyws/mingju.html">本书名句</a> <a
+href="/3place/yjyws/memo.html">本书注解</a> <a
+href="/3place/yjyws/index_rich.html">丰富目录</a> <a
+href="/3place/yjyws/index_readcal.html">同读日历</a> <a
+href="/3place/yjyws/index_timeline.html">时间线</a> <a
+href="/3place/yjyws/index_books.html">引用书籍</a> <a
+href="/3place/yjyws/index_words.html">使用字频</a>
+<div id="wx_pic" style="margin:0 auto;display:none;">
+<img src='/img/logo.png'/>
+</div>
+</center>
+<h4 id="相对强弱指标">27.相对强弱指标</h4>
+<p>相对强弱指标（RSI）是由威尔斯·威尔德发明的一个震荡指标。它通过监测任意一种交易产品的收盘价变动来测量其强度。它是一个先行或者同步指标——从不滞后。</p>
+<p>RSI的波动区间是0<sub>100。当它到达顶点开始下降时，就确定了市场价格的顶部。当它下跌然后开始掉头向上时，就确定了一个底部。RSI底部和顶部的模式不会随着时间跨度增大而有所改变。交易信号在短期内的RSI上看得更清楚，比如7</sub>9天的RSI（见图27-1）。</p>
+<p>图27-1　雪佛龙公司（CVX）日线图，13日相对强弱指标</p>
+<p>资料来源：Stockcharts.com。</p>
+<p>相对强弱指标（RSI）</p>
+<p>这里我们运用13日相对强弱指标来分析雪佛龙公司——我们在随机指标一节已经在图26-1中分析过该公司。相对强弱指标和随机指标在震荡区间都很有用，但在趋势开始时也都会给出草率而具有危险的信号。</p>
+<p>相对强弱指标仅仅基于收盘价，相比随机指标其噪声较小。当其上升到下参考线之上时，预示要上涨（图中以绿色垂直箭头标示）；当其下跌到上参考线之下时，预示要下跌（图中以红色垂直箭头标示）。比较两张图表，你能发现相对强弱指标的信号出现要早一些。</p>
+<p>图中以倾斜实线箭头和虚线红色箭头标出的是相对强弱指标出现熊市背离给出的非常强的卖出信号。股价上升到新高，但相对强弱指标并没有触及其上参考线，显示这次上涨隐藏着的虚弱。</p>
+<p>图中右边缘处的尖锐跳空，不顾相对强弱指标发出的买入信号，将价格推向更低位。要避免受到伤害，我们必须使用保护性止损位，因为震荡区间里最后一笔交易，很容易在新趋势开始时造成亏损。</p>
+<p>超买和超卖的RSI位置随着市场的不同而不同，甚至在同一个市场中每年的情形也不相同。并没有一个神奇方法能够判断所有的顶部和底部。超买和超卖信号就像用窗口的温度计判断冷热一样，同样的温度在冬天和夏天有着不同的意义。</p>
+<p>水平参考线一定要能够穿过RSI的最高点和最低点。这些线通常是在30%和70%的地方。一些交易者在牛市中将其设置在40%和80%的水平上，或者在熊市中将其设置在20%和60%的地方。使用5%法则：每一条线都要保证RSI在过去的4~6个月中，位于参考线之上的时间少于5%。每3个月就调整一次参考线。</p>
+<p>大众心理</p>
+<p>每一个价格都代表着所有的市场参与者在交易的一瞬间对价值形成的一致认同。收盘价是最重要的一个价值认同，因为交易者账户的结算要依靠这一价格。当收盘价升高时，多方赚钱，空方赔钱；当收盘价收低时，空方赚钱，多方赔钱。</p>
+<p>相比其他任何时间的价格，交易者更关注收盘价。在期货市场中，每个交易日收盘后，现金从失败者的账户转移到胜利者的账户。RSI表明在收盘时是空方还是多方的力量更强——这是一天中最关键的计算盈亏的时刻。</p>
+<p>交易规则</p>
+<p>RSI能够提供三种类型的交易信号。按照其重要程度排列分别是：背离、图形模式以及RSI水平。</p>
+<p>牛市和熊市背离</p>
+<p>RSI和价格的背离往往发生在重要的顶部和底部。它们表明趋势什么时候变弱并且准备反转了。</p>
+<p>（1）牛市背离发出买入信号。当价格创出新低，而RSI指数的底部比其前一次下跌的底部要高。一旦RSI从第二次底部开始上扬，马上可以买进并且在近期底部的价格最低点的下方设置保护性止损单。如果RSI指数的第一次底部低于下参考线，而第二次底部高于下参考线，那么这就是一个非常强烈的买入信号。</p>
+<p>（2）熊市背离发出卖出信号。当价格上涨创出新高，但是RSI的顶部却低于其前一次上涨的顶部的时候。一旦RSI从第二次顶部下跌就马上可以卖空，同时在最近的新高价上方设置保护性止损单。如果第一次RSI顶部超过了上参考线而第二次的顶部低于上参考线，那么卖出的信号就非常强烈。</p>
+<p>图表的模式</p>
+<p>RSI通常比市场价格早几天突破阻力位或者支撑位，表现出了趋势可能要改变的迹象。RSI趋势线通常会比价格趋势线早1~2天被反转。</p>
+<p>（1）当RSI的下降趋势反转时，在最近的价格高位上挂一个买单来抓住这一次向上的突破；</p>
+<p>（2）当RSI的上升趋势反转时，在最近的价格低位上挂一个卖单来抓住这一次向下的突破。</p>
+<p>RSI水平</p>
+<p>当RSI上升超过其上参考线时，表明多方很强势，但是市场已经超买了而且已经进入了应该卖出的区域。当RSI下跌到其下参考线以下时，它表明空方力量很强，但是市场已经超卖了而且已经进入了应该买入的区域。</p>
+<p>只有当周趋势上涨时，根据日线RSI指标发出的买入信号进行买入才比较有利。同样地，只有当周趋势是下降时，根据日线RSI指标发出的卖出信号进行卖出才比较有利。（见第39节）</p>
+<p>（1）当RSI击穿其下参考线，又回升到下参考线上方时买入；</p>
+<p>（2）当RSI上升到上参考线上方，又回落到上参考线下方时卖出。</p>
+<p>当我们分析市场时，我们只能处理很少的数字——每条蜡烛图的开盘价、最高价、最低价和收盘价，加上成交量和衍生品的开盘利率（比如期权期货）。一个典型的新手会犯的错误就是“采购各种指标”。交易者可能感觉股票市场会上涨，但是他却发现道琼斯指数和标准普尔指数的移动平均还在下跌。但他并不相信这些下跌的信号，他开始浏览软件里的菜单，然后找到了几个震荡指标，比如随机指标或者RSI。它们确实看起来已经超卖了（这在下跌的趋势中是常见的现象），这个急切的交易者就把它们看作买入的信号。下跌还在继续，他就赔钱了——然后他就开始抱怨技术分析没什么用。</p>
+<p>用少数几个指标（包括多个时间周期），并有一个严格的分析体系，效果会好很多。我们会在“三重滤网交易系统”那一节再次回到这一重要的主题。</p>
+<h2 id="第5章-成交量和时间">第5章 成交量和时间</h2>
+<p>很多交易者只把注意力放在价格行情上，尽管价格行情十分重要，但市场所包含的远远不只有价格一个维度，成交量给我们提供了另一种极具价值的参考维度。约瑟夫·格兰维尔（Joseph
+Granville）是研究成交量的先驱。他常常挂在嘴边的一句话就是：“成交量是驱动市场这辆列车的动力。”</p>
+<p>另一个在市场分析中十分重要的因素是时间。市场在同一时刻按照不同的时间周期同时存在并发展着。不管你多么仔细地分析某个日线图，它的趋势都很可能被另一个时间周期的运动所颠覆。</p>
+<p>在本章我们将聚焦成交量以及基于成交量的各种指标，同时，我们将尝试着将所有决策与其时间周期相关联。</p>
+<h6 id="阅读日期-2026年08月03日-2026年08月03日-共-1-天">阅读日期：
+2026年08月03日-2026年08月03日 共： 1 天</h6>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

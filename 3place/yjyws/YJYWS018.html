@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="hbaolong@vip.qq.com" />
+  <title>以交易为生:17.图表</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">以交易为生:17.图表</h1>
+<p class="author">hbaolong@vip.qq.com</p>
+</header>
+<center>
+<a href="/3place/yjyws">返回首页</a> <a
+href="/3place/yjyws/mingju.html">本书名句</a> <a
+href="/3place/yjyws/memo.html">本书注解</a> <a
+href="/3place/yjyws/index_rich.html">丰富目录</a> <a
+href="/3place/yjyws/index_readcal.html">同读日历</a> <a
+href="/3place/yjyws/index_timeline.html">时间线</a> <a
+href="/3place/yjyws/index_books.html">引用书籍</a> <a
+href="/3place/yjyws/index_words.html">使用字频</a>
+<div id="wx_pic" style="margin:0 auto;display:none;">
+<img src='/img/logo.png'/>
+</div>
+</center>
+<h4 id="图表">17.图表</h4>
+<p>图表分析师们通过分析市场数据来识别价格模式，并从中赚钱。分析师大都使用柱线图或蜡烛图，它们能显示开盘价、收盘价、最高价、最低价以及成交量。期货交易者还关注持仓量的变动情况。点数图分析师只追踪价格的变动情况，并不在意交易时间、成交量以及持仓量等指标。</p>
+<p>经典的图表分析师只需要一支笔和一张纸就够了。它们对以视觉为导向的人们有吸引力。用手工绘图，能培养出对价格的物理感觉。将数据用计算机转化成图表的一个代价，就是失去部分物理感觉。</p>
+<p>经典图表方法最大的问题在于自以为是。交易者似乎能分辨是牛市还是熊市，但他们依靠的仅仅是他们想买或者想卖的心情。</p>
+<p>20世纪初，有一位叫赫曼·罗夏克（Hermann
+Rorschach）的瑞士精神分析师，设计了一个能够探索人思维的测试：他在10张纸上滴上墨迹，然后把纸张对折，使得每张纸上都形成对称的墨迹。大部分看到这些墨迹的人都这样描述：这是骨架的一部分、动物、植物、建筑等。事实上这些只是墨迹罢了！每个人都看到了自己大脑里有的东西，大多数交易者使用图表，会把自己的希望、恐惧和幻想都投射到这些图表上。这就像一个巨大的罗夏克实验。</p>
+<p>图表法简史</p>
+<p>最早的图表分析师出现在19世纪和20世纪之交，包括查尔斯·道（Charles
+Dow，1851—1902）和威廉·汉密尔顿（William
+Hamilton）。道是著名的股票市场理论作家，而汉密尔顿继承了道在《华尔街日报》的编辑位置。道最有名的理论是“平均指数反映一切”。道说这句话的意思是工业和铁路指数反映了经济中的全部信息。</p>
+<p>道除了作为《华尔街日报》的编辑外，从不写书。汉密尔顿在道去世之后接替了他的工作，并在自己的著作《股市晴雨表》（The
+Stock Market
+Barometer）中阐述了道关于股票市场的理论。在1929年股票崩盘之后，汉密尔顿写下了著名的社论“趋势的反转”（The
+Turn of the Tide）。1932年，通讯出版商罗伯特·雷亚（Robert
+Rhea）在他出版《道氏理论》（The Dow Theory）中将道氏理论推向了顶峰。</p>
+<p>20世纪30年代是图表法的黄金时代。在1929年之后，众多创新者都发现他们变得很空闲。于是这十年之间，夏巴克、雷亚、艾略特、魏考夫、江恩等人纷纷出版了书。这些人的理论走向了两个不同的方向。一些人将图表看成是供给和需求的记录，比如魏考克和夏巴克。另一些人则在市场中寻找一种完美的秩序，比如艾略特和江恩。而这种秩序是虚幻的，寻找的它的过程更是徒劳的（见第5节）。</p>
+<p>1948年，爱德华兹（夏巴克的一个继子）和迈吉共同出版了一本书，名叫《股市趋势技术分析》（Technical
+Analysis of Stock
+Trends）[1]。他们在书中推广了诸如三角形、矩形、头肩顶等概念，以及支撑位、阻力位和趋势线等图表形态。其他图表分析师则用这些概念去赚钱。</p>
+<p>自爱德华兹和迈吉的时代以来，证券市场已经发生了翻天覆地的变化。在20世纪40年代，纽约证券交易所中，交易活跃的股票每天的成交量只有几百股，而现在则要以百万股来计算。股票市场中原本平衡的力量已经转向多头。早期的图表分析师认为，股票价格会急速登顶，但会缓慢探底。在通货紧缩的年代的确是这样的，但是自从20世纪50年代以来，情况变得相反：股票价格会迅速探底，但要到达最高位却需要很长的时间。</p>
+<p>线图的意义</p>
+<p>图表的形态反映了市场买卖的总量，以及投资者和交易者心中的恐惧与贪婪。本书中许多图表都是以日为单位的，每个柱状线代表一个交易日。周度、日度或日内图表的法则是一样的。</p>
+<p>记住一条关键原则：“每一个交易价格都是所有的市场参与者价值认同瞬间达成一致的表现。”基于此，每一个价格柱状线都提供了多头和空头激烈博弈的重要的信息（见图17-1）。</p>
+<p>图17-1　特斯拉汽车（TSLA）日线图</p>
+<p>资料来源：Stockcharts.com。</p>
+<p>线图的意义</p>
+<p>开盘价是由业余者决定的，他们通常在晚上下指令。在积累了一整夜指令后，第二天早晨集中涌向市场。收盘价则主要是市场专业人员交易一天后的成果。通过观察收盘价和开盘价刚好出现在线柱两端的频率，你就可以发现业余者和专业者之间的对立。</p>
+<p>线柱的最高价标志着多方的最大力量。最低价则标志着空方的最大力量。当你的入场点或退出点是在较短的线柱里时，滑点通常比较小。</p>
+<p>每日开盘价往往反映了业余者对价值的看法。业余者每天阅读早报，看前一天发生了什么，也可能会去问妻子该买还是该卖，然后在开车去工作之前下订单。业余者总是在每天和每周的开始阶段异常活跃。</p>
+<p>那些研究开盘价和收盘价之间关系的交易者会发现，开盘价总是接近于当日成交价的最高位或最低位。在每日交易开始时，业余交易者的买卖会造成市场的极端情绪，往往股票价格在之后的时间段内会发生反转。</p>
+<p>在牛市中，市场通常在周一或周二时出现当周最低价——因为业余者会兑现前一周赚到的利润，然后市场会在周四或周五创出新高。而在熊市中，周一或周二通常会创出当周价格的高位，随后在接近周末时则会创出新低。</p>
+<p>每天或每周的收盘价则往往反映了专业交易者的行为。他们全天都在盯着市场交易，对市场变化做出反应，并倾向于主宰最后1小时的交易。他们当中的许多人在那段时间兑现利润，以避免持仓过夜。</p>
+<p>专业交易者作为一个集体通常与业余交易者做对手方。他们倾向于在低开时做多，在高开时做空，然后在后续交易时间里平掉头寸。交易者需要关注开盘价和收盘价之间的关系。当收盘价高于开盘价时，专业交易者比业余者更看好市场；当收盘价低于开盘价时，专业交易者对市场的预期比业余者更悲观。与专业交易者一起作为业余者的对手会让你赚到钱的。在很大程度上，蜡烛图基于开盘价和收盘价之间的关系，当收盘价高于开盘价时，蜡烛图就是白色；当收盘价低于开盘价时，蜡烛图就是黑色的。[2]</p>
+<p>每根柱状线的最高点代表了最强多方的力量。当价格上涨时，多方就会赚钱。他们买入股票会推高股票的价格，每次价格的上涨又会增加他们的盈利，直到多方再也无力抬高价格——哪怕一个最小价格变动单位[3]都不行了。日柱状线的最高点都代表当日多方的最强力量，同样，周柱状线的最高点也代表当周多方的最强力量。</p>
+<p>柱状线中最高点代表着该柱状线中多方的最强力量。</p>
+<p>每根柱状线的最低点代表了最强空方的力量。当价格下跌时，空方就赚钱。他们不断地卖出头寸，使得价格不断下降，而每一次价格下跌又会增加他们的利润。直到某一点，当他们没资金或没有看空的热情了，价格就止跌了。日柱状线的最低点代表当天空方的最强力量。而周柱状线的最低点代表当周空方的最强力量。</p>
+<p>柱状线中最低点代表着该柱状线中空方的最强力量。</p>
+<p>每一根柱状线的收盘价都是当天多方和空方博弈的最终结果。如果收盘价接近柱线图的高点，表示多方赢得了胜利。如果收盘价接近当日的最低点，表示空方赢得了胜利。每日收盘价对于期货交易更重要，因为你的交易账户每晚都要“逐日盯市制度”。[4]</p>
+<p>柱线图中最高点和最低点的距离反映了多方和空方冲突的激烈程度。一根平均长度的柱状线表明市场相对冷静。如果柱状线的长度只有平均长度的一半，说明市场疲软而冷清。如果柱状线是平均长度的两倍，则说明市场火爆，多方和空方的博弈遍及各个战场。</p>
+<p>滑点（见导论）在市场冷清的时候往往较小。在市场冷清的时候进场比较好。遇到很长的柱状线是兑现利润的好时机。而试图在市场拉升的时候建立头寸，就像跳上一辆正在行驶中的火车一样危险。安全起见还是等待下一波上涨为妙。</p>
+<p>日本式蜡烛图</p>
+<p>在美国出现图表法之前大约两个世纪，日本的大米交易商就已经开始使用蜡烛图了。他们并不是用柱线图表，而是使用一排两端有“灯芯”的“蜡烛”形图表。蜡烛主体部分的长度代表开盘价与收盘价之间的差价。如果收盘价高于开盘价，蜡烛就是白色的；如果收盘价低于开盘价，蜡烛就是黑色的。</p>
+<p>“灯芯”的最高点代表着当天的最高价格。相应地，“灯芯”的最低点代表当日的最低价格。根据《日本蜡烛图技术》（Japanese
+Candlestick Charting Techniques）的作者史蒂夫·尼森（Steve
+Nison）的说法，日本的交易者认为最高点和最低点相对而言并不重要。他们更关注开盘价和收盘价之间的关系，以及几个“蜡烛”之间的形态。</p>
+<p>蜡烛图的主要优势在于它能反映控制着开盘价的业余交易者和控制着收盘价的专业交易者之间的博弈。遗憾的是，许多蜡烛图分析师忽略了西方的分析工具，例如成交量和技术指标。</p>
+<p>蜡烛图已经在全世界范围内得到了广泛的应用，因此有人问我为什么还要继续使用柱线图进行分析。我对蜡烛图很熟悉，但是我是从柱线图开始学习交易的，而且我相信使用包含开盘价、最高价、最低价、收盘价的柱线图加上其他技术指标能够为我提供更多的信息。</p>
+<p>到底选择柱线图还是蜡烛图只是个人偏好问题。这本书中所示的所有概念都能由柱线图或蜡烛图来表示。</p>
+<p>有效市场、随机漫步、混沌理论和自然法则</p>
+<p>有效市场理论是个学术概念，它认为没有人能够战胜市场，因为在任何时刻的任何价格都包含了所有可以获得的信息。沃伦·巴菲特（Warren
+Buffett），21世纪最成功的投资者之一，这样评价这种理论：“我很好奇当初那些正统观点竟然是让人们相信世界是平的。在一个投资者都相信有效市场理论的市场中进行投资就好比和那些认为不用看牌就能打好桥牌的人一起打桥牌一样。”</p>
+<p>有效市场理论的逻辑缺陷在于，它将知识等同于行动。人们可能有足够的知识，但群体的情感经常驱使人们进行非理性的交易。好的交易者能够从图表中考察出大众行为的重复模式，并利用这些模式来赚钱。</p>
+<p>随机漫步理论的创立者奥斯本认为，市场中的价格是随机的。当然，市场中的确有很多随机性或者“噪音”，正如在任何群体中都有一定的随机性。但一个聪明的观察者依然能够分辨出群体的重复行为模式，并且做出敏锐的判断：顺势而为或者逆势狙击。</p>
+<p>人是有记忆的，人们记得过去的价格，而这些记忆会影响他们做出买或卖的决定。人们的记忆创造出市场价格之下的支撑位和市场价格之上的阻力位。随机漫步的拥趸们并不相信记忆会影响人们的决策。</p>
+<p>正如米尔顿·弗里德曼（Milton
+Friedman）所指出的，价格包含了有关卖方供给量充足性和买方需求量紧迫性的信息。市场的参与者就是根据这个信息来决定自己是卖还是买。比如，消费者在商品打折的时候买的量较多，而在商品价格较高时买的量较少。金融市场的参与者与持家的主妇有着相似的逻辑。当价格低的时候，市场投机者会大举进场。短缺会引发恐慌性抢购，而高价格则会遏制需求。</p>
+<p>混沌理论在最近的几十年来得到了推广。市场大部分时间段是混沌的，你只能在那些有序的时间段里才能取得一定优势。</p>
+<p>在我看来，市场大部分时间是处于混沌状态的，但是在混沌之外，秩序和结构之岛也会在市场的潮汐中时隐时现。市场分析的本质就在于能够辨认出这些固定的模式，并且有勇气和信心利用它们进行交易。</p>
+<p>如果你在混沌时间进行交易，那么唯一赚钱的就是你的经纪商，因为他们可以从你那儿拿到佣金，还有那些专业的日内交易者，他们可以从你那儿赚取微小的利润。你要时刻牢记的关键点是：一旦混沌中出现某种模式，你的交易系统应该能够迅速识别这种变化，这就是你入市交易的时候。之前我们说过，相对于专业的交易者，个人交易者的最大优势在于可以等待好的时机进行交易，而不必每天都保持活跃的交易。混沌理论恰恰证实了这一点。</p>
+<p>混沌理论告诉我们，从混沌中浮现出来的有序结构是一种分形结构。就像海岸线一样，无论从飞机上看还是从宇宙飞船上看，又或是跪在那里通过放大镜去看，它都会呈现出锯齿状。市场模式也具有分形结构，如果我向你展示同一市场的一些图表，一旦去掉了时间标签后，你就无法分辨出这些图表到底是月线图、周线图、日线图还是五分钟线图。下文（第39节）我们将回到这个主题，届时你就会发现为什么使用不同频率的时间进行分析如此重要。我们要确保在不同时间频率的图表中市场传达出的买卖信息能相互印证。如果不是如此，那么说明市场依然处在混沌之中，而我们则要保持观望。</p>
+<p>自然法则是一小撮神秘主义者鼓吹的法则。他们认为市场处在一种完美的法则之中（你可以付费让他们来为你展现它）。他们说市场的运动像钟表一样，和亘古不变的自然法则相对应。R.N.艾略特最新作品甚至直接叫作《自然法则》。</p>
+<p>“完美法则”混合了占星术、数字命理学、权谋术以及其他迷信的法则。下次如果有人和你谈论市场中的自然法则，你就向他请教占星术。他可能会飞奔过来和你大谈如何利用星辰占卜。</p>
+<p>完美市场的拥护者声称他们可以预测遥远未来的价格顶部和底部。业余交易者喜欢预测，而神秘主义是市场中有效的骗人花招，它对出售培训课程、交易系统和股评通信十分有帮助。</p>
+<p>神秘主义、随机漫步理论、有效市场理论有一个共同的地方，那就是它们都与市场的真实状况相去甚远。</p>
+<p>[1] 该书第9版中文版机械工业出版社已出版。</p>
+<p>[2]
+国内通常当收盘价高于开盘价时，蜡烛图是红色；当收盘价低于开盘价时，蜡烛图是绿色。——译者注</p>
+<p>[3]
+一个最小价格变动单位是指任何指定交易品种所允许的最小价格变化量，可能是一美分或者百分之一美分（视不同股票而定），标准普尔电子迷你期货是0.25个点，黄金期货是10美分等。</p>
+<p>[4]
+意味着经纪商要根据每日的收盘价来决定某一交易账户是否要求追加保证金。——译者注</p>
+<h6 id="阅读日期-2026年07月24日-2026年07月24日-共-1-天">阅读日期：
+2026年07月24日-2026年07月24日 共： 1 天</h6>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

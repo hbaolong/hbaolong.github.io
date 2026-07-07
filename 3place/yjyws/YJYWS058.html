@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="hbaolong@vip.qq.com" />
+  <title>以交易为生:58.制作并评价交易计划</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">以交易为生:58.制作并评价交易计划</h1>
+<p class="author">hbaolong@vip.qq.com</p>
+</header>
+<center>
+<a href="/3place/yjyws">返回首页</a> <a
+href="/3place/yjyws/mingju.html">本书名句</a> <a
+href="/3place/yjyws/memo.html">本书注解</a> <a
+href="/3place/yjyws/index_rich.html">丰富目录</a> <a
+href="/3place/yjyws/index_readcal.html">同读日历</a> <a
+href="/3place/yjyws/index_timeline.html">时间线</a> <a
+href="/3place/yjyws/index_books.html">引用书籍</a> <a
+href="/3place/yjyws/index_words.html">使用字频</a>
+<div id="wx_pic" style="margin:0 auto;display:none;">
+<img src='/img/logo.png'/>
+</div>
+</center>
+<h4 id="制作并评价交易计划">58.制作并评价交易计划</h4>
+<p>任何交易计划都要依据所采用的策略量身定做。交易计划必须能提示你检查财报期、分红派息日期，以及期货交割日期，使你避免被可预见的新闻所侵袭。它必须清楚地记录你计划好的买入价、目标价、止损价以及交易规模。</p>
+<p>把交易计划写下来能让其变得真实。一旦你进入了一笔交易，并且你的股票开始出现波动，你可能会感到紧张，而忘了去执行特定的操作。在进入交易之前，先写下计划能帮你在风暴中建立一个理智和稳定的堡垒，它能帮助你不会忽略任何必要的事情。</p>
+<p>真正好的计划要有能衡量其质量的标准。我们将在后面章节探讨这种标准，操作起来花费不超过一分钟，但却能鼓励你只去实施那些有更大成功可能性的计划。它会提示你放弃那些成功概念较小的计划，不去追逐不靠谱的交易想法。</p>
+<p>虽然我的所有记录都是电子表格形式的，但我喜欢将交易计划写在纸上。我使用自己称为“交易单”的印制表格——像我们网上购物包裹上的运货单。某公司在寄给你一个产品时，会在运货单上注明产品名称、产品数量、寄送地址、运送方式、退款须知以及其他必要元素。我的交易单会从筹划阶段一直到交易结束，一直陪伴着我。</p>
+<p>我有两种交易单对应所有交易系统，一种对应买入，另一种对应卖空。这里我们来看看其中一个我最偏好的策略的交易单。你可以借鉴它作为设计自己交易单的基础。</p>
+<p>无论何时，当一笔潜在交易吸引了我的注意时，我首先会判断它适合哪种交易系统，然后找到对应的交易单。这时，如果是一笔看起来非常诱人的交易机会，但我没有任何交易系统能与之匹配，那么我不会进行这笔交易。决定好交易系统之后，我写下日期和股票代码，然后按照后面所示的为潜在交易进行评分。如果评分足够高，我继续完成交易计划；否则，我就把这张表扔进垃圾箱，然后去寻找其他交易机会。</p>
+<p>无论在哪儿，我都会随身携带我的交易单，随时为交易做准备。如果我坐在自己的桌子旁，会把交易单放在键盘旁边。如果我白天要外出并且带着我的笔记本电脑，我会把交易单夹在键盘与屏幕之间，我打开电脑时第一眼就能看到它。</p>
+<p>很多年以来我都坚持写下自己的交易计划，逐渐培养了一种在执行交易计划前，给交易计划打分的方法。读到丹尼尔·卡尼曼教授的《思考，快与慢》一书后，我坚定了给交易计划打分这一信念。这本关于决策制定的书是由获得诺贝尔奖的行为经济学家撰写的，它强调了简单评分系统的价值——能让我们的决定多一些理智，少一些冲动。</p>
+<p>为你的交易计划评分（交易的阿氏评分）</p>
+<p>卡尼曼教授的书中所举的一个例子，是对一位哥伦比亚大学的儿科麻醉师维珍尼亚·阿普伽（Virginia
+Apgar）医生的工作的描述。她因挽救了无数生命而广受赞誉。医生和护士们普遍运用阿氏评分法，来决定哪个新生儿需要立刻进行医疗护理。</p>
+<p>大多数婴儿的诞生过程是正常的，即使有一些会有不严重的并发症，但其他的新生儿则有生命危险。在阿普伽医生的评分法推广之前，医生和护士们需要使用医疗诊断来将新生儿们进行鉴别分组，而他们的失误会直接导致婴儿夭折。阿普伽医生的评分系统让他们的判断更加客观。</p>
+<p>阿氏评分总结了五个简单问题和答案。每个新生儿会根据脉搏、呼吸、肌肉张力、拧捏反应以及皮肤颜色得到一个评分。对任何一个问题是好的反应都会得到2分，不好的话会是0分，在两者之间则得1分。这项测试通常在出生后1<sub>5分钟内进行。7分及以上被认为正常，4</sub>6分会有点低，而4分以下是过低。得分优秀的婴儿们会被放心地送去普通护理，而在阿氏评分中得分过低的婴儿需要即刻进行医疗处理。整个决策过程，关注于谁需要积极的治疗，是快速而客观的。阿普伽医生简练的评分系统提高了全世界新生儿的存活率。</p>
+<p>在读了卡尼曼教授的书后，我把自己的评分系统重新命名为“交易的阿氏评分”。它帮助我辨别自己的交易想法是健康而有力的，还是病态而脆弱的。当然，作为一名交易者，我的行动与儿科医生完完全全相反。医生会关注病得最重的小孩，帮助他们生存下来。而我作为一名交易者，会关注最好的想法，而把其他的扔得远远的。</p>
+<p>在展示我的交易阿氏评分之前，有一些注意事项：你将要看到的这个评分系统是为特定交易系统而设置的——我的“伴随背离的假突破”策略。如果是其他的交易系统则需要不同的评分测试方式，但你可以将我的交易阿氏评分作为设计自己评分系统的基础。</p>
+<p>举个例子，我最近将我自己的阿氏评分档案寄给一位曾经向我咨询过的专业期权卖家。他十分喜欢这个进行书面测试的主意。这有助于帮助他减少冲动交易，而冲动交易是他最大的问题之一。几周内，他就将他自己的，并且与我的完全不同的阿氏评分展示给我看。他用自己最喜欢的相对强弱指标和随机摆动指标替代了我的一个指标，并且加上了与期权卖空直接相关的问题。我十分高兴地看到他做交易越来越赚钱。</p>
+<p>交易阿氏评分需要对体现交易策略核心的五个问题给出明确的答案。随着你为自己的策略发展出了属于自己的阿氏评分，我建议保持问题数目不要超过五个，且答案得分仍是0分、1分和2分三种。简洁能够让这种测试更加客观、实用和快捷。</p>
+<p>当看到交易机会时，我会抽出一张空白的交易单，圈出我对五个问题的回答。在红色框画圈的得0分，在黄色框画圈的得1分，在绿色框画圈的得2分。我在每个分数框里填上得分，然后将五个得分加总。如果我圈出的是红色框，我还会在其旁边写上价格到什么位置时我会将其改为更令人喜爱的黄色或绿色。那时，计划的评分会得到提升，在那个价格可能可以进行交易。图58-1展示的是做多的交易阿氏评分，而图58-2展示的是空头交易的交易阿氏评分。</p>
+<p>图58-1　交易阿氏评分在做多交易（此例为“假突破伴随背离”的策略）的使用</p>
+<p>资料来源：elder.com。</p>
+<p>将你对五个问题的答案按0~2分进行打分：</p>
+<p>（1）强力系统的周线图（前面章节有描述）——周线图是红色得0分，周线图是绿色得1分，周线图是蓝色得2分。</p>
+<p>强力系统为红色时，是禁止交易的；绿色时还可以进行交易，但是可能有些太晚；蓝色（紧跟在红色之后）表示恐慌正在褪去，是买入的好时机。</p>
+<p>（2）强力系统的日线图——与上一条同样的问题、同样的评分，标记在日线图上。</p>
+<p>（3）日线价格——在日线图上，如果最新价格在其价值区间之上得0分；在价值区间范围内得1分；低于其价值得2分。</p>
+<p>价格在价值区间之上时，买入已经有些迟了；在价值区间内还可以；在价值区间之下则是一笔好买卖。</p>
+<p>（4）假突破——没有的话得0分；已经发生得1分；很有可能将要发生得2分。</p>
+<p>（5）完备性——没有周期符合得0分；有一个符合得1分；两个周期看起来都很完备得2分。</p>
+<p>我通常会用两个时间周期来分析市场。对任何策略来说必须有其中之一符合一种入场交易的完备形态。极少情况下两个时间周期的形态都是完备的——在一个完备，另一个可以接受的情况下就可以进行交易了。如果没有一个时间周期的形态看起来是完备的，则不是一笔A类交易——抛弃这只股票，转移到另一只上面去。</p>
+<p>图58-2　交易阿氏评分在做空交易（此例为“假突破伴随背离”的策略）的使用</p>
+<p>此处与“图58-1交易阿氏评分在做多交易（此例为‘假突破伴随背离’的策略）的使用”是对应的。</p>
+<p>计算任何一只股票的阿氏评分都不会花费超过一分钟。我只想进行那些得分在7分及以上，并且没有任何一个框是0分的交易机会。遇到这样的交易机会，我会继续执行我的交易计划，选择进场点、目标价、止损价和交易规模等。</p>
+<p>交易的阿氏评分为潜在的交易提供了客观的评级。我们有成千上万的交易工具，没有必要将精力耗费在差劲的标的上。使用交易阿氏评分能帮助你聚焦于最有前景的机会上。</p>
+<p>使用交易表</p>
+<p>当你对某只股票产生兴趣，并且交易的阿氏评分肯定了你的交易想法，完成交易表将有助于你专注于此交易最核心的部分。</p>
+<p>让我们看一张做多的交易表（见图58-3）。</p>
+<p>图58-3　交易表在做多交易（此例为“假突破伴随背离”的策略）的使用</p>
+<p>资料来源：elder.com。</p>
+<p>第一部分：交易鉴定</p>
+<p>绿色条纹标志为多头交易。</p>
+<p>用一张指甲盖大小的、画有牛市背离伴随假突破的K线图作为图标，标示出这种策略。</p>
+<p>第一个空格用来填写股票代码。</p>
+<p>接下来一个空格用来记录下一个财报披露的日期。你可以在很多免费网站上找到它们。例如www.Briefing.com，www.earning.com，或者www.Finviz.com等。很多交易者在股票将要公布财报时会避免持有该股票。因为差劲的盈利表现对你的持仓很不利。写下披露的日期，以强迫自己避免陷入麻烦。</p>
+<p>再下一个空格用来记录除息日——如果有的话。我通常在http://finance.yahoo.com上查找。分红时，股票持有者需要缴税，而空头必须支付分红。所以人们都不希望在分红那天持有该股票。</p>
+<p>最后一个空格是我做计划的日期。</p>
+<p>第二部分：交易的阿氏评分</p>
+<p>我的交易阿氏评分描述如上。记住，每种策略都需要符合其特点的阿氏评分。十分欢迎你用符合自己交易系统特点的问题来代替我设置的问题。例如，你的问题可能是随机摆动指标是处于哪种状态：超买（0分）、超卖（1分）或者超卖伴随着牛市背离（2分）。</p>
+<p>当你将交易阿氏评分的各项得分加总时，将下面这个重要问题的答案写下来：这会是一笔A级交易么？如果总分在7分以下，则放弃这只股票，去寻找其他的。</p>
+<p>第三部分：市场、买入点、目标价、止损点和风险控制</p>
+<p>最左边的五个空格要求我回答有关市场基本状况的问题。尖峰反弹信号是否有效，追踪股票均线的指标是看多还是看空，这只股票的空头净额是多少，需要多少天来补上，所有这些内容都已在本书前面描述过。最后一个空格是简短的总结。</p>
+<p>用箭头所连接的三个空格是我决策制定过程的核心部分。它们所要的是每笔交易最重要的三个数字：买入价、目标价、止损价。</p>
+<p>资金风险——这笔交易中，你愿意冒亏损多少钱的风险？这个数额永远不应该超过你账户资产的2%。我通常把它控制在远远低于这个门槛的位置。</p>
+<p>持仓规模——根据持仓限额和入场点与止损点的差额，可以算出你能买多少数量。这已经在第50节“风险控制的铁三角”中详细论述过。</p>
+<p>第四部分：买入之后</p>
+<p>A级盈利目标是在买入价上加日通道线高度的30%。</p>
+<p>软止损是记在脑海中的指令，而硬止损或灾难性止损是实在的指令。它不应该比第三部分中所写的止损价低。</p>
+<p>记下你将把止损位移到盈亏平衡位置的价格水平。</p>
+<p>当你执行这些必要步骤时，检查右手边的方框：设置止损价，创建一个日志，下达止盈订单。</p>
+<p>第五部分：版权信息</p>
+<p>这一行显示的是此交易单是何时更新的。作为本书的读者，我很欢迎你们写邮件给info@elder.com索取最新版本，这是我们为交易者提供的公益服务。</p>
+<p>我通常使用PPT来设计交易表格，可以在两页幻灯片里设计好。我通常会准备一些空白的交易表放在手边，但是不会预印太多，因为我一直在对这个表进行调整。</p>
+<p>我的空头交易用的交易表也是类似的，只有交易的阿氏评分会不同，如图58-2所示。当你开始制作自己的交易表时，只能复制第1、3和4这三个部分，但第2部分需要自己制作——制作符合你自己系统或策略的交易阿氏评分。</p>
+<h6 id="阅读日期-2026年09月02日-2026年09月02日-共-1-天">阅读日期：
+2026年09月02日-2026年09月02日 共： 1 天</h6>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

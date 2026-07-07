@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="hbaolong@vip.qq.com" />
+  <title>以交易为生:30.强力指数指标</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">以交易为生:30.强力指数指标</h1>
+<p class="author">hbaolong@vip.qq.com</p>
+</header>
+<center>
+<a href="/3place/yjyws">返回首页</a> <a
+href="/3place/yjyws/mingju.html">本书名句</a> <a
+href="/3place/yjyws/memo.html">本书注解</a> <a
+href="/3place/yjyws/index_rich.html">丰富目录</a> <a
+href="/3place/yjyws/index_readcal.html">同读日历</a> <a
+href="/3place/yjyws/index_timeline.html">时间线</a> <a
+href="/3place/yjyws/index_books.html">引用书籍</a> <a
+href="/3place/yjyws/index_words.html">使用字频</a>
+<div id="wx_pic" style="margin:0 auto;display:none;">
+<img src='/img/logo.png'/>
+</div>
+</center>
+<h4 id="强力指数指标">30.强力指数指标</h4>
+<p>强力指数指标是由本书作者创造并发展的一种指标，它将价格和成交量相结合来发掘每一次上涨或下降过程中多头或空头的力量。强力指数指标可以应用于所有有成交量数据的价格图中，包括周度、日度或日内数据。它将三条至关重要的信息汇集到一块：价格改变的方向、程度以及在其改变过程中所对应的成交量。它提供了一个实际可行的根据成交量来进行交易决策的方法[1]。</p>
+<p>强力指数指标可以以其最原始的形式使用，但若我们将其用移动均线平滑化，其信号将会显示得更加清晰。使用短期EMA（指数平均数指标）的强力指数指标可以精确定位进入和退出点。使用期限长一些的EMA能帮助确认趋势以及重要的反转。</p>
+<p>如何构造强力指数指标</p>
+<p>市场每一次变化的力量都被划分为三个因素：方向、距离以及成交量。</p>
+<p>（1）如果当日收盘价比前一日收盘价高，力量值便为正；如果收盘价比先前的收盘价低，力量值便为负。</p>
+<p>（2）价格变动幅度越大，力量值越大。</p>
+<p>（3）成交量越大，力量值越大。</p>
+<p>强力指数指标=今日成交量×（今日收盘价-昨日收盘价）</p>
+<p>原始的强力指数指标可以被绘制成线柱图，并有一条0值的水平中心线，若市场的收盘价高于前一个收盘价，强力指数指标值便为正，并在中心线之上；若市场收盘价低于前一个收盘价，强力指数指标值便为负，并在中心线之下；若市场收盘价不变，强力指数指标值便为0。</p>
+<p>由原始强力指数指标做成的线柱图是锯齿状的，将其用移动平均（见第22节）进行平滑化后显示出的交易信号更好。</p>
+<p>2日强力指数指标EMA（在本节以下简称为“2日EMA”）则进行了很小程度的平滑化，其在寻找市场进入时机时很有用。只要你沿着趋势的方向交易，可以当2日EMA为负时买入，当2日EMA为正时卖出。</p>
+<p>13日强力指数指标EMA（在本章以下简称为“13日EMA”）追踪的是较长期间内多空双方力量的改变。当13日EMA穿越到中心线上方时，表明多头占据优势，此时是买入时机；当13日EMA变负时，表明空头占据上风，此时是卖出时机。13日EMA的强力指数指标与价格走向相背离是重要的趋势转折点。</p>
+<p>交易心理学</p>
+<p>当市场收涨，表明多头在当日的多空之战中取得了胜利；当市场收跌，则表明空头赢取了当天的胜利。今天与昨天收盘价之间的差距表明了多头或空头的获胜程度，差距越大说明胜利的程度越大。</p>
+<p>成交量反映了市场参与者的情绪卷入程度（见第28节）。高成交量支撑下的价格上涨和下降有着更大的惯性并且更可能持续。高成交量下的价格走势就像在雪崩中不断积累速度的雪球一样。另外，低成交量表明输家的数量很少，意味着趋势将要走到其尽头。</p>
+<p>价格反映了市场参与者的想法，而成交量反映了参与者情绪的强度。强力指数指标将价格和成交量结合起来，它能显示市场的大脑和心脏是否相互匹配。</p>
+<p>当强力指数指标上涨到新高时，表明多头的力量很强大，上升趋势将得到持续；当强力指数指标下降到新低时，表明空头的力量很强大，下降趋势将继续维持；若价格的改变并没有得到成交量的确认，强力指数指标将变得平坦，从而给出趋势将要反转的信号。如果价格波动很小，但成交量十分巨大，强力指数指标也将变得平坦，同样意味着反转即将到来。</p>
+<p>交易准则</p>
+<p>短期强力指数指标</p>
+<p>2日EMA是追踪短期多空头力量的高敏感性指标，当其向上击穿中心线时，表明多头力量更为强大；当其向下击穿中心线时，表明空头力量更为强大。</p>
+<p>因为2日EMA是一个敏感的指标，我们可以用其来对其他指标给出的信号进行微调。当趋势跟随指标确认了上升趋势时，同时2日EMA值下降到0以下，此时便是一个绝佳的买点——在长期上涨趋势中的回调期进行买入（见图30-1）。当趋势跟随指标确认了下降趋势，2日EMA的上升给出绝佳的卖出区域。</p>
+<p>（1）市场处于上升趋势时，在2日EMA变负时买入。</p>
+<p>就算是疯狂的上升趋势中也会有偶尔的回调，如果你能忍住冲动，在2日EMA值变负时买入，你将买在接近短期底部的位置。大部分人喜欢追涨，他们在回调的时候倍受打击并无法容忍。强力指数指标帮助我们发现低风险的买入机会。</p>
+<p>上升趋势中，当2日EMA值变负时，你可以在比当日最高价还要高一点的位置下一个买单，若上升趋势持续并且价格回升，你的限价买入指令将会成交。如果价格继续下降，你的指令则不会被执行。持续降低你的买入价格直到接近前一根线柱的高点。一旦你的限价买入指令被触发，在比最近低点还稍微低的价位设置一个保护性止损单，这个止损单在强上升趋势中不会被触及，但它可以让你在趋势走弱时及早退出。</p>
+<p>（2）市场处于下降趋势时，当2日EMA值变正时卖出。</p>
+<p>当趋势跟随指标确认了下降趋势时，你需要等到2日EMA值变正，此时是下跌过程中的短暂反弹，为卖空的好机会。在比近期低点价格稍低的价位设置卖空指令。</p>
+<p>如果2日EMA在你设置了卖出指令后依然持续反弹向上，下一个交易日将你的卖出指令价格提升到前一交易日的低点附近。一旦价格下降你的卖空指令将成交，在最近的高点上方设置一个止损单，尽早将你的止损价逐步调整到盈亏平衡的水平。</p>
+<p>此外，2日EMA可以帮助我们决定什么时候建仓，你可以在上升趋势中每次强力指数指标变负时加仓，你也可以在下降趋势中每次强力指数指标变正时减仓。</p>
+<p>强力指数指标甚至还可以让我们瞥见未来的一角。当2日EMA值在当月内降低到最低点，说明了空头力量十分强大，并且价格将降得更低；当2日EMA在当月内升高到最高点，这说明了多头力量十分强大，并且价格将升到更高水平。</p>
+<p>2日EMA也能帮助我们决定何时清仓。它通过确认短期反弹或回调来实现该作用。在2日EMA值为负的时候买入的短线交易者可以在该值变正的时候卖出；在该指标为正的时候卖出的短线交易者可以在该指标为负的时候买回。长线交易者只应在趋势改变的时候（如13日价格的EMA线的斜率所确认的价格方向）选择清仓，或者在2日EMA与价格走势出现背离时离场。</p>
+<p>（3）2日EMA与价格走势出现牛市背离时便出现了强烈的买入信号。即当价格降到了新低，而2日EMA却没有再往下降到新低时，便发生牛市背离。</p>
+<p>（4）2日EMA与价格走向出现熊市背离时便给出了强烈的卖出信号。即当价格上升到新高，而2日EMA却没有再往上冲到新高时，便发生熊市背离。</p>
+<p>（5）不管何时，2日EMA若下跌深度比正常的深5倍以上，并从该区域反弹起来时，则可以预期在不久的将来价格将回升。</p>
+<p>图30-1　奥多比公司（ADBE）日线图、26日指数移动平均、2日强力指数</p>
+<p>资料来源：Stockcharts.com。</p>
+<p>短期强力指数指标</p>
+<p>在本书接下来的部分里我们将回到使用多重时间周期来进行交易决策这一重要主题上。比如说，你可以利用周线图来做出你的战略决策——成为一名多头还是空头，然后利用日线图来做出你的战术决策——在什么位置上买入或卖出。</p>
+<p>以奥多比公司（Adobe
+Systems，Inc.，ADBE）的股票为例，上升的周线EMA（在图中未显示）确认了稳定上升的趋势。当周线向上走时，日线图上的2日强力指数不断地提供了一系列确认买点的信号。比起追涨并买在高位，在短暂的回调期买入会更好，此时股票走势与其长期趋势相反。这些与趋势相反的波动坑，将在2日强力指数为负时被标记出来。一旦2日强力指数下降到0值以下，此时在最近一条线柱的高点上方设置限价买入指令，一旦下行浪失去势头时，能确保你买入股票，并在上升浪中获得收益。</p>
+<p>市场在超买和超卖之间波动，当市场从下跌中回升起来，则可以预期上涨将发生。我们需要注意的是这种信号在上升趋势中，从上升中回落时并不好用。向下跳跃的图形反映了强烈的恐慌，这种情绪不会维持很久。向上跳跃的图形反映了市场过度的热情和贪婪，这些情绪却通常可以维持很长一段时间。</p>
+<p>2日EMA可以很好地与三重滤网交易系统（见第39节）相适应。当你将2日EMA与追踪长期趋势的指标结合起来使用，其寻找短期买点和卖点的能力是十分优秀的。</p>
+<p>中期强力指数指标</p>
+<p>13日强力指标EMA可以确认较长时间段里多空方力量平衡的变化。当其上升到0以上时，多头力量比空头力量更强大；当其下降到0以下时，则空头压制住了多头。强力指标与价格走势的背离说明了中期甚至是长期趋势将发生变化（见图30-2）。当强力指标迅速上升，尤其是接近底部图形模式时，预示着趋势快要逆转。</p>
+<p>不管是在日线图、周线图还是分时图中，原始的强力指数指标都可确认多空双方交战的获胜方，我们可以用移动均线将其平滑化，来得到更加清晰的信号。</p>
+<p>（1）当13日EMA高于中心线时，多头掌管了市场，当其低于中心线时，空头重占上风。</p>
+<p>当上涨开始时，价格通常伴随巨大的成交量而上升。当13日EMA达到新高，便确认了上升的趋势。当上升趋势老化时，价格上升越来越慢，成交量也开始缩减。此时，13日EMA只能上升到较低的高点。当其下降到0值以下时，便意味着牛市的尾声已经过去了。</p>
+<p>（2）当13日EMA创新高时，表明多头力量十分强大，上升过程将很可能持续下去。13日EMA与价格走向发生熊市背离时便给出了强烈的卖空信号，若价格达到新高但该指标却只能达到较低的高点，这便在警告多头已经丧失力量，空头正在逐渐掌管市场。</p>
+<p>我们需要注意，为了使背离有效，EMA在创新高之后必须降到0值线以下，然后再回升到0值线以上，但是却无法突破前期高点创出新高，这便产生了背离。如果没有和0值线的交叉，就不是有效的背离。</p>
+<p>（3）13日EMA创新低表明下降趋势将持续。如果价格创新低了，但该指标却回升到0值线以上，然后再次回落到0值线以下，但却无法跌穿前期的底部，这便形成了牛市背离，表明空头的力量在减弱，是买入的信号。</p>
+<p>当下降趋势开始时，价格的下降通常伴随着巨大的成交量，当13日EMA创新低时，便确认了下降趋势。当下降趋势老化时，价格下降得越来越慢，相应的成交量也逐渐缩小，这时随时都可能出现反转。</p>
+<p>在强力指数指标界面中，加入一个包络线可以帮助你监测其极端偏离值，该极端值很可能是价格趋势反转的信号。这种捕捉偏离和潜在反转的方法在周线图中十分好用，但在日线图和分时图中不好用。该指标是一个真正的长期指标工具。</p>
+<p>图30-2　斯特塔西公司（SSYS）日线图、26日指数移动平均、13日强力指数</p>
+<p>资料来源：Stockcharts.com。</p>
+<p>长期强力指数指标</p>
+<p>斯特塔西公司（Stratasys，Inc.，SSYS）是最近快速发展起来的两大顶级3D打印商之一。在我完成世界上第一本关于投资3D打印技术的电子书后的两年内，3D打印概念股已经成为投资者的最爱。一种新技术的模式已经形成，其股价随着业余投资者急切买入而上升，也由于他们的恐慌抛售而暴跌。13日强力指数指标能很好地捕捉这种上升、下行浪。</p>
+<p>当13日强力指数指标上穿0值线时（在图中被垂直绿色箭头标出），表明新的购买力在进入，此处也是长期交易者买入并持有的区域。当13日强力指数指标下降到0值线以下时稳定下来，则表明空头占据市场主导地位。</p>
+<p>在靠近屏幕右边缘的位置，我们可以发现强力指数指标处于低位，但当强力指数指标开始向0值回升时，空头的力量就开始衰弱。我们在等待上升趋势蓄力并且被0值以上的强力指数指标所确认的时候，一定要时刻做好入场准备，做到有备无患。这种跷跷板运动中，股票在价格顶部时从实力强劲者换到实力弱小者手中，在底部时又反过来，如此永远地持续进行着。强力指数指标可以帮助你站在正确的那一方。</p>
+<p>[1] 记住，我们所说的是市场群体的力量，而不是物理学中的方程式。</p>
+<h6 id="阅读日期-2026年08月06日-2026年08月06日-共-1-天">阅读日期：
+2026年08月06日-2026年08月06日 共： 1 天</h6>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

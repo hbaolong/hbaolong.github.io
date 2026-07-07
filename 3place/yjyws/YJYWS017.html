@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="hbaolong@vip.qq.com" />
+  <title>以交易为生:16.管理和预测</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">以交易为生:16.管理和预测</h1>
+<p class="author">hbaolong@vip.qq.com</p>
+</header>
+<center>
+<a href="/3place/yjyws">返回首页</a> <a
+href="/3place/yjyws/mingju.html">本书名句</a> <a
+href="/3place/yjyws/memo.html">本书注解</a> <a
+href="/3place/yjyws/index_rich.html">丰富目录</a> <a
+href="/3place/yjyws/index_readcal.html">同读日历</a> <a
+href="/3place/yjyws/index_timeline.html">时间线</a> <a
+href="/3place/yjyws/index_books.html">引用书籍</a> <a
+href="/3place/yjyws/index_words.html">使用字频</a>
+<div id="wx_pic" style="margin:0 auto;display:none;">
+<img src='/img/logo.png'/>
+</div>
+</center>
+<h4 id="管理和预测">16.管理和预测</h4>
+<p>我曾经在一次研讨会上遇到过一个非常胖的外科医生，他告诉我他在三年的股票和期权的交易中损失了25万美元。当我问他是怎么做出交易决策的时候，他不好意思地指向了他足够的胆量。他用他的直觉进行操作，使用工作的收入来支持他的操作习惯。对于直觉有两个可以替代的方法，一个是基本面分析，一个是技术分析。</p>
+<p>主要的牛市和熊市反映了供求的基本面变化。基本面分析研究联邦储蓄委员会的行为、收入报告、谷物报告等。然而，即使你知晓这些因素，如果你脱离了中短期的趋势——这种趋势建立于群体的情绪之上——你也会在交易中产生损失。</p>
+<p>技术分析师相信价格反映了市场上的所有公开信息，包括基本面的因素。每一个价格代表所有市场参与者对于价值的共识。这些市场参与者包括大的商业利益团体、小的投机者、基本面的研究者、技术分析师、内幕交易者和赌徒。</p>
+<p>技术分析是一门融合了艺术和科学的关于群体心理的研究。技术分析者使用很多科学方法，包括数学概念中的博弈论、概率论等。他们用电脑来追踪这些指标。</p>
+<p>技术分析也是门艺术。我们将行情图上的柱状图和蜡烛图整合成为形态。价格和指标的移动产生了一种流动和律动感、一种紧张感和美感，这些都会帮我们感受周围发生着什么，指导我们应该如何去交易。</p>
+<p>个人行为是复杂多变而难以预测的，而群体行为是简单而原始的。技术分析者研究了市场群体模式。当他们识别到先前市场变化的形态时，他们开始交易。</p>
+<p>民意调查</p>
+<p>政治家想了解他们胜选或者连任的概率。他们对选民做出承诺，并开展民意调查来衡量群体的反应。技术分析和这种民意调查相类似，都旨在解读群体的意图。民意调查者通过这样来帮助他们的雇主赢得选举，而技术分析者是为了获得金融的盈利。</p>
+<p>民意调查使用科学的方法：统计学、取样过程等。他们需要能力来采访和列出问题，他们也需要投入到他们党派情绪的暗流之中。民意调查是科学与艺术的融合体。如果民意调查者说他是一个科学家，你可以问他为什么在美国每一个主要的政治民意调查者都要依附于共和党或者民主党。众所周知，真正的科学是不分党派的。</p>
+<p>一个市场的技术分析者必须超越派系的局限：不依附于多头或者空头的阵营，而仅仅是寻求真理。一个带着偏见的多头看着行情图会说：“我在哪个位置买入呢？”一个带着偏见的空头看着同样的行情图会尝试去寻找什么地方可以卖空。一个顶尖的技术分析者是不受多空派系偏见影响的。</p>
+<p>这儿有一个帮助你检测你的偏差的方法。如果你想买入，把你的行情图上下颠倒，观察是否像是卖出信号。如果仍然像是买入信号，在你再次翻转行情图之后，你就需要将多头的偏差移出你的系统。如果两张行情图都看着像是卖出信号，那你就需要将空头偏差移除你的体系。</p>
+<p>一个水晶球</p>
+<p>许多交易者相信他们的目标是预测未来的价格。大多数领域的业余人士寻求预测，而专业人士仅仅处理信息并根据概率做出决策。用吃药举个例子：一个病人因为刀伤被送入急救室，焦急的家人仅仅有两个问题：“他会活下来吗？”和“他什么时候可以回家？”他们要求医生做出预测。</p>
+<p>但是医生并不是在预测，而是处理出现的问题。他的首要任务是防止病人因为休克而死亡，所以他给病人止疼药并开始静脉滴注以替代流出的血液；接着他们缝合损坏的器官；接着，他还需要防止病人感染；他监控着病人的健康趋势，并采取措施防止一些并发症：他在处理而非预测。当家庭寻求一个预测时，他可能会给他们，但是这种预测的实际意义是很低的。</p>
+<p>在做金钱的交易的时候，你不需要预测未来。你需要从市场提取信息，来寻求是否空头和多头处于控制之中。你需要衡量市场上占主导地位的群体的力量并以此来决定现有趋势有多大可能会持续下去。你需要练习保守的金钱管理，从而获得长期的生存和财富积累。你必须观测你的思维的运作，避免倾向于贪婪或者恐惧。如果能够遵守这些原则，交易者会比大多数预测者要成功。</p>
+<p>解读市场，管理自我</p>
+<p>巨大的信息量在交易时间从市场中倾泻而出，不断变化的价格反映了多空之间博弈。你的工作便是分析这些信息，然后在占主导的市场群体上下注。</p>
+<p>每当我听到一个戏剧性的预测，我的第一反应是“这是一个市场手法”。咨询师发表这些预测来吸引关注，以此来筹集资金或者出售服务。好的预测吸引愿意付费的客户，而坏的预测则很快就会被遗忘。在我写这一章的第一稿的时候，我的电话响了。一个著名的大师遭遇不幸，他告诉我，他发现了一个玉米商品期货中“百年难遇的买进机会”，他让我为他筹集资金并许诺我在六个月的时间里百倍的回报。我不知道他骗了多少笨蛋，但是戏剧性的预测总是能够完美地欺瞒大众。大部分人不会改变，当21年后开始更新这部分的时候，我在《华尔街日报》上读到一个同样的大师最近因为专业性的误导被美国国家期货协会惩处。</p>
+<p>使用常识分析市场。当一些新的发展使你感到困惑时，尝试着拿它和市场之外的生活做个对比。比如，技术指标给你在两个市场中买入的信号，你是会买进在买入信号之前下跌很多的股票还是一点的股票呢？拿这个和一个人摔了一跤这件事做个比较。如果他从一个不高的台阶上摔下来，他可能拍拍灰就能再跑起来了。但是如果他从二楼的窗户上掉下来，他不可能立刻就跑起来，他需要时间去恢复。</p>
+<p>成功的交易建立在三大支柱之上。你需要分析多空力量的平衡。你需要实践资金管理。你需要严格服从你的交易计划，避免在市场中过于兴奋或者沮丧。</p>
+<h2 id="第3章-经典图表分析法">第3章 经典图表分析法</h2>
+<p>在我购买自己人生第一只股票时，图表分析法是当时小镇上唯一的分析方法。我用格子纸和铅笔手工更新图表。几年之后便携计算器开始普及，我就增加了些简单移动平均计算。后来，德州仪器公司生产的可编程计算器，能够用在计算器插槽中插入微型磁条的方式，来实现更加复杂的运算，比如指数移动平均和趋势分析系统。</p>
+<p>最后，苹果的个人电脑出现了。你能用操纵杆移动光标，来画出趋势线。可是今天的交易者只用花很少的钱就能够获得非常强大的分析能力。</p>
+<p>虽然经典的图表分析法的核心概念依然有效，但很多画图工具已经让位于强大的计算机了。计算机化的分析方法最好的特质在于其客观性。移动平均或者其他任何指标，要么上升，要么下降，面对其趋势我们是没有异议的。你可能对如何解释这些指标感到困惑，但信号本身是明白无误的。</p>
+<p>另一方面，经典的图表分析法又是相当主观的，会导致一厢情愿和自欺欺人。你可以画一条穿过极端价格的趋势线，或者经过密集区域的边缘从而改变趋势线的角度，也改变其传递的信息。如果你想买入股票，那么你可能会把趋势线画得更陡峭。如果你看空市场，并斜眼看一下图表，那么你会“发现”这是一个“头肩顶”。实际上这些模式没有一个是客观的。由于其主观性，我越来越怀疑那些传统图表分析法形态的作用，比如三角旗形、头肩顶等。</p>
+<p>在看了成千上万的图表之后，我发现市场根本不认同斜线，市场能够记住价位，这就是为什么水平支撑位和阻力位有意义，而斜线趋势却是主观的甚至是自欺欺人的。</p>
+<p>在我自己的交易过程中，我只用几个客观到足以让人信赖的图表模式。我关注基于水平的支撑区和阻力区、每日开盘价和收盘价的关系、蜡烛图高点和低点的关系，这些都是客观的。我认同“手指”或叫作“袋鼠尾”——一种冲出密集成交区的大柱形态。我们将在这一章中讨论这些以及其他一些图表的形态。</p>
+<h6 id="阅读日期-2026年07月23日-2026年07月23日-共-1-天">阅读日期：
+2026年07月23日-2026年07月23日 共： 1 天</h6>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

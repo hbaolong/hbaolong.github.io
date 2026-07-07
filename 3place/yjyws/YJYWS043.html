@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="hbaolong@vip.qq.com" />
+  <title>以交易为生:42.股票</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">以交易为生:42.股票</h1>
+<p class="author">hbaolong@vip.qq.com</p>
+</header>
+<center>
+<a href="/3place/yjyws">返回首页</a> <a
+href="/3place/yjyws/mingju.html">本书名句</a> <a
+href="/3place/yjyws/memo.html">本书注解</a> <a
+href="/3place/yjyws/index_rich.html">丰富目录</a> <a
+href="/3place/yjyws/index_readcal.html">同读日历</a> <a
+href="/3place/yjyws/index_timeline.html">时间线</a> <a
+href="/3place/yjyws/index_books.html">引用书籍</a> <a
+href="/3place/yjyws/index_words.html">使用字频</a>
+<div id="wx_pic" style="margin:0 auto;display:none;">
+<img src='/img/logo.png'/>
+</div>
+</center>
+<h4 id="股票">42.股票</h4>
+<p>股票是对企业所有权的凭证。如果你买了某个公司100股股票，而它共发行了1亿股股票，那么你拥有该公司的100万分之一。如果其他人想拥有这个企业，他们将需要为你手中的股份出价。</p>
+<p>当大量的人开始喜欢某个公司的前景，他们的买单将会把公司股价推高。如果他们不看好公司的前景，他们将会卖出手中的份额，使价格承压。上市公司试图让他们公司的股票更具吸引力，以推高公司股价，因为这有助于他们进行股权融资或者发行债券。高管的奖金也经常会和股价联系在一起。</p>
+<p>基本面的价值，特别是盈利，是推动股价的长期因素。但著名的经济学家，同时也是精明的股票投资者，约翰·梅纳德·凯恩斯（John
+Maynard
+Keynes），曾经反驳说：“长期来看我们都会死掉。”市场里满是毫无价值的公司，有些公司盈利能力很弱，甚至没有盈利，但其股价在某些时点能对抗引力，冲破屋顶。新兴的引人注目的行业里，公司股票能依靠对未来的盈利预期，而不是真实利润，使股价高高在上。有着盈利的、运行良好的公司，如果市场对它们的前景没有信心的话，它们股票也可能一直盘整或者下跌。</p>
+<p>沃伦·巴菲特热衷于说买入股票使你与一个狂躁抑郁的市场先生为伴。每一天，市场先生跑到你身边，给你卖出或者从他那儿买入份额的机会。大部分时间，你应该忽略他，因为他很疯狂，但是偶尔市场先生会变得如此沮丧，以至于他会以非常低廉的价格卖出他的份额——那是你应该买入的时机。另一些时候，他则会变得如此疯狂，以至于提出疯狂的高价要买你手中的份额——那是你应该卖出的时机。</p>
+<p>巴菲特的说法以简洁的话语道出了交易智慧，但是很难执行。市场先生的情绪如此有传染性，以至于我们都容易受到它的感染。当市场沮丧的时候，人们会想卖出；在市场疯狂的时候，人们反而想买入。要成为一名成功的交易者，你必须站在大众群体之外。你需要建立客观的准则，来帮助你决定什么价格算高而什么价格算低。巴菲特在基本面的分析基础上，运用超凡的直觉做出投资决策。交易者们也可以运用本书里描述的技术分析工具来决策。</p>
+<p>你要交易什么股票？美国市场上有着超过20000只股票，国际市场上还有更多选择。初学者往往同时追踪过多数量的股票。由于害怕错过机会，他们甚至会购买盘面分析软件。交易者如果没有交易好一只股票的清晰想法，那他同时去追踪许多股票，也不会有任何帮助。关注于少量几只股票，并且每日跟踪这些股票的走势，效果会好得多。</p>
+<p>我们将在第10章“实践细节”中回到股票选择的问题。简而言之，限制你的自选股票池规模是个好主意。股票池可以很大也可以很小，这依赖于你的技巧和可支配的时间。我的一个希腊朋友称他观察名单里有200只股票，称作他的“后宫”。其中每一只他都曾持有过。在周末，他会对它们进行复盘，并选出不到十只股票，在新的一周带着它们去驰骋。</p>
+<p>我有两个用以捕捉交易思路的“池子”。第一，在周末我会用我的“背离扫描器”跑一下标准普尔500成分股的交易数据，并聚焦到通过扫描器标记出来的股票上，然后我会选择少量几只在新的一周考虑用于交易。第二，在周末我还会回顾一下本周的“Spike”的精选。在几十个顶级交易者提交的个人精选股中，应该会有几个我想交易的股票。我在交易日仔细跟踪的股票数量总是个位数，但这只是我的方式。我有的朋友在任何时候都跟踪几十只股票。所以，只有你自己能找到适合自己的跟踪数量，这个规模不要超过你能专注的最大数量。</p>
+<h6 id="阅读日期-2026年08月18日-2026年08月18日-共-1-天">阅读日期：
+2026年08月18日-2026年08月18日 共： 1 天</h6>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

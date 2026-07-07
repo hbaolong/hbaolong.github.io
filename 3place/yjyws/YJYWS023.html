@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="hbaolong@vip.qq.com" />
+  <title>以交易为生:22.移动平均</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">以交易为生:22.移动平均</h1>
+<p class="author">hbaolong@vip.qq.com</p>
+</header>
+<center>
+<a href="/3place/yjyws">返回首页</a> <a
+href="/3place/yjyws/mingju.html">本书名句</a> <a
+href="/3place/yjyws/memo.html">本书注解</a> <a
+href="/3place/yjyws/index_rich.html">丰富目录</a> <a
+href="/3place/yjyws/index_readcal.html">同读日历</a> <a
+href="/3place/yjyws/index_timeline.html">时间线</a> <a
+href="/3place/yjyws/index_books.html">引用书籍</a> <a
+href="/3place/yjyws/index_words.html">使用字频</a>
+<div id="wx_pic" style="margin:0 auto;display:none;">
+<img src='/img/logo.png'/>
+</div>
+</center>
+<h4 id="移动平均">22.移动平均</h4>
+<p>华尔街的老前辈们说移动平均是在二战之后才引入金融市场的。二战时，高射炮手们用移动平均的方法设置大炮瞄准敌机，战后又用这种方法来计算价格。两位使用移动平均方法的早期的大师分别是理查德·道前（Richard
+Donchian）和J.M.薛斯（J.M.Hurst）——两位显然都不是炮手。道前是美林证券的雇员，他发明了基于移动平均交叉的交易方法。哈斯特是一位工程师，他在自己的经典著作《股票交易时机的获利法宝》（The
+Profit Magic of Stock Transaction Timing）中介绍了移动平均的方法。</p>
+<p>移动平均（MA）反映了数据在时间窗口上的平均价格。一个5日MA显示了过去5天的平均价格，20日MA则是过去20天的平均价格，以此类推。连接每天MA值就得到了一条移动平均线。</p>
+<p>式中　P——被平均的价格；</p>
+<p>N——移动平均天数（由交易者自主决定）。</p>
+<p>移动平均值的大小取决于股票的价格和时间周期的长度。假设你想要计算1只股票3天的简单移动平均值，如果在连续的三天内它的收盘价是19，21和20，那么3天的简单移动平均收盘价就是20（即19+20+21然后再除以3）。假设在第4天价格收于22，那就使得3天的移动平均值到达了21——最后3天的平均值（即21+20+22再除以3）。</p>
+<p>有3种主要的移动平均方法：简单移动平均、指数移动平均和加权移动平均。简单移动平均法曾经很流行，因为在没有电脑的时代它们容易计算，道前和哈斯特都用这种方法。但是简单移动平均有一个致命的缺陷——每一个价格都会使得移动平均值变动两次。</p>
+<p>报警两次</p>
+<p>首先，当一个新的价格包含进来时，简单移动平均价格会发生变动。这很好——我们想要我们的移动平均值反映最新的价格。但坏事情是我们去掉过去的一个价格时，移动平均值会再次变动。当一个高的价格去掉时，简单移动平均值就会变小。当一个低价格被去掉时，这个价格又会上升。而这些变化和现在市场的变动的真实情况毫无关系。</p>
+<p>想象一只股票，其价格一只在80~90美元之间波动，它的10日简单移动平均值是85美元但是包含了股票价格涨到105美元的那一天。当这个高价点排除到10天之外的那天，移动平均值会出现跳水，就像处于下跌的趋势一样。但这种跳水和当前的趋势毫无关系。</p>
+<p>当一个旧的数据被排除之后，简单移动平均值会发生跳跃。在较短的时间段内这种现象更加严重，但在长期移动平均中不会有明显的跳跃现象。比如，如果你计算一个10天的移动平均值，那么每个去掉的值都占10%的份额，而当你计算一个200天的移动平均值时，每个值只占0.5%的比重，去掉其中的一个值并不会产生多大影响。</p>
+<p>同时，简单移动平均值就像一个会叫两次的看门狗——当有人接近房子的时候叫一次，当有人离开的时候再叫一次。几次之后，你就不知道什么时候该相信那只狗了。这就是为什么现代计算机化的交易者更青睐指数移动平均值，我们将在这章的后文中探讨这种方法。</p>
+<p>市场心理</p>
+<p>每一个成交价格都是所有的市场交易者当前对股票价值达成的一致意见（见第1节）。然而，仅仅一个价格并不能告诉你市场会变得更牛或更熊。就像你从一张照片中没法看出一个人是乐观主义者还是悲观主义者。但是如果你每天给某个人拍照片，持续十年，把照片带到实验室，将这些组合照片排序，那就可以揭示一个人的典型特征。你可以通过每天更新这些照片来追踪这个人的情绪的趋势。</p>
+<p>移动平均就是市场的一组摄影照片——它能把几天的价格结合起来。市场由大量的群体组成，而移动平均的斜率能够辨认出大众惯性的方向。移动平均代表着股票价格在一段时间内平均一致的价值。</p>
+<p>移动平均值中最重要的信息就是其斜率的方向。当斜率上升时，表示大众正在变得乐观——倾向于看多。它的斜率下降意味着大众开始变得悲观——倾向于看空。当价格升至移动平均值之上时，大众比之前乐观；当价格降至移动平均值之下时，大众比之前更悲观。</p>
+<p>指数移动平均</p>
+<p>指数移动平均（以下简称EMA）是一种更好的趋势跟随指标，因为它为最近的价格分配了更大的权重而且对价格的反应也比简单的移动平均更灵敏。同时，EMA也不会因为去掉旧的数据而发生突变。这只“看门狗”的耳朵更灵敏，而且只有当有人靠近房子的时候才会叫。</p>
+<p>EMA=Ptod×K+EMAyest×（1-K）</p>
+<p>式中　Ptod——当日收盘价；</p>
+<p>EMAyest——前一日指数移动平均值；</p>
+<p>N——EMA的天数（由交易者选定）。</p>
+<p>技术分析软件允许你选择EMA的长度。相比简单MA，EMA有两个主要的优势。首先它为最近的交易价格分配了更大的权重。大众最近的情绪更加重要。在一个10日的EMA中，最新一个收盘价占EMA值比重的18%，但是在简单的MA中所有的天数所占比重都一样。其次，EMA并不像MA一样简单地去掉旧的数据。旧数据是逐渐消失的，就像组合摄影中前期的照片一张张慢慢隐去的感觉。</p>
+<p>选择移动平均的长度</p>
+<p>监控EMA的斜率是很有益的，因为上升的斜率意味着上涨趋势，而下降的斜率意味着下跌趋势。相对较短时间周期的EMA对价格变化的反应很敏感。它能够很快地抓住新趋势，但也会导致很多双重损失[1]。双重损失是由于交易信号快速反转导致的。较长周期的EMA导致的双重损失比较少，但是会错过反转点后的很大一部分收益。</p>
+<p>你可以用几种方法确定你要选择多长时间周期的移动平均或其他的指标。如果你可以发现市场价格运行的周期的话，根据市场价格运行的周期来确定EMA的周期长度是再好不过了。移动平均的时间周期长度应该是主要市场周期长度的一半。如果你发现市场有22日为一个周期的规律，就用11日作为移动平均的长度。如果市场周期是34日，就用17日作为移动平均的长度。麻烦的是市场的周期长度总是在变化，甚至消失。</p>
+<p>并没有一个神奇的“最佳”时间周期长度来计算EMA。好的指标是稳健的——当系数有微小改变时，指标并不会有大的变化。当你想抓住长期趋势时，就用更长时间周期的移动平均。要抓大鱼就得用更坚韧的渔竿。对于想要抓住大趋势的人，可能需要使用200日的移动平均线。</p>
+<p>大多数的交易者可以使用10日~30日之间的EMA。移动平均值一般都不短于8日，太短的话就违背了它们作为趋势跟随指标的目的。我喜欢22和26这两个数字，因为一个月大概有22个交易日，而26恰好是一年交易周数的一半。</p>
+<p>为每个交易品种创造个性化系数的做法，只有当你关注很少几只股票或期货时才是可行的。一旦数量达到两位数，个性化的指标就会让人困惑。最好有个标准尺度，然后在同一个时间周期下，所有交易品种的移动平均都使用相同的时间长度。</p>
+<p>在寻找交易机会的时候不能改变指标的时间长度。通过改变时间长度来创造出你想看到的信号恰恰会让你的指标失去其最具价值的特征——它们的客观性。最好的做法是设定一套参数，然后一直用它们。</p>
+<p>交易规则</p>
+<p>初级交易者试图预测未来。专业交易者不做预测，他们评估空方和多方力量的相对变化，监测趋势，并管理好他们的头寸。</p>
+<p>移动平均帮助我们顺着趋势进行交易。移动平均中最重要的信息是其斜率的方向（见图22-1）。它反映了市场的惯性。当EMA上涨时，最好是买入。当斜率下降时，卖空则会给你带来利润。</p>
+<p>（1）当EMA上涨时，作为多头进行市场交易。当价格下降到移动平均值附近时买入。一旦你成为多头，一定要在最近的低点下面设置保护性止损单。一旦价格接近高点时，就把保护性止损单移至盈亏平衡点。</p>
+<p>（2）当EMA下跌时，作为空头进行市场交易，当价格回升接近移动平均值时卖出，然后在最近的高点之上设置保护性止损单，当价格下跌时，将保护性止损单下移到盈亏平衡价位。</p>
+<p>（3）当EMA走平，只是小幅波动时，那意味着一种漫无目的、没有趋势的市场。这种情况下不要使用趋势跟随方法。</p>
+<p>图22-1　迪士尼（DIS）日线图，22日指数移动平均</p>
+<p>资料来源：Stockcharts.com。</p>
+<p>指数移动平均（EMA）</p>
+<p>移动平均的倾斜方向能帮助确定该交易品种的趋势方向，如迪士尼公司（DIS）。</p>
+<p>老一辈交易者以前常使用短期和长期MA的交点。这是道前最喜欢方法——他是用移动平均法进行交易的开创者之一——他常用4日、9日和18日MA的交点。交易信号是，所有三条MA的斜率同时朝向同一个方向。像许多其他交易方式一样，他的方法只有在市场处于很强的趋势时才能使用。</p>
+<p>想通过机械方式过滤掉假突破的尝试通常会失败——过滤器减少的收益会和损失一样多。举一个过滤器的例子，制定一个规则：要求价格两次收盘于MA的另一侧，而不是一次；或者穿过MA达到一定的比例。机械方式的过滤器减少了损失，但是它们也丢失了移动平均最好的特性——它在趋势的初始阶段就锁定趋势的能力。</p>
+<p>交易者必须接受这样一个事实：像其他工具一样，EMA有它好的一面也有它不好的一面。移动平均能帮助你分辨并追随趋势，但是它们也会在震荡区间内发出很多假突破信号。我们将在“三重滤网交易系统”那一节中找到这个困境的解决之道。</p>
+<p>移动平均的拓展</p>
+<p>移动平均也能用来作为支撑位和阻力位。上升的MA可以作为价格的地板，而下降的MA可以作为价格的天花板。所以上升时，要在MA附近买入；下降时，要在MA附近卖出。</p>
+<p>移动平均除了用于价格上，还可以用到其他指标上。比如，有些交易者喜欢用5日移动平均成交量。当成交量低于其5日平均成交量时，意味着人们对这只股票当前趋势的兴趣在减弱，也就是说其趋势可能会反转。当成交量超过其移动平均量时，表明大众对这只股票的兴趣很强烈，因此确认了价格的趋势。当我们考察强力指数（第30节）时，我们会用到指标的移动平均。</p>
+<p>画简单移动平均的正确方法是画在滞后价格的时间长度一半距离的位置。比如，10日简单移动平均值应该属于10天周期的中间位置，所以应该画在第5日或者第6日的位置。指数移动平均在最新的数据上分配了更多的权重，所以10日EMA应该画在向左移2~3天的位置。大多数软件都允许你设置移动平均的位置。</p>
+<p>移动平均不但可以基于收盘价计算，也可以基于最高价和最低价的中间价来计算。这对日内交易者十分有用。</p>
+<p>指数移动平均为最新的数据分配了较大的权重，而加权移动平均（WMA，weighted
+moving
+average）允许你为任何一天分配任意的权重，取决于你觉得哪天更重要。WMA太复杂了，所以交易者们最好使用EMA。</p>
+<p>两条EMA线</p>
+<p>我无论何时分析图表，都喜欢用两条而不是一条EMA线。长期EMA显示长期价值的连续变动，而短期EMA显示短期市场价值的连续变动。</p>
+<p>我用2∶1的比例为两个EMA设置参数。比如，使用26周和13周的EMA来分析周线图，或者22日和11日的EMA来分析日线图。要理解，并不存在一组特别神奇的数字。你可以随意设置这些参数，然后选一组属于自己的。记住，保持两条EMA之间参数的比例大致为2∶1。想要更简单和高效，则最好在所有时间周期——周线图、日线图、甚至分时图，都用相同的一组参数（比如26/13或22/11）。</p>
+<p>因为短期EMA代表着短期内市场对价值的一致认同，而长期EMA代表着长期内市场对价值的一致认同，我相信价值就存在于这两条线之间。我将两条EMA之间的空间称为价值区间（value
+zone）。</p>
+<p>移动平均和通道</p>
+<p>通道是由两条平行于移动平均线的曲线组成的。通道上边界和下边界之间的距离有时被称为“高度”有时又被称为“宽度”，其实两种叫法都用的是同一种测量方法。</p>
+<p>好的通道应该将过去100根线柱中的大概95%数量的线柱完全包含在内。较长周期市场的通道更宽，因为100周内价格的波动幅度要比100天的波动幅度大。剧烈波动的市场比平静的、死气沉沉的市场的通道要更宽（或者更高）。</p>
+<p>通道在交易和追踪股票表现时非常有用。我们将在第41节（通道交易系统）中考察它对于交易的作用，和在第59节（交易日志——测量你的绩效）中考察它对追踪股票表现的作用。</p>
+<p>价格、价值以及价值区间</p>
+<p>市场分析有一个重要概念是——我们所有人直觉上都理解，但几乎从未说出口——价格和价值并不相同。当我们觉得股票的价格低于它的价值时我们就买进，期望价格上涨；当我们认为其价格高于其价值时，就卖空股票，期待价格下跌。</p>
+<p>我们买入价值被低估的股票，卖出价值被高估的股票——但是如何定义价值呢？</p>
+<p>基本面分析师会研究它的资产负债表和年报，但是这些数据完全不像它们表面看起来那样客观。公司会粉饰它们的财务数据。并不只有基本面分析师才能使用“价值”这个概念。技术分析师可以通过跟踪短期EMA和长期EMA之间的差价来定义价值。其中短期EMA反映短期的市场价值变动，另一个长期EMA反映长期的市场价值变动。价值就存在于两条移动平均曲线之间（见图22-2）。</p>
+<p>图22-2　迪士尼（DIS）日线图，26日和13日指数移动平均线</p>
+<p>资料来源：Stockcharts.com。</p>
+<p>指数移动平均线（EMAs）和价值区间</p>
+<p>短期移动平均（MA）是短期内对于价值的一致认同，长期移动平均反映的是长期对于价值的一致认同。价值“存在于”两条移动平均线之间的区域。选择特定的参数，使长期指数移动平均线近似为短期线的两倍。观察图表，你能立刻判断出哪一条EMA是长哪一条是短——快的一条线对价格线的缠绕更紧密，而慢的线移动更缓慢。慢的EMA线能帮助识别趋势，而快线能确定价值区间的边界。</p>
+<p>若准备买入一只股票，当其在价值区间时买入是比较有利的，而不是在价值区域之上多花钱去买。类似地，若是做空，待其反弹进入价值区域时再建立空头头寸，而不是在价格崩溃时卖空。</p>
+<p>在图中上升区域之中时，你能看到有回落到价值区域，在标识为1、2、3和4点的区域附近有诱人的买入机会。慢EMA反转向下标志着上升趋势的结束。在图22-2右边缘，趋势是向下的，此时拉升到价值区域（5点的区域）是做空的好时机。</p>
+<p>非常重要的一点是：仅仅使用单一的指标或者一对移动平均指标是没法进行成功的交易的。市场是如此复杂，你不可能用一个单一的工具从其中赚钱。我们需要用多个指标来建立一个交易体系，并用多个时间周期来分析市场。当我们在不同指标之间查看时，一定要记住一点——它们都是我们交易体系大厦的一砖一瓦，我们会在后面的章节中回到这个话题。</p>
+<p>记住这点能帮助你成为一个理智的交易者。一旦你懂得了如何定义价值，你就能低买高卖了。当我们在第41节（通道交易系统）仔细介绍价格通道，或者说包络线时，我们会回过头来继续寻找市场低估和高估时的交易机会。</p>
+<p>[1]
+指开仓的同时设置止损指示。当市场变动走低，触及止损价后即转向。在此情况下，交易者将蒙受两面的损失。——译者注</p>
+<h6 id="阅读日期-2026年07月29日-2026年07月29日-共-1-天">阅读日期：
+2026年07月29日-2026年07月29日 共： 1 天</h6>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="hbaolong@vip.qq.com" />
+  <title>以交易为生:32.时间</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">以交易为生:32.时间</h1>
+<p class="author">hbaolong@vip.qq.com</p>
+</header>
+<center>
+<a href="/3place/yjyws">返回首页</a> <a
+href="/3place/yjyws/mingju.html">本书名句</a> <a
+href="/3place/yjyws/memo.html">本书注解</a> <a
+href="/3place/yjyws/index_rich.html">丰富目录</a> <a
+href="/3place/yjyws/index_readcal.html">同读日历</a> <a
+href="/3place/yjyws/index_timeline.html">时间线</a> <a
+href="/3place/yjyws/index_books.html">引用书籍</a> <a
+href="/3place/yjyws/index_words.html">使用字频</a>
+<div id="wx_pic" style="margin:0 auto;display:none;">
+<img src='/img/logo.png'/>
+</div>
+</center>
+<h4 id="时间">32.时间</h4>
+<p>大多数人过日子的方式仿佛是自己能永远活下去，他们重复着同样的错误，也不对未来进行实际规划，而且很少从过去的经验中吸取教训。弗洛伊德提出，潜意识的思维没有时间观念，我们内心深处的愿望在一生中基本没有什么变化。</p>
+<p>当人们加入群体时，他们的行为变得比独处时更简单、更冲动。即便个体会受时间流逝影响，但群体不会在乎时间。群体把情绪付诸行为，好像他们有无穷的时间。</p>
+<p>大多数交易者只关注价格的变化，很少关心时间，这正是被大众心智俘虏的另一个标志。</p>
+<p>时间意识是文明的标志。一个有思想的人能意识到时间，而某些行为冲动的人意识不到时间的存在。关心时间的市场分析师能意识到市场群体背后还有一个维度，即时间。</p>
+<p>周期</p>
+<p>长期价格周期在经济生活中是实际存在的。例如，美国股市往往是4年一个周期。之所以会这样，是因为每4年一次的总统选举使得执政党必须提振经济。已经赢得选举的政党不再需要选民的支持，因此就会打击经济。通过注入流动性来提振经济的措施也会推升股市，收紧流动性则会压低股市[1]。</p>
+<p>农产品的主要周期取决于季节因素、基本生产因素和生产商的群体心理。例如，当牲畜价格上涨时，农民就会饲养更多的牲畜。当这些牲畜送达市场时，价格就会降下来，农民就会减少饲养量。当供应被消化时，供应下降又会推升价格，饲养人再增加饲养，于是牛/熊交替，循环往复。猪的周期比牛要短，因为猪长得比牛快。</p>
+<p>长周期有助于交易者识别市场潮流。相反，大多数交易者忙于用短周期来精确把握时点、预测细微的转折点，结果麻烦不断。</p>
+<p>从图形上看，价格高低点似乎以某种秩序排列。交易者拿起笔和尺，测量相邻两个高点的距离，并将它们延伸到未来以预测下一个高点。然后他们也测量相邻两个低点的距离，并将它们延伸到未来以预测下一个低点。似乎周期将面包和黄油放到好些个提供预测的专家的餐桌上。他们之中极少有人认识到，图形上看起来像是周期的东西往往只是人们的幻想。如果你用严格的数学程序来分析价格数据，比如用约翰·埃勒斯（John
+Ehlers）发明的最大熵谱分析法（maximum entropy spectral
+analysis）来分析，你就会发现大约80%的看似周期的东西都只是市场噪音。人类需要秩序，对于大多数人来说，即使只是幻想的秩序也是好的。</p>
+<p>你从空中观察任何一条河流，它看起来也有周期，时左时右。每一条河流都蜿蜒前行，因为河中央的水流比河岸边的水流速度快，从而产生涡流并促使河流拐弯。用笔和尺寻找短期市场周期就好比用魔杖来找水，由于方法没有根据，偶尔成功的获利也会被许多次损失吞噬。</p>
+<p>指标的季节性</p>
+<p>农夫春天播种，夏天收获，秋天为冬天做准备。其中有播种的时机，有收获的时机，有下注于温暖趋势的机会，也有下注于霜冻的机会。季节的概念也可以用于金融市场，交易者可以采用农夫的方法，春天买、夏天卖、秋天卖空、冬天回补。</p>
+<p>马丁·普林格（Martin
+Pring）发明了一种价格季节模型，但这一概念用于技术指标更有效。指标的季节性告诉你市场周期处于什么位置，这一简单有效的概念能帮你在低位时买进，高位时卖空，并帮你远离市场群体。</p>
+<p>我们可以用两个要素来定义指标的季节，即它的倾斜方向和它相对于中线上方或下方的位置。例如，我们可以将指标的季节性用于MACD柱状线（见第23节）。我们将MACD柱状线的倾斜方向定义为两根相邻K线之间的关系。当MACD柱状线自中线下方上升时，则是春季；当它上穿中线时，进入夏季；当它从中线上方下降时，为秋季；当它下穿中线时为冬季。春季是做多的最佳时机，秋季是卖空的最佳时机（见表32-1、图32-1）。</p>
+<p>表32-1　指标的季节性</p>
+<p>图32-1　福泰制药公司（VRTX）日线图，12-26-9 MACD柱</p>
+<p>资料来源：Stockcharts.com。</p>
+<p>指标的季节性</p>
+<p>我们可以将季节的概念运用到大部分指标和时间周期中——包括分时数据，大部分的交易品种都如此。接下来的例子只聚焦于福泰制药公司（Vertex
+Pharmaceuticals，Inc.，VRTX）股票的日线MACD柱状线，该股票是纳斯达克100指数中的成分股。</p>
+<p>秋季——指标位于中线上方但呈现下降趋势，这是建立空头仓位的最佳时期。</p>
+<p>冬季——指标下降到中线之下，此时可以趁弱势之机了结获利的空头仓位。</p>
+<p>春季——指标自中线之下掉头向上，此时是建立多头仓位的最佳时期。</p>
+<p>夏季——指标自中线上方上升，当气候变热时，趁强势之机了结获利的多头仓位。</p>
+<p>本例中的MACD柱状线看上去十分平滑，但它却时刻准备好了上穿或下穿中线。春天的大地可能遭受霜冻的突袭，冬天的严寒里也有可能有暖流来临，诸如此类。</p>
+<p>当MACD柱状线位于中线之下但斜率向上时，表明市场处于春季。气温虽低但已转暖。大多数交易者认为冬天还会重返，因而不敢买入。从感情上讲，买入确实不易，因为人们对下跌趋势还记忆犹新。事实上，春天是最佳买入时机，潜在获利空间巨大。因为可以把保护性止损位设在市场现价下方一档，所以风险相对较低。</p>
+<p>当MACD柱状线在中线上方上升时，表明市场处于夏季——大多数交易者意识到了上升趋势。从感情上讲，在夏天买入较为容易，因为多方的伙伴数量很多。事实上，夏季的潜在获利空间要低于春季。因为市场波动的幅度变大，止损位必须设在远离现价的位置，所以风险也比春季高。</p>
+<p>当MACD柱状线在中线上方但斜率向下时，表明市场进入秋季。此时很少有人能看出市场变化，他们还在买进，期待夏天的重归。从感情上来讲，很难在秋天做空——它要求你远离仍在看多的群体。事实上，秋天是做空的最佳时机。</p>
+<p>当MACD柱状线在中线下方下降时，表明市场进入冬季。此时，大多数交易者意识到了下跌趋势。从感情上来讲，冬天很容易加入欢呼的空方做空。事实上，此时的风险/收益比正在迅速变得对空方不利。潜在的获利空间已经收窄，而风险上升了，因为止损位不得不设在离现价较远的地方。</p>
+<p>正如农夫关心气候的异常一样，交易者也要关心市场的异常。秋天的农作物可能被小阳春打断，市场也可能在秋天出现强势上攻。春天的大地也可能遭遇霜冻的突袭，市场也有可能在牛市的早期出现下跌。交易者需要运用自己的判断和几种指标及技术，来避免陷入价格的剧烈波动之中。</p>
+<p>指标季节性的概念使交易者关注市场上时间的流逝。它有助于你对下一个季节提前做计划，而不是急急忙忙地对其他人的行为做出反应。</p>
+<p>市场时间</p>
+<p>我们用日历和手表来测量时间，但是却很少去思考我们对时间的认知与宇宙本身的运行规律是很不同的。我们用人类的方法来追逐时间的踪迹，然而其他物质在按照不同的时间周期发展着。</p>
+<p>比如说，我们认为我们脚下的大地是稳定不动的，然而事实上地球表面的大陆无时无刻不在运动着。尽管它们一年只移动几英尺[2]，但这样的移动持续几百万年下来也足以改变地球表面的地貌。在短一些的时间周期里，季节模式也随着世纪的更替而改变，冰川期和温暖的时期交替出现。</p>
+<p>在时间周期的另一端，是短暂的时间周期。有些物理粒子存续时间远远不到一秒；有些昆虫从出生、成熟到繁殖、最后死亡只在一天之内。</p>
+<p>回到交易上来，我们要牢牢记住，相对于时间在我们个人身上的流动速度来说，时间在市场上的流动速度是不同的。市场由大量的人群构成，移动的速度更慢。你从自己绘制的数据图表上发现的模式可能具有一定的预测价值，但你预测结果的实际发生时间可能会比你预测的时间晚很多。</p>
+<p>人群相对缓慢的反应速度有时候甚至会让经验丰富的交易者都感到苦恼。我们常常会一次又一次发现自己过早进入市场。新手往往进入得过迟，当他们清楚地认识到某一趋势或反转发生时，这种势头往往已经持续了很长一段时间以至于留给他们的空间已经不多。新手往往倾向于跟风已有趋势，但是经验老到的分析师和交易者常常会被一个与之相反的问题所困扰，这个问题就是他们在判断反转或者新趋势形成之后行动得太早。我们常常在市场还没彻底触底时买入，或者在市场还没完全封顶时卖出。行动的过早会让我们在发展缓慢的趋势当中以亏损出局。</p>
+<p>我们应该怎么做呢？首先，我们应该认识到市场所经历的时间比我们自己所经历的时间要慢很多；其次，我们不应在刚发现早期的反转信号时就急于进场。在这个信号之后会有一个更好的反转信号出现来提示行动时机，尤其是在市场顶部的时候，相比于市场底部，反转需要更长的时间来形成。</p>
+<p>不贪婪和以小头寸交易将会给你带来好处。较小规模的仓位在发生反转的那段愉快的时间内更容易拿住。在进行分析时要确保运用多重时间周期，这也就是三重滤网交易系统的构建核心，关于该系统的介绍我们将放在之后的章节里。</p>
+<p>数字5</p>
+<p>大部分新手会挑选一个他们看上去很舒服的时间周期来进行分析，可能是日线图、10分钟线图或者任何周期的线图，同时会忽略其他时间周期的数据。很少有人能认识到市场在多重时间周期下存在着。市场同时以周线图、日线图和分时图等形式发展变化着，这些图上的趋势方向还经常相冲突。</p>
+<p>日线图显示为上升趋势，而周线图却显示为下降趋势，反之亦然，你应该相信哪一个呢？当你正在使用分时图时，却看到日线图和周线图都和分时图相冲突时又该如何决策呢？大部分交易者只挑一个时间周期的图来看，不看其他时长的图形走势，除非其他周期图形的走势突然刺激到他们。</p>
+<p>需要牢牢记住的是，将相邻的时间周期联系了起来的是“5”这个数字。如果你从月线图看到了周线图，就会注意到一个月等于4.5周。当你再看到日线图的时候，就会知道一周等于5天。如果再将时间周期缩短，就会看到小时线，一天大约有5~6小时的交易时间。日线交易者可能会看到10分钟图，甚至2分钟图。所有这些时间周期都与5有关。</p>
+<p>分析市场的恰当方法是至少从两个时间周期来分析它。你在形成长远的价格走势判断时必须先根据长时间周期来进行分析，然后在选择市场买卖时点时，再参照短时间周期。如果你喜欢用日线图分析，你必须先检查一下周线图；如果你想要进行超短线交易从而运用10分钟图，你也得先分析一下小时图。这是三重滤网交易系统的关键原则之一（见第39节）。</p>
+<p>[1]
+这个周期被2008年危机以来美联储的量化宽松（QE）政策所扭曲了，但一旦我们爬出此轮大衰退，它很可能还是会回归的。</p>
+<p>[2] 1英尺约为0.305米。</p>
+<h6 id="阅读日期-2026年08月08日-2026年08月08日-共-1-天">阅读日期：
+2026年08月08日-2026年08月08日 共： 1 天</h6>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

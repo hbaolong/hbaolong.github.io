@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="hbaolong@vip.qq.com" />
+  <title>以交易为生:40.动力系统</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">以交易为生:40.动力系统</h1>
+<p class="author">hbaolong@vip.qq.com</p>
+</header>
+<center>
+<a href="/3place/yjyws">返回首页</a> <a
+href="/3place/yjyws/mingju.html">本书名句</a> <a
+href="/3place/yjyws/memo.html">本书注解</a> <a
+href="/3place/yjyws/index_rich.html">丰富目录</a> <a
+href="/3place/yjyws/index_readcal.html">同读日历</a> <a
+href="/3place/yjyws/index_timeline.html">时间线</a> <a
+href="/3place/yjyws/index_books.html">引用书籍</a> <a
+href="/3place/yjyws/index_words.html">使用字频</a>
+<div id="wx_pic" style="margin:0 auto;display:none;">
+<img src='/img/logo.png'/>
+</div>
+</center>
+<h4 id="动力系统">40.动力系统</h4>
+<p>动力系统这个想法是我在20世纪90年代中期想出来的。当时是半夜，我在远方的一个旅馆醒来，笔直地坐在床上想，仅仅需要使用两个概念——惯性和能量，我就可以描述任何市场的任何时间周期的运动。用这两个概念，我可以寻找有牛市惯性和能量的股票或期货，并进行多头交易；我也可以寻找有熊市惯性和能量的股票或期货，并进行空头交易。</p>
+<p>要度量任意交易品种的惯性，一个好的指标是短期EMA的斜率。上升的EMA意味着具有牛市惯性，而下降的EMA则说明具有熊市惯性。任意趋势的能量可以用MACD柱状线的斜率来表示。如果它的最近一根线柱比其前一根线柱的高度要高（像字母m-M的高度变化），或者是比其前一根线柱的深度要浅（像字母y-v的深度变化），则MACD柱状线的斜率是上升的，所以它的能量是向上推动的。如果最近一根线柱比其前一根线柱要低（像字母M-m的高度变化或字母v-y的深度变化），则MACD柱状线的斜率是下降的，所以它的能量是向下推动的。当我们使用MACD柱状线来定义能量时，它是否高于或者低于零是无关紧要的：真正重要的是最近两条MACD线柱之间的高低关系。</p>
+<p>运用动力系统的原理，在大多数交易软件进行编程，实现价格图表或蜡烛图的颜色显示，这并非难事。当两个指标都是上升的时，线显示的是绿色；代表牛市，如果都是下降的，线显示的是红色，代表熊市；当两个指标相互方向相反时，线显示的是蓝色，代表市场是中性的（见图40-1）。</p>
+<p>图40-1　动力系统的颜色</p>
+<p>·EMA上升、MACD上升（特别是小于0时）=动力系统显示是绿色，牛市，禁止卖空，允许买入或观望。</p>
+<p>·EMA下降、MACD下降（特别是大于0时）=动力系统显示是红色，熊市，禁止买入，允许卖出或观望。</p>
+<p>·EMA上升、MACD下降=动力系统显示是蓝色，中性，无禁止事项。</p>
+<p>·EMA下降、MACD上升=动力系统显示是蓝色，中性，无禁止事项。</p>
+<p>最初，我想用这个系统完全实现自动化交易——绿色时买入，红色时卖空，当颜色变换后则兑现利润。对动力系统做的回测让我打消了这个主意。自动交易系统成功抓住了每一个趋势机会，但是在区间震荡时，它会在红色和绿色之间反复转换，结果两头都遭受亏损。</p>
+<p>后来我把动力系统放到了一边，但是我一直在对它进行思考。几年之后，我突然醒悟：动力系统不是一个自动交易系统，而是一个监测系统！它并没有告诉我应该做什么——它告诉我的是不应该做什么。如果周线图表和日线图表中有任意一个是红色的——不允许买入；如果周线图表和日线图表中有任意一个是绿色的——不允许卖空。</p>
+<p>那次发现之后，我一直在我所有的交易中都使用动力系统来监测。在我2002年出版的《走进我的交易室》（Come
+Into My Trading
+Room）[1]一书中进行了公开介绍，该书被《巴伦周刊》（Barron’s）评为当年的年度之书。动力系统在世界范围内变得越来越受欢迎，它的一些术语成为交易的语言。</p>
+<p>这就是我如何从那时开始使用动力系统的（见图40-2）。它帮我远离麻烦。我会根据数字、信号或者指标来做交易计划——然后动力系统会强制我等待。直到合适的入场机会出现，它才不再禁止我按照既定的方向进行交易。此外，动力系统能帮我识别何时趋势已开始减弱，并建议退出交易。</p>
+<p>图40-2　斯崔特西公司（SSYS）周线图，13周和26周EMA，MACD柱（12-26-9），动力系统</p>
+<p>资料来源：Stockcharts.com。</p>
+<p>动力系统</p>
+<p>动力系统能够加强任何一种寻找交易机会的方法，无论是技术分析还是基本面分析。我们回顾一个例子，使用斯崔特西公司（SSYS）股票——3D打印技术领域的两大龙头之一。在2012年，我出版了世界上第一本关于3D打印技术的电子书，在书里面我认为它的股价会暴涨。</p>
+<p>垂直的绿色箭头标志的柱线后面紧跟着红色的柱线。红色禁止你买入。最好的买入时机是当红色消失的时候。你能看到这些绿色箭头指示出一个接一个的中期底部，包括在图表右边界的买入信号。拥有一个客观的方法能让你在市场下降停止的时候有买入的信心。</p>
+<p>动力系统也会对兑现利润的好时机给出建议。倾斜的红色箭头指向蓝色柱线，蓝色柱线出现在一系列远离价值区域的绿色柱线之后。它们显示牛市上行受阻的位置——兑现盈利的好时机，并等待下一个买入机会。</p>
+<p>入场</p>
+<p>动力系统中显示红色和绿色时，惯性和能量是朝着同一个方向的。绿色线柱时，牛市占主导地位，并且是加速上升的；红色线柱时，熊市是占主导的，并且下降是全力前进的。短期EMA线和MACD柱状线可能只在部分线柱上方向相互一致，但正是这些时候，市场开始全速前进——动力打开了！</p>
+<p>在你将动力系统应用到最喜欢的市场时，记住三重滤网系统要求在多于一个时间周期内进行分析。选择你最喜欢的时间周期，并将之定为中期时间周期。将其周期乘以5倍，找到长期时间周期。如果你最喜欢的图表是日线图，首先去分析周线图，并做出看多或看空的战略决策。使用动力系统来决定何时允许进行买入或者卖空。</p>
+<p>·如果你是日内动量交易者，只要两个时间周期都是绿色的你便可以买入，一旦其中之一变蓝或红，你便兑现收益；</p>
+<p>·当尝试抓住市场拐点时，最好的交易信号不是绿色或者红色，而是红色或绿色开始消失时。</p>
+<p>如果股价在下跌，但是你的分析显示已经接近市场底部，监控周线图和日线图的动力系统。即使其中任意一个仍显示为红色，说明下降的趋势仍然很有力量，仍然禁止买入；当两个时间周期都不再显示为红色时，才允许买入。</p>
+<p>如果你认为市场正在形成顶部，趋势即将反转。监控周线图和日线图的动力系统，如果任意一个仍然显示是绿色，说明上升趋势依然没有消失，禁止卖空。当两个时间周期的绿色都消失了时，你才可以卖空。</p>
+<p>时间周期越短，它的信号就会越敏感：日线图上的动力系统开始改变颜色总会先于周线图。当做日内交易时，5分钟线图改变颜色要比25分钟线图早。如果我的分析表明市场正在筑底，即将开始反转，我会等到日线图不再显示变红，开始变蓝，甚至变绿，然后我再去观察周线图，这时它仍然是红色的。一旦周线图从红色变蓝，系统会开始允许买入。这种技术防止我当市场仍在下降的时候过早买入。</p>
+<p>我使用相同的方法进行卖空。当我认为市场的顶部正在形成，并且日线图的动力不再显示绿色，开始变向蓝色甚至红色，然后我细心地观察周线图。一旦它不再显示为绿色，系统会开始允许卖空。等到两个时间周期都不再显示与我的计划相对立的颜色，就能帮助我确保随着市场的方向进行交易，而不会逆势而行。</p>
+<p>记住，动力交易系统是一个监测系统。它不会告诉你应该做什么——但是它会很明确地告诉你不该做什么。不要违背这个监测。</p>
+<p>许多技术分析软件都包含一种功能，叫“条件格式”。它允许根据EMA和MACD的斜率给柱线或蜡烛图上色。芝加哥有个聪明的程序员叫约翰·布伦斯（John
+Bruns），他正是使用这个功能将动力系统加入工具包的。我们称这个工具包为埃尔德磁盘（Elder-disks）[2]。如果你使用的软件平台不允许条件格式功能，你仍然有办法使用动力系统。直接观察EMA和MACD的斜率：将它们结合起来分析，你就知道最新一根线柱应该是什么颜色了。</p>
+<p>如果懂编程的话，你可以给动力系统加入更多的功能。你可以检验EMA的不同长度或者MACD的不同设置，来找到市场中最合适你的那些组合。日内交易者可以编制警示声音来协助监测多个市场中颜色的变化，而不必紧盯着屏幕。</p>
+<p>退出</p>
+<p>如果你是个短期动量交易者，一旦动力系统显示的颜色不再支持你的交易方向，则马上了结你的交易，即使在两个时间周期中只有其中一个改变了颜色。通常，日线MACD的反转要快于周线MACD。当它在上升趋势中下降，表明上升的动量正在减弱。当买入的信号消失时，马上兑现收益，而不是等待出现卖出的信号。</p>
+<p>在下降的趋势中将这个做法反转一下。一旦动力系统不再显示红色，即使两个时间周期中只有其中一个改变了颜色，也马上清空你的空头头寸。最有效的下降部分已经结束，动力系统已经完成了它的使命。</p>
+<p>动力交易系统鼓励你小心谨慎地入场，但快速地退出。这是专业的交易方法。初学者往往与之背道而行，猛然跳入交易中，然后永不再退出，期待市场改变方向。</p>
+<p>如果两个时间周期中的任意一个变成了蓝色，波段交易者或许仍会持有交易头寸。波段交易者要避免，时间周期中任意一个的颜色与交易的方向变得相反。如果你是多头，时间周期中的一个变成红色，则是时候卖出并空仓观望了；如果你是空头，当动力系统开始变绿，它就发出了让你平掉空头头寸的信号。</p>
+<p>动力系统通过展示通常什么情况下漫无目的、毫无组织的群体开始变得情绪化并开始奔跑，以帮助你在市场混乱的狂流中识别出秩序。在趋势的形态刚刚浮现时入场，并在其开始沉入混乱的海洋前退出。</p>
+<p>[1] 该书中文版机械工业出版社已出版。</p>
+<p>[2] 在elder.com网站上有各种可用的交易程序。</p>
+<h6 id="阅读日期-2026年08月16日-2026年08月16日-共-1-天">阅读日期：
+2026年08月16日-2026年08月16日 共： 1 天</h6>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

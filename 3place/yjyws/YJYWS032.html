@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="hbaolong@vip.qq.com" />
+  <title>以交易为生:31.持仓量</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">以交易为生:31.持仓量</h1>
+<p class="author">hbaolong@vip.qq.com</p>
+</header>
+<center>
+<a href="/3place/yjyws">返回首页</a> <a
+href="/3place/yjyws/mingju.html">本书名句</a> <a
+href="/3place/yjyws/memo.html">本书注解</a> <a
+href="/3place/yjyws/index_rich.html">丰富目录</a> <a
+href="/3place/yjyws/index_readcal.html">同读日历</a> <a
+href="/3place/yjyws/index_timeline.html">时间线</a> <a
+href="/3place/yjyws/index_books.html">引用书籍</a> <a
+href="/3place/yjyws/index_words.html">使用字频</a>
+<div id="wx_pic" style="margin:0 auto;display:none;">
+<img src='/img/logo.png'/>
+</div>
+</center>
+<h4 id="持仓量">31.持仓量</h4>
+<p>持仓量是指在诸如期货和期权等衍生品市场上由买方或卖方持有的合约数量。如果你对期货或期权并不熟悉，你可以跳过此章节，并在你阅读完介绍期权的第44节以及介绍期货的第46节后再返回阅读此章节。</p>
+<p>只要上市企业能作为一个独立体持续经营，其上市的股票就能用来交易。大部分股票被多头持有，只有小部分被空头持有。不同的是，在期货和期权市场上，多方和空方各自的持仓总量总是相等的，因为他们持有的是约定了未来交割事项的合约。当某个交易者想要购买一份合约时，总需要有另一个交易者相应地卖出一份合约给他。假如你想买100股谷歌公司股票的认购期权，则需要另一个交易者将相应的期权卖给你，为了使你成为多头，总有另一方得成为空头。持仓量也就因此等于多头或者空头持有的合约总量。</p>
+<p>期货和期权合约都有存续期间的设定，期货或期权买卖双方想要实现实物交割的话需要等到第一交割日，在交割日前的这段等待时期能确保多头和空头各自的持仓总量是相等的。不论怎样，只有很少一部分期货和期权交易者会将合约持有到交割日，大部分交易者都会在交割日前提前平仓，在第一次交割通知日之前就将合约变现。我们将在本书的第8章“交易工具”重新回到期货和期权的主题。</p>
+<p>持仓量将随着新头寸的建立而上升，随着旧头寸的平仓而下降。比如说，4月COMEX黄金期货的持仓量为20000份合约，这说明多头和空头各自都持有20000份合约的仓位。如果持仓量上升到20200份，便意味着净增加了200份新合约，多头和空头都各自增加了200份合约，既有买多的也有卖空的。</p>
+<p>持仓量在多头将其头寸卖给想要降低空头头寸的空头时会下降，当他们完成交易时便相互各自减少了其交易额规模的头寸，持仓量也就各自减少了相同的数额，原因是交易的达成使得一份或者更多的合约从市场上退出了。</p>
+<p>如果新的多头从准备离场的老多头那儿买入多头头寸，持仓量保持不变。同样，当新空头从准备减仓的老空头那儿买入空头头寸时，持仓量也不会变。总之，持仓量在新血液输入市场时上升，在现有的多、空方离开市场时下降，如表31-1所示。</p>
+<p>表31-1　不同情况下持仓量的状态</p>
+<p>技术分析师通常将持仓量画成位于价格柱之下的折线图（见图31-1）。任何市场上的持仓量都随着季节交替而不断变化，因为位于年度生产周期不同阶段，工业产品使用者和生产者会进行大量的对冲。当持仓量与其季节性常态相偏离时便向我们透露出某种重要的信息。</p>
+<p>图31-1　2014年3月中期国债期货（TYH14）日线图、13日指数移动平均、持仓量</p>
+<p>资料来源：TradeStation。</p>
+<p>持仓量</p>
+<p>持仓量（OI）反映了在任意一个期货或者期权市场上所有多头或者空头持有的合约总数。因为多头和空头各自的持仓量在衍生品市场上总是相等的，所以持仓量反映了多空双方分歧的程度。</p>
+<p>持仓量上升表明多空之间的冲突变得更激烈，同时确认现有趋势。反之，持仓量下降表明输家正在离开市场，赢家正在兑现盈利，说明趋势已经接近尾声。</p>
+<p>图形的左边表明了2014年3月中期国债期货（March 2014 Treasury Notes
+futures，TYH14）正处于下降趋势中，然而下降的持仓量警告空头不要在空头仓位上继续逗留。持仓量在A区域达到了底部，而中期国债期货在B处达到了底部。在C区域，持仓量和中期国债期货价格同时都在明显的上升趋势中，上升的持仓量提前预告了价格的进一步上升。持仓量在D区域达到了顶部，而价格仍然在E区域上升。持仓量转向下降趋势为在图形右端仍继续做多的多头提出了一个警告。</p>
+<p>并不是所有图形中的持仓量都像上述图形中那样清晰明确。严谨的交易者从来不会只依赖一种指标，他们灵活运用多种指标并且只有在多种指标的分析结果能够相互确认和支持的时候才行动。</p>
+<p>群体心理</p>
+<p>产生一个新期货或期权合约必须同时有一个多头和一个空头参与。多头相信价格会上升而持有买单，空头认为价格未来会下降而持有卖单。当新的多头和空头达成交易时，他们达成的交易量是持仓量增加的数量。一单笔交易不太可能影响到市场，但成千上万的交易者都在达成类似交易的话，他们将推动或者逆转市场的趋势。</p>
+<p>持仓量反映了多空双方交战的激烈程度。是否继续维持多头或空头头寸取决于他们的意志。当多空双方认为市场不会向有利于他们的方向变化时，他们将会选择减仓，使得持仓量减少。</p>
+<p>每一笔交易都有对立的多空双方，其中总有一方将因为价格变化而经受损失。在上升行情中，空方将受到打击；而在下降行情中，多方会经历亏损。只要输家继续持有其头寸，并抱着价格将回到自己预期的变化方向的希望等待下去，持仓量将不会改变。</p>
+<p>持仓量的增加表明一群自信的多头在和另一群同样自信的空头对峙，说明了多空双方对价格走向判断的分歧加大。总有一方会沦为输家，但只要潜在的输家不断涌入阵营，趋势将持续下去。迪·贝尔维尔（L.Dee
+Belveal）在他的经典之作《图表化的商品市场价格行为》（Charting Commodity
+Market Price Behavior）中明确指出了以上观点。</p>
+<p>趋势的维持需要多空双方都对自己的判断有信心，持仓量的增加表明多空双方都在继续加仓。如果双方对期货价格未来走向判断的分歧很大，输家的数量将越来越多，现有的趋势将很可能维持下去。持仓量的增加给了现有趋势持续下去的动力。</p>
+<p>在上升趋势中，持仓量增加代表多头买进而空头卖出，多头认为价格将继续上涨而空头认为价格已经太高。一旦空头受到上升趋势的挤压，他们将被迫回补——回补的买盘将进一步推高价格。</p>
+<p>在下降趋势中，持仓量增加代表空头积极抛空而多头在底部承接，如果价格继续下跌，这些做投机交易的多头将被迫认赔退出，他们的卖压将驱使价格进一步下跌。</p>
+<p>如果多头相信价格将走高而买进，但空头因为害怕而不愿意抛空，则多头仅能够从另一些持有合约的多头手中买入合约。他们之间的交易不会构成新合约，持仓量维持不变。如果持仓量在上涨过程中不再增加，代表输家的供给已经不再增长。</p>
+<p>如果空头相信价格将走低而放空，但多方因为害怕而不敢接手，则空头仅能够将合约卖给另一些希望获利了结的空头。他们之间的交易不会构成新合约，持仓量维持不变。如果持仓量在跌势中不再增加，代表抄底者的供给已经不再增长。如果持仓量的走势趋于平坦，警告的黄灯已经亮起——趋势的发展已经进入末期。</p>
+<p>当多头决定将自己的多头头寸平掉，同时空头也决定将自己的空头头寸平掉时，如果双方达成交易，那么成交的合约就从市场上消失，持仓量下降。持仓量的下降，预示着输家认赔出场的同时赢家获利了结，他们的分歧程度下降透露着趋势即将反转的征兆。持仓量减少，代表赢家把筹码兑换为现金，输家也放弃了希望，标志着趋势即将结束。</p>
+<p>交易准则</p>
+<p>（1）当持仓量在价格涨势中增加，便确认了上升趋势，并确认多头增持筹码是安全的。这代表更多的空头在持续进场。一旦空头们认输回补，他们的买盘将进一步推升价格上涨。持仓量在价格跌势中增加，显示低位承接者相当活跃。空头可以继续加码，因为当低位接盘者认赔出场时，他们的卖压将进一步迫使价格下滑。</p>
+<p>持仓量在价格横向走势中增加，这是空头的征兆。在这种价格走势中，空头部位大多来自商业避险者而不是投机客。如果价格没有明显的趋势而持仓量暴增，代表着精明的避险者正在抛空行情，此时你应该避免和这些比你更有信息优势的避险者进行交易。</p>
+<p>（2）持仓量在价格横向走势中减少，代表商业避险者正在回补，这是买进信号。当商业使用者开始进行回补时，显示他们看多后市。</p>
+<p>持仓量在价格上涨趋势中减少，表明赢家与输家都变得小心谨慎起来。多头获利了结，空头认赔回补。市场反映的是未来，如果绝大多数人都已经接受了某个趋势，代表该市场趋势即将反转。如果持仓量在价格上涨趋势中减少，可以考虑了结多头头寸，准备做空。</p>
+<p>持仓量在价格下跌趋势中下降，代表空头获利了结，多头认赔出场。在这种情况下，应该回补空头仓位。</p>
+<p>（3）持仓量在价格上涨趋势中走平，说明涨势已经缺乏后劲，这是上涨趋势老化的警报。在这种情况下，多头仓位应该收紧卖出止损指令的触发价格，同时避免开新的多仓。反之，如果持仓量在价格下跌趋势中走平，显示下降趋势即将完结，最好收紧空头仓位的止损指令的触发价格。如果价格与持仓量都持平，此时没有显著的意义。</p>
+<p>关于持仓量的更多信息</p>
+<p>持仓量越高，市场就越活跃，买进或卖出的滑点比较不严重。短线交易者应该专注于持仓量最高的市场，在期货市场，持仓量最大的合约通常是交割前一个月的合约。随着第一通知日的到来，当月的持仓量就开始下降，同时下一个月的持仓量开始上升，给出调仓到下一个月的信号。</p>
+<h6 id="阅读日期-2026年08月07日-2026年08月07日-共-1-天">阅读日期：
+2026年08月07日-2026年08月07日 共： 1 天</h6>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="hbaolong@vip.qq.com" />
+  <title>以交易为生:38.系统测试、模拟交易和逐笔交易的三个关键要求</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">以交易为生:38.系统测试、模拟交易和逐笔交易的三个关键要求</h1>
+<p class="author">hbaolong@vip.qq.com</p>
+</header>
+<center>
+<a href="/3place/yjyws">返回首页</a> <a
+href="/3place/yjyws/mingju.html">本书名句</a> <a
+href="/3place/yjyws/memo.html">本书注解</a> <a
+href="/3place/yjyws/index_rich.html">丰富目录</a> <a
+href="/3place/yjyws/index_readcal.html">同读日历</a> <a
+href="/3place/yjyws/index_timeline.html">时间线</a> <a
+href="/3place/yjyws/index_books.html">引用书籍</a> <a
+href="/3place/yjyws/index_words.html">使用字频</a>
+<div id="wx_pic" style="margin:0 auto;display:none;">
+<img src='/img/logo.png'/>
+</div>
+</center>
+<h4
+id="系统测试模拟交易和逐笔交易的三个关键要求">38.系统测试、模拟交易和逐笔交易的三个关键要求</h4>
+<p>在使用系统进行真枪实弹的交易之前，无论你是自己开发的还是从零售商那里购买的，你都需要对这个系统进行测试。这里有两种方法可以选择。其中之一是模型回测：将你的系统准则在一组历史数据中进行测试，通常用长达几年时间的数据。另一个方法是实盘测试：用真金白银进行小规模的交易。严谨的交易者首先会使用模型回测，如果获得的结果还不错，再将其转为实盘测试。如果系统运行也是良好的，他们再不断地增加头寸规模。</p>
+<p>用历史数据进行测试是良好的开端，但不要让漂亮的数据结果哄骗你产生错误的安全感。盈亏比例、最多连盈和连输次数、最大回撤比例还有其他指标可能都不错，但是过去数据的测试结果并不能保证系统能在真实的交易中有效。</p>
+<p>你可能看到一份非常漂亮的测试数据结果，但是如果一旦开始真金白银的交易时，系统一连出现五笔亏损呢？你的模拟测试不会帮你为此做好准备，但是这种情况随时都可能发生。这时，你咬紧牙关决心再进行一笔交易，结果又产生一笔亏损。你的资产回撤加大，此时系统又闪现出一个新的交易信号，你会再继续做一笔交易吗？突然之间，这份漂亮的系统测试数据结果变成了一根细小的芦苇，悬吊着你的账户的未来。</p>
+<p>很多程序员能免费帮助做模型回测。但一些交易者太过警惕，不愿意暴露自己必胜无疑的交易方法，于是得自己亲自花几个月的时间学习如何使用测试软件。其实，只有一种回测方式能让你做好真实交易的准备——手工测试。这是很慢的方式，非常耗时并且不能自动化进行，但是它是唯一接近模拟真实决策环境的方法。手工测试是每次回测一日的历史数据，记录下交易信号，然后点击到下一日，记录新的交易信号，然后再做第三日。</p>
+<p>首先，你需要准备好每日的价格和成交量数据，时间跨度至少为两年（期货合约可以使用连续合约的数据）。然后，打开图表，不用查阅，直接切换到数据最开始的部分。打开你的电子数据表，在首页的顶部写下你的系统规则，并创建好日期、价格和信号等栏目。接着在分析软件里面打开两个窗口，一个是周线图和相关指标，另一个是日线图。用于测试最重要的两个键盘按键是<Alt>和<Tab>键，因为它们能帮你在窗口和程序之间进行来回切换。</p>
+<p>当你向前点击的时候，一次一天，趋势和震荡区间会慢慢地展开并挑战你。在那个时候，你要做的不仅仅是测试一套规则。这种一次向前推进一天的测试还能提高你的决策技巧。你从这种逐条逐次的测试中收获的要大大多于从回测软件里所能学到的。</p>
+<p>当开盘时市场跳空高开到你的买入水平之上或者跳空低开到你的止损位置之下时，你将如何处理？那关于期货的涨跌停呢？逐日向前点击并且写下你的信号和决策将会使你尽可能地接近真实的交易环境，从而不用拿真实资金去冒险。它将会使你更加关注市场真实的右部边缘。如果你使用整洁干净的系统自动测试结果，则永远不能获得这些收获。手工测试不仅能提高你对市场的理解，而且能提高决策的能力。</p>
+<p>如果逐条逐次的测试显示的结果是积极的，你便可以开始用较小头寸的真实资金进行交易了。近些年，买卖100股的股票的交易佣金低到仅仅只要1美元。你可以用较小的头寸对自己的指标和系统进行测试。一定要保持良好的记录习惯，如果你的真实资金账户的盈利结果持续保持良好，便可以开始扩大交易的头寸。按照步骤一步步来做，直到逐步加仓到你正常的交易规模。</p>
+<p>模拟交易</p>
+<p>模拟交易意味着像记录真实交易那样跟踪并记录你自己的买卖决策，但是没有真实头寸的暴露风险。初学者可以从模拟交易开始，但是大多数人是自己的账户被市场打爆后才转向模拟交易的。另一些人甚至在真实交易和模拟交易之间交替进行，但是不能理解为什么他们能在模拟交易中挣钱但是在真实的交易中却遭受损失。这是由于以下三种原因。</p>
+<p>第一，人们在模拟交易中会少一些情绪化，好的决策也容易在没有真实风险的情况下做出。第二，在模拟交易中，你的指令总是能完全成交，真实交易环境下则未必能轻易成交。第三，最重要的一点是，一笔好的交易，当你还在考虑的时候它往往看起来很朦胧。而看起来轻轻松松的交易机会，则往往会伴随各种未知风险。紧张的初学者很容易跳入轻松的交易机会之中，最后以损失告终。但他们在模拟中却会去尝试一些具有挑战性的交易机会。毋庸置疑，在真实交易和模拟交易之间反复转换是没有意义的。你最好选其中一种进行操作。</p>
+<p>心理因素对交易影响巨大。这也是通过模拟交易不能学习到的方面。没有真实头寸暴露风险的模拟交易就像是在风平浪静的池塘里航行——它对你在汹涌澎湃的大海上航行帮助甚少。</p>
+<p>进行模拟交易的唯一的好处，就是测试你的纪律性和你的系统。</p>
+<p>如果你能在每天日终坚持下载行情数据，自己做功课，提前准备好下一交易日你要做的交易指令，次日观察开盘情况并记录下你的入场情况，然后每天根据市场情况调整盈利目标和止损点——如果能连续几个月坚持做这组动作，并且一天不缺地记录你的操作日志——这样你就掌握交易真实资金的纪律了。以娱乐为目的，容易冲动的人不可能按照这种方式去进行模拟交易，因为这确实需要一些实实在在的功课。</p>
+<p>但你可以从那些提供模拟交易的网站中选择一个开户。输入你的指令，看它们是否被触发，并记录下这些“交易”。把所有的模拟交易都录入到你的电子数据表和交易日记里面。如果你能每天重复这个过程并坚持几个月的时间，你就有了足够的纪律性去进行成功的真实交易。</p>
+<p>但是，依然没有什么能够替代真实交易，因为即使微小金额产生的情绪也会大于任何模拟交易。即使进行微小金额的真实交易，你学到的也会比几个月的模拟交易要多。</p>
+<p>最近这些年，我近距离观察了交易者从模拟交易到盈利的真实交易的过程。在SpikeTrade.com网站中，我们对提交自己每周计划的成员减低了其费用，创造一种鼓励会员做功课的机制。这种提交每周交易计划的机制会使人养成一种有条理和专注的能力。每周的交易计划包括入场价位、盈利目标和止损点。当他们的股票选择能力提高了，他们便会在我们每周的竞赛中获取奖金。那时候，我可能会收到一封邮件，这封邮件上说他们在竞赛中有优良表现，但他们个人的交易账户表现却落后了。我会告诉他们，他们现在在正确的轨道之上，应该继续做他们现在在做的事情。毫无疑问，几个月以后，他们学到的新技巧会转移到他们的真实交易中去。这时，他们会告诉我，他们的个人交易账户要比他们的竞赛交易账户的表现还好了。当然，我的回复是，那是因为你花更多的精力在真实的现金交易之中了。</p>
+<p>谈及交易设置，在你交易操作之前，计划好所有相关的目标数值是非常重要的。在你还没有承担真实的风险之前，你是更加客观的；一旦你进入交易，你会倾向于认为“有更大的空间”。这也是失败者怎样从小的回撤变成灾难性损失的。我曾经建议过一个人在浮亏200美元时割肉，他拒绝了，直到账面损失98000美元时才清仓。</p>
+<p>我们将会在后面章节讨论“风险控制的铁三角”概念的时候集中说明风险和资金管理。在这时候，我只想明确风险管理在严肃交易中是必不可少的。看着天花板说“我要交易500股”“我要交易1000股”，或诸如此类随意的数字，是不可取的。在本书后面的章节，你将学习到一些基于你的账户规模和风险容忍度之上的简单的公式，来计算交易持仓量。</p>
+<p>在写这本书的时候，我有三条投资的策略：我最喜欢的是背离时的假突破；第二条是股价在强势趋势中回调到价值区间时——图38-1展示了这一交易策略；最后一条，我偶尔退到另一个极端——会在已过度扩张的趋势反转时下筹码。每一个交易策略都有其准则，但是核心是——我只会进行符合其中之一策略的交易。对老手来说绝不会做过于随机的事情。</p>
+<p>图38-1　交易计划的三个关键要素</p>
+<p>资料来源：SpikeTrade.com。</p>
+<p>图38-1是我在写本章节之前几天时，画的交易计划的截图（你将会在第55节看到我如何运用它）。请注意每个交易计划都需要以下几个重要特征。</p>
+<p>A.交易设置——为每一笔交易计划好三个关键的数字：买入价位、盈利目标价位和止损价位。在进入市场进行交易之前，你需要决定你将愿意以什么价格成交，你期望从市场中获得的收益和你愿意遭受的风险。潜在收益与风险的比例通常最好要超过2∶1。唯一可以偏离这条准则的交易时机是，当技术指标的信号特别强烈的时候。当然，不要捏造你的目标来把一个不是很确定的交易转为一个可以接受的交易。你的交易目标需要贴近实际。</p>
+<p>B.风险管理——事先确定你能承受在这笔交易中损失多少钱。用最大损失金额除以股数，得到每一股的可承受的损失——也就是你的买入价格和止损价格之间的差额。这将限制你交易的股数。</p>
+<p>C.最后同样重要的是，每一笔单独的交易都必须建立在特定的系统和战略之上。“在我看来很不错”这种想法并不是一个系统！当你听到一些股票提示或者看到脱缰而上的趋势时，会很容易变得激动。但是要告别像小狗追逐汽车那样去追逐股票了。如果你想以交易为生，你需要确定清楚自己的交易计划、战略或系统——用自己喜欢的方式来称它们——仅仅参与那些符合它们标准的交易机会。</p>
+<p>逐笔交易的三个关键要求</p>
+<p>对每个计划的交易都要从三个重要的角度去考虑。我们会在这里做简短的介绍，之后在讲特定交易系统和风险管理的时候再做详尽的阐述。这三条要求对于严肃认真进行交易的任何人来说都是至关重要的。</p>
+<h6 id="阅读日期-2026年08月14日-2026年08月14日-共-1-天">阅读日期：
+2026年08月14日-2026年08月14日 共： 1 天</h6>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

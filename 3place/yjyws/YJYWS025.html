@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="hbaolong@vip.qq.com" />
+  <title>以交易为生:24.趋向系统</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">以交易为生:24.趋向系统</h1>
+<p class="author">hbaolong@vip.qq.com</p>
+</header>
+<center>
+<a href="/3place/yjyws">返回首页</a> <a
+href="/3place/yjyws/mingju.html">本书名句</a> <a
+href="/3place/yjyws/memo.html">本书注解</a> <a
+href="/3place/yjyws/index_rich.html">丰富目录</a> <a
+href="/3place/yjyws/index_readcal.html">同读日历</a> <a
+href="/3place/yjyws/index_timeline.html">时间线</a> <a
+href="/3place/yjyws/index_books.html">引用书籍</a> <a
+href="/3place/yjyws/index_words.html">使用字频</a>
+<div id="wx_pic" style="margin:0 auto;display:none;">
+<img src='/img/logo.png'/>
+</div>
+</center>
+<h4 id="趋向系统">24.趋向系统</h4>
+<p>趋向系统是一种趋势跟随的方法，由威尔斯·威尔德（J.Welles
+Wilder，Jr.），在20世纪70年代中期提出，又经过其他几位分析师的改进。它能指明趋势，并显示什么时候趋势的运动值得去追逐。它能帮助交易者在大趋势的主体部分获利。</p>
+<p>如何构建趋向系统</p>
+<p>趋向运动可以定义为，今天价格波动区间超出前一天波动区间的比例。趋向系统能够检查出今天的波动区间是高于还是低于前一日的区间，然后将一段时间区间内的数据进行平均。这些复杂的运算最好在计算机上进行。大多数的分析软件中都包含趋向系统。</p>
+<p>（1）确定“趋向运动”（directional
+movement，DM）：比较今天和昨天交易价格波动区间。趋向运动是今天的交易波动区间超过昨天交易波动区间的最大值。有四种类型的趋向运动（见图24-1）。趋向运动总是正数（+DM和-DM仅仅表示今天的波动区间是高于还是低于昨天的区间）。</p>
+<p>图24-1　趋向运动</p>
+<p>趋向运动是当日交易区间超过前一日交易区间的最大值。</p>
+<p>1.如果当日的交易区间延伸高于前一日区间，趋向运动为正（+DM）。</p>
+<p>2.如果当日的交易区间延伸低于前一日区间，趋向运动为负（-DM）。</p>
+<p>3.如果当日交易区间被包含在前一日区间之内，或者包含前一日区间但延伸高于和低于前一日区间的幅度相等，此时没有趋向运动（DM=0）。如果当日区间包含前一日区间但延伸高于和低于前一日区间的幅度不相等，视哪一部分幅度更大，决定DM为正或负。</p>
+<p>4.在涨停日，+DM为当日收盘价与前一日高点之间的距离。在跌停日，-DM为当日收盘价与前一日低点之间的距离。</p>
+<p>（2）确定市场的“真实波幅”（true
+range，TR）。TR总是正值，它是以下三者中的最大值：</p>
+<p>a.今天价格最高价与最低价之间的差值</p>
+<p>b.今天价格最高价与昨天收盘价的差值</p>
+<p>c.今天价格最低价与昨天收盘价的差值</p>
+<p>（3）计算每日“趋向指数”（directional
+indicators，+DI和-DI）。通过计算DM占TR的百分比——从而可以比较各个不同市场的趋向指数大小。每个DI都是正值：当市场在某天没有向上的趋向运动时，+DI等于零；当某天市场没有向下的趋向运动时，-DI等于零。</p>
+<p>（4）计算“平滑趋向线”（smoothed directional
+indicators，+DI13和-DI13），通过移动平均来平滑+DI和-DI。大多数软件包能够让你随意选择需要平滑的时间段，比如13日的移动平均。你能得到两条指标线：正的和负的平滑趋向线，+DI13和-DI13。两者的数值都是正值，一般用不同的颜色标注。</p>
+<p>正平滑趋向线和负平滑趋向线的关系能够确定趋势。当+DI13在上面时表示趋势是向上的，当-DI13在上面时，就说明趋势是向下的。+DI13和-DI13的交点就释放出了买入或者卖出的信号。</p>
+<p>（5）计算“平均趋向指标”（average directional
+indicator，ADX）。这个指标是趋向系统独特的组成部分，它能显示什么时候趋势是值得我们参与的。ADX测量了+DI13和-DI13之间的价差。由以下两步进行计算得到。</p>
+<p>a.计算日线趋向指标DX：</p>
+<p>举个例子，若+DI13=34，-DI13=18，那么</p>
+<p>b.通过移动平均来平滑DX，计算得到平均趋向指标ADX。例如可以通过13日EMA来进行平滑。</p>
+<p>在趋势持续的区间，如果两条平滑趋向线之间的差值增大，ADX则会上升；当趋势反转或者市场进入了震荡区间时，ADX则会下降。在ADX值上升时，最好只用趋势跟随指标。</p>
+<p>群体行为</p>
+<p>通过测量多空双方使今天价格波动区间超出昨天的程度，趋向系统能够跟踪群体看多和看空的变化。如果今天比昨天的高点要高，那么市场群体对市场的情绪更趋向于乐观。如果今天比昨天的低点更低，则表示市场群体的情绪更趋向于悲观。</p>
+<p>通过趋向线的相对位置能够识别出趋势。当+DI13在-DI13之上时，表示多方力量主导市场。当-DI13升高超过+DI13时，表示交易者中，空方力量更强。根据较高的趋势线判断多空主导力量的方式进行交易比较有利。</p>
+<p>当两条趋向线的距离增大时，ADX会增大，表示市场的主导力量——比如上涨牛市中的多头——正在变强，而较弱的一方在变弱，所以趋势很可能会持续。</p>
+<p>当两条趋向线的距离变窄时，ADX会下跌，表示市场的主导力量正在变弱，而之前较弱的一方正在变强。这说明市场将要反转，因此最好不要使用趋势跟随工具进行交易。</p>
+<p>交易规则</p>
+<p>（1）当+DI13高于-DI13时，做多头；当-DI13高于+DI13时，做空头。同时，ADX上升的时候是最佳的交易时机，表示主导力量正在增强。</p>
+<p>（2）当ADX下降时，表示市场的趋势正在减弱。这时可能产生很多假突破。当ADX下降时，最好不要用趋势跟随指标。</p>
+<p>（3）当ADX降到两条趋向线之下时，表示市场是平静、死气沉沉的。此时不要用趋势跟随系统交易。但要做好交易的准备，因为这是暴风雨之前的平静，大趋势将会从这种平静中出现。</p>
+<p>（4）当ADX落到两条趋向线之下时，则出现了趋向系统的最佳信号。它在此区域待得越久，那么下一次趋势的基础就越强。当ADX从两条趋向线下方开始回升时，意味着市场从平静中觉醒了。当ADX从趋向线下方的低点上升了4步（比如从9到13），这就是一个新趋势的号角（见图24-2）。那表示新的牛市或者熊市正在形成，到底是熊市还是牛市取决于在上面的是哪条趋向线。</p>
+<p>图24-2　联合内华达金业（ANV）日线图，22日指数移动平均线，趋向系统（13）</p>
+<p>资料来源：Stockcharts.com。</p>
+<p>趋向系统</p>
+<p>在强劲和虚弱之间摇摆是市场典型的特征。强势股票变弱时弱势股票会变强，然后它们的角色又重新转换。黄金和白银股票是2013年表现最弱的两个行业，但在12月时它们开始筑底。联合内华达金业（ANV）是那时候我开始买入的几只股票之一。</p>
+<p>低位A点的价格是3.07美元，股价在B点跌到3.01美元后开始反弹，形成一个向下假突破。股价在C点跌到3.08美元，重新试探了支撑位——股价从此处开始启动了，指数移动均线转头向上。趋向系统在图中绿色垂直箭头所示位置发出了买入信号：绿色牛市趋向线在红色熊市趋向线之上，同时ADX穿透到红线上方。</p>
+<p>你或许发现了图中字母区域也发现了类似的做空信号，但一名严谨的交易者不会对每个见到的信号都去交易：在3美元价格附近做空一只从45美元掉下来的股票，意味着去追已经严重老化的趋势。在右边缘附近，你能看到价格回落到价值区间，提供了很好的多头加仓时机。</p>
+<p>（5）当ADX回升超过两条趋向线时，表示市场过热了。当ADX从高于两条趋向线的地方掉头向下，表示主要的趋势受到了阻碍，这正是趋势交易兑现利润的好时机。如果你是重仓的话，一定要先兑现一部分利润。</p>
+<p>市场指标既会给你一些硬指标，也会给一些软指标。例如，移动平均值改变方向就是一个硬指标，而ADX的下跌就是一个软指标。一旦你看到ADX下降，此时要加仓就应该非常小心。应该先兑现盈利，减轻仓位，然后再寻找出场的机会。</p>
+<p>平均真实波幅——来自波动率的帮助</p>
+<p>平均真实波幅（ATR）是真实波幅（TR，在“如何构建趋向系统”一节提及过）在某一时间段内的平均值，常用的为13日均值。因为波动率是交易的重要指标，你可以通过画出一系列高于或者低于移动平均值的ATR线来追踪波动率的变化。它能够将当前的波动率可视化，你也可以根据它来做决定。</p>
+<p>克里·洛沃恩喜欢在移动平均线附近画三组线：在高于和低于EMA1倍、2倍和3倍ATR的位置。它们能用于设定入场点、保护性止损位和盈利目标（见图24-3）。</p>
+<p>图24-3　露露柠檬（LULU）日线图，21日指数移动平均线，成交量的8日指数移动平均线，ATR通道线</p>
+<p>资料来源：TradeStation。</p>
+<p>ATR通道线</p>
+<p>这份露露柠檬（LULU）的交易日志来自Spiketrade.com的克里——我们常在那里公布自己的交易日志。这份日志显示了如何利用ATR通道线获利。</p>
+<p>9月18日，LULU股价在公布盈利情况后，出现了大幅下跌。但是股价并没有进一步继续下跌，而是开始反弹。克里在长A点的线柱中间画了一条水平线，作为短期的支撑位。</p>
+<p>当LULU股价开始回调，在区域B日线幅度收窄，成交量收缩。克里在9月30日星期一以72.02美元的价格买入了LULU，即线柱C，此时股价从向下假突破中反弹向上。他在当日稍晚以73.70美元价格兑现了1/3的仓位，此时LULU股价离1倍ATR仅差几美分。星期三，在线柱D时，LULU股价触及2倍ATR即76.63美元价格，克里又退出另一个1/3的仓位。他在线柱D中间位置兑现了剩下的1/3仓位。</p>
+<p>入场点：在“移动平均”那一节中，我们知道在价格低于价值的时候买入——低于EMA的时候，是一个好主意。但是要低于价值多远的距离？如果是普通回调往往会在负一倍的ATR处见底。</p>
+<p>保护性止损位：最好让你的保护性止损位在至少离入场点一倍ATR距离的地方。如果小于这个距离，会让你的保护性止损价位落入市场噪音区间之中，很可能被短期的随机波动所触及。所以把你的保护性止损位设置得远一点，使得只有真正的反转才能触及你的保护性止损单。</p>
+<p>盈利目标：你买入一只股票之后，可以根据那只股票的强势程度，在1倍、2倍甚至3倍ATR的位置，来设置你兑现利润的止盈价位。克里喜欢分几步兑现利润并退出，比如在1倍ATR处挂三分之一持仓量的卖单，在2倍的地方再挂三分之一，其余的挂在3倍ATR处。</p>
+<p>在任何市场中，长时间价格波动超过3倍ATR——3倍的平均真实波幅——都非常少见。这通常意味着行情非常极端。无论何时你看到市场波幅超出3倍ATR之外，不论是上升还是下跌，你都有理由相信会出现一波回调。</p>
+<p>ATR通道的方法不仅在价格方面有用。我们也可以将它和其他指标结合起来，来判断趋势有可能在哪些极端价位出现反转。我在周线图的强力指数上会结合使用ATR通道。</p>
+<h6 id="阅读日期-2026年07月31日-2026年07月31日-共-1-天">阅读日期：
+2026年07月31日-2026年07月31日 共： 1 天</h6>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

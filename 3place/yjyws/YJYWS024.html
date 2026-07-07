@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="hbaolong@vip.qq.com" />
+  <title>以交易为生:23.指数平滑异同移动平均线：MACD线和MACD柱状线</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">以交易为生:23.指数平滑异同移动平均线：MACD线和MACD柱状线</h1>
+<p class="author">hbaolong@vip.qq.com</p>
+</header>
+<center>
+<a href="/3place/yjyws">返回首页</a> <a
+href="/3place/yjyws/mingju.html">本书名句</a> <a
+href="/3place/yjyws/memo.html">本书注解</a> <a
+href="/3place/yjyws/index_rich.html">丰富目录</a> <a
+href="/3place/yjyws/index_readcal.html">同读日历</a> <a
+href="/3place/yjyws/index_timeline.html">时间线</a> <a
+href="/3place/yjyws/index_books.html">引用书籍</a> <a
+href="/3place/yjyws/index_words.html">使用字频</a>
+<div id="wx_pic" style="margin:0 auto;display:none;">
+<img src='/img/logo.png'/>
+</div>
+</center>
+<h4
+id="指数平滑异同移动平均线macd线和macd柱状线">23.指数平滑异同移动平均线：MACD线和MACD柱状线</h4>
+<p>移动平均能帮助我们识别趋势和反转。杰拉德·阿佩尔（Gerald
+Appel）是一位纽约的分析师和基金经理，他发明了一种更高级的指标——指数平滑异同移动平均线（moving
+average
+convergence-divergence，MACD）。MACD是以三个指数移动平均为基础，以两条曲线的形式出现在图表中，其两条线的交叉点，是一种交易信号。</p>
+<p>如何画出MACD</p>
+<p>最初的MACD指标由两条线组成：一条实线（叫作MACD线）和一条虚线（叫作信号线）。MACD线由两个指数移动平均（EMA）计算而来，其对价格的反应相对较快。信号线是以MACD线为基础，通过对MACD线以EMA的方式进行运算，实现对MACD线的平滑，其对价格变动的反应相对较慢。在阿佩尔最初的体系中，较快的MACD线穿过较慢的信号线上升或者下降，为买入或者卖出的信号。</p>
+<p>大多数技术分析软件都提供MACD指标。手工做出MACD指标的步骤如下：</p>
+<p>（1）计算12日收盘价的EMA；</p>
+<p>（2）计算26日收盘价的EMA；</p>
+<p>（3）用12日收盘价的EMA减去26日收盘价的EMA，将其差值画成一条实线，这就是较快的MACD线；</p>
+<p>（4）计算这条实线的9日EMA，将其结果画成一条虚线，这就是较慢的信号线。</p>
+<p>市场心理</p>
+<p>每一个价格都反映了所有的市场参与者那一刻对股票价值的共识。移动平均值反映了一段时间内的市场价值共识的平均水平——它像是所有的市场参与者共识的连环照。较长的移动平均反映的是较长时间周期内市场价值共识的平均水平，而较短的移动平均则反映了较短时间周期内市场价值共识的平均水平。</p>
+<p>MACD线和信号线的交点表明了市场中空方和多方实力变换的平衡点。较快的MACD线反映的是短期内大众的心理变化，而较慢的信号线则反映了大众心理在较长期的变化。当较快的MACD线上升超过信号线时，表示多方主导了市场，这时候最好做多方；当较快的线落到较慢的信号线下面时，表示空方主导了市场，做空方比较有利。</p>
+<p>MACD的交易规则</p>
+<p>MACD线和信号线的交叉意味着市场趋势发生了变化。顺势的方向是沿着交点的方向进行交易。这个方法产生的假突破比基于简单移动平均的方法产生假突破要少很多。</p>
+<p>（1）当较快的MACD线穿越到较慢的信号线上方时，为买入信号。这时候要买多，然后在近期的次低点位置设置一个保护性止损单（见图23-1）。</p>
+<p>图23-1　巴里克黄金（ABX）周线图，26周和13周指数移动平均线，12-26-9MACD线</p>
+<p>资料来源：Stockcharts.com。</p>
+<p>指数平滑移动平均（MACD）线</p>
+<p>巴里克黄金（ABX）——全美最大市值的上市黄金公司，被黄金市场熊市拖累，2012年和2013年股价连续下跌。注意图中的卖出信号，即当快速线穿越到慢速线下面，图中以红色垂直箭头标识。该信号一年多以后才反转，即快速线穿越到慢速线上方，图中以绿色垂直箭头标识。</p>
+<p>注意该图表中其他几个形态。当ABX股价下跌到历史低点——图中B点，MACD线没有去确认：没有跌到新低而是走出了个双底。于是新低B点变成了向下假突破，是牛市来临的信号。在C点，空头试图最后一次把ABX股价压低，也没得到MACD线的确认，该线维持了稳定的上升趋势。在图表的右边缘，MACD线达到了上行运动的新高点，表现很强劲。两条EMA线都在上行，确认了牛市的趋势。</p>
+<p>（2）当较快的MACD线穿越到较慢的信号线下方时，为卖出信号。这时候要卖空，然后在近期的次高位位置设置一个保护性止损单。</p>
+<p>ABX的底部A、B、C可以看成是反转的头肩顶的底部。我们的技术指标比传统图表分析包含更多更客观的信息。</p>
+<p>MACD的拓展</p>
+<p>老练的交易者往往会用自己的参数来定制自己独特的MACD，而不是使用标准的（12、26、9）为参数。但一定要警惕，不要过于频繁地优化你的MACD。如果你反复调整MACD，总能得到你想要的任何信号。</p>
+<p>对于那些软件中不包含MACD指标的交易者，他们可以用一种快捷但不十分完美的方法来做出MACD图。一些软件工具包允许你画出两条EMA。在这种情况下，你可以利用两条EMA线，比如12日和26日EMA来近似替代MACD线和信号线。</p>
+<p>MACD柱状线</p>
+<p>相比原始的MACD线，MACD柱状线能够提供更深刻的关于多空力量均衡的信息。它不仅能分辨出哪种力量处于主导地位，而且能够分辨其力量是在逐渐增强还是在减弱。MACD柱状线是技术分析师最好用的工具之一。</p>
+<p>MACD柱状线=MACD线-信号线</p>
+<p>MACD柱状线测量的是MACD线和信号线之间的差值。它将差值画为一根根柱状线——为一系列垂直的线条。它们的长度可能很短，但电脑可以重新调整其尺寸以在屏幕中较好地显现（见图23-2）。</p>
+<p>图23-2　道琼斯工业平均指数（DJIA）日线图，26日和13日指数移动平均线，12-26-9MACD线</p>
+<p>资料来源：Stockcharts.com。</p>
+<p>MACD柱</p>
+<p>当两条MACD线交叉时，由两线衍生而出的MACD柱会穿过0线。你能在图中看到MACD线指示的买入和卖出信号（图中标识为绿色和红色箭头）。这些信号通常是滞后的，而MACD柱能给出很好的信号。我们在本节后面部分会提及，但现在我们先看一个例子。</p>
+<p>比较道琼斯指数的低点D和F，指数的第二个底部只是稍稍更低（事实形成了一个向下假突破），但同时第二个底部附近的MACD柱比前一个底部的MACD柱浅多了，说明空头已经很虚弱，很可能会发生向上的反转。</p>
+<p>如果较快的MACD线走到了较慢的信号线之上时，柱状线为正值，画在零刻度线以上。如果快线在慢线以下，柱状线就是负值，画在零刻度线以下。当两条线相交时，柱状线为零。</p>
+<p>当MACD线和信号线的差值扩大时，柱状线会同时变得更高或更深，方向取决于它的正负。当两条线逐渐接近时，柱状线的长度会变短。</p>
+<p>MACD柱状线的斜率取决于相邻的两根柱状线之间的高低关系。如果后面一根柱状线比较高（就像字母“m-M”的高度关系一样），MACD柱状线就是向上倾斜的。如果后面一根柱线图比较低（就像字母“P-p”的深度关系一样），MACD柱状线就是向下倾斜的。</p>
+<p>市场心理</p>
+<p>MACD柱状线揭示了市场长期价值和短期价值之间的差异。较快的MACD线反映的是短期内市场对价值的共识，而较慢的信号线反映的是长期市场对价值的共识。MACD柱状线对两者之间的差异进行了跟踪。</p>
+<p>MACD柱状线的斜率方向揭示了市场中的主导力量。向上倾斜的MACD柱状线表示多方的力量在增强，而向下倾斜的MACD柱状线则意味着空方的力量在增强。</p>
+<p>当较快的MACD线上升得比较慢的信号线快时，MACD柱状线会上升。说明多方的力量比之前更强——这是做多的好时机。当较快的MACD线下降得比较慢的信号线快时，MACD柱状线会下降，说明空方的力量在增强——这是做空的好时机。</p>
+<p>当MACD柱状线的斜率方向和价格的变动同向时，趋势就是稳定的。当MACD柱状线的斜率方向与价格的变动方向相反时，趋势的稳定程度就值得怀疑了。</p>
+<p>MACD柱状线的斜率方向比柱状线的正负重要得多。最好是根据MACD柱状线的斜率方向来进行交易，因为它能告诉你在空方和多方中，到底是谁在主导市场。最好的买入信号是当MACD柱状线低于0值，而它的斜率方向是朝上的，表明空方的力量已经是强弩之末了；最好的卖出信号发生在MACD柱状线高于0值，而它的斜率方向是朝下的，表明多方已经耗尽了最后的力量。</p>
+<p>交易规则</p>
+<p>MACD柱状线能够发出两种交易信号。一种是普通信号，发生在每一个价格蜡烛线上；另一种信号很稀有——在一只股票的日线图上一年里可能只会出现几次，但是是非常强烈的信号。这种信号在周线图上更少见，但在日内图表中出现得比较频繁。</p>
+<p>普通信号是MACD柱状线的斜率方向。当最新的MACD柱状线高于前一根MACD柱状线时，斜率向上，表示多方控制着市场，是买入的时机；当最新的MACD柱状线低于前一根MACD柱状线时，斜率向下，表示空方控制着市场，是卖出的时机；当价格向一个方向走，而MACD柱状线的斜率却向另一个方向走时，表明主导的力量正在失去热情，趋势没有看起来那么强势了。</p>
+<p>（1）当MACD柱状线停止下跌开始上升时就买入，在近期的次低点下方设置保护性止损单；</p>
+<p>（2）当MACD柱状线停止上升开始下跌时就卖出，在近期的次高点上方设置保护性止损单。</p>
+<p>MACD柱状线在日线图中频繁地上升下降，所以每次转向都进行交易是不切实际的。在周线图上MACD柱状线斜率的变动更有意义。这也是这个指标被纳入三重滤网交易系统（见第39节）的原因。将指数移动平均和MACD柱状线结合起来使用能帮你创造出“动力系统”，在第40节会详细介绍这一系统。</p>
+<p>什么时候预期市场探出新高或新低</p>
+<p>如果日线的MACD柱状线创出了三个月内的新高，说明多方的力量很强，价格还可以再创新高。如果日线的MACD柱状线创出了三个月内的新低，说明空方力量很强，价格可能会再次试探甚至突破之前的低点。</p>
+<p>如果在价格上升的过程中，MACD柱状线创出新高，说明上升的趋势是健康的，可以预期市场会继续上涨，再次试探甚至超过之前的高点；如果在价格下降的过程中，MACD柱状线创出新低，说明空方力量很强，价格可能会再次试探甚至突破之前的低点。</p>
+<p>MACD柱状线就像汽车的车头灯一样——能让你看清前面的道路。需要提醒的是，虽然MACD柱状线不能照亮你回家的全部的路，但足以让你以适当的速度安全行驶了。</p>
+<p>MACD柱状线的拓展</p>
+<p>MACD柱状线在各时间周期内都能用：周线、日线及日内数据。较长时间周期的MACD发出的信号，价格的变动更大。比如说，相比日线或日内MACD柱状线，周线MACD柱状线发出的信号预示着价格变动幅度更大。这个原则适用于任何技术指标。</p>
+<p>当你在周线图上使用MACD线和MACD柱状线时，不必等到周五再去寻找信号。趋势可能在周中就已经发生了反转——市场可不会去盯着日历。因此，最好每天都去做周线的研究。我用软件以传统方法从周一到周五，做周线图。但会存在扭曲，因为最近一根蜡烛线反映的是从本周周一开始的交易。在周一闭市之后，我最新一根周蜡烛线和周一的日蜡烛线是一模一样的。而周二的周蜡烛线则反映两个交易日的情况，以此类推。因此，周一时，我会把最新的周蜡烛线的可信度打一个大大的折扣，但到周二时，我会增加一点点对该最新周蜡烛线的信任度。</p>
+<p>背离</p>
+<p>背离是技术分析中最强有力的指标之一。在这一节中我们将关注MACD柱状线，但背离这个概念可运用于其他许多指标。</p>
+<p>MACD柱状线和价格出现背离的情形并不常见，但是它们却传达出了某些最强有力的信号。它们往往标志着重要的转折点。它们并不一定会出现在每个重要的顶部或底部，但是一旦你看到一个，你就知道一次大的反转可能即将到来。</p>
+<p>牛市背离发生在下降趋势的终止阶段——它标志着市场底部。经典的牛市背离发生在价格和震荡指标都创出新低，开始回升，接着震荡指标穿过零点，接着价格和震荡指标又再次下降。这一次，价格跌到新的低点，但是震荡指标的底部则比前一次下跌的底部高。这样的背离经常发生在猛烈的上涨之前（见图23-3）。</p>
+<p>现在我展示给你们的道琼斯平均指数（DJIA）的周线图和其周线MACD柱状线，是一个完美的背离的案例。你值得将其订在桌子旁边的墙上，时常看它一眼。你不会总是得到这样完美的图形，但是你看得越仔细，它就越可靠。</p>
+<p>要注意，两个底部之间有一个穿越回0值线的部分是真正的背离所必须具备的因素。在第二次探底之前，MACD柱状线必须穿越回0值线。如果没有与0值线的交点，那就不是真正的背离。</p>
+<p>图23-3　道琼斯工业平均指数（DJIA）周线图，26日和13日指数移动平均线，12-26-9MACD线和柱状图</p>
+<p>资料来源：《未选择的路：背离交易》（Two Roads Diverged:Trading
+Divergences），由TC2000软件绘制。</p>
+<p>牛市背离</p>
+<p>这里你看到的背离信号标志的是2007~2009年期间熊市的底部。这个背离信号在低点附近给出了非常强烈的买入信号。在A区域，当时雷曼兄弟破产了，一浪接一浪的卖出冲击着市场，道琼斯指数像自由落体一样下跌。MACD线柱图创出历史新低，说明空头极端强大，A区域的底部价格很可能会被重新试探甚至突破。在B区域，MACD线柱图反弹到0值线之上，“打破了这个熊市”。要注意这个短暂的反弹触及到了两条移动平均线之间的“价值区间”——这是熊市反弹时一个比较常见的目标。在区域C，道琼斯指数滑向了一个新的熊市低点，但MACD柱状线的底部则浅得多。而之后的回升，完成了一次牛市背离，这是非常强烈的买入信号。</p>
+<p>另一个关键点是，当MACD柱状线从第二个底部开始反转时，它就发出了买入的信号。它不必再次穿过0值线，在MACD柱状线低于0时，只要停止下降，负值开始缩小，就是买入信号了。</p>
+<p>在图23-3中，MACD线在底部A和底部C之间，出现第二次的底部比第一次要浅，MACD线也出现了牛市背离形态，于是MACD柱状线的背离就得到了增强。这样形态的MACD线是很少见的。它们预示之后的上涨可能会非常剧烈。虽然我们不能称其为真正的背离，因为MACD线并没有0值（没有返回0值之上的阶段）。在2009年出现的那波回升直到第一次正式回调之前持续上涨了一年时间。</p>
+<p>同样地，我们不能把底部C之后的较低的顶部称为背离。较低的顶部反映了随着时间的流逝，上涨的趋势在减弱。但要称其为背离，MACD柱状线必须两次穿过0值线。</p>
+<p>熊市背离发生在上涨趋势中——意味着市场的顶部。经典的熊市背离发生在价格创出新高后回落的时候，同时震荡指标落到0值以下。价格逐渐平稳，然后上升到新高，但是震荡指标仅上升到比之前的峰值要低的高点。这样的熊市背离通常预示着剧烈的下跌。</p>
+<p>熊市背离显示出多方的能量在耗尽，价格还在惯性上涨，但空方已经准备入场接手。有效的背离很容易被看出来——它们就像从图表中跳到你眼前一样。如果你需要用尺子来量一量看这是不是一个背离，那么你可以假定它不是（见图23-4）。</p>
+<p>前面的图展示的是在2009年市场底部时一个显著的牛市背离。现在为了看到一个同样显著的熊市背离，让我们把时间调回到2007年牛市正处在顶部的时候。</p>
+<p>要注意指标两个顶部之间的对0值线的突破，是真正背离所必需的因素。MACD柱状线在达到第二个顶点之前，必须低于0点。</p>
+<p>图23-4　道琼斯工业平均指数（DJIA）周线图，26日和13日指数移动平均线，12-26-9MACD线和柱状图</p>
+<p>资料来源：《未选择的路：背离交易》（Two Roads Diverged:Trading
+Divergences），由TC2000软件绘制。</p>
+<p>熊市背离</p>
+<p>在X区域，道琼斯指数和其MACD柱状线同时上升到牛市的新高点，说明多头的力量十分强大。这意味着未来很有可能会再次试探甚至突破顶部X点的价格。注意，MACD柱状线的X部分，其形态很复杂，但并不是一个背离，因为它的中间部分并未沉到0值线之下去。</p>
+<p>在Y区域，MACD柱状线跌落到0值线之下了，“打破了这个牛市”。要注意，价格穿透到了两条移动均线之间的“价值区间”的下方。这是牛市中断时一个相当普遍的信号。同样要注意到在底部Y处，有一个“袋鼠尾”。在Z区域，道琼斯指数上升到一个牛市新高，但MACD柱状线的上升有点缺乏活力，反映出牛市的虚弱。在峰值C处开始的跳水，完成了熊市背离，给出了强烈的卖出信号，预示着近30年最严酷的一个熊市。</p>
+<p>另一个关键点是，当MACD柱状线从第二个顶点开始下降时，就已经是卖出的信号了。我们不必等到它再次穿越0值。虽然MACD柱状线仍然高于零点，只要停止上涨，并且新柱线长度比之前的柱线长度更短时，就发出了卖出信号了。</p>
+<p>在图23-4中，当MACD线在顶点X和顶点Z出现熊市背离形态时——MACD线第二次的顶部比第一次要浅，图中的熊市背离信号得到了加强。这种形态的MACD线告诉我们，将要来临的下降趋势会格外剧烈。</p>
+<p>“无右肩”背离（“missing right
+shoulder”divergences）是指，当第二次探新高时MACD柱状线还没有穿过0值。这种情况很罕见，但是是非常强烈的信号。有经验的交易者可以找到这些信号，但这对新手来说太难了。这在一本叫作《未选择的路：背离交易》（Two
+Roads Diverged:Trading Divergences）的电子书中有详细的描述和说明。</p>
+<p>克里·洛沃恩做了大量的研究发现最有交易价值的背离发生在，当MACD柱状线的两个顶部或者底部之间的相隔20到40个柱状线之间时——而且越接近20个柱状线越好。也就是说，两个顶部或者底部之间不能相隔太远。克里还发现当第二个顶部或者底部的长度不超过第一个顶部或者底部的一半时，是最好的信号。</p>
+<p>三重牛市或熊市背离由三组价格和震荡指标的底部或者三组价格和震荡指标的顶部组成。它们比普通的背离更加强烈。要产生三重背离，普通的牛市背离或者熊市背离首先要出现失效。这也是需要做好审慎的资金管理的又一个理由！如果你在假突破时只损失了一小部分钱，那你能保持充足的资金和良好的心态再次入场交易。震荡指标第三次探顶或者探底一定比第一次浅，但并不一定要比第二次浅。</p>
+<p>巴斯克维尔的猎犬</p>
+<p>这个信号产生在，当可信赖的图表或者指标的模式出现，但价格并没有走向你期望的方向时。比如，当背离模式出现，显示上升的趋势可能要结束了，但是价格却还在持续上涨，这种情形称为“巴斯克维尔的猎犬”。</p>
+<p>这个名字源于柯南·道尔爵士的一个故事。在这个故事里福尔摩斯被叫到一座乡间别墅里去调查一桩谋杀案。他发现的关键线索是：他意识到当谋杀案发生时，家里的狗并没有叫。这意味着那条狗认识罪犯，所以谋杀犯就是内鬼。之所以能发现这一线索是因为预期的应该发生的现象并没有发生——狗没有叫！</p>
+<p>当市场对一个完美的信号无动于衷时，那就是“巴斯克维尔的猎犬”的信号。这就表示在表象之下有更基础的东西在发生变化。这时候要做好准备，迎接一波新的大趋势。</p>
+<p>我并不是抛物线止损指标（stop and
+reverse）的拥趸，但“巴斯克维尔的猎犬”是个例外。在某些罕见的场合中，当熊市背离失效时，我会做多。同样，在牛市背离失效的罕见机会里，我会卖空。</p>
+<h6 id="阅读日期-2026年07月30日-2026年07月30日-共-1-天">阅读日期：
+2026年07月30日-2026年07月30日 共： 1 天</h6>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

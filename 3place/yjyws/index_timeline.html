@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="hbaolong@vip.qq.com" />
+  <title>5002以交易为生时间线</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">5002以交易为生时间线</h1>
+<p class="author">hbaolong@vip.qq.com</p>
+</header>
+<center>
+<a href="/3place/yjyws">返回首页</a> <a
+href="/3place/yjyws/mingju.html">本书名句</a> <a
+href="/3place/yjyws/memo.html">本书注解</a> <a
+href="/3place/yjyws/index_rich.html">丰富目录</a> <a
+href="/3place/yjyws/index_readcal.html">同读日历</a> <a
+href="/3place/yjyws/index_timeline.html">时间线</a> <a
+href="/3place/yjyws/index_books.html">引用书籍</a> <a
+href="/3place/yjyws/index_words.html">使用字频</a>
+<div id="wx_pic" style="margin:0 auto;display:none;">
+<img src='/img/logo.png'/>
+</div>
+</center>
+<p>3年
+这些权威的名声能持续2~3年，权威们声名远扬的时期正好与美国的每一波牛市一致。《5002以交易为生》</p>
+<p>5年
+股票市场一般前2.5年或3年上涨然后1年或1.5年下跌。《5002以交易为生》</p>
+<p>5年
+股票市场一般前2.5年或3年上涨然后1年或1.5年下跌。《5002以交易为生》</p>
+<p>10年 10年前我学到了这一课。《5002以交易为生》</p>
+<p>20年
+20年前，还曾经有经纪商对单向交易收取交易金额0.5perperper~1perperper的佣金。《5002以交易为生》</p>
+<p>1792年
+1792年成立的纽约证券交易所在成立之初甚至只是一个拥有24个股票经纪人的俱乐部。《5002以交易为生》</p>
+<p>1841年 一位来自苏格兰的律师查尔斯·麦凯（Charles
+Mackay），1841年时出版了一本名为《人类愚昧疯狂趣史》（Extraordinary
+Popular Delusions and the Madness of
+Crowds）的经典之作。《5002以交易为生》</p>
+<p>1929年
+1929年以前，投机者可以用10perperper的保证金买股票——这造就了大牛市，但是当股价下跌时的强制平仓也使得市场在熊市中更加低迷。《5002以交易为生》</p>
+<p>1932年 1932年，通讯出版商罗伯特·雷亚（Robert
+Rhea）在他出版《道氏理论》（The Dow
+Theory）中将道氏理论推向了顶峰。《5002以交易为生》</p>
+<p>1948年
+1948年，爱德华兹（夏巴克的一个继子）和迈吉共同出版了一本书，名叫《股市趋势技术分析》（Technical
+Analysis of Stock Trends）[1]。《5002以交易为生》</p>
+<p>1963年
+1963年，他创办了一家名为“投资者情报”的服务机构，专门跟踪投资顾问们的观点。《5002以交易为生》</p>
+<p>1976年
+1976年夏天，我由纽约开车前往加州，随身带了一些精神病学（我当时是一位刚出道的精神病科住院医师）与历史的书籍，还有一本平装版恩格尔（Engel）的《股票证券交易要诀》（How
+to Buy Stocks），就放在我那辆旧道奇车的后备厢里。《5002以交易为生》</p>
+<p>1977年
+1977年，我采购了生平第一个工具箱，用来做技术分析。《5002以交易为生》</p>
+<p>1982年
+比如，1966<sub>1982年间，美国市场的几次主要上涨都止步于道琼斯工业平均指数涨到950</sub>1050点之间。《5002以交易为生》</p>
+<p>2003年
+（1）2003年——AAPL股价跌到10美元以下，公司能否生存下去都成了问题，你这时候会买公司的股票吗？《5002以交易为生》</p>
+<p>2003年
+2003年，苹果公司在死气沉沉的低谷中存活了下来，当时谣传饱经磨难的苹果公司股票将被其他公司接管。《5002以交易为生》</p>
+<p>2006年
+（2）2006年——AAPL股价飙升到86美元，然后缩水至51美元。《5002以交易为生》</p>
+<p>2007年
+（1）2007年——在福特公司新总裁到来之前，福特公司正处境艰难，该新总裁早先曾经率领波音公司走出困境。《5002以交易为生》</p>
+<p>2008年
+2008年8月，美国商品期货交易委员会设立了一个专项组织去解决日益增长的外汇交易诈骗。《5002以交易为生》</p>
+<p>2008年
+（3）2008年——AAPL股价飙升到202美元，然后又降到115美元，如果你持有1000股，看到了自己账面资产经受了87000美元的损失，你是继续持有还是卖出？《5002以交易为生》</p>
+<p>2009年
+（4）2009年——AAPL股价回升到了192美元，后来又降至78美元，比先前的低点还要低，你的账面资产将经受超过50perperper的损失，你是继续持有还是选择将其变现？《5002以交易为生》</p>
+<p>2009年
+这里你看到的背离信号标志的是2007~2009年期间熊市的底部。《5002以交易为生》</p>
+<p>2010年
+2010年1月，美国商品期货交易委员会认定了外汇零售市场的“一系列不正当行为”，“在这当中包括引诱诈骗，交易执行和定价缺乏透明度，不处理客户投诉，开发缺乏相关知识的、年老的、低资产净值的或者是其他抗风险能力差的客户等”。《5002以交易为生》</p>
+<p>2011年
+（2）2011年——福特公司的股票上涨到其月线通道之上，其月线通道在当时已经缩窄，显示出袋鼠尾形态，同时其MACD线走弱。《5002以交易为生》</p>
+<p>2011年
+（3）2011年——此时月线价格在其价值波动区间内稳定下来，我便重新将仓位买了回来。《5002以交易为生》</p>
+<p>2012年
+巴里克黄金（ABX）——全美最大市值的上市黄金公司，被黄金市场熊市拖累，2012年和2013年股价连续下跌。《5002以交易为生》</p>
+<p>2012年 克里·洛沃恩在尖峰交易（Spike
+Trade）2012年会上的发言引起了我的注意：他向所有参会者提出了一个定义——“什么是A级交易”——建立卓越交易的标准。《5002以交易为生》</p>
+<p>2013年
+2013年在来自亚洲的新财富的支持下，该公司的业务得到了提升，但是其股价在该年最后一季度达到了顶部。《5002以交易为生》</p>
+<p>2014年 2014年《5002以交易为生》</p>
+<p>2014年
+A日——2014年2月10日，星期一：高点是52.49美元，低点是51.75美元，上通道线是53.87美元，下通道线是47.61美元（我们需要通道高度来计算退出的交易评级）。《5002以交易为生》</p>
+<p>2014年
+图31-1　2014年3月中期国债期货（TYH14）日线图、13日指数移动平均、持仓量《5002以交易为生》</p>
+</body>
+</html>

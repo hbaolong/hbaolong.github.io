@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="hbaolong@vip.qq.com" />
+  <title>以交易为生:48.情绪与概率</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">以交易为生:48.情绪与概率</h1>
+<p class="author">hbaolong@vip.qq.com</p>
+</header>
+<center>
+<a href="/3place/yjyws">返回首页</a> <a
+href="/3place/yjyws/mingju.html">本书名句</a> <a
+href="/3place/yjyws/memo.html">本书注解</a> <a
+href="/3place/yjyws/index_rich.html">丰富目录</a> <a
+href="/3place/yjyws/index_readcal.html">同读日历</a> <a
+href="/3place/yjyws/index_timeline.html">时间线</a> <a
+href="/3place/yjyws/index_books.html">引用书籍</a> <a
+href="/3place/yjyws/index_words.html">使用字频</a>
+<div id="wx_pic" style="margin:0 auto;display:none;">
+<img src='/img/logo.png'/>
+</div>
+</center>
+<h4 id="情绪与概率">48.情绪与概率</h4>
+<p>金钱能激发强烈的情绪。赚钱或者赔钱产生的情绪会影响我们的交易。</p>
+<p>急切下单的新手可能会因兴奋而眩晕。但他很快就会发现市场提供的这种乐趣代价十分昂贵。我在事业之初，曾听一位专业的交易者说：“成功的交易应该是有些无聊的。”他每天都花费很长的时间做功课，筛选市场数据，计算风险，坚持记录。这些耗时的任务并不有趣——但他的成功正是建立在这些枯燥乏味的工作之上的。新手和赌徒们觉得很好玩，但结果是以损失为代价。</p>
+<p>另一种错误是反复盘算持仓头寸中的盈亏。新手幻想着持仓浮盈可以买到什么，或者比较持仓浮亏和自己的工资，就吓傻了。反复想钱的问题，干扰了我们及时去做决定。专业的交易者总是集中精力管理交易，他们只有在平掉头寸之后才会去关注账户中的资金。</p>
+<p>交易者在持有头寸时去计算浮盈，就像是律师在审讯之中就开始盘算着用酬金买什么好一样。审讯还在进行中，他的对手正在想方设法地对付他的客户，去盘算酬金不能帮他赢取胜利——恰恰相反，只会分散他的精力，使他输掉官司。业余者因为盘算头寸的损失而沮丧，就像当病人还躺在手术台上流血时，外科医生却把手术工具给扔了——他的沮丧对解决问题毫无帮助。</p>
+<p>专业的交易者不会在持仓过程中计算得失。他们只是在账期末——比如说月末，才会去统计盈亏情况。</p>
+<p>如果你要问我的持仓情况怎样，我会回答稍微盈利、较大盈利或稍微亏损（较大亏损是不可能的，因为我会及时止损）。如果你一定要我说出具体数字，我可能会说我赚或赔了几个点，但从不会转换成具体多少金额。持仓时去计算得失是很不好的习惯，我花了好几年的时间才让自己克服掉这个不良习惯。我可以关注收益或亏损的百分点，但是我不会把它们转化成钱来考虑。这和节食一样——有很多食物，但你不能碰它们。</p>
+<p>把精力集中在管理交易上，钱随后自然会来。</p>
+<p>另一个关键点是：专业人士不会因为单次交易的成败而生气。在市场中有太多的随机成分。交易中我们可能每个步骤都是对的——但是仍然可能会以失败告终，就像外科医生可能把每件事情都做对了，但仍然可能救不好一个病人。这就是为什么交易者仅应该关注如何去拥有预期得到正收益的交易方法，尽量使自己的账户到账期末时是盈利的。</p>
+<p>任何领域里，成功的专业人士的目标都是在每一个阶段都能达到他自己的最好水平——成为最好的医生、最好的律师或是最好的交易者。要像掌控手术步骤一样掌控每一笔交易——严肃、冷静，不能马虎、心急。把精力放在如何正确交易上。当你以这种方式交易时，自然会挣到钱。</p>
+<p>为什么强尼（Johnny）不能卖出</p>
+<p>生存和成功与否，取决于当亏损还不大时你止损的意愿。</p>
+<p>当市场变化的方向开始与新手预计的相反时，新手往往会等待着，期望着市场会向他预测的方向转变。当他需要追加保证金时，他会毫不犹豫地向经纪商划款，似乎之前的亏损并没有太糟糕。为什么亏损着的交易会向他所想的方向转变？没有任何逻辑，只是痴心妄想。</p>
+<p>固执地持有亏损的交易头寸只会加深亏损的程度。亏损会以一种滚雪球的方式增长，直到最初看起来很糟糕的亏损比例开始显得不算什么了，因为现在的亏损放大了很多。最终，绝望的失败者忍痛清仓出局，遭受了严重损失。</p>
+<p>当他一离开，市场就开始反转，强势回归。</p>
+<p>此时的交易者恨不得拿头撞墙——如果他再坚持一下，他本可以赚钱的。这些反转一次又一次的发生，因为大多数输家对刺激的反应是一样的。人们有相似的情绪，这与他们的种族或教育无关。提心吊胆的交易者满手是汗、心跳加速，不管他们是在美国纽约还是在中国香港长大，也不管他接受过2年还是20年学校教育，他们的感受和反应是一样的。</p>
+<p>交易对智力的需求比较适度，但是它对情绪的需求是巨大的。很多年前，一个高学历但是很情绪化的交易者向我展现了怎样在通道线附近利用背离进行交易。我微调了他的方法，并加入了风险管理规则，直到今天我还从其中获益。而教会我这种方法的那个人早已经出局了，因为他缺少纪律性，最终只能沿街推销铝墙板。情绪化交易和冲动对交易毫无帮助。</p>
+<p>本小节的标题就借用纽约心理学家罗伊·夏皮罗（Roy
+Shapiro）的一篇文章，他在其中写道：“抱着无限的期待，我们独自拟定交易决策，我们现在的想法早就已经形成……卖出的一个困难是我们对所持头寸的依赖感。毕竟，一旦某件东西成了我们的，我们自然地就会倾向于依恋它……这种对我们所买东西的依恋感被心理学家和经济学家称为‘禀赋效应’，并且它于金融交易中普遍存在，就像我们挂在橱柜里不愿扔掉的旧夹克一样。投机者发明了这一概念……头寸代表着自我的延伸，甚至可能相当于一个人的孩子……即使所持头寸亏得所剩无几，强尼没有卖出的另一个原因是他还抱有幻想……对很多人来说，在建仓的那一刻起，冷静的判断就被削弱了，而逐渐加强的愿望掌控了决策的过程。”</p>
+<p>在市场中，梦想是我们承担不起的奢侈品。</p>
+<p>夏皮罗博士曾做过一项测试，说明人们对待商业机会的行为模式。首先，要求一组人从两种情形中选择一项：一是75%的机会获得1000美元，25%的可能什么都没有；二是直接获得700美元。五分之四的人选择了选项二，即使是向他们解释了长期来说选项一的预期收入是750美元。大部分人都做了情绪化的决定，只得到了较小的收入。</p>
+<p>另一个测试的两个选项：一是人们必须选择确定的亏损700美元；二是75%的可能损失1000美元，25%的可能什么都不损失。四分之三的人选择了选项二，比起确定损失700美元，他们情愿多损失50美元。为了避免风险，他们最大化了损失。</p>
+<p>情绪化交易者渴望确定的回报，放弃了利润最大但包含不确定性的机会。他们选择赌博来推迟损失兑现。迅速兑现盈利，推迟兑现损失，这是人类的天性。人们在感到压力时，会出现更多非理性行为。据夏皮罗博士称：“在每天最后两场赛马中，选择胜率很小的赛马，企图以小博大的人数会增加。”</p>
+<p>丹尼尔·卡尼曼（Daniel
+Kahneman）教授在他的《思考，快与慢》（Thinking，Fast and
+Slow）中写道：“确定的损失是非常令人厌恶的，它会促使人们去冒险……即使亏损的数量与你的财富相比微不足道，仍然有很强烈的厌恶感……损失相对盈利来讲对情绪的影响会被放大。”他又补充道：“动物，包括人类，与获得盈利相比，会花更大的力气去防止损失。”然后他解释道：“当人们面临选择时，愿意接受大概率会使事情可能变得更糟，但有小概率可能避免损失的选项。但这类选项经常使本来可控的损失变成灾难性的损失。”为什么我们会这样做呢？卡尼曼教授解释道：“除了非常穷的人，只要是收入可以满足生活的人，挣钱最主要的动因不一定是经济层面上的。金钱在某种程度上是个人自我实现和成功与否的度量标准。”这些奖励和惩罚、希望和威胁，都在我们的脑子里。</p>
+<p>是情绪化交易击败了输家。重新审视自己的交易记录经常会发现最致命的往往是为了摆脱困境，弥补亏损，反而导致几笔大的损失或一连串亏损。遵守良好的资金管理纪律会使你一开始就远离那些困扰。</p>
+<p>概率与数盲</p>
+<p>数盲是指那些不会算数、不懂概率理论的人，这对交易者来说也是致命缺陷。算数能力并不难学，可以从众多基础书籍中学习，然后在练习中加以熟练。</p>
+<p>约翰·艾伦·保罗斯（John Allen
+Paulos）著有一本生动的《数盲》（Innu-meracy）。这本书是学习概率知识非常好的初级读本。根据保罗斯的描述，在一次鸡尾酒会上，一个看起来十分聪明的人告诉他：“如果星期六下雨的概率是50%，星期日下雨的概率也是50%，那么周末下雨的概率是100%。”如果有人对概率的了解是这种水平，那他交易的时候肯定会赔钱。在交易中，你要自己去掌握交易相关的基础数学知识和逻辑概念。</p>
+<p>在市场分析中，很少有铁定的事，很大程度上是基于概率的。“如果信号A和B出现了，那么结果C将会发生”，市场运行的逻辑并不是这样。</p>
+<p>拉尔夫·文斯（Ralph Vince）的重要著作《投资组合管理公式》（Portfolio
+Management
+Formulas）中有一段有趣的文字：“把一枚硬币抛向空中，在这一瞬间，你将面对世界上最令人着迷的难题之一——随机过程。当硬币还在空中的时候，人们无法判断硬币落地时哪一面朝上。然而抛很多次的话，结果可以被合理地预测。”</p>
+<p>数学期望对交易者来说是一个很重要的概念。每一个交易都有一个正的期望收益——这也被叫作玩家的优势，或是一个负的期望收益——也称作庄家的优势，这取决于赌局中谁的胜率更大。如果你和我抛硬币，我们都没有优势——每个人都是50%的概率获胜。但如果你去赌场抛硬币，庄家从每轮游戏中抽取5%的提成，那么你输掉的每一美元，只能赢回95美分。这种“庄家的优势”会导致一个负的数学期望收益。长期来说，没有任何资金管理系统可以克服负的期望收益。</p>
+<p>正的期望值</p>
+<p>有经验、会算牌的人相对赌场来说有优势，除非赌场发现了他并且把他赶出去。赌场喜欢醉酒的赌徒，讨厌会算牌的人。在一段时期内，胜率能够让你赢的次数比输的多。如果没有胜率，还不如把钱捐给慈善组织呢。在交易中，胜数源于一段时期内扣除价差和佣金后盈利多于损失的交易系统。仅靠预感操作会导致亏损。</p>
+<p>最好的交易系统简单而稳定。它们的构成要素很少。系统越复杂，其部件出错的风险越大。</p>
+<p>交易者喜欢用历史数据回测来优化系统，但问题是你的经纪商不会让你回到历史去交易。市场在变化，一个指标能很好地跟踪过去一个月趋势不一定会很好地预测未来一个月的走势。所以不要优化你的系统，而是解除对系统的优化。稳定的系统能经受住市场的变化，在真实交易中可以战胜过于优化的系统。</p>
+<p>最后，一旦你开发出了一个好的系统，不要再改来改去。如果你喜欢修修补补，那就再去开发一个系统。罗伯特·普莱切特（Robert
+Prechter）曾提出：“大多数交易者有一个很好的交易系统，但为了改造成一个完美的系统反而毁了它。”</p>
+<p>一旦你有了一套能稳定运行的系统后，接下来要制定资金管理规则，帮助你从敏锐的交易系统中获得正的期望收益。资金管理规则能帮助开发出一个好的系统，但并不能拯救一个没用的交易系统。</p>
+<p>商人的风险或损失</p>
+<p>我们分析市场是为了识别趋势。预测未来价格变化时不要过分自信，未来是未知的。当我们预测市场要上涨了，准备大举建仓时，完全有可能发生一个未曾预见的事导致市场继续下跌。你对突发事件的反应决定了你是怎样水平的交易者。</p>
+<p>专业的交易者管理自己的交易时，接受“商人的风险”。这意味着他持有的头寸只会使自己头寸的本金承担很小的风险，否则亏损可能会影响一个账户的持续运作甚至导致彻底出局。我们在商人的风险和损失之间划定了清晰的界线，这个界线由交易者账户中的持仓头寸所能承担风险的大小决定。</p>
+<p>如果你遵循下面所说的风险管理规则，你仅会承担正常的商人风险，违反既定的界线将使你自己暴露于巨大的损失风险之中。</p>
+<p>某个缺乏纪律性的交易者会说：“这次是不同的，我要给这次交易一些额外的空间。”市场总是吸引交易者违背他们的规则。你会遵守自己的交易规则吗？</p>
+<p>我曾经主持过一个资金管理者交流会，其中一位发言嘉宾的管理账户中有近十亿美元资金。这位中年男子是20岁左右时开始他的事业的，当时的他自从毕业后一直在为一家海军顾问公司工作，但他厌倦了每天的日常工作。他自己设计了一个交易系统，但是一直无法运转起来，因为这个交易系统最少需要20万美元资金，而当时他还没有那么多钱。他说：“我当时必须寻求别人的帮助，向他们借钱。只要我向他们解释了我要做什么，而他们信任我，将钱借给了我，我就必须坚持这个系统。因为我告诉过他们我会遵守这个交易系统，如果违背这个交易系统将是很不合情理的。是贫困帮助了我。”——是贫困和诚信。</p>
+<h6 id="阅读日期-2026年08月23日-2026年08月23日-共-1-天">阅读日期：
+2026年08月23日-2026年08月23日 共： 1 天</h6>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>
