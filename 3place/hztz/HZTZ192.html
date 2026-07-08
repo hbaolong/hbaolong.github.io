@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="hbaolong@vip.qq.com" />
+  <title>华章投资:第8章　估值方法</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">华章投资:第8章　估值方法</h1>
+<p class="author">hbaolong@vip.qq.com</p>
+</header>
+<center>
+<a href="/3place/hztz">返回首页</a> <a
+href="/3place/hztz/mingju.html">本书名句</a> <a
+href="/3place/hztz/memo.html">本书注解</a> <a
+href="/3place/hztz/index_rich.html">丰富目录</a> <a
+href="/3place/hztz/index_readcal.html">同读日历</a> <a
+href="/3place/hztz/index_timeline.html">时间线</a> <a
+href="/3place/hztz/index_books.html">引用书籍</a> <a
+href="/3place/hztz/index_words.html">使用字频</a>
+<div id="wx_pic" style="margin:0 auto;display:none;">
+<img src='/img/logo.png'/>
+</div>
+</center>
+<h4 id="第8章-估值方法">第8章　估值方法</h4>
+<p>应该参考历史股价来估值</p>
+<p>当你还不了解公司的财务状况时千万不要投资。投资股票时，最大的损失往往来自于资产负债状况欠佳的公司。</p>
+<p>——彼得·林奇</p>
+<p>20世纪末股市疯狂时，华尔街上其实还有很多清醒人。从整体上说，金融业的责任感并不小，但它却接近于零——这是一种固有现象。因为在一个以赚钱为主要目的的行业中，一条必要的准则就是求得生存并给他人以生存的机会。抵制疯狂不仅会让那些随大流的人失去工作，也会让他们失去表现的机会。所以华尔街里的聪明人总是保持沉默，也正因为如此，那些愚昧的人才能在这个领域中有一席之地。</p>
+<p>——约翰K.加尔布雷思</p>
+<p>我的投资策略就是买入那些被市场错误定价的股票，并等待市场纠正错误。至于那些定价合理的股票，我几乎不买。就现在的情况来看，发现被错误定价的股票要比准确地预测它们在何时被纠正更为容易。所以，我选择等待。我的持股期通常是一两年（根据这些年的统计，平均持股时间为18个月）。我很高兴自己能有这种耐心，此外，如果我认为自己的判断是正确的，那我还愿意再等上若干年（如果需要的话）。我们的分析师常对我说：“安东尼，这只股票是很便宜，但我看不到它在短期内上涨的动力。”这时，我会告诉他们，以我的经验来看，在股票被市场错误定价时，很少能看到刺激股价上涨的因素（这比股票被错误定价更稀有）。如果刺激股价上涨的因素很明显，那么股票就不会被错误定价了。买便宜的股票（特别是那些资产负债状况很好的公司的股票），你会享有安全边际。如果购买一组“价值低估”类股票，你就会发现它们中有一些已经开始被重新定价（市场会发挥作用），尽管有些可能还只处于“妊娠期”。由于我的投资组合相当丰富，所以总会有相当数量的股票被重新定价，这时我就有更多机会和资金去购买那些仍被低估的股票。一旦股市上涨趋势确立，这类股票就很难买到了。过去，我发现股价被低估的更多的是中小型公司，这也是我更关注它们的原因。但现在这种情况正在改变，在过去的一两年里，有很多英国大企业的股票被低估（这种低估程度远超过中小型企业）。</p>
+<p>买入被市场错误定价的股票，并等待市场纠正错误。</p>
+<p>在波涛汹涌的股市中前行，你需要很多导航工具，其中之一就是股票的历史价格。正如第7章提到的，我通常会找到一只股票的历史股价图，最好是超过20年或者更长时期的，如果没有，那至少也要包括一个完整的商业周期。对某一类企业或某一类行业而言，了解其正常的市场估值范围是很有必要的，尤其是当估值处于离奇的高水平或低水平时。当然，在业务状况变化很大时，这样做就没有什么意义了。在股价远低于历史水平时，买入股票就有很大的增值潜力。相反，当股价与历史数据相比过高时，买入就会带来很大的亏损风险。这就是我的核心投资策略。</p>
+<p>买便宜的股票，你会享有安全边际。</p>
+<p>经常有人问我最喜欢的估值指标是什么。对此，我的回答是：“不止一个，而是有很多个”。事实上，我认为仅有一个估值标准是很危险的。通常看到的指标不仅有绝对值，还有相对值。尽管在大部分时间里，我们做的是相对值的比较，但我们也不应该忘记绝对值，尤其是当市场处于极端情况时。在对大多数公司进行估值时（特别是非金融公司），我通常要看五项指标。首先是传统的市盈率（P/E），我会查一下当前股价与当年预期收入及未来两年预期收入的比值（包括其市盈率的绝对比值，以及与其他类似股票市盈率的比较）。其次，我会看企业价值（EV）与总现金流量的比值，或企业价值（EV）与扣除利息、税项、折旧及摊销前盈利（EBITDA）的比值。之所以同时使用这两个指标，是为了确保企业价值能根据退休金赤字或其他细微项目做出适当的调整。接下来，我会预测一下企业的未来现金流，计算企业在未来产生的每股现金流。然后，我会看看产品价格与销售额的坐标图，如果有可能的话，最好是企业价值与销售额的坐标图（这两个指标对那些有亏损或者盈利不佳的公司来说更为有用）。至于最后一个指标，则是投资现金回报率（CFROI），它反映的是股票市值与原始投资的比较情况。回报率高于无风险收益率的股票会以资本溢价的方式来交易。与之相反，回报率低于无风险收益率的股价则会低于原始投资。</p>
+<p>绝不要忘了股票的绝对估值。</p>
+<p>我使用的估值方法主要来源于瑞士信贷第一波士顿霍尔特（CSFB
+Holt），Quest（由科林斯·斯图尔特拥有）以及CROCI（德国银行）法。这些估值方法在过去的10~15年里取得了显著成就。对我来讲，这三种方法主要是作为筛选工具，我可以用它们来筛选买入标的，或作为粗略的估值指标（相对于其他估值指标而言）。当然，它们也有一些与“现金流折现法”同样的缺点。此外，不同产业有不同的估值方法，每个产业的最佳估值方法都有所不同。例如，在评估建筑公司时，股票市值与调整后的公司账面价值之比是比较合适的估值方法，而传统的市盈率则没有太大意义，原因在于房地产销售都是一次性买卖，不能确保长期利润。尽管如此，很多知名的投资者在谈到这类企业的吸引之处时总是会引用其市盈率指标，对此我感到非常奇怪。</p>
+<p>至于市盈率与预期增长率的比值（PEG）和股利折现法（或现金流折现法），则是我较少使用的估值方法。在我看来，PEG比值更适用于成长型公司，而非价值型公司，并且我认为这种估值方法缺乏逻辑：如果5%的年增长率对应5倍的市盈率，10%的年增长率对应10倍的市盈率，20%的年增长率对应20倍的市盈率，那我为何不去找那些日增长率5%而市盈率只有5倍的公司呢？对于折现模型，比如股利折现模型或者现金流折现模型，如果公司处于成熟稳定期，盈利和各种状态都不会发生变化，那确实能预测公司未来10年的股利或现金流。之后以一个合适的折现率折现这些预测值，将它们加总后就能得到公司的现值。但这种方法的困难之处在于预测的是四五年后的数字（有时甚至更久）。在我看来，准确预测未来两三年已经很困难了，就别提更长的时间了。由于在这种估值模型中，一旦前提变了，现值也会随之变化，所以我通常只将这两种方法作为核查手段（你要明白它们的内在缺陷）。在做评估工作时，股利回报率不是我的第一选择，因为股利会受盈利的影响，所以我更倾向于检查公司盈利。但是，市场下跌时，股利回报率是一个很有用的指标，高股利回报率的股票在熊市中有很好的抗跌表现。有时，我也会看看其他估值指标，比如清算价值等。但是投资者要警惕那些新奇的估值指标。在此，我指的是那些看起来能给人以更多想象空间的估值指标。牛市越热，股票经纪人使用这些估值指标就越频繁（以此来证实股票的“所谓价值”）。这些指标也往往一个比一个前卫。清算价值模型在熊市中会得到更广泛的应用，特别是当公司账面上没有太多硬通货，比如现金或硬通货资产时。</p>
+<p>牛市越热，估值方法就越新颖。</p>
+<p>在熊市中，人们会越来越多地谈论那些保守的估值方法，诸如股利回报率等。切记：即使公司没有任何利润，一个聪明的股票经纪人也能找到一些让股票看起来很有吸引力的估值方法。一定要小心这些新颖的估值方法！</p>
+<h6 id="阅读日期-2027年01月15日-2027年01月15日-共-1-天">阅读日期：
+2027年01月15日-2027年01月15日 共： 1 天</h6>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

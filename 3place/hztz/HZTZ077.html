@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="hbaolong@vip.qq.com" />
+  <title>华章投资:第2章　单根蜡烛图</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">华章投资:第2章　单根蜡烛图</h1>
+<p class="author">hbaolong@vip.qq.com</p>
+</header>
+<center>
+<a href="/3place/hztz">返回首页</a> <a
+href="/3place/hztz/mingju.html">本书名句</a> <a
+href="/3place/hztz/memo.html">本书注解</a> <a
+href="/3place/hztz/index_rich.html">丰富目录</a> <a
+href="/3place/hztz/index_readcal.html">同读日历</a> <a
+href="/3place/hztz/index_timeline.html">时间线</a> <a
+href="/3place/hztz/index_books.html">引用书籍</a> <a
+href="/3place/hztz/index_words.html">使用字频</a>
+<div id="wx_pic" style="margin:0 auto;display:none;">
+<img src='/img/logo.png'/>
+</div>
+</center>
+<h4 id="第2章-单根蜡烛图">第2章　单根蜡烛图</h4>
+<p>无论在股票还是商品期货市场中，每个交易日的价格走势都可以通过单个的价格线段或柱状图表示出来，在这一点上，日本蜡烛图和西方传统的柱状图没有什么显著的区别，不同的是蜡烛图表达的信息更为清晰，更容易被投资者理解。</p>
+<p>单根蜡烛图所传递的信息远比交易者在乍看之下所得到的信息要多很多。通过一些特定的蜡烛形态，可以为交易者揭示图形背后隐藏的市场心理，关于这些特定的形态我们将在本书后面几章中一一为读者进行解析。此外，有一些反转的蜡烛形态是由单根的蜡烛图组成。关于这一点，我们将在下一章反转形态中进行详细阐述。</p>
+<p>每一种典型的蜡烛图都有一个特定的名称，并代表着这一交易日内的交易状况。这些名称有些用日文表达，有些用英文表达。只要有可能，我们都会在英文名称后面加注日语原名，这些日语原名用罗马音的方法拼写出来，这样即便是那些不会说日语的读者也可以直接利用字母读出读音。单根的蜡烛图通常也被称为阴线或阳线，这一名称来源于中国人的传统习惯，但在当今的西方社会，阴阳这一概念也被广泛运用于表述事物的两种对立的极端状态，例如进和出，开和关，上和下，富余和缺乏等（日本人也使用这一理念，他们的表述为inn和yoh）。所谓阴线指的是收盘价低于开盘价的熊市，阳线主要描绘的是收盘价高于开盘价的牛市。在蜡烛图分析中，有9种最基本的阴线和阳线。为了能更为清晰地解释市场中的各种可能性，这9种基本形态又可以被扩充为15种不同的蜡烛图。在后面的章节中，我们还将介绍如何把大多数的蜡烛图形态进行合并，在保持其原先的看跌或者是看涨的倾向前提下，将其进一步简化为单根的蜡烛图的方法。</p>
+<p>大阴蜡烛图和大阳蜡烛图</p>
+<p>在各种介绍日本蜡烛图技术分析的著作中，大阴线和大阳线（long days）
+[3]</p>
+<p>（有时也被称为长阳线或长阴线）是一个随处可见的概念如图2-1所示，这里的“大或长”实际上描述的是，在交易时段内开盘价和收盘价之间构成的蜡烛实体部分的长度。这种大阴或大阳的蜡烛图表示交易日内市场交易价格出现了较大的波动，换言之就是在交易日内开盘价和收盘价之间存在着比较大的价差。</p>
+<p>图　2-1</p>
+<p>那么，开盘价和收盘价之间到底存在多大的价格差异才可以把这个交易日称为大阴日或大阳日呢？这里我们必须考虑具体的环境，这里的“长”是与什么进行比较的？因此，最好的衡量标准就是用最近一段时间内价格的变动情况来判定当前交易日的蜡烛图是否“长”。日本蜡烛图分析技术本身就是以价格的短期波动作为分析基础的，那么大阴和大阳蜡烛图的判定也不应例外。我们使用当日之前5～10天的价格走势作为分析依据。当然还有一些其他的判定大阳或大阴的方法，我们将在形态的识别与判定一章中进行更深入的探讨。</p>
+<p>小阳蜡烛图或小阴蜡烛图</p>
+<p>图2-2表示的是小阴和小阳蜡烛图（short
+days），也被简称为小阴线和小阳线，它的判定方法与大阴和大阳的蜡烛图类似，与之前5～10天的价格走势进行比较确定。这两种图形在实际的市场走势中随处可见。</p>
+<p>图　2-2</p>
+<p>光头光脚蜡烛图</p>
+<p>在日语里，Marubozu的意思是“最后割断、切断”，另一层潜在的含义是“秃头”或者“光头”。在这两种情况下，都代表没有上影线，或没有下影线，或者上下影线都没有，只有实体部分的蜡烛图。</p>
+<p>黑色光头光脚蜡烛图</p>
+<p>如图2-3所示，黑色光头光脚蜡烛图（black
+marubozu）是没有上下影线，实体部分为黑色的蜡烛图。这是一种市场极为疲软的信号。通常出现在看跌的趋势继续形态或者看涨的反转形态中，如果这种蜡烛图在下跌趋势中出现，那么它的效应将更为强烈。蜡烛图的颜色是黑色的，这表明市场在不断走弱。一个很长的黑色光头光脚蜡烛图也可能是下跌的最后阶段，因此这种形态常常出现在许多市场看涨反转形态的第一天，这正应了中国的那句古话，阴尽阳生。</p>
+<p>图　2-3</p>
+<p>白色光头光脚蜡烛图</p>
+<p>如图2-4所示，白色光头光脚蜡烛图（white
+marubozu）是没有上下影线，实体部分为白色的蜡烛图。这种图形表明市场较为强势。与黑色光头光脚蜡烛图相反，这种蜡烛图形态通常出现在看涨的趋势继续形态或者看跌的反转形态中。这种情况也就是我们说的阳尽阴生。</p>
+<p>图　2-4</p>
+<p>光头收盘蜡烛图或光脚收盘蜡烛图</p>
+<p>光头收盘蜡烛图或光脚收盘蜡烛图（closing
+marubozu），在中国被称为光头阳线和光脚阴线，这两种形态指的是，以最高或最低价收盘，收盘价方向没有延伸出的影线，蜡烛图的实体颜色可以是白色，也可以是黑色（见图2-5）。如果蜡烛线的实体部分是白色的，那么蜡烛实体的顶部应没有上影线，收盘价就是交易时段的最高价；同样，如果蜡烛线的实体部分是黑色的，实体的底部就应该没有下影线，收盘价就是交易时段的最低价。黑色的光脚蜡烛图（日语称为yasunebike）代表市场较疲弱，白色的光头蜡烛图则代表市场较为强势。</p>
+<p>图　2-5</p>
+<p>光头开盘蜡烛图或光脚开盘蜡烛图</p>
+<p>如图2-6所示，光头开盘蜡烛图或光脚开盘蜡烛图（opening
+marubozu），在中国被称为光脚阳线和光头阴线，这两种形态指的是，自从开盘后，开盘价就没有被跌破或收破过，在开盘价下方（阳线）或上方（阴线）没有延伸出的影线。如果蜡烛图的实体部分是白色的，这就意味着没有下影线，代表着市场较为强势；如果蜡烛图的实体部分是黑色的（日语称为yoritsuki
+takane），意味着实体的顶部没有影线，代表着市场较疲弱。请读者注意，光头开盘蜡烛图或光脚开盘蜡烛图和光头收盘蜡烛图或光脚收盘蜡烛图所反映的市场强度并不相同。</p>
+<p>图　2-6</p>
+<p>纺锤蜡烛图</p>
+<p>如图2-7所示，纺锤线（Koma）指的是实体很小，但有很长的上下影线，而且影线的长度要远长于实体部分的蜡烛图形态，它代表市场上的多空双方间的力量平衡，没有一方能占有明显的优势。对于纺锤线来说，实体的颜色和影线的长度并不重要，重要的是影线与实体部分长度之间的比例。</p>
+<p>图　2-7</p>
+<p>十字蜡烛图</p>
+<p>当蜡烛图的实体部分很小，以致开盘价与收盘价接近相等的时候，我们就把这种图形称作十字蜡烛图（Doji）
+[4]
+。十字蜡烛图通常的定义是，交易日内市场的开盘价和收盘价相等，或者十分接近。十字蜡烛图的影线长度没有特别的限定。从定义上说，完美的十字蜡烛图应该有相同的开盘价和收盘价，但是有些情况可以例外，因为理论上开盘价和收盘价的绝对相等要求的交易数据过于精确，这样在实际的交易图形中就很难出现完美的十字蜡烛图。如果开盘价和收盘价之间的差价只有几个最小的波动点
+[5] ，我们就可以将它们认定为是相等的。</p>
+<p>十字蜡烛图的认定原则与我们此前认定大阴线或大阳线的判定原则相似，没有硬性规定，只有一些指导性的原则。我们需要考察此前一段交易周期的价格变化趋势。如果在前一段交易的时间周期内出现了许多十字蜡烛图，那么这些十字蜡烛图的重要性就不是很大。但是，如果在一段交易的时间周期内只出现了一个十字线，那么就应该引起我们的警觉。因为它说明市场正处于一种多空僵持的状态下。在几乎所有情况下，单根十字蜡烛图还不足以完全确定价格趋势要发生改变，只是一种趋势即将变化的预警。如果在上升趋势中出现了十字蜡烛图，随后紧跟着出现了一根大阴蜡烛图
+[6]
+，那么市场转为下跌趋势的可能性就会大大增加。这种蜡烛图形态组合又称为看跌十字星（具体内容详见第3章）。市场位于上升趋势中，突然出现一根十字星，上涨趋势出现了停滞，这时我们就要密切关注，十字星代表了市场中的不确定性，说明多空双方正处于博弈的平衡状态之中。</p>
+<p>根据史蒂夫·尼森 [7]
+的理论，十字星对市场顶部预测的有效性要高于对市场底部预测的有效性。这个观点的理论基础是，市场如果要继续上升状态，就必须不断有新的买家入场，而市场如果要下跌，却可以无量阴跌。因此，我们经常把十字星称为“上涨趋势破坏者”。</p>
+<p>长腿十字蜡烛图</p>
+<p>如图2-8所示，长腿十字蜡烛图有很长的上、下影线，开盘价和收盘价位于当日交易区间的中间位置，充分反映出在交易日内多空双方都犹豫不决，旗鼓相当，揭示了市场中存在着不确定性。在交易日内，市场急剧地运行至高点，又快速地下跌至低点，或相反，但是最后收盘时又重新回到开盘价附近的位置。如果开盘价和收盘价位于当日价格变化的中心位置，我们就把这样的十字星称为长腿十字星，日语中称为Juji，其含义为“十字架”。</p>
+<p>图　2-8</p>
+<p>墓碑十字蜡烛图</p>
+<p>墓碑十字蜡烛图（hakaishi）如图2-9所示，它是十字蜡烛图的另一种变化形式，开盘价和收盘价都位于当天价格的最低点附近。</p>
+<p>图　2-9</p>
+<p>像许多日本术语一样，墓碑十字蜡烛图也有其形象的含义。实际上，墓碑十字蜡烛图代表了多空双方在市场争夺中失败一方的墓地。</p>
+<p>墓碑十字线的上影线越长，就说明看跌倾向越强。这说明在交易日内，市场价格一直在高位运行，但在收盘时又下跌至开盘价附近，同时也是当天的最低价，这只能说明，在交易日多头数次尝试上攻，使上升趋势得以延续，但空头力量更为强大，屡次挫败多头的计划，并在收盘时将价格重新打落至开盘价，也就是最低价附近。市场顶部出现的墓碑十字蜡烛图是流星蜡烛图（参见第3章）的一种特定形态，所不同的是流星蜡烛图还有很小的一段蜡烛实体部分，而墓碑十字蜡烛图就像它的名字一样根本就不存在实体。一些日本蜡烛图技术分析的文献还认为墓碑十字蜡烛图只能在市场的底部出现，而不是顶部，这意味着这种十字蜡烛图更多的是看涨信号，而非看跌信号
+[8]
+。毫无疑问，这种形态揭示市场中充满了犹豫的情绪，即不确定性和一个趋势即将改变的可能性。</p>
+<p>蜻蜓十字蜡烛图</p>
+<p>蜻蜓十字蜡烛图Tonbo（发音为Tombo），正如图2-10所示，开盘价和收盘价都位于当天价格的最高点。同其他类型的十字蜡烛图一样，蜻蜓十字蜡烛图一般出现在市场趋势的转折点。在本书稍后的章节中，读者会发现这种十字蜡烛图实际上是“上吊线”和“锤子线”这两种形态的特例。带有长下影线的蜻蜓十字蜡烛图也称为“探水竿”（日语中称为Takuri），在市场下降趋势结束时，出现探水竿线一般意味着下降趋势的结束，具有很强的看涨倾向。</p>
+<p>图　2-10</p>
+<p>四价合一蜡烛图</p>
+<p>如图2-11所示，当交易日内开盘价、收盘价、最高价和最低价都相等时，我们就有了一个四价合一十字蜡烛图（four
+price
+doji）（在中国一般称为一字图或一字板），当然这种情况不经常出现。这种一字线也会在交投极为清淡或者数据提供商数据缺失（只有开、收盘价数据，没有其他中间报价）时出现。期货交易者应该注意这种图形和涨跌幅限制之间的区别
+[9]
+。一般来说，交易数据的传输很少出现错误，因此四价合一十字蜡烛图还能反映市场中蔓延着犹豫或不确定性。</p>
+<p>图　2-11</p>
+<p>星蜡烛图</p>
+<p>如图2-12所示，星蜡烛图（一般称为星线）的实体较小，并且在它的实体和它前一天较长的蜡烛图的实体之间形成了一个跳空缺口，这种缺口可以是向上跳空，也可以是向下跳空。一般来说，星线的实体部分应该高于此前蜡烛图的影线，但这也并不是必要条件。星线的出现意味着市场中存在不确定因素。星线在许多蜡烛图形态中都扮演着重要的角色，特别是在反转形态中。</p>
+<p>图　2-12</p>
+<p>纸伞蜡烛图</p>
+<p>如图2-13所示，这种蜡烛线在下一章关于蜡烛图形态的介绍中也会多次被提及。正如我们此前曾提到的一些蜡烛图形态一样，纸伞蜡烛线也具有很强的反转倾向。它和蜻蜓十字星所代表的反转倾向的强度相当。根据它在趋势中出现的位置不同，纸伞蜡烛线又可以分为锤子线和上吊线。</p>
+<p>图　2-13</p>
+<p>结论</p>
+<p>单一的蜡烛图形态在日本蜡烛图的技术分析中占据着重要地位。通过识别这些单根蜡烛图形态或将它们与其他的蜡烛图形态一起结合使用，可以为我们揭示市场参与者的心理或预期的变化。这些单根蜡烛图形态或组合形态的分析方法都是酒田战法的一部分（详见第5章）。但是，本书在酒田战法的基础上，增加了一些新的形态和分析方法。这些形态有的是市场中新出现的，有的则是原始图形的一种演化。</p>
+<p>[3]
+大阳蜡烛图在中国一般俗称为大阳线。本章中我们使用较为书面的名称，读者应认识到大阴蜡烛图、大阴线、大阴等，都是同一形态组合的不同名称。下同。——译者注</p>
+<p>[4]
+Doji的日语原意是同时或同步，在中国因为其形态类似汉字“十”，故将其命名为十字蜡烛图。——译者注</p>
+<p>[5]
+ticks这里译为最小波动点，即最小的报价单位。1个点（pips）之内一般有超过20个最小报价单位（ticks）。——译者注</p>
+<p>[6] 这里原文有误，应为随后出现了一根大阴线。——译者注</p>
+<p>[7] 史蒂夫·尼森是《日本蜡烛图技术》一书的作者。——译者注</p>
+<p>[8]
+这一点正如文中所说，是有争议的，实际交易中，在市场顶部我们也可以经常看到墓碑线。——译者注</p>
+<p>[9]
+这就是一字图，例如期货中1分钟线有时会出现，或一字板，例如一字涨停，因为我们的股票市场中也有涨跌幅限制。——译者注</p>
+<h6 id="阅读日期-2026年09月21日-2026年09月21日-共-1-天">阅读日期：
+2026年09月21日-2026年09月21日 共： 1 天</h6>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

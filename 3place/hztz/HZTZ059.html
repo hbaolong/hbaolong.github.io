@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="hbaolong@vip.qq.com" />
+  <title>华章投资:第21章　我们的实时交易室和实时数据流分析</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">华章投资:第21章　我们的实时交易室和实时数据流分析</h1>
+<p class="author">hbaolong@vip.qq.com</p>
+</header>
+<center>
+<a href="/3place/hztz">返回首页</a> <a
+href="/3place/hztz/mingju.html">本书名句</a> <a
+href="/3place/hztz/memo.html">本书注解</a> <a
+href="/3place/hztz/index_rich.html">丰富目录</a> <a
+href="/3place/hztz/index_readcal.html">同读日历</a> <a
+href="/3place/hztz/index_timeline.html">时间线</a> <a
+href="/3place/hztz/index_books.html">引用书籍</a> <a
+href="/3place/hztz/index_words.html">使用字频</a>
+<div id="wx_pic" style="margin:0 auto;display:none;">
+<img src='/img/logo.png'/>
+</div>
+</center>
+<h4
+id="第21章-我们的实时交易室和实时数据流分析">第21章　我们的实时交易室和实时数据流分析</h4>
+<p>一切都与时机息息相关</p>
+<p>我们在www.tradethemarkets.com最喜欢做的事情之一就是运行一个实时的、基于互联网的虚拟交易室。我们一群人轮流每天、每周从早到晚在这里分享我们的图表和执行平台，实时进行。这里没有“事后诸葛亮”的交易。人们可以利用这个机会看到一群交易室主持者怎样在现实市场条件下使用自己的真实账户做交易。为什么要这样做？为什么使我们自己置身于众目睽睽之下？群众强烈要求？好吧，如果你认为私下里一个人交易充满乐趣，那么在众目睽睽之下交易则更为紧张刺激。当有数百人可以随时指出你犯的错误时，何必再浪费宝贵时间自责呢？</p>
+<p>我已经介绍过使用“锚定图”作为滤除虚弱定式的重要手段。这个论断绝对不容小觑。作为全职的职业交易者，我们最重要的交易工具之一包括，使用多时间段分析（multi-time-frame
+analysis，MTFA）的力量来显著提高成功概率。在我们的日内交易室里，除了TTM挤牌、TTM波浪、TTM趋势、轴心、跳空和市场内部指标，我们日内交易的武器库中还有两个重要工具，即TTM动量和TTM触发器，这是由罗勃·霍夫曼（Rob
+Hoffman）为我们引入交易室的。作为一个交易者，永远没有两个相同的交易日和两笔相同的交易，市场总在那里提醒我们不要骄傲自满，不管我们以此谋生做了多长时间的交易。所以，关键在于你的手边总要有合适的工具来应对当今日新月异的市场条件。</p>
+<p>MTFA概念相当直接。我们寻找一致性，不仅在我们准备交易的时间段上留意买方和卖方的机会，而且还会观察更长的时间段。我们希望确认大型玩家通过几个小时或几天时间变动巨大头寸和一般较小的交易者在较短时间段上快速进出市场之间达成一致的区域。我们与机构资金流动的一致性越强，就越有可能获得成功。关于图表的时间间隔，我们一般使用5分钟、15分钟、30分钟和60分钟图，还有日线图，服务于日内和隔夜短期交易分析。我们还使用各种分笔成交图进行日内分析，例如987分笔图。</p>
+<p>让我们深入探讨定式</p>
+<p>交易者可以有很多种运用TTM动量和TTM触发器的方式。由于篇幅的限制，我在本章中会介绍两种，然后在本章末尾提供一个免费视频的链接，你可以从视频中看到余下的定式，并且对这个多功能的工具集和我们在实时交易室中使用的其他定式进行深入探索。我们用TTM动量和TTM触发器寻找的首要定式是让它们在我们准备交易的任何单独图表上发出相同方向的信号。为了显著提高成功概率，我们希望在下一个更长时间段的图上它们也发出相同方向的信号。</p>
+<p>熟悉TTM动量和TTM触发器</p>
+<p>TTM动量可以在价格图顶部和底部找到，是两根棒线（慢和快），而TTM触发器显示为价格下方的柱状图，见图21-1。</p>
+<p>图　21-1</p>
+<p>（1）缓慢卖出动量棒线可以在图表价格部分的最顶部找到。</p>
+<p>（2）快速卖出动量棒线可以在点2处接近图表价格部分顶部的地方找到，正好在缓慢卖出动量棒线的下方。</p>
+<p>（3）快速买进动量棒线可以在接近图表价格部分底部找到，点3处。</p>
+<p>（4）缓慢买进动量棒线可以在图表价格部分的最底部找到，点4处，即快速买进动量棒线的正下方。</p>
+<p>（5）买方触发器显示为价格图表下方的柱状图中心线上方的竖直棒线，如点5所示。</p>
+<p>（6）卖方触发器显示为价格图表下方的柱状图中心线下方的竖直棒线。这出现在点6处，买方触发器转变为卖方触发器。</p>
+<p>TTM动量和TTM触发器“穿越”交易在单独图表上分析卖出/卖空的交易规则（买进与之相对）</p>
+<p>（1）对于所有期货市场，设置为24小时分时图（股票和ETF图使用正常交易时段）。</p>
+<p>（2）缓慢卖出动量棒线应该发出卖出信号，而TTM触发器应该从买方穿越到卖方。</p>
+<p>（3）入市点出现在TTM触发器收盘在零线下方的棒线收盘时。</p>
+<p>（4）最初的止损一般按照第10章介绍的要点设置。但是，确保评估你正在交易的工具的当前波动性和真实波动幅度均值。例如，在本章写作时，一些工具的真实波动幅度均值正在经历100%~200%的增长。所以，使用与“正常”市场条件相联系的止损将导致你在波动性更强的环境中被“凌迟处死”。有疑问时，削减一半的头寸并使用双倍止损。这样，你用相同数额的资金承担风险，并给予了自己定式在价格走势正常来回波动时生存的机会。</p>
+<p>（5）我们喜欢把赢利目标设为在收盘回到13周期的简单移动平均线（SMA）上方时离场；我们喜欢的另一个目标是跟进移动止损。</p>
+<p>迷你标准普尔——2011年12月合约，2011年9月13日</p>
+<p>（1）缓慢卖出动量棒线开始发挥作用（见图21-2）。</p>
+<p>图　21-2</p>
+<p>（2）TTM触发器穿越到卖方。</p>
+<p>（3）入市点出现在这根棒线收盘时，在1161.75。</p>
+<p>（4）离场点出现在13周期SMA上方第一根棒线收盘时，在1153.25。</p>
+<p>迷你罗素——2011年12月合约，2011年9月23日</p>
+<p>（1）缓慢卖出动量棒线开始发挥作用（见图21-3）。</p>
+<p>图　21-3</p>
+<p>（2）TTM触发器穿越到卖方。</p>
+<p>（3）入市点出现在这根棒线收盘时，在644.80。</p>
+<p>（4）离场点出现在13周期SMA上方第一根棒线收盘时，在632.60。</p>
+<p>迷你道指——2011年9月合约，2011年8月4日</p>
+<p>（1）缓慢卖出动量棒线开始发挥作用（见图21-4）。</p>
+<p>（2）TTM触发器穿越到卖方。</p>
+<p>（3）入市点出现在这根棒线收盘时，在11761。</p>
+<p>（4）这笔交易差点在11733被止损出局，但是它继续进行直到收盘完全高于13周期SMA。</p>
+<p>（5）离场点出现在13周期SMA上方第一根棒线收盘时，在11354。</p>
+<p>TTM动量和TTM触发器“穿越”交易使用多时间段分析买进/做多的交易规则（卖出与之相对）</p>
+<p>（1）对于所有期货市场，设置为24小时分时图（股票和ETF图使用正常交易时段）。</p>
+<p>图　21-4</p>
+<p>（2）在你准备交易的时间段上，缓慢买进动量棒线应该发出买进信号，而TTM触发器应该从卖方穿越到买方。</p>
+<p>（3）在后台，在你监控的下两个更长时间段上，TTM触发器应该都显示买方信号。注意：如果缓慢买进动量棒线也同时出现，就会提高交易的成功率。</p>
+<p>（4）入市点出现在TTM触发器收盘在零线上方的棒线收盘时。</p>
+<p>（5）最初的止损一般按照第10章介绍的要点设置。但是，请参阅前面关于使用ATR的注意事项。</p>
+<p>（6）我喜欢把赢利目标设为在收盘回到13周期简单移动平均线（SMA）下方时离场，或者跟进止损离场。</p>
+<p>迷你标准普尔——2011年12月合约，2011年9月26日</p>
+<p>（1）在这个案例中我们准备交易的图上，缓慢买进动量棒线开始发挥作用（5分钟图，见图21-5）。</p>
+<p>（2）TTM触发器穿越到买方。</p>
+<p>（3）15分钟图和30分钟图TTM触发器都在上涨，如图上点3处所示。</p>
+<p>（4）入市点出现在这根棒线收盘时，在1143.00。</p>
+<p>（5）离场点出现在13周期SMA下方第一根棒线收盘时，在1157.50。</p>
+<p>图　21-5</p>
+<p>迷你罗素——2011年9月合约，2011年8月23日</p>
+<p>（1）在这个案例中我们准备交易的图上，缓慢买进动量棒线开始发挥作用（5分钟图，见图21-6）。</p>
+<p>（2）TTM触发器穿越到买方。</p>
+<p>（3）15分钟图和30分钟图TTM触发器都在上涨，如图上点3处所示。</p>
+<p>（4）入市点出现在这根棒线收盘时，在660.10。</p>
+<p>（5）离场点出现在13周期SMA下方第一根棒线收盘时，在670.90。此时SMA在671.00，收盘比它低1个跳动点。</p>
+<p>迷你道指——2011年9月合约，2011年8月15日</p>
+<p>（1）在这个案例中我们准备交易的图上，缓慢买进动量棒线开始发挥作用（5分钟图，见图21-7）。</p>
+<p>（2）TTM触发器穿越到买方。</p>
+<p>（3）15分钟图和30分钟图TTM触发器都在上涨，如图上点3处所示。</p>
+<p>（4）入市点出现在这根棒线收盘时，在11311。</p>
+<p>（5）离场点出现在13周期SMA下方第一根棒线收盘时，在11371。</p>
+<p>图　21-6</p>
+<p>图　21-7</p>
+<p>TTM动量和TTM触发器“触发反转”交易在单独图表上分析卖出/卖空的交易规则（买进与之相对）</p>
+<p>（1）对于所有期货市场，设置为24小时分时图（股票和ETF图使用正常交易时段）。</p>
+<p>（2）缓慢卖出动量棒线应该发出卖出信号，而TTM触发器应该从上涨的买方触发反转为下跌的买方触发。</p>
+<p>（3）入市点出现在满足后面条件的棒线收盘时，这根棒线上TTM触发器收盘低于前一根棒线并且缓慢卖出动量棒线已经出现。</p>
+<p>（4）最初的止损一般按照第10章介绍的要点设置。但是，请参阅前面关于使用ATR的注意事项。</p>
+<p>（5）我喜欢把赢利目标设为在收盘回到13周期SMA上方时离场，或者跟进止损离场。</p>
+<p>迷你标准普尔——2011年9月合约，2011年8月10日</p>
+<p>（1）缓慢卖出动量棒线发出卖出信号（见图21-8）。</p>
+<p>图　21-8</p>
+<p>（2）TTM触发器从上涨的买方触发反转为下跌的买方触发。</p>
+<p>（3）入市点出现在1163.50，这根棒线收盘时棒线对应的TTM触发器收盘低于前一根棒线并且缓慢卖出动量棒线已经出现。</p>
+<p>（4）离场点出现在13周期SMA上方第一根棒线收盘时，在1135.75。</p>
+<p>迷你罗素——2011年12月合约，2011年9月20日</p>
+<p>（1）缓慢卖出动量棒线发出卖出信号（见图21-9）。</p>
+<p>图　21-9</p>
+<p>（2）TTM触发器从上涨的买方触发反转为下跌的买方触发。</p>
+<p>（3）入市点出现在701.40，这根棒线收盘时棒线对应的TTM触发器收盘低于前一根棒线并且缓慢卖出动量棒线已经出现。</p>
+<p>（4）离场点出现在13周期SMA上方第一根棒线收盘时，在687.10。</p>
+<p>迷你道指——2011年9月合约，2011年8月19日</p>
+<p>（1）缓慢卖出动量棒线发出卖出信号（见图21-10）。</p>
+<p>图　21-10</p>
+<p>（2）TTM触发器从上涨的买方触发反转为下跌的买方触发。</p>
+<p>（3）入市点出现在10882，这根棒线收盘时棒线对应的TTM触发器收盘低于前一根棒线并且缓慢卖出动量棒线已经出现。</p>
+<p>（4）离场点出现在13周期SMA上方第一根棒线收盘时，在10780。</p>
+<p>TTM动量和TTM触发器“触发反转”交易使用多时间段分析买进/做多的交易规则（卖出与之相对）</p>
+<p>（1）对于所有期货市场，设置为24小时分时图（股票和ETF图使用正常交易时段）。</p>
+<p>（2）在你寻求交易的时间段上，缓慢买进动量棒线应该发出买进信号，而TTM触发器应该从下跌的卖方触发反转为上涨的卖方触发。</p>
+<p>（3）在这个时间段的背后，在你监控下的两个更长时间段上，或者两个TTM触发器应该都发出买进信号，或者卖方触发器应该朝中心线上涨。</p>
+<p>（4）入市点出现在满足后面条件的棒线收盘时，这根棒线上TTM触发器收盘高于前一根棒线并且缓慢买进动量棒线已经出现。</p>
+<p>（5）最初的止损一般按照第10章介绍的要点设置。但是，请参阅前面关于使用ATR的注意事项。</p>
+<p>（6）我喜欢把赢利目标设为在收盘回到13周期SMA下方时离场，或者跟进止损离场。</p>
+<p>迷你标准普尔——2011年9月合约，2011年8月8日</p>
+<p>（1）缓慢买进动量棒线在我们准备交易的5分钟图上发出买进信号（见图21-11）。</p>
+<p>（2）TTM触发器在5分钟图上从下跌的卖方触发器反转为上涨的卖方触发器。</p>
+<p>（3）15分钟图和30分钟图TTM触发器两者的棒线都从卖方一根接一根朝向中心线上涨，如图上点3所示。</p>
+<p>（4）入市点出现在1094.75，这根棒线收盘时棒线对应的TTM触发器收盘高于前一根棒线并且缓慢买进动量棒线已经出现。</p>
+<p>（5）离场点出现在13周期SMA下方第一根棒线收盘时，在1129.75。</p>
+<p>图　21-11</p>
+<p>迷你罗素——2011年9月合约，2011年9月12日</p>
+<p>（1）缓慢买进动量棒线在我们准备交易的5分钟图上发出买进信号（见图21-12）。</p>
+<p>（2）TTM触发器在5分钟图上从下跌的卖方触发器反转为上涨的买方触发器。</p>
+<p>（3）15分钟图TTM触发器已经在买方中心线上方，30分钟图TTM触发器正从卖方朝中心线上涨，如图上点3所示。</p>
+<p>（4）入市点出现在667.60，这根棒线收盘时棒线对应的TTM触发器收盘高于前一根棒线并且缓慢买进动量棒线已经出现。</p>
+<p>（5）离场点出现在13周期SMA下方第一根棒线收盘时，在678.00。</p>
+<p>图　21-12</p>
+<p>迷你道指——2011年9月合约，2011年8月8日</p>
+<p>（1）缓慢买进动量棒线在我们准备交易的5分钟图上发出买进信号（见图21-13）。</p>
+<p>（2）TTM触发器在5分钟图上从下跌的卖方触发器反转为上涨的卖方触发器。</p>
+<p>（3）15分钟图和30分钟图TTM触发器的棒线都从卖方一根接一根朝向中心线上涨，如图上点3所示。</p>
+<p>（4）入市点出现在10571，这根棒线收盘时棒线对应的TTM触发器收盘高于前一根棒线并且缓慢买进动量棒线已经出现。</p>
+<p>（5）离场点出现在13周期SMA下方第一根棒线收盘时，在10874。</p>
+<p>图　21-13</p>
+<p>给无法全职交易的人的策略</p>
+<p>在当前经济环境下，找到一个有好老板、上下班耗时短和工资让我们满意的好工作很困难，这是很多崭露头角的交易者希望进入交易行业的原因之一，但是要达到把交易作为全职工作的熟练程度需要时间和精力。我们自己都清楚，当交易和独立是我们的首要目标和梦想，而在交易之前还有第一份甚至第二份工作时会是什么样子。这也是我们让实时交易室可以通过各种便携设备访问的原因之一，比如可以使用iPad和iPhone：让你在路上也可以接触交易室，和你一起工作，这样你在做其他工作挣钱的时候还可以一边学习。与此同时，在你能全面过渡到职业交易者身份之前，你的一个选择是利用下班时间做波段交易。好消息是，前面介绍的所有TTM动量和TTM触发器概念对波段交易都非常有效。唯一的区别在于，对于波段交易，我们分析时集中关注日线图和周线图。请看下面的案例。</p>
+<p>Priceline（PCLN），2010年7月12日</p>
+<p>（1）缓慢买进动量棒线在我们准备交易的日线图上发出买进信号（见图21-14）。</p>
+<p>（2）TTM触发器在日线图上从下跌的卖方触发器反转为上涨的卖方触发器。</p>
+<p>（3）周线TTM触发器已经在买方，如点3所示。</p>
+<p>（4）由于这是一幅日线图，入市点出现在207.10，是TTM触发器收盘高于前一根棒线并且缓慢买进动量棒线已经出现的下一根棒线开盘时。</p>
+<p>（5）离场点出现在13周期SMA下方第一根棒线收盘时，在291.80。</p>
+<p>图　21-14</p>
+<p>苹果公司（AAPL），2011年6月29日</p>
+<p>（1）缓慢买进动量棒线在我们准备交易的日线图上发出买进信号（见图21-15）。</p>
+<p>（2）TTM触发器在日线图上从下跌的卖方触发器反转为上涨的卖方触发器。</p>
+<p>（3）周线TTM触发器已经在买方，如点3所示。</p>
+<p>（4）由于这是一幅日线图，入市点出现在334.70，是TTM触发器收盘高于前一根棒线并且缓慢买进动量棒线已经出现的下一根棒线开盘时。</p>
+<p>（5）离场点出现在13周期SMA下方第一根棒线收盘时，在377.37。</p>
+<p>图　21-15</p>
+<p>总结交易</p>
+<p>TTM动量/触发器定式被设计用来尽早探测和确认趋势，让交易者在趋势的大部分行情中以及趋势内部回调时站在市场正确的一方。它不是被设计作为风险更大的捕捉顶部和捕捉底部的工具。这些定式是很多年前开发的，它们已经经受了很多轮市场周期的考验。</p>
+<p>我们在www.tradethemarkets.com/tradingroom上准备了免费视频，讨论使用这些指标的其他定式，以及我们在实时交易室中进行的各类交易案例。</p>
+<h6 id="阅读日期-2026年09月03日-2026年09月03日-共-1-天">阅读日期：
+2026年09月03日-2026年09月03日 共： 1 天</h6>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>
