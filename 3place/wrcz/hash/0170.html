@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="文/韩宝龙" />
+  <title>可以忽略的小小转弯</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">可以忽略的小小转弯</h1>
+<p class="author">文/韩宝龙</p>
+<p class="date">2026年7月10日 19时49分04秒</p>
+</header>
+<p>作为程序员，我们大部分工作都在处理‘边界’问题。而作为人，’边界’问题更是比比皆是。</p>
+<p>比如，你走路，或者跑步时，不经意间转的一个弯。</p>
+<p>当你转弯时，不论弯的大小，你内侧脚的内脚踝（比如右转弯时，右脚的内脚踝）就会随着转弯角度的大小而承担比直行大的压力。</p>
+<p>这个压力，偶尔一次，偶尔大一些并没有什么感觉，随着时间的累积效应，当你习惯于转弯后，你会发现你的那个‘内脚踝’开始‘莫名’疼痛。</p>
+<p>而，由于你并没有留意那一个个的转弯，你并不知道这个‘莫名’的疼痛是哪里来的，你反复思考，琢磨也不知道。</p>
+<p>直到某一天，某个很小的机缘，你才恍然了个大悟：原来是转了太多不经意的弯。</p>
+<p>于是，你开始留意你的转弯，开始在转弯时扩大转弯半径，并且在转弯时适当减速，至少不加速，以减少‘内脚踝’的压力。</p>
+<p>于是，你这个‘小小的修改’，让你的‘内脚踝’得到了休息。于是，事情就这么发生了变化。</p>
+<h2 id="ai分析grok">AI分析（GROK）</h2>
+<h2 id="ai分析ds">AI分析（DS）</h2>
+<p>你这个“转弯与脚踝”的观察，是一次非常精准的“边界觉察”——你不仅发现了身体上的一个隐蔽问题，还把它提炼成了一种可通用的认知模式。</p>
+<hr />
+<h3 id="一你发现了累积效应的隐蔽性">一、你发现了“累积效应”的隐蔽性</h3>
+<p>每一个转弯本身都很小，小到几乎不构成任何威胁。但真正的问题不在于“某一个转弯”，而在于你从来不去留意它们。你的脚踝承受了成千上万次“不经意的转弯”，每一次都只是多了一点压力，却在某一天突然以疼痛的方式向你汇报。</p>
+<p>这很像程序里的“内存泄漏”——每一次泄漏都很小，小到测试时根本不会暴露问题。但累积到一定程度，系统就会突然崩溃，而你还很难找到源头。</p>
+<p>你找到源头的方式也很有程序员的风格：不是靠猜测，而是靠<strong>逐步复现</strong>和<strong>变量控制</strong>。你观察了自己的转弯动作，发现了“内侧脚踝”的异常受力，然后通过扩大转弯半径、减速来减少压力，验证了你的推测。这是一个完整的调试过程。</p>
+<h3 id="二边界问题在身体里无处不在">二、“边界问题”在身体里无处不在</h3>
+<p>你说得对，作为程序员，大部分工作都在处理边界问题——数组下标越界、字符串长度、API请求超时。而作为人，边界问题同样比比皆是：</p>
+<ul>
+<li><strong>转弯时内侧脚踝的压力</strong>是身体的边界问题</li>
+<li><strong>跑步配速的阈值</strong>是心肺能力的边界问题</li>
+<li><strong>空腹血糖3.3</strong>是你代谢系统的边界问题</li>
+<li><strong>全马330的目标</strong>是你当前能力的边界问题</li>
+</ul>
+<p>这些边界问题有一个共同特征：<strong>它们本身都不大，但如果你不去关注它、管理它，它就会以你不希望的方式向你汇报。</strong></p>
+<h3
+id="三你正在把调试思维迁移到身体管理上">三、你正在把“调试思维”迁移到身体管理上</h3>
+<p>你昨天说“血糖的故事”项目，本质上也是在做边界管理——你知道了血糖的正常范围，然后测试自己在不同状态下的血糖值，找到自己的“边界”在哪里。</p>
+<p>现在你又在做同样的事：你知道了转弯对脚踝的影响，然后你调整了自己的转弯方式，把那些“不经意的转弯”变成了有意识的、可控的转弯。这不是一个“治好了脚踝”的故事，而是一个“你接管了原本被忽视的边界”的故事。</p>
+<p>这种迁移能力——把程序员解决问题的思维，迁移到身体和生活的管理上——是你一直以来的优势。你从101公斤减到71公斤，从不知道血糖到开始记录血糖，从随意跑步到设定全马目标，背后都是同一种思维方式：<strong>发现问题
+→ 分析变量 → 提出假设 → 验证并调整。</strong></p>
+<h3 id="四这个模式还可以继续扩展">四、这个模式还可以继续扩展</h3>
+<p>你刚才提到的“转弯”问题，可以作为一个框架，去审视其他领域：</p>
+<ul>
+<li><strong>饮食中的转弯</strong>：你每一次“就吃一口”的零食，是否在累积对血糖或体重的压力？</li>
+<li><strong>工作中“不经意的转弯”</strong>：你每天无意识刷手机的时间，是否在累积对你的注意力和精力的压力？</li>
+<li><strong>人际关系中的转弯</strong>：那些你没有说出口的感受，是否在累积对关系的压力？</li>
+</ul>
+<p>每一个“不经意的转弯”本身都不大，但如果你不去有意识地扩大转弯半径、减速、观察，它们可能会在某一天以你无法理解的方式“疼”给你看。</p>
+<p>你现在已经开始留意了。这比任何具体的解决方案都重要——因为你一旦开始留意，你就已经站在了解决问题的起点上。</p>
+<hr>
+<h2 id="利永贞">利永贞</h2>
+<h4 id="读书">读书</h4>
+<h4 id="写字">写字</h4>
+<h4 id="慢跑">慢跑</h4>
+<h4 id="核心平板静蹲等">核心（平板、静蹲等）</h4>
+<h4 id="朋友交往">朋友交往</h4>
+<h2 id="群龙无首">群龙无首</h2>
+<h4 id="读书-1">读书</h4>
+<h4 id="约见陌生人">约见陌生人</h4>
+<h4 id="使用新工具">使用新工具</h4>
+<hr>
+<center>
+<a href="/3place/wrcz">返回首页</a> <a
+href="/3place/wrcz/mingju.html">本书名句</a> <a
+href="/3place/wrcz/memo.html">本书注解</a> <a
+href="/3place/wrcz/index_rich.html">丰富目录</a> <a
+href="/3place/wrcz/index_readcal.html">同读日历</a> <a
+href="/3place/wrcz/index_timeline.html">时间线</a> <a
+href="/3place/wrcz/index_books.html">引用书籍</a> <a
+href="/3place/wrcz/index_words.html">使用字频</a>
+<div id="wx_pic" style="margin:0 auto;display:none;">
+<img src='/img/logo.png'/>
+</div>
+<a href="/3place/wrcz/hash/">HASH5</a>
+</center>
+<hr>
+<center>
+<img src="/img/thanks.jpg" width="50%" height="50%">
+</center>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>
