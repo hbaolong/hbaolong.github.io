@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="hbaolong@vip.qq.com" />
+  <title>悲惨世界EN:VIII Privileged Access</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">悲惨世界EN:VIII Privileged Access</h1>
+<p class="author">hbaolong@vip.qq.com</p>
+</header>
+<center>
+<a href="/3place/bcsjen">返回首页</a> <a
+href="/3place/bcsjen/mingju.html">本书名句</a> <a
+href="/3place/bcsjen/memo.html">本书注解</a> <a
+href="/3place/bcsjen/index_rich.html">丰富目录</a> <a
+href="/3place/bcsjen/index_readcal.html">同读日历</a> <a
+href="/3place/bcsjen/index_timeline.html">时间线</a> <a
+href="/3place/bcsjen/index_books.html">引用书籍</a> <a
+href="/3place/bcsjen/index_words.html">使用字频</a>
+<div id="wx_pic" style="margin:0 auto;display:none;">
+<img src='/img/logo.png'/>
+</div>
+</center>
+<h4 id="viii-privileged-access">VIII Privileged Access</h4>
+<p>Though he was entirely unaware of it, the mayor of Montreuil-sur-Mer
+enjoyed a kind of celebrity. After seven years in which the reputation
+of his goodness filled the whole of Lower Boulonnais, it had eventually
+crossed the boundaries of a small community and spread into two or three
+neighbouring départements. Aside from the considerable service he had
+rendered the chief town of Montreuil-sur-Mer itself by reviving the
+black-glass industry, there was not one out of the one hundred and
+forty-one local municipalities in the arrondissement that did not owe
+some benefit to him. He had even succeeded in helping to foster where
+necessary the industries of other arrondissements. So it was that he had
+at one time or another supported with his credit and his funding the
+Boulogne tulle factory, Frévent’s mechanized linen mill, and the
+hydraulically powered looms at Boubers-sur-Canche. Monsieur Madeleine
+was a name everywhere mentioned with great esteem. Arras and Douai
+envied the fortunate little town of Montreuil-sur-Mer its mayor.</p>
+<p>Douai’s Royal Court judge, who was presiding over this session of the
+assizes at Arras, was no less familiar than anyone else with this name
+that was so profoundly and universally respected. When the usher,
+discreetly opening the door that connected the council chamber with the
+court room, bowed behind the judge’s chair and handed him the piece of
+paper on which was written the line we have just read, adding, ‘This
+gentleman wishes to attend the hearing’, the judge gave a deferential
+start, snatched up a pen, wrote a few words on the bottom of the piece
+of paper and returned it to the usher, saying, ‘Show him in.’</p>
+<p>The poor man whose history we are relating had remained at the door
+of the hall in exactly the same place and in exactly the same stance as
+the usher had left him. In the midst of his musings he heard someone say
+to him, ‘Would monsieur kindly do me the honour of following me?’ It was
+this same usher who had turned his back on him only a moment earlier and
+who was now bowing and scraping before him. At the same time, the usher
+handed him the piece of paper. He unfolded it and, happening to be near
+the lamp, he was able to read it.</p>
+<p>‘The Presiding Judge of the Court of Assizes presents his respects to
+Monsieur Madeleine.’</p>
+<p>He crushed the paper in his hand as if these words might have had for
+him a strange and bitter aftertaste.</p>
+<p>He followed the usher.</p>
+<p>A few minutes later he found himself alone in an austere-looking
+panelled room, lit by two candles set on a green baize table. He could
+still hear the last words spoken by the usher who had just left him:
+‘Monsieur, you are now in the council chamber. You have only to turn the
+brass handle of that door and you’ll find yourself in the court room
+behind monsieur le président’s chair.’ These words mingled in his
+thoughts with a vague memory of narrow corridors and dark staircases
+that he had just passed through.</p>
+<p>The usher had left him on his own. The final moment had come. He
+tried to gather his thoughts, but without succeeding. It is especially
+at those times when they most need to be attached to the painful
+realities of life that the threads of thought all break in the mind. He
+was in the very place where the judges deliberate and reach a verdict.
+With a dazed tranquillity he surveyed this quiet and forbidding room
+where so many lives had been destroyed, where his name was soon to
+reverberate, and through which his fate was now taking him. He stared at
+the wall, then stared at himself, wondering at this chamber and
+wondering at his being here.</p>
+<p>He had eaten nothing for more than twenty-four hours, he was
+exhausted by the jolting of the cart, but he did not feel it. It seemed
+to him that he did not feel anything.</p>
+<p>He approached a black frame that hung on the wall and contained,
+under glass, an old autograph letter of Jean-Nicolas Pache, minister and
+mayor of Paris, dated, no doubt mistakenly, 9 June year II, in which
+Pache sent the Commune the list of ministers and deputies under house
+arrest. Anyone who might have seen him and observed him at that moment
+would probably have imagined that he found this letter very intriguing,
+for he did not take his eyes off it, and read it two or three times. He
+read it unknowingly, without paying any attention to it. He was thinking
+of Fantine and Cosette.</p>
+<p>While musing, he turned round, and his eyes fell on the brass handle
+of the door that separated him from the assizes court room. He had
+almost forgotten about this door. His gaze, at first calm, settled on
+it, remained fastened on that brass handle, then became scared and
+intent, and little by little was stamped with terror.</p>
+<p>Beads of sweat seeped through his hair and trickled down his temples.
+At a certain moment, with a kind of authority mixed with rebellion, he
+made that indescribable gesture that expresses its meaning very well:
+‘Damn it! Who’s forcing me to do this?’ Then he wheeled round, saw
+before him the door he had come in by, went over to it, opened it, and
+walked out. He was no longer in that chamber, he was outside in a
+corridor, a long narrow corridor, intersected with steps and
+passageways, turning this way and that, lighted here and there by lamps
+similar to the night-lights of the sick: the corridor that had brought
+him here. He inhaled, he listened: not a sound behind him, not a sound
+ahead of him. Then he fled as if he were being chased.</p>
+<p>When he had turned several corners along this corridor he listened
+again. There was still the same silence and the same gloom around him.
+He was breathless. He was reeling. He leaned against the wall. The stone
+was cold. His sweat was icy on his brow. He drew himself up with a
+shiver.</p>
+<p>Then, standing there alone in the darkness, trembling with cold, and
+something else as well perhaps, he pondered.</p>
+<p>He had been pondering the whole night. He had been pondering the
+whole day. All he could hear within him now was a voice that said,
+‘Alas!’</p>
+<p>A quarter of an hour went by like this. Finally he bowed his head,
+sighed with anguish, let his arms drop, and retraced his steps. He
+walked slowly and as though crushed. It was as if someone had caught up
+with him as he fled and was bringing him back.</p>
+<p>He re-entered the chamber. The first thing he saw was the door knob.
+That round knob of polished brass shone for him like some terrible star.
+He stared at it as a lamb would stare into the eyes of a tiger. He could
+not tear his gaze away from it.</p>
+<p>From time to time he took a step forward and moved closer to the
+door.</p>
+<p>Had he listened, he might have heard the sound, a kind of vague
+murmur, that came from the next room. But he did not listen and he did
+not hear.</p>
+<p>Without knowing how, he suddenly found himself at the door. He
+grabbed the knob convulsively. The door opened.</p>
+<p>He was inside the court room.</p>
+<h6 id="阅读日期-2026年10月04日-2026年10月04日-共-1-天">阅读日期：
+2026年10月04日-2026年10月04日 共： 1 天</h6>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>
