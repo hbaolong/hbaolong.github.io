@@ -1,0 +1,1652 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="hbaolong@vip.qq.com" />
+  <title>自由的窄廊EN:Chapter 9 DEVIL IN THE DETAILS</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">自由的窄廊EN:Chapter 9 DEVIL IN THE DETAILS</h1>
+<p class="author">hbaolong@vip.qq.com</p>
+</header>
+<center>
+<a href="/3place/zydzlen">返回首页</a> <a
+href="/3place/zydzlen/mingju.html">本书名句</a> <a
+href="/3place/zydzlen/memo.html">本书注解</a> <a
+href="/3place/zydzlen/index_rich.html">丰富目录</a> <a
+href="/3place/zydzlen/index_readcal.html">同读日历</a> <a
+href="/3place/zydzlen/index_timeline.html">时间线</a> <a
+href="/3place/zydzlen/index_books.html">引用书籍</a> <a
+href="/3place/zydzlen/index_words.html">使用字频</a>
+<div id="wx_pic" style="margin:0 auto;display:none;">
+<img src='/img/logo.png'/>
+</div>
+</center>
+<h4 id="chapter-9-devil-in-the-details">Chapter 9 DEVIL IN THE
+DETAILS</h4>
+<p>European Diversity</p>
+<p>Though as we have seen in Chapter 6 the two blades of the European
+scissors put much of the continent near or inside the corridor, quite a
+bit of diversity remained and developed over the next several centuries.
+England was moving in the corridor toward a much more participatory form
+of government overseeing the deepening of the state’s capacity. The
+Swiss Confederation, squeezed between France, Italy, southern Germany,
+and Austria, was likewise already inside the corridor and had created
+both a “citizen army” to defend itself against the Habsburgs and a
+powerful assembly controlling politics. In the words of Niccolò
+Machiavelli in The Prince, written in 1513:</p>
+<p>Rome and Sparta for many centuries stood armed and free. The Swiss
+are extremely well armed and are very free.</p>
+<p>Indeed, Tom Scott’s summary of the consensus among historians is that
+Swiss peasants were “free of feudal servitude and, as a sign of their
+liberty, these mountain peasants bore arms and demanded ‘honour’ even
+from nobles . . . Their medieval clan structures had little to do with
+our images of democratic forms but these peasants were ‘free.’” Farther
+north, however, Prussia developed a very different type of state, whose
+despotic character is epitomized by the French philosopher Voltaire’s
+quip that while</p>
+<p>other states possess an army, Prussia is an army which possesses a
+state.</p>
+<p>A little farther south the situation was completely different in
+Albania and Montenegro, which lacked any centralized authority and
+continued to experience uncoordinated violence well into the twentieth
+century. The Montenegrin writer and intellectual Milovan Djilas
+described the extent of feuding in the 1950s by writing about his own
+family history:</p>
+<p>The men of several generations have died at the hands of
+Montenegrins, men of the same faith and name. My father’s grandfather,
+my own two grandfathers, my father, and my uncle were killed, as though
+a dread curse lay upon them . . . generation after generation, and the
+bloody chain was not broken. The inherited fear and hatred of feuding
+clans was mightier than fear and hatred of the enemy, the Turks. It
+seems to me that I was born with blood in my eyes. My first sight was of
+blood. My first words were blood and bathed in blood.</p>
+<p>What explains these differences? Why did these European polities
+diverge so sharply starting from broadly similar conditions?</p>
+<hr />
+<p>—</p>
+<p>In this chapter we explain how our conceptual framework is useful for
+answering these questions and in the process show how it sheds light
+more broadly on the effects of political, international, economic, and
+demographic changes, sometimes referred to as “structural factors.” The
+most common way in which social scientists have discussed the
+implications of different structural factors is by arguing that they
+create natural affinities for certain types of economic and political
+development—for example, war and military mobilization are argued to
+induce greater state capacity, while certain types of crops, such as
+sugar and cotton, lead to despotism and others, such as wheat, prepare
+the conditions for democratic politics. Our framework shows why this is
+not necessarily so. The same structural factor can have very different
+impacts on a polity’s political trajectory depending on the prevailing
+balance of power between state and society.</p>
+<p>The key ideas can be seen in the context of Figure 1 from Chapter 2
+summarizing our conceptual framework, which is replicated here as Figure
+2. It makes clear that broadly similar conditions in terms of the power
+of state and society are no guarantee that two different polities will
+follow very similar trajectories. That depends on whether they are on
+the same side of the boundaries demarcating the regions of the Despotic,
+Shackled, and Absent Leviathans. This figure also highlights the fact
+that the effects of structural factors will be quite distinct depending
+on the initial positions of different nations. Take an increase in the
+state’s capacity, which in the figure corresponds to a vertical move up
+as the state’s power increases (while society’s power remains
+unchanged). This could be just the shift that puts a polity inside the
+corridor, as Arrow 1 in the figure indicates. But it could also be the
+force that moves a society that was lodged in the corridor away from it
+and toward the Despotic Leviathan, as Arrow 2 illustrates. Or it might
+be not so consequential at all because it moves a society with the
+Absent Leviathan a little bit closer to the corridor, but leaves its
+long-run destination unaltered, as shown with Arrow 3. So when it comes
+to the effects of structural factors the devil is decidedly in the
+details.</p>
+<p>Figure 2. The Divergent Effects of an Increase in the Power of the
+State</p>
+<p>In the rest of this chapter, we develop these ideas, first focusing
+on European history and the contrast between Switzerland, Prussia, and
+Montenegro, and a very specific type of structural factor—the increase
+in the capacity and power of the state brought forth by military
+mobilization and war. These ideas and their applications are not
+confined to European history. We show that they are also useful in
+understanding how more recent big shocks have led to highly diverse
+responses, for example, in the context of the collapse of the Soviet
+Union, which opened the way to the birth of all kinds of states in
+Eastern Europe and Asia. We finally discuss how the first wave of
+economic globalization in the second half of the nineteenth century
+differentially impacted individual postcolonial societies, focusing in
+particular on the divergence between Costa Rica and Guatemala.</p>
+<p>War Made the State, and the State Made War</p>
+<p>This title is a direct quote from the political sociologist Charles
+Tilly, who formulated one of the most famous theories about the role of
+a specific structural factor—increased incidence and threat of
+interstate warfare—on state building. He applied this idea to Western
+Europe in the early modern period arguing that the threat of increased
+warfare following the “military revolution” in the seventeenth century
+led to the creation of modern states. The military revolution introduced
+more portable and powerful firearms, new military tactics, and improved
+fortifications. Standing armies and intensified interstate competition
+followed. Tilly argued that it revolutionized politics too because it
+forced states to create much more effective systems for raising taxes
+and providing infrastructure so they could pay for, equip, and transport
+larger militaries. In terms of our theory, this corresponds to an
+induced increase in the state’s power in order to deal with the
+necessities of war. Tilly was right that such a change can fundamentally
+alter the dynamics of political development, as Arrow 1 in Figure 2
+illustrates, but it can have quite different implications as well.</p>
+<p>Switzerland provides the perfect illustration of Tilly’s argument,
+even if state building in this case predates the military revolution.
+Switzerland was historically part of the Holy Roman Empire, the
+successor institution to the eastern part of Charlemagne’s Carolingian
+Empire. The empire still had an emperor, but it had fragmented into many
+small and relatively independent polities, and the emperor was actually
+elected by some of them. We have already seen how in northern Italy,
+which was quite far from the core of the empire centered on Germany,
+these polities asserted their independence. Switzerland was also on the
+periphery of the empire, even if not separated and isolated by the Alps
+like Italy. The Holy Roman Empire’s imperfect control over this area
+allowed the component Swiss polities, the cantons, to develop their own
+systems of assemblies. These cantons, some rural, some largely urban,
+thus came to reflect the broader pattern of assembly politics inherited
+from Germanic tribes, which had reemerged as the empire had weakened.
+The Swiss Confederation started in 1291 with the cantons of Uri, Schwyz,
+and Unterwalden taking oaths and signing the Bundesbrief (Federal
+Charter) at Rütli, a meadow above Lake Lucerne (see Map 13). The charter
+was an attempt toward centralization of authority and was particularly
+concerned with public order and lawlessness. The first substantive
+clause read:</p>
+<p>Thus, all people of the valley community of Uri, the entirety of the
+Schwyz valley and the community of people from the lower Unterwalden
+valley recognize the malice of the times and for their own protection
+and preservation they have promised to assist each other by every means
+possible with every counsel and favor, with persons or goods within
+their valleys and without against any and all who inflict on them or any
+among them acts of violence or injustice against persons or goods.</p>
+<p>It was in effect a pact committing the three cantons to come to one
+another’s aid and providing a framework for resolving disputes, stating
+that “should disputes arise among any of the people bound by this oath,
+the most prudent among the confederates shall settle the conflict
+between the parties. All other confederates shall defend this verdict
+against anyone who rejects it.” It didn’t specify who the “most prudent”
+was, but this clause is interpreted as stipulating arbitration by one of
+the cantons if two others, or the citizens of two others, got into a
+dispute. Might we have here the roots of the fabled Swiss ability to
+find compromises?</p>
+<p>Map 13. European Divergence: Brandenburg-Prussia, Switzerland, and
+Montenegro</p>
+<p>Uri, Schwyz, and Unterwalden were all part of the Holy Roman Empire.
+They were supposed to be subservient to the Habsburg Duke of Austria.
+They had no business signing pacts. The Habsburgs didn’t approve of such
+autonomous organization, and they certainly didn’t like the clause that
+read:</p>
+<p>We have further unanimously vowed and established that we in these
+valleys shall accept no judge who has gained his office for money or for
+any other price and who is not our resident or native.</p>
+<p>No Habsburg judges were to be tolerated anymore. In 1315 the first
+Habsburg army was driven off after the battle of Morgarten. More pacts
+followed and what came to be known as the Swiss Confederation spread.
+Lucerne joined in 1332. The League of Zurich of 1351 specifically
+stipulated that everyone who signed would come to the aid of any other
+threatened by the Habsburgs. Glarus joined in 1352 and Bern in 1353.
+Duke Leopold II of Austria finally decided to put a stop to this Swiss
+recalcitrance, but his army was routed at the battle of Sempach in 1386
+by the combined forces of the confederation. Leopold himself was killed
+along with a lot of the local nobility who had been fighting with him.
+This didn’t exactly free the Swiss from Habsburg dominance. That had to
+wait until a final war in 1499, followed by the Treaty of Basel, which
+recognized the confederation’s de facto autonomy. Undeterred, the
+bottom-up construction of the Swiss state continued throughout the
+fifteenth century. As part of this process, rural people bought
+themselves out of any residual feudal obligations, and as that happened,
+what was left of the Swiss nobility slowly withered away. By this time
+the transformation going on among the Swiss had been noticed throughout
+the empire and the expression “schweytzer werden”—“going Swiss”—was
+coined. It meant peasants trying to become autonomous. After 1415 an
+assembly made up of delegates from all the cantons in the confederation
+began to meet regularly. Fribourg and Solothurn were admitted in 1481,
+Basel and Schaffhausen in 1501, and Appenzell in 1513.</p>
+<p>Consistent with Tilly’s theory, this all happened in the context of
+rising military threats from the Habsburgs, which made it more
+beneficial for the cantons to come together and increase the Swiss
+state’s capacity. The victory at Sempach had shown the power of Swiss
+infantry even over armored knights. As early as 1424 Florence asked the
+Assembly of the confederation for mercenaries, and for the next few
+centuries the Swiss specialized in providing such troops for warring
+countries all over Europe. At first the recruitment of these mercenaries
+was decentralized, organized by private entrepreneurs and various
+cantonal bodies. But it became apparent that the mercenary activity
+posed a threat to security and to the state’s authority. So the Assembly
+passed a law in 1503 stipulating that a majority of the body had to
+approve any recruitment. One reason for this was to avoid the
+possibility of two Swiss armies facing off against each other, as had
+happened in Novara in 1500 with one in the employ of France, the other
+fighting for Milan. The final peace with the Habsburgs didn’t stop
+further threats from France, Milan, and the Dukes of Württemberg, and
+the military exigencies facing the Swiss state continued, as did the
+process of state building.</p>
+<p>In the Swiss case the threat of warfare, in particular the persistent
+threat from the Habsburgs to reinstate the overlordship of the Holy
+Roman Empire, seems to have been an important incentive for the
+otherwise individualistic cantons and cities to unite into a larger
+confederation, centralize authority, and increase their state’s
+capacity. Before this centralization, the Swiss cantons were arguably
+outside the corridor, relying on clan structures rather than laws or
+state authority for resolving disputes or enforcing laws. But this
+inheritance also meant that Swiss peasants were free and society already
+mobilized. The centralization that began in 1291 came in the context of
+a society that was strong enough to withstand and counterbalance the
+increasing power of the state, engendering a transition into the
+corridor and spearheading a process of gradual expansion of the
+capabilities of both state and society.</p>
+<p>The movement of state and society along the corridor created not just
+the conditions for liberty but also, predictably, incentives and
+opportunities for economic prosperity. The Swiss became famous first for
+their watches and subsequently their machine tool industry, and then
+they took over the world pharmaceutical industry. They used their
+comparative advantage in cows and milk to become a major producer of
+chocolates. Switzerland has the highest income per capita of any
+European country (not counting the small enclaves such as Luxembourg and
+Monaco).</p>
+<p>War made the state in Switzerland, as Tilly would have it, but it
+also made society. Switzerland went on to build one of the most vibrant
+democracies in Europe. Yet as Figure 2 emphasizes, such a process is by
+no means preordained. The threat of war can unleash very different
+dynamics too.</p>
+<p>The Sort of State That War Made</p>
+<p>You don’t have to look far within Europe to see that if war made the
+state, it made very different types of states in different
+circumstances. The prime example is Prussia. Though Prussia was never
+part of the Holy Roman Empire, in 1618 it merged through marriage with
+Brandenburg, which was (see Map 13). The ruling family of Brandenburg,
+the Hohenzollerns, became the ruling family of Brandenburg-Prussia, with
+the ruler known as the elector. These were difficult times, as the
+Thirty Years War was afoot and invading armies crisscrossed Central
+Europe. The elector Georg Wilhelm desperately tried to stay out of the
+conflict, but had to cave in when told by the king of Sweden, Gustavus
+Adolphus, that neutrality was not an option. “What can I do? They’ve all
+the big guns,” was how Georg Wilhelm famously reported the incident.
+Brandenburg was particularly devastated, losing as much as half of its
+population.</p>
+<p>In 1640 Frederick William I came to the throne as the new elector. He
+ruled for forty-eight years and charted a new course for
+Brandenburg-Prussia, and in the process came to be known as the Great
+Elector. The Prussian experience during the Thirty Years War convinced
+Frederick William that he too needed “big guns.” As he put it:</p>
+<p>I have experienced neutrality before; even under the most favorable
+circumstances, you are treated badly. I have vowed never to be neutral
+again as long as I live.</p>
+<p>This all meant greater state capacity. With big guns, the state could
+control more. But to get big guns, it needed more tax revenues. More tax
+revenues would be easier to raise if Frederick William could increase
+his power over society, and that’s what he did. Previously taxes had to
+be negotiated with various representative bodies, such as the Estates of
+Kurmark in Brandenburg. He started out by trying to get permanent grants
+of taxation, which would free him from the need to endlessly seek the
+approval of the estates. In 1653 he negotiated the so-called Brandenburg
+Recess, which gave him 530,000 thalers over a period of six years.
+Crucially, he, rather than the Estates of Kurmark, got to collect the
+taxes. In exchange he gave the nobility, which made up a chamber in the
+estates, tax-exempt status. This was a clever strategy of “divide and
+rule,” which successfully separated the different chambers of the
+estates and made sure they would not form a unified force against him.
+He went on to extract similar concessions from the Prussian estates.</p>
+<p>Frederick William then overrode the authority of the estates and
+started to tax without their agreement, something he could do because
+the 1653 decision allowed him to initiate the building of a tax
+administration. In 1655 he founded the Kriegskommissariat (“war
+commissary”), which covered both tax collection and military
+organization. By 1659 the estates had already atrophied and retreated to
+just dealing with local issues. Frederick William also transformed the
+royal council, previously made up of a few aristocrats, into an
+administration staffed by professional officials. Between 1348 and 1498,
+16 universities were founded within central Europe and by 1648 another
+18 opened. This meant that there was a large pool of well-qualified
+graduates trained in Roman law who could be attracted to staff a
+meritocratic bureaucracy. Governors were appointed to run the various
+territories under the elector’s control. After 1667 he introduced
+indirect taxes on trade. The administration of the royal estates was
+also reconfigured and the land was let out to private farmers for money,
+dramatically increasing government revenues. By 1688, Brandenburg,
+Prussia, and Kleve-Mark, the largest territories, were paying one
+million thalers a year in taxes, with about another 600,000 coming in
+from the other regions under Frederick William’s control.</p>
+<p>In 1701 Frederick William’s son Frederick III changed
+Brandenburg-Prussia to the Kingdom of Prussia and crowned himself King
+Frederick I. His son King Frederick William I (not to be confused with
+the Great Elector of the previous century with the identical name) ruled
+between 1713 and 1740, and his grandson Frederick II, known as Frederick
+the Great, ruled from 1740 to 1786. Father and son intensified the
+project that the Great Elector had started.</p>
+<p>In 1723 the bureaucracy was restructured again with the creation of
+the General Directory, merging the previous war commissary with the
+administration of the royal estates and putting everything at the
+service of the military. In 1733 Frederick completely reorganized the
+basis of military recruitment. He divided the territory into cantons of
+5,000 households with a regiment assigned to each for recruitment. At
+the age of ten every male child was included in the recruitment rolls.
+Though some occupations and people were exempted, at least a quarter of
+the male population was included in the rolls. This dramatically
+increased the potential size of the army. In 1713 the army had about
+30,000 soldiers in peacetime. By 1740, when Frederick the Great took
+over from his father, the figure was 80,000. In the meantime his father
+had managed to increase tax revenues by almost one half. Frederick the
+Great had a new strategy for further expanding Prussia’s tax base and
+military machine: he launched an aggressive strategy of territorial
+expansion.</p>
+<p>War might have made the state in Prussia, but it made a famously
+despotic one. That’s certainly how its rulers thought about it. The
+Great Elector himself observed, “So long as God gives me breath, I shall
+assert my rule like a despot . . .” Frederick the Great agreed,
+remarking:</p>
+<p>A well-run government must have a firmly established system . . . in
+which finance, policy and military all combine to promote the same end,
+the strengthening of the state and the expansion of its power. Such a
+system can only derive from one brain.</p>
+<p>In the sixteenth century Prussia, like many other parts of the Holy
+Roman Empire, was inside the corridor with the powerful estates
+constraining the monarchy. Warfare, by increasing the state’s power,
+pushed it out of the corridor, as Arrow 2 in Figure 2 illustrates—a very
+different outcome from the one that warfare helped create in
+Switzerland. Prussia didn’t look back and rapidly progressed along the
+despotic path.</p>
+<p>This had predictable consequences for liberty, which far from
+flourishing as in the Swiss case, was completely snuffed out. In the
+assessment of the British envoy Hugh Elliot:</p>
+<p>The Prussian monarchy reminds me of a vast prison in the center of
+which appears the great keeper occupied in the care of his captives.</p>
+<p>Freedom on the Heights</p>
+<p>The impact of warfare isn’t confined to creating Shackled or Despotic
+Leviathans. Montenegro had a large number of similarities to
+Switzerland. It too had been part of the Roman Empire, even if more
+peripherally, and it shared a mountainous ecology and an economy based
+on herding. The great historian Fernand Braudel emphasized how European
+terrain created particular types of societies, arguing that “mountains
+are mountains: that is, primarily an obstacle, and therefore a refuge, a
+land of the free.” Free, like the Swiss. But in some sense people were
+pretty free in Montenegro and Albania too. Edith Durham, one of the
+first Western Europeans to systematically study the Balkans, starts her
+famous book High Albania with a line from a poem by Lord Tennyson, “Of
+old sat freedom on the heights.” Yet the connection between freedom and
+the state is complex. As we’ve seen, the expansion of the state is often
+resisted because people want to preserve their freedom from its
+authority. That’s exactly what happened in Montenegro even though it
+continually experienced the pressure of warfare.</p>
+<p>Prior to 1852 Montenegro was in effect a theocracy, but one wherein
+the ruling bishop, the vladika, could exercise no coercive authority
+over the clans that dominated society. After a visit to Montenegro in
+1807, the French general Marmont observed, “This Vladika is a splendid
+man, of about fifty-five years of age, with a strong spirit. He conducts
+himself with nobility and dignity. His positive and legal authority is
+unrecognized in his country.”</p>
+<p>The key to understanding why this was so and why no state formed in
+Montenegro is that it was further from the corridor than Switzerland
+was. It was made up of kinship groups, clans, and tribes, and lacked the
+elements of centralization that the Swiss had inherited from the
+Carolingians. There are many similarities between Montenegro and other
+societies, such as the Tiv, that have steadfastly refused centralized
+state authority. As one scholar put it for Montenegro, “Continued
+attempts to impose centralized government were in conflict with tribal
+loyalty.”</p>
+<p>Warfare with the Ottomans did induce the clans to try to coordinate
+more. Just before a key battle at Krusi in 1796 an assembly of
+Montenegrin tribal chiefs met at Cetinje and adopted a measure called
+Stega, or “fastening,” which proclaimed the unification of the
+Montenegrin heartlands. Two years later they met again and agreed to
+convene a “council” of fifty members, in effect the first time there had
+been any institutionalized structures of government above the tribe. The
+first attempt at a legal code in 1796 by Vladika Peter I reflected the
+fact that order in society was regulated by the institution of blood
+feuds and included the clauses:</p>
+<p>A man who strikes another with his hand, foot, or chibouk, shall pay
+him a fine of fifty sequins. If the man struck at once kills his
+aggressor, he shall not be punished. Nor shall a man be punished for
+killing a thief caught in the act.</p>
+<p>If a Montenegrin in self-defense kills a man who has insulted him . .
+. it shall be considered that the killing was involuntary.</p>
+<p>This looks more like Clovis’s Salic Law or King Alfred’s law code
+than a modern legal system. But there was little of the subsequent
+state-building effort of Clovis or Alfred in this case. The feud
+continued with centralized state authority nowhere in sight.</p>
+<p>The lack of state authority and dominance of the feud lasted
+sufficiently long that the anthropologist Christopher Boehm was able to
+reconstruct it in great detail in the 1960s. Boehm captures the
+essential difficulty of central authority in Montenegro when he writes,
+“It was only when their central leader attempted to institutionalize
+forcible means of controlling feuds that the tribesmen stood firm in
+their right to follow their ancient traditions. This was because they
+perceived in such interference a threat to their basic political
+autonomy.” Boehm is referring to the attempts of Vladika Njegoš to
+establish the state’s authority in Montenegro in the 1840s. Djilas
+analyzed the same situation in the following terms:</p>
+<p>It was a clash between two principles—the state and the clan. The
+former stood for order and a nation, and against chaos and treason; the
+latter stood for clan freedoms and against the arbitrary actions of an
+impersonal central authority—the Senate, the Guard, the captains.</p>
+<p>Djilas records that Njegoš’s reforms were immediately confronted by
+the revolt of the Piperi and Crmnica clans because “the imposition of
+government and a state was putting an end to the independence and
+internal freedom of the clans.” Njegoš was succeeded by his nephew
+Danilo, who made himself the first secular prince of Montenegro in 1851,
+but his project to build something resembling a state ran into fierce
+opposition too. An attempt to raise taxes in 1853 triggered clan revolts
+with the Piperi, Kuči, and Bjelopavlići declaring themselves independent
+states. A member of the Bjelopavlići assassinated Danilo in 1860.</p>
+<p>War did make states of different sorts in Switzerland and Prussia,
+but not so in Montenegro or, for that matter, in neighboring Albania,
+where society remained highly fragmented and suspicious of centralized
+power. Montenegrins fought the Ottomans not by creating a powerful
+centralized authority but by using their tribal structures. Any pressure
+to increase state capacity, just as with Arrow 3 in Figure 2, was not
+sufficient to bring Montenegro or Albania close to the corridor. They
+would stay with the Absent Leviathan.</p>
+<p>Our theory also highlights the ironic implications of this resistance
+for liberty. Even though they remained free from state control, and
+maintained their egalitarian clan structures, Montenegrins were still
+subject to dominance and insecurity due to endemic feuding. For them
+this was better than being dominated by the Ottomans or the vladika, but
+it was still very far from liberty. Society was armed and violent. An
+interesting question is, Why, in contrast to many other stateless
+societies, such as the Asante, the Tiv, and the Tonga, whom we have seen
+in Africa, did Montenegro or Albania not develop norms to control feuds
+and recurrent violence? One possibility is that this was in fact because
+of the incessant wars. Violence had to be part of any order in these
+societies, and this made it difficult to create any type of nonviolent
+social order.</p>
+<p>Differences That Matter</p>
+<p>Readers familiar with our earlier book Why Nations Fail will see some
+parallels between our discussion of the divergent implications of
+structural factors here and the role of small institutional differences
+during critical junctures in our earlier work. Our discussion in Why
+Nations Fail emphasized how large shocks can lead to very different
+responses depending on prevailing institutions. Our theory here goes
+further both because it distinguishes between societies under the
+control of despotic states and those without any centralized state, and
+also because it explicitly focuses on the dynamics of the state’s
+capacity and society’s ability to control the state and the elites. This
+enriched framework leads to a more nuanced discussion by clarifying the
+sources of divergent behavior—changes in various structural factors can
+move us into different parts of Figure 2. This framework highlights the
+dynamic implications of such differences in a way that goes considerably
+beyond our earlier book. For example, Prussia, like Switzerland, was
+able to build considerable state capacity in the face of increasing
+threats of interstate warfare, but this ushered in a very different type
+of evolution of the state.</p>
+<p>Indeed, consistent with our theory here, Prussia ultimately ended up
+with less state capacity than Switzerland. This may at first appear
+paradoxical. Shouldn’t all of that emphasis on controlling society,
+raising revenues, and fighting wars lead to a huge amount of capacity?
+The fact that it doesn’t is one of the distinctive implications of our
+theory as already emphasized in Chapter 2. In the absence of the Red
+Queen effect, the development of state capacity will remain
+incomplete.</p>
+<p>Take one of the most basic public services a state is supposed to
+provide—dispute resolution and justice. Though Prussia created a
+despotic state, it did this without the cooperation of society. As a
+result, state institutions were built on preexisting feudal structures.
+The new merit systems were merged with an older structure described by
+one historian as being “sustained by aristocratic patronage, social
+heredity, amateurism, and, often, proprietary tenure.” This tenure was
+evident in the prominence of several aristocratic families, for example,
+the Heinitzes, von Redens, von Hardenbergs, von Steins, Dechens,
+Gerhards, and their kinsmen dominating bureaucratic offices. As they
+filled the positions at the top, they intensively repressed the serfs at
+the bottom, who made up 80 percent of the labor force in agriculture.
+They achieved this through their control of manorial courts, which could
+administer punishments ranging from small fines for minor misdemeanors
+to corporal punishments, including whippings and imprisonment. So there
+was little provision of justice, but instead a systematic use of courts
+to impose the feudal order. Although it looked impressive, this despotic
+state had a hard time enforcing most of its policies. An obvious
+consequence of this lack of capacity, despite all the tax revenues and
+military expenditures, was the shattering defeat of Prussian armies at
+Jena in 1806. A big French advantage came from the fact that three
+different people were nominally in charge of the Prussian army and they
+had five different battle plans which they couldn’t agree on.</p>
+<p>The situation in Switzerland was very different. The Swiss
+confederacy was founded in 1291 on a demand for the objective resolution
+of disputes, which Habsburg courts did not deliver. Magistrates were
+elected at the local level and the state was built up from the bottom by
+a series of oaths, covenants, and pacts that recognized the autonomy and
+self-governance of local society. Feudal dues lapsed or were negotiated
+away. Manorial courts were gradually replaced by equality before the
+law. The Swiss eradicated the type of local despotism that Prussian
+peasants had to put up with (and did not cooperate with if they could
+get away with it).</p>
+<hr />
+<p>—</p>
+<p>Armed with this general framework, we now revisit several iconic
+turning points in European history, some of which were discussed in Why
+Nations Fail, but now with additional insights about the dynamics that
+they imply for European states and societies.</p>
+<p>One important turning point in Europe in the fourteenth and fifteenth
+centuries was the huge collapse of the population following the Black
+Death. As we saw in Chapter 6, the feudal order, even if it could not
+completely obliterate the balance between state and society in England,
+had created a significant edge for elites in their control over peasants
+and society in many parts of Europe. With declining populations and
+society getting emboldened as a result of the greater scarcity of labor,
+feudal elites became less able to control and obtain taxes and servile
+labor obligations from their serfs. Serfs asked for their obligations to
+be reduced and, despite feudal restrictions on labor mobility, started
+leaving manors. In our framework, this change corresponds to an increase
+in the power of society, and in many parts of Western Europe the result
+was a further move away from despotic control of the state and elites
+over society. This was a significant step up in the corridor. But in
+Eastern Europe, where, by the fourteenth century, landowners and elites
+were already more dominant, things worked out quite differently. In this
+case any mobilization of peasants was more limited and insufficient to
+move these areas closer to the corridor, and there was no lasting damage
+to the power of the Despotic Leviathan. Then the subsequent act of this
+confrontation played out with the “second serfdom,” significantly
+increasing the dominance of elites over society. In the context of the
+declines in the population throughout Europe and growing demand for
+agricultural produce in the West, the East’s powerful landlords were
+incentivized to increase their demands from the peasants, which they
+achieved by tightening their grip over them. By the end of the sixteenth
+century a much more intense exploitation of serfs had emerged in the
+East. So while England, France, and the Netherlands moved up in the
+corridor, Poland, Hungary, and other parts of Eastern Europe launched
+deeper into the lands of the Despotic Leviathan.</p>
+<p>Potentially divergent influences on a nation’s political development
+come not only from military threats or demographic shocks but also from
+major economic opportunities. Such a change reconfiguring European
+trajectories arrived with the discovery of the Americas by Christopher
+Columbus and the rounding of the Cape of Good Hope by Bartolomeu Dias.
+Once again, the different balances between state and society produced
+divergent responses. In England, as we mentioned in Chapter 6, the tight
+limits on what the crown and its allies could do in terms of
+monopolizing overseas trade meant that it was new groups of merchants
+that benefited most from these economic opportunities. This fueled a
+rise in the power and assertiveness of society in its protracted
+struggle against the crown. Merchants who had already profited from
+trade with the New World were looking to continue doing so and became
+some of the chief supporters of Parliament in the English Civil War
+between 1642 and 1651 and then later constituted major segments of the
+opposition to Charles II and James II in the run-up to the Glorious
+Revolution. While in England these new economic opportunities tilted the
+balance between state and society in favor of the latter, they did no
+such thing in Spain and Portugal, where the monarchies had been able to
+create overseas monopolies. This difference was largely due to the
+initial balance of power, which favored the elites in these countries.
+Roman Iberia had been conquered by a German tribe too, the Visigoths,
+who left a legacy of assembly, later institutionalized as the Cortes of
+Castile, León, or Aragon (see Map 8 in Chapter 6). But these survived
+only in the north of the country after the Arab invasions starting in
+the eighth century pushed Iberia out of the corridor. The “reconquest”
+of the penninsula from the Arabs greatly intensified the despotic
+instincts of the Iberian state. The more despotic Spanish and Portuguese
+monarchies and their allies could then more successfully control the
+economy and monopolize Atlantic trading opportunities. As a result,
+rather than facing emboldened opposition, they themselves got richer,
+more powerful, and even more despotic, and society became more crippled.
+There would be no respite from despotism in the Iberian Peninsula.</p>
+<p>The next big economic opportunity played out similarly. We have seen
+in Chapter 6 how the pace of societal transformation in Britain got a
+lot more intense and the Red Queen effect more fervent after the
+Industrial Revolution. These changes offered a multitude of new economic
+possibilities, and in most cases it was people from every nook and
+cranny of society who took advantage of these. But there would be no
+such Red Queen effect in parts of Europe that had already diverged quite
+considerably. In the Habsburg Empire or in Russia, as we recounted in
+Why Nations Fail, the Despotic Leviathan tightened its grip and even
+resisted the introduction of new industrial technologies and railways,
+lest this reawaken their submissive societies.</p>
+<p>So it is the same pattern we see in all of these examples. The
+outlines of European history, very much like the history of other parts
+of the world, are heavily shaped by the impact of big shocks but
+critically, this happens on a canvas drawn by the balance of power
+between state and society.</p>
+<p>In the Lenin Shipyard</p>
+<p>Divergent effects of big shocks have characterized other iconic
+episodes, including the collapse of the Soviet Union in 1991. The Soviet
+state was a perfect specimen of the Despotic Leviathan at home in
+Russia, and acted as the fountainhead of despotic power in Eastern
+Europe and in the Soviet republics it controlled in Asia. Its collapse
+in 1991 thus corresponded to a sharp decline in the state’s power. As
+Czech playwright and dissident, and soon-to-be president, Václav Havel
+put it in his essay The Power of the Powerless:</p>
+<p>Not only is the dictatorship everywhere based on the same principles
+and structured in the same way . . . but each country has been
+completely penetrated by a network of manipulatory instruments
+controlled by the superpower center and subordinated to its
+interests.</p>
+<p>But now there was a disintegration of not just the Soviet
+“manipulatory instruments” and the state’s capacity to control society.
+The newly independent countries were also left without tax systems and
+many other aspects of modern administrations.</p>
+<p>All of this didn’t happen at once, of course. When Mikhail Gorbachev
+came to power in 1985, his plan was to revitalize, not destroy, the
+Soviet Union. He launched the joint policies of glasnost (“openness”)
+and perestroika (“restructuring”). It was mostly perestroika that
+Gorbachev was interested in, so that he could reconfigure the
+institutions and incentives of the stagnating Russian economy. But he
+feared that hard-liners within the Communist Party would never accept
+these reforms, so he complemented them with a political opening that was
+designed to weaken the hard-liners. It’s not clear if he foresaw the
+risks, but his strategy ended up unearthing massive discontent,
+particularly in regions that resented the centralized control of Moscow.
+Nowhere was this discontent larger than in Eastern Europe and the Baltic
+States that had been occupied by the Soviet Union at the end of World
+War II. Anti-Soviet protests had flared up before, in Hungary in 1956
+and in the Prague Spring of 1968, where Havel cut his political teeth,
+but had been crushed. By January 1990 the Polish Communist Party was
+voting to disband itself, and by December of the next year Mikhail
+Gorbachev was forced to declare the Soviet Union extinct. Russia was
+soon flooded with Western economists and experts to help the new
+government forge a transition to a market-based liberal democracy.
+Poland was too, but the two countries ended up on remarkably different
+paths.</p>
+<p>The fall in the state’s power brought about by the Soviet collapse
+had very different effects depending on where a country was relative to
+the corridor. Though there were many similarities between them, Russia
+was much deeper into the territory of the Despotic Leviathan. Poland,
+when Gorbachev rose to power, was under the iron fist of general
+Wojciech Jaruzelski, but was still closer to the corridor because its
+state, propped up by Soviet power, had less dominance over society and
+its civil society was less emasculated than in Russia. In fact,
+Jaruzelski’s rise to power was a response to the reawakening of Polish
+civil society in 1980–1981. The collapse of the Soviet Union pushed
+Jaruzelski from office and pushed Poland into the corridor.</p>
+<p>There were other, deeper differences too. For one, the mass
+collectivization of agriculture that Stalin had engineered in Russia and
+Ukraine never happened in Poland. People were mostly left with their
+land; there was some respite, some breathing space for civil society to
+grow under the shadow of the hammer and sickle. Ironically enough, it
+was in the Lenin Shipyard in Gdańsk that Polish society really got
+organized. Led by Lech Wałęsa, an independent trade union, Solidarity,
+emerged in September 1980. One year later it had mushroomed throughout
+Polish society with ten million members, perhaps two-thirds of the labor
+force. The government responded with martial law and the appointment of
+Jaruzelski. But by this time Solidarity was too big to be easily put
+down and a stalemate ensued. By January 1989, Jaruzelski had reconciled
+himself to a power-sharing arrangement. In April 1989, Solidarity signed
+the Round Table agreement with the government that allowed for elections
+to be held in June of that year. But everything was rigged so that the
+Communists, who had reserved seats, would have a majority and Jaruzelski
+would be elected president. He hoped that Solidarity would be mollified
+by this vote. This was exactly how the German playwright Bertolt Brecht
+characterized the East German state’s attitude toward elections in the
+1950s:</p>
+<p>Would it not be easier</p>
+<p>In that case for the government</p>
+<p>To dissolve the people</p>
+<p>And elect another?</p>
+<p>But Jaruzelski had miscalculated. The Communist Party lost every
+single seat where there was free competition, completely undermining the
+legitimacy of the whole agreement. Solidarity pushed for more, and by
+August had taken over the government and appointed Tadeusz Mazowiecki
+prime minister.</p>
+<p>Mazowiecki was now faced with the unenviable task of masterminding
+the transition from socialism. First in line was economic restructuring
+and he appointed Leszek Balcerowicz to come up with a plan. The plan
+turned out to be a famous instance of what became known as “shock
+therapy,” a dramatic “leap” to a market economy. Balcerowicz removed
+price controls, allowed state-owned businesses to go bankrupt, and taxed
+wages in state-owned enterprises to deliberately make them
+noncompetitive with the new private sector. And they did go bust!
+National income fell sharply and there were mass layoffs from the
+state-run industries that were allowed to wither away.</p>
+<p>Society reacted and protested. Instead of democracy pacifying the
+labor movement, it led to an incessant wave of strikes as incomes fell
+and unemployment mounted. From 250 strikes in 1990 there were 305 in
+1991, then over 6,000 in 1992 and over 7,000 in 1993. Protests,
+demonstrations, and strikes provided an important source of pressure on
+the government to build social consensus around its agenda. After
+Wałęsa’s election as president, Balcerowicz conceded to bringing trade
+unions into the discussion over wage policies and particularly the
+contentious tax on wage increases in state-owned enterprises. By the end
+of 1991, Balcerowicz was fired, but the transition had already mobilized
+society. By 1992 there were twenty-eight different political parties in
+the Polish parliament, the Sejm, and of course a lot of disagreement
+about how to move forward. Despite these divisions the Sejm managed to
+negotiate the “Little Constitution,” which was a mixed system of
+parliamentarianism and presidentialism set in place until a new
+constitution was finally introduced in 1997. In the meantime, Wałęsa
+tried to increase his own power at the expense of the Sejm, but
+couldn’t. The resulting political compromise led to an adjustment in the
+economic transition of the country. The government started to allocate
+more resources to the state sector and tried to cushion the pain of
+shock therapy. A new broad-based personal income tax was introduced. In
+February 1993, Minister of Labor Jacek Kuroń proposed the formation of a
+tripartite commission wherein the government, management, and trade
+unions could discuss economic policy making. Some in the West fulminated
+at how this was undermining the transition to a market economy, but it
+provided legitimacy to the reforms and got society at large on board,
+without which a transition into the corridor had no hope, as we’ll now
+see in Russia.</p>
+<p>Moving into the corridor created the conditions for liberty in
+Poland, which rapidly built a vibrant democracy on the back of its
+highly mobilized civil society. Its track record on democratic politics
+and civil rights persuaded the European Union to accept Poland into its
+club. However, moving into the corridor does not immediately generate
+liberty, which only emerges after the Red Queen gets into operation. In
+2015 the Law and Justice Party came to power in Poland and had to be
+sanctioned by the European Union for attempting to undermine the
+independence of the Supreme Court. Liberty is always a work in progress,
+not least in nations that have suffered decades of despotic rule.</p>
+<p>The Un-Taming of the Russian Bear</p>
+<p>As General Jaruzelski began negotiating with Solidarity in the spring
+of 1989, Gorbachev proposed his own carefully crafted version of
+democratization for the Soviet Union. As part of this process, Boris
+Yeltsin was elected chairman of the Russian Supreme Soviet in May 1990.
+By August, Yeltsin was famously announcing to other regional leaders
+that they should “take as much sovereignty as you can swallow.” Soviet
+hard-liners next attempted a coup to stop the inevitable, arresting
+Gorbachev. Yeltsin bravely defied the coup by standing on the turret of
+a tank. He survived and the coup failed. By Christmas the Soviet Union
+had fallen and in the summer of 1991 Yeltsin was elected to the newly
+created position of Russian president. His platform, on the basis of
+which he beat four Communists and a hardcore nationalist, included a
+radical program of market reform just like the one in Poland. Democracy,
+economic reforms—it looked like the Russian despotic state was getting
+tamed.</p>
+<p>Yeltsin picked Yegor Gaidar to run the economic reform program, and
+Gaidar in turn nominated Anatoly Chubais to spearhead the privatization
+of state-owned industry. Gaidar and Chubais had to come up with a
+strategy to put the main assets of the Soviet Union into private hands.
+Starting in the spring of 1992, the government began to sell off small
+firms such as stores and restaurants. People could take ownership of
+their own apartments for free, or almost for free. In late 1992 Chubais
+started on the big firms. Large and medium-sized enterprises were
+required to sell 29 percent of their shares in “voucher auctions,” and
+in October 1992, each Russian adult was issued vouchers with a nominal
+value of 10,000 rubles that could be acquired at the local branch of
+Sberbank for just 25 rubles. By January 1993 almost 98 percent of
+Russians had claimed their vouchers. These vouchers could be sold or
+used to bid for the shares of specific companies when they were
+privatized.</p>
+<p>The first auctions were held in December 1992. About 14,000
+enterprises held such auctions. Most of the assets from these firms went
+to their workers and managers, however. A law allowed for workers and
+managers to buy 51 percent of the voting shares of a firm at a discount
+and using the firm’s own funds. In effect the majority of privatizing
+firms’ assets were handed to insiders at huge discounts. Even shares
+that had been distributed more widely re-concentrated. In 1994 workers
+owned 50 percent of the average Russian enterprise; by 1999 this was
+down to 36 percent. By 2005, 71 percent of medium and large industry and
+communications enterprises had a single shareholder who owned half the
+stock.</p>
+<p>The most controversial stage of the privatization was the “loans for
+shares” deal in 1995 in which the most valuable state assets in the
+energy and resource sector were given to a group of politically
+connected people who promised to finance Yeltsin’s reelection campaign.
+Here’s how the details worked. State shares in twelve highly profitable
+enterprises concentrated in the energy sector were used as collateral
+for bank loans. If the loans were not paid off, the banks would have the
+right to sell the shares. In fact, the government never had any
+intention of paying off the debts. Between November 1996 and February
+1997 the government sold shares of the energy giants Yukos, Sidanko, and
+Surgutneftegas, and in each case banks themselves bought the shares in
+auctions where outside bids were ignored or disqualified. After
+Yeltsin’s reelection two of those closely involved in this deal,
+Vladimir Potanin and Boris Berezovsky, were brought into the government.
+Berezovsky and another oligarch, Vladimir Gusinsky, dominated the media
+by controlling two national television stations.</p>
+<p>In the meantime Yeltsin had pushed for, and got, a constitution with
+strong presidential powers. Nobody was able to oppose him, and unlike in
+Poland, the Russian transition had not involved the mass mobilization of
+society. Nobody organized en masse against the “loans for shares deal,”
+and people voted Yeltsin back into power with the help of money he
+raised from his new backers. But the new Russian elite used its power to
+extract all sorts of concessions from the state. In 1996 the Ministry of
+the Economy declared that beer was a nonalcoholic beverage so that
+Russia’s largest brewers could avoid a tax hike. But they were living in
+a system with a lot of potentially despotic power at the top, and after
+Yeltsin left the scene, they fell prey to Vladimir Putin. Rather than
+the “liberal democratic” state that Westerners had hoped would emerge in
+the 1990s, after 2000 a new type of despotism was busy consolidating
+itself using the playbook of the old Soviet state.</p>
+<p>Someone who saw it from the inside was Alexander Litvinenko.
+Litvinenko was an operative in Russia’s FSB (Federal Security Bureau),
+the successor to the Soviet-era KGB (the Russian abbreviation for
+“Committee for State Security”). It was even housed in the same building
+in Lubyanka Square. Litvinenko and the FSB were heavily involved in the
+war against separatists in Chechnya starting in 1994. In that conflict,
+as Litvinenko put it, “secret services enjoyed generous operational
+freedom: they could detain, interrogate and kill without legal
+constraints”—just like the good old days, and all during Russia’s
+“transition to a market economy.” The government decided to start a new
+top-secret unit with the acronym URPO. The URPO soon got involved in all
+sorts of “activities,” and Litvinenko was assigned to work for them. He
+explained:</p>
+<p>My unit was ordered to plan the assassination of Boris Berezovsky,
+the entrepreneur-turned-politician who was close to President Yeltsin.
+No one told us of the reason, but there was no need to: Berezovsky was
+the most visible of oligarchs.</p>
+<p>It wasn’t quite the shock therapy that Western economists had
+envisioned, but it showcased the new activities of the security
+services. They didn’t stop at proposing to kill the president’s friends.
+They also accumulated vast personal fortunes. This was done via a
+coalition with drug lords and involved massive extortion rackets.
+Litvinenko remembered how</p>
+<p>a local shopowner had been visited by a man claiming to be a police
+officer and demanding protection money. The demands went up and up from
+,000 a month to ,000 then to 5,000 and more. Next the shopowner received
+a visit at his home—he was beaten up and threatened.</p>
+<p>Litvinenko watched horrified, and took notes. But whom to trust? In
+July 1998 he thought he had caught a break. Yeltsin appointed a relative
+outsider to head the FSB, Vladimir Putin, a former lieutenant colonel in
+the KGB. Litvinenko went to him and put his cards on the table,
+detailing all of the crime and rackets he had documented. He recalled,
+“Before our meeting, I spent all night drawing up a chart with names,
+places, links—everything.” Putin listened pensively and the same day
+opened a “file” on him. Litvinenko was fired from the FSB. A friend told
+him, “I do not envy you, Alexander. There is common money involved.” A
+mutual acquaintance said, “Putin will squash you . . . and no one can
+help you.” In October 2000, Litvinenko fled the country with his family
+and was granted political asylum in the United Kingdom. He wrote two
+books documenting what he had learned about the corruption and violence
+of the Russian state. But the arm of the FSB is long. On November 1,
+2006, Litvinenko fell ill in London after meeting with two former KGB
+agents. They had put poison in his teacup, and he died three weeks later
+of polonium-210-induced acute radiation syndrome.</p>
+<p>When Putin took over, the oligarchs were finished; they were exiled
+or jailed, and their assets were expropriated—unless they were Putin’s
+loyal allies. Any modicum of liberty that had emerged since 1989 was
+next. Today in Russia independent media is suppressed and journalists
+are murdered. Politicians who dare to oppose Putin, most recently Alexei
+Navalny, are jailed or banned from politics. Despotism is back,
+untamed.</p>
+<p>Why did the Russian “transition” fail so spectacularly? The most
+basic reason is that Russia was too far outside the corridor. After the
+Soviet Union collapsed, though state institutions were reconstructed,
+there wasn’t much of an attempt to reform the security apparatus.
+Indeed, politicians thought they might be able to use it to their
+advantage, as in Chechnya. At the root of the problem was lack of
+popular mobilization or even independent private interests that could
+stop the unrestrained exercise of power of the state and limit the sort
+of high-level discretion that Yeltsin enabled. Privatization and
+economic reform on their own could not create the broad and legitimate
+distribution of assets that might have formed the economic underpinnings
+of a Shackled Leviathan. This allowed Putin to reverse the gains of the
+1990s and consolidate a new despotism. Indeed, the inequality that
+resulted from privatization, particularly the “loans for shares” deal,
+not only re-concentrated the ownership of key assets in Russia, but also
+completely delegitimized the reform process. This made it very easy for
+the reenergized KGB, under Putin’s leadership, to grab control of the
+economy and society.</p>
+<p>Russia was too distant from the corridor. Though the collapse of the
+despotic Soviet state pushed it in the right direction, it wasn’t enough
+to tame the Russian state, which just picked up where the Soviet one had
+left off and reconstituted its despotic control over society.</p>
+<p>From Despotism to Disintegration</p>
+<p>Even if the decline in the power of the state and Communist Party
+elites was insufficient to move Russia away from the orbit of the
+Despotic Leviathan, it was more than enough to completely change the
+trajectory of a state that had a more precarious hold on society, such
+as the former Soviet Republic of Tajikistan on the border with
+Afghanistan and China. As the Soviet Union crumbled, Tajikistan had to
+decide on its future. First Party Secretary Kakhar Makhkamov initially
+supported the putschists who briefly imprisoned Gorbachev in August
+1991. When the putsch failed, mass demonstrations in the capital,
+Dushanbe, forced Makhkamov to resign. Tajikistan was independent by the
+next month and Rakhamon Nabiev was elected president shortly
+thereafter.</p>
+<p>To follow what happened next in Tajikistan you have to understand the
+avlod. In the words of the Tajik sociologist Saodot Olimova, “An avlod
+is a patriarchal community of blood relatives who have a common ancestor
+and common interests, and in many cases shared property and means of
+production and consolidated or coordinated household budgets.” Sounds a
+bit like the cage of norms we saw with stateless societies, except that
+this system survived under the despotic reign of the Russian and then
+the Soviet state. Tajikistan was conquered by the Russians in the second
+half of the nineteenth century and then ruled by the Soviets until 1991,
+but the underlying social structures, the clans, persisted relatively
+unchanged. In a 1996 nationwide survey 68 percent of Tajiks said they
+belonged to an avlod. It is useful to think of the clans as regionally
+based aggregations of these avlods. Political scientist Sergei Gretsky
+describes how in the 1940s the clans from Khujand were allowed to take
+over much of the local Soviet state administration:</p>
+<p>When the Khujandis ascended to top party and government positions in
+Tajikistan . . . they endorsed localism as the corner stone of their
+policy, and kept regional rivalries boiling, while preserving for
+themselves the role of arbiter . . . In Tajikistan the popular wisdom
+put it in the following way: “Leninobod governs, Gharm does business,
+Kulob guards, Pamir dances, Qurghonteppa ploughs.”</p>
+<p>Leninobod is the capital of the Khujand region in the northwest of
+the country. Despotic though its rule was, the Soviet state controlled
+Tajikistan indirectly via the regional clans. Much of the arbitration
+was through clan relations and alliances, and outside the formal state
+institutions.</p>
+<p>President-elect Nabiev was from one of the traditional ruling
+families of the Khujand. He faced immediate opposition from other parts
+of the country, particularly from the Gharm and Pamir who began to
+organize demonstrations. In response, Nabiev handed out 2,000 machine
+guns and formed irregular forces to repress the opposition. His
+opponents managed to take the capital and the Khujandis withdrew to
+start a guerrilla war that they eventually won. In the process, the
+state completely collapsed and Tajikistan was plunged into five years of
+horrific civil war between the clan-based regional alliances. The death
+toll is uncertain with estimates ranging from 10,000 to as many as
+100,000. More than one-sixth of the population was displaced and
+national income fell by 50 percent.</p>
+<p>The difference between Tajikistan and Poland or Russia is clear:
+Tajikistan, ruled by the Soviets through regional clans and alliances,
+started the transition process with a weak state and a society without
+any institutionalized means of participating in politics. Once the
+despotic power of the Soviet rule melted down in 1991, the country had
+no easy way of mediating disputes between the clans, which were now
+intensified with the prospect of taking control of the assets of the
+country and the vestiges of the Soviet state. The clans armed themselves
+and fought while the state disintegrated.</p>
+<hr />
+<p>—</p>
+<p>So we see an even richer tapestry of divergence following the
+collapse of the Soviet Union. The decline in the power of the state
+wasn’t enough to dislodge Russia away from despotism, but just enough to
+open a door into the corridor for Poland, and more than enough to hurl
+Tajikistan into a situation wherein the state completely collapsed and
+civil war and clan conflicts ensued. Figure 3 sketches how in our
+framework these different responses may come from the same impulse: the
+collapse of the Soviet Union leading to a decline in the power of the
+state. Arrow 1 is the hopeful scenario where the reduction in the power
+of the state moves the country into the corridor, as was the case for
+Poland. Arrow 2 is the case, as in Russia, where a country starts so far
+from the corridor that even after the decline in the power of the state,
+the Despotic Leviathan has commanding control. Finally, Arrow 3
+illustrates the possibility that, starting with a sufficiently weak
+state and society, the same change can cause the state’s control to
+wither completely, moving society toward the Absent Leviathan.</p>
+<p>Figure 3. The Soviet Divergence</p>
+<p>This richness of outcomes underscores that even after decades of the
+state gaining power at the expense of society, big enough shocks—in this
+case the collapse of the Soviet Union—can completely reconfigure the
+subsequent trajectories of state and society. The evolution of a
+Leviathan is always subject to myriad influences and disruptions.</p>
+<p>Because We Have To</p>
+<p>Economic opportunities created by new technologies haven’t just
+influenced the development path of European nations. They have also
+shaped the pattern of colonial divergence, as illustrated by the
+contrasting trajectories of Costa Rica and Guatemala in the nineteenth
+century.</p>
+<p>Institutions of Central American neighbors Costa Rica and Guatemala
+were initially similar. Both countries were still under the despotic
+control of the Spanish colonial state until 1821. But in the next
+hundred years they diverged as sharply as any of the examples we have
+discussed in this chapter. Costa Rica gradually witnessed the
+strengthening of society and moved into the corridor over the course of
+the late nineteenth century. By 1882, Costa Rica was holding regular and
+peaceful elections, and the role of the military and general repression
+had started to wane. These changes meant not only much greater security
+and lower violence for Costa Ricans, but a very different social and
+economic world. For example, by 1900, 36 percent of adults were
+literate, and by 1930, two-thirds of all adults could read and
+write.</p>
+<p>Guatemala looked very, very different. A sense of how different and
+why can be gleaned from the life of Nobel Peace Prize winner Rigoberta
+Menchú. Menchú is from the Quiché indigenous people of Guatemala, a
+country made up of “twenty-two indigenous groups . . . twenty-three
+including the mestizos, or ladinos.” The ladinos are those of Spanish
+descent, or at least mixed Spanish and indigenous descent. Menchú’s
+grandmother</p>
+<p>got work as a servant to the town’s only rich people. Her boys did
+jobs around the house like carrying wood and water and tending animals.
+But as they got bigger, her employer said she didn’t work enough for him
+to go on feeding such big boys. She had to give away her eldest son, my
+father, to another man so he wouldn’t go hungry. By then he could do
+heavy work like chopping wood or working in the fields but he wasn’t
+paid anything because he’d been given away. He lived with the ladinos
+for nine years but learned no Spanish because he wasn’t allowed in the
+house . . . They found him repulsive because he had no clothes and was
+very dirty.</p>
+<p>Eventually Menchú’s father left and found work on the coffee estates,
+the fincas, along Guatemala’s Pacific coast. He brought his mother and
+“got her away from that family as soon as he could. She’d sort of become
+her employer’s mistress although he had a wife. She’d had to agree
+because she’d nowhere else to go.” The fincas became their life. Menchú
+was born in 1959. “From when I was very tiny, my mother used to take me
+down to the finca, wrapped in a shawl on her back.” Trucks would pick
+them up from the highlands. Menchú recounts, “I remember the journey by
+lorry very well. I didn’t even know what it was . . . [It] holds about
+forty people. But in with the people, go the animals (dogs, cats,
+chickens) which the people from the Altiplano take with them when they
+are in the finca.” The trip took two nights and a day during which time
+people soiled the truck and vomited. “By the end of the journey, the
+smell—the filth of people and animals—was unbearable . . . we were like
+chickens coming out of a pot . . . we could hardly walk.”</p>
+<p>From the age of eight Rigoberta worked on the coffee plantation, and
+then on a cotton plantation; she never went to school. (The photography
+section shows a contemporary scene of Guatemalan women and children on a
+coffee finca.) The workers were given tortillas and beans to eat but the
+cantina of the finca had other things too, especially alcohol. “Every
+finca in Guatemala has a cantina, owned by the landowner, where the
+workers get drunk . . . and pile up debts. They often spend most of
+their wages. They drink to get happy and to forget the bitterness.” But
+Rigoberta was taught to be very careful. “My mother used to say: ‘Don’t
+touch anything or we’ll have to pay for it.’ . . . I used to ask my
+mother, ‘Why do we go to the finca?’ And my mother used to say, ‘Because
+we have to.’”</p>
+<p>Rigoberta recalled the first time she saw the landowner. “He was very
+fat, well dressed and even had a watch. We didn’t know about watches
+then.” Rigoberta didn’t have shoes, let alone a watch. When the
+landowner arrived,</p>
+<p>he was accompanied by about fifteen soldiers . . . The overseer said,
+“Some of you have to dance for the owner” . . . The landowner was
+speaking, and the overseer started translating what he was saying. They
+told us we all had to go and make a mark on a piece of paper . . . We
+all went to make our mark on the paper . . . I remember that the paper
+had some squares with three or four drawings on it . . . He warned us
+that anyone who didn’t mark the paper would be thrown out of work [and]
+not paid.</p>
+<p>The landowner left, but afterwards . . . I dreamed about him over and
+over again . . . it must have been the fear, the impression made on me
+by that man’s face . . . All the children there ran away . . . and cried
+when they saw that ladino, and even more at the soldiers and their
+weapons. They thought they were going to kill their parents. I thought
+so, too. I thought they were going to kill everybody.</p>
+<p>Finally the “election,” Guatemalan-style, took place. “They came to
+the finca and told us that our President had won, the one we had voted
+for. We didn’t even know that they were votes they’d taken away. My
+parents laughed when they heard them say, ‘Our President,’ because for
+us he was the President of the ladinos, not ours at all.”</p>
+<p>The state of Guatemala was distant, alien. It was not even a state
+for the majority of the population; it was a state for the ladinos. The
+first time Rigoberta went to the capital, Guatemala City, she had to be
+careful. Her father had been called to the INTA (the National Institute
+for Agrarian Transformation) and explained that “there was a prison for
+the poor people and if you didn’t go to that office, that’s where they
+put you . . . My father said the people there didn’t let you in unless
+you showed respect. ‘When you go in, keep still, don’t speak,’ he
+said.”</p>
+<p>Back in the countryside the Quiché people had to deal with a
+hierarchy of government officials, starting with the military
+commissioner, then the mayor and then the governor, all ladinos. Rather
+than provide public services, the officials extracted bribes: “To get to
+see the Military Commissioner, you first have to give him a mordida,
+that’s what we call a bribe in Guatemala.” A mordida, literally “a
+bite.” Rigoberta ruefully concluded, “In Guatemala if it’s to do with
+the Government, there’s no way we can defend ourselves.” They tried.
+Rigoberta’s father and brother started to organize the local village. On
+September 9, 1979, her brother was murdered by the army.</p>
+<p>They took him over rough ground where there were stones, fallen tree
+trunks. He walked about two kilometers being kicked and hit all the time
+. . . His whole face was disfigured with beating, from striking against
+stones, the tree trunks; my brother was completely destroyed . . . They
+tied him up, they tied his testicles . . . they left him in a hole with
+water and a bit of mud in it, they left him naked there all night. There
+were a lot of corpses there in the hole with him . . . My brother was
+tortured for more than sixteen days. They cut off his fingernails, they
+cut off his fingers, cut off his skin, they burned parts of his skin.
+Many of the wounds, the first ones, swelled and were infected. He stayed
+alive. They shaved his head, left just the skin, and also they cut the
+skin off his head and pulled it down on either side and cut off the
+fleshy part of his face. My brother suffered tortures on every part of
+his body.</p>
+<p>Not content with this barbarism, the army then brought the captives
+back to the village as a lesson to the people. “The captain gave a
+panoramic description of all the power they had, the capacity they had.
+We, the people, didn’t have the capacity to confront them.” The
+captives, including Rigoberta’s brother, were then covered in gasoline
+and set on fire. This was brutal, violent dominance over society. A
+world apart from neighboring Costa Rica.</p>
+<p>So why this savagery in Guatemala while Costa Rica had already
+brought violence under control, built a democracy supported by a fairly
+well-organized society, and created the preconditions for liberty? How
+did they diverge so completely? The answer is related to coffee.</p>
+<p>Grounds for Divergence</p>
+<p>The rapid growth of Western Europe and North America in the
+nineteenth century did more than transform their economies. By creating
+a huge demand for tropical crops, such as sugar, tobacco, cotton, and
+coffee, and the technological opportunities for transporting them across
+the world, this growth also reconfigured postcolonial societies.
+Steamships came early in the century, and by 1838 the SS Great Western,
+designed by British entrepreneur Isambard Kingdom Brunel, was the first
+constructed for regular service between Bristol and New York. The Great
+Western was made of wood and used steam-driven side paddle wheels. By
+1845 Brunel had launched the Great Britain, which had an iron hull and
+used a steam-powered screw propeller. Iron hulls were cheaper and could
+be used to build much larger ships, and propellers were far more
+powerful than sails or paddle wheels.</p>
+<p>After these technological changes, it became profitable to export
+crops like coffee in large quantities to distant parts of the world.
+Central America was at the epicenter of this trade not only because of
+its great climate for growing coffee, but also because it was situated
+close to the booming markets of the United States, where coffee imports
+doubled between 1830 and 1840 and then increased by another 50 percent
+by 1850. This was followed by steadily rising prices of coffee in the
+rest of the century.</p>
+<p>To take advantage of this growing demand, some basic public services
+were needed. Roads and enough infrastructure had to be built to export
+the crops, and property rights in land had to be sorted out so that
+people would be willing to undertake the necessary investments to plant
+coffee (since it takes three to four years after planting before a
+coffee bush bears fruit). All of this required an expansion of state
+capacity. It was this demand for increased state power and capacity that
+underpinned the subsequent developments in Costa Rica and Guatemala.</p>
+<p>Costa Rica was part of the Kingdom of Guatemala during the colonial
+period and both briefly unified with Mexico after gaining independence
+in 1821 and then joined the Federal Republic of Central America. Costa
+Rica seceded in 1838 and finally became an independent nation. It had
+been peripheral throughout colonial times, and it escaped the Bourbon
+reforms aimed at strengthening colonial states and increasing tax
+revenues. There were few indigenous peoples left after imported diseases
+had undermined their population in the sixteenth century, and it had no
+precious metals or minerals worth mining. At independence it had a
+population of 60,000 to 70,000 people, most of whom lived in the
+highland central valley. The colonial economy was largely underdeveloped
+except for a brief boom in cocoa on the Caribbean coast in the
+seventeenth century. Guatemala, which controlled the colonial monopoly,
+had blocked the development of tobacco growing in Costa Rica. Costa Rica
+therefore lacked both powerful elites and a dominant city or town at
+independence. The four main population centers, Cartago (the colonial
+capital and center of conservative groups), San José, Alajuela, and
+Heredia, were fierce rivals. Each town conducted its own foreign policy
+and sought alliances with powerful factions in neighboring countries,
+such as Colombia. As the Argentine politician and intellectual Domingo
+Sarmiento put it, “the South American republics have all, more or less,
+passed through the propensity to decompose into small fractions,
+attracted by anarchical and rash aspirations to ruinous, dark
+independence . . . Central America had made a sovereign state out of
+every village.”</p>
+<p>In 1823 and 1835 this “propensity to decompose” led to civil wars and
+San José subsequently established itself as the capital city. But while
+the towns might compete, they could also cooperate. In 1821 as Latin
+American independence beckoned, the council (ayuntamiento or cabildo) of
+Cartago, the colonial capital, invited the councils of the other towns
+to discuss how they should declare independence. In October of that year
+the four main towns, along with Ujarrás, Barba, and Bagaces, jointly
+issued the “act of the ayuntamientos,” declaring independence from
+Spain. By December they had signed the Pacto de la Concordia, which
+created a governing junta made up of seven popularly elected members.
+The location of the body would rotate between the four main towns. These
+towns made heavy use of the cabildo abierto, a type of open council
+meeting that allowed for much broader political participation.</p>
+<p>Though Costa Rica was gradually unraveling itself from the Spanish
+Empire, it remained poor and underdeveloped. The one asset it had was a
+lot of unexploited land. The first wave of politicians after 1821
+understood this very well. Just as the United States had passed the
+Northwest Ordinances as early as 1787 to govern the expansion of the
+Union, Costa Ricans did the same thing. By 1821 San José was giving away
+land for free to anyone who could fence it and grow and export crops.
+Laws granting title and subsidies to smallholders for coffee were then
+passed by the central government in 1828, 1832, and 1840. By 1856 all
+public lands had been sold off. These laws opened up the lands of the
+central valley that were previously state owned. Individual towns tried
+to attract labor and migrants by selling them land at low prices and by
+encouraging coffee production. A measure of 1828 induced settlement and
+agricultural exploitation outside the four townships by granting up to
+110 acres of land for free in underpopulated areas. Costa Rica was in
+fact the first Central American nation to start exporting coffee, and
+during the 1840s, after independence, exports increased fivefold to
+3,800 tons. At this point, coffee represented 80 percent of Costa Rica’s
+exports. That decade saw the construction of the first road from the
+central valley to the Pacific port of Puntarenas so that coffee could be
+shipped by ox carts rather than on the backs of mules.</p>
+<p>It was this early dynamic for the distribution of land that was
+responsible for the absence of a large class of landowners in Costa
+Rica. Instead, the economic elites of Costa Rica, such as they were,
+concentrated on the control of finance, purchase, and export of the
+crop. Thus there was never any coalition in favor of the type of labor
+coercion that was so prevalent in Guatemala. Even rich families who went
+into the coffee business were generally well diversified. There
+certainly were attempts by the Costa Rican elite to reduce the prices at
+which they bought coffee from smallholders, and they profited from high
+prices for loans and finance, which they fought to protect. The most
+famous example of this is the overthrow of President Juan Rafael Mora by
+the Montealegre family in 1859 because Mora proposed to create a bank to
+lend directly to smallholders, thus breaking the market power of
+financiers. But none of this derailed the smallholder coffee economy.
+The historian Ciro Cardoso summed up the state of the Costa Rican
+economy as “there was an absolute predominance of small farms, both of
+numbers and of the total land occupied.”</p>
+<p>The coffee business required institutional support. For one thing,
+land had to be surveyed and property rights defined and enforced. After
+independence, president Braulio Carrillo began to build a state capable
+of performing these duties. He promulgated civil and criminal codes and
+constructed a state bureaucracy for the first time. He also reorganized
+the national militia and created a national police force. Though he
+considered himself a dictator for life, he made little effort to create
+a large military and had an army of no more than 500 soldiers.</p>
+<p>The most likely explanation for Carrillo’s policies is that, like the
+Federalists of the United States, he recognized that without a central
+authority it would be difficult to provide the basic public services
+that the new country needed to take advantage of the new economic
+opportunities and maintain order in the face of the competition between
+the four main towns. But like the Federalists, he was also probably wary
+of the Gilgamesh problem—how to control a very powerful state—and
+refrained from building a large military. After Carrillo was deposed in
+1842, the increasing power of coffee elites became evident, since
+different families and factions backed separate candidates for president
+and elections were marred by military involvement. Some presidents, like
+Mora, were overthrown in revolts, and others, like Jesús Jiménez in
+1870, were cast aside by coups. At the urging of the Montealegre family,
+Jiménez was replaced by Tomás Guardia, the first military man to serve
+as president in nineteenth-century Costa Rica. He stayed in power for
+twelve years, and in the process professionalized the military with the
+help of Prussian advisers and reduced its size so that in 1880 there
+were a mere 358 professional soldiers (though there was a militia that
+could be called upon in emergencies). As a result of these reforms, the
+military remained out of politics. It was after Guardia’s death in 1882
+that Costa Rica started holding regular elections, though it did take
+until 1948 for electoral fraud to be brought under control. Like
+Carrillo, Guardia expanded state capacity, increasing the size of the
+civil service by close to 40 percent. He also organized the construction
+of the first railway linking the central valley to the coast. Instead of
+the military, Costa Rica invested in education. A major educational
+reform of 1888 started increasing literacy.</p>
+<p>By this point, Costa Rica was already in the corridor, moving along
+in it. In 1948 the slow transition toward democracy was finally
+consolidated after a fraudulent election led to a brief civil war where
+rebels led by José Figueres were victorious. Figueres led a junta for
+eighteen months before giving way to the legitimate winner of the 1948
+election. In that period he oversaw some dramatic changes, not least the
+abolition of the army. Costa Rica is the largest country in the world
+that doesn’t have an army (others include Andorra, Liechtenstein, and a
+group of small island nations, like Mauritius and Grenada). The junta
+also created a constitutional convention and passed a series of laws to
+develop a meritocratic bureaucracy, introduce compulsory public
+education, and enfranchise women and illiterates. Since then Costa Rica
+has been democratic and peaceful, a rather remarkable achievement in a
+region where every other country has been a dictatorship at some point
+since the 1950s, often for long periods of time.</p>
+<p>Repression on the Finca</p>
+<p>While a smallholder coffee economy, and together with it a type of
+Shackled Leviathan, developed in Costa Rica, coffee expanded in
+Guatemala too, but in a very different, repressive direction. The reason
+why Rigoberta Menchú was witnessing such savagery can be traced to the
+edifice of labor coercion surrounding coffee cultivation in Guatemala.
+The logic was that anything that could threaten this machine would have
+to be stamped out with extreme force.</p>
+<p>Guatemala had been the seat of colonial power in Central America, and
+unlike Costa Rica, it had a strong conservative merchant guild and
+powerful big landowners. It had a much more developed economy as well.
+The Indigo Growers Society had been founded as early as 1794. Guatemala
+also had a dense population of indigenous people. After Guatemala became
+independent it was ruled by a dictator, Rafael Carrera, who was in power
+either de facto or de jure for much of the period between 1838 until his
+death in 1865. As Carrera’s biographer Ralph Lee Woodward put it:</p>
+<p>Notwithstanding the importance of Carrera’s army as the base of power
+for the dictator, it was the consolidation of the conservative elite of
+the capital that gave the regime its character and was important in
+establishing policies that made Guatemala the “citadel of conservatism”
+. . . While Carrera always reserved the right to make final decisions .
+. . he usually allowed a small clique of well-educated and aristocratic
+advisers to make and execute policy. The consolidation of this
+conservative elite in Guatemala and its control of the capital’s
+society, economy, and political structure is what so clearly
+distinguishes the period 1850–1871.</p>
+<p>During this period Guatemala maintained colonial-era policies
+including various types of monopolies. In marked contrast to Costa Rica,
+little attempt was made to develop agricultural exports. All the same,
+the growth of markets led to a gradual expansion of coffee production.
+In 1860 exports had been negligible but they expanded rapidly as the
+decade went on. By 1871 coffee exports made up half of Guatemala’s total
+exports. In that year the government of Vicente Cerna y Cerna, one of
+Carrera’s conservative successors, was overthrown by a revolution that
+brought the “Liberals” to power, first Miguel García Granados and soon
+after the more enduring figure of another military caudillo, Justo
+Rufino Barrios, who ruled until 1885.</p>
+<p>The new regime had the explicit goal of developing the agricultural
+export economy. To achieve this, it sought to privatize landholdings.
+Among other things, this involved the expropriation of land from
+indigenous people. Between 1871 and 1883 nearly one million acres of
+land were privatized. One of the key problems was that much of the
+indigenous population was in the highlands, while the prime
+coffee-growing areas were lower down toward the Pacific coast. Barrios
+used the coercive power of the state to help large landowners gain
+access to labor. There was a long tradition of coerced labor in
+Guatemala, going right back to the early colonial days, when indigenous
+people had been divided up in grants of encomienda and entrusted to
+Spanish conquistadors. The onset of large-scale coffee production
+induced the state to recodify and increase the intensity of coercion by
+reintroducing or reinventing colonial-era institutions such as the
+mandamiento and also through debt peonage, much in evidence in
+Rigoberta’s description of the finca’s cantina. Mandamiento (literally
+“commandment” or “order”) was a system in which employers could request
+and receive up to 60 workers for 15 days of wage work. These workers
+could be forcibly recruited unless they could demonstrate from their
+personal workbook that such service had recently been performed
+satisfactorily. Land policies were designed not just to allocate land to
+politically connected people; they were also intended to facilitate
+labor coercion by undermining the subsistence economy of the highland
+indigenous people. Without access to subsistence, they would be easier
+to incorporate into the wage economy at low pay or by coercion if
+necessary. The way to do this was to eliminate traditional communal
+lands and deprive people of the possibility of a subsistence life. To
+live, you had to go down to the finca.</p>
+<p>Nothing much had changed by the time Rigoberta was describing it.
+This strategy was complemented by other legislation such as laws to
+“prohibit vagrancy,” another pretext for coercing people to work. While
+the Guatemalan government focused on “land privatization” and other
+related policies, it failed to provide much in terms of public services.
+There was a reason why Rigoberta did not attend school. As her memoir
+documents, child labor was widespread in the 1960s; children’s nimble
+fingers were just too useful not to be put to work picking coffee. The
+lack of interest in providing any sort of public services shows up in
+data on education and literacy in Guatemala. In 1900 a mere 12 percent
+of adults could read and write. As late as 1950 this was only 29
+percent, while nearly every adult in Costa Rica could read and
+write.</p>
+<p>The Guatemalan state wasn’t content to expropriate people’s lands in
+the nineteenth century. It was still doing it in the 1960s and 1970s
+when Rigoberta was growing up. One day around 1967 people turned up and
+started surveying the land that Rigoberta’s village farmed in the
+highlands. She recalled, “The Government says the land belongs to the
+nation. It owns the land and gives it to us to cultivate . . . we could
+either stay and work as peónes [sic] or leave our land.”</p>
+<p>Work for whom? The politically connected families. She names the
+Martínez, García, and Brols families, who had been handing out “big
+bites” to get the government to allocate the land to them. Though they
+tried to complain,</p>
+<p>we didn’t realize then that going to the Government authorities was
+the same as going to the landowners . . . They turned us out of our
+houses, and out of the village. The Garcías’ henchmen set to work with
+ferocity . . . First they went into the houses without permission and
+got all the people out. Then they went in and threw out all our things.
+I remember that my mother had her silver necklaces, precious keepsakes
+from my grandmother, but we never saw them again after that. They stole
+them all. They threw out our cooking utensils, our earthenware cooking
+pots . . . they hit the ground and broke into pieces.</p>
+<p>They fled.</p>
+<hr />
+<p>—</p>
+<p>The staggering divergence that took place in Costa Rica and Guatemala
+over the past 150 years was not something that was preordained. The two
+countries had similar histories, similar geographies and cultural
+inheritance, and were faced with the same economic opportunities in the
+nineteenth century. But it is once again in line with the implications
+of our conceptual framework. The same impulse to increase state
+capacity, brought about by international economic changes, had hugely
+different consequences because it was coming in the context of different
+balances between state and society. Compared to Costa Rica, Guatemala
+had more of a history of militarized labor coercion and a significantly
+larger indigenous population, and had inherited the despotic state
+institutions of the Kingdom of Guatemala. The state-building incentives
+of the coffee boom at the end of the nineteenth century thus created a
+powerful Despotic Leviathan there. In Costa Rica, the collapse of the
+Spanish Empire meant that there were no powerful central state
+institutions at all and four towns vied for control. Coffee helped them
+to stave off collapse and pushed Costa Rica into the corridor. The Red
+Queen effect was most evident in the emergence of a smallholder coffee
+economy bolstered by public services and improved property rights in
+land. Within a few decades, this process forged the social basis for a
+functioning democracy.</p>
+<p>How History Matters</p>
+<p>We have seen several examples of the same impetus for building a
+stronger state, or in some instances the same forces reducing the
+despotic control of the state, having very different implications for
+the subsequent path of states and societies. This is the most important
+lesson of the current chapter. In contrast to the prevailing emphasis in
+much of social science, structural factors do not create strong
+dispositions for one type of economic, political, or social template to
+emerge. Rather, they generate “conditional effects”—meaning that their
+consequences are very much dependent on the existing balance of power
+between state and society.</p>
+<p>This point is general and helps us understand certain key turning
+points in European as well as world history, and it has some very novel
+implications going beyond the scope of this chapter. Most important,
+such structural factors, especially those related to the nature of
+economic relations and the tendencies created by international
+relations, not only shift the position of a nation in Figure 2 and
+Figure 3, but can also alter the shapes of the different regions in
+these figures. Most crucially, the lines demarcating the boundaries of
+the Despotic, Shackled, and Absent Leviathan change as these factors
+change. This, as we will see in Chapters 14 and 15, has a lot to tell us
+about what types of societies are more likely to build and maintain a
+Shackled Leviathan because they have a wider corridor.</p>
+<p>Our discussion in this chapter also clarifies why history matters in
+our framework. Once a society is in the corridor, it behaves very
+differently from when it is in the orbit of the Despotic Leviathan or
+living under the Absent Leviathan, so historical differences tend to
+persist. It is for this reason that the balance of power between state
+and society often endures. But of course, this balance in turn depends
+on certain economic, social, and political relationships and it is in
+this sense that the structure of the economy or politics in a country
+not only determines the width of the corridor but also shapes its future
+path. For example, a history of labor coercion renders the state and
+elites more powerful against an emaciated society, and this makes labor
+coercion more likely to persist and intensify, as our discussion of
+Guatemalan history illustrates; or past collectivization of agriculture
+makes despotism more likely to endure because it emasculates society, as
+our discussion of recent Russian history emphasizes. Indeed, it is this
+persistence that belies any simple tendency for there to be an “end of
+history,” where all nations eventually converge toward the same types of
+states, societies, or institutions. History does persist and does
+generate divergences that aren’t easy to erase or undo. More
+interestingly, different historical evolutions of the relationship
+between state and society can have momentous implications when
+confronted with changes in structural factors and big shocks like those
+discussed in this chapter. This is both because, as we have just noted,
+such things as a history of labor coercion, industrialization, or
+deep-rooted social hierarchy impact the shape of the corridor, but also
+because countries with different pasts will find themselves with
+different balances of power between state and society, laying the
+groundwork for divergent consequences of the same structural
+factors.</p>
+<p>This discussion highlights as well, and later chapters will
+underscore, that history isn’t destiny. Nations move in and out of the
+corridor, altering their historical trajectories, even if the likelihood
+and the manner in which this happens are themselves heavily influenced
+by their history (where the country is in the figure) and by economic,
+political, and social conditions that determine the shape of the
+corridor. This approach then gives us a way of thinking about what
+social scientists call agency—the ability of key actors to influence the
+course of their societies, for example by forming new and enduring
+coalitions; articulating new demands, grievances, and narratives; or
+coming up with technological, organizational, or ideological innovations
+(as we saw in Chapter 3). Agency matters in our framework not because it
+can freely reshape the trajectory of a nation as if it were a blank
+slate. Instead, agency, as well as sometimes completely
+insignificant-looking contingencies, can have durable effects by tilting
+the prevailing balance of state and society and modifying the way that a
+nation responds to structural factors. We saw with the Federalists in
+Chapter 2 the role that leaders capable of articulating a new vision and
+forming new coalitions can play in state building. We see the same in
+the Costa Rican case too. Though there were structural differences
+between Costa Rica and Guatemala, the path Costa Rica took was also
+significantly influenced by individuals such as Braulio Carrillo in the
+1830s and 1840s. His decision to separate Costa Rica from the Federal
+Republic of Central America allowed the country to diverge from the rest
+of the isthmus. His decisions to build more-effective state institutions
+allowed for the smallholder coffee economy to develop. Perhaps most
+interesting of all, his decision to keep the army small paved the way
+for a relatively muted role of the military in Costa Rican politics and
+its eventual abolition in 1948. Had Carrillo made different decisions,
+Costa Rica would likely be much more like Guatemala today. It took
+another individual, José Figueres, to finally abolish the military and
+create the constitutional basis for a modern state and functioning
+democracy. As with the choices of Carrillo, there was nothing
+predetermined about what Figueres did, bordered as he was by a recently
+emerged dictatorship under the Somozas in Nicaragua. In all of this,
+agency influenced how the forces highlighted in Figure 2 and Figure 3
+played out, but did not act freely from the prevailing balance of power.
+Indeed, it would have been impossible for Carrillo or Figueres to build
+a Shackled Leviathan if Costa Rica had had the same labor-repressive
+agriculture as Guatemala.</p>
+<h6 id="阅读日期-2026年08月20日-2026年08月20日-共-1-天">阅读日期：
+2026年08月20日-2026年08月20日 共： 1 天</h6>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>
