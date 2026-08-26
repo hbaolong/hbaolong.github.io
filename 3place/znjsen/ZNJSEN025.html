@@ -1,0 +1,1664 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="hbaolong@vip.qq.com" />
+  <title>智能简史EN:Notes</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">智能简史EN:Notes</h1>
+<p class="author">hbaolong@vip.qq.com</p>
+</header>
+<center>
+<a href="/3place/znjsen">返回首页</a> <a
+href="/3place/znjsen/mingju.html">本书名句</a> <a
+href="/3place/znjsen/memo.html">本书注解</a> <a
+href="/3place/znjsen/index_rich.html">丰富目录</a> <a
+href="/3place/znjsen/index_readcal.html">同读日历</a> <a
+href="/3place/znjsen/index_timeline.html">时间线</a> <a
+href="/3place/znjsen/index_books.html">引用书籍</a> <a
+href="/3place/znjsen/index_words.html">使用字频</a>
+<div id="wx_pic" style="margin:0 auto;display:none;">
+<img src='/img/logo.png'/>
+</div>
+</center>
+<h4 id="notes">Notes</h4>
+<p>Introduction</p>
+<p>“just like one of the family”: “Rosey’s Boyfriend.” The Jetsons,
+created by William Hanna and Joseph Barbera. Season 1, episode 8,
+1962.</p>
+<p>“on the verge of achieving human-level AI.: Cuthbertson, 2022.</p>
+<p>over one billion connections: width of a synapse of about 20
+nanometers (Zuber et al., 2005). Within a cubic millimeter there are
+about 1 billion connections (Faisal et al., 2005).</p>
+<p>“to the human brain”: quote from Hinton reported in “U of T computer
+scientist takes international prize for groundbreaking work in AI.” U of
+T News. January 18, 2017,
+https://www.utoronto.ca/news/u-t-computer-scientist-takes-international-prize-groundbreaking-work-ai.</p>
+<p>“motor, and other functions”: MacLean, 1990.</p>
+<p>and how it works: Cesario et al., 2020, provides a good overview of
+the current view of MacLean’s triune brain model. Although, to be fair
+to MacLean, it seems to me that most of the issues with his triune brain
+model are in its popular success. If one actually reads MacLean’s work,
+he readily acknowledges many of the challenges with his framework.</p>
+<p>“so on to Artificial Human–level Intelligence (AHI)”: Yann LeCun
+(<span class="citation" data-cites="ylecun">@ylecun</span>) tweeted this
+on December 9, 2019.</p>
+<p>faster than a human: Healy et al., 2013.</p>
+<p>Chapter 1: The World Before Brains</p>
+<p>an unremarkable hydrothermal vent: For reviews of hydrothermal-vent
+theory and the timing of life, see Bell et al., 2015; Dodd et al., 2017;
+Martin et al., 2008; McKeegan et al., 2007.</p>
+<p>it duplicated itself: For a review of RNA world and the evidence that
+RNA could originally duplicate itself without proteins, see Neveu et
+al., 2013.</p>
+<p>of a modern boat: Bacterial flagellum is proton-driven and works via
+rotary motor that turns. See Lowe et al., 1987; Silverman and Simon,
+1974.</p>
+<p>synthesis, lipids, and carbohydrates: For evidence LUCA had DNA, see
+Hassenkam et al., 2017. For evidence LUCA was performing protein
+synthesis, see Noller, 2012.</p>
+<p>finance these many processes: J. L. E. Wimmer et al., 2021.</p>
+<p>blue-green algae: Note scientists don’t like the term blue-green
+algae anymore since the word algae is reserved for a type of
+single-celled plant.</p>
+<p>Figure 1.1: Figure from https://www.scienceimage.csiro.au/image/4203.
+CC BY 3.0 license Photograph by Willem van Aken on March 18, 1993.</p>
+<p>converted into cellular energy: The ability to generate oxygen via
+photosynthesis likely first appeared in the ancestors of cyanobacteria;
+see K. L. French et al., 2015.</p>
+<p>and endlessly reproducing: Cardona et al., 2015; Schirrmeister et
+al., 2013.</p>
+<p>produced a pollutive exhaust: Note that earlier life may have used a
+less efficient and more primitive version of photosynthesis, one that
+produced less energy and did not produce oxygen as exhaust. See Raymond
+and Segrè, 2006.</p>
+<p>oxygen levels skyrocketed: T. W. Lyons et al., 2014.</p>
+<p>the Oxygen Holocaust: Margulis and Sagan, 1997.</p>
+<p>extinction events in Earth’s history: The Great Oxygenation Event
+occurred at 2.4B BCE; see Anbar et al., 2007. For evidence it killed off
+many species on Earth, see Hodgskiss et al., 2019.</p>
+<p>carbon dioxide as exhaust: Technically, what evolved is aerobic
+respiration, the version of respiration that uses oxygen. For evidence
+that aerobic respiration evolved after oxygenetic photosynthesis in
+cyanobacteria, see Soo et al., 2017.</p>
+<p>oxygen-based approach (aerobic respiration): O’Leary and Plaxton,
+2016.</p>
+<p>much more internal complexity: The complexity of eukaryotes can be
+seen under a microscope; the term eukaryote comes from the
+twentieth-century observation that the descendants of eukaryotes all had
+good (eu) kernels (karyon), while bacteria and bacteria-like life had no
+such inner structures and hence were called prokaryotes: before (pro)
+kernels (karyon).</p>
+<p>microbial killing machines yet: For evidence eukaryotes were the
+first cells to engulf and internally digest life for food, see
+Cavalier-Smith, 2009.</p>
+<p>The tree of life: Timing emergence of eukaryotes to around 2B years
+ago; see Knoll et al., 2006.</p>
+<p>mushroom-like fungi began growing: Bengtson et al., 2017.</p>
+<p>Figure 1.5: Illustration from Reichert, 1990. Used with
+permission.</p>
+<p>whom all neurons descend: There may be a single exception to this:
+comb jellies might have independently evolved neurons.</p>
+<p>on Earth than animals: Bar-On et al., 2018.</p>
+<p>as much as jellyfish embryos: Technau, 2020.</p>
+<p>neuron-enabled animal ancestor: Henceforth when I say animals, I’m
+referring to Eumetazoa, the “true” metazoans.</p>
+<p>gastrula-shaped creature with neurons: Arendt et al., 2016.</p>
+<p>similar to today’s corals: Penny et al., 2014; Wan et al., 2016.</p>
+<p>false starts and wrong turns: For a review of the historical
+discovery of nervous systems, see McDonald, 2004.</p>
+<p>not ether but electricity: Piccolino, 1997; Schuetze, 1983.</p>
+<p>generate their own signals: O’Brien, 2006.</p>
+<p>Adrian the Nobel Prize: Garson, 2015; Pearce, 2018.</p>
+<p>spikes or action potentials: The discovery of action potentials
+actually happened more gradually, some suggesting it happened as early
+as 1848. See du Bois-Reymond, E. 1848.</p>
+<p>the signals of neurons: Garson, 2003.</p>
+<p>of the spike itself: As with most everything in biology, there are
+exceptions: some areas of brains seem to use other coding strategies,
+such as temporal coding.</p>
+<p>from jellyfish to humans: For rate coding in hydra, see Tzouanas et
+al., 2021. For rate coding in C. elegans, see Q. Liu et al., 2018;
+O’Hagan et al., 2005; Suzuki et al., 2003.</p>
+<p>in their firing rate: J. T. Pearson and D. Kerschensteiner, 2015.</p>
+<p>concentration in their firing rate: Parabucki et al., 2019.</p>
+<p>force of the muscles: This has been shown even in C. elegans; see S.
+Gao and M. Zhen, 2011.</p>
+<p>a page in moonlight: MacEvoy, B. 2015</p>
+<p>Figure 1.10: Figure from B. MacEvoy, 2015. Used with permission
+(personal correspondence).</p>
+<p>five hundred spikes per second: Wang et al., 2016.</p>
+<p>John Eccles, and others: Eccles discovered inhibition; Dale
+discovered chemical neurotransmission (Todman, 2008); Sherrington
+discovered synapses (R. E. Brown et al., 2021).</p>
+<p>swallow reflexes to work: Evidence of lateral inhibition through
+synaptic inhibition has been found in the hydra; see Kass-Simon, 1988.
+But some have argued that synaptic inhibition is absent in Cnidaria
+(Meech and Mackie, 2007).</p>
+<p>and another must relax: See Bocharova and Kozevich, 2011, for details
+on mouth muscles of sea anemones.</p>
+<p>Chapter 2: The Birth of Good and Bad</p>
+<p>a grain of rice: For fossil evidence of early bilaterians, see Z.
+Chen et al., 2013, 2018; Evans et al., 2020.</p>
+<p>almost definitely very simple: For a great review of early
+bilaterians, see Malakhov, 2010.</p>
+<p>a human’s 85 billion: To be more precise, C. elegans has 302 neurons
+in its entire body, while a human has 85 billion neurons in his or her
+brain; there are other neurons in the human nervous system outside of
+the brain.</p>
+<p>finds the food: Henceforth whenever I use the term nematode, I am
+referring to the specific species of nematode Caenorhabditis
+elegans.</p>
+<p>in on the food: For an example with flatworms, see Pearl, 1903. For
+nematodes, see Bargmann et al., 1993; Ward, 1973.</p>
+<p>bodies might get wounded: For a good review of these types of
+behaviors in C. elegans, see Hobert, 2003. For thermal-gradient behavior
+in C. elegans, see Cassata et al., 2000; Hedgecock and Russell, 1975; L.
+Luo et al., 2014.</p>
+<p>“be gained from it”: Brooks, 1991.</p>
+<p>“grail within their grasp”: Ibid.</p>
+<p>over forty million units: History | iRobot. (n.d.). Retrieved March
+5, 2023, from https://about.irobot.com/History.</p>
+<p>or to recognize objects: Note that future versions of the Roomba did
+add features that allowed it to learn maps of the house.</p>
+<p>Figure 2.8: Photograph by Larry D. Moore in 2006. Picture published
+on Wikipedia at https://en.wikipedia.org/wiki/Roomba under a CC-BY
+license.</p>
+<p>to different downstream neurons: Garrity et al., 2010.</p>
+<p>cold when they’re too cold: L. Luo et al., 2014. For additional
+details see the great review by Garrity et al., 2010. The “AFD” neuron
+only responds to “too hot” temperatures when temperature is above a
+threshold (see Goodman and Sengupta, 2018).</p>
+<p>to cross the barrier: Hobert, 2003; Ishihara et al., 2002.</p>
+<p>across different sensory modalities: Inoue et al., 2015.</p>
+<p>copper barrier: The exact circuit for this mutual inhibition is more
+complex but similar in principle. In C. elegans there is a sensory
+neuron named AWC, which gets excited by positive valence smells. There
+are four downstream neurons in C. elegans that get input from sensory
+neurons; these downstream neurons are named AIZ, AIB, AIY, and AIA. AIZ
+and AIB promote turning, while AIY and AIA promote forward movement
+(discussed in Garrity et al., 2010). There is mutual inhibition among
+these downstream neurons: AIY inhibits AIB (Chalasani et al., 2007), AIY
+inhibits AIZ (Z. Li et al., 2014), and AIA inhibits AIB (Wakabayashi et
+al., 2004). Some of the mutual inhibition occurs further downstream; for
+example, by integrating inhibitory output from AIY with excitatory input
+from AIB on another neuron RIB, which promotes turns itself (Garrity et
+al., 2010; J. M. Gray et al., 2005). The circuit is messy, but the
+effect is the same; there is mutual inhibition between votes for moving
+forward and votes for turning.</p>
+<p>hungry a nematode is: Davis et al., 2017; Lau et al., 2017.</p>
+<p>how hungry they are: Rengarajan et al., 2019.</p>
+<p>healthy amount of energy: Davis et al., 2017.</p>
+<p>Chapter 3: The Origin of Emotion</p>
+<p>separate words for each: Jackson et al., 2019.</p>
+<p>two attributes of emotions: Barrett and Russell, 1999; Russell,
+2003.</p>
+<p>adrenaline, and blood pressure: Heilman, 1997; Lang, Bradley, and
+Cuthbert, 1997.</p>
+<p>of specific brain regions: Gerber et al., 2008.</p>
+<p>of valence and arousal: Jackson et al., 2019; Wierzbicka, 1992.</p>
+<p>(e.g., crying and smiling): Bridges, 1932; Graf, 2015; Huffman, 1997;
+Oster, 2012; Saarni et al., 2006.</p>
+<p>the food is gone: Hills et al., 2004; D. Jones and Candido, 1999; Z.
+Liu et al., 2018.</p>
+<p>the brain with dopamine: Chase et al., 2004.</p>
+<p>the state of exploitation: If you destroy these dopamine neurons,
+exploitation behavior in response to food goes away (Sawin et al.,
+2000). Hills et al., 2004, shows this and also shows that if you leave
+those neurons intact but prevent dopamine signaling between neurons,
+exploitation behavior similarly goes away, and if you inject dopamine
+into the brain of C. elegans, it immediately shows exploitation (slowing
+down and increasing turning frequency as if it had detected food). And
+if you inject dopamine into C. elegans even after dopamine neurons have
+been destroyed, exploitation behavior returns.</p>
+<p>Dopamine generates this persistent state by remaining in the
+extracellular fluid long after the dopamine neurons fired. Dopamine
+accomplishes this by directly modulating the responses of a whole suite
+of neurons. For example, dopamine modulates the responses of specific
+motor neurons (Chase et al., 2004) and the responses of the steering
+neurons (Hills et al., 2004), and it modulates valence neurons directly
+(Sanyal et al., 2004). The consequence of all this orchestrated
+modulation is that you get a new affective state of exploitation in
+which worms move more slowly and turn more frequently.</p>
+<p>food in their throats: Rhoades et al., 2019.</p>
+<p>released, it triggers satiety: For evidence serotonin is released by
+the detection of food in the stomach, see Gürel et al., 2012.</p>
+<p>If you destroy the two food-related serotonin neurons, hungry worms
+no longer additionally slow down when they encounter food; see Sawin et
+al., 2000. If you prevent serotonin signaling, worms spend barely any
+additional time resting when full than when hungry (Churgin et al.,
+2017). Without serotonin signaling, worms spend far more time in
+escape/roaming behavior when hungry, as if it takes much longer for them
+to stop looking for food once they get full (Churgin et al., 2017;
+Flavell et al., 2013). One interpretation of this is that without
+serotonin, worms struggle to get satisfied. If you inject serotonin into
+the brain of C. elegans, it spends much less time moving around looking
+for food when hungry (Churgin et al., 2017). Serotonin also increases
+egg laying (Waggoner et al., 1998), mating behavior (Loer and Kenyon,
+1993; Ségalat et al., 1995), and pharyngeal pumping, the equivalent of
+swallowing (Ségalat et al., 1995).</p>
+<p>pursuit of rewards (satiation): The role of serotonin is similar
+across Bilateria (Gillette, 2006; Tierney, 2020). Serotonin is released
+when food is in the mouth and triggers swallowing in mollusks
+(Kabotyanski et al., 2000; Yeoman et al., 1994), nematodes (Hobson et
+al., 2006; Szø et al., 2000), and annelids (Groome et al., 1995). In
+vertebrates, the experience of a positive-valanced stimulus, even if
+expected, triggers serotonin release (Z. Liu et al., 2020; Zhong et al.,
+2017). The role of serotonin on aggression seems to be conserved as
+well, as serotonin decreases aggressiveness in rats (Nikulina et al.,
+1991), chickens (Dennis et al., 2008), and crustaceans (Kravitz, 2000).
+Serotonin consistently plays a role in satiation, although there are
+some differences. Serotonin induces satiety and reduces feeding in rats
+(Blundell and Leshem, 1975; Grinker et al., 1980), nonhuman primates
+(Foltin and Moran, 1989), humans (McGuirk et al., 1991; Rogers and
+Blundell, 1979), flies (Long et al., 1986), cockroaches (Haselton et
+al., 2009), ants (Falibene et al., 2012), honeybees (A. S. French et
+al., 2014), and mosquitoes (Ling and Raikhel, 2018). However, in
+annelids and mollusks this seems to be different; serotonin seems to
+induce hunger and increase feeding in annelids (Lent et al., 1991) and
+mollusks (Hatcher et al., 2008; Yeoman et al., 1994) and lowers feeding
+thresholds across both (Palovcik et al., 1982).</p>
+<p>brain releases serotonin: For a great review of serotonin, see Z. Liu
+et al., 2020.</p>
+<p>with whomever they see: Musselman et al., 2012.</p>
+<p>willing to delay gratification: For evidence that raising serotonin
+decreases eating, see Sharma and Sharma, 2012. For evidence that raising
+serotonin increases willingness to delay gratification, see Linnoila et
+al., 1983.</p>
+<p>dulling the responses of valence neurons: For turning off dopamine
+responses, see Valencia-Torres et al., 2017. For dulling valence
+responses, see Lorrain et al., 1999.</p>
+<p>Figure 3.5: Images from Kent Berridge (personal correspondence). Used
+with permission.</p>
+<p>food and starve to death: Reviewed in Berridge and Robinson,
+1998.</p>
+<p>of times an hour: Heath, 1963.</p>
+<p>“reach the end point”: Admittedly, Heath believed that the evidence
+he found showed that septal stimulation was pleasurable, and he did
+claim that patients seemed to feel “good” (Heath, 1963). But other
+experimenters did the same experiments and found “there were no ‘liking’
+effects during stimulation, in contrast to findings reported by Heath”
+(Schlaepfer et al., 2008).</p>
+<p>both liking and disliking reactions: Treit and Berridge, 1990.</p>
+<p>15 million annual suicide attempts: Morgan et al., 2018.</p>
+<p>and engage in life: Depression. World Health Organization, 13
+September 2021. Accessed on March 5, 2023, at
+https://www.who.int/news-room/fact-sheets/detail/depression.</p>
+<p>sleep, reproduction, and digestion: Norepinephrine is highly arousing
+across many, if not all, vertebrates, including fish (Singh et al.,
+2015). Octopamine (a related compound) similarly increases arousal in
+diverse protostomes such as annelids (Crisp et al., 2010), arthropods
+(Crocker and Sehgal, 2008; Florey and Rathmayer, 1978), and nematodes
+(Churgin et al., 2017). Norepinephrine increases aggression across many
+vertebrates, including mice (Marino et al., 2005). Octopamine similarly
+increases aggression in flies (C. Zhou et al., 2008). Norepinephrine is
+released by starvation in vertebrates (P. J. Wellman, 2000). Octopamine
+is released by starvation and increases food consumption in arthropods
+(Long and Murdock, 1982), mollusks (Vehovszky and Elliott, 2002), and
+nematodes (Guo et al., 2015; Suo et al., 2006). Octopamine suppresses
+courtship conditioning in arthropods (C. Zhou et al., 2012), and
+suppresses egg laying in arthropods (Sombati and Hoyle, 1984) and
+nematodes (Alkema et al., 2005; Guo et al., 2015; Horvitz et al.,
+1982).</p>
+<p>The specific valence of octopamine/norepinephrine and dopamine may
+have been flipped in arthropods (reviewed in Barron et al., 2010):
+Octopamine mediates appetitive signals in crickets (Mizunami et al.,
+2009; Mizunami and Matsumoto, 2017), honeybees (Farooqui et al., 2003;
+Hammer, 1993), flies (Schwaerzel et al., 2003), and crabs (Kaczer and
+Maldonado, 2009). Dopamine may instead mediate aversive signals in
+crickets (Mizunami et al., 2009; Mizunami and Matsumoto, 2017) and flies
+(Schwaerzel et al., 2003). However, the story is not so clear; rewards
+create dopamine-dependent positive-affective states in bumblebees (Perry
+et al., 2016). Further, lack of octopamine impairs aversive learning in
+arthropod flies (Mosca, 2017), and different subsets of octopamine
+neurons seem to trigger either approach or aversion in arthropod flies
+(Claßen and Scholz, 2018).</p>
+<p>Admittedly, there are many arousing chemicals with slightly different
+effects (D. Chen et al., 2016). But this is still an instructive “first
+pass” and it is remarkable how well individual neuromodulators map to
+specific affective states in nematodes. If you block norepinephrine,
+worms spend dramatically less time in their escape behavioral repertoire
+and far more time immobilized, even if exposed to noxious stimuli
+(Churgin et al., 2017). Worms lose the ability to get into the mode of
+“I have to get out of here and find food!” Norepinephrine accomplishes
+this the same way any other neuromodulator does—by persistently
+modulating various neurons that control movement and turning (Rengarajan
+et al., 2019). Like other neuromodulators, norepinephrine also modulates
+valence neurons. Without norepinephrine, worms fail to shift their
+behavior from CO2 avoidance to attraction when starved (Rengarajan et
+al., 2019).</p>
+<p>rest and be content: Churgin et al., 2017; Rex et al., 2004; Suo et
+al., 2006.</p>
+<p>energetic resources to muscles: Specifically, the suite of adrenaline
+related compounds (norepinephrine, octopamine, and epinephrine).</p>
+<p>cannot go on indefinitely: See Sapolsky et al., 2000, for a great
+overview of the stress response. This analogy was inspired by Sapolsky,
+2004.</p>
+<p>in response to stressors: Park et al., 2020.</p>
+<p>inhibited by acute stressors: Staub et al., 2012.</p>
+<p>prolonged bouts of feeding: Cheong et al., 2015.</p>
+<p>inhibited pain responses: Mills et al., 2016; Nieto-Fernandez et al.,
+2009; Pryor et al., 2007.</p>
+<p>and inhibited reproductive behavior: Ow and Hall, 2020; Seidel and
+Kimble, 2011.</p>
+<p>their normally hungry peers: You et al., 2008.</p>
+<p>pause bodily functions: Nath et al., 2016.</p>
+<p>they give up: A. J. Hill et al., 2014.</p>
+<p>state of chronic stress: Following exposure to a stressor like heat,
+the worms exhibit a period of quiescence that aids survival. See Fry et
+al., 2016; A. J. Hill et al., 2014; Konietzka et al., 2019; van Buskirk
+and Sternberg, 2007. The same is true of starvation; see Park et al.,
+2020; Skora et al., 2018.</p>
+<p>response, appetite, and reproduction: Adamo and Baker, 2011.</p>
+<p>stress starts activating serotonin: In genetically edited C. elegans
+worms with reduced insulin signaling (which triggers a depression-like
+state), this is what you see: if serotonin is blocked, these seemingly
+permanently depressed worms cease to be depressed (Dagenhardt et al.,
+2017). They return to moving around and responding to food cues.
+Fascinatingly, this serotonin depression cure seems to work all the way
+from C. elegans to humans. The primary medications to treat depression
+in humans are selective serotonin reuptake inhibitors (SSRIs), such as
+Prozac, which evidence suggests reduce the level of serotonin in the
+brain. There is complexity here. At first, SSRIs actually increase the
+level of serotonin in the brain by blocking the reuptake of serotonin
+from synapses. But over the course of weeks, this blocking changes the
+responses of serotonin neurons and makes them reduce their signaling,
+hence the net effect is to reduce serotonin levels. This is why SSRIs
+can make depression worse at first, but over the course of two to six
+weeks, people start to feel better. Of course, there is still
+controversy around whether this story is exactly right.</p>
+<p>Giving opioids to depressed mice reduces their signs of depression
+(Berrocoso et al., 2013; Zomkowski et al., 2005).</p>
+<p>presence of inescapable stressors: As further evidence for this,
+consider: What accelerates the speed at which a worm gives up? Energy
+reserves. If energy reserves are low, as signaled by low levels of
+insulin, worms give up much faster (Skora et al., 2018). This may seem
+too simplistic to be informative about depression or stress in humans,
+but you might be surprised by the connections. Insulin signaling has a
+well-known, albeit still mysterious, connection to depression and
+chronic stress in humans: People with diabetes (a disease where insulin
+signaling is disrupted) have a three times higher rate of depression
+than the general population (Anderson et al., 2001; Gavard et al.,
+1993); people with depression even without diabetes still show higher
+insulin resistance than the general population (Hung et al., 2007; Kan
+et al., 2013), and people with diabetes even without classical
+depression still report apathy/anhedonia as a common symptom (Bruce et
+al., 2015; Carter and Swardfager, 2016). Further, diabetic mice display
+more signs of depression than nondiabetic mice, an effect that is
+completely reversed by insulin administration (Gupta et al., 2014). If
+you genetically edit C. elegans to reduce its insulin signaling, it
+becomes permanently depressed, showing dramatically reduced movement
+even in response to food signals (Dagenhardt et al., 2017). Anhedonia is
+an evolutionary beneficial feature of chronic stress—it is giving up to
+save energy in the face of hardship. And insulin seems to be a key
+signal for how much energy reserve an animal has, hence how likely an
+animal is to become chronically stressed in the face of hardship.</p>
+<p>stimuli have gone away: A. J. Hill et al., 2014.</p>
+<p>slugs, and fruit flies: For learned helplessness in cockroaches, see
+G. E. Brown, Anderson, et al., 1994; G. E. Brown and Stroup, 1988. For
+slugs, see G. E. Brown, Davenport, et al., 1994. For fruit flies, see G.
+E. Brown et al., 1996.</p>
+<p>don’t even have serotonin neurons at all: It is likely that the
+locomotive circuits within Cnidarians are also modulated by various
+neuropeptides, but in Cnidarians, such decisions don’t seem to be driven
+by the same neuromodulators as in Bilateria. In Cnidaria, dopamine has
+been shown to inhibit the feeding response (Hanai and Kitajima, 1984)
+and tentacle contraction (Hudman and McFarlane, 1995) and even trigger
+sleep (Kanaya et al., 2020). Serotonin is not present across many
+Cnidarians (Carlberg and Anctil, 1993; Takeda and Svendsen, 1991), and
+in the few species where it is found, it seems to primarily induce
+spawning (Tremblay et al., 2004). Norepinephrine increases the
+likelihood of nematocyst release (Kass-Simon and Pierobon, 2007) and
+changes the speed of peristalsis waves in medusa (Pani et al., 1995).
+For the most part, these neuromodulators seem involved in modulating
+reflexes, and not, as in Bilateria, directly triggering behavioral
+repertoires for navigation.</p>
+<p>Chapter 4: Associating, Predicting, and the Dawn of Learning</p>
+<p>“it we are nothing”: Seeger, 2009.</p>
+<p>“source of error”: Todes, 2014.</p>
+<p>“elicit in the dog thoughts about food”: Ibid.</p>
+<p>kick in response to just the sound: Irwin, 1943; Twitmyer, 1905.</p>
+<p>simple circuits in their spinal cords: Illich et al., 1994.</p>
+<p>away from the salt: Amano and Maruyama, 2011; Saeki et al., 2001;
+Tomioka et al., 2006; Wen et al., 1997.</p>
+<p>from that food smell: Morrison et al., 1999; Y. Zhang et al.,
+2005.</p>
+<p>toward that temperature: Hedgecock and Russell, 1975.</p>
+<p>will last for days: This effect is not just a sensitization of the
+withdrawal response; if you shock a slug but do not pair the shock with
+the tap, it does not withdraw as much to the tap despite the same number
+of prior shocks. (Carew et al., 1981a; 1981b; Walters et. al. 1981). For
+a review of simple learning circuits see Hawkins andandandand Kandel
+1984.)</p>
+<p>capable of learning associations: I am aware of only one report of
+associative learning in Cnidaria, where a sea anemone learned to
+contract its tentacles in response to a light that predicted shock, an
+experiment by Haralson et al., 1975. Other attempts have not replicated
+this result (Rushforth, 1973). Torley, 2009, performed a literature
+search and engaged in numerous personal inquiries with experts in
+Cnidarian behavior and did not find studies confirming classical
+conditioning in Cnidaria. Ginsburg and Jablonka, 2019, similarly
+conclude that Cnidaria do not exhibit associative learning.</p>
+<p>a process called extinction: Pavlov, 1927.</p>
+<p>ancient Ediacaran Sea: Ruben and Lukowiak 1982.</p>
+<p>credit assignment problem was blocking: Kamin, 1969.</p>
+<p>in the animal kingdom: Latent inhibition has been shown in honeybees
+(Abramson and Bitterman, 1986), mollusks (Loy et al., 2006), fish
+(Mitchell et al., 2011), goats (Lubow and Moore, 1959), and rats (Ackil
+et al., 1969; Boughner and Papini, 2006). Overshadowing and blocking
+have been observed in flatworms (Prados, Alvarez, Howarth, et al.,
+2013), honeybees (Couvillon and Bitterman, 1989), mollusks (Acebes et
+al., 2009; Sahley et al., 1981), rats (Prados, Alvarez, Acebes, et al.,
+2013), humans (Prados, Alvarez, Acebes, et al., 2013), rabbits (Merchant
+and Moore, 1973), and monkeys (Cook and Mineka, 1987).</p>
+<p>blocking, and overshadowing: Illich et al., 1994.</p>
+<p>memories were these impressions: Burnham, 1888.</p>
+<p>“has once been folded”: Levy, 2011.</p>
+<p>were persistent “vibrations”: Burnham, 1889.</p>
+<p>how learning might work: For a good review of the history of
+different discoveries on synaptic learning, in particular timing-based
+learning rules, see Markram et al., 2011.</p>
+<p>involved in Hebbian learning: Ramos-Vicente, D. et al., 2018;
+Stroebel, D. 2021.</p>
+<p>Chapter 5: The Cambrian Explosion</p>
+<p>are incredibly similar: Grillner and Robertson, 2016.</p>
+<p>many animal species: P. Chance, 1999.</p>
+<p>Figure 5.5: One of Thorndike’s puzzle boxes: Picture is from
+Thorndike, 1898 (figure 1).</p>
+<p>“again in that situation”: P. Gray, 2011.</p>
+<p>specific button to get food: Adron et al., 1973.</p>
+<p>getting caught in a net: C. Brown, 2001; C. Brown and Warburton,
+1999.</p>
+<p>Chapter 6: The Evolution of Temporal Difference Learning</p>
+<p>not going to work: Minsky, 1961.</p>
+<p>behaviors using predicted rewards: To be fair, some of these ideas
+were already present in dynamic programming in the operations research
+world. Sutton’s contribution was realization you could solve the policy
+and the value function simultaneously.</p>
+<p>backgammon using temporal difference learning: Note that TD-Gammon
+was not an actor-critic model but a simpler version of temporal
+difference learning that learned what is called the value function
+directly. But the principle of bootstrapping on temporal differences was
+the same.</p>
+<p>“staggering level of performance”: Tesauro, 1994.</p>
+<p>for twenty-four hours straight: Olds, 1956; Olds and Milner, 1954.
+These experiments actually stimulated the septal area, which triggered
+dopamine release. Later experiments confirmed that it was, in fact,
+dopamine that mediated the effect of septal stimulation; if you inject a
+rat with dopamine-blocking drugs, the rat will no longer push a lever
+for septal stimulation (reviewed in Wise, 2008).</p>
+<p>favor of dopamine stimulation: “A hungry rat often ignored available
+food in favor of the pleasure of stimulating itself electrically” (Olds,
+1956).</p>
+<p>(repeatedly removed from water): Kily et al., 2008.</p>
+<p>such dopamine-enhancing chemicals: Cachat et al., 2010; Gerlai et
+al., 2000, 2009.</p>
+<p>temporal difference learning signal: Schultz et al., 1997.</p>
+<p>food in sixteen seconds: Kobayashi and Schultz, 2008.</p>
+<p>“A Neural Substrate of Prediction and Reward”: Schultz et al.,
+1997.</p>
+<p>monkey, and human brains: Grillner and Robertson, 2016; J. M. Li,
+2012; Vindas et al., 2014.</p>
+<p>for a failed prediction of future reward: For more information on
+this idea, see Joseph LeDoux’s great review of avoidance learning in
+LeDoux et al., 2017.</p>
+<p>expected rewards or punishments: It can be hard to differentiate
+Pavlovian learning from learning from omission, and there are ongoing
+debates about the mechanisms of avoidance learning. For a great study
+showing that fish do truly learn from the omission of shock, see
+Zerbolio and Royalty, 1982.</p>
+<p>five seconds after light: M. R. Drew et al., 2005; A. Lee et al.,
+2010. Reviewed in Cheng et al., 2011.</p>
+<p>cycle of the day: Eelderink-Chen et al., 2021, shows circadian rhythm
+in prokaryotes; McClung, 2006, shows circadian rhythm in plants.</p>
+<p>intervals between events: Abramson and Feinman, 1990; Craig et al.,
+2014. Reviewed in Abramson and Wells, 2018.</p>
+<p>that maximize dopamine release: The connections between the cortex
+and basal ganglia contain different types of dopamine receptors. Rapid
+spikes of dopamine drive a strengthening between the cortical neurons
+and specific basal ganglia neurons that drive doing (or ungating)
+specific actions, and a weakening between cortical neurons and a
+different set of basal ganglia neurons that drive stopping (or gating)
+specific actions. Rapid declines of dopamine have the opposite effect.
+Through these parallel circuits, dopamine bursts reinforce recent
+behaviors and make them more likely to reoccur and dopamine declines
+punish behaviors and make them less likely to reoccur.</p>
+<p>basal ganglia of dopamine: Cone et al., 2016, shows evidence that
+changing valence of sodium appetite derives from changes in input from
+lateral hypothalamus to midbrain dopamine neurons.</p>
+<p>dopamine neurons directly: The purported actor circuit flows from the
+matrix of the striatum (the input structure of the basal ganglia); the
+purported critic circuit flows from the striosomes of the striatum.</p>
+<p>Chapter 7: The Problems of Pattern Recognition</p>
+<p>specific types of molecules: Niimura, 2009, provides evolutionary
+evidence that the olfactory receptors in modern vertebrates originated
+just before early vertebrates in the first chordates. Amphioxus (an
+animal often used as a model of the first chordates) has thirty-one
+functional vertebrate-like olfactory receptor genes and the lamprey
+(often used as a model for the early vertebrates) has thirty-two
+vertebrate-like olfactory receptor genes. Note that different lineages
+expanded the number of olfactory receptors; some modern fish have over
+one hundred, and rats have over one thousand.</p>
+<p>As discussed in Niimura, 2012, while invertebrates also have
+olfactory receptors, their olfactory receptors seem to have
+independently evolved: “[Olfactory receptor] genes were also identified
+from other invertebrates including insects, nematodes, echinoderms, and
+mollusks . . . however, their evolutionary origins are distinct from
+that of vertebrate [olfactory receptor] genes. The neuroanatomical
+features of insect and vertebrate olfactory systems are common, but
+insect and vertebrate [olfactory receptor] genes are strikingly
+different to each other and share no sequence similarities.”</p>
+<p>are similar but not the same: D. A. Wilson, 2009, and Laurent, 1999,
+proposed a similar model of olfactory coding. Barnes et al., 2008, found
+evidence of pattern completion in olfactory cortex of rats. Yaksi et
+al., 2009, found evidence of similar types of pattern separation and
+completion in fish. For one of the original papers suggesting that the
+three-layered cortex performs this type of auto-association, see Marr,
+1971.</p>
+<p>An artificial neural network: Picture from
+https://en.wikipedia.org/wiki/Artificial_neural_network#/media/File:Colored_neural_network.svg.</p>
+<p>three layers of neurons: Teleost fish may not have clear layers, but
+the lamprey has a layered cortex, as do reptiles, hence I proceed with
+the assumption that the cortex of early vertebrates was layered
+(Suryanarayana et al., 2022).</p>
+<p>networks to do math: McCloskey and Cohen, 1989. For reviews of
+current challenges in continual learning see Parisi et al., 2019, and
+Chen and Liu, 2018.</p>
+<p>the year before: Brown, 2001.</p>
+<p>learn this new pattern: Grossberg, 2012.</p>
+<p>presented the cats with different visual stimuli: Hubel and Wiesel,
+1959, 1962, 1968.</p>
+<p>Figure 7.9: Figure from Manassi et al., 2013. Used with
+permission.</p>
+<p>discovered by Hubel and Wiesel: Fukushima, 1980.</p>
+<p>tap pictures to get food: Wegman et al., 2022.</p>
+<p>rotated and translated objects: Worden et al., 2021. The cortex and
+thalamus are densely interconnected. It was originally believed that the
+thalamus was merely a “relay” of input to the cortex. But new research
+is beginning to call this into question. Three observations give us
+hints that the interactions between the thalamus and the cortex might be
+important for the invariance problem. First, most sensory input to the
+cortex flows through the thalamus—input from eyes, ears, and skin all
+first go to the thalamus and then branch out to various regions of the
+cortex. However, there is one exception to this rule: smell. The single
+sense that skips the thalamus and connects directly to the cortex is
+smell. Perhaps this is because smell is the only sense that does not
+have the invariance problem; it does not need to interact with the
+thalamus to recognize objects at different scales, rotations, and
+translations. Second, the thalamus and the cortex evolved together. Even
+in the most distant vertebrates, like the lamprey fish, there is both a
+cortex and a thalamus with similar interactions between them as in other
+vertebrates. This suggests that their function might be emergent from
+interactions between them. And third, the circuitry of the thalamus
+seems to precisely gate and route connections between different areas of
+the cortex.</p>
+<p>Chapter 8: Why Life Got Curious</p>
+<p>Montezuma’s Revenge: This story is retold in Christian, 2020.</p>
+<p>to human infants: For curiosity in fish, see Budaev, 1997. For
+curiosity in mice, see Berlyne, 1955. For curiosity in monkeys, see
+Butler and Harlow, 1954. For curiosity in human infants, see Friedman,
+1972.</p>
+<p>no “real” reward: Matsumoto and Hikosaka, 2009.</p>
+<p>cephalopods, show curiosity: Reviewed in Pisula, 2009. For cockroach
+curiosity, see Durier and Rivault, 2002. For curiosity in ants, see
+Godzinska, 2004. For cephalopod curiosity, see Kuba et al., 2006.</p>
+<p>wasn’t present in early bilaterians: In the review on curiosity by
+Pisula, 2009, on page 48, he concludes that “parallels in exploratory
+behaviors must therefore be a result of convergence, i.e. a similar
+response to similar challenges presented by the environment, rather than
+common ancestry.”</p>
+<p>Fish exhibit this effect as well: This partial reinforcement effect
+was found in goldfish in Wertheim and Singer, 1964. It was also shown in
+Gonzales et al., 1962, although with some differences from how the
+effect works in mammals.</p>
+<p>Chapter 9: The First Model of the World</p>
+<p>directly to the container with the food: Durán et al., 2008,
+2010.</p>
+<p>one thing relative to another thing: Larsch et al., 2015. For
+planarians see Pearl, 1903. For bees see Abramson et al., 2016.</p>
+<p>through the entire loop again: Wehner et al., 2006.</p>
+<p>Figure 9.1: Image by Carlyn Iverson / Science Source. Used with
+permission.</p>
+<p>facing a certain direction: Bassett and Taube, 2001.</p>
+<p>ventral cortex, and medial cortex: Note there is controversy around
+how to subdivide parts of the cortex in fish and amphibians. Some argue
+there are four areas, an additional one being the dorsal cortex (see
+Striedter and Northcutt, 2019).</p>
+<p>cortex of early vertebrates: Note that the location of these areas of
+cortex is shifted in some modern vertebrates, which leads to different
+naming of the same functional structure, a complexity I have
+intentionally omitted for readability. In teleost fish, for example, the
+cortex does not fold in the same ways as in the lamprey, reptiles, and
+mammals (in teleost fish, the cortex goes through evagination, folding
+outward, instead of invagination, folding inward). So the location of
+the same functional structure (the hippocampal part of the cortex) ends
+up in different places in the brain, and thus the names anatomists give
+these areas differ. When I refer to the medial cortex of early
+vertebrates, I am referring to the functional structure in early
+vertebrates that would later become the hippocampus in mammals. In the
+lamprey and reptiles, this part of the cortex is the medial cortex,
+whereas in teleost fish, the identical part of the cortex is the lateral
+cortex. For simplicity I refer to this area of cortex as hippocampus and
+graphically represent the cortex only in its invaginated state (hence
+the hippocampus structure shows up in the medial part), since we use the
+lamprey as the model organism for early vertebrates.</p>
+<p>are facing specific directions: Fotowat et al., 2019; Vinepinsky et
+al., 2020.</p>
+<p>a spatial map: Petrucco et al., 2022, shows evidence of
+head-direction cells in the hindbrain of fish. For a review of the
+overall network of head-direction cells and input to the hippocampus in
+rodents, see Yoder and Taube, 2014.</p>
+<p>ability to remember locations: Broglio et al., 2010; Durán et al.,
+2010; López et al., 2000; Rodríguez et al., 2002.</p>
+<p>turn in a maze: Rodríguez et al., 2002.</p>
+<p>space to get food: Durán et al., 2010.</p>
+<p>given different starting locations: Broglio et al., 2010.</p>
+<p>similarly impairs spatial navigation: Naumann and Laurent, 2016;
+Peterson, 1980; Rodríguez et al., 2002.</p>
+<p>Chapter 10: The Neural Dark Ages</p>
+<p>to previously inhospitable areas: Algeo, 1998.</p>
+<p>were thirty meters tall: Beck, 1962.</p>
+<p>The Late Devonian Extinction: Algeo et al., 1995; McGhee, 1996.</p>
+<p>than you can underwater: Mugan and MacIver, 2020.</p>
+<p>and plan are birds: Boeckle and Clayton, 2017.</p>
+<p>Figure 10.3: I am leaving out the dorsal cortex from early
+vertebrates because there is still debate about its presence (Striedter
+and Northcutt, 2019). For the alignment between medial cortex to
+hippocampus, lateral cortex to olfactory cortex, and ventral cortex to
+associative amygdala, see Luzzati, 2015; Striedter and Northcutt,
+2019.</p>
+<p>Chapter 11: Generative Models and the Neocortical Mystery</p>
+<p>stimuli elicited what responses: Talbot et al., 1968.</p>
+<p>test of Mountcastle’s hypothesis: von Melchner et al., 2000.</p>
+<p>Figure 11.4: “Editor” image from Jastrow (1899). Other images from
+Lehar S. (2003), obtained from Wikipedia.</p>
+<p>Figure 11.5: Staircase from Schroeder (1858). “Necker cube” from
+Louis Necker (1832). Duck or rabbit from Jastrow (1899).</p>
+<p>Figure 11.6: Image from Fahle, et al., 2002. Used with permission by
+The MIT Press.</p>
+<p>with Helmholtz’s theory: Later incarnations of Helmholtz’s ideas
+include analysis-by-synthesis (Neisser, 1967) and Mackay’s
+epistemological automata (MacKay, 1956).</p>
+<p>the Helmholtz machine: Dayan, 1997; Hinton et al., 1995.</p>
+<p>learned on its own: Dayan, 1997; Ibid.</p>
+<p>Figure 11.8: Image from Hinton et al., 1995. Used with
+permission.</p>
+<p>thispersondoesnotexist.com: Uses a StyleGAN2 (Karras et al.,
+2020).</p>
+<p>Figure 11.10: Figure from He et al., 2019. Used with permission.</p>
+<p>with a generative model: Reichert et al., 2013.</p>
+<p>“constrained hallucination”: Seth, 2017.</p>
+<p>presence of REM sleep: The only nonmammalian animals shown to also
+have mammal-like sleep states of alternated NREM and REM sleep
+(suggestive of dreaming) are birds (Johnsson et al., 2022; Lesku and
+Rattenborg, 2014; Rattenborg et al., 2022).</p>
+<p>process of forced generation: For a nice overview of theories of why
+we dream, the connection to generative models, and alternative
+explanations for dreaming, see Prince and Richards, 2021.</p>
+<p>processing actual visual data: van der Wel and van Steenbergen,
+2018.</p>
+<p>imagine the same thing: O’Craven and Kanwisher, 2000.</p>
+<p>moving the body parts: Doll et al., 2015.</p>
+<p>(recording their brains): For a good review, see Pearsona and
+Kosslynb, 2015. There is now strong evidence that when one visualizes,
+there is activity in area V1 (Albers et al., 2013; Slotnick et al.,
+2005; Stokes et al., 2009). For evidence that one can decode imagery
+from activation in visual neocortex, see Kay et al., 2008; Naselaris et
+al., 2015; Thirion et al., 2006.</p>
+<p>(the left visual field): Bisiach and Luzzatti, 1978; Farah et al.,
+1992.</p>
+<p>that unfolds over time: Jeff Hawkins has some great writing about
+this. See his books J. Hawkins, 2021, and J. Hawkins, 2004.</p>
+<p>“from AI systems today”: tweeted by Yann LeCun (<span
+class="citation" data-cites="lecun">@lecun</span>) on December 19,
+2021.</p>
+<p>Chapter 12: Mice in the Imaginarium</p>
+<p>rotated, rescaled, or perturbed: Volotsky et al., 2022.</p>
+<p>before choosing a direction: Tolman, 1939, 1948.</p>
+<p>try the next option: Steiner and Redish, 2014. As reviewed in Redish,
+2016.</p>
+<p>to consider alternative paths: Schmidt et al., 2013.</p>
+<p>turning right and getting: Ibid.</p>
+<p>the barrier at all: Beyiuc, 1938 (page 409), describes this unfolding
+in a betta fish. Gómez-Laplaza and Gerlai, 2010, is the only
+counterexample I am aware of where fish were reported to do latent
+learning of a map and make the right decision ahead of time. It is hard
+to interpret a single counterexample without further replications. But
+if it turns out that some fish can, in fact, perform latent learning,
+then this suggests either that early vertebrates could solve
+latent-learning tasks without planning, planning evolved independently
+in some fish, or planning in some form existed in early vertebrates.</p>
+<p>navigate around a barrier: Lucon-Xiccato et al., 2017.</p>
+<p>runs toward the salt: Tindell et al., 2009.</p>
+<p>they called “restaurant row”: Steiner and Redish, 2014. As reviewed
+in Redish, 2016. Also see Bissonette et al., 2014.</p>
+<p>play rock, paper, scissors: Abe and Lee, 2011.</p>
+<p>did not occur either: D. Lewis, 1973.</p>
+<p>(of reasoning in birds): For evidence of causal reasoning in rats,
+see Blaisdell et al., 2006; M. R. Waldmann et al., 2012. Fischer and
+Schloegl, 2017, conclude that causal reasoning evolved in early mammals
+and independently evolved also in birds.</p>
+<p>you’re remembering the past: Addis et al., 2007.</p>
+<p>(saw with imagining things): O’Craven and Kanwisher, 2000; J. Pearson
+et al., 2015.</p>
+<p>mistaken eyewitness testimony: Shermer et al., 2011.</p>
+<p>the event did occur: Garry et al., 1996.</p>
+<p>to get more food: Crystal, 2013; W. Zhou et al., 2012.</p>
+<p>structures for rendering simulations: Many neuroscientists don’t like
+using the term episodic memory to refer to the process by which these
+simpler mammals, such as rats, recall past life events. The term
+episodic memory has been loaded with a baggage of concepts, such as the
+conscious experience of mentally time traveling or some notion of an
+autobiographical self. Many neuroscientists instead use the safer term
+episodic-like memory. Indeed, it isn’t clear how experientially rich the
+recollections of rats are. But regardless, the evidence from rats
+suggests that the precursor to episodic memory was present in early
+mammals.</p>
+<p>state and the best actions: Actions include not just motor movements
+but the “next target location in space.” In other words, the “spatial
+map” of ancestral vertebrates is not considered model-based RL because
+it doesn’t seem to be employed for the purpose of simulating future
+actions. But it could still be employed for place recognition and the
+construction of homing vectors.</p>
+<p>games were model-free: Mnih et al., 2013.</p>
+<p>are model-free: Wang, 2018.</p>
+<p>Chapter 13: Model-Based Reinforcement Learning</p>
+<p>complex games like chess: Baxter et al., 2000, offers a TD-learning
+approach to playing chess (which still uses tree search and hence is not
+model-free) and provides a nice summary of the struggles of using
+model-free approaches (no search) in chess.</p>
+<p>Go champion Lee Sedol: Silver et al., 2016.</p>
+<p>Go than in chess: M. James, 2016.</p>
+<p>The game of Go: Figure from
+https://en.wikipedia.org/wiki/Go_(game)#/media/File:FloorGoban.JPG.</p>
+<p>board position in Go: AlphaGo documentary (Kohs, 2020).</p>
+<p>(possible subsequent next moves): Ibid.</p>
+<p>(body and navigational paths): Ibid.</p>
+<p>about anything at all: Devinsky et al., 1995; Németh et al., 1988; B.
+A. Vogt, 2009.</p>
+<p>“no ‘will’ to reply”: Damasio and van Hoesen, 1983.</p>
+<p>to be a mammal: According to J. H. Kaas, 2011, early mammals had two
+main areas of frontal cortex: anterior cingulate and orbitofrontal
+cortex. When I refer to agranular prefrontal cortex of early mammals, I
+am referring to both of these regions. The anterior cingulate cortex in
+humans is considered homologous to the prelimbic, infralimbic, dorsal
+anterior cingulate cortex of rodents (Laubach et al., 2018; van Heukelum
+et al., 2020), all of which can be assumed to have been inherited from
+the anterior cingulate cortex of the first mammals.</p>
+<p>vicarious trial and error: Lose head toggling behavior: Schmidt et
+al., 2019; lose goal representations in hippocampus: Ito et al.,
+2015.</p>
+<p>episodic-memory recall: Frankland et al., 2004.</p>
+<p>or counterfactual learning: J. L. Jones et al., 2012.</p>
+<p>effort is worth it: Friedman et al., 2015.</p>
+<p>to repeat past mistakes: Frankland et al., 2004.</p>
+<p>repeat already completed actions: Goard et al., 2016; Kamigaki and
+Dan, 2017; Kopec et al., 2015.</p>
+<p>patient to get food: Inactivating prelimbic area of rat frontal
+cortex (part of their aPFC) increases premature responses (e.g.,
+lever-release before go stimulus). (Hardung et al., 2017; Narayanan et
+al., 2006). Inactivation of the aPFC (prelimbic and infralimbic cortex)
+in rats increases impatient trials and decreases waiting time (Murakami
+et al., 2017). For a good review on the role of prefrontal areas in
+behavioral inhibition, see Kamigaki, 2019. Also see M. G. White et al.,
+2018.</p>
+<p>toward an imagined goal: Procyk et al., 2000; Procyk and Joseph,
+2001. The latter observed that neurons in the monkey anterior cingulate
+cortex (a part of aPFC) are sensitive to the order of actions executed
+in a sequence (even if the actual movements performed are the same),
+suggesting that this area of the brain is modeling the overall sequence
+an animal is within, not just individual movements. There is also
+evidence for this in rats (Cowen et al., 2012; Cowen and McNaughton,
+2007) and humans (Koechlin et al., 2002).</p>
+<p>in an ongoing task: Dehaene et al., 1994; MacDonald et al., 2000;
+Ridderinkhof et al., 2004; Totah et al., 2009. For an interesting
+synthesis, also see Shenhav et al., 2016.</p>
+<p>is reported to be: For some further reading on this, see Gal, 2016,
+and Lakshminarayanan et al., 2017.</p>
+<p>of the basal ganglia: The frontal cortex sends a direct projection to
+a part of the basal ganglia called the subthalamic nucleus that has been
+shown to be able to completely halt behavior (Narayanan et al.,
+2020).</p>
+<p>with levels of uncertainty: E. R. Stern et al., 2010.</p>
+<p>activity of the sensory neocortex: For a good review of this
+circuitry, see Kamigaki, 2019. Note that different frontal regions may
+be associated with different sensory modalities—some subregions of the
+aPFC (like the anterior cingulate cortex) mostly send output to visual
+and not somatosensory and auditory areas, whereas others mostly send
+output to auditory and somatosensory areas (S. Zhang et al., 2016).</p>
+<p>cortex become uniquely synchronized: Benchenane et al., 2010;
+Spellman et al., 2015, show synchronization between the aPFC and
+hippocampus during vicarious trial and error, as reviewed in Redish,
+2016. Hyman et al., 2010; M. W. Jones and Wilson, 2005, show
+synchronization between the hippocampus and PFC during episodic memory
+tasks. Sauseng et al., 2004; Sederberg et al., 2003; Xie et al., 2021,
+show this same synchronization between prefrontal and sensory neocortex
+during working memory and episodic-memory tasks.</p>
+<p>an action is selected: Bogacz and Gurney, 2007; Krajbich et al.,
+2010.</p>
+<p>those that had not: Dickinson, 1985.</p>
+<p>the food was devalued: Ibid.</p>
+<p>calls this “active inference”: Adams et al., 2013.</p>
+<p>missing the fourth layer: His theory was about the motor cortex,
+which is also agranular (see next chapter), but the logic applies
+equally to aPFC.</p>
+<p>(looking at the sky): There is some evidence that neocortical columns
+oscillate between different states when different layers are suppressed
+and they oscillate at different rhythms when you’re imagining versus
+when you’re attending to things. I review the evidence in Bennett,
+2020.</p>
+<p>duck or a rabbit: S. Zhang et al., 2014, shows frontal circuits for
+modulating representations in the sensory neocortex.</p>
+<p>lizards hundreds of trials: Wagner, 1932.</p>
+<p>if you damage a rat’s aPFC: Dias and Aggleton, 2000. Note that rats
+can still learn non-matching-to-position tasks at approximately normal
+rates because they do not have to overcome their instinctual tendency to
+avoid recently exploited foraging sites (avoiding the place they just
+experienced is instinctual). Discussed in Passingham and Wise, 2015.</p>
+<p>Chapter 14: The Secret to Dishwashing Robots</p>
+<p>cortex damage: Darling et al., 2011.</p>
+<p>other areas of the neocortex: Although note that the motor cortex is
+“agranular,” meaning it has a thin or missing layer four (just like
+agranular prefrontal cortex).</p>
+<p>evolution of the motor cortex: Karlen and Krubitzer, 2007.</p>
+<p>bats, elephants, and cats: Karlen and Krubitzer, 2007. The
+placental-marsupial divergence is believed to have occurred about 160
+million years ago in the Jurassic period (Z. X. Luo et al., 2011).</p>
+<p>suffer from such paralysis: Kawai et al., 2015; Whishaw et al., 1991.
+Neurons in the motor cortex of primates bypass older circuits and make
+direct connections with spinal neurons (Lemon, 2019). Although some
+evidence suggests such direct projections may also occur in rats (Elger
+et al., 1977; Gu et al., 2017; Maeda et al., 2016), new evidence shows
+that these direct projections disappear in adulthood (Murabe et al.,
+2018), unlike in primates (Armand et al., 1997; Eyre, 2007). The
+paralysis of motor-cortex damage in primates does not seem to be
+representative of the motor cortex in early mammals.</p>
+<p>small unevenly placed platform: Alaverdashvili and Whishaw, 2008; T.
+Drew et al., 2008; T. Drew and Marigold, 2015; Grillner and el Manira,
+2020.</p>
+<p>learn the lever sequence: Kawai et al., 2015.</p>
+<p>Figure 14.3: Art by Rebecca Gelernter; this particular figure was
+inspired by imagery from Grillner and el Manira, 2020.</p>
+<p>movements that require planning: Beloozerova et al., 2010; Farrell et
+al., 2014; Grillner and el Manira, 2020.</p>
+<p>known to be there: Andujar et al., 2010; Beloozerova and Sirota,
+2003; T. Drew and Marigold, 2015.</p>
+<p>movement it presumably planned: Lajoie et al., 2010.</p>
+<p>motor cortex becomes activated: Malouin et al., 2003.</p>
+<p>unrelated to movement: Kosonogov, 2011.</p>
+<p>and even surgical maneuvers: Arora et al., 2011.</p>
+<p>the whole affair is: Kohlsdorf and Navas, 2007; Olberding et al.,
+2012; Parker and McBrayer, 2016; Tucker and McBrayer, 2012.</p>
+<p>to get around platforms: Kohlsdorf and Biewener, 2006; Olberding et
+al., 2012; Self, 2012.</p>
+<p>can cure drug addiction: N. Li et al., 2013.</p>
+<p>lower-level subgoals: Lashley, 1951; Yokoi and Diedrichsen, 2019.</p>
+<p>levels in the hierarchy: Thorn et al., 2010.</p>
+<p>(trials they go through): Yin et al., 2004.</p>
+<p>own without their control: Brainin et al., 2008.</p>
+<p>damage to the premotor cortex: P. Gao et al., 2003.</p>
+<p>that nearby stimuli suggest: Lhermitte, 1983.</p>
+<p>rate dropped to 42 percent: N. Li et al., 2013.</p>
+<p>Chapter 15: The Arms Race for Political Savvy</p>
+<p>of land-living vertebrates: Sahney and Benton, 2008.</p>
+<p>Figure 15.2: Figure from ibid.</p>
+<p>bigger its social group: Dunbar, 1998.</p>
+<p>for most other animals: Pérez-Barbería et al., 2007; Shultz and
+Dunbar, 2007. Reviewed in Dunbar and Shultz, 2017.</p>
+<p>down and look away: Stringham, 2011.</p>
+<p>and flatten their ears: S. Curtis, 1998.</p>
+<p>multi-male groups: Shultz and Dunbar, 2007. Original data from Nowak,
+1999. Note these classifications are inexact, not all subspecies fall
+into one or the other, and there may be other categorizations as well.
+But these are the common ones and are the broad first approximations of
+different types of social organizations. Dunbar used these four
+categorizations in some of his seminal work, and they are standard in
+primate literature (B. B. Smuts et al., 1987).</p>
+<p>four common social structures found in mammals: Shultz and Dunbar,
+2007. Original data from Nowak, 1999.</p>
+<p>his own children: While most harem-organizing mammals have a single
+male and multiple females, there are indeed cases where the roles are
+reversed. Some marmosets, monkeys, and marsupials have single females
+that mate with multiple males (Goldizen, 1988). And of course, in many
+insects, like bees, female-run social groups are less the exception and
+more the rule.</p>
+<p>avoidance of large groups: R. A. Hill and Dunbar, 1998.</p>
+<p>they created in response: Bettridge et al., 2010.</p>
+<p>living in a one-acre forest: Menzel, 1974. Story summarized in
+Kirkpatrick, 2007.</p>
+<p>“accidental” and “intentional” actions: Call and Tomasello, 1998.</p>
+<p>those who seemed unwilling: Call et al., 2004.</p>
+<p>goggles wouldn’t see them: Kano et al., 2019.</p>
+<p>like some birds, dolphins: Tomonaga, 2010.</p>
+<p>location the trainer knows about: Bräuer, 2014; Kaminski et al.,
+2009.</p>
+<p>grooming and group size: Dunbar, 1991, 1998; Lehmann et al.,
+2007.</p>
+<p>by grooming themselves more: R. M. Seyfarth, 1980.</p>
+<p>by appearance and voice: Snowdon and Cleveland, 1980.</p>
+<p>what the mother does: D. L. Cheney and Seyfarth, 1980, 1982.</p>
+<p>A will submit to C: Andelman, 1985; R. M. Seyfarth, 1980.</p>
+<p>many years, even generations: D. Cheney, 1983.</p>
+<p>play back these recordings: Bergman et al., 2003.</p>
+<p>on and so forth: Berman, 1982; Horrocks and Hunte, 1983; Walters and
+Seyfarth, 1987.</p>
+<p>rank of her mother: Berman, 1983; Lee, 1983.</p>
+<p>of higher-ranking families: Datta, 1983.</p>
+<p>to die from disease: Silk, 1987; Silk et al., 2003, 2010.</p>
+<p>hierarchy has been established: M. R. A. Chance et al., 1977;
+Gouzoules, 1980.</p>
+<p>nonfamily members that come: Reviewed in chapter 2 of D. L. Cheney
+and Seyfarth, 2019.</p>
+<p>to recruit such allies: Chapais, 1988; also discussed in chapter 2 of
+D. L. Cheney and Seyfarth, 2019.</p>
+<p>formed grooming partnerships with: D. Cheney, 1983.</p>
+<p>makes a “help me” vocalization: R. M. Seyfarth and Cheney, 1984.</p>
+<p>to their own defense: F. B. M. de Waal, 1982; Packer, 1977; B. B.
+Smuts, 2017.</p>
+<p>food just for themselves: Engelmann and Herrmann, 2016.</p>
+<p>to deal with Keith: Datta, 1983; Dunbar, 2012.</p>
+<p>more access to food: Packer, 1977; Silk, 1982.</p>
+<p>ranked higher than themselves: Cheney and Seyfarth, 2019.</p>
+<p>members of the group: Gouzoules, 1975; Scott, 1984.</p>
+<p>with high-ranking individuals: D. L. Cheney and Seyfarth, 2019.</p>
+<p>the higher-ranking individual: D. Cheney, 1983; D. L. Cheney, 1977;
+R. M. Seyfarth, 1977.</p>
+<p>the most popular playmates: P. Lee, 1983.</p>
+<p>you under my wing: Stammbach, 1988b, 1988a.</p>
+<p>with nonfamily members: Cheney and Seyfarth, 1989.</p>
+<p>have recently quarreled with: Cheney and Seyfarth, 2019.</p>
+<p>eating, resting, and mating: Dunbar et al., 2009.</p>
+<p>than most other mammals: Dunbar, 1991.</p>
+<p>spend more time socializing: Borgeaud et al., 2021.</p>
+<p>with social savviness: Byrne and Corp, 2004.</p>
+<p>Chapter 16: How to Model Other Minds</p>
+<p>about three hundred fifty grams: Ginneken et al., 2017; Tobias, 1971;
+van Essen et al., 2019.</p>
+<p>the same fundamental ways: To be fair, primates do have a higher
+density of neurons in their neocortices, but this denser packing doesn’t
+suggest a change to the overall architecture of a neocortical column,
+merely that it has been scaled up and packed into a smaller area. For a
+good review of brain scaling, see Herculano-Houzel, 2012.</p>
+<p>addition to the frontal cortex: Preuss, 2009.</p>
+<p>and sensory neocortical regions: Goldman-Rakic, 1988; Gutierrez et
+al., 2000.</p>
+<p>functional significance at all: Hebb, 1945; Hebb and Penfield, 1940;
+H. L. Teuber and Weinstein, 1954.</p>
+<p>intellect or perception whatsoever: Hebb and Penfield, 1940.</p>
+<p>cortex was a “riddle”: H. Teuber, 1964.</p>
+<p>gPFC lit up: Gusnard et al., 2001.</p>
+<p>about yourself in general: Christoff et al., 2009; Herwig et al.,
+2010; Kelley et al., 2002; Moran et al., 2006; Northoff et al., 2006;
+Schmitz et al., 2004.</p>
+<p>of the surrounding elements: Kurczek et al., 2015.</p>
+<p>themselves in a mirror: Breen et al., 2001; Postal, 2005; Spangenberg
+et al., 1998.</p>
+<p>the amygdala and hippocampus: Morecraft et al., 2007; Insausti and
+Muñoz, 2001.</p>
+<p>from the older aPFC: Ray and Price, 1993. Further evidence for this
+is seen in the fact that stimulation of the agranular cortex in primates
+elicits autonomic effects (changes in respiratory rate, blood pressure,
+pulse, pupillary dilation, and piloerection), while in the granular
+cortex, it does not (Kaada, 1960; Kaada et al., 1949).</p>
+<p>lit up with activation: Brunet et al., 2000; Völlm et al., 2006. The
+comic-strip task is similar to the earlier storytelling work by
+Baron-Cohen et al., 1986.</p>
+<p>Figure 16.4: Images from Brunet et al., 2000; Völlm et al., 2006; and
+personal correspondence with Dr. Eric Brunet-Gouet. Used with permission
+of Dr. Brunet-Gouet (personal correspondence).</p>
+<p>the age of four: H. M. Wellman et al., 2001; H. Wimmer and Perner,
+1983.</p>
+<p>Figure 16.5: Photo from Frith, 2003. Reused with permission.</p>
+<p>the degree of activation: Gweon et al., 2012; Otsuka et al., 2009;
+Saxe and Kanwisher, 2003; Young et al., 2007.</p>
+<p>such false-belief tasks: Carrington and Bailey, 2009; van Overwalle
+and Baetens, 2009, implicate specifically two areas of the granular
+prefrontal cortex (dorsomedial prefrontal cortex and anteromedial
+prefrontal cortex, which roughly make up Brodmann areas 8, 9, and 10) as
+well as the temporoparietal junction and the superior temporal sulcus as
+areas that are uniquely activated by tasks that require the theory of
+mind.</p>
+<p>the Sally-Ann test: Siegal et al., 1996; V. E. Stone et al.,
+1998.</p>
+<p>emotions in other people: Shaw et al., 2005.</p>
+<p>with other people’s emotions: Shamay-Tsoory et al., 2003.</p>
+<p>distinguish lies from jokes: Winner et al., 1998.</p>
+<p>that would offend someone: Shamay-Tsoory et al., 2005; V. E. Stone et
+al., 1998.</p>
+<p>someone else’s visual perspective: Stuss et al., 2001.</p>
+<p>struggle to deceive others: Ibid.</p>
+<p>effects in nonhuman primates: Dehaene et al., 2005; D. I. Perrett et
+al., 1992; Ramezanpour and Thier, 2020.</p>
+<p>it does in humans: T. Hayashi et al., 2020.</p>
+<p>social-network size in primates: Sallet et al., 2011.</p>
+<p>theory-of-mind tasks: J. Powell et al., 2012; Stiller and Dunbar,
+2007; P. A. Lewis et al., 2011; J. L. Powell et al., 2010.</p>
+<p>to model other minds: See Amodio and Frith, 2006, for a detailed
+review of the specific areas in the prefrontal cortex implicated in
+self-reference and thinking about others.</p>
+<p>or “social projection theory”: Gallese and Goldman, 1998; Goldman,
+1992; Gordon, 2011; Harris, 1992. It should be noted that not everyone
+agrees that these are implemented by the same process. For some good
+reviews of this debate, see Dimaggio et al., 2008; Gallup, 1998.</p>
+<p>the same process: When evaluating your own personality traits or
+receiving evaluations of yourself by others, the same mentalizing
+network in the gPFC activates—specifically, the medial area of the
+prefrontal cortex (Ochsner et al., 2005).</p>
+<p>of theory of mind: Further consistent with this idea that theory of
+mind of others is bootstrapped on a generative model of yourself is the
+fact that the concept of self emerges in child development before the
+theory of mind emerges. See Keenan et al., 2005; Ritblatt, 2000; Rochat,
+1998.</p>
+<p>about two years old: Amsterdam, 1972.</p>
+<p>want, wish, and pretend: Frith and Frith, 2003.</p>
+<p>“know it’s a crocodile”: Shatz et al., 1983.</p>
+<p>with respect to other people: H. M. Wellman et al., 2001.</p>
+<p>better at the other: Gopnik and Meltzoff, 2011; Lang and Perner,
+2002.</p>
+<p>themselves in a mirror: Gallup et al., 1971. There is some evidence
+suggesting that elephants and dolphins can recognize themselves in a
+mirror (Plotnik et al., 2006; Reiss and Marino, 2001). Recognition is
+seen in apes, such as chimps, orangutans, and gorillas (Suarez and
+Gallup, 1981; Posada and Colell, 2007). Monkeys may also recognize
+themselves in a mirror (Chang et al., 2017). A great summary of these
+mirror tests can be found in chapter 3 of Suddendorf, 2013.</p>
+<p>these states in others: Kawada et al., 2004; Niedenthal et al.,
+2000.</p>
+<p>thirstier than they are: van Boven and Loewenstein, 2003.</p>
+<p>personality traits onto others: Bargh and Chartrand, 2000.</p>
+<p>the minds of others: Michael Graziano has some fascinating ideas
+about this and its relationship to consciousness. He argues that our
+ancestors evolved theory of mind to navigate their unique social lives
+and a side effect of this was that when they applied this theory of mind
+inward, consciousness emerged (Graziano, 2019).</p>
+<p>(“This is jumping”): Surís et al., 2021.</p>
+<p>(faces classified by emotions): Crawford, 2021.</p>
+<p>Chapter 17: Monkey Hammers and Self-Driving Cars</p>
+<p>to clean their ears: Flossing: Pal et al., 2018. Lists of different
+techniques: Sanz and Morgan, 2007.</p>
+<p>flies and scratch themselves: Hart et al., 2001.</p>
+<p>to break open nuts: Müller, 2010.</p>
+<p>to the inner food: Bernardi, 2012.</p>
+<p>different tool-using behaviors: Sanz and Morgan, 2007.</p>
+<p>than those in Gombe: Musgrave et al., 2020.</p>
+<p>and others for tearing: di Pellegrino et al., 1992.</p>
+<p>had just happened: Story told in Taylor, 2016 and Roche and Commins,
+2009.</p>
+<p>(sticking one’s tongue out): di Pellegrino et al., 1992; Ferrari et
+al., 2003; Gallese et al., 1996.</p>
+<p>(parietal lobe, motor cortex): di Pellegrino et al., 1992; Dushanova
+and Donoghue, 2010; Fogassi et al., 2005; Tkach et al., 2007.</p>
+<p>numerous species of primates: Brass et al., 2007; Buccino et al.,
+2001; Mukamel et al., 2010.</p>
+<p>interpretations of mirror neurons: For reviews of the current debate
+around mirror neurons, see Heyes and Catmur, 2022; Hickok, 2014; Jeon
+and Lee, 2018; Rozzi, 2015.</p>
+<p>in theory of mind: Rizzolatti et al., 2001.</p>
+<p>see someone else do: Gallese and Goldman, 1998.</p>
+<p>open (without seeing anything): Kohler et al., 2002.</p>
+<p>(box behind the wall): Umiltà et al., 2001.</p>
+<p>(phrase, like combing hair): Pazzaglia et al., 2008; Tarhan et al.,
+2015; Urgesi et al., 2014.</p>
+<p>bouncing on its own: Pobric and Hamilton, 2006. Consistent with this,
+if people actively pick up a light box, they become biased toward
+thinking that boxes they see others pick up are also light. This bias is
+far greater when an individual actually lifts the box as opposed to
+passively holding a light box, which demonstrates it isn’t about
+associating a box with lightness but about the active experience of
+picking up a box yourself (A. Hamilton et al., 2004).</p>
+<p>(eating a burger, blowing out a candle): Michael et al., 2014.</p>
+<p>intended to hold: Thompson et al., 2019, provides a nice review of
+some of these ideas. But see Negri et al., 2007 and Vannuscorps and
+Caramazza, 2016 for counterexamples that suggest that impairments to
+action production don’t always impair action perception.</p>
+<p>becomes way more activated: S. Vogt et al., 2007.</p>
+<p>following the red dots: Catmur et al., 2009; Heiser et al., 2003.</p>
+<p>learns to do it: Humle et al., 2009; Lonsdorf, 2005.</p>
+<p>skill later in life: Biro et al., 2003; Matsuzawa et al., 2008.</p>
+<p>(food in the cage): M. Hayashi et al., 2005; Marshall-Pescini and
+Whiten, 2008; Tomasello et al., 1987; Subiaul et al., 2004.</p>
+<p>in the right way: Whiten et al., 2005.</p>
+<p>way to get food: Dindo et al., 2009.</p>
+<p>drawer to get food: Gunhold et al., 2014.</p>
+<p>opening an artificial fruit: E. van de Waal et al., 2015.</p>
+<p>down through multiple generations: Haslam et al., 2016; Mercader et
+al., 2007; Whiten, 2017.</p>
+<p>lever and get water: Zentall and Levine, 1972.</p>
+<p>technique of their parents: Müller and Cant, 2010.</p>
+<p>other dolphins or humans: Hermann, 2002.</p>
+<p>dog perform the act: Range et al., 2007.</p>
+<p>those same navigational paths: For observational learning in fish,
+see Lindeyer and Reader, 2010. For reptiles, see Kis et al., 2015;
+Wilkinson, Kuenstner, et al., 2010; Wilkinson, Mandl, et al., 2010.</p>
+<p>actively teach one another: For arguments on this, see Hoppitt et
+al., 2008; Kline, 2014; Premack, 2007.</p>
+<p>hands of their young: Boesch, 1991.</p>
+<p>down to help teach: Masataka et al., 2009.</p>
+<p>swap tools with them: Musgrave et al., 2016.</p>
+<p>tool to a youngster: Musgrave et al., 2020.</p>
+<p>skipped the irrelevant steps: Call et al., 2005; Horner and Whiten,
+2005; Nagell et al., 1993.</p>
+<p>a handful of laps: Story told in Christian, The Alignment Problem,
+232.</p>
+<p>called “inverse reinforcement learning”: Abbeel, Coates, and Ng,
+2004.</p>
+<p>a remote-controlled helicopter: Abbeel et al., 2010.</p>
+<p>imitation learning in robotics: For a nice review of challenges in
+inverse reinforcement learning, see Hua et al., 2021.</p>
+<p>Chapter 18: Why Rats Can’t Go Grocery Shopping</p>
+<p>less than seventy-two hours: Milton, 1981.</p>
+<p>a less competitive fruit: Janmaat et al., 2014.</p>
+<p>to be depleted more quickly: Noser and Byrne, 2007.</p>
+<p>evolve to survive winters: Barry, 1976.</p>
+<p>140 species of primates: DeCasien et al., 2017.</p>
+<p>the “Bischof-Kohler hypothesis”: Suddendorf and Corballis, 1997.</p>
+<p>before they were cold: F. B. M. de Waal, 1982.</p>
+<p>of that task: Mulcahy and Call, 2006.</p>
+<p>have no suitable stones: Boesch and Boesch, 1984.</p>
+<p>use in another location: Goodall, 1986.</p>
+<p>change their behavior accordingly: Naqshbandi and Roberts, 2006.</p>
+<p>“hunger will be satisfied”: Suddendorf and Corballis, 1997.</p>
+<p>and anticipating future needs: Note that Suddendorf is still
+skeptical of studies suggesting that other animals can anticipate future
+needs (personal correspondence). In fact, Suddendorf is skeptical about
+whether any animals other than humans are capable of considering the
+future at all (see Suddendorf, 2013; Suddendorf and Redshaw, 2022). His
+fascinating book The Invention of Tomorrow describes his argument.</p>
+<p>that were well fed: Mela et al., 1996; Nisbett and Kanouse, 1969.</p>
+<p>Summary of Breakthrough #4: Mentalizing</p>
+<p>at similar developmental times: Children seem to begin to anticipate
+future needs around age four (Suddendorf and Busby, 2005), which is same
+age that they begin to pass theory of mind tasks (H. M. Wellman et al.,
+2001). For a review of different theories of mental time travel, see
+Suddendorf and Corballis, 2007.</p>
+<p>ago in eastern Africa: T. D. White et al., 2009.</p>
+<p>Chapter 19: The Search for Human Uniqueness</p>
+<p>“and not of kind”: Darwin, 1871.</p>
+<p>in all the same ways: Herculano-Houzel, S. 2009</p>
+<p>sounds and gestures: Graham and Hobaiter, 2023; Hobaiter and Byrne,
+2014; Hobaiter and Byrne, 2011.</p>
+<p>signed, Finger bracelet: “Mission Part 1: Research.” Koko.org.</p>
+<p>running from his trainer: L. Stern, 2020.</p>
+<p>70 percent of the time: Savage-Rumbaugh et al., 1993.</p>
+<p>(I want to be tickled): Yang, 2013, compared the diversity of phrases
+between young children and the chimpanzee Nim Chimpsky. Yang, 2013,
+concluded that the children showed the level of diversity consistent
+with the use of grammar to construct novel phrases but Nim Chimpsky did
+not, thus concluding that Chimpsky’s phrase diversity was more
+consistent with directly memorizing phrases.</p>
+<p>few noises or gestures: Some of my favorite writing on this is Daniel
+Dor’s book The Instruction of Imagination (New York: Oxford University
+Press, 2015).</p>
+<p>“money paid out in fees”: Harari, 2015.</p>
+<p>on different cooperation strategies: Dunbar, 1993, estimated human
+group size at 150 (the famous Dunbar’s number) by looking at the human
+neocortex ratio and examining tribal societies. B. B. Smuts et al.,
+1987, report approximately 50 as an average group size in chimpanzees
+and approximately 18 as an average group size in capuchin monkeys.</p>
+<p>be about one hundred fifty people: Dunbar, 1992, 1993.</p>
+<p>even millions, of generations: For reviews of the theory of
+cumulative culture see Tennie et al., 2009; Tomasello et al., 1993.</p>
+<p>as one hundred thousand years ago: Toups et al., 2011.</p>
+<p>children are over-imitators: D. E. Lyons et al., 2007.</p>
+<p>copy all the steps: For example, Gergely et al., 2002, and Schwier et
+al., 2006, showed that twelve- and fourteen-month-old infants are more
+likely to copy an unusual component of a sequence when it was not clear
+why it was done and less likely to copy it if the teacher was “forced”
+to do the unusual action due to some physical limitation. For example,
+Schwier et al., 2006, had teachers demonstrate putting a toy dog into a
+toy house that had two openings, one through a front door and another
+through a chimney. In cases where the front door was blocked and the
+teacher demonstrated putting the dog into the toy house through the
+chimney, infants were less likely to do the same when it was their turn
+(if the door was open for them); they just put it through the door
+(achieving the same goal through different means). In contrast, when
+teachers put the dog into the house through the chimney when the door
+was open (hence the teacher clearly chose the chimney for some reason),
+infants did the same and put it through the chimney.</p>
+<p>pull the toy apart: Carpenter et al., 1998; Meltzoff, 1995.</p>
+<p>improves the accuracy and speed: Chopra et al., 2019; Dean et al.,
+2012.</p>
+<p>discontinuity that changed everything: My favorite writings about the
+idea of cumulative culture are in Tennie et al., 2009.</p>
+<p>can persist across generations: Henrich, 2004.</p>
+<p>Chapter 20: Language in the Brain</p>
+<p>“like you want before”: Aphasia. National Institute on Deafness and
+Other Communication Disorders. March 6, 2017. Accessed on March 5, 2023
+at https://www.nidcd.nih.gov/health/aphasia.</p>
+<p>to understand speech: For a review of Wernicke’s area, see DeWitt and
+Rauschecker, 2013.</p>
+<p>selective for language in general: Campbell et al., 2008.</p>
+<p>are in writing words: Chapey, 2008.</p>
+<p>Broca’s area is damaged: Emmorey, 2001; Hickok et al., 1998; Marshall
+et al., 2004.</p>
+<p>spoken language and written language: DeWitt and Rauschecker, 2013;
+Geschwind, 1970.</p>
+<p>watches someone sign: Neville et al., 1997.</p>
+<p>are otherwise intellectually typical: Lenneberg, 1967, showed that
+language capacity is radically dissociated from other cognitive
+capacities. For a more recent review, see Curtiss, 2013.</p>
+<p>over fifteen languages: Smith and Tsimpli, 1995.</p>
+<p>a scaled-up chimpanzee brain: Herculano-Houzel, 2012;
+Herculano-Houzel, 2009, show that the human brain is largely just a
+scaled-up primate brain. Semendeferi and Damasio, 2000, show that the
+prefrontal cortex of humans is not uniquely enlarged relative to other
+primates (it was just scaled up proportionally with the rest of the
+brain).</p>
+<p>The few differences that have been found in human brains relative to
+other primate brains include the following. First, humans have a unique
+projection from the motor cortex to the area of the larynx that controls
+the vocal cords. So, yes, humans have unique control over their voice
+boxes, and this is clearly related to speech. But as we review later in
+the chapter, this is not what unlocked language, for there are many
+nonvocal languages that are as sophisticated without ever using this
+projection (such as the sign languages of people born deaf). Second,
+although there are no uniquely human areas of neocortex (all the same
+areas are found in other primates), there is indeed some evidence that
+the relative space devoted to different areas of prefrontal cortex might
+be somewhat different in humans (Teffer and Semendeferi, 2012). And
+third, minicolumns in the neocortex of humans might have greater width
+than those in other primates (Buxhoeveden and Casanova, 2002;
+Semendeferi et al., 2011), although this doesn’t prove that there is
+anything fundamentally different about the neocortical microcircuit
+itself in humans. But if it were at some point discovered that the
+neocortical microcircuit of humans was, in fact, fundamentally wired
+differently (it would have to be a subtle enough change that it has
+eluded our detection thus far), this would surely require us to rethink
+this entire evolutionary story, as it would open the door for the
+possibility that the human neocortex does enable something that is
+different “in kind.”</p>
+<p>impact on monkey communication: Aitken, 1981; Jürgens, 1988; Jürgens
+et al., 1982.</p>
+<p>controlled by the neocortex: Burling, 1993.</p>
+<p>Figure 20.2: Image from Trepel et al., 1996, used with
+permission.</p>
+<p>“impossible task [for chimpanzees]”: Goodall, 1986.</p>
+<p>system in the neocortex: Note that this does not mean that emotional
+states themselves emerge only from the amygdala and brainstem. It merely
+means that the automatic emotional expressions—the smiles, frowns, and
+cries—are hardwired into these circuits. But emotional experiences and
+states in humans (and other mammals) are more complicated and do
+probably involve the cortex.</p>
+<p>normal gesture-call behavior: Hammerschmidt and Fischer, 2013.</p>
+<p>of the same gestures: Graham et al., 2018.</p>
+<p>to similar emotional states: The extent to which emotional
+expressions and corresponding emotional states are universal versus
+culturally learned is controversial. Attempts to define explicit emotion
+categories using facial expressions has recently been challenged, as it
+turns out that much of what people define as one category in one culture
+does not always translate to another. I do not mean to suggest that
+emotions like anger and happy are universal. But even if many aspects of
+emotion categories are learned, this does not mean that there is no
+initial template with predefined emotional expressions that humans are
+born with. Indeed, I am unaware of any reports of a child who screams
+and cries in response to happy things and smiles and laughs in response
+to painful things. Babies born both deaf and blind still smile, laugh,
+frown, and cry normally (Eibl-Eibesfeldt, 1973). As mammals develop, the
+neocortex learns, and it can modulate and modify genetically prewired
+systems in the midbrain and hindbrain and thus complexify, modify, and
+expand on the emotional-expression template that we are born with. This
+is a general way mammal brains develop. For example, the midbrain and
+hindbrain of a baby have pre-defined wiring for basic motor behaviors
+(grasping). As the neocortex learns, it begins to take over and modulate
+these midbrain and hindbrain circuits to override them and take control
+over the hands. But this does not mean that there was not already a
+hardwired circuit for grasping.</p>
+<p>For the evidence showing some universality in human emotional
+expressions across cultures, see Ekman, 1992; Ekman et al., 1969; Ekman
+and Friesen, 1971; Scherer, 1985. For evidence that emotion categories
+are not as universal as previously thought, see Lisa Feldman Barrett’s
+wonderful book How Emotions Are Made and Barrett et al., 2019. Barrett’s
+theory of constructed emotion, whereby the neocortex constructs emotion
+categories, is consistent with the idea presented in this book whereby
+the aPFC and gPFC construct a generative model of the self and construct
+explanations of an animal’s own behaviors and mental states. An emergent
+property of this might be constructing the notion of an emotional
+state—using the notion of anger to explain the behavioral repertoire the
+animal performing. (Similar, or perhaps the same, to how we have
+suggested the aPFC constructs intent.)</p>
+<p>it later in life: Andrei, 2021.</p>
+<p>but will never speak: Lenneberg, 1967.</p>
+<p>given the previous words: He introduced the simple recurrent neural
+network, also called the Elman network (Elman, 1990).</p>
+<p>as the model itself: For a well-written discussion on curriculum, see
+Christian, 2020.</p>
+<p>facial expressions, and gestures: Beebe et al., 1988, 2016.</p>
+<p>joint attention to objects: Tomasello, 1995.</p>
+<p>back at her mother: Carpenter and Call, 2013.</p>
+<p>and point again: Liszkowski et al., 2004.</p>
+<p>same object they do: Warneken et al., 2006.</p>
+<p>vocabulary is twelve months later: Morales et al., 2000; Mundy et
+al., 2007.</p>
+<p>simplest questions about others: Hauser et al., 2002.</p>
+<p>another’s inner mental world: Some claim that some nonhuman apes in
+these studies did ask some types of questions. It is still
+controversial.</p>
+<p>when asking yes/no questions: D. L. Everett, 2005; Jordania,
+2006.</p>
+<p>of our language curriculum: MacNeilage, 1998; Vaneechoutte, 2014.</p>
+<p>Chapter 21: The Perfect Storm</p>
+<p>Figure 21.1: DeSilva et al., 2021.</p>
+<p>“runaway growth of the brain”: D. Everett, 2017, 128.</p>
+<p>on which the forest depended: Davies et al., 2020.</p>
+<p>would eventually become human: Coppens, 1994. Although it is
+undisputed that the climate changed in Africa around ten million years
+ago, how dramatic this change was and how relevant it was to our
+ancestors becoming bipedal is not settled.</p>
+<p>legs instead of four: Set of cranial volumes from different fossils:
+Du et al., 2018.</p>
+<p>of a modern chimpanzee’s: Bipedalism appeared before tool use as well
+(see Niemitz, 2010).</p>
+<p>was scavenging carcasses: Bickerton and Szathmáry, 2011. Before two
+million years ago, cut marks lie above bite marks, indicating that
+hominins accessed these bones only after other animals had. After two
+million years ago, bite marks more frequently lie above cut marks,
+indicating that hominins had first access to bones (Blumenschine, 1987;
+Blumenschine et al., 1994; Domínguez-Rodrigo et al., 2005; Monahan,
+1996).</p>
+<p>came from meat: Ben-Dor et al., 2021.</p>
+<p>was an apex predator: Ibid.</p>
+<p>almost absurd 85 percent meat: Ibid.</p>
+<p>began to go extinct: From 1.8 to 1.5 million years ago had the
+highest per capita carnivoran extinction event (Bobe et al., 2007; M. E.
+Lewis and Werdelin, 2007; Ruddiman, 2008).</p>
+<p>three times as fast: Perkins, 2013.</p>
+<p>must have invented cooking: Wrangham, 2017.</p>
+<p>time and energy digesting: Carmody and Wrangham, 2009.</p>
+<p>50 percent become temporarily infertile: Koebnick et al., 1999.</p>
+<p>ash in ancient caves: For evidence of fire use between 1.5 to 2
+million years ago, see Gowlett and Wrangham, 2013; Hlubik et al., 2017;
+James et al., 1989.</p>
+<p>after they are born: Garwicz et al., 2009.</p>
+<p>in today’s human societies: This is inferred based on the shift in
+Homo erectus toward less sexual dimorphism (difference in body size
+between males and females); see Plavcan, 2012.</p>
+<p>hunter-gatherer societies: Original grandmother hypothesis proposed
+by Hawkes et al., 1998. For another review with more detail on
+hunter-gatherer societies, see Hawkes et al., 2018.</p>
+<p>full brain size achieved: Malkova et al., 2006.</p>
+<p>origin of human languages: Christiansen and Kirby, 2010.</p>
+<p>“own and my child”: Story from Terrace, 2019.</p>
+<p>“problem in all of science”: Christiansen and Kirby, 2010.</p>
+<p>language-ready vocal cords: D’Anastasio et al., 2013.</p>
+<p>the survival of the species: D. S. Wilson and Wilson, 2007, provide a
+modern interpretation of group selection. The key idea is that evolution
+operates under multilevel selection, so group effects and individual
+effects are always interacting. In other words, the simple survival of
+the species (group-only effect) is not how evolution works. Traits that
+hurt an individual’s fitness but benefit the group overall are not
+necessarily selected for. Only in the right circumstances, where the
+individual cost is outweighed by the group benefit and competition with
+other groups.</p>
+<p>Note that even these multilevel selection accounts of human evolution
+still acknowledge that defectors and cheaters were a problem that
+evolution would have had to account for. Thus, these multilevel accounts
+are still consistent with the evolutionary accounts in which mechanisms
+for the detection and punishment of violators would have been essential
+for stabilizing altruism and cooperation.</p>
+<p>Once human groups had language, altruism, and the punishment of
+violators, the balance might have shifted toward strong group-selection
+effects, since altruism makes an individual’s fitness differences within
+a group muted (as members support and help each other), thereby
+strengthening the effect of across group competition.</p>
+<p>where it is safest: W. D. Hamilton, 1971.</p>
+<p>are around family members: R. Seyfarth and Cheney, 1990; Sherman,
+1977, 1985.</p>
+<p>called reciprocal altruism: Trivers, 1971.</p>
+<p>them in the past: Mitani, 2006; Mitani and Watts, 1999, 2001;
+Povinelli and Povinelli, 2001.</p>
+<p>that did not help them: Olendorf et al., 2004.</p>
+<p>and language-enabled teaching: Mesoudi and Whiten, 2008.</p>
+<p>among non-kin became possible: This story and ordering described here
+is largely that proposed by Fitch, 2010.</p>
+<p>for defectors and liars: For arguments that lying, defectors, and
+cheating was an important obstacle to overcome in the evolution of
+language see Dunbar, 2004; Fitch, 2010; Knight, 2008; Tomasello, 2016.
+Dor, 2017, provides a more nuanced take, suggesting that the challenge
+of cheating (i.e., lying) that emerged with language may have driven
+more than one type of evolutionary feedback loop, not only for the
+punishment of violators after their discovery but also the ability to
+detect when someone was lying. As one individual gets better at lying,
+instead of making language unstable (selecting for worse language
+skills), it may have created selection for better theory of mind to
+better identify when people were lying and engaging with malintent. And
+this, in turn, created more pressure for liars to further hide their
+intent through better emotional regulation, which then created pressure
+for better theory of mind to see through the tricks, thereby creating a
+feedback loop.</p>
+<p>human conversation is gossip: Dunbar et al., 1997.</p>
+<p>The origins of language: Dunbar, 1998; Dunbar, 2004.</p>
+<p>large group of individuals: For work on the importance of punishment
+in supporting altruism and its importance in the evolution of humans,
+see Boyd et al., 2003.</p>
+<p>(hence no altruism required): Bickerton and Szathmáry, 2011.</p>
+<p>language to evolve: Tomasello, 2016, 2018; as summarized in Dor,
+2017.</p>
+<p>trick for inner thinking: Berwick and Chomsky, 2017.</p>
+<p>the last one million years: Morwood et al., 1999.</p>
+<p>chimpanzee’s, perhaps even smaller: Falk et al., 2007.</p>
+<p>tool use as Homo erectus: Sutikna et al., 2016.</p>
+<p>Chapter 22: ChatGPT and the Window into the Mind</p>
+<p>“fear of being turned off”: N. Tiku, 2022.</p>
+<p>“nothing to fear from AI”: GPT-3, 2020. Note that the authors also
+did some editing of the article.</p>
+<p>“they would fall over”: K. Lacker, (2020). Giving GPT-3 a Turing
+Test. Kevin Lacker’s blog.
+https://lacker.io/ai/2020/07/06/giving-gpt-3-a-turing-test.html.</p>
+<p>four questions to GPT-3: This was in the GPT-3 sandbox, on
+text-davinci-002, test performed on Tuesday, June 28, 2022.</p>
+<p>this the representative heuristic: Kahneman, 2013.</p>
+<p>and produce meaningful speech: For TPJ in theory of mind, see Samson
+et al., 2004; Gallagher et al., 2000.</p>
+<p>as false-belief tests: Cutting and Dunn, 1999; Hughes and Dunn, 1997;
+Jenkins and Astington, 1996. Note that the causation between mentalizing
+and language is controversial and unsettled. Astington and Jenkins,
+1999, performed a longitudinal study that suggested that language skills
+predicted later performance on mentalizing tasks but not the reverse.
+But even if language dramatically improves mentalizing abilities, the
+basic ability to understand that other people have thoughts and agency
+seems to be a necessary foundation for joint attention to begin the
+process of naming objects in the first place (this is discussed in de
+Villiers, 2007).</p>
+<p>similar impairments in language: Baron-Cohen, 1995.</p>
+<p>“models of the underlying reality”: Posted on LinkedIn by Yann LeCun
+in January 2023.</p>
+<h6 id="阅读日期-2026年09月19日-2026年09月19日-共-1-天">阅读日期：
+2026年09月19日-2026年09月19日 共： 1 天</h6>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

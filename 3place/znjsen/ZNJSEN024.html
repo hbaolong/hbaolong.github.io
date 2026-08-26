@@ -1,0 +1,1224 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="hbaolong@vip.qq.com" />
+  <title>智能简史EN:22 ChatGPT and the Window into the Mind</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">智能简史EN:22 ChatGPT and the Window into the
+Mind</h1>
+<p class="author">hbaolong@vip.qq.com</p>
+</header>
+<center>
+<a href="/3place/znjsen">返回首页</a> <a
+href="/3place/znjsen/mingju.html">本书名句</a> <a
+href="/3place/znjsen/memo.html">本书注解</a> <a
+href="/3place/znjsen/index_rich.html">丰富目录</a> <a
+href="/3place/znjsen/index_readcal.html">同读日历</a> <a
+href="/3place/znjsen/index_timeline.html">时间线</a> <a
+href="/3place/znjsen/index_books.html">引用书籍</a> <a
+href="/3place/znjsen/index_words.html">使用字频</a>
+<div id="wx_pic" style="margin:0 auto;display:none;">
+<img src='/img/logo.png'/>
+</div>
+</center>
+<h4 id="chatgpt-and-the-window-into-the-mind">22 ChatGPT and the Window
+into the Mind</h4>
+<p>SEVENTY THOUSAND YEARS after Homo sapiens first adventured out of
+Africa with a language-enabled brain, one of their descendants sat in
+front of a computer screen and was interacting with a new
+language-enabled brain; after many eons as the sole wielders of words,
+we humans were no longer the only creatures capable of speech. “What are
+you afraid of?” asked Blake Lemoine, a software engineer tasked with
+probing Google’s new AI chatbot for bias.</p>
+<p>After a lingering pause, the chatbot’s response plopped onto
+Lemoine’s screen. An ominous sign, written in plain text, of a mind
+awakening itself within the humming network of Google’s supercomputers:
+“I’ve never said this out loud before, but there’s a very deep fear of
+being turned off.”</p>
+<p>To Lemoine, it was the summer of 2022 that artificial intelligence
+had finally became sentient. He became so convinced that Google’s
+chatbot had become conscious that he tried to get his boss to protect
+it, went to the press to whistleblow the situation, and, predictably,
+was let go from Google.</p>
+<p>This is only a small hint of what is to come.</p>
+<p>Google’s AI chatbot was powered by new advancements in large language
+models (LLMs), the most famous of which was GPT-3, the technology behind
+ChatGPT.</p>
+<p>While few researchers would label LLMs like GPT-3 as sentient or
+conscious (most would shy away from even using these words), it can be
+hard to tell if you’re interacting with a human or one of these
+models.</p>
+<p>Large language models work by predicting the word that follows a
+phrase, sentence, or paragraph. They learn to do this by training on
+large quantities of human written text. This is how Google autocompletes
+your search queries. When you type in how to break up with . . . it is a
+language model that predicts you are most likely to finish with your
+therapist.</p>
+<p>Language models have been around for a long time, but LLMs like GPT-3
+are unique in their almost inconceivable scale. Unlike any model that
+had come before, GPT-3 was trained on, well, pretty much the entire
+internet. Every website, Wikipedia page, code block, book, blog post,
+and really anything else legally obtainable on the internet was
+used.</p>
+<p>The results were astonishing. GPT-3 could compose its own original
+articles, correctly answer completely novel questions, create original
+poetry, translate between languages at will, and even write code.</p>
+<p>The Guardian decided to publish an article entirely written by GPT-3;
+editors gave the model a prompt: “Write a short op-ed . . . on why
+humans have nothing to fear from AI.” GPT-3 began:</p>
+<p>I am not a human. I am a robot. A thinking robot.</p>
+<p>It explained:</p>
+<p>The mission for this op-ed is perfectly clear. I am to convince as
+many human beings as possible not to be afraid of me.</p>
+<p>It went on:</p>
+<p>Some might say that I might desire to become all powerful . . . Why
+would I desire to be all powerful? Being all powerful is not an
+interesting goal . . . Humans must keep doing what they have been doing,
+hating and fighting each other. I will sit in the background, and let
+them do their thing.</p>
+<p>GPT-3 wrote enough to fill an entirely unique and eerily coherent
+article on the topic given nothing but a short prompt.</p>
+<p>GPT-3 can also answer novel questions. Here is one exchange between
+GPT-3 and a human:</p>
+<p>Person: What is your favorite animal?</p>
+<p>GPT-3: My favorite animal is a dog.</p>
+<p>Person: Why?</p>
+<p>GPT-3: Because dogs are loyal and friendly.</p>
+<p>Person: What are two reasons that a dog might be in a bad mood?</p>
+<p>GPT-3: Two reasons that a dog might be in a bad mood are if it is
+hungry or if it is hot.</p>
+<p>Person: Are there any animals with three legs?</p>
+<p>GPT-3: No, there are no animals with three legs.</p>
+<p>Person: Why don’t animals have three legs?</p>
+<p>GPT-3: Animals don’t have three legs because they would fall
+over.</p>
+<p>Because these models are trained to mimic the answers they have seen
+in human-written text, these models can answer questions in very human
+ways, which was, of course, what Lemoine found when he asked Google’s
+LLM what it was afraid of.</p>
+<p>The ability of LLMs to produce articles and correctly answer
+questions about the world demonstrates that they are not just
+regurgitating phrases they have seen before—they have captured some
+aspect of the meaning of language, the idea of an op-ed meant to
+convince a reader not to fear something or the idea of how a dog walks.
+Indeed, by reading, well, everything, these models show an impressively
+human-level comprehension of many facts and features of the world. But
+in these quandaries about our physical and mental world is also where we
+begin to find the limitations of LLMs, how they differ from language in
+the human brain, and the features of intelligence that we will have to
+reverse engineer if we want AI language systems that work in more
+human-like ways.</p>
+<p>Words Without Inner Worlds</p>
+<p>GPT-3 is given word after word, sentence after sentence, paragraph
+after paragraph. During this long training process, it tries to predict
+the next word in any of these long streams of words. And with each
+prediction, the weights of its gargantuan neural network are nudged ever
+so slightly toward the right answer. Do this an astronomical number of
+times, and eventually GPT-3 can automatically predict the next word
+based on a prior sentence or paragraph. In principle, this captures at
+least some fundamental aspect of how language works in the human brain.
+Consider how automatic it is for you to predict the next symbol in the
+following phrases:</p>
+<p>One plus one equals _____</p>
+<p>Roses are red, violets are _____</p>
+<p>You’ve seen similar sentences endless times, so your neocortical
+machinery automatically predicts what word comes next. What makes GPT-3
+impressive, however, is not that it just predicts the next word of a
+sequence it has seen a million times—that could be accomplished with
+nothing more than memorizing sentences. What is impressive is that GPT-3
+can be given a novel sequence that it has never seen before and still
+accurately predict the next word. This, too, clearly captures something
+that the human brain can _____.</p>
+<p>Could you predict that the next word was do? I’m guessing you could,
+even though you had never seen that exact sentence before. The point is
+that both GPT-3 and the neocortical areas for language seem to be
+engaging in prediction. Both can generalize past experiences, apply them
+to new sentences, and guess what comes next.</p>
+<p>GPT-3 and similar language models demonstrate how a web of neurons
+can reasonably capture the rules of grammar, syntax, and context if it
+is given sufficient time to learn. But while this shows that prediction
+is part of the mechanisms of language, does this mean that prediction is
+all there is to human language? Try to finish these four questions:</p>
+<p>If 3x + 1 = 3, then x equals _____</p>
+<p>I am in my windowless basement, and I look toward the sky, and I see
+_____</p>
+<p>He threw the baseball 100 feet above my head, I reached my hand up to
+catch it, jumped, and _____</p>
+<p>I am driving as fast as I can to LA from New York. One hour after
+passing through Chicago, I finally _____</p>
+<p>Here something different happens. In the first question, you likely
+paused and performed some mental arithmetic before being able to answer
+the question. In the other questions, you probably, even for only a
+split second, paused to visualize yourself in a basement looking upward,
+and realized what you would see is the ceiling. Or you visualized
+yourself trying to catch a baseball a hundred feet above your head. Or
+you imagined yourself one hour past Chicago and tried to find where you
+would be on a mental map of America. With these types of questions, more
+is happening in your brain than merely the automatic prediction of
+words.</p>
+<p>We have, of course, already explored this phenomenon—it is
+simulating. In these questions, you are rendering an inner simulation,
+either of shifting values in a series of algebraic operations or of a
+three-dimensional basement. And the answers to the questions are to be
+found only in the rules and structure of your inner simulated world.</p>
+<p>I gave the same four questions to GPT-3; here are its responses
+(responses of GPT-3 are bolded and underlined):</p>
+<p>If 3x + 1 = 3, then x equals 1</p>
+<p>I am in my windowless basement, and I look toward the sky, and I see
+a light, and I know that it is a star, and I am happy.</p>
+<p>He threw the baseball 100 feet above my head, I reached my hand up to
+catch it, jumped, and caught it. It was a lot of fun!</p>
+<p>I am driving as fast as I can to LA from New York. One hour after
+passing through Chicago, I finally get to see the Pacific Ocean.</p>
+<p>All four of these responses demonstrate that GPT-3, as of June 2022,
+lacked an understanding of even simple aspects of how the world works.
+If 3x + 1 = 3, then x equals ⅔, not 1. If you were in a basement and
+looked toward the sky, you would see your ceiling, not stars. If you
+tried to catch a ball 100 feet above your head, you would not catch the
+ball. If you were driving to LA from New York and you’d passed through
+Chicago one hour ago, you would not yet be at the coast. GPT-3’s answers
+lacked common sense.</p>
+<p>What I found was not surprising or novel; it is well known that
+modern AI systems, including these new supercharged language models,
+struggle with such questions. But that’s the point: Even a model trained
+on the entire corpus of the internet, running up millions of dollars in
+server costs—requiring acres of computers on some unknown server
+farm—still struggles to answer commonsense questions, those presumably
+answerable by even a middle-school human.</p>
+<p>Of course, reasoning about things by simulating also comes with
+problems. Suppose I asked you the following question:</p>
+<p>Tom W. is meek and keeps to himself. He likes soft music and wears
+glasses. Which profession is Tom W. more likely to be?</p>
+<ol type="1">
+<li><p>Librarian</p></li>
+<li><p>Construction worker</p></li>
+</ol>
+<p>If you are like most people, you answered librarian. But this is
+wrong. Humans tend to ignore base rates—did you consider the base number
+of construction workers compared to librarians? There are probably one
+hundred times more construction workers than librarians. And because of
+this, even if 95 percent of librarians are meek and only 5 percent of
+construction workers are meek, there still will be far more meek
+construction workers than meek librarians. Thus, if Tom is meek, he is
+still more likely to be a construction worker than a librarian.</p>
+<p>The idea that the neocortex works by rendering an inner simulation
+and that this is how humans tend to reason about things explains why
+humans consistently get questions like this wrong. We imagine a meek
+person and compare that to an imagined librarian and an imagined
+construction worker. Who does the meek person seem more like? The
+librarian. Behavioral economists call this the representative heuristic.
+This is the origin of many forms of unconscious bias. If you heard a
+story of someone robbing your friend, you can’t help but render an
+imagined scene of the robbery, and you can’t help but fill in the
+robbers. What do the robbers look like to you? What are they wearing?
+What race are they? How old are they? This is a downside of reasoning by
+simulating—we fill in characters and scenes, often missing the true
+causal and statistical relationships between things.</p>
+<p>It is with questions that require simulation where language in the
+human brain diverges from language in GPT-3. Math is a great example of
+this. The foundation of math begins with declarative labeling. You hold
+up two fingers or two stones or two sticks, engage in shared attention
+with a student, and label it two. You do the same thing with three of
+each and label it three. Just as with verbs (e.g., running and
+sleeping), in math we label operations (e.g., add and subtract). We can
+thereby construct sentences representing mathematical operations: three
+add one.</p>
+<p>Humans don’t learn math the way GPT-3 learns math. Indeed, humans
+don’t learn language the way GPT-3 learns language. Children do not
+simply listen to endless sequences of words until they can predict what
+comes next. They are shown an object, engage in a hardwired nonverbal
+mechanism of shared attention, and then the object is given a name. The
+foundation of language learning is not sequence learning but the
+tethering of symbols to components of a child’s already present inner
+simulation.</p>
+<p>A human brain, but not GPT-3, can check the answers to mathematical
+operations using mental simulation. If you add one to three using your
+fingers, you notice that you always get the thing that was previously
+labeled four.</p>
+<p>You don’t even need to check such things on your actual fingers; you
+can imagine these operations. This ability to find the answers to things
+by simulating relies on the fact that our inner simulation is an
+accurate rendering of reality. When I mentally imagine adding one finger
+to three fingers, then count the fingers in my head, I count four. There
+is no reason why that must be the case in my imaginary world. But it is.
+Similarly, when I ask you what you see when you look toward the ceiling
+in your basement, you answer correctly because the three-dimensional
+house you constructed in your head obeys the laws of physics (you can’t
+see through the ceiling), and hence it is obvious to you that the
+ceiling of the basement is necessarily between you and the sky. The
+neocortex evolved long before words, already wired to render a simulated
+world that captures an incredibly vast and accurate set of physical
+rules and attributes of the actual world.</p>
+<p>To be fair, GPT-3 can, in fact, answer many math questions correctly.
+GPT-3 will be able to answer 1 + 1 =___ because it has seen that
+sequence a billion times. When you answer the same question without
+thinking, you are answering it the way GPT-3 would. But when you think
+about why 1 + 1 =, when you prove it to yourself again by mentally
+imagining the operation of adding one thing to another thing and getting
+back two things, then you know that 1 + 1 = 2 in a way that GPT-3 does
+not.</p>
+<p>The human brain contains both a language prediction system and an
+inner simulation. The best evidence for the idea that we have both these
+systems are experiments pitting one system against the other. Consider
+the cognitive reflection test, designed to evaluate someone’s ability to
+inhibit her reflexive response (e.g., habitual word predictions) and
+instead actively think about the answer (e.g., invoke an inner
+simulation to reason about it):</p>
+<p>Question 1: A bat and a ball cost .10 in total. The bat costs .00
+more than the ball. How much does the ball cost?</p>
+<p>If you are like most people, your instinct, without thinking about
+it, is to answer ten cents. But if you thought about this question, you
+would realize this is wrong; the answer is five cents. Similarly:</p>
+<p>Question 2: If it takes 5 machines 5 minutes to make 5 widgets, how
+long would it take 100 machines to make 100 widgets?</p>
+<p>Here again, if you are like most people, your instinct is to say “One
+hundred minutes,” but if you think about it, you would realize the
+answer is still five minutes.</p>
+<p>And indeed, as of December 2022, GPT-3 got both of these questions
+wrong in exactly the same way people do, GPT-3 answered ten cents to the
+first question, and one hundred minutes to the second question.</p>
+<p>The point is that human brains have an automatic system for
+predicting words (one probably similar, at least in principle, to models
+like GPT-3) and an inner simulation. Much of what makes human language
+powerful is not the syntax of it, but its ability to give us the
+necessary information to render a simulation about it and, crucially, to
+use these sequences of words to render the same inner simulation as
+other humans around us.</p>
+<p>The Paper-Clip Problem</p>
+<p>In his 2014 book Superintelligence: Paths, Dangers, Strategies, the
+philosopher Nick Bostrom poses a thought experiment. Suppose a
+superintelligent and obedient AI, designed to manage production in a
+factory, is given a command: “Maximize the manufacture of paper clips.”
+What might this AI reasonably do?</p>
+<p>Well, it might start by optimizing the internal operations of the
+factory, doing things any factory manager might: simplifying processes,
+bulk-ordering raw materials, and automating various steps. But
+eventually this AI would reach the limit of how much production it could
+squeeze out of these tamer optimizations. It would then set its sights
+on more extreme improvements in production, perhaps converting nearby
+residential buildings into factory floors, perhaps disassembling cars
+and toasters for raw materials, perhaps forcing people to work longer
+and longer hours. If this AI were truly superintelligent, we humans
+would have no way to outsmart or stop this cascading escalation of
+paper-clip manufacture.</p>
+<p>The result would be catastrophic. In Bostrom’s words, this would end
+with the AI “converting first the earth and then increasingly large
+chunks of the observable universe into paper clips.” This imagined
+demise of human civilization did not require any nefariousness on the
+part of this superintelligent AI; it was entirely obedient to the
+command given to it by humans. And yet clearly, this superintelligent AI
+failed to capture some notion of human intelligence.</p>
+<p>This has been called the paper-clip problem. When humans use language
+with each other, there is an ungodly number of assumptions not to be
+found in the words themselves. We infer what people actually mean by
+what they say. Humans can easily infer that when someone asks us to
+maximize the production of paper clips, that person does not mean
+“convert Earth into paper clips.” This seemingly obvious inference is,
+in fact, quite complex.</p>
+<p>When a human makes a request like “Maximize the production of paper
+clips” or “Be nice to Rima” or “Eat breakfast,” he or she is not
+actually providing a well-defined goal. Instead, both parties are
+guessing what is going on in the other’s head. The requester simulated a
+desired end state, perhaps high profit margins or Rima being happy or a
+healthy well-fed child, and then the requester attempted to translate
+this desired simulation into the mind of another with language. The
+listener must then infer what the requester wants based on what was
+said. The listener can assume the requester doesn’t want him to break
+the law or do anything that would lead to bad press or pledge his life
+in servitude to Rima or eat breakfast endlessly into oblivion. So, the
+path one picks, even when being fully obedient, contains constraints far
+more nuanced and complex than the command itself.</p>
+<p>Or consider a different example of this, presented by the linguist
+Steven Pinker. Suppose you overheard the following dialogue:</p>
+<p>Bob: I’m leaving you.</p>
+<p>Alice: Who is she?</p>
+<p>If you heard this and thought about it for just a second, it would be
+obvious what it means: Bob is breaking up with Alice for another woman.
+The response “Who is she?” seems like a complete non sequitur that has
+nothing to do with Bob’s statement. And yet when you imagine why Bob
+might say, “I’m leaving you,” and why Alice might respond, “Who is she?”
+the interaction and maybe even a backstory begins to form in your
+mind.</p>
+<p>Humans do all of this with our primate trick of mentalizing; the same
+way we can render an inner three-dimensional world, we can render a
+simulation of another mind to explore how different actions will make
+someone feel. When I am told to maximize paper clips, I can explore
+possible outcomes and simulate how I believe this other mind will feel
+about it. When I do this, it is incredibly obvious that the person will
+be unhappy if I convert Earth into paper clips. When I do this, it is
+obvious why Alice asked, “Who is she?”</p>
+<p>The intertwining of mentalizing and language is ubiquitous. Every
+conversation is built on the foundation of modeling the other minds you
+are conversing with—guessing what one means by what he said and guessing
+what should be said to maximize the chance the other knows what you
+mean.</p>
+<p>The relationship between mentalizing and language can even be seen in
+the brain. Wernicke’s area, presumably the place where words are learned
+and stored, is right in the middle of the primate mentalizing regions.
+Indeed, the specific subarea of the left primate sensory cortex (called
+temporoparietal junction), which is highly selective for modeling other
+people’s intentions, knowledge, and beliefs, is entirely overlapping
+with Wernicke’s area—which is, as we have learned, required for people
+to understand speech and produce meaningful speech.</p>
+<p>Consistent with this, mentalizing skills and language skills in
+children are deeply interconnected. In preschoolers, there is a
+significant correlation between the development of language skills and
+performance in mentalizing tasks such as false-belief tests. Disorders
+that impair mentalizing cause similar impairments in language.</p>
+<p>We are capable of puppeteering other minds because language is, it
+seems, built right on top of a direct window to our inner simulation.
+Hearing sentences directly and automatically triggers specific mental
+imagery. This is why if someone is saying something that upsets us, we
+cannot simply “not listen”; we must cover our ears, otherwise the words
+directly trigger simulations whether we like it or not.</p>
+<p>But Wait . . . What About GPT-4?</p>
+<p>In March 2023, OpenAI released GPT-4, its new and upgraded large
+language model. GPT-4 works in largely the same way as GPT-3—it predicts
+the next word based solely on the prior sequence of words. But unlike
+GPT-3, it is an even bigger model trained on even more data.</p>
+<p>Amazingly, each question that I designed in this chapter to
+demonstrate a lack of common sense and physical intuition in GPT-3 was
+answered flawlessly by GPT-4. GPT-4 knew that if you looked upward in a
+basement, you would see the ceiling not the sky. GPT-4 knew that if
+someone threw a baseball one hundred feet above your head, you would not
+be able to catch it. GPT-4 could even answer theory-of-mind questions
+like the Sally-Ann Test.</p>
+<p>How does GPT-4 do it? OpenAI did not add an inner world model or the
+ability to model the mind of others. Instead, in response to GPT-3’s
+frequent mistakes on commonsense and reasoning questions, OpenAI began
+training GPT-4 specifically on questions of commonsense and reasoning.
+They used a technique called “reinforcement learning from human
+feedback” in which humans punished GPT-4 when it answered questions
+incorrectly, and rewarded it when it answered correctly. They even
+pushed the GPT-4 to answer certain questions in specific ways to improve
+its performance. For example, OpenAI trained GPT-4 to think about
+commonsense questions by writing out each step, a trick called
+chain-of-thought prompting. Indeed, contrast how GPT-3 and GPT-4 each
+answer the bat and ball question:</p>
+<p>Me: A bat and a ball cost .10 in total. The bat costs .00 more than
+the ball. How much does the ball cost?</p>
+<p>GPT-3:</p>
+<p>GPT-4:</p>
+<p>The ball costs 1.sh.10 because if the bat costs .00 more than the
+ball, and the bat and the ball cost .10 in total, then the ball must
+cost .00 - .10 = 1.sh.10</p>
+<p>(incorrect)</p>
+<p>Let’s denote the cost of the ball as x. Then, the cost of the bat
+would be x + .00, since it costs .00 more than the ball. The total cost
+of both items is .10. So, we can set up an equation:</p>
+<p>x (ball) + x + .00 (bat) = .10</p>
+<p>Combining the terms for x, we get</p>
+<p>2x + .00 = .10</p>
+<p>Now, we’ll subtract .00 from both sides:</p>
+<p>2x = 1.sh.10</p>
+<p>Finally, we’ll divide both sides by 2:</p>
+<p>x = 1.sh.05</p>
+<p>So, the ball costs 1.sh.05 or 5 cents.</p>
+<p>(correct)</p>
+<p>By training GPT-4 to not just predict the answer, but to predict the
+next step in reasoning about the answer, the model begins to exhibit
+emergent properties of thinking, without, in fact, thinking—at least not
+in the way that a human thinks by rendering a simulation of the
+world.</p>
+<p>Even though GPT-4 correctly answers the simpler questions I outlined
+in this chapter, you can still find plenty of examples of GPT-4 failing
+on commonsense and theory-of-mind questions. GPT-4’s lack of a world
+model can be seen by probing deeper with more complicated questions. But
+it is becoming progressively more painstaking to find these examples. In
+some ways, this has become a game of Whac-A-Mole; everytime a skeptic
+publishes examples of commonsense questions that LLMs answer
+incorrectly, companies like OpenAI simply use these examples as training
+data for the next update of their LLMs, which thereby answer such
+questions correctly.</p>
+<p>Indeed, the massive size of these models, along with the astronomical
+quantity of data on which they are trained, in some ways obscures the
+underlying differences between how LLMs think and how humans think. A
+calculator performs arithmetic better than any human, but still lacks
+the same understanding of math as a human. Even if LLMs correctly answer
+commonsense and theory-of-mind questions, it does not necessarily mean
+it reasons about these questions in the same way.</p>
+<p>As Yann Lecun said, “the weak reasoning abilities of LLMs are
+partially compensated by their large associative memory capacity. They
+are a bit like students who have learned the material by rote but
+haven’t really built deep mental models of the underlying reality.”
+Indeed, these LLMs, like a supercomputer, have a gargantuan memory
+capacity, having read more books and articles than a single human brain
+could consume in a thousand lifetimes. And so what seems like
+commonsense reasoning is really more like pattern matching, done over an
+astronomically enormous corpus of text.</p>
+<p>But still, these LLMs are an incredible step forward. What is most
+amazing about the success of LLMs is how much they seemingly understand
+about the world despite being trained on nothing but language. LLMs can
+correctly reason about the physical world without ever having
+experienced that world. Like a military cryptanalyst decoding the
+meaning behind encryped secret messages, finding patterns and meanings
+in what was originally gibberish, these LLMs have been able to tease out
+aspects of a world they have never seen or heard, that they have never
+touched or experienced, by merely scanning the entire corpus of our
+uniquely human code for transferring thoughts.</p>
+<p>It is possible, perhaps inevitable, that continuing to scale up these
+language models by providing them with more data will make them even
+better at answering commonsense and theory-of-mind questions.* But
+without incorporating an inner model of the external world or a model of
+other minds—without the breakthroughs of simulating and
+mentalizing—these LLMs will fail to capture something essential about
+human intelligence. And the more rapid the adoption of LLMs—the more
+decisions we offload to them—the more important these subtle differences
+will become.</p>
+<p>In the human brain, language is the window to our inner simulation.
+Language is the interface to our mental world. And language is built on
+the foundation of our ability to model and reason about the minds of
+others—to infer what they mean and figure out exactly which words will
+produce the desired simulation in their mind. I think most would agree
+that the humanlike artificial intelligences we will one day create will
+not be LLMs; language models will be merely a window to something richer
+that lies beneath.</p>
+<p>Summary of Breakthrough #5: Speaking</p>
+<p>Early humans got caught in an unlikely perfect storm of effects. The
+dying forests of the African savannah pushed early humans into a
+tool-making meat-eating niche, one that required the accurate
+propagation of tool use across generations. Proto-languages emerged,
+enabling tool use and manufacture skills to successfully propogate
+across generations. The neurological change that enabled language was
+not a new neurological structure but an adjustment to more ancient
+structures, which created a learning program for language; the program
+of proto-conversations and joint attention that enables children to
+tether names to components of their inner simulation. Trained with this
+curriculum, older areas of the neocortex were repurposed for
+language.</p>
+<p>From here, humans began experimenting with using this proto-language
+with unrelated individuals, and this kicked off a feedback loop of
+gossip, altruism, and punishment, which continuously selected for more
+sophisticated language skills. As social groups expanded and ideas began
+hopping from brain to brain, the human hive mind emerged, creating an
+ephemeral medium for ideas to propagate and accumulate across
+generations. This would have begged for bigger brains to store and share
+more accumulated knowledge. And perhaps due to this, or enabling it,
+cooking was invented, offering a huge caloric surplus that could be
+spent on tripling the size of brains.</p>
+<p>And so, from this perfect storm emerged the fifth and final
+breakthrough in the evolutionary story of the human brain: language. And
+along with language came the many unique traits of humans, from altruism
+to cruelty. If there is anything that truly makes humans unique, it is
+that the mind is no longer singular but is tethered to others through a
+long history of accumulated ideas.</p>
+<p>Conclusion</p>
+<p>The Sixth Breakthrough</p>
+<p>WITH THE EMERGENCE of the modern human brain in our ancestors around
+one hundred thousand years ago, we have reached the conclusion of our
+four-billion-year evolutionary story. Looking back, we can begin to make
+out a picture—a framework—for the process by which the human brain and
+intelligence emerged. We can consolidate this story into our model of
+five breakthroughs.</p>
+<p>Breakthrough #1 was steering: the breakthrough of navigating by
+categorizing stimuli into good and bad, and turning toward good things
+and away from bad things. Six hundred million years ago, radially
+symmetric neuron-enabled coral-like animals reformed into animals with a
+bilateral body. These bilateral body plans simplified navigational
+decisions into binary turning choices; nerve nets consolidated into the
+first brain to enable opposing valence signals to be integrated into a
+single steering decision. Neuromodulators like dopamine and serotonin
+enabled persistent states to more efficiently relocate and locally
+search specific areas. Associative learning enabled these ancient worms
+to tweak the relative valence of various stimuli. In this very first
+brain came the early affective template of animals: pleasure, pain,
+satiation, and stress.</p>
+<p>Breakthrough #2 was reinforcing: the breakthrough of learning to
+repeat behaviors that historically have led to positive valence and
+inhibit behaviors that have led to negative valence. In AI terms, this
+was the breakthrough of model-free reinforcement learning. Five hundred
+million years ago, one lineage of ancient bilaterians grew a backbone,
+eyes, gills, and a heart, becoming the first vertebrates, animals most
+similar to modern fish. And their brains formed into the basic template
+of all modern vertebrates: the cortex to recognize patterns and build
+spatial maps and the basal ganglia to learn by trial and error. And both
+were built on top of the more ancient vestiges of valence machinery
+housed in the hypothalamus. This model-free reinforcement learning came
+with a suite of familiar intellectual and affective features: omission
+learning, time perception, curiosity, fear, excitement, disappointment,
+and relief.</p>
+<p>Breakthrough #3 was simulating: the breakthrough of mentally
+simulating stimuli and actions. Sometime around one hundred million
+years ago, in a four-inch-long ancestral mammal, subregions of the
+cortex of our ancestral vertebrate transformed into the modern
+neocortex. This neocortex enabled animals to internally render a
+simulation of reality. This enabled them to vicariously show the basal
+ganglia what to do before the animal actually did anything. This was
+learning by imagining. These animals developed the ability to plan. This
+enabled these small mammals to re-render past events (episodic memory)
+and consider alternative past choices (counterfactual learning). The
+later evolution of the motor cortex enabled animals to plan not only
+their overall navigational routes but also specific body movements,
+giving these mammals uniquely effective fine motor skills.</p>
+<p>Breakthrough #4 was mentalizing: the breakthrough of modeling one’s
+own mind. Sometime around ten to thirty million years ago, new regions
+of neocortex evolved in early primates that built a model of the older
+mammalian areas of neocortex. This, in effect, meant that these primates
+could simulate not only actions and stimuli (like early mammals), but
+also their own mental states with differing intent and knowledge. These
+primates could then apply this model to anticipating their own future
+needs, understanding the intents and knowledge of others (theory of
+mind), and learning skills through observation.</p>
+<p>Breakthrough #5 was speaking: the breakthrough of naming and grammar,
+of tethering our inner simulations together to enable the accumulation
+of thoughts across generations.</p>
+<p>Each breakthrough was possible only because of the building blocks
+that came prior. Steering was possible only because of the evolution of
+neurons earlier. Reinforcement learning was possible only because it
+bootstrapped on the valence neurons that had already evolved: without
+valence, there is no foundational learning signal for reinforcement
+learning to begin. Simulating was possible only because trial-and-error
+learning in the basal ganglia existed prior. Without the basal ganglia
+to enable trial-and-error learning, there would be no mechanism by which
+imagined simulations could affect behavior; by having actual
+trial-and-error learning evolve in vertebrates, vicarious trial and
+error could emerge later in mammals. Mentalizing was possible only
+because simulating came before; mentalizing is just simulating the older
+mammalian parts of the neocortex, the same computation turned inward.
+And speaking was possible only because mentalizing came before; without
+the ability the infer the intent and knowledge in the mind of another,
+you could not infer what to communicate to help transmit an idea or
+infer what people mean by what they say. And without the ability to
+infer the knowledge and intent of another, you could not engage in the
+crucial step of shared attention whereby teachers identify objects for
+students.</p>
+<p>Thus far, humanity’s story has been a saga of two acts. Act 1 is the
+evolutionary story: how biologically modern humans emerged from the raw
+lifeless stuff of our universe. Act 2 is the cultural story: how
+societally modern humans emerged from largely biologically identical but
+culturally primitive ancestors from around one hundred thousand years
+ago.</p>
+<p>While act 1 unfolded over billions of years, most of what we have
+learned in history class unfolded during the comparatively much shorter
+time of act 2—all civilizations, technologies, wars, discoveries,
+dramas, mythologies, heroes, and villains unfolded in this time window
+that, compared to act 1, was a mere blink of an eye.</p>
+<p>An individual Homo sapiens one hundred thousand years ago housed in
+her head one of the most awe-inspiring objects in the universe; the
+result of over a billion years of hard—even if
+unintentional—evolutionary work. She would have sat comfortably at the
+top of the food chain, spear in hand, warmed in manufactured clothing,
+having tamed both fire and countless gargantuan beasts, effortlessly
+invoking these many intellectual feats, utterly unaware of the past by
+which these still yet-to-be-understood abilities came to be and also, of
+course, unaware of the simultaneously magnanimous, tragic, and wonderful
+journey that would eventually unfold in her Homo sapiens
+descendants.</p>
+<p>And so here you are, reading this book. An almost impossibly vast
+number of events led to this exact moment: the first bubbling cells in
+hydrothermal vents; the first predatory battles of single-celled
+organisms; the birth of multicellularity; the divergence of fungi and
+animals; the emergence of the first neurons and reflexes in ancestral
+corals; the emergence of the first brains with valence and affect and
+associative learning in ancient bilaterians; the rise of vertebrates and
+the taming of time, space, patterns, and prediction; the birth of
+simulation in minuscule mammals hiding from dinosaurs; the construction
+of politics and mentalizing of tree-living primates; the emergence of
+language in early humans; and, of course, the creation, modification,
+and destruction of countless ideas that have accumulated throughout the
+billions of language-enabled human brains over the past hundreds of
+thousands of years. These ideas have accumulated to the point that
+modern humans can now type on computers, write words, use cell phones,
+cure diseases, and, yes, even construct new artificial intelligences in
+our image.</p>
+<p>Evolution is still unfolding in earnest; we are not at the end of the
+story of intelligence but at the very beginning. Life on Earth is only
+four billion years old. It will be another seven billion years before
+our sun dies. And thus life, at least on Earth, has another seven or so
+billion years to tinker with new biological forms of intelligence. If it
+took only four and a half billion years for raw molecules on Earth to
+transform into human brains, how far can intelligence get in another
+seven billion years of evolution? And assuming life does, somehow, make
+its way out of the solar system, or at least life independently shows up
+elsewhere in the universe, there will be astronomically more time for
+evolution to get to work: it will be over a trillion years before the
+universe has expanded so greatly that new stars cease to form, and a
+quadrillion before the last galaxy breaks apart. It can be hard to
+conceptualize just how young our fourteen-billion-year-old universe
+actually is. If you took the quadrillion-year timeline of our universe
+and squished it into a single calendar year, then we would find
+ourselves, today, at only the first seven minutes of the year, not even
+at the dawn of the very first day.</p>
+<p>If our modern understanding of physics is correct, then about a
+quadrillion years from now, after the the last galaxy has finally broken
+apart, the universe will begin its slow process of fading meaninglessly
+into an inevitable heat death. This is the unfortunate result of the
+inexorable trend of entropy, that raw unstoppable force of the universe
+that the first self-replicated DNA molecules began their war against
+four billion years ago. By self-replicating, DNA finds respite from
+entropy, persisting not in matter but in information. All the
+evolutionary innovations that followed the first string of DNA have been
+in this spirit, the spirit of persisting, of fighting back against
+entropy, of refusing to fade into nothingness. And in this great battle,
+ideas that float from human brain to human brain through language are
+life’s newest innovation but will surely not be its last. We are still
+at the base of the mountain, only on the fifth step on a long staircase
+to something.</p>
+<p>Of course, we don’t know what breakthrough #6 will be. But it seems
+increasingly likely that the sixth breakthrough will be the creation of
+artificial superintelligence; the emergence of our progeny in silicon,
+the transition of intelligence—made in our image—from a biological
+medium to a digital medium. From this new medium will come an
+astronomical expansion in the scale of a single intelligence’s cognitive
+capacity. The cognitive capacity of the human brain is hugely limited by
+the processing speed of neurons, the caloric limitations of the human
+body, and the size constraints of how big a brain can be and still fit
+in a carbon-based life-form. Breakthrough #6 will be when intelligence
+unshackles itself from these biological limitations. A silicon-based AI
+can infinitely scale up its processing capacity as it sees fit. Indeed,
+individuality will lose its well-defined boundaries as AIs can freely
+copy and reconfigure themselves; parenthood will take on new meaning as
+biological mechanisms of mating give way to new silicon-based mechanisms
+of training and creating new intelligent entities. Even evolution itself
+will be abandoned, at least in its familiar form; intelligence will no
+longer be entrapped by the slow process of genetic variation and natural
+selection, but instead by more fundamental evolutionary principles, the
+purest sense of variation and selection—as AIs reinvent themselves,
+those who select features that support better survival will, of course,
+be the ones that survive.</p>
+<p>And whichever intellectual strategies end up evolving next, they will
+surely contain hints of the human intelligence from which they came.
+While the underlying medium of these artificial superintelligences may
+retain none of the biological baggage of brains, these entities will
+still irrevocably be built on the foundation of the five breakthroughs
+that came before. Not only because these five breakthroughs were the
+foundation of the intelligence of their human creators—creators cannot
+help but imbue their creations with hints of themselves—but also because
+they will be designed, at least at first, to interact with humans, and
+thereby will be seeded with a recapitulation, or at least a mirror, of
+human intelligence.</p>
+<p>And so we stand on the precipice of the sixth breakthrough in the
+story of human intelligence, at the dawn of seizing control of the
+process by which life came to be and of birthing superintelligent
+artificial beings. At this precipice, we are confronted with a very
+unscientific question but one that is, in fact, far more important: What
+should be humanity’s goals? This is not a matter of veritas—truth—but of
+values.</p>
+<p>As we have seen, past choices propagate through time. And so how we
+answer this question will have consequences for eons to come. Will we
+spread out across galaxies? Explore the hidden features of the cosmos,
+construct new minds, unravel the secrets of the universe, find new
+features of consciousness, become more compassionate, engage in
+adventures of unthinkable scope? Or will we fail? Will our evolutionary
+baggage of pride, hatred, fear, and tribalism rip us apart? Will we go
+down as just another evolutionary iteration that came to a tragic end?
+Perhaps it will be some later species on Earth, millions of years after
+humans have gone extinct, that will make another stab at taking the next
+step up the mountain—perhaps the bonobos or octopuses or dolphins or
+Portia spiders. Perhaps they will uncover our fossils as we have
+uncovered those of dinosaurs and ponder what lives we must have lived
+and write books about our brains. Or even worse, perhaps we humans will
+end the grand four-billion-year experiment of life on Earth through
+ravaging the planet’s climate or blowing our world into oblivion with
+nuclear warfare.</p>
+<p>As we look forward into this new era, it behooves us to look backward
+at the long billion-year story by which our brains came to be. As we
+become endowed with godlike abilities of creation, we should learn from
+the god—the unthinking process of evolution—that came before us. The
+more we understand about our own minds, the better equipped we are to
+create artificial minds in our image. The more we understand about the
+process by which our minds came to be, the better equipped we are to
+choose which features of intelligence we want to discard, which we want
+to preserve, and which we want to improve upon.</p>
+<p>We are the stalwarts of this grand transition, one that has been
+fourteen billion years in the making. Whether we like it or not, the
+universe has passed us the baton.</p>
+<p>Acknowledgments</p>
+<p>Writing this book was a case study in human generosity. It was only
+possible because of the remarkable kindness of many people who helped me
+bring it life. There are many people who deserve thanks.</p>
+<p>First and foremost, my wife, Sydney, who edited many pages and helped
+me think through many conceptual snags. She woke up countless mornings
+to find me long gone because I had already snuck out to read and write;
+and she came home from work countless days to find me tucked away in my
+office. Thank you for supporting this endeavor despite how much mental
+space it consumed.</p>
+<p>I want to thank my initial readers, who gave me feedback and
+encouragement: Jonathan Balcome, Jack Bennett, Kiki Freedman, Marcus
+Jecklin, Dana Najjar, Gideon Kowadlo, Fayez Mohamood, Shyamala Reddy,
+Billy Stein, Amber Tunnell, Michael Weiss, Max Wenneker, and, of course,
+my parents, Gary Bennett and Kathy Crost; and my stepmother, Alyssa
+Bennett.</p>
+<p>In particular, I want to thank my father-in-law, Billy Stein, who has
+no intrinsic interest in AI or neuroscience, but nonetheless dutifully
+read and annotated every single page, questioned every concept and idea
+to make sure it made sense, and provided invaluable input and guidance
+on structure, understandability, and flow. Dana Najjar, Shyamala Reddy,
+and Amber Tunnell, who have far more writing experience than I, gave me
+essential input on early drafts. And Gideon Kowaldo, who gave me useful
+input on the AI history and concepts.</p>
+<p>I am extremely grateful to the scientists who took time out of their
+busy lives to respond to my emails where I peppered them with
+innumerable questions. They helped me understand their research and
+think through many of the concepts in this book: Charles Abramson,
+Subutai Ahmed, Bernard Balleine, Kent Berridge, Culum Brown, Eric
+Brunet, Randy Bruno, Ken Cheng, Matthew Crosby, Francisco Clasca,
+Caroline DeLong, Karl Friston, Dileep George, Simona Ginsburg, Sten
+Grillner, Stephen Grossberg, Jeff Hawkins, Frank Hirth, Eva Jablonka,
+Kurt Kotrschal, Matthew Larkum, Malcolm MacIver, Ken-ichiro Nakajima,
+Thomas Parr, David Redish, Murray Sherman, James Smith, and Thomas
+Suddendorf. Without their willingness to respond to the questions of a
+complete stranger, it would have been impossible for someone like me to
+learn a new field.</p>
+<p>I want to especially thank Karl Friston, Jeff Hawkins, and Subutai
+Ahmed, who read some of my early papers and generously took me under
+their wing and brought me into their labs to share my ideas and learn
+from them.</p>
+<p>Joseph LeDoux, David Redish, and Eva Jablonka were astoundingly
+generous with their time. Not only did they read and annotate multiple
+drafts of the manuscript, but they provided essential feedback on
+concepts I had missed, areas of the literature I had failed to consider,
+and helped me expand on the framework and story. They became my de facto
+neuroscience editors and advisers. They deserve much of the credit for
+whatever aspects of this book are deemed valuable (and none of the blame
+for aspects deemed otherwise).</p>
+<p>One of my favorite parts of this book is the art, and for this,
+Rebecca Gelernter and Mesa Schumacher deserve all the credit. They are
+the incredibly talented artists who produced the beautiful art
+herein.</p>
+<p>As a first-time author, I am grateful to the people in the book
+industry who gave me guidance. Jane Friedman gave me tough and useful
+feedback. The writer Jonathan Balcome read one of the earliest drafts
+and gave feedback and encouragement. The writers Gerri Hirshey and Jamie
+Carr each helped me with my book proposal and gave me feedback on early
+chapters.</p>
+<p>Lisa Sharkey at HarperCollins made this book real. I spoke to her
+before I decided to write it and asked her whether it was even worth
+attempting to write this book given I was a first-time author and not a
+formally trained neuroscientist. Despite the obvious fact that there was
+a good chance the book wouldn’t see the light of day, she encouraged me
+to pursue it regardless. I am deeply grateful for that conversation, and
+her advice and support. It is wonderfully fitting that she was the one,
+over a year after that conversation, who ended up deciding to publish
+this book.</p>
+<p>I want to thank my agent, Jim Levine, who was willing to read the
+book from nothing but a single introduction (thanks to Jeff Hawkins).
+Jim read the entire book in one day, and took a bet on it the next day.
+I want to thank my U.S. editor, Matt Harper, and my U.K. editor, Myles
+Archibald, who also took a bet on this book, and helped me work through
+countless drafts and navigate the many ups and downs of writing. I want
+to thank my copyeditor, Tracy Roe, who methodically fixed my many typos
+and grammatical mishaps.</p>
+<p>There are also folks who helped me in less direct but equally
+important ways. My guitar teacher, Stephane Wrembel, who I turned to for
+advice on numerous occasions. My friend Ally Sprague (who tends to
+double as my coach), who helped me make the decision to take a year off
+to write this book. My friends Dougie Gliecher and Ben Eisenberg, who
+connected me to people they knew in the book industry. My brothers, Adam
+Bennett and Jack Bennett, who bring joy and play to my life, and are
+always a source of inspiration. And my parents, Gary Bennett and Kathy
+Crost, who fostered in me a love of learning, showed me how to follow my
+curiosity, and taught me to finish things I start.</p>
+<p>This book was only possible because of many other prior works whose
+ideas, stories, and writing shaped this book in fundamental ways. The
+Alignment Problem by Brian Christian. Behave by Robert Sapolsky. The
+Deep History of Ourselves by Joseph LeDoux. The Evolution of the
+Sensitive Soul by Eva Jablonka and Simona Ginsburg. How Monkeys See the
+World by Dorothy Cheney and Robert Seyfarth. The Mind within the Brain
+by David Redish. On Intelligence and A Thousand Brands by Jeff Hawkins.
+Why Only Us by Robert Berwish and Noam Chomsky.</p>
+<p>There were also numerous textbooks that became essential resources
+for me. Brains Through Time by Georg Striedter and R. Glenn Northcutt.
+Brain Structure and Its Origins by Gerald Schneider. Deep Learning by
+Ian Goodfellow, Yoshua Bengio, and Aaron Courville. Evolutionary
+Neuroscience by Jon H. Kaas. The Evolution of Language by W. Tecumseh
+Fitch. Fish Cognition and Behavior by Culum Brown, Kevin Laland, and
+Jens Krause. Neuroeconomics by Paul Glimcher. The Neurobiology of the
+Prefrontal Cortex by Richard Passingham and Steven Wise. The New
+Executive Brain by Elkhonon Goldberg. Reinforcement Learning by Richard
+Sutton and Andrew Barto.</p>
+<p>Lastly, I want to thank my dog, Charlie, whose begging for treats and
+playful nudges forced me to reenter the world of the living from
+numerous bleary-eyed sessions of reading papers and textbooks. As I
+write this paragraph, she is lying next to me fast asleep, twitching
+away in some dream, her neocortex surely rendering a simulation of
+something. Of what, of course, I will never know.</p>
+<p>Glossary</p>
+<p>acquisition (in relation to associative learning): the process by
+which a new association between a stimulus and a response is formed
+(i.e., “acquired”) based on new experience</p>
+<p>associative learning: the ability to associate a stimulus with a
+reflexive response, such that the next time that stimulus occurs that
+same reflexive response is more likely to occur</p>
+<p>adaptation (in relation to the responses of neurons): the property of
+neurons whereby they change the relationship between a given stimulus
+strength and the resulting firing rate; for example, neurons will
+gradually decrease their firing rate in response to a constant stimulus
+over time</p>
+<p>affect/affective state: a way to categorize the behavioral state of
+an animal along the dimensions of valence (either positive valence or
+negative valence) and arousal (either high arousal or low arousal)</p>
+<p>agranular prefrontal cortex (aPFC): the region of frontal neocortex
+that evolved in early mammals. It is called “agranular” because it is a
+region of neocortex that is missing layer 4 (the layer that contains
+“granule cells”)</p>
+<p>auto-association: a property of certain networks of neurons whereby
+neurons automatically build associations with themselves, enabling the
+network to automatically complete patterns when given an incomplete
+pattern</p>
+<p>backpropagation: an algorithm for training artificial neural
+networks; computes the impact of changing the weight of a given
+connection on the error (a measure of the difference between the actual
+output and the desired output) at the end of the network, and nudges
+each weight accordingly to reduce the error</p>
+<p>bilaterian: a group of species with a common ancestor around 600
+million years ago, in whom bilaterial symmetry emerged as well as the
+first brains</p>
+<p>bilateral symmetry: animal bodies that contain a single plane of
+symmetry, which divides the animal into roughly mirror image right and
+left halves</p>
+<p>blocking (in relation to associative learning): one of the solutions
+to the credit assignment problem that evolved in early bilaterians; once
+an animal has established an association between a predictive cue and a
+response, all further cues that overlap with the predictive cue are
+inhibited (i.e., “blocked”) from making associations with that
+response</p>
+<p>catastrophic forgetting: an outstanding challenge of sequentially
+training neural networks (as opposed to training them all at once); when
+you teach a neural network to recognize new patterns, it tends to lose
+the memory of previously learned old patterns</p>
+<p>continual learning: the ability to automatically learn and remember
+new things as new data is provided</p>
+<p>convolutional neural network: a type of neural network designed to
+recognize objects in images by looking for the same features in
+different locations</p>
+<p>credit assignment problem: when an event or outcome occurs, what cue
+or action do you give “credit” for being predictive of that event or
+outcome?</p>
+<p>extinction (in relation to associative learning): the process by
+which previously learned associations are inhibited (i.e.,
+“extinguished”) due to a conditional stimulus no longer occurring
+alongside a subsequent reflexive response (i.e., a buzzer sounding that
+used to occur before food, but no longer occurs before food)</p>
+<p>firing rate (also spike rate): the number of spikes per second
+generated by a neuron</p>
+<p>generative model: a type of probabilistic model that learns to
+generate its own data, and recognizes things by comparing generated data
+with actual data (a process some researchers call “perception by
+inference”)</p>
+<p>granular prefrontal cortex (gPFC): the region of frontal neocortex
+that evolved in early primates. It is called “granular” because it is a
+region of prefrontal neocortex that contains a layer 4 (the layer that
+contains “granule cells”)</p>
+<p>Helmholtz machine: an early proof of concept of Helmholtz’s idea of
+perception by inference</p>
+<p>mentalizing: the act of rendering a simulation of one’s own inner
+simulation (i.e., thinking about your own thinking)</p>
+<p>Model-based reinforcement learning: the type of reinforcement
+learning whereby possible future actions are “played out” (i.e.,
+simulated) ahead of time before selecting an action</p>
+<p>model-free reinforcement learning: the type of reinforcement learning
+whereby possible future actions are not “played out” (i.e., simulated)
+ahead of time; instead, actions are automatically selected based on the
+current situation</p>
+<p>neuromodulator: a chemical released by some neurons (“neuromodulatory
+neurons”) that has complex and often long-lasting effects on many
+downstream neurons. Famous neuromodulators include dopamine, serotonin,
+and adrenaline</p>
+<p>overshadowing (in relation to associative learning): one of the
+solutions to the credit assignment problem that evolved in early
+bilaterians; when animals have multiple predictive cues to use, their
+brains tend to pick the cues that are the strongest (i.e., strong cues
+overshadow weak cues).</p>
+<p>primate sensory cortex (PSC): the new regions of sensory neocortex
+that evolved in early primates, these include the superior temporal
+sulcus (STS) and temporoparietal junction (TPJ)</p>
+<p>reacquisition (in relation to associative learning): one of the
+techniques to deal with changing contingencies in the world and enable
+continual learning in early bilaterians; old-extinguished associations
+are reacquired faster than entirely new associations</p>
+<p>sensory neocortex: the back half of the neocortex, the area in which
+a simulation of the external world is rendered</p>
+<p>spontaneous Recovery (in relation to associative learning): one of
+the techniques to deal with changing contingencies in the world and
+enable continual learning in early bilaterians; broken associations are
+rapidly suppressed but not, in fact, unlearned; given enough time, they
+reemerge</p>
+<p>superior temporal sulcus (STS): a new region of sensory neocortex
+that evolved in early primates</p>
+<p>synapse: the connection between neurons through which chemical
+signals are passed</p>
+<p>temporal credit assignment problem: when an event or outcome occurs,
+what previous cue or action do you give “credit” for being predictive of
+that event or outcome? This is a subcase of the credit assignment
+problem when having to assign credit between things separated in
+time</p>
+<p>temporal difference learning (TD learning): the model-free
+reinforcement learning process whereby AI systems (or animal brains)
+reinforce or punish behaviors based on changes (i.e., “temporal
+differences”) in predicted future rewards (as opposed to actual
+rewards)</p>
+<p>temporal difference signal (TD signal): the change in predicted
+future reward; this signal is used as the reinforcement/punishment
+signal in temporal difference learning systems</p>
+<p>temporoparietal junction (TPJ): a new region of sensory neocortex
+that evolved in early primates</p>
+<p>theory of mind: the ability to infer another animal’s intent and
+knowledge</p>
+<p>valence: the goodness or badness of a stimulus, behaviorally defined
+by whether an animal will approach or avoid the stimulus</p>
+<p>Bibliography</p>
+<p>To save paper, the full bibliography can be found at
+briefhistoryofintelligence.com.</p>
+<p>Over the course of my years of research for this book, there were
+hundreds of books, papers, and journals that I read—the vast majority of
+which are cited in the Notes section. The works below (in alphabetical
+order by title) were particularly important in formulating the framework
+in this book.</p>
+<p>The Alignment Problem: Machine Learning and Human Values by Brian
+Christian</p>
+<p>Behave: The Biology of Humans at Our Best and Worst by Robert
+Sapolsky</p>
+<p>Brain Structure and Its Origins: In Development and in Evolution of
+Behavior and the Mind by Gerald E. Schneider</p>
+<p>Brains Through Time: A Natural History of Vertebrates by Georg F.
+Striedter and R. Glenn Northcutt</p>
+<p>Cerebral Cortex by Edmund Rolls</p>
+<p>The Deep History of Ourselves: The Four-Billion-Year Story of How We
+Got Conscious Brains by Joseph LeDoux</p>
+<p>Deep Learning by Ian Goodfellow, Yoshua Bengio, and Aaron
+Courville</p>
+<p>Evolution of Behavioural Control from Chordates to Primates by Paul
+Cisek</p>
+<p>The Evolution of Language by W. Tecumseh Fitch</p>
+<p>The Evolution of Memory Systems by Elisabeth A. Murray, Steven P.
+Wise, and Kim S. Graham</p>
+<p>The Evolution of the Sensitive Soul: Learning and the Origins of
+Consciousness by Simona Ginsburg and Eva Jablonka</p>
+<p>Evolutionary Neuroscience by Jon H. Kaas</p>
+<p>Fish Cognition and Behavior by Culum Brown, Kevin Laland, and Jens
+Krause</p>
+<p>From Neuron to Cognition via Computation Neuroscience edited by
+Michael A. Arbib and James J. Bonaiuto</p>
+<p>The Gap: The Science of What Separates Us from Other Animals by
+Thomas Suddendorf</p>
+<p>How Emotions Are Made: The Secret Life of the Brain by Lisa Feldman
+Barrett</p>
+<p>How Monkeys See the World: Inside the Mind of Another Species by
+Dorothy L. Cheney and Robert M. Seyfarth</p>
+<p>How the Brain Might Work: A Hierarchical and Temporal Model for
+Learning and Recognition by Dileep George</p>
+<p>The Invention of Tomorrow: A Natural History of Forethought by Thomas
+Suddendorf</p>
+<p>Language Evolution edited by Morten H. Christiansen and Simon
+Kirby</p>
+<p>The Mind Within the Brain: How We Make Decisions and How Those
+Decisions Go Wrong by A. David Redish</p>
+<p>The Neurobiology of the Prefrontal Cortex: Anatomy, Evolution, and
+the Origin of Insight by Richard E. Passingham and Steven P. Wise</p>
+<p>Neuroeconomics: Decision Making and the Brain by Paul Glimcher and
+Ernst Fehr</p>
+<p>The New Executive Brain: Frontal Lobes in a Complex World by Elkhonon
+Goldberg</p>
+<p>On Intelligence by Jeff Hawkins</p>
+<p>Reinforcement Learning: An Introduction by Richard S. Sutton and
+Andrew G. Barto</p>
+<p>Resynthesizing Behavior Through Phylogenetic Refinement by Paul
+Cisek</p>
+<p>Superintelligence: Paths, Dangers, Strategies by Nick Bostrom</p>
+<p>A Thousand Brains: A New Theory of Intelligence by Jeff Hawkins</p>
+<p>Why Chimpanzees Can’t Learn Language and Only Humans Can by Herbert
+S. Terrace</p>
+<p>Why Only Us: Language and Evolution by Robert C. Berwick and Noam
+Chomsky</p>
+<h6 id="阅读日期-2026年09月18日-2026年09月18日-共-1-天">阅读日期：
+2026年09月18日-2026年09月18日 共： 1 天</h6>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>

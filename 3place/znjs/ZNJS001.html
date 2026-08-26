@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="hbaolong@vip.qq.com" />
+  <title>智能简史:</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">智能简史:</h1>
+<p class="author">hbaolong@vip.qq.com</p>
+</header>
+<center>
+<a href="/3place/znjs">返回首页</a> <a
+href="/3place/znjs/mingju.html">本书名句</a> <a
+href="/3place/znjs/memo.html">本书注解</a> <a
+href="/3place/znjs/index_rich.html">丰富目录</a> <a
+href="/3place/znjs/index_readcal.html">同读日历</a> <a
+href="/3place/znjs/index_timeline.html">时间线</a> <a
+href="/3place/znjs/index_books.html">引用书籍</a> <a
+href="/3place/znjs/index_words.html">使用字频</a>
+<div id="wx_pic" style="margin:0 auto;display:none;">
+<img src='/img/logo.png'/>
+</div>
+</center>
+<h1 id="智能简史">智能简史</h1>
+<p>致我的妻子悉妮</p>
+<p>我预见到了在遥远的未来，一个更为重要的研究领域将拥有无限的发展空间。心理学将建立在新的基础之上，那就是每一种心理能力与素质都需要循序渐进地获得。人类起源及其发展历史的神秘面纱将被揭开。</p>
+<p>一查尔斯·达尔文，1859</p>
+<p>重磅推荐</p>
+<p>这本书令人惊叹。我快速地读完了，因为它非常有趣，然后又重读了其中很多部分。</p>
+<p>一丹尼尔·卡尼曼（DanielKahneman）,诺贝尔经济学奖获得者，《思考，快与慢》作者</p>
+<p>麦克斯·班尼特新著《智能简史》，以人类自然智能和AI为双主线，不仅描述了包括灵长类动物在内的物种社会的特质与功能，而且梳理了人类智力发展脉络，进而揭示了AI与人脑研究之间深层次的关联性。如今，人类正处于前所未有的时刻：大脑结构与功能进化和AI演进形成互动关系，彼此之间的边界正变得不再泾渭分明。其后果是人作为物种的改变，AI作为新物种的崛起。总之，这本书绝不仅是一本充满易读性、趣味性和知识性的关于智能科学的科普读物，还是帮助读者重新认知人类目己的大脑、理解AI和大脑的互动新模式的好书。</p>
+<p>一朱嘉明，经济学家</p>
+<p>在当下这个AI浪潮翻涌、科技大变革的时代，如果我们要给孩子选择一本通识读物的话，我更愿意推荐这本《智能简史》它丰富的内容、前瞻性的见识、生动的笔触都适合这个时代的孩子。</p>
+<p>一李希贵，北京第一实验学校校长</p>
+<p>脑科学的发展对AI的进步具有重要的启发作用。但反过来，本书借助AI对智能工作方式的理解，以动物大脑6亿年进化树的宏大尺度，通过讲述两侧对称爬行动物（转向）、脊椎动物（强化）、哺乳动物（模仿）、灵长类动物（心智化）到人类（语言）五次突破之脑进化故事，尝试剖析人类智能的本质，这对揭示大脑奥秘、发展通用AI，无疑具有极其重要的意义。这是一本视角新颖，充满新思想、新观察、新见解且十分引人入胜的书，值此中国AI蓬勃发展之际，有必要向广大中国读者予以郑重推荐。</p>
+<p>一邓志东，清华大学教授</p>
+<p>2021年6月，北京智源大会发布当时全球最大的悟道2.0大模型，2022年6月却出人意料地发布刚学会觅食的线虫模型智源天宝，看似荒腔走板，尤其是在2022年11月ChatGPT爆火的背景下，这项发布更显得不务正业。2024年12月，智源线虫登上《自然：计算科学》封面，也并未改变这个基本印象。不过，你要是打开这本《智能简史》，读到“第一次突破：转向”，就会深刻理解智源线虫的开创意义。草蛇灰线，伏脉干里。生物智能的五次突破，都会在AI中一一展现。欲睹未来，先看《智能简史》。</p>
+<p>——黄铁军，智源人工智能研究院理事长，北京大学教授</p>
+<p>智能科学须借鉴生物进化史、人类文明史、个人成长史，本书与我的这一观点不谋而合。生物智能发展依赖神经组织基本构造的突破，神经系统处理信息时采用生成、建构等方法，进化出模仿、想象、规划及语言能力，AI应参考这一进阶脉络推进一一这也是具身智能方法。动物空间感知和理解、人类语言能力的生理机理仍然是个谜题，这是机器达成人类通用智能的关键。这本书既有专业级深度，对智能科学有非常大的启发性，其叙事符合“奥卡姆剃刀”原则，通俗易懂，也适合一般大众阅读，是一本顶级科普著作。</p>
+<p>一吴易明，工学博士，西安中科光电创始人</p>
+<p>《智能简史》为解析AI进化提供了一个深刻的生物学视角。通过描绘大脑历经的五次革命性突破，本书揭示了智能如何从“自我行为学习”迈向“想象性社会学习”的漫长旅程。当AI大模型作人类大脑将如何与这片广的知识网络共生演化？我们的教育体系又该如何培养大脑与这一“新皮质外延”之间的深度协同能力？在探寻未来智能形态的迷雾中，这本书不仅照亮了来路，更为前行指明了思考的方向。</p>
+<p>一龙志勇，《大模型时代》作者</p>
+<p>过去，当我们提到智能时，总觉得这是人类和AI的事，但这是把“智能”两个字想简单了，想要真正地了解智能，不妨像此书作者，从寒武纪开始，从地球生命的早期开始。</p>
+<p>一河森堡，科普作家</p>
+<p>这本书揭示了你一直想了解（但又不敢开口问）的关于大脑的所有知识。这是一部令人叹为观止的参考宝典，融汇了神经科学一个世纪以来的丰硕成果，并以巧妙的笔触编织成一部宏大的进化叙事。书中娓娓道来，展现了大脑结构从古老的蠕虫一路演化至我们人类这一有意识、充满好奇心的物种的历程。这种综合叙述堪称完美，其内容的连贯性巧妙地弥补了这本书近乎百科全书式的广度可能带来的理解难度。</p>
+<p>一卡尔·弗里斯顿（KarlFriston），伦敦大学学院教授，神经科学家</p>
+<p>《智能简史》具有令人叹为观止的广度，它汇集了与人类思维起源最为相关的科学知识。这部著作既包罗万象又雄心勃勃，既启发性十足又严格以事实为依据，避免了无根据的推测。它既是艺术，也是科学。这一勇敢的尝试深深打动了我，它在宏大的进化框架中，为我们揭开了整个人类本性的神秘面纱。然而，更让我叹为观止的是，麦克斯·班尼特竟然成功完成了这项看似几乎不可能的任务。</p>
+<p>—库尔特·科特沙尔（KurtKotrschal），2010年奥地利年度科学家奖得主，论文《狼、狗、人类》作者</p>
+<p>这本书的作者有着年轻且充满活力的思维，他摒弃一切偏见，以纯粹而快乐的好奇心、智慧和勇气来探讨这个主题。无论是年轻的学生，还是资深的学者，每个人都会发现这本书极具阅读价值。</p>
+<p>一伊娃·雅布隆卡（EvaJablonka），特拉维夫大学教授，《四维进化》《敏感灵魂的进化》合著者</p>
+<p>麦克斯·班尼特发表了两篇关于大脑进化的科学论文，令我深感震撼。如今，他将这两篇杰作融汇成一本精彩绝伦的著作一《智能简史》。他以亲切友好的笔触、清晰流畅的文体，以及丰富深刻的内容，使这本书在众多作品中脱颖而出。</p>
+<p>一约瑟夫·勒杜（JosephLeDoux），纽约大学教授，畅销书《重新认识焦虑》《我们自己的深刻历史》作者</p>
+<p>麦克斯·班尼特生动地讲述了大脑是如何进化的，以及大脑如今是如何工作的。《智能简史》是引人入胜、综合全面的，并且充满了新颖的见解。</p>
+<p>一肯特·贝里奇（KentBerridge），密歇根大学心理学和神经科学教授，格拉维迈耶心理学奖获得者</p>
+<p>如果你对双耳间那团3磅重的灰色物质有一点好奇，就读这本书吧。麦克斯·班尼特笔下引人入胜、富有启迪性的大脑进化史是一项壮举一既让人耳目一新，又令人愉悦。它让我的大脑感到快乐。</p>
+<p>一乔纳森·巴尔科姆（JonathanBalcombe）博士，畅销书《鱼什么都知道》《无敌蝇家》作者</p>
+<p>这本书开启了一段激动人心的探索之旅，揭示了人类智能的奥秘，并深刻探讨了我们的本质和身为人类的意义。书中提及的五次突破，即与世界互动的能力日益复杂，提供了一个新颖的进化理论结构，并推动着故事的发展。本书文笔流畅，引人入胜，阅读体验极佳。强烈推荐一读。</p>
+<p>一戴维·雷迪什（A.DavidRedish），明尼苏达大学教授，《大脑中的思维》《改变我们的选择方式：道德的新科学》作者</p>
+<p>如果你对理解大脑或构建类人通用AI感兴趣，那么你应该读这本书。这是一本以历史为外衣的前瞻性著作。书中将各种神经系统的解剖结构、生理机能和行为模式的惊人细节，融入一个连贯的进化故事中，并在计算背景下进行了阐释。阅读本书是一种享受一千万不要错过！</p>
+<p>一迪利普·乔治（DileepGeorge），DeepMind研究员，VicariousAl前联合创始人</p>
+<p>绝对引人入胜。《智能简史》是一段令人着迷、引人入胜的旅程，带领我们探索人类物种的起源，同时提醒我们，人类的故事在智人诞生之前就已经开始。这是一本关于我们是谁，以及我们如何走到今天的具有启发性、揭示性的书。</p>
+<p>—布莱恩·克里斯汀（BrianChristian），畅销书《算法之美》《人机对齐》作者</p>
+<h6 id="阅读日期-2026年08月26日-2026年08月26日-共-1-天">阅读日期：
+2026年08月26日-2026年08月26日 共： 1 天</h6>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>
