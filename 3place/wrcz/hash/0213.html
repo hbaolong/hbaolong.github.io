@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="文/韩宝龙" />
+  <title>起步不要猛踩油门：聊聊半程马拉松的速度分配</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">起步不要猛踩油门：聊聊半程马拉松的速度分配</h1>
+<p class="author">文/韩宝龙</p>
+<p class="date">2026年9月3日 13时00分46秒</p>
+</header>
+<p><strong>——以1小时45分钟完赛为例</strong></p>
+<p>你有没有过这样的经历：比赛起跑枪响，身边的人都像被弹射出去一样冲了出去。你告诉自己“别急”，但那股兴奋劲儿推着你，第一公里手表报时——4分50秒，比目标配速快了将近10秒。</p>
+<p>你安慰自己：“没事，前面快一点，后面还能顶住。”</p>
+<p>但到了第13公里，你开始掉速。第16公里，你开始算“走两步会不会被关门”。第19公里，你恨不得把起跑时那10秒的冲动给吞回去。</p>
+<p>这不是意志力的问题。这是生理学的问题。</p>
+<h2 id="起跑线前的三种人">起跑线前的三种人</h2>
+<p>第一个跑出去的人，不是我这种平时跑5分配速、今天想冲4分55秒的人。而是<strong>那个“跟着感觉走”的人</strong>——他今天状态好，体感轻松，第一公里飘出去4分40秒，心率直接窜到150以上。他以为自己是“状态爆棚”，实际上他是把半马当成“间歇跑”来开了局。</p>
+<p>这个人，在15公里后会变成另一种动物：<strong>掉速、咬牙、低血糖、走两步跑三步。</strong>
+他不是跑崩的，他是从起跑那一刻就开始崩的。</p>
+<p>第二个人，是有计划的人。他赛前定好了配速，每公里该跑多少心里有数。但他犯了一个错误——<strong>他把“匀速”理解成了“从第一公里到最后一公里都是同一个数字”。</strong></p>
+<p>他不知道的是，身体在起跑后的前3公里和巡航时的3公里，生理负荷完全不同。同样的5分配速，放在第2公里和放在第12公里，对代谢系统来说是完全不同的两个概念。前者是“强行拉高”，后者是“顺势保持”。所以他会发现：明明前面跑得很匀速，怎么到第14公里突然就维持不住了？</p>
+<p>第三个人，也是最可惜的那个人——<strong>他其实有能力跑进1小时45分，但他毁在了前3公里。</strong></p>
+<p>他的目标配速是5分配速，但起跑时被人群裹挟、被肾上腺素绑架，第一公里跑了4分50秒。他觉得“就快10秒，没事”。他不知道的是，前3公里快出来的这30秒，是他向身体借的高利贷——<strong>后程要连本带利用“每公里慢15秒”来还。</strong>
+等他还完这笔债的时候，计时器已经走到1小时46分开外了。</p>
+<p>而真正聪明的那个跑者，在前3公里跑的是5分05秒到5分10秒——比目标配速慢了5到10秒。周围的人都超过了他。他没有被带走。</p>
+<p>3公里后，他的二次呼吸降临了。他的肌肉热透了。他的配速从5分05秒轻轻推到4分59秒，然后锁住，一直跑到终点。</p>
+<p><strong>他用了3公里来预热，却在最后5公里把起跑时“慢的那几秒”连本带利地拿了回来。</strong>
+他的总成绩，稳稳落在1小时44分30秒以内。</p>
+<h2 id="你身体里有一台冷车发动机">你身体里有一台冷车发动机</h2>
+<p>你的身体不是一台“一启动就能全速运转”的发动机。它需要热车。</p>
+<p>起跑后的前3公里（大约15-17分钟），是你的“冷车启动期”。这个阶段，你的身体依赖无氧供能——糖原在没有氧气的情况下分解，产生乳酸。你感觉腿沉、呼吸急促、心率飘高，不是因为能力不够，而是因为身体还在“预热”。你的血流优先供应核心器官，肌肉血管尚未完全扩张，肌肉温度还低，慢肌纤维还没有被充分募集。</p>
+<p><strong>这3公里，是你整场比赛“性价比最低”的3公里。</strong></p>
+<p>一旦你越过这个阈值，你就进入了“热车巡航期”——二次呼吸（Second
+Wind）降临。</p>
+<p>呼吸变深、变慢，从“2步一吸1步一呼”自动切换到“3步一吸2步一呼”。心率出现“平台效应”，不再爬升。你想停下来的念头消失了。步频和呼吸自动锁死，中枢神经完成了“呼吸-步态耦合”，你不需要再“思考跑步”，身体进入了自动驾驶模式。</p>
+<p><strong>你的二次呼吸，大概率出现在第3公里处——恰好是大多数人起跑兴奋消退、开始怀疑自己的时刻。</strong>
+如果你在那一刻没有因为“感觉累”而降速，你会发现自己进入了一个全新的状态：呼吸平稳、腿变轻了、节奏感自动出现。</p>
+<h2 id="肌肉也是一样的先冷后热">肌肉也是一样的：先冷，后热</h2>
+<p>二次呼吸解决的是“喘不喘”（心肺），而你的大小腿肌肉，也有自己的热机过程——我们叫它“肌肉开阀”。</p>
+<p><strong>0-3公里（冷车）</strong>：肌肉温度低、血流受限，落地感觉是“砸地”而非“弹性触地”，大腿沉重、小腿发硬。</p>
+<p><strong>3-8公里（热机）</strong>：运动肌肉的血管扩张（功能性充血），血流量达到峰值，肌肉温度上升至最佳工作区间（约39℃），落地感觉从“砸地”变成“轻触即弹起”——跟腱和足弓开始利用弹性势能，而不是用肌肉硬扛。</p>
+<p><strong>8公里以后（稳态巡航）</strong>：糖原节省化（脂肪供能比例上升），发力感从前侧大腿转移到了臀部，跑姿进入“送髋”模式，你可以“挂着挡”跑，不需要额外发力。</p>
+<p>所以，你在前3公里感觉到的“腿沉”，不是“你不行”，而是“你的肌肉还没热起来”。</p>
+<p><strong>如果你在前3公里强行顶出目标配速，你就等于在一台没有机油的车里猛踩油门。它会跑，但它会受伤。</strong></p>
+<h2 id="小时45分的正确起步">1小时45分的“正确起步”</h2>
+<p>目标配速是4分59秒/公里。但这不是从第一公里就要跑到的配速。</p>
+<table>
+<colgroup>
+<col style="width: 22%" />
+<col style="width: 27%" />
+<col style="width: 27%" />
+<col style="width: 22%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">分段</th>
+<th style="text-align: center;">距离</th>
+<th style="text-align: center;">配速</th>
+<th style="text-align: left;">策略</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><strong>冷车启动（压速）</strong></td>
+<td style="text-align: center;">0-3km</td>
+<td style="text-align: center;"><strong>5’05”-5’10”</strong></td>
+<td
+style="text-align: left;">这是你最需要“耐心”的3公里。让身体热起来，让二次呼吸自然发生。比目标配速慢5-10秒——这不是“浪费”，这是“投资”。</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>热车巡航（锁定）</strong></td>
+<td style="text-align: center;">3-16km</td>
+<td style="text-align: center;"><strong>4’58”-5’00”</strong></td>
+<td
+style="text-align: left;">当你感觉呼吸变顺、脚下变弹，就把配速轻轻拉到4’58”-5’00”，然后“锁住”它。让身体进入自动驾驶模式。</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>余量释放（冲刺）</strong></td>
+<td style="text-align: center;">16-21.1km</td>
+<td style="text-align: center;"><strong>4’55”-4’58”</strong></td>
+<td
+style="text-align: left;">如果你前3公里没有透支，这6公里你会跑得比前10公里还轻松。你储备的那10秒-15秒的余量，可以在这里兑现。</td>
+</tr>
+</tbody>
+</table>
+<p>前3公里慢5-10秒，后程快5-8秒，全程平均刚好4’59”，完赛时间正好落在1小时44分30秒左右。</p>
+<p>这不是“跑慢了”，这是“跑对了”。</p>
+<h2 id="如何判断二次呼吸已经来了">如何判断二次呼吸已经来了？</h2>
+<p>你不用看手表——手表有延迟。你要相信你的身体。</p>
+<p>当以下信号同时出现时，你就可以按下“加速键”了：</p>
+<ol type="1">
+<li><strong>呼吸变深、变慢。</strong>
+你不再需要刻意控制呼吸，它自己就稳定了下来。</li>
+<li><strong>心率不再爬升。</strong>
+不是心率锁死了，而是波动幅度收窄了。</li>
+<li><strong>不想停下的念头取代了“要不要走两步”的念头。</strong></li>
+<li><strong>步频和呼吸自动锁死。</strong>
+你不去想“步频多少”“步幅多大”，但你知道自己在跑，而且跑得稳。</li>
+</ol>
+<p>这三个信号叠加在一起，就是“进入状态了”——然后你才可以把配速从5’05”提到4’59”。如果你在3公里时还没有感觉到这些信号，那就说明你起跑还是快了，或者热身不够充分。如果是这样，就把目标配速推迟到第5公里再执行——推迟2公里，比后半程崩掉要好得多。</p>
+<h2 id="这辆车的热车时间有多长">这辆车的“热车时间”有多长？</h2>
+<p>你的二次呼吸约在 <strong>第3公里（约15-17分钟）</strong>
+到来。你的肌肉开阀（腿变轻）也在这个区间同步完成。</p>
+<p>这意味着：<strong>起跑后前15分钟，你的任务是“陪身体完成启动”，而不是“追时间”。</strong></p>
+<p>这15分钟里，你会感觉呼吸紧、腿沉、想慢下来。这些感觉是正常的——它们是“冷车”的必然反应，不是你状态差。如果你因为“感觉累”就降速，或因为“感觉兴奋”就提速，都是对信号的误读。</p>
+<p><strong>正确的做法是：不管感觉好还是感觉差，前3公里都锁定5’05”-5’10”。</strong></p>
+<h2 id="结尾">结尾</h2>
+<p>半马不是从发令枪响开始的，而是从你第3公里“进入状态”开始的。</p>
+<p>9月13日，官厅水库，海拔479米，气温12-18℃。起跑后，你身边会有一群人在第一公里冲进4’50”。</p>
+<p>你不会。你会压住速度。前3公里，你会感觉自己跑得“比想象中慢”。你可能会想：“是不是我状态不好？”</p>
+<p><strong>那不是状态不好。那是你在热车。</strong></p>
+<p>到了第3公里，你的呼吸会突然变顺，你的腿会突然变轻。这就是二次呼吸和肌肉开阀同时降临的时刻。从那一刻起，你就不再需要“用力跑”了——你只需要“保持节奏”。</p>
+<p>然后你会在第16公里发现：你还跑得动。你不只是跑得动，你还跑得稳。最后5公里，你甚至还能提速。</p>
+<p>这就是“起步不要猛踩油门”的真相——<strong>它不是让你慢，而是让你在后半程比别人快。</strong></p>
+9月13日，前3公里压住。第3公里以后，让身体接管。终点见。🏃‍♂️
+<hr>
+<center>
+<a href="/3place/wrcz">返回首页</a> <a
+href="/3place/wrcz/coread.html">参与同读</a> <a
+href="/3place/wrcz/mingju.html">本书名句</a> <a
+href="/3place/wrcz/memo.html">本书注解</a> <a
+href="/3place/wrcz/index_rich.html">丰富目录</a> <a
+href="/3place/wrcz/index_readcal.html">同读日历</a> <a
+href="/3place/wrcz/index_timeline.html">时间线</a> <a
+href="/3place/wrcz/index_books.html">引用书籍</a> <a
+href="/3place/wrcz/index_words.html">使用字频</a>
+<div id="wx_pic" style="margin:0 auto;display:none;">
+<img src='/img/logo.png'/>
+</div>
+<a href="/3place/wrcz/hash/">HASH5</a>
+</center>
+<hr>
+<center>
+<img src="/img/thanks.jpg" width="50%" height="50%">
+</center>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>
