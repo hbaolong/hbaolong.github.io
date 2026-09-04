@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="文/韩宝龙" />
+  <title>一号病人基因缺陷导致的高同型半胱氨酸血症作战手册</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">一号病人基因缺陷导致的高同型半胱氨酸血症作战手册</h1>
+<p class="author">文/韩宝龙</p>
+<p class="date">2026年9月4日 08时47分22秒</p>
+</header>
+<p><strong>《一号病人基因缺陷导致的高同型半胱氨酸血症作战手册》</strong>
+<strong>版本</strong>：V5.0（完整理论+预期+执行版 |
+生效日期：2026年9月1日） <strong>患者代号</strong>：一号病人
+<strong>核心矛盾</strong>：MTHFR基因缺陷（①号路效率削弱30%-40%）+
+LDLR基因缺陷（高胆固醇血症倾向）+
+高Hcy血症（基线60+，经纯运动干预后降至约17）。
+<strong>总战略目标</strong>：通过“运动扩容硬件 + 药物补足软件 +
+饮食固化稳态”，将Hcy从17降至&lt;10，最终实现停药后稳定在个位数。</p>
+<h3
+id="第一章理论基石为什么聚焦①②③路附干预逻辑图">第一章：理论基石——为什么聚焦①②③路？（附干预逻辑图）</h3>
+<p>人体处理Hcy共有九条出路，其中①②③为无害代谢通路，其余均为损伤性泄漏（损伤血管内皮、消耗NO、锈蚀蛋白质、产毒气）。</p>
+<p><strong>干预逻辑图（文字版）</strong> ： -
+<strong>①号路（MTHFR再甲基化）</strong> ：Hcy +
+甲基（来自5-甲基四氢叶酸）→
+甲硫氨酸（回收）。依赖活性叶酸和B12。MTHFR基因缺陷导致该路转化效率降低30%-40%，需补充<strong>活性形式</strong>（5-甲基四氢叶酸+甲钴胺）绕过酶缺陷。
+- <strong>②号路（BHMT甜菜碱回收）</strong> ：Hcy + 甲基（来自甜菜碱）→
+甲硫氨酸（回收）。肝肾独有的备用通路，以甜菜碱为甲基供体。长期耐力训练已诱导该路产生“超代偿扩容”，是高运动量时清除Hcy的主力。
+- <strong>③号路（CBS转硫→谷胱甘肽）</strong> ：Hcy → 半胱氨酸 →
+谷胱甘肽（GSH）。将Hcy分解为半胱氨酸，最终生成内源性抗氧化剂GSH。P5P是该路限速酶CBS的必需辅酶，运动诱导该路酶蛋白数量增加。</p>
+<p><strong>强化原则</strong>：以运动持续扩增②③路的<strong>酶蛋白数量</strong>（硬件），以药物精准补充①路的<strong>辅酶底物</strong>（软件），两条腿走路，打破17的平台期。</p>
+<h3
+id="第二章每日执行表含理论注释">第二章：每日执行表（含理论注释）</h3>
+<h4
+id="跑步日每周5次空腹晨跑10-15公里">跑步日（每周5次，空腹晨跑10-15公里）</h4>
+<table>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">时间</th>
+<th style="text-align: left;">操作</th>
+<th style="text-align: left;">剂量/要求</th>
+<th style="text-align: left;">理论注释</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">醒来（第0分钟）</td>
+<td style="text-align: left;">起床，不进食</td>
+<td style="text-align: left;">空腹状态</td>
+<td style="text-align: left;">保持低胰岛素水平，促进脂肪氧化供能</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">第5分钟</td>
+<td style="text-align: left;">冲服药物</td>
+<td style="text-align: left;">300ml常温水 +
+<strong>Swanson胶囊1粒</strong> +
+<strong>TMG粉</strong>（跑10km=0.75g；跑12-15km=1.5g）</td>
+<td
+style="text-align: left;">Swanson提供①③路辅酶（活性叶酸/B12/P5P）和基础TMG；额外TMG为②路提供“运动后清库存”的专属燃料</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">第10-15分钟</td>
+<td style="text-align: left;">换装、热身</td>
+<td style="text-align: left;">—</td>
+<td style="text-align: left;">药物吸收约需20-30分钟达到血药峰值</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">第30-35分钟</td>
+<td style="text-align: left;">起跑，空腹慢跑</td>
+<td style="text-align: left;">心率控制在（220-年龄）×60%~75%</td>
+<td
+style="text-align: left;">该强度下脂肪供能占比最高，肌糖原消耗平缓，避免皮质醇过度升高</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">跑后立即</td>
+<td style="text-align: left;">快速蛋白</td>
+<td style="text-align: left;">2个煮鸡蛋白 或 1勺乳清蛋白粉</td>
+<td
+style="text-align: left;">迅速提供支链氨基酸，终止肌肉分解供能，减少糖异生带来的额外Hcy负担</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">跑后30-60分钟内</td>
+<td style="text-align: left;">正式早餐</td>
+<td style="text-align: left;">黑藜麦/燕麦 + 鸡胸/三文鱼 + 生红甜椒1个 +
+南瓜籽1把</td>
+<td
+style="text-align: left;">黑藜麦提供天然甜菜碱和可溶性纤维；红甜椒（190mg
+VC）扑灭自由基；南瓜籽补锌（CBS酶辅因子）</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">全天</td>
+<td style="text-align: left;">饮水</td>
+<td style="text-align: left;">≥3升（小口多次）</td>
+<td
+style="text-align: left;">TMG代谢产物需经肾脏排出，脱水会升高血液渗透压，轻微推高Hcy</td>
+</tr>
+</tbody>
+</table>
+<h4 id="休息日每周2天">休息日（每周2天）</h4>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">时间</th>
+<th style="text-align: left;">操作</th>
+<th style="text-align: left;">理论注释</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">随早餐</td>
+<td style="text-align: left;">Swanson胶囊1粒（不加TMG粉）</td>
+<td
+style="text-align: left;">维持基础血药浓度，让②号路休息一天，避免对高剂量甜菜碱产生代谢耐受</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">全天饮水</td>
+<td style="text-align: left;">≥2.5升</td>
+<td style="text-align: left;">—</td>
+</tr>
+</tbody>
+</table>
+<h4
+id="特殊日期2026年9月2日基线测绘日">特殊日期：2026年9月2日（基线测绘日）</h4>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">时间</th>
+<th style="text-align: left;">操作</th>
+<th style="text-align: left;">理论注释</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">醒来后</td>
+<td
+style="text-align: left;">不喝水、不吃药、不跑步，直接前往医院抽血（空腹静脉血：Hcy
++ 血脂四项 + 肝肾功能）</td>
+<td
+style="text-align: left;">确保“药物介入前最后一次纯运动数据”准确，不受当日药物和跑步影响</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">抽血后</td>
+<td
+style="text-align: left;">按跑步日执行表服药、补水、热身、起跑（若时间较晚可缩短距离，记录实际跑量）</td>
+<td style="text-align: left;">—</td>
+</tr>
+</tbody>
+</table>
+<h4 id="跑步日每日药物总摄入量">跑步日每日药物总摄入量</h4>
+<table>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">成分</th>
+<th style="text-align: left;">来源</th>
+<th style="text-align: left;">总剂量</th>
+<th style="text-align: left;">理论注释</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">活性叶酸</td>
+<td style="text-align: left;">Swanson 1粒</td>
+<td style="text-align: left;">800mcg DFE</td>
+<td style="text-align: left;">绕过MTHFR缺陷，直接为①路提供甲基供体</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">P5P</td>
+<td style="text-align: left;">Swanson 1粒</td>
+<td style="text-align: left;">50mg</td>
+<td
+style="text-align: left;">直接激活③路CBS酶，无需肝脏转化，高剂量足以确保无酶活瓶颈</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">甲钴胺</td>
+<td style="text-align: left;">Swanson 1粒</td>
+<td style="text-align: left;">500mcg</td>
+<td style="text-align: left;">活性B12，直接参与①路再甲基化循环</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">无水甜菜碱（TMG）</td>
+<td style="text-align: left;">Swanson（500mg）+
+额外粉剂（0.75-1.5g）</td>
+<td style="text-align: left;">1.25-2.0g</td>
+<td
+style="text-align: left;">Swanson的500mg为静息基础剂量；额外粉剂用于应对运动时甲基消耗增加，确保②路“不断油”</td>
+</tr>
+</tbody>
+</table>
+<h3 id="第三章阶段时间线与量化预期">第三章：阶段时间线与量化预期</h3>
+<table style="width:100%;">
+<colgroup>
+<col style="width: 16%" />
+<col style="width: 16%" />
+<col style="width: 16%" />
+<col style="width: 16%" />
+<col style="width: 16%" />
+<col style="width: 16%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">阶段</th>
+<th style="text-align: left;">时间区间</th>
+<th style="text-align: left;">核心任务</th>
+<th style="text-align: left;">里程碑检查</th>
+<th style="text-align: left;">预期Hcy</th>
+<th style="text-align: left;">预期依据</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">基线测绘</td>
+<td style="text-align: left;">2026.09.02</td>
+<td style="text-align: left;">最后一次纯运动数据归档</td>
+<td style="text-align: left;">空腹抽血：Hcy + 血脂四项 + 肝肾功能</td>
+<td style="text-align: left;">~17</td>
+<td style="text-align: left;">历史数据</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">第一战役（药物介入）</td>
+<td style="text-align: left;">2026.09.01-11.30</td>
+<td style="text-align: left;">每日1粒Swanson + 跑前TMG粉</td>
+<td style="text-align: left;">2026.12.01复查</td>
+<td style="text-align: left;">&lt;10</td>
+<td
+style="text-align: left;">临床研究显示类似方案降幅可达40-50%；结合你的高运动量代偿基础，达成概率较高</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">第二战役（试探减量）</td>
+<td style="text-align: left;">2026.12.01-2027.02.28</td>
+<td style="text-align: left;">仅&gt;12km跑日服药</td>
+<td style="text-align: left;">2027.03.01复查</td>
+<td style="text-align: left;">&lt;10（维持）</td>
+<td
+style="text-align: left;">若第一战役成功，减量后需验证运动+饮食能否独立支撑</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">第三战役（停药观察）</td>
+<td style="text-align: left;">2027.03.01-06.30</td>
+<td style="text-align: left;">全面停药，饮食主力维持</td>
+<td style="text-align: left;">2027.04.01 &amp; 05.01两次复查</td>
+<td style="text-align: left;">&lt;9（连续两次）</td>
+<td
+style="text-align: left;">若②③路酶蛋白扩容已充分代偿①路缺陷，天然饮食中的微量B族足够维持</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">终身维持</td>
+<td style="text-align: left;">2027.07.01起</td>
+<td style="text-align: left;">运动+饮食，年度随访</td>
+<td style="text-align: left;">每半年至一年复查Hcy</td>
+<td style="text-align: left;">&lt;10</td>
+<td style="text-align: left;">维持运动量+饮食锁定，长期风险可控</td>
+</tr>
+</tbody>
+</table>
+<h3 id="第四章停药决策量化标准">第四章：停药决策量化标准</h3>
+<ul>
+<li><strong>高概率成功（&gt;80%）</strong> ：第一战役末Hcy ≤
+8。说明②③路已接近完全代偿①路缺陷，天然饮食中的叶酸/B12足以维持基础代谢。</li>
+<li><strong>中等概率（50-60%）</strong>
+：第一战役末Hcy在9-10。需在减量期严格监测。若减量后Hcy反弹至&gt;12，则认定“最低有效维持剂量”为隔天1粒Swanson，不再尝试停药。</li>
+<li><strong>低概率（需长期维持）</strong>
+：第一战役末Hcy仍&gt;10。说明①路短板比预想严重，采用“每日1粒Swanson”作为终身维持方案。</li>
+</ul>
+<h3 id="第五章风险监测与应急机制">第五章：风险监测与应急机制</h3>
+<ul>
+<li><strong>LDL-C监测</strong>：2026.12.01复查时加测血脂四项。若LDL-C较基线升高&gt;30%，将跑步日TMG加注量减半（10km=0.375g；15km=0.75g）。</li>
+<li><strong>P5P神经毒性</strong>：每日50mg远低于500mg危险红线。若出现手脚持续性麻木，立即停药并就医排查。</li>
+<li><strong>Hcy反弹预警</strong>：若任何阶段Hcy反弹至&gt;15，回归第一战役方案，排查是否存在感染、创伤、饮食偏差或跑量骤减。</li>
+<li><strong>跑量中断应急</strong>：若因伤病/旅行导致连续3周跑量&lt;50km/周，临时恢复每日1粒Swanson，待跑量恢复后重新评估减量时机。</li>
+</ul>
+<h3 id="附录基线追踪表">附录：基线追踪表</h3>
+<table>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">日期</th>
+<th style="text-align: left;">Hcy数值</th>
+<th style="text-align: left;">阶段</th>
+<th style="text-align: left;">备注</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">2026.09.02</td>
+<td style="text-align: left;">（待填）</td>
+<td style="text-align: left;">基线测绘日</td>
+<td style="text-align: left;">药物介入前最后一次纯运动数据</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">2026.10.01</td>
+<td style="text-align: left;">（待填）</td>
+<td style="text-align: left;">服药第1个月（自行加测）</td>
+<td style="text-align: left;">预期14-15，验证趋势</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">2026.11.01</td>
+<td style="text-align: left;">（待填）</td>
+<td style="text-align: left;">服药第2个月（自行加测）</td>
+<td style="text-align: left;">预期12-13，确认下行通道</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">2026.12.01</td>
+<td style="text-align: left;">（待填）</td>
+<td style="text-align: left;">第一战役终点</td>
+<td style="text-align: left;">目标&lt;10，决定是否进入减量期</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">2027.03.01</td>
+<td style="text-align: left;">（待填）</td>
+<td style="text-align: left;">第二战役终点</td>
+<td style="text-align: left;">判断停药可行性</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">2027.04.01</td>
+<td style="text-align: left;">（待填）</td>
+<td style="text-align: left;">停药首月复查</td>
+<td style="text-align: left;">目标&lt;9</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">2027.05.01</td>
+<td style="text-align: left;">（待填）</td>
+<td style="text-align: left;">停药稳态确认</td>
+<td style="text-align: left;">连续两月&lt;9，宣布成功</td>
+</tr>
+</tbody>
+</table>
+<p><strong>本手册自2026年9月1日起生效。所有指令以本版为准，版本号V5.0。修订需标注版本号并说明修改内容。执行中若出现与预期偏差，以节点复查数据为准进行校准。</strong></p>
+（手册全文完）🧬
+<hr>
+<center>
+<a href="/3place/mxb">返回首页</a> <a
+href="/3place/mxb/coread.html">参与同读</a> <a
+href="/3place/mxb/mingju.html">本书名句</a> <a
+href="/3place/mxb/memo.html">本书注解</a> <a
+href="/3place/mxb/index_rich.html">丰富目录</a> <a
+href="/3place/mxb/index_readcal.html">同读日历</a> <a
+href="/3place/mxb/index_timeline.html">时间线</a> <a
+href="/3place/mxb/index_books.html">引用书籍</a> <a
+href="/3place/mxb/index_words.html">使用字频</a>
+<div id="wx_pic" style="margin:0 auto;display:none;">
+<img src='/img/logo.png'/>
+</div>
+<a href="/3place/mxb/hash/">HASH5</a>
+</center>
+<hr>
+<center>
+<img src="/img/thanks.jpg" width="50%" height="50%">
+</center>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>
