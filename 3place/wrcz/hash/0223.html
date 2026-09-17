@@ -1,0 +1,805 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="文/韩宝龙" />
+  <title>AI短句培训</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">AI短句培训</h1>
+<p class="author">文/韩宝龙</p>
+<p class="date">2026年9月17日 09时17分45秒</p>
+</header>
+<p>目前入住36家OPC机构。</p>
+<ol type="1">
+<li><p>AI生产工具</p></li>
+<li><p>AI新视听</p></li>
+</ol>
+<p>公司介绍：不是培训机构，是AI公司，覆盖：培训+制作+承制+发行。</p>
+<p>三种类别：2D、3D、仿真人。</p>
+<h2 id="脚本1">脚本1</h2>
+<h3 id="一句话描述">一句话描述</h3>
+<p>30秒，皮克斯风格3D小短片，暖金色清晨阳光，一只带‘BABY’项圈的调皮橘猫，先是在卧室花式叫醒还没睡醒的小女孩，又跑到厨房，打翻咖啡，捣乱要吃的。最后猫如愿吃到了猫粮，小女孩心态崩了。全程没有台词，只有卡通音效，靠夸张的卡通特效，一场搞笑的清晨闹剧。</p>
+<h3 id="大纲">大纲</h3>
+<p>《短篇大纲生成器》输出</p>
+<p><strong>片名</strong>：《BABY的清晨突袭》<br />
+<strong>时长</strong>：30秒<br />
+<strong>类型</strong>：皮克斯风格3D动画 / 无台词喜剧 / 卡通闹剧<br />
+<strong>核心角色</strong>：<br />
+- 橘猫：戴“BABY”项圈，调皮、贪吃、行动力爆棚，表情欠揍但可爱。<br />
+- 小女孩：睡眼惺忪，从迷糊到崩溃，全程无台词。<br />
+<strong>核心冲突</strong>：猫为了吃到猫粮，用尽花式捣乱手段，最终成功，却把小女孩的清晨彻底毁掉。<br />
+<strong>一句话梗概</strong>：一只戴“BABY”项圈的橘猫在暖金色清晨花式叫醒小女孩、打翻咖啡、捣乱要饭，最后如愿吃到猫粮，留下心态崩了的小女孩。<br />
+<strong>无台词验证</strong>：全片0句对白，仅使用卡通音效、猫叫音效、环境音与夸张特效音。</p>
+<hr />
+<h3 id="秒分镜大纲">30秒分镜大纲</h3>
+<table>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>时间</th>
+<th>画面</th>
+<th>动作</th>
+<th>音效/特效</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>0-3s</td>
+<td>卧室，暖金色清晨阳光穿过窗帘，尘埃漂浮</td>
+<td>橘猫压低身体潜行，项圈“BABY”轻晃，跳上床</td>
+<td>轻柔爪步声、弹簧“boing”</td>
+</tr>
+<tr class="even">
+<td>3-6s</td>
+<td>小女孩熟睡，脸埋枕头</td>
+<td>猫用肉垫拍脸、尾巴扫鼻、屁股坐脸，女孩皱眉翻身</td>
+<td>拍打“噗噗”、尾巴“唰唰”、卡通弹簧</td>
+</tr>
+<tr class="odd">
+<td>6-9s</td>
+<td>猫跳上书架，叼下毛绒玩具</td>
+<td>毛绒玩具精准砸中女孩头，女孩迷糊坐起</td>
+<td>玩具“啾”落地、猫得意“喵”</td>
+</tr>
+<tr class="even">
+<td>9-12s</td>
+<td>猫猛拉窗帘，强光射入</td>
+<td>女孩被金光晃醒，头发炸成鸟窝，猫已冲出卧室</td>
+<td>窗帘“唰”、强光“叮”、速度线</td>
+</tr>
+<tr class="odd">
+<td>12-15s</td>
+<td>厨房，咖啡杯在台面边缘</td>
+<td>猫飞扑上台，尾巴扫中咖啡杯，杯子慢动作倾倒</td>
+<td>爪滑“吱”、咖啡杯晃“叮叮”</td>
+</tr>
+<tr class="even">
+<td>15-18s</td>
+<td>咖啡在空中泼成猫脸形状</td>
+<td>小女孩追来，踩到咖啡滑倒，猫在台面优雅落地</td>
+<td>慢动作低音、滑倒“哐”、猫叫“喵呜”</td>
+</tr>
+<tr class="odd">
+<td>18-21s</td>
+<td>猫跳下地，挠柜门，推空碗</td>
+<td>空碗旋转，猫用爪子指猫粮桶，眼睛放大发光</td>
+<td>挠门“嘎嘎”、碗转“嗡嗡”、眼睛“叮”</td>
+</tr>
+<tr class="even">
+<td>21-24s</td>
+<td>小女孩扶墙站起，头发凌乱，叹气</td>
+<td>她崩溃地倒猫粮，猫瞬间安静坐好</td>
+<td>叹气“呼”、猫粮落碗“哗啦”</td>
+</tr>
+<tr class="odd">
+<td>24-27s</td>
+<td>猫狼吞虎咽，尾巴变螺旋桨</td>
+<td>猫粮飞溅，猫满足眯眼，项圈“BABY”反光</td>
+<td>咀嚼“咔嚓”、尾巴“嗡嗡”、满足“咕噜”</td>
+</tr>
+<tr class="even">
+<td>27-30s</td>
+<td>女孩发现咖啡泼满睡衣和作业</td>
+<td>她头发炸开，背景放射线，猫打嗝，阳光照亮“BABY”项圈，定格</td>
+<td>玻璃碎“叮”、卡通崩溃号角、打嗝“嗝”</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="视觉风格">视觉风格</h3>
+<ul>
+<li>皮克斯质感3D，毛发细腻，暖金色体积光。<br />
+</li>
+<li>高饱和清晨色调：奶油黄、橘猫色、浅蓝睡衣。<br />
+</li>
+<li>夸张卡通物理：挤压拉伸、慢动作、速度线、眼睛发光、汗滴、灵魂出窍、背景放射线。</li>
+</ul>
+<h3 id="音效清单">音效清单</h3>
+<p>爪步、弹簧、拍打、尾巴扫、窗帘、强光“叮”、猫叫、咖啡杯碰撞、慢动作低音、滑倒、挠门、碗旋转、猫粮落碗、咀嚼、打嗝、玻璃碎、卡通崩溃号角。</p>
+<h3 id="结尾定格">结尾定格</h3>
+<p>猫满足地坐在阳光里，项圈“BABY”闪亮；小女孩顶着爆炸头，面对咖啡灾难，心态彻底崩了。全片无台词，以夸张卡通音效收尾。</p>
+<h3 id="大纲2">大纲2</h3>
+<p>我将按你提供的剧情整理成一版可直接用于视频生成的《短篇大纲生成器》文档结构。</p>
+<blockquote>
+<p>说明：你当前没有上传《短篇大纲生成器》文档，我先按通用的“短片脚本大纲模板”补齐字段；后续你把文档发来，我可以再按它的固定栏目重新套版。</p>
+</blockquote>
+<h1 id="短篇大纲生成器清晨猫闹剧">短篇大纲生成器：《清晨猫闹剧》</h1>
+<h2 id="基本信息">1. 基本信息</h2>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>项目</th>
+<th>内容</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>作品名称</td>
+<td>清晨猫闹剧</td>
+</tr>
+<tr class="even">
+<td>作品类型</td>
+<td>3D 卡通喜剧短片</td>
+</tr>
+<tr class="odd">
+<td>目标时长</td>
+<td>30 秒</td>
+</tr>
+<tr class="even">
+<td>目标风格</td>
+<td>皮克斯风格 3D 动画，暖金色清晨阳光，夸张卡通表演</td>
+</tr>
+<tr class="odd">
+<td>核心卖点</td>
+<td>橘猫连续捣乱制造清晨混乱，最终得逞，小女孩崩溃形成反差笑点</td>
+</tr>
+<tr class="even">
+<td>受众定位</td>
+<td>全年龄向，适合喜欢萌宠、家庭喜剧、无台词卡通短片的观众</td>
+</tr>
+<tr class="odd">
+<td>台词状态</td>
+<td>全程无台词，仅卡通音效与音乐</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="一句话概念">2. 一句话概念</h2>
+<p>一只戴着“BABY”项圈的调皮橘猫，在暖金色清晨把小女孩的卧室和厨房闹得天翻地覆，最终成功吃到猫粮，只留下心态崩溃的小主人。</p>
+<hr />
+<h2 id="故事主题-喜剧内核">3. 故事主题 / 喜剧内核</h2>
+<p><strong>主题：</strong> 一只猫的“清晨造反”。<br />
+<strong>喜剧内核：</strong>
+小女孩试图维持平静早晨，却被橘猫用可爱又无赖的方式步步打乱；最后猫达成目的，人类反而陷入崩溃。</p>
+<hr />
+<h2 id="人物设定">4. 人物设定</h2>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>人物</th>
+<th>设定</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>调皮橘猫</td>
+<td>圆脸、蓬松橘色毛发、琥珀色眼睛，戴写有“BABY”的项圈；外表可爱，表情机灵、欠揍、得意</td>
+</tr>
+<tr class="even">
+<td>小女孩</td>
+<td>刚睡醒的小朋友，穿宽松睡衣，头发微乱；善良但容易崩溃，是清晨闹剧的受害者</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="场景设定">5. 场景设定</h2>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>场景</th>
+<th>设定</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>卧室</td>
+<td>暖金色清晨阳光从窗帘缝隙照入，床铺柔软，房间温馨，适合猫跳上床头、被子和枕头捣乱</td>
+</tr>
+<tr class="even">
+<td>厨房</td>
+<td>明亮整洁的家庭厨房，咖啡机、餐桌、猫粮碗、橱柜构成主要道具区；咖啡打翻后形成混乱笑点</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="全片剧情梗概">6. 全片剧情梗概</h2>
+<p>清晨，暖金色阳光照进卧室。小女孩还在睡觉，戴“BABY”项圈的橘猫开始花式叫醒她：踩脸、摇尾巴、扑被子、在枕头间弹跳。小女孩勉强醒来，想安静喝杯咖啡，橘猫却一路跟到厨房。猫在餐桌上捣乱，打翻咖啡，扒拉餐具，围着猫粮袋吵闹，最终成功吃到猫粮。小女孩看着满地狼藉和猫满足的样子，彻底心态崩溃。</p>
+<hr />
+<h2 id="三幕结构">7. 三幕结构</h2>
+<table>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>幕</th>
+<th>段落</th>
+<th>内容</th>
+<th>目标</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>第一幕</td>
+<td>卧室叫醒</td>
+<td>橘猫用夸张动作连续叫醒熟睡的小女孩</td>
+<td>建立猫的调皮性格与喜剧节奏</td>
+</tr>
+<tr class="even">
+<td>第二幕</td>
+<td>厨房升级</td>
+<td>小女孩试图喝早餐咖啡，橘猫打翻咖啡并继续捣乱</td>
+<td>冲突升级，制造视觉混乱</td>
+</tr>
+<tr class="odd">
+<td>第三幕</td>
+<td>得逞与崩溃</td>
+<td>橘猫吃到猫粮，小女孩面对残局心态崩溃</td>
+<td>完成反转笑点并收尾</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="分镜脚本">8. 分镜脚本</h2>
+<table>
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>时间</th>
+<th>画面动作</th>
+<th>镜头设计</th>
+<th>声音设计</th>
+<th>重点</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>0–6s</td>
+<td>暖金色清晨，小女孩熟睡；橘猫戴“BABY”项圈跳上床，先观察，再突然踩脸叫醒</td>
+<td>卧室全景切入猫的特写，再跟随猫跳床动作推进</td>
+<td>轻快卡通 BGM，闹钟声、猫爪踩床声、被子摩擦声</td>
+<td>建立温馨但混乱的早晨</td>
+</tr>
+<tr class="even">
+<td>6–12s</td>
+<td>橘猫连续扑腾枕头、摇尾巴、围着女孩脑袋转圈；女孩睡眼惺忪，试图捂被子继续睡</td>
+<td>低机位跟拍猫的动作，穿插女孩无奈表情特写</td>
+<td>弹簧音、弹跳音、女孩哈欠声、猫得意叫声</td>
+<td>强化猫的调皮与女孩的崩溃边缘</td>
+</tr>
+<tr class="odd">
+<td>12–19s</td>
+<td>小女孩终于起床走向厨房，橘猫抢先冲出卧室，兴奋地在前面带路</td>
+<td>镜头从卧室跟到厨房门口，运动方向保持一致</td>
+<td>脚步声、猫奔跑声、BGM节奏加快</td>
+<td>从卧室自然过渡到厨房</td>
+</tr>
+<tr class="even">
+<td>19–26s</td>
+<td>小女孩刚端起咖啡，橘猫跳上餐桌，爪子扫过桌面，咖啡杯倾倒，咖啡流到桌布上；猫继续扒餐具</td>
+<td>快速推近咖啡杯，再拉远展示桌面混乱</td>
+<td>杯子滑动声、咖啡泼洒声、餐具叮当声</td>
+<td>全片视觉高潮，混乱升级</td>
+</tr>
+<tr class="odd">
+<td>26–30s</td>
+<td>橘猫终于吃到猫粮，满足地蹲在碗边；小女孩站在咖啡残局前，双手抱头、表情崩溃，猫无辜回头看她</td>
+<td>先给猫吃粮特写，再切女孩崩溃表情，最后定格猫得意脸</td>
+<td>猫粮咔嚓声、卡通泄气音、女孩夸张叹气声，BGM突然收束</td>
+<td>猫得逞、人类崩溃，形成结尾笑点</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="喜剧节奏设计">9. 喜剧节奏设计</h2>
+<table>
+<thead>
+<tr class="header">
+<th>节奏点</th>
+<th>设计</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>开场</td>
+<td>安静清晨与猫的突然行动形成反差</td>
+</tr>
+<tr class="even">
+<td>升级</td>
+<td>猫从卧室捣乱到厨房捣乱，破坏范围逐步扩大</td>
+</tr>
+<tr class="odd">
+<td>爆点</td>
+<td>咖啡被打翻，餐具叮当乱响，视觉混乱达到高潮</td>
+</tr>
+<tr class="even">
+<td>收尾</td>
+<td>猫成功吃粮，女孩崩溃，笑点落在“猫赢了”</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="视觉与动作设计">10. 视觉与动作设计</h2>
+<table>
+<thead>
+<tr class="header">
+<th>类别</th>
+<th>设计</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>整体画面</td>
+<td>皮克斯风格 3D 卡通，圆润造型，细腻毛发，暖金色清晨光线</td>
+</tr>
+<tr class="even">
+<td>猫的表演</td>
+<td>夸张弹跳、快速转身、无辜眼神、得意表情、故意捣乱的小动作</td>
+</tr>
+<tr class="odd">
+<td>女孩的表演</td>
+<td>从熟睡、无奈、忍耐到最终崩溃，情绪层层递进</td>
+</tr>
+<tr class="even">
+<td>卡通特效</td>
+<td>弹簧感动作、星星环绕、速度线、夸张变形、滑稽音效同步</td>
+</tr>
+<tr class="odd">
+<td>色彩</td>
+<td>暖橙、奶白、浅金色为主，咖啡打翻时加入深棕色视觉爆点</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="声音设计">11. 声音设计</h2>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>类型</th>
+<th>内容</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>对白</td>
+<td>无</td>
+</tr>
+<tr class="even">
+<td>旁白</td>
+<td>无</td>
+</tr>
+<tr class="odd">
+<td>音乐</td>
+<td>轻快卡通喜剧 BGM，节奏随捣乱动作加速</td>
+</tr>
+<tr class="even">
+<td>音效</td>
+<td>猫爪声、弹跳声、被子摩擦声、咖啡泼洒声、餐具碰撞声、猫粮咀嚼声、卡通泄气音</td>
+</tr>
+<tr class="odd">
+<td>声音重点</td>
+<td>所有夸张动作必须与卡通音效同步，增强喜剧节拍</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="结尾笑点">12. 结尾笑点</h2>
+<p>橘猫如愿吃到猫粮，坐在碗边满足地舔嘴；小女孩看着打翻的咖啡和凌乱餐桌，双手抱头彻底崩溃。猫突然露出无辜又得意的表情，仿佛在说：这是我的清晨，不是你的。</p>
+<hr />
+<h2 id="视频生成参数确认">13. 视频生成参数确认</h2>
+<table>
+<thead>
+<tr class="header">
+<th>参数</th>
+<th>设定</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>模型</td>
+<td>Seedance 2.5</td>
+</tr>
+<tr class="even">
+<td>时长</td>
+<td>30 秒</td>
+</tr>
+<tr class="odd">
+<td>比例</td>
+<td>16:9 横屏</td>
+</tr>
+<tr class="even">
+<td>主体</td>
+<td>戴“BABY”项圈的调皮橘猫、穿睡衣的小女孩</td>
+</tr>
+<tr class="odd">
+<td>风格</td>
+<td>皮克斯风格 3D 卡通，暖金色清晨阳光，圆润可爱造型</td>
+</tr>
+<tr class="even">
+<td>剧情</td>
+<td>卧室花式叫醒 → 厨房打翻咖啡 → 猫吃猫粮 → 女孩崩溃</td>
+</tr>
+<tr class="odd">
+<td>声音</td>
+<td>全程无台词，无旁白；仅轻快卡通 BGM 与夸张卡通音效</td>
+</tr>
+<tr class="even">
+<td>画面文字</td>
+<td>仅猫项圈保留“BABY”，不出现字幕、花字或其他文字</td>
+</tr>
+<tr class="odd">
+<td>喜剧方式</td>
+<td>夸张动作、表情反差、物理闹剧、卡通特效与音效同步</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="生成提示词摘要">14. 生成提示词摘要</h2>
+<p>30 秒皮克斯风格 3D
+卡通喜剧短片，暖金色清晨阳光，一只戴着“BABY”项圈的调皮橘猫和穿睡衣的小女孩。开场在温馨卧室里，橘猫用踩脸、跳床、扑枕头等夸张动作花式叫醒熟睡女孩；随后猫抢先冲进明亮厨房，在餐桌上捣乱并打翻咖啡，餐具叮当乱响；最后橘猫如愿吃到猫粮，满足地舔嘴，小女孩面对满地狼藉双手抱头、心态彻底崩溃。全程无台词、无旁白，仅轻快卡通
+BGM 和同步夸张卡通音效；画面采用圆润 3D
+造型、细腻毛发、暖橙金色调、弹簧动作、速度线、星星环绕等卡通特效，节奏紧凑，结尾形成猫得意、人类崩溃的反差笑点。画面中不出现任何字幕或额外文字，仅猫项圈显示“BABY”。</p>
+<p>在短时间里，通过递进的情绪把情绪升起来。</p>
+<h2
+id="ai漫剧制作全流程2d3d仿真人">AI漫剧制作全流程（2d/3d/仿真人）</h2>
+<pre class="mindmap"><code>## **01 立项定位（项目定位表）**
+- 题材赛道：都市/甜宠/悬疑/古风/逆袭…
+- 平台选择：抖/快/蝴蝶号/某书、爱优腾芒
+- 受众画像：年龄层/性别/情绪需求
+- 集数时长：单集30-90s/全季10-30集
+- 核心卖点：钩子/反转/关系张力/爽点
+&gt; 明确题材与受众，确定核心概念与方向
+## **02 剧本开发（首集剧本+10集大纲）**
+- 故事梗概
+- 人物小传
+- 分集大纲
+- 单集脚本
+- 台词精修
+&gt; 梳理故事大纲编写剧本与台词
+&gt; - 开头3秒有钩子：快速抓住观众注意力
+&gt; - 中段持续有冲突：推动剧情不断升级
+&gt; - 结尾一定要卡点：留悬念，引期待
+&gt; - 对白短、准、能说出口：贴近口语，打动人心
+## **03 角色资产（角色母版+角色设定卡）**
+- 角色标签：设定身份、性格、关键词建立角色定位
+- 五官发型：固定五官特征与发型确保跨镜头一致
+- 常服换装：设计固定衣橱与配色体系不换换人
+- 表情情绪：整理常用表情与情绪区间保持情绪连贯
+- 动作习惯：设定标志性动作与小习惯强化角色记忆点
+- 三视图及多视图参考：提供正侧背三视图及脸部特写等其他多视图供创作与生成参考
+&gt; 为每个角色准备固定描述词与母版提示词
+&gt; 设计角色形象生成角色图集与设定
+## **04 场景道具（场景表+道具表+风格母版）**
+- 场景库：卧室/办公室/餐厅/街头/医院/古宅
+- 道具库：手机/合同/钥匙/戒指/药瓶/电脑
+- 风格统一：色调/光线/构图/材质/质感
+&gt; 构建场景与道具库统一风格与氛围
+## **05 分镜脚本（分镜表）**
+- 剧本拆解｜景别机位｜镜头运动｜表演动作
+- 镜号｜时长｜景别｜机位｜运动｜画面描述｜台词｜音效
+&gt; 绘制分镜与运镜设计
+## **06 视频生成（15s分段镜头素材）**
+- 文生视频/图生视频/参考生视频/口型动作增强
+&gt; AI生成视频素材 剪辑成片
+## **07 声音后期（成片初版）**
+- 配音：还原语气情绪表达角色张力
+- 环境音：营造空间氛围增强沉浸感
+- 音效点：突出动作节奏强调细节反馈
+- BGM：烘托情绪走向强化叙事节奏
+- 字幕包装：信息清晰呈现风格统一美观
+- 剪辑调色：结构流畅紧凑画面统一出彩
+&gt; 配音配乐与音效 混音调优与合成
+## **08 发布复盘**
+- 发布前检查：封面/标题/3秒钩子/字幕字幕/结尾卡点
+- 上线后观察：完播率/点赞率/评论点/转粉率/收藏率
+- 复盘迭代：改封面/改钩子/改节奏/改结尾/沉淀模板
+&gt; 发布上线与数据分析 复盘优化与迭代</code></pre>
+<h2 id="纯文本大纲版可直接复制进md">纯文本大纲版（可直接复制进md）</h2>
+<h1
+id="ai漫剧制作全流程2d3d仿真人-1">AI漫剧制作全流程（2d/3d/仿真人）</h1>
+<h3 id="立项定位项目定位表">01 立项定位｜项目定位表</h3>
+<p>目标：明确题材与受众，确定核心概念与方向 -
+题材赛道：都市/甜宠/悬疑/古风/逆袭… -
+平台选择：抖/快/蝴蝶号/某书、爱优腾芒 - 受众画像：年龄层/性别/情绪需求 -
+集数时长：单集30-90s/全季10-30集 - 核心卖点：钩子/反转/关系张力/爽点</p>
+<h3 id="剧本开发首集剧本10集大纲">02 剧本开发｜首集剧本+10集大纲</h3>
+<p>目标：梳理故事大纲编写剧本与台词 - 故事梗概 - 人物小传 - 分集大纲 -
+单集脚本 - 台词精修 剧本要点： 1. 开头3秒有钩子：快速抓住观众注意力 2.
+中段持续有冲突：推动剧情不断升级 3. 结尾一定要卡点：留悬念，引期待 4.
+对白短、准、能说出口：贴近口语，打动人心</p>
+<h3 id="角色资产角色母版角色设定卡">03
+角色资产｜角色母版+角色设定卡</h3>
+<p>目标：为每个角色准备固定描述词与母版提示词，设计角色形象生成角色图集与设定
+- 角色标签：设定身份、性格、关键词建立角色定位 -
+五官发型：固定五官特征与发型确保跨镜头一致 -
+常服换装：设计固定衣橱与配色体系不换换人 -
+表情情绪：整理常用表情与情绪区间保持情绪连贯 -
+动作习惯：设定标志性动作与小习惯强化角色记忆点 -
+三视图及多视图参考：提供正侧背三视图及脸部特写等其他多视图供创作与生成参考</p>
+<h3 id="场景道具场景表道具表风格母版">04
+场景道具｜场景表+道具表+风格母版</h3>
+<p>目标：构建场景与道具库统一风格与氛围 -
+场景库：卧室/办公室/餐厅/街头/医院/古宅 -
+道具库：手机/合同/钥匙/戒指/药瓶/电脑 -
+风格统一：色调/光线/构图/材质/质感</p>
+<h3 id="分镜脚本分镜表">05 分镜脚本｜分镜表</h3>
+<p>目标：绘制分镜与运镜设计 - 剧本拆解｜景别机位｜镜头运动｜表演动作 -
+分镜字段：镜号｜时长｜景别｜机位｜运动｜画面描述｜台词｜音效</p>
+<h3 id="视频生成15s分段镜头素材">06 视频生成｜15s分段镜头素材</h3>
+<p>目标：AI生成视频素材，剪辑成片 -
+文生视频/图生视频/参考生视频/口型动作增强</p>
+<h3 id="声音后期成片初版">07 声音后期｜成片初版</h3>
+<p>目标：配音配乐与音效，混音调优与合成 - 配音：还原语气情绪表达角色张力
+- 环境音：营造空间氛围增强沉浸感 - 音效点：突出动作节奏强调细节反馈 -
+BGM：烘托情绪走向强化叙事节奏 - 字幕包装：信息清晰呈现风格统一美观 -
+剪辑调色：结构流畅紧凑画面统一出彩</p>
+<h3 id="发布复盘">08 发布复盘</h3>
+<p>目标：发布上线与数据分析，复盘优化与迭代 -
+发布前检查：封面/标题/3秒钩子/字幕字幕/结尾卡点 -
+上线后观察：完播率/点赞率/评论点/转粉率/收藏率 -
+复盘迭代：改封面/改钩子/改节奏/改结尾/沉淀模板</p>
+<p>如果你需要，我还可以导出成 <strong>Obsidian 思维导图格式</strong>
+或者 <strong>Markdown 列表版</strong>。</p>
+<h2 id="角色资产场景资产声音资产">角色资产、场景资产、声音资产。</h2>
+<p>暴躁角色、场景、声音一致性</p>
+<h2 id="分镜脚本-1">分镜脚本</h2>
+<p>AI通过提示词，把剧本转换为分镜脚本。</p>
+<h2 id="漫剧">漫剧</h2>
+<h3 id="选题材">选题材</h3>
+<h3 id="剧本开发">剧本开发</h3>
+<h2 id="ai分析grok">AI分析（GROK）</h2>
+<h2 id="ai分析ds">AI分析（DS）</h2>
+<hr>
+<h2 id="利永贞">利永贞</h2>
+<h4 id="读书">读书</h4>
+<h4 id="写字">写字</h4>
+<h4 id="慢跑">慢跑</h4>
+<h4 id="核心平板静蹲等">核心（平板、静蹲等）</h4>
+<h4 id="朋友交往">朋友交往</h4>
+<h2 id="群龙无首">群龙无首</h2>
+<h4 id="读书-1">读书</h4>
+<h4 id="约见陌生人">约见陌生人</h4>
+<h4 id="使用新工具">使用新工具</h4>
+<hr>
+<center>
+<a href="/3place/wrcz">返回首页</a> <a
+href="/3place/wrcz/coread.html">参与同读</a> <a
+href="/3place/wrcz/mingju.html">本书名句</a> <a
+href="/3place/wrcz/memo.html">本书注解</a> <a
+href="/3place/wrcz/index_rich.html">丰富目录</a> <a
+href="/3place/wrcz/index_readcal.html">同读日历</a> <a
+href="/3place/wrcz/index_timeline.html">时间线</a> <a
+href="/3place/wrcz/index_books.html">引用书籍</a> <a
+href="/3place/wrcz/index_words.html">使用字频</a>
+<div id="wx_pic" style="margin:0 auto;display:none;">
+<img src='/img/logo.png'/>
+</div>
+<a href="/3place/wrcz/hash/">HASH5</a>
+</center>
+<hr>
+<center>
+<img src="/img/thanks.jpg" width="50%" height="50%">
+</center>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>
