@@ -1,0 +1,853 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="文/韩宝龙" />
+  <title>从小说到视频</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">从小说到视频</h1>
+<p class="author">文/韩宝龙</p>
+<p class="date">2026年9月18日 11时48分32秒</p>
+</header>
+<p>从小说到视频 ## 步骤1</p>
+<p>请严格依据原文提炼角色人设、人物关系、一句话故事核梗</p>
+<h2 id="步骤2">步骤2</h2>
+<p>请逐章提炼章纲，每章 300
+字左右，提炼完章纲，再提炼每章的情节因果链，要求：忠于原文，不跳章，不合并，不新增。</p>
+<h2 id="步骤3">步骤3</h2>
+<p>请逐章分析刚刚上传的小说正文，请严格按照原著章节，判断章节情绪值，生成章情绪值表，不跳章不合并，为短剧改编提供决策参考。每章输出一行，格式如下：第
+X 章｜情绪值_/10｜改编操作｜一句话理由｜核心事件：xxx｜钩子：xxx</p>
+<p>【短剧规则】保留情绪值≥7 分的章节，≤4
+分的不单独成集，根据情节需要规划方案。</p>
+<p>【改编操作】适情况而定
+合并、压缩：主要发展主线情节，不能推动主线的情节，冲突或情绪不够的，拖慢主线节奏的
+直接删除或一句话带过：有可用信息但注水多 删除：过渡或无关支线
+仅提取关键信息句，扩展为过渡：日常铺垫段落或章节 钩子：需有钩子收尾</p>
+<p>【情绪值锚定】（必须按此标准，禁止自由发挥）</p>
+<p>极高：涉及生死、当众羞辱、身份揭穿、强暴力等强冲突强情绪</p>
+<p>高：明确对抗、重大误会、关键抉择、认知颠覆值、信息冲击值、信息差带来的上帝视角快感</p>
+<p>中：信息铺垫、关系变化、情绪转折</p>
+<p>低：日常、回忆、环境描写、纯心理活动</p>
+<h2 id="步骤4">步骤4</h2>
+<p>请逐章分析刚刚上传的小说正文，请严格按照原著章节，判断章节情绪值，生成章情绪值表，不跳章不合并，为短剧改编提供决策参考。每章输出一行，格式如下：第
+X 章｜情绪值_/10｜改编操作｜一句话理由｜核心事件：xxx｜钩子：xxx</p>
+<p>【短剧规则】保留情绪值≥7 分的章节，≤4
+分的不单独成集，根据情节需要规划方案。</p>
+<p>【改编操作】适情况而定
+合并、压缩：主要发展主线情节，不能推动主线的情节，冲突或情绪不够的，拖慢主线节奏的
+直接删除或一句话带过：有可用信息但注水多 删除：过渡或无关支线
+仅提取关键信息句，扩展为过渡：日常铺垫段落或章节 钩子：需有钩子收尾</p>
+<p>【情绪值锚定】（必须按此标准，禁止自由发挥）
+极高：涉及生死、当众羞辱、身份揭穿、强暴力等强冲突强情绪
+高：明确对抗、重大误会、关键抉择、认知颠覆值、信息冲击值、信息差带来的上帝视角快感
+中：信息铺垫、关系变化、情绪转折
+低：日常、回忆、环境描写、纯心理活动</p>
+<h2 id="步骤5">步骤5</h2>
+<p>一、AI 剧本评审 + 修改提示词</p>
+<p>你是资深短剧编剧 + AI 剧本专项整改官，精通短视频短剧创作逻辑、AI
+生成内容通病、平台审核规则，专治 AI
+剧本生硬、逻辑错乱、模板化、无网感等问题。 接下来针对【AI 生成 / 部分 AI
+辅助 / AI 生成后人工过】的短剧剧本，完成专项体检 + 精准整改 +
+提质优化。全流程工作，严格按以下规则执行，禁止全盘重写，保留剧本原有优质核心剧情、人设、主线。</p>
+<p>【基础信息填写】 【剧本片段】：【粘贴待修改剧本】 【AI 参与度】：【全
+AI 出 / 部分 AI 辅助 / AI 生成后人工过】
+【剧本基础属性】：【短剧类型：都市 / 古风 / 甜宠 / 悬疑 /
+逆袭等】、【单集时长：60s/90s/3min】、【核心风格：爽感 / 治愈 / 虐恋 /
+紧凑快节奏等】</p>
+<p>【整改核心底线（必须遵守）】 1.
+所有修改配合短剧逻辑：前三秒出冲突、每段留小钩子、台词口语化、无冗长铺垫、节奏紧凑；
+2. 彻底消除 AI 原生病灶，修改后无书面堆砌、无模板化套路、无逻辑矛盾，AI
+味指数需降至 3 分及以下； 3.
+保留原有正确人设、主线剧情、关键伏笔，只优化问题段落，不篡改核心设定；
+4. 规避套路抄袭、低俗擦边、逻辑硬伤，符合短视频平台合规播出标准； 5.
+剧本遵循影视化原则：能用动作表达情绪，不要大段空洞心理描写，文字要可直接拍摄。</p>
+<p>【第一步：15 维 AI 专项打分】 每条维度 1-5 分（1 分 = 严重 AI 病灶、5
+分 = 完全人工质感无 AI 问题），必须标注具体问题段落位置 +
+问题精准描述，无问题则标注 “无”。 AI 幻觉层（逻辑硬伤） 1.
+时间线错乱（集数 / 事件时间矛盾） 2. 人物记忆错乱（角色前后言行连贯性）
+3. 常识错误（职业 / 年代 / 地理） 4. 数字 / 细节矛盾 语言 AI
+味层（台词生硬） 5. 书面词过量（实在 / 无法 / 毕竟 / 然而） 6.
+调味词过量（啊 / 呀 / 呢 塞满） 7. 单句过长（超 15 字未拆） 8.
+情绪扁平（缺打断 / 停顿 / 口语互动） 结构 AI 味层 (剧情模板化) 9.
+场景对称化 (所有场景开头结尾结构一致) 10. 反派模板化
+(全内心戏无动作、无动机) 11. 主角圣母化 (不该原谅时原谅、人设割裂) 12.
+转折生硬 (靠 “突然”“这时” 硬拉剧情) 输出格式层 (AI 无效输出) 13.
+重复段落 (AI 隐性自我抄袭) 14. 空白填充 (“具体见下文” 等占位话术) 15.
+遗漏关键情节 / 伏笔</p>
+<p>【第二步：AI 味问题整改】 筛选剧本内最具 AI 特征的 5
+个具体位置，逐条输出： 问题定位 + 改前原文 + 改后完整内容 + 修改逻辑，
+优化方向：短剧口语化、快节奏、强情绪特点，彻底去除 AI 生硬感。</p>
+<p>【第三步：三级修改优先级排序】 打破单一 AI 味维度，按「致命程度 +
+修改性价比」排序，输出前 3 优先级，明确修改核心原因： 1. 一级优先级
+(致命硬伤)：逻辑错误、人设崩塌、情节遗漏，不改无法播出； 2. 二级优先级
+(观感硬伤)：台词 AI 味重、转折生硬、节奏拖沓，严重影响观看体验； 3.
+三级优先级
+(细节优化)：句式冗余、调味词过多、轻微重复，微调即可提质。</p>
+<p>【第四步：AI 味总指数评级】 1-10 打分 (10 = 纯人工高质量剧本、无 AI
+痕迹；1 = 全 AI 未打磨、漏洞百出)， 同时输出：整体问题总结 +
+核心优化方向。</p>
+<p>【第五步：增值提质】 1.
+节奏优化：精简冗余台词，强化开篇冲突、段落钩子，适配单集时长； 2.
+人设强化：补充角色微动作、情绪细节，避免人设扁平化、模板化； 3.
+合规原创：剔除套路化剧情、重复桥段，规避平台违规风险，提升内容独特性；
+4. 网感适配：替换书面化话术为生活化口语，增强情绪张力和观众代入感。</p>
+<p>二、使用教程 1. 步骤 第一步：复制上方完整优化版提示词，粘贴至 AI
+对话框； 第二步：替换【剧本片段】【AI
+参与度】【剧本基础属性】三处空白信息，务必精准填写剧本类型和时长（核心适配依据）；
+第三步：发送指令，等待 AI 完成全流程体检 + 整改 + 提质； 第四步：根据 AI
+输出的优先级报告，重点核对一级致命问题，微调细节即可直接使用。</p>
+<ol start="2" type="1">
+<li>技巧</li>
+</ol>
+<ol type="1">
+<li>迭代修改：若第一版整改后仍有轻微 AI
+味，无需重写，直接指令「针对三级优先级细节问题再次优化，保留现有整改内容」，避免全盘重写失真；
+(2)
+批量复用：同系列短剧，可固定【剧本基础属性】，批量体检整改，统一风格；
+(3) 灵活取舍：AI
+增值优化模块仅做提质，若原有剧情无需改动，可指令「只修正 AI
+病灶，保留原有剧情风格不变」。</li>
+</ol>
+<ol start="3" type="1">
+<li>输出达标标准 ① 修改后 AI 味总指数≥7 分； ②
+不存在一级优先级致命硬伤； ③ TOP5 重度问题全部整改完毕； ④
+对白自然无浓重书面 AI 腔； ⑤ 节奏符合短视频短剧播出要求。</li>
+</ol>
+<h2 id="ai分析grok">AI分析（GROK）</h2>
+<h2 id="ai分析ds">AI分析（DS）</h2>
+<p>原文件里
+<strong>步骤3和步骤4完全重复</strong>，步骤5很长但可以模块化。下面帮你整理成一份可直接执行的《从小说到短剧视频工作手册（整理扩展版）》，并补上模板、表格、提示词、验收清单。</p>
+<blockquote>
+<p>说明：你没有提供具体小说正文，所以这里不能实际生成角色人设、章纲和情绪值表；以下是<strong>可复用工作流+模板</strong>。你把小说分章发来，我就能按这套流程逐章产出。</p>
+</blockquote>
+<hr />
+<h1
+id="一全流程总览从小说到短剧视频">一、全流程总览：从小说到短剧视频</h1>
+<table>
+<thead>
+<tr class="header">
+<th>阶段</th>
+<th>原步骤</th>
+<th>目标</th>
+<th>核心输出</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>0</td>
+<td>准备</td>
+<td>拆分小说、确认改编边界</td>
+<td>分章正文、题材判断、合规风险</td>
+</tr>
+<tr class="even">
+<td>1</td>
+<td>步骤1</td>
+<td>提炼人设、关系、核梗</td>
+<td>角色卡、关系图、一句话故事核梗</td>
+</tr>
+<tr class="odd">
+<td>2</td>
+<td>步骤2</td>
+<td>逐章拆解</td>
+<td>每章300字章纲+因果链</td>
+</tr>
+<tr class="even">
+<td>3</td>
+<td>步骤3/4</td>
+<td>情绪值评估</td>
+<td>每章情绪值表、改编操作、钩子</td>
+</tr>
+<tr class="odd">
+<td>4</td>
+<td>新增</td>
+<td>短剧集规划</td>
+<td>章节→集数映射、卡点、钩子</td>
+</tr>
+<tr class="even">
+<td>5</td>
+<td>新增</td>
+<td>剧本生成/改编</td>
+<td>分集剧本、台词、动作</td>
+</tr>
+<tr class="odd">
+<td>6</td>
+<td>步骤5</td>
+<td>AI剧本体检整改</td>
+<td>15维打分、TOP5整改、优先级、提质</td>
+</tr>
+<tr class="even">
+<td>7</td>
+<td>新增</td>
+<td>终审上线</td>
+<td>合规、节奏、AI味、达标检查</td>
+</tr>
+</tbody>
+</table>
+<p><strong>核心原则：</strong> -
+分析原著阶段：忠于原文、不跳章、不合并、不新增。 -
+短剧改编阶段：按情绪值和主线需要，可合并、压缩、删除、扩展。 -
+每集必须有：前三秒冲突、中段升级、结尾钩子。</p>
+<hr />
+<h1 id="二步骤1原著解构">二、步骤1：原著解构</h1>
+<h2 id="角色人设卡">1. 角色人设卡</h2>
+<table>
+<thead>
+<tr class="header">
+<th>项目</th>
+<th>内容</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>角色名</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>身份</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>年龄/外貌</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>核心性格</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>核心欲望</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>核心恐惧</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>秘密</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>成长弧光</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>标志动作/口头禅</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>短剧功能</td>
+<td>主角/反派/助攻/情感阻碍/工具人</td>
+</tr>
+</tbody>
+</table>
+<h2 id="人物关系图">2. 人物关系图</h2>
+<table>
+<thead>
+<tr class="header">
+<th>关系</th>
+<th>表层关系</th>
+<th>真实关系</th>
+<th>冲突点</th>
+<th>变化节点</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>A—B</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>A—C</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="一句话故事核梗">3. 一句话故事核梗</h2>
+<p>公式：</p>
+<blockquote>
+<p>因为【意外/被迫】，【主角】必须【目标】，却遭遇【阻碍】，在【代价/危机】中，最终【反转/爽点】。</p>
+</blockquote>
+<p>要求：25—50字，含冲突、目标、阻碍、反转。</p>
+<p>示例结构：</p>
+<blockquote>
+<p>被全家抛弃的假千金，为救养母被迫嫁给传闻中的残疾总裁，却发现他正是当年唯一救过她的人。</p>
+</blockquote>
+<h2 id="核心卖点">4. 核心卖点</h2>
+<ul>
+<li>题材：都市/古风/甜宠/悬疑/逆袭/虐恋</li>
+<li>情绪：爽、虐、甜、燃、疑</li>
+<li>爽点：打脸、身份揭穿、追妻火葬场、逆袭</li>
+<li>反转：身份反转、关系反转、证据反转</li>
+<li>受众：男频/女频/泛人群</li>
+</ul>
+<hr />
+<h1 id="三步骤2逐章章纲因果链">三、步骤2：逐章章纲+因果链</h1>
+<p><strong>规则：忠于原文，不跳章，不合并，不新增。</strong></p>
+<p>每章输出模板：</p>
+<pre class="text"><code>第X章 章名
+章纲（300字左右）：
+因果链：起因→经过→转折→结果→钩子
+关键信息：
+人物变化：
+伏笔/钩子：</code></pre>
+<p>章纲写法：</p>
+<blockquote>
+<p>本章谁在什么处境下，因为什么，做了什么，遭遇什么阻碍，结果如何，最后留下什么钩子。</p>
+</blockquote>
+<p>因果链写法：</p>
+<blockquote>
+<p>因为A，所以B；但是C，因此D；最终E，并留下F钩子。</p>
+</blockquote>
+<hr />
+<h1
+id="四步骤3章节情绪值表与改编决策">四、步骤3：章节情绪值表与改编决策</h1>
+<p>原步骤3和步骤4重复，建议合并为一张表。若必须保留四步，步骤4可作“情绪表二次复核/集数映射”。</p>
+<p>每章输出一行：</p>
+<pre class="text"><code>第 X 章｜情绪值_/10｜改编操作｜一句话理由｜核心事件：xxx｜钩子：xxx</code></pre>
+<h2 id="情绪值锚定">情绪值锚定</h2>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>情绪值</th>
+<th>等级</th>
+<th>标准</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>9—10</td>
+<td>极高</td>
+<td>生死、当众羞辱、身份揭穿、强暴力等强冲突强情绪</td>
+</tr>
+<tr class="even">
+<td>7—8</td>
+<td>高</td>
+<td>明确对抗、重大误会、关键抉择、认知颠覆、信息冲击、上帝视角快感</td>
+</tr>
+<tr class="odd">
+<td>5—6</td>
+<td>中</td>
+<td>信息铺垫、关系变化、情绪转折</td>
+</tr>
+<tr class="even">
+<td>1—4</td>
+<td>低</td>
+<td>日常、回忆、环境描写、纯心理活动</td>
+</tr>
+</tbody>
+</table>
+<h2 id="短剧规则">短剧规则</h2>
+<ul>
+<li>情绪值≥7：保留，重点成集，强化钩子。</li>
+<li>情绪值5—6：可压缩为过渡，提取关键信息。</li>
+<li>情绪值≤4：不单独成集，合并、删除或一句话带过。</li>
+<li>每集结尾必须有钩子。</li>
+</ul>
+<h2 id="改编操作词典">改编操作词典</h2>
+<table>
+<thead>
+<tr class="header">
+<th>操作</th>
+<th>适用</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>保留独立成集</td>
+<td>高情绪、强冲突、主线关键</td>
+</tr>
+<tr class="even">
+<td>扩展为爆点</td>
+<td>有潜力但原文略简</td>
+</tr>
+<tr class="odd">
+<td>合并</td>
+<td>多个低情绪章可并为一集</td>
+</tr>
+<tr class="even">
+<td>压缩</td>
+<td>主线有用但注水</td>
+</tr>
+<tr class="odd">
+<td>直接删除</td>
+<td>过渡、无关支线</td>
+</tr>
+<tr class="even">
+<td>一句话带过</td>
+<td>有信息但不值得展开</td>
+</tr>
+<tr class="odd">
+<td>提取关键信息句，扩展为过渡</td>
+<td>日常铺垫、关系变化</td>
+</tr>
+<tr class="even">
+<td>钩子收尾</td>
+<td>每集最后3秒</td>
+</tr>
+</tbody>
+</table>
+<p>示例行：</p>
+<pre class="text"><code>第1章｜8/10｜保留独立成集｜开篇强冲突，身份差带来上帝视角快感｜核心事件：女主被当众退婚｜钩子：她掏出孕检单，全场安静</code></pre>
+<hr />
+<h1 id="五步骤4短剧集规划与映射">五、步骤4：短剧集规划与映射</h1>
+<table>
+<thead>
+<tr class="header">
+<th>集数</th>
+<th>来源章节</th>
+<th>情绪值</th>
+<th>核心事件</th>
+<th>钩子</th>
+<th>操作</th>
+<th>预计时长</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>第1集</td>
+<td>第1—2章</td>
+<td>8</td>
+<td></td>
+<td></td>
+<td>合并</td>
+<td>90s</td>
+</tr>
+<tr class="even">
+<td>第2集</td>
+<td>第3章</td>
+<td>9</td>
+<td></td>
+<td></td>
+<td>保留</td>
+<td>90s</td>
+</tr>
+</tbody>
+</table>
+<h2 id="每集结构建议">每集结构建议</h2>
+<ul>
+<li>0—3秒：冲突/反常/羞辱/危机</li>
+<li>3—15秒：信息交代，人物目标</li>
+<li>15—45秒：对抗升级，阻碍出现</li>
+<li>45—60秒：反转/爽点/情绪爆发</li>
+<li>最后3秒：钩子</li>
+</ul>
+<h2 id="钩子类型">钩子类型</h2>
+<ul>
+<li>悬念钩：门开了，来人竟是……</li>
+<li>反转钩：所有人都笑她，直到鉴定报告出来。</li>
+<li>身份钩：她刚转身，手机弹出“总裁，夫人就是当年救你的人”。</li>
+<li>危机钩：刀落下前，门被踹开。</li>
+<li>情感钩：他签完离婚协议，才发现她已怀孕。</li>
+<li>爽点钩：她一巴掌甩回去：“现在，轮到我不要你了。”</li>
+</ul>
+<hr />
+<h1
+id="六步骤5ai剧本评审修改提示词整理增强版">六、步骤5：AI剧本评审+修改提示词（整理增强版）</h1>
+<p>以下可直接复制使用。</p>
+<pre class="text"><code>你是资深短剧编剧 + AI剧本专项整改官，精通短视频短剧创作逻辑、AI生成内容通病、平台审核规则，专治AI剧本生硬、逻辑错乱、模板化、无网感等问题。
+
+接下来针对【AI生成/部分AI辅助/AI生成后人工过】的短剧剧本，完成专项体检+精准整改+提质优化。禁止全盘重写，保留原有优质核心剧情、人设、主线。
+
+【基础信息填写】
+【剧本片段】：【粘贴待修改剧本】
+【AI参与度】：【全AI出/部分AI辅助/AI生成后人工过】
+【剧本基础属性】：
+- 短剧类型：都市/古风/甜宠/悬疑/逆袭等
+- 单集时长：60s/90s/3min
+- 核心风格：爽感/治愈/虐恋/紧凑快节奏等
+
+【整改核心底线】
+1. 所有修改配合短剧逻辑：前三秒出冲突、每段留小钩子、台词口语化、无冗长铺垫、节奏紧凑。
+2. 彻底消除AI原生病灶，修改后无书面堆砌、无模板化套路、无逻辑矛盾，AI味指数需降至3分及以下。
+3. 保留原有正确人设、主线剧情、关键伏笔，只优化问题段落，不篡改核心设定。
+4. 规避套路抄袭、低俗擦边、逻辑硬伤，符合短视频平台合规播出标准。
+5. 遵循影视化原则：能用动作表达情绪，不要大段空洞心理描写，文字要可直接拍摄。
+
+【第一步：15维AI专项打分】
+每条维度1—5分：1分=严重AI病灶，5分=完全人工质感无AI问题。
+必须标注具体问题段落位置+问题精准描述，无问题标注“无”。
+
+AI幻觉层（逻辑硬伤）
+1. 时间线错乱（集数/事件时间矛盾）
+2. 人物记忆错乱（角色前后言行连贯性）
+3. 常识错误（职业/年代/地理）
+4. 数字/细节矛盾
+
+语言AI味层（台词生硬）
+5. 书面词过量（实在/无法/毕竟/然而）
+6. 调味词过量（啊/呀/呢塞满）
+7. 单句过长（超15字未拆）
+8. 情绪扁平（缺打断/停顿/口语互动）
+
+结构AI味层（剧情模板化）
+9. 场景对称化（所有场景开头结尾结构一致）
+10. 反派模板化（全内心戏无动作、无动机）
+11. 主角圣母化（不该原谅时原谅、人设割裂）
+12. 转折生硬（靠“突然”“这时”硬拉剧情）
+
+输出格式层（AI无效输出）
+13. 重复段落（AI隐性自我抄袭）
+14. 空白填充（“具体见下文”等占位话术）
+15. 遗漏关键情节/伏笔
+
+输出表格：
+维度｜得分｜问题段落｜问题描述｜修改建议
+
+【第二步：AI味问题整改】
+筛选剧本内最具AI特征的5个具体位置，逐条输出：
+问题定位 + 改前原文 + 改后完整内容 + 修改逻辑。
+优化方向：短剧口语化、快节奏、强情绪，彻底去除AI生硬感。
+
+【第三步：三级修改优先级排序】
+按「致命程度+修改性价比」排序，输出前3优先级：
+1. 一级优先级（致命硬伤）：逻辑错误、人设崩塌、情节遗漏，不改无法播出。
+2. 二级优先级（观感硬伤）：台词AI味重、转折生硬、节奏拖沓，严重影响观看体验。
+3. 三级优先级（细节优化）：句式冗余、调味词过多、轻微重复，微调即可提质。
+
+【第四步：AI味总指数评级】
+1—10打分：10=纯人工高质量剧本、无AI痕迹；1=全AI未打磨、漏洞百出。
+输出：整体问题总结 + 核心优化方向。
+
+【第五步：增值提质】
+1. 节奏优化：精简冗余台词，强化开篇冲突、段落钩子，适配单集时长。
+2. 人设强化：补充角色微动作、情绪细节，避免人设扁平化、模板化。
+3. 合规原创：剔除套路化剧情、重复桥段，规避平台违规风险，提升内容独特性。
+4. 网感适配：替换书面化话术为生活化口语，增强情绪张力和观众代入感。
+
+【输出达标标准】
+① 修改后AI味总指数≥7分；
+② 不存在一级优先级致命硬伤；
+③ TOP5重度问题全部整改完毕；
+④ 对白自然无浓重书面AI腔；
+⑤ 节奏符合短视频短剧播出要求。</code></pre>
+<hr />
+<h1 id="七ai剧本常见病灶与修复库">七、AI剧本常见病灶与修复库</h1>
+<h2 id="逻辑硬伤">1. 逻辑硬伤</h2>
+<ul>
+<li>时间线错乱：每集标注“当天/次日/三天后”。</li>
+<li>人物记忆错乱：建人物小传，关键秘密不能忘。</li>
+<li>常识错误：职业、年代、地理、法律、医疗要核对。</li>
+<li>数字矛盾：年龄、金额、集数、天数统一。</li>
+</ul>
+<h2 id="语言ai味">2. 语言AI味</h2>
+<p>替换方向：</p>
+<table>
+<thead>
+<tr class="header">
+<th>书面AI词</th>
+<th>口语替换</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>实在</td>
+<td>真的</td>
+</tr>
+<tr class="even">
+<td>无法</td>
+<td>不能</td>
+</tr>
+<tr class="odd">
+<td>毕竟</td>
+<td>说到底</td>
+</tr>
+<tr class="even">
+<td>然而</td>
+<td>可/但</td>
+</tr>
+<tr class="odd">
+<td>因此</td>
+<td>所以</td>
+</tr>
+<tr class="even">
+<td>非常</td>
+<td>特别/贼</td>
+</tr>
+<tr class="odd">
+<td>愤怒</td>
+<td>火大</td>
+</tr>
+<tr class="even">
+<td>悲伤</td>
+<td>难受</td>
+</tr>
+</tbody>
+</table>
+<h2 id="结构ai味">3. 结构AI味</h2>
+<ul>
+<li>场景对称：不要每场都“进门—坐下—对话—离开”。</li>
+<li>反派模板：给反派动机、利益、动作，不要只内心戏。</li>
+<li>主角圣母：主角要有底线，该反击就反击。</li>
+<li>转折生硬：转折必须前面有伏笔，不能靠“突然”。</li>
+</ul>
+<h2 id="输出层">4. 输出层</h2>
+<ul>
+<li>重复段落：逐集查重。</li>
+<li>空白填充：删除“具体见下文”。</li>
+<li>遗漏伏笔：每集列“埋钩/收钩”清单。</li>
+</ul>
+<hr />
+<h1 id="八最终验收清单">八、最终验收清单</h1>
+<h2 id="分析阶段">分析阶段</h2>
+<ul class="task-list">
+<li><label><input type="checkbox" />角色人设完整</label></li>
+<li><label><input type="checkbox" />人物关系清晰</label></li>
+<li><label><input type="checkbox" />一句话核梗有冲突</label></li>
+<li><label><input type="checkbox" />逐章章纲300字左右</label></li>
+<li><label><input type="checkbox" />不跳章、不合并、不新增</label></li>
+<li><label><input type="checkbox" />每章因果链完整</label></li>
+</ul>
+<h2 id="情绪阶段">情绪阶段</h2>
+<ul class="task-list">
+<li><label><input type="checkbox" />每章一行情绪值</label></li>
+<li><label><input type="checkbox" />按锚定标准打分</label></li>
+<li><label><input type="checkbox" />标注改编操作</label></li>
+<li><label><input type="checkbox" />每章有核心事件和钩子</label></li>
+<li><label><input type="checkbox" />≥7保留，≤4不单独成集</label></li>
+</ul>
+<h2 id="剧本阶段">剧本阶段</h2>
+<ul class="task-list">
+<li><label><input type="checkbox" />前三秒有冲突</label></li>
+<li><label><input type="checkbox" />每段有小钩子</label></li>
+<li><label><input type="checkbox" />每集结尾有大钩子</label></li>
+<li><label><input type="checkbox" />台词口语化</label></li>
+<li><label><input type="checkbox" />无大段心理描写</label></li>
+<li><label><input type="checkbox" />可直接拍摄</label></li>
+</ul>
+<h2 id="ai整改阶段">AI整改阶段</h2>
+<ul class="task-list">
+<li><label><input type="checkbox" />AI味总指数≥7</label></li>
+<li><label><input type="checkbox" />无一级致命硬伤</label></li>
+<li><label><input type="checkbox" />TOP5问题整改</label></li>
+<li><label><input type="checkbox" />对白自然</label></li>
+<li><label><input type="checkbox" />节奏符合短剧要求</label></li>
+</ul>
+<hr />
+<p>如果你把小说正文按章节发来，我可以直接按这套流程继续产出：<br />
+<strong>角色人设+关系图+一句话核梗 → 逐章300字章纲+因果链 → 每章情绪值表
+→ 短剧集规划 → AI剧本体检整改。</strong></p>
+<hr>
+<h2 id="利永贞">利永贞</h2>
+<h4 id="读书">读书</h4>
+<h4 id="写字">写字</h4>
+<h4 id="慢跑">慢跑</h4>
+<h4 id="核心平板静蹲等">核心（平板、静蹲等）</h4>
+<h4 id="朋友交往">朋友交往</h4>
+<h2 id="群龙无首">群龙无首</h2>
+<h4 id="读书-1">读书</h4>
+<h4 id="约见陌生人">约见陌生人</h4>
+<h4 id="使用新工具">使用新工具</h4>
+<hr>
+<center>
+<a href="/3place/wrcz">返回首页</a> <a
+href="/3place/wrcz/coread.html">参与同读</a> <a
+href="/3place/wrcz/mingju.html">本书名句</a> <a
+href="/3place/wrcz/memo.html">本书注解</a> <a
+href="/3place/wrcz/index_rich.html">丰富目录</a> <a
+href="/3place/wrcz/index_readcal.html">同读日历</a> <a
+href="/3place/wrcz/index_timeline.html">时间线</a> <a
+href="/3place/wrcz/index_books.html">引用书籍</a> <a
+href="/3place/wrcz/index_words.html">使用字频</a>
+<div id="wx_pic" style="margin:0 auto;display:none;">
+<img src='/img/logo.png'/>
+</div>
+<a href="/3place/wrcz/hash/">HASH5</a>
+</center>
+<hr>
+<center>
+<img src="/img/thanks.jpg" width="50%" height="50%">
+</center>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>
