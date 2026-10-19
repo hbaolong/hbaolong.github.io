@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="文/韩宝龙" />
+  <title>单词故事：heap</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">单词故事：heap</h1>
+<p class="author">文/韩宝龙</p>
+<p class="date">2026年10月20日 06时04分09秒</p>
+</header>
+<h1 id="单词故事">单词故事</h1>
+<p>关于 <strong>heap</strong>，信息整理如下：</p>
+<h3 id="发音">🗣️ 发音</h3>
+<ul>
+<li><strong>英式</strong>：<code>/hiːp/</code></li>
+<li><strong>美式</strong>：<code>/hiːp/</code></li>
+</ul>
+<h3 id="词根与词源">📜 词根与词源</h3>
+<p><code>heap</code> 是日耳曼本土词，核心就是
+<strong>“堆起来的一团”</strong>。</p>
+<ul>
+<li><strong>古英语
+<code>hēap</code></strong>：意为“<strong>堆、群、大量</strong>”。</li>
+<li><strong>原始日耳曼语 <code>*haupaz</code></strong>：同源词包括德语
+<strong>Haufen</strong>（堆、群）、荷兰语
+<strong>hoop</strong>（堆）。</li>
+<li><strong>词义一直很稳定</strong>：从古英语到现在，基本都指“东西堆在一起”，再引申为“大量”。</li>
+<li><strong>同族词</strong>：<code>heap</code>
+本身没有大量派生词；<code>heaps</code>（大量，口语）是主要扩展。</li>
+</ul>
+<h3 id="历史上的著名用法">📖 历史上的著名用法</h3>
+<p><strong>1. 《圣经》：“把炭火堆在他头上”</strong>
+《罗马书》12:20（引《箴言》25:22）： &gt;
+“你的仇敌若饿了，就给他吃；若渴了，就给他喝；因为你这样行，就是把炭火<strong>堆</strong>（heap）在他的头上。”</p>
+<p>英文钦定本用 <strong>heap coals of fire on his
+head</strong>。这句话后来成为英语固定表达，意为
+<strong>“以善报恶，使对方羞愧悔悟”</strong>。这是 <code>heap</code>
+在西方文学中最著名的隐喻用法。</p>
+<p><strong>2. 莎士比亚与文学中的“堆积”</strong> 莎士比亚常把
+<code>heap</code>
+用作“堆积、累积”的意象，如把财富、罪孽、诅咒“堆”起来。19世纪文学中，<code>heap</code>
+常用于描写： - 废墟、瓦砾、垃圾堆 - 尸体堆 -
+财富、罪名、赞美的“堆积”</p>
+<p><strong>3. 19世纪工业与城市</strong> 工业革命后，<code>heap</code>
+常指矿渣堆、垃圾堆、煤堆。在《悲惨世界》英译本中，它可能出现在： -
+街垒的瓦砾堆 - 巴黎街头的垃圾堆 - 苦役场的石料堆 -
+底层人像“被丢弃的废物堆”</p>
+<h3 id="当代的著名用法">🌐 当代的著名用法</h3>
+<p><strong>1. 名词：堆；大量（口语）</strong> -
+<code>a heap of clothes</code>：一堆衣服 -
+<code>a compost heap</code>：堆肥堆 -
+<code>a rubbish heap</code>：垃圾堆 -
+<code>heaps of</code>（英式口语）：大量、许多<br />
+- <code>heaps of time</code>：很多时间 -
+<code>heaps of people</code>：很多人 -
+<code>a heap</code>（旧车）：<code>My old car is a heap.</code>（我的旧车是辆破车。）</p>
+<p><strong>2. 动词：堆积；大量给予</strong> -
+<code>heap up</code>：堆起来 -
+<code>heap praise on someone</code>：对某人大加赞扬 -
+<code>heap insults on someone</code>：对某人大加侮辱 -
+<code>heap something with something</code>：把某物堆满某物</p>
+<p><strong>3. 固定短语</strong> - <strong>at the bottom of the
+heap</strong>：处于社会/组织最底层 - <strong>at the top of the
+heap</strong>：处于最高层 - <strong>on the scrap
+heap</strong>：被废弃、被淘汰 - <strong>heap coals of fire on someone’s
+head</strong>：以善报恶，使对方羞愧 - <strong>a heap of
+trouble</strong>：一大堆麻烦</p>
+<p><strong>4. 与 <code>pile</code>、<code>stack</code>
+的区别</strong></p>
+<table>
+<thead>
+<tr class="header">
+<th>词</th>
+<th>含义</th>
+<th>侧重点</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>heap</strong></td>
+<td>堆</td>
+<td>随意、杂乱地堆在一起</td>
+</tr>
+<tr class="even">
+<td><strong>pile</strong></td>
+<td>堆</td>
+<td>较有意识地把东西叠放，也可指“大量”</td>
+</tr>
+<tr class="odd">
+<td><strong>stack</strong></td>
+<td>摞</td>
+<td>整齐、有序地叠放</td>
+</tr>
+</tbody>
+</table>
+<p>所以：<code>a heap of clothes</code>
+是乱堆的衣服；<code>a stack of books</code>
+是整齐摞起的书；<code>a pile of books</code>
+介于两者之间，但更偏有意识地堆放。</p>
+<h3 id="在悲惨世界中的可能语境">📚 在《悲惨世界》中的可能语境</h3>
+<ul>
+<li><strong>街垒</strong>：瓦砾、家具、木桶堆成
+<code>heaps</code>。</li>
+<li><strong>巴黎下水道</strong>：垃圾、淤泥、废物
+<code>heaps</code>。</li>
+<li><strong>苦役场</strong>：石料、木料堆成 <code>heaps</code>。</li>
+<li><strong>底层人物</strong>：被社会当作“废物堆”的一部分，<code>at the bottom of the heap</code>。</li>
+<li><strong>米里哀主教</strong>：他不积累财富，不把东西
+<code>heap up</code>，与“堆积”的逻辑相反。</li>
+</ul>
+<h3 id="一句话">💎 一句话</h3>
+<strong>heap 就是“堆”——杂乱地堆在一起的东西，再引申为“大量”。</strong>
+它从古英语的“堆、群”一路走来，既能指垃圾堆、瓦砾堆，也能指“一大堆赞美”或“一大堆麻烦”。当你读到它时，可以想象
+<strong>东西随意堆在一起、越堆越高</strong>——那就是 <code>heap</code>。
+<hr>
+<center>
+<a href="/3place/bcsjen">返回首页</a> <a
+href="/3place/bcsjen/coread.html">参与同读</a> <a
+href="/3place/bcsjen/mingju.html">本书名句</a> <a
+href="/3place/bcsjen/memo.html">本书注解</a> <a
+href="/3place/bcsjen/index_rich.html">丰富目录</a> <a
+href="/3place/bcsjen/index_readcal.html">同读日历</a> <a
+href="/3place/bcsjen/index_timeline.html">时间线</a> <a
+href="/3place/bcsjen/index_books.html">引用书籍</a> <a
+href="/3place/bcsjen/index_words.html">使用字频</a>
+<div id="wx_pic" style="margin:0 auto;display:none;">
+<img src='/img/logo.png'/>
+</div>
+<a href="/3place/bcsjen/hash/">HASH5</a>
+</center>
+<hr>
+<center>
+<img src="/img/thanks.jpg" width="50%" height="50%">
+</center>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>
