@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="文/韩宝龙" />
+  <title>从with和in看那一丝‘人’的存在</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">从with和in看那一丝‘人’的存在</h1>
+<p class="author">文/韩宝龙</p>
+<p class="date">2026年10月25日 09时02分10秒</p>
+</header>
+<h1 id="with-和-in那一丝人的存在">with 和 in，那一丝“人”的存在</h1>
+<p>英语里两个最常见的介词，<code>with</code> 和
+<code>in</code>，看起来都只是“在……里/和……一起”，但一到具体搭配，它们就悄悄分出了两条路。</p>
+<p><code>deposit with</code> 和 <code>deposit in</code>
+就是最好的例子。</p>
+<p>你说“把钱存进银行”，英语既可以说 <strong>deposit money in a
+bank</strong>，也可以说 <strong>deposit money with a
+bank</strong>。但这两句话的重量不一样。</p>
+<p><code>in a bank</code>
+说的是<strong>位置</strong>：钱进了银行这个建筑、这个机构、这个容器。它关心的是“钱在哪儿”。</p>
+<p><code>with a bank</code>
+说的是<strong>关系</strong>：钱被<strong>托付</strong>给了银行。银行不是一个盒子，而是一个<strong>承接者</strong>——它收下这笔钱，承诺保管，承担义务。这里有一丝“人”的存在：不是血肉之躯的人，而是一个<strong>有意志、有责任、能应答的对方</strong>。</p>
+<p>这就是 <code>with</code> 的秘密。</p>
+<h3 id="with-要的不是哪里而是谁">with 要的不是“哪里”，而是“谁”</h3>
+<p><code>with</code>
+的本义是“和……一起”，但它真正要求的，是一个<strong>能和你发生关系的对象</strong>。</p>
+<ul>
+<li><strong>stay with a
+friend</strong>：你住在朋友家。朋友不是“地点”，是<strong>接待你的人</strong>。</li>
+<li><strong>leave the keys with the
+concierge</strong>：你把钥匙交给门房。门房不是“抽屉”，是<strong>替你看着的人</strong>。</li>
+<li><strong>deposit the papers with a
+lawyer</strong>：文件交给律师。律师不是“柜子”，是<strong>承担保密义务的人</strong>。</li>
+<li><strong>leave the child with her
+grandmother</strong>：孩子交给外婆。外婆不是“房间”，是<strong>会照顾她的人</strong>。</li>
+</ul>
+<p>这些句子里，<code>with</code>
+后面站着的，都是一个<strong>能接住、能负责、能回应</strong>的主体。哪怕这个主体是机构（a
+bank, a law
+firm），它也被拟人化了：它有一张桌子、一个签名、一个“收到”。</p>
+<p><code>in</code> 不要求这个。</p>
+<p><code>in</code>
+后面可以是一个抽屉、一个保险箱、一个城市、一个房间、一个银行大楼。它只问：<strong>东西放进去了吗？</strong>
+它不关心有没有人接住。</p>
+<p>所以：</p>
+<ul>
+<li><strong>in</strong>
+是<strong>容器逻辑</strong>：东西在某个空间里。</li>
+<li><strong>with</strong>
+是<strong>关系逻辑</strong>：东西在某个<strong>人/主体</strong>手里。</li>
+</ul>
+<h3 id="那一丝人的存在就是信任">那一丝“人”的存在，就是信任</h3>
+<p><code>deposit with</code> 之所以比 <code>deposit in</code>
+多一层东西，是因为它暗含了一个动作：<strong>托付</strong>。</p>
+<p>托付需要三样东西：</p>
+<ol type="1">
+<li><strong>一个能承接的对方</strong>（with 后面的名词）</li>
+<li><strong>一个愿意交出的自己</strong>（主语）</li>
+<li><strong>一种“你会替我负责”的预期</strong>（信任）</li>
+</ol>
+<p><code>in</code>
+不需要信任。你把钱放进抽屉，抽屉不会跑，也不会背叛你，但它也不会替你负责。抽屉只是“在那里”。</p>
+<p><code>with</code>
+需要信任。你把钱交给银行、律师、朋友、门房，你交出的不只是钱，还有一句没说出口的话：<strong>“我信你。”</strong></p>
+<p>语言在这里泄露了人对世界的基本分类：<strong>有些东西可以放进“哪”，有些东西只能交给“谁”。</strong></p>
+<h3 id="扩展看with-和-in-的分工">扩展看：with 和 in 的分工</h3>
+<p>这种分工在英语里到处都是：</p>
+<ul>
+<li><strong>live with someone</strong>（和某人一起住） vs. <strong>live
+in a house</strong>（住在房子里）
+<ul>
+<li><code>with</code> 后面是人，<code>in</code> 后面是空间。</li>
+</ul></li>
+<li><strong>deal with a problem</strong>（处理问题） vs. <strong>deal in
+antiques</strong>（经营古董）
+<ul>
+<li><code>with</code> 是“面对一个对象”，<code>in</code>
+是“在一个领域里”。</li>
+</ul></li>
+<li><strong>be with someone</strong>（陪伴某人） vs. <strong>be in a
+room</strong>（在房间里）
+<ul>
+<li><code>with</code> 是关系，<code>in</code> 是位置。</li>
+</ul></li>
+<li><strong>agree with someone</strong>（同意某人） vs. <strong>agree in
+principle</strong>（原则上同意）
+<ul>
+<li><code>with</code> 对着人，<code>in</code> 对着抽象层面。</li>
+</ul></li>
+</ul>
+<p><code>with</code>
+总在找一个<strong>能对话的对方</strong>；<code>in</code>
+总在找一个<strong>能装东西的容器</strong>。</p>
+<p>你说得对，原文那一段把 <code>belong to</code> 硬说成
+<code>with</code>，不严谨。下面是<strong>修改后的《悲惨世界》一节和结尾</strong>，其余部分保持不变。</p>
+<hr />
+<h3 id="回到悲惨世界">回到《悲惨世界》</h3>
+<p>冉阿让从主教家出来，带走银器。如果雨果写他“把银器藏进某个地方”，那是
+<code>in</code>：<code>he hid them in a sack</code>。银器进了麻袋，麻袋不会说话。</p>
+<p>但主教对他说的是另一句话：</p>
+<blockquote>
+<p><strong>“You no longer belong to evil, but to good.”</strong>
+（“您不再属于恶，而是属于善了。”）</p>
+</blockquote>
+<p>这句话里没有 <code>with</code>，也没有 <code>in</code>。它用的是
+<strong><code>belong to</code></strong>——<strong>归属逻辑</strong>。</p>
+<p><code>in</code> 问的是“你在哪个容器里”；<code>belong to</code>
+问的是“你属于谁”。主教没有把冉阿让“放进”一个道德体系，而是<strong>重新定义了他的归属</strong>：你不再属于恶，你属于善。</p>
+<p><code>belong to</code> 和 <code>with</code>
+不是同一个词，但它们共享一个方向：<strong>都不是容器逻辑，而是关系逻辑。</strong>
+<code>with</code>
+说“你和谁站在一起、被交给谁承接”；<code>belong to</code>
+说“你属于谁、归谁”。<code>in</code>
+只关心东西放进去了没有，<code>belong to</code> 和 <code>with</code>
+都要求一个<strong>能承接、能认领的对方</strong>。</p>
+<p>米里哀没有把冉阿让“放进”善，他是<strong>把冉阿让“交还”给善</strong>。这个动作不是
+<code>in</code>，也不是字面的 <code>with</code>，而是
+<code>belong to</code>——一种重新归属的托付。</p>
+<h3 id="一句话">一句话</h3>
+<p><strong><code>in</code> 让东西有地方放；<code>with</code>
+让东西有人接。</strong></p>
+<p><code>deposit in</code> 是“存进去”，<code>deposit with</code>
+是“交给你”。</p>
+语言里那一丝“人”的存在，就藏在这个介词里：它要求一个能应答的对方，也要求说话的人，敢于说出那句没说出口的“我信你”。
+<hr>
+<center>
+<a href="/3place/bcsjen">返回首页</a> <a
+href="/3place/bcsjen/coread.html">参与同读</a> <a
+href="/3place/bcsjen/mingju.html">本书名句</a> <a
+href="/3place/bcsjen/memo.html">本书注解</a> <a
+href="/3place/bcsjen/index_rich.html">丰富目录</a> <a
+href="/3place/bcsjen/index_readcal.html">同读日历</a> <a
+href="/3place/bcsjen/index_timeline.html">时间线</a> <a
+href="/3place/bcsjen/index_books.html">引用书籍</a> <a
+href="/3place/bcsjen/index_words.html">使用字频</a>
+<div id="wx_pic" style="margin:0 auto;display:none;">
+<img src='/img/logo.png'/>
+</div>
+<a href="/3place/bcsjen/hash/">HASH5</a>
+</center>
+<hr>
+<center>
+<img src="/img/thanks.jpg" width="50%" height="50%">
+</center>
+<script src="https://giscus.app/client.js"
+        data-repo="hbaolong/hbaolong.github.io"
+        data-repo-id="R_kgDOLetDQg"
+        data-category="General"
+        data-category-id="DIC_kwDOLetDQs4CfLEl"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+</body>
+</html>
