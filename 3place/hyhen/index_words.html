@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="hbaolong@vip.qq.com" />
+  <title>红与黑EN 用字频率</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">红与黑EN 用字频率</h1>
+<p class="author">hbaolong@vip.qq.com</p>
+</header>
+<center>
+<a href="/">返回首页</a> <a href="/booklist/">第三书单</a> <a
+href="/hash5/">HASH5</a>
+</center>
+<hr>
+<center>
+<a href="/3place/hyhen">返回首页</a> <a
+href="/3place/hyhen/coread.html">参与同读</a> <a
+href="/3place/hyhen/mingju.html">本书名句</a> <a
+href="/3place/hyhen/memo.html">本书注解</a> <a
+href="/3place/hyhen/index_rich.html">丰富目录</a> <a
+href="/3place/hyhen/index_readcal.html">同读日历</a> <a
+href="/3place/hyhen/index_timeline.html">时间线</a> <a
+href="/3place/hyhen/index_books.html">引用书籍</a> <a
+href="/3place/hyhen/index_words.html">使用字频</a>
+<div id="wx_pic" style="margin:0 auto;display:none;">
+<img src='/img/logo.png'/>
+</div>
+</center>
+<p>1 abhorrence 1 accent 1 account 1 achieved 1 acquisition 1 action 1
+added 1 additional 1 admiring 1 adorns 1 advance 1 advantage 1 affect 1
+afterwards 1 against 1 ago 1 alleged 1 allow 1 allowances 1 allowed 1
+alone 1 aloud 1 also 1 although 1 anger 1 angry 1 another 1 anxiety 1
+anyone 1 anywhere 1 apparently 1 appeared 1 appreciate 1 appreciated 1
+arrived 1 ashamed 1 ask 1 assume 1 assuming 1 astonishing 1 atmosphere 1
+atremble 1 attended 1 awkward 1 bare 1 bargainer 1 basin 1 beating 1
+becoming 1 begun 1 bell 1 betray 1 beyond 1 binds 1 bitter 1 blushed 1
+both 1 boy 1 brothers 1 built 1 call 1 calmed 1 cannot 1 cards 1 care 1
+carrying 1 castles 1 celebrated 1 certainly 1 chagrin 1 chapter 1
+character 1 charcot 1 charming 1 christ 1 chum 1 church 1 closed 1
+clothing 1 coldly 1 coldness 1 college 1 coming 1 commence 1 comparative
+1 complete 1 conceal 1 concealed 1 concentrated 1 condescend 1 conduct 1
+connoisseur 1 consciousness 1 considered 1 constraint 1 contempt 1
+contrast 1 courage 1 course 1 cousin 1 cowardice 1 creature 1 crying 1
+curly 1 dazzling 1 deals 1 dear 1 debate 1 deep 1 deeply 1 desire 1
+destine 1 destiny 1 devout 1 difference 1 dignity 1 disappeared 1
+disconcerting 1 discovery 1 disguise 1 dismiss 1 dissipated 1 distance 1
+district 1 distrust 1 down 1 drying 1 durand 1 each 1 ear 1 earned 1
+easily 1 effeminancy 1 eight 1 either 1 elder 1 eldest 1 eleven 1
+emotion 1 encourage 1 encouraged 1 enjoying 1 ennui 1 enter 1 entering 1
+entirely 1 equal 1 especially 1 establishment 1 evening 1 event 1 ever 1
+examined 1 expectations 1 experience 1 explain 1 explained 1 extent 1
+exultation 1 face 1 facility 1 facio 1 fact 1 fall 1 faltering 1 fame 1
+fascinated 1 faults 1 favour 1 favours 1 feared 1 fearing 1 features 1
+felt 1 feminine 1 figaro 1 finally 1 finished 1 finishing 1 fit 1
+flattered 1 flocked 1 flog 1 folding 1 folk 1 followed 1 following 1
+forbidden 1 forget 1 forgetting 1 forgive 1 found 1 fountain 1 free 1
+french 1 friends 1 frieze 1 frigid 1 frown 1 full 1 fun 1 gaiety 1
+garden 1 gentle 1 gentlemen 1 girls 1 gloomy 1 god 1 going 1 got 1
+governs 1 gracious 1 gravity 1 grumbling 1 hair 1 handling 1 hands 1
+happiness 1 harsh 1 head 1 hear 1 heart 1 heavens 1 help 1 hints 1
+history 1 honour 1 horses 1 hundred 1 husband 1 ill 1 imagined 1
+immediately 1 impulse 1 incarnation 1 incorrect 1 indifferently 1 insist
+1 insisted 1 instead 1 instinctive 1 intense 1 internal 1 introduced 1
+involving 1 irresponsibility 1 its 1 jacket 1 jackets 1 jesus 1 kept 1
+kiss 1 kissing 1 knew 1 large 1 latinist 1 laugh 1 leave 1 legion 1 less
+1 lessen 1 lessons 1 like 1 lingered 1 lived 1 ll 1 long 1 look 1
+looking 1 lord 1 mad 1 majesty 1 male 1 managed 1 mankind 1 many 1
+marked 1 marriages 1 matter 1 maugiron 1 may 1 mayor 1 mayoral 1 mean 1
+means 1 member 1 memory 1 might 1 mine 1 ministry 1 mistake 1 mo 1
+moments 1 money 1 months 1 mortal 1 mother 1 motionless 1 moved 1
+movement 1 movements 1 mozart 1 myself 1 name 1 near 1 nearly 1
+necessary 1 need 1 nice 1 nineteen 1 non 1 norman 1 nothing 1 nuances 1
+number 1 obey 1 obeying 1 obligation 1 observation 1 observe 1 observed
+1 occasioned 1 occurred 1 offended 1 office 1 often 1 oh 1 open 1 order
+1 ordered 1 orders 1 overcome 1 overwhelm 1 owed 1 owner 1 paces 1
+parents 1 part 1 particular 1 passage 1 passion 1 paternal 1 peaceful 1
+pensiveness 1 people 1 perfect 1 perfectly 1 perfume 1 phrase 1 pink 1
+piqued 1 pity 1 places 1 played 1 pleasure 1 plucked 1 plunged 1 poet 1
+point 1 possibly 1 prejudicial 1 presence 1 present 1 pride 1 probably 1
+prodigy 1 profane 1 prolong 1 promise 1 proposed 1 protection 1 proud 1
+public 1 pure 1 putting 1 quarrelled 1 quarter 1 quarters 1 question 1
+questions 1 quick 1 quoted 1 racking 1 raise 1 range 1 rapidly 1 rash 1
+realise 1 realised 1 recited 1 reflected 1 reflecting 1 refresh 1
+regained 1 relatives 1 relieved 1 repeat 1 repeated 1 reputation 1
+respect 1 retire 1 rich 1 ridiculous 1 romantic 1 run 1 sacred 1 sadness
+1 salon 1 sat 1 satisfied 1 saw 1 scantily 1 scene 1 scolded 1 seated 1
+seem 1 sense 1 sensibly 1 seriousness 1 severe 1 sharply 1 shawl 1 shirt
+1 shocked 1 showing 1 shrewder 1 side 1 sigh 1 sight 1 sign 1 silence 1
+silent 1 simple 1 since 1 sinister 1 six 1 small 1 smelt 1 softly 1
+softness 1 somebody 1 sometimes 1 sorel 1 sou 1 soul 1 spain 1 spasmodic
+1 spent 1 spirit 1 spite 1 spoken 1 spout 1 spread 1 stanislas 1 started
+1 stop 1 stopping 1 strain 1 strange 1 study 1 suddenly 1 summer 1
+sundays 1 supplication 1 surprise 1 surprised 1 swear 1 sworn 1 tailor 1
+take 1 tap 1 teach 1 tell 1 temperament 1 terrified 1 test 1 testament 1
+there 1 think 1 thinks 1 timidity 1 timidly 1 title 1 together 1 tone 1
+touch 1 town 1 transported 1 treat 1 trembled 1 trembling 1 tried 1
+truth 1 twenty 1 unable 1 uncovered 1 under 1 underneath 1 uneasy 1
+uniform 1 until 1 useful 1 verses 1 vestibule 1 vi 1 view 1 violently 1
+violet 1 vision 1 vivacity 1 voices 1 volume 1 wake 1 warm 1 we 1 wear 1
+weather 1 week 1 while 1 whisper 1 wicked 1 wide 1 window 1 wonders 1
+workings 1 works 1 world 1 worthy 1 yesterday 1 yet 1 youngest 1 youth 2
+able 2 act 2 again 2 already 2 anything 2 approached 2 arm 2 arrival 2
+away 2 badly 2 beautiful 2 because 2 began 2 believe 2 best 2 better 2
+between 2 bible 2 big 2 bound 2 carry 2 charm 2 cheeks 2 completely 2
+confidence 2 cook 2 cosa 2 dare 2 dared 2 days 2 different 2 dirty 2
+draper 2 else 2 embarrassment 2 engagement 2 enough 2 entered 2 entrance
+2 essential 2 eventually 2 examining 2 extreme 2 fear 2 fears 2 francs 2
+frightened 2 given 2 giving 2 grace 2 graciousness 2 heard 2 hours 2 how
+2 human 2 idea 2 lesson 2 let 2 life 2 lips 2 mind 2 minute 2 much 2
+napoleon 2 natural 2 nervous 2 noticed 2 one 2 or 2 ought 2 our 2 page 2
+person 2 place 2 real 2 reciting 2 recovered 2 refuse 2 remained 2
+respected 2 result 2 round 2 saying 2 scarcely 2 seeing 2 servant 2 sir
+2 somewhat 2 son 2 speak 2 speech 2 spoke 2 stopped 2 struck 2 t 2 talk
+2 tears 2 thinking 2 those 2 three 2 through 2 time 2 timid 2 told 2 too
+2 triumph 2 true 2 trying 2 us 2 used 2 valenod 2 verse 2 want 2 white 2
+whose 2 why 2 wish 2 wished 2 without 2 won 2 wore 2 workman 2 years 2
+yes 3 about 3 adolphe 3 any 3 before 3 called 3 certain 3 clothes 3 come
+3 complexion 3 could 3 dressed 3 everybody 3 everything 3 except 3
+father 3 feel 3 find 3 forgot 3 gate 3 give 3 go 3 good 3 great 3 happy
+3 holy 3 horace 3 hour 3 keep 3 later 3 make 3 month 3 must 3 old 3
+other 3 pale 3 priest 3 proved 3 put 3 read 3 room 3 same 3 say 3 scold
+3 seen 3 send 3 servants 3 shall 3 should 3 soft 3 some 3 still 3 such 3
+talking 3 then 3 these 3 though 3 took 3 towards 3 turned 3 two 3 up 3
+usually 3 voice 3 way 3 woman 4 above 4 after 4 almost 4 always 4
+astonished 4 astonishment 4 back 4 beat 4 beauty 4 became 4 being 4 came
+4 child 4 close 4 even 4 extremely 4 girl 4 has 4 into 4 just 4 lady 4
+last 4 looked 4 manner 4 once 4 only 4 opened 4 out 4 pretty 4 recite 4
+seemed 4 soon 4 taken 4 they 4 thought 4 very 4 well 4 went 4 whom 4
+words 5 am 5 answered 5 are 5 black 5 book 5 did 5 door 5 during 5 eyes
+5 few 5 fine 5 hand 5 having 5 herself 5 house 5 man 5 moment 5 new 5 no
+5 see 5 suit 5 than 5 whole 5 wife 5 word 6 know 6 made 6 peasant 6 poor
+6 their 6 them 6 were 6 would 7 but 7 do 7 here 7 himself 7 latin 7 now
+7 own 7 young 8 air 8 first 8 from 8 little 8 more 9 if 9 never 9 quite
+10 tutor 10 your 11 what 12 be 12 been 12 when 13 monsieur 14 an 14 my
+15 by 16 is 16 on 17 have 17 who 18 as 18 me 18 this 19 all 19 will 20
+children 20 which 21 not 23 at 23 with 24 for 25 m 25 said 25 so 27 it
+28 him 29 s 30 her 32 madame 34 that 35 she 37 i 40 had 41 de 41 in 41
+rênal 42 his 42 you 45 julien 53 was 57 and 57 he 76 of 81 a 109 to 138
+the</p>
+</body>
+</html>
